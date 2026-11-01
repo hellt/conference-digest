@@ -513,17 +513,9 @@
   color: var(--tier, var(--md-accent-fg-color));
 }
 
-/* A talk recording sits beside the write-up; a click swaps in the player. */
+/* A talk recording opens the card, as wide as the card; a click swaps in the player. */
 .md-typeset .pick-video {
-  float: right;
-  width: min(19rem, 42%);
-  margin: 0.2rem 0 0.8rem 1.2rem;
-}
-
-.md-typeset .pick::after {
-  content: "";
-  display: block;
-  clear: both;
+  margin: 1rem 0 0.2rem;
 }
 
 .md-typeset .pick-video__thumb,
@@ -553,8 +545,8 @@
 .md-typeset .pick-video__play {
   position: absolute;
   inset: 50% auto auto 50%;
-  width: 3rem;
-  height: 2.1rem;
+  width: 4.2rem;
+  height: 2.9rem;
   transform: translate(-50%, -50%);
   border-radius: 0.6rem;
   background: rgb(0 0 0 / 0.72);
@@ -567,7 +559,7 @@
   inset: 50% auto auto 54%;
   transform: translate(-50%, -50%);
   border-style: solid;
-  border-width: 0.45rem 0 0.45rem 0.75rem;
+  border-width: 0.6rem 0 0.6rem 1rem;
   border-color: transparent transparent transparent #fff;
 }
 
@@ -575,10 +567,3 @@
   background: #f00;
 }
 
-@media screen and (max-width: 44.9375em) {
-  .md-typeset .pick-video {
-    float: none;
-    width: 100%;
-    margin: 0.2rem 0 0.9rem;
-  }
-}

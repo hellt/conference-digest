@@ -16,3 +16,24 @@ document.addEventListener("click", (event) => {
   frame.className = "pick-video__frame";
   thumb.replaceWith(frame);
 });
+
+// Full-width thumbnails: hqdefault (480 px, always present) is the default;
+// near the viewport, swap in maxresdefault (1280 px) if the video has one
+// (YouTube answers a missing one with a 120 px placeholder).
+const sharpen = () => {
+  const imgs = document.querySelectorAll(".pick-video__thumb img[data-hd]");
+  const upgrade = (img) => {
+    const hd = new Image();
+    hd.onload = () => { if (hd.naturalWidth > 120) img.src = hd.src; };
+    hd.src = img.dataset.hd;
+    img.removeAttribute("data-hd");
+  };
+  if (!("IntersectionObserver" in window)) return imgs.forEach(upgrade);
+  const seen = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) { seen.unobserve(e.target); upgrade(e.target); }
+  }, { rootMargin: "400px 0px" });
+  imgs.forEach((img) => seen.observe(img));
+};
+// Instant navigation swaps pages without a reload: run on every page.
+if (typeof document$ !== "undefined") document$.subscribe(sharpen);
+else document.addEventListener("DOMContentLoaded", sharpen);

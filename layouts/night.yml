@@ -1,0 +1,98 @@
+# Social card for every page ("Night"): Quiet Signal's dark palette with the
+# radar mark drawn as the backdrop. Zensical's social plugin renders it to
+# assets/images/social/<page>.png and writes the og:/twitter: tags below.
+#
+# Pages built by scripts/build_site.py carry a `card:` mapping in their front
+# matter (talk pages, digest posts, employer pages); anything else (home,
+# How it works, blog archives) falls back to its title and description.
+#   card.conference  accent line    "NANOG 98" / "Conference digest"
+#   card.when        muted line     "19–21 October 2026 · Core pick"
+#   card.title       big title
+#   card.presenter   up to two lines under the title
+#
+# The plugin's rules worth knowing: a layer paints its image, then its color,
+# then its text; text size follows the box height and line count; a word
+# wider than its box is clipped, not wrapped.
+definitions:
+  - &ink "#efeee8"
+  - &muted "#a1aaa9"
+  - &accent "#c5c9ac"
+  - &title >-
+    {%- if page.is_homepage -%}
+      {{ config.site_name }}
+    {%- else -%}
+      {{ page.meta.get("title", page.title) }} · {{ config.site_name }}
+    {%- endif -%}
+  - &description >-
+    {{ page.meta.get("description", config.site_description) | x }}
+
+tags:
+  og:type: "{{ 'article' if page.meta.date or (page.meta.card or {}).kind == 'talk' else 'website' }}"
+  og:site_name: "{{ config.site_name }}"
+  og:title: *title
+  og:description: *description
+  og:image: "{{ image.url }}"
+  og:image:type: "{{ image.type }}"
+  og:image:width: "{{ image.width }}"
+  og:image:height: "{{ image.height }}"
+  og:url: "{{ page.canonical_url }}"
+  twitter:card: summary_large_image
+  twitter:title: *title
+  twitter:description: *description
+  twitter:image: "{{ image.url }}"
+
+size: { width: 1200, height: 630 }
+layers:
+  - background: { color: "#1e2326" }
+  - background: { image: layouts/assets/night.svg }
+
+  # Conference (or the site name), then place, dates and tier
+  - size: { width: 820, height: 34 }
+    offset: { x: 72, y: 68 }
+    typography:
+      content: "{{ (page.meta.card or {}).conference or config.site_name }}"
+      color: *accent
+      font: { family: Inter, style: Bold }
+  - size: { width: 820, height: 28 }
+    offset: { x: 72, y: 110 }
+    typography:
+      content: "{{ (page.meta.card or {}).when }}"
+      color: *muted
+      font: { family: Inter, style: Regular }
+
+  # Title
+  - size: { width: 820, height: 250 }
+    offset: { x: 70, y: 182 }
+    typography:
+      content: "{{ (page.meta.card or {}).title or page.meta.get('title', page.title) }}"
+      overflow: shrink
+      color: *ink
+      line: { amount: 3, height: 1.12 }
+      font: { family: Inter, style: Bold }
+
+  # Presenter; a page without a card shows its description here instead
+  - size: { width: 820, height: 76 }
+    offset: { x: 72, y: 460 }
+    typography:
+      content: "{{ (page.meta.card or {}).presenter }}"
+      color: *ink
+      line: { amount: 2, height: 1.25 }
+      font: { family: Inter, style: SemiBold }
+  - size: { width: 820, height: 76 }
+    offset: { x: 72, y: 460 }
+    typography:
+      content: "{{ '' if page.meta.card else page.meta.get('description', config.site_description) | x }}"
+      color: *muted
+      line: { amount: 2, height: 1.25 }
+      font: { family: Inter, style: Regular }
+
+  # Footer: radar mark and domain
+  - size: { width: 26, height: 26 }
+    offset: { x: 72, y: 572 }
+    icon: { value: material/radar, color: *accent }
+  - size: { width: 500, height: 24 }
+    offset: { x: 108, y: 574 }
+    typography:
+      content: tldr.netdevops.me
+      color: *muted
+      font: { family: Inter, style: Medium }

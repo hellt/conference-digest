@@ -82,6 +82,12 @@ plugins:
       categories:
         - categories
       feed_title: Conference Digest
+  # A 1200x630 share card per page, plus its og:/twitter: tags, drawn from
+  # layouts/night.yml (fonts come from Google Fonts at build time). Pages
+  # built by scripts/build_site.py feed it through their `card:` front matter.
+  - social:
+      cards_layout_dir: layouts
+      cards_layout: night
 
 extra:
   social:

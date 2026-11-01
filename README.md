@@ -185,10 +185,11 @@ scripts/
   propose_digest.py           # validates a ToFaRev artifact, writes PR text
   enrich_links.py             # adds/refreshes each pick's links row
   links_queue.py              # which digests Links Refresh revisits
-  build_site.py               # digests/ -> docs/posts/ + Conferences page
+  build_site.py               # digests/ -> docs/posts/, docs/talks/, Employers, Conferences
 prompts/             # generated, committed by the workflow
 digests/             # merged digests; presence = done
-docs/  overrides/    # Zensical site sources (docs/posts/ is generated)
+docs/  overrides/    # Zensical site sources (docs/posts/ and docs/talks/ are generated)
+layouts/             # the share-card layout (Zensical social plugin)
 mkdocs.yml pyproject.toml uv.lock Makefile
 .github/workflows/
   conference-digest.yml   # weekly scan

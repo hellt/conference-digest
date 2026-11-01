@@ -523,3 +523,21 @@ series:
     program_url_template: "https://www.capacityeurope.com/agenda/"
     manual_fallback_url_template: "https://www.capacityeurope.com/agenda/"
     notes: "Europe's largest carrier and digital-infrastructure marketplace (~4,000 attendees): fibre, data centres, subsea, AI infrastructure build, energy. Panels and keynotes with company affiliations; no recordings or slides."
+
+  # JANOG: the timetable page links every session (WG meetings, LTs,
+  # tutorials) to its own page, which carries the overview text, slide PDFs
+  # and the YouTube live link that doubles as the archived recording. The
+  # program is Japanese; the digest presents it as-is. Interim ".5" meetings
+  # are skipped by the integer enumeration. Japanese dates need the probe's
+  # own 年月日 parser.
+  - series: janog
+    enumerate: ordinal
+    key_template: "janog-{n}"
+    name_template: "JANOG {n} Meeting"
+    type: operator
+    fetcher: janog
+    start: 58
+    lookahead: 3
+    program_url_template: "https://www.janog.gr.jp/meeting/janog{n}/program-timetable/"
+    manual_fallback_url_template: "https://www.janog.gr.jp/meeting/janog{n}/program-timetable/"
+    notes: "Japan's network operators group (~1,000 attendees, Japanese-language program): backbone and DC operations, IX and peering, optical transport, automation, network security."

@@ -197,6 +197,7 @@ conferences/
     moreip.py         # MORE-IP (AMS-IX): agenda articles with speakers, blurbs
     swinog.py         # SwiNOG meeting pages: talks, abstracts, slides, videos
     capacity.py       # Capacity Europe: server-rendered session library
+    janog.py          # JANOG timetable + per-session pages (Japanese)
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -415,6 +416,11 @@ run.
   server-rendered — title, description, "Name, Role - COMPANY" speakers, stream
   tags and a session page link, grouped by day wrapper ids. A commercial
   event, so no recordings or slides; social-agenda items are dropped.
+- **JANOG**: the timetable links every session to its own page, which carries
+  the overview, slide PDFs and the YouTube live link that doubles as the
+  archived recording. The program is Japanese and presented as-is; the
+  probe has its own 年月日 date parser because plain scanning misses Japanese
+  dates. One page per session makes the fetch chatty (~60 requests).
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

@@ -567,26 +567,35 @@
   background: #f00;
 }
 
-/* "Powered by Nebius Token Factory" as the last tab, as in ToFaRev's reviews. */
+/* "Powered by Nebius Token Factory" as the last tab, as in ToFaRev's reviews.
+   The text matches the other tabs (their 0.7 opacity, full on hover); the logo
+   stays at full opacity, and its negative margins keep the row at the tabs'
+   line height so the text sits on the same line as theirs. */
 .md-tabs__item--powered {
   margin-left: 0.6rem;
 }
 
-.md-tabs__powered {
-  display: inline-flex;
+.md-tabs__link.md-tabs__powered {
+  display: flex;
   align-items: center;
   gap: 0.4rem;
-  opacity: 0.85;
+  opacity: 1;
 }
 
-.md-tabs__powered:hover,
-.md-tabs__powered:focus-visible {
+.md-tabs__powered-text {
+  opacity: 0.7;
+  transition: opacity 250ms;
+}
+
+.md-tabs__powered:hover .md-tabs__powered-text,
+.md-tabs__powered:focus-visible .md-tabs__powered-text {
   opacity: 1;
 }
 
 .md-tabs__powered-logo {
   width: auto;
   height: 1.05rem;
+  margin-block: -0.07rem;
 }
 
 .md-tabs__powered-logo--dark,

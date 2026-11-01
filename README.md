@@ -196,6 +196,7 @@ conferences/
     peeringdays.py   # Peering Days per-year sites: talks, speakers, decks
     moreip.py         # MORE-IP (AMS-IX): agenda articles with speakers, blurbs
     swinog.py         # SwiNOG meeting pages: talks, abstracts, slides, videos
+    capacity.py       # Capacity Europe: server-rendered session library
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -410,6 +411,10 @@ run.
   facts box has the dates. Form-validation strings mentioning recaptcha make
   this a status-only source too. Decks can land days after the meeting, so
   recent editions may want a prompt regeneration.
+- **Capacity Europe**: the agenda looks like a JS app, but every session is
+  server-rendered — title, description, "Name, Role - COMPANY" speakers, stream
+  tags and a session page link, grouped by day wrapper ids. A commercial
+  event, so no recordings or slides; social-agenda items are dropped.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

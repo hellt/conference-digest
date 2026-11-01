@@ -74,9 +74,14 @@ def youtube_id(url: str) -> str | None:
     return m.group(1) if m else None
 
 
+# The first write-up label of a pick ("**Why:**", or "- **Why:**" in list
+# style); the recording goes just before it.
+WRITEUP_RE = re.compile(r"^\s*(?:[-*+]\s+)?\*\*(?:Why|What|How)\b")
+
+
 def links_block(row: str, title: str) -> tuple[list[str], list[str]]:
     """A pick's links row as chips, and its click-to-play recording (which
-    decorate() puts first in the card)."""
+    decorate() puts after the title and speakers, just before "Why")."""
     links = MD_LINK.findall(row)
     if not links:
         return [f"**Links:** {row}"], []
@@ -181,10 +186,14 @@ def decorate(rest: str) -> tuple[str, dict[str, int]]:
     tier = None
     in_card = in_fence = False
     pick_title = ""
-    card_top = 0   # where a pick's recording goes: first in its card
+    player: list[str] = []   # the pick's recording, waiting for its "Why"
+    after_links = 0          # fallback spot: right after the links row
 
     def close() -> None:
-        nonlocal in_card
+        nonlocal in_card, player
+        if player:   # a pick without Why/What/How: recording after the links
+            out[after_links:after_links] = player
+            player = []
         if in_card:
             out.extend(["", "</div>", ""])
             in_card = False
@@ -205,9 +214,7 @@ def decorate(rest: str) -> tuple[str, dict[str, int]]:
         if line.startswith("### ") and tier:
             close()
             counts[tier] += 1
-            out.extend([f'<div class="pick pick-{tier}" markdown>', ""])
-            card_top = len(out)
-            out.append(line)
+            out.extend([f'<div class="pick pick-{tier}" markdown>', "", line])
             in_card = True
             pick_title = line[4:].strip()
             continue
@@ -215,8 +222,13 @@ def decorate(rest: str) -> tuple[str, dict[str, int]]:
         if row:
             chips, player = links_block(row.group(1), pick_title)
             out.extend(chips)
-            out[card_top:card_top] = player
+            after_links = len(out)
             continue
+        if player and WRITEUP_RE.match(line):
+            if out and out[-1].strip():
+                out.append("")
+            out.extend(player)
+            player = []
         # `**Why:** ...` lines written back to back would merge into one
         # paragraph; give each labelled line its own.
         if LABEL.match(line) and out and out[-1].strip() and not re.match(r"\s*(?:[-*+]\s|\d+\.\s|#|<)", out[-1]):

@@ -147,6 +147,12 @@ class SigcommFetcher(Fetcher):
             pdf = next((h for h in row_links if "dl.acm.org" in h), "")
             if not (authors or video or pdf):
                 continue
+            # The program's "PDF" link is the ACM DOI landing page, which only
+            # holds the abstract. Keep it as page: and point pdf: at the paper.
+            page = ""
+            doi = re.match(r"https?://dl\.acm\.org/doi/(?:abs/|full/)?(10\.\d+/[^?#\s]+)$", pdf)
+            if doi:
+                page, pdf = f"https://dl.acm.org/doi/{doi.group(1)}", f"https://dl.acm.org/doi/pdf/{doi.group(1)}"
 
             count += 1
             lines.append(f"### {title}")
@@ -155,6 +161,8 @@ class SigcommFetcher(Fetcher):
             meta = []
             if video:
                 meta.append(f"video: {video}")
+            if page:
+                meta.append(f"page: {page}")
             if pdf:
                 meta.append(f"pdf: {pdf}")
             if meta:

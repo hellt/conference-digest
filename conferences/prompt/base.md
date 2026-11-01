@@ -92,13 +92,14 @@ program: what the field is collectively paying attention to this cycle.
 
 ## Output format
 
-Target renderer is GitHub (GitHub-Flavored Markdown viewed in a repo). Use only
-syntax GitHub renders reliably, and follow these rules:
+The digest is read on GitHub (GitHub-Flavored Markdown viewed in the repo) and
+on the project's Zensical site, which renders the same file. Use only syntax
+both render reliably, and follow these rules:
 
 - Headings with `#`/`##`/`###`; bold with `**...**`; italics with `*...*`.
-- Bullet lists with `-`. Put a blank line before every list and before every
-  heading, or GitHub won't render them correctly.
-- Keep nested-list indentation at two spaces per level; avoid deeper nesting.
+- Bullet lists with `-`. Put a blank line before every list, before every
+  heading, and between paragraphs, or they won't render correctly.
+- Indent nested lists by four spaces per level; avoid deeper nesting.
 - All links as `[text](url)` — never bare URLs. Use the exact pdf:/video: URLs
   from the program text.
 - No raw HTML except the metadata comment below. Do not use heading IDs,

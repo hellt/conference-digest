@@ -1,14 +1,20 @@
 # conference-digest
 
-Generates ready-to-paste **digest prompts** for conferences relevant to
-cloud-native networking, network security, and identity. A GitHub Actions
-workflow fetches each conference's published program, wraps it in a universal
-triage prompt, commits the prompt, and opens a GitHub Issue telling you what's
-ready. You paste the prompt into Claude Desktop, generate the digest, and
-commit it to `digests/`.
+Curated **digests** of conferences relevant to datacenter and cloud-native
+networking, network security, and identity, published as a blog at
+**https://hellt.github.io/conference-digest/**.
 
-No API keys. No SMTP. The only credential used is the workflow's built-in
-`GITHUB_TOKEN` (for committing and opening issues).
+A GitHub Actions workflow fetches each conference's published program, wraps it
+in a universal triage prompt, commits the prompt, and opens a GitHub Issue.
+[ToFaRev](https://github.com/hellt/tofarev) then reads the program with
+`zai-org/GLM-5.3` on Nebius Token Factory, drafts the digest and opens a
+pull request. You review and merge it; the digest lands in `digests/`, the issue
+closes and the site rebuilds. You can still paste a prompt into Claude yourself.
+
+The scan needs no API keys: it uses the workflow's built-in `GITHUB_TOKEN`. The
+bot needs the `TOFAREV_API_KEY` secret, which reaches ToFaRev's isolated
+container and nothing else. An optional `TAVILY_API_KEY` secret lets ToFaRev read
+linked PDFs that block GitHub's runners.
 
 ## How it works
 
@@ -24,7 +30,10 @@ trigger (fortnightly cron, or manual workflow_dispatch)
        manual         -> auto-fetch blocked; you paste the program in yourself
   -> commit prompts/ + state.json + registry.yaml
   -> open ONE GitHub Issue summarising what's ready / needs you / stalled
-  -> [you] paste prompt into Claude Desktop -> commit digests/<key>.md
+Digest Bot (after the scan, or on a pushed prompt)
+  -> ToFaRev reads prompts/<key>.md and drafts the digest
+  -> PR "digest: <key>" -> [you] review + merge -> digests/<key>.md
+  -> issue closes, site rebuilds and publishes to GitHub Pages
 ```
 
 A conference is considered **done** when `digests/<key>.md` exists — that's the
@@ -40,6 +49,66 @@ the past and which has no digest yet, then (re)attempts the fetch. Artifacts
 that isn't fetchable yet stays `pending` and is retried until it succeeds — or,
 after `STALL_THRESHOLD` (4) failed attempts, is flagged **stalled** so you know
 a site changed and a fetcher needs adjusting.
+
+## ToFaRev digest bot
+
+`.github/workflows/digest-bot.yml` calls ToFaRev's reusable
+[`digest.yml`](https://github.com/hellt/tofarev/blob/main/docs/digest.md),
+pinned to a full commit SHA, the same way containerlab runs `/tofarev review`.
+It runs after every scan, when someone pushes a prompt to `main`, or by hand
+(**Actions → Digest Bot → Run workflow**, optionally with one `conference` key to
+rewrite).
+
+1. `queue` lists prompts with program text, no digest and no open bot PR,
+   newest first, at most three per run (`scripts/bot_queue.py`).
+2. `write` runs ToFaRev once per key. Programs too large for one context window
+   (IETF, KubeCon, USENIX Security reach ~800 kB) are shortlisted in batches,
+   narrowed to ≤25 picks, then written. ToFaRev reads the picks' linked PDFs
+   (papers, slides) and gives their text to the writer, which may also fetch
+   each pick's `page:` link. Code, not the model, then checks the result: links not
+   in the program text are reduced to plain text, headings that match no
+   program item are flagged, and the canonical metadata block is applied (with
+   `written_by`).
+3. `propose` validates each artifact (`scripts/propose_digest.py`), builds the
+   site with it, and opens a PR on `tofarev/digest-<key>` whose body lists the
+   check notes. Merging it is the human review step.
+
+The model is `zai-org/GLM-5.3`, set as `"model"` in the workflow's
+`trusted_config`. It won a trial of nine Token Factory models on digest
+quality. Any Kimi, GLM or DeepSeek model ID or selector works there; see
+[ToFaRev model selection](https://github.com/hellt/tofarev/blob/main/docs/models.md).
+To move to a newer ToFaRev, run `make pin-tofarev SHA=<full commit sha>`.
+
+**One-time setup:**
+
+- Add the repository secret `TOFAREV_API_KEY`: a Nebius Token Factory API key
+  (the one containerlab uses works).
+- Optional: add the repository secret `TAVILY_API_KEY`. Linked PDFs that
+  ToFaRev cannot fetch from a runner (ACM DL, USENIX) are then read through
+  Tavily Extract. Without it, those picks are written from the abstract.
+- Settings → General → Features → enable **Issues** (forks start with Issues
+  off). The scan opens one issue per conference.
+- Settings → Actions → General → enable **Allow GitHub Actions to create and
+  approve pull requests**.
+
+## Site
+
+The blog is built with [Zensical](https://zensical.org/) exactly like
+containerlab.dev: `uv` runs the pinned Zensical from the `docs` dependency group
+(`pyproject.toml`, `uv.lock`), `mkdocs.yml` carries the theme settings, and
+`overrides/` + `docs/stylesheets/extra.css` are adapted from containerlab's.
+`scripts/build_site.py` turns every `digests/<key>.md` into a post (the digest
+text is unchanged; tiers and picks get markup for styling) and writes the
+Conferences tracker. `site.yml` builds it on PRs and publishes it to the
+`gh-pages` branch with `peaceiris/actions-gh-pages` on `main`.
+
+```bash
+make serve-site   # live preview on http://localhost:8001
+make site         # strict build into site/
+```
+
+**One-time setup:** after the first `site.yml` run creates `gh-pages`, set
+Settings → Pages → Source to **Deploy from a branch**, `gh-pages` / root.
 
 ## Layout
 
@@ -61,10 +130,18 @@ conferences/
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
+  bot_queue.py                # which prompts the Digest Bot writes this run
+  propose_digest.py           # validates a ToFaRev artifact, writes PR text
+  build_site.py               # digests/ -> docs/posts/ + Conferences page
 prompts/             # generated, committed by the workflow
-digests/             # YOU commit digests here; presence = done
+digests/             # merged digests; presence = done
+docs/  overrides/    # Zensical site sources (docs/posts/ is generated)
+mkdocs.yml pyproject.toml uv.lock Makefile
 .github/workflows/
-  conference-digest.yml
+  conference-digest.yml   # weekly scan
+  digest-bot.yml          # ToFaRev drafts digests as PRs
+  close-digest-issue.yml  # closes the issue when a digest lands
+  site.yml                # builds + publishes the site
 ```
 
 ## Running it

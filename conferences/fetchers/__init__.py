@@ -18,12 +18,14 @@ from .apricot import ApricotFetcher
 from .fosdem import FosdemFetcher
 from .pretalx import PretalxFetcher
 from .tnc import TncFetcher
+from .arin import ArinFetcher
 from .imc import ImcFetcher
 from .conext import ConextFetcher
 from .apricot import ApricotFetcher
 from .fosdem import FosdemFetcher
 from .pretalx import PretalxFetcher
 from .tnc import TncFetcher
+from .arin import ArinFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -46,6 +48,7 @@ FETCHERS = {
     "fosdem": FosdemFetcher(),
     "pretalx": PretalxFetcher(),
     "tnc": TncFetcher(),
+    "arin": ArinFetcher(),
 }
 
 

@@ -1,0 +1,184 @@
+name: Digest Bot
+
+# ToFaRev drafts a digest for every prompt that is still waiting for one and
+# opens one pull request per conference. Merging that PR is the human check:
+# it lands digests/<key>.md, which closes the conference issue
+# (close-digest-issue.yml) and publishes the site (site.yml).
+#
+# The LLM runs in ToFaRev's reusable workflow, the same way containerlab runs
+# `/tofarev review`: pinned to a full commit SHA, inside ToFaRev's isolated
+# container, with only TOFAREV_API_KEY passed in. It never writes here; this
+# workflow's `propose` job does, with this repository's GITHUB_TOKEN.
+#
+# Setup: repository secret TOFAREV_API_KEY (optional TAVILY_API_KEY), Issues
+# enabled, and Settings -> Actions -> General -> "Allow GitHub Actions to create
+# and approve pull requests". See README "One-time setup". Pin ToFaRev with
+# `make pin-tofarev SHA=<full commit sha>`.
+
+on:
+  workflow_run:
+    workflows: [Conference Digest]
+    types: [completed]
+  # A prompt fetched or pasted by hand and pushed (run_location: local and the
+  # manual-paste path). The scan's own commits use GITHUB_TOKEN and do not
+  # trigger push workflows; workflow_run covers those.
+  push:
+    branches: [main]
+    paths:
+      - 'prompts/*.md'
+  workflow_dispatch:
+    inputs:
+      conference:
+        description: 'Registry key to (re)write, e.g. netdev-0x1a. Leave blank for every prompt still waiting for a digest.'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: digest-bot
+  cancel-in-progress: false
+
+jobs:
+  queue:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      keys: ${{ steps.queue.outputs.keys }}
+      source_ref: ${{ steps.queue.outputs.source_ref }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # The scan commits prompts to the default branch, so read its tip.
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Find prompts waiting for a digest
+        id: queue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CONFERENCE: ${{ github.event.inputs.conference }}
+        run: |
+          # Keys that already have an open bot PR are left alone; a forced run
+          # rewrites its key and updates that PR.
+          open=$(gh pr list --repo "$GITHUB_REPOSITORY" --state open --limit 200 --json headRefName \
+            --jq '[.[].headRefName | select(startswith("tofarev/digest-")) | ltrimstr("tofarev/digest-")] | join(",")')
+          python scripts/bot_queue.py --conference "$CONFERENCE" --exclude "$open"
+          echo "source_ref=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  write:
+    needs: queue
+    if: needs.queue.outputs.keys != '' && needs.queue.outputs.keys != '[]'
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        key: ${{ fromJSON(needs.queue.outputs.keys) }}
+    permissions:
+      contents: read
+    uses: hellt/tofarev/.github/workflows/digest.yml@899343d8513fe8f58f33e6efb2c4f7e2bd4e74ef
+    with:
+      bot_repository: hellt/tofarev
+      bot_ref: '899343d8513fe8f58f33e6efb2c4f7e2bd4e74ef'
+      key: ${{ matrix.key }}
+      source_ref: ${{ needs.queue.outputs.source_ref }}
+      # GLM-5.3 (not the default GLM-5.3-Flash) won the digest model trial.
+      # Digest-sized budgets: a long program plus PDF text, and room for reasoning.
+      trusted_config: '{"repository":"hellt/conference-digest","model":"zai-org/GLM-5.3","limits":{"contextTokens":500000,"outputTokens":65536,"requestBytes":16777216}}'
+    secrets:
+      TOFAREV_API_KEY: ${{ secrets.TOFAREV_API_KEY }}
+      # Optional: PDFs ToFaRev cannot fetch itself (USENIX blocks runner IPs) go to Tavily Extract.
+      TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+
+  propose:
+    needs: [queue, write]
+    if: always() && needs.queue.result == 'success' && needs.queue.outputs.keys != '' && needs.queue.outputs.keys != '[]'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.queue.outputs.source_ref }}
+          fetch-depth: 0
+
+      - name: Download digests
+        uses: actions/download-artifact@v4
+        continue-on-error: true   # every writer may have failed
+        with:
+          pattern: tofarev-digest-*
+          path: artifacts
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Open one pull request per digest
+        env:
+          GH_TOKEN: ${{ github.token }}
+          KEYS: ${{ needs.queue.outputs.keys }}
+          SOURCE_REF: ${{ needs.queue.outputs.source_ref }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          git config user.name  "conference-digest-bot"
+          git config user.email "actions@github.com"
+          gh label create digest-bot --color 00c9ff --description "Digest drafted by ToFaRev" --force >/dev/null
+          failed=0
+          for key in $(jq -r '.[]' <<< "$KEYS"); do
+            dir="artifacts/tofarev-digest-$key"
+            if [ ! -s "$dir/digest.md" ]; then
+              echo "::warning::$key: ToFaRev produced no digest; see the write ($key) job"
+              failed=1; continue
+            fi
+            branch="tofarev/digest-$key"
+            git switch --quiet --force-create "$branch" "$SOURCE_REF"
+            issue=$(gh issue list --state open --label "conf:$key" --json number --jq '.[0].number // empty')
+            if ! python scripts/propose_digest.py "$key" "$dir" --run-url "$RUN_URL" --issue "$issue" \
+                 --message "$RUNNER_TEMP/message-$key.txt" --body "$RUNNER_TEMP/body-$key.md"; then
+              echo "::error::$key: the digest artifact failed validation"
+              failed=1; continue
+            fi
+            # The digest must render: build the site with it before proposing it.
+            if ! make site > "$RUNNER_TEMP/site-$key.log" 2>&1; then
+              cat "$RUNNER_TEMP/site-$key.log"
+              printf '\n> [!WARNING]\n> The site build failed with this digest. See the [workflow run](%s).\n' "$RUN_URL" >> "$RUNNER_TEMP/body-$key.md"
+            fi
+            git add "digests/$key.md"
+            git commit --quiet -F "$RUNNER_TEMP/message-$key.txt"
+            git push --quiet --force origin "$branch"
+            pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')
+            if [ -n "$pr" ]; then
+              gh pr edit "$pr" --body-file "$RUNNER_TEMP/body-$key.md"
+              echo "updated #$pr for $key"
+            else
+              gh pr create --base "${{ github.event.repository.default_branch }}" --head "$branch" \
+                --title "digest: $key" --body-file "$RUNNER_TEMP/body-$key.md" --label digest-bot
+            fi
+            echo "- \`$key\`: digest proposed on \`$branch\`" >> "$GITHUB_STEP_SUMMARY"
+          done
+          exit "$failed"

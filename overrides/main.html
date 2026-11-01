@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+<!-- Open Graph and Twitter cards, as on containerlab.dev -->
+{% block extrahead %}
+{% set title = config.site_name %}
+{% if page and page.title and not page.is_homepage %}
+{% set title = page.title | striptags ~ " · " ~ config.site_name %}
+{% endif %}
+{% set description = (page.meta.description if page and page.meta and page.meta.description else config.site_description) %}
+<meta property="og:type" content="{{ 'article' if page and page.meta and page.meta.date else 'website' }}" />
+<meta property="og:site_name" content="{{ config.site_name }}" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ description }}" />
+<meta property="og:url" content="{{ page.canonical_url }}" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ title }}" />
+<meta name="twitter:description" content="{{ description }}" />
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+{{ super() }}
+
+<!-- Content footer -->
+<footer class="mdx-content__footer md-typeset">
+    <hr />
+    <span class="twemoji">
+        {% include ".icons/material/radar.svg" %}
+    </span>
+    <hr />
+</footer>
+{% endblock %}

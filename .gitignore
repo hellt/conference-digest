@@ -6,3 +6,10 @@ discovery_summary.json
 # Python
 __pycache__/
 *.pyc
+
+# Site: build output and pages rendered from digests/ by scripts/build_site.py.
+site/
+docs/posts/
+docs/conferences.md
+zensical-build.log
+.venv/

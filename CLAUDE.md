@@ -7,9 +7,14 @@ Guidance for Claude Code working in this repo.
 A pipeline that turns published conference programs into curated **digests** for
 one specific reader: a PM working on physical DC networking, cloud-native
 networking, network security, and identity. Automation fetches programs and
-builds prompts; a Claude session (or the user) runs the prompt and writes the
-digest. There are no API keys and no model calls in CI — CI only fetches, writes
-prompts, and files issues.
+builds prompts; ToFaRev (an LLM bot, `hellt/tofarev`) drafts each digest and
+opens a pull request, and a person merges it. A Claude session (or the user)
+can still run a prompt by hand. Merged digests are published as a Zensical blog
+on GitHub Pages. The only model calls in CI happen inside ToFaRev's reusable
+workflow, with the `TOFAREV_API_KEY` secret (plus the optional
+`TAVILY_API_KEY` for PDFs that block runners); the scan itself has no keys. The
+model is set by `"model"` in `digest-bot.yml`'s `trusted_config`
+(`zai-org/GLM-5.3`).
 
 ## The pipeline
 
@@ -21,13 +26,27 @@ registry.yaml (an edition)
   -> scripts/generate_digest_prompt.py   fetch program, compose prompt
   -> prompts/<key>.md                    committed by CI (or a local run)
   -> GitHub issue "Digest: <name>"       labeled conf:<key>
-  -> [Claude session reads prompts/<key>.md and follows it]
-  -> digests/<key>.md                    committed by a human/Claude, never CI
+  -> digest-bot.yml                      ToFaRev drafts the digest
+       (or a Claude session reads prompts/<key>.md and follows it)
+  -> PR "digest: <key>" on tofarev/digest-<key>  -> a person merges it
+  -> digests/<key>.md                    on main only via that merge (or a human/Claude commit)
   -> close-digest-issue.yml closes the issue
+  -> site.yml renders digests/ with Zensical -> gh-pages
 ```
 
-Two workflows: `conference-digest.yml` (weekly cron + `workflow_dispatch` with an
-optional `conference` key) and `close-digest-issue.yml` (push to `digests/*.md`).
+Four workflows: `conference-digest.yml` (weekly cron + `workflow_dispatch` with
+an optional `conference` key), `digest-bot.yml` (after each scan, on a human push
+to `prompts/*.md`, or `workflow_dispatch` for one key), `close-digest-issue.yml`
+(push to `digests/*.md`), and `site.yml` (build on PRs, build + publish on main).
+
+`digest-bot.yml` calls ToFaRev's reusable `digest.yml` pinned to a full commit
+SHA, exactly like containerlab calls `/tofarev review`. ToFaRev reads only
+`prompts/<key>.md` at the scan's commit, runs it in its isolated container
+(staged shortlist -> select -> write for big programs; `webfetch` is the writer's
+only tool) and returns `digest.md` + `result.json` as an artifact. Its checks
+strip links that are not in the program text and flag headings that match no
+program item. The `propose` job here validates the artifact
+(`scripts/propose_digest.py`), builds the site with it, and opens one PR per key.
 
 ## Invariants
 
@@ -36,14 +55,20 @@ pipeline.
 
 1. **`digests/<key>.md` existing is the only "done" signal.** It is inferred
    from the filesystem (`is_digested()`), not recorded in state. The generator
-   never writes into `digests/`; only a human or a Claude session does.
+   never writes into `digests/`. A human or a Claude session may; the Digest Bot
+   writes it only on a `tofarev/digest-<key>` PR branch, so a digest reaches
+   `main` only when a person merges it. `scripts/build_site.py` reads
+   `digests/` and never writes it.
 2. **`key` is the join key everywhere**: `registry.yaml` entry ->
    `prompts/<key>.md` -> `digests/<key>.md` -> issue label `conf:<key>` ->
    `state.json` top-level key. Renaming a key orphans the state record and the
    open issue. Don't rename a key after its first run.
-3. **CI commits only `prompts/`, `conferences/state.json` and
+3. **The scan commits only `prompts/`, `conferences/state.json` and
    `conferences/registry.yaml`.** registry.yaml is in that list *only* because
-   discovery appends to it; nothing else in CI may write it.
+   discovery appends to it; nothing else in CI may write it. The Digest Bot
+   pushes only `digests/<key>.md` to its own PR branches, and `site.yml` pushes
+   only the `gh-pages` branch. The site sources `docs/posts/` and
+   `docs/conferences.md` are generated at build time and gitignored.
    `run_summary.json`, `issues.json` and `discovery_summary.json` are ephemeral,
    gitignored, and passed between steps in one job — never commit them.
 4. **`state.json` is bookkeeping, not truth.** It tracks
@@ -73,7 +98,8 @@ pipeline.
     Edit `base.md` / `types/*.md`, never a generated `prompts/*.md` — except in
     the manual-paste path (below).
 11. **Digests start with the HTML-comment metadata block** (`conference`,
-    `type`, `source_url`, `generated`, `registry_key`), then `##` tier sections
+    `type`, `source_url`, `generated`, `registry_key`, plus `written_by` on
+    bot-written digests, which the site uses for attribution), then `##` tier sections
     (Core / Adjacent / Wildcard) and a final `## Themes`. GitHub-flavored
     markdown only; links as `[text](url)` using the exact URLs from the program
     text.
@@ -111,9 +137,20 @@ python3 scripts/generate_digest_prompt.py                      # normal scan
 python3 scripts/generate_digest_prompt.py --conference <key>   # force one
 ```
 
-**Produce a digest:** read `prompts/<key>.md`, follow it, write
-`digests/<key>.md`. Best-effort fetch the per-item `pdf:`/`page:` links to
-ground the What/How sections.
+**Produce a digest:** normally ToFaRev drafts it and opens a PR; review and
+merge. To redo one, close its PR and run Digest Bot with `conference: <key>`. By
+hand: read `prompts/<key>.md`, follow it, write `digests/<key>.md`. Best-effort
+fetch the per-item `pdf:`/`page:` links to ground the What/How sections.
+
+**Build or preview the site:** `make site` (strict build into `site/`) or
+`make serve-site` (live on :8001). Both run `scripts/build_site.py` first, which
+turns each digest into `docs/posts/<key>.md` (front matter, excerpt, facts strip,
+tier/pick markup; the digest text is unchanged) and writes the Conferences
+tracker. Style lives in `docs/stylesheets/extra.css` and `overrides/`, adapted
+from containerlab.dev. Never edit `docs/posts/` — edit the digest.
+
+**Move the bot to a new ToFaRev commit:** `make pin-tofarev SHA=<full sha>`. The
+SHA must be pushed to `hellt/tofarev`; GitHub resolves it when the run starts.
 
 **Manual-paste path** (source blocks even a local fetch): open the entry's
 `manual_fallback_url`, copy the program, and paste it into `prompts/<key>.md`

@@ -1,0 +1,135 @@
+# Built with Zensical, the same way as containerlab.dev:
+#   make site        -> scripts/build_site.py + zensical build --clean --strict
+#   make serve-site  -> live preview on :8001
+# digests/*.md stays the source of truth. scripts/build_site.py renders it into
+# docs/posts/ and docs/conferences.md (both gitignored) before every build.
+site_name: Conference Digest
+site_description: >-
+  The talks and papers worth a networking, security and identity PM's time,
+  picked from each conference program and summarized by ToFaRev.
+site_url: "https://hellt.github.io/conference-digest/"
+repo_name: hellt/conference-digest
+repo_url: https://github.com/hellt/conference-digest
+
+nav:
+  - Digests: index.md
+  - Conferences: conferences.md
+  - How it works: how-it-works.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  static_templates:
+    - 404.html
+  features:
+    - navigation.top
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tooltips
+    - toc.follow
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: custom
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: custom
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  font:
+    text: Google Sans
+    code: Google Sans Code
+  icon:
+    logo: material/radar
+    repo: fontawesome/brands/github
+  favicon: images/favicon.svg
+
+plugins:
+  - search:
+      separator: '[\s\-_]'
+  - blog:
+      blog_dir: .
+      blog_toc: false
+      post_url_format: "{slug}"
+      post_date_format: long
+      post_readtime: true
+      post_excerpt: required
+      archive: true
+      archive_name: Archive
+      categories: true
+      categories_name: Conference type
+      pagination_per_page: 12
+  - rss:
+      match_path: "posts/.*"
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+      feed_title: Conference Digest
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hellt/conference-digest
+    - icon: material/rss
+      link: https://hellt.github.io/conference-digest/feed_rss_created.xml
+
+copyright: >-
+  Digests are summaries of public conference programs. Titles, authors and
+  abstracts belong to their authors.
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: "#"
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:zensical.extensions.emoji.twemoji
+      emoji_generator: !!python/name:zensical.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde

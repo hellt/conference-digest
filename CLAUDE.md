@@ -88,9 +88,9 @@ pipeline.
    discovery appends to it; nothing else in CI may write it. The Digest Bot
    pushes only `digests/<key>.md` to its own PR branches (`tofarev/digest-<key>`,
    and `tofarev/links-<key>` for Links Refresh), and `site.yml` pushes only the
-   `gh-pages` branch. The site sources `docs/posts/`, `docs/talks/`,
-   `docs/companies/` and `docs/conferences.md` are generated at build time and
-   gitignored.
+   `gh-pages` branch. The site sources `docs/posts/`, `docs/<key>/` (talk
+   pages; each holds its own `.gitignore`), `docs/companies/` and
+   `docs/conferences.md` are generated at build time and gitignored.
    `run_summary.json`, `issues.json` and `discovery_summary.json` are ephemeral,
    gitignored, and passed between steps in one job — never commit them.
 4. **`state.json` is bookkeeping, not truth.** It tracks
@@ -179,12 +179,15 @@ links and rewrites nothing else.
 turns each digest into `docs/posts/<key>.md` (front matter, excerpt, facts strip,
 tier/pick markup; the digest text is unchanged except that employer names in
 a pick's speaker line link to that employer's page, and each pick heading
-links to its talk page), writes `docs/talks/<key>/<slug>.md` (one page per pick:
-its links, recording, speakers and write-up), builds `docs/companies/`
+links to its talk page), writes `docs/<key>/<slug>.md` (one page per pick at
+`/<key>/<slug>/`, under the digest's `/<key>/`: its links, recording, speakers
+and write-up; the folder's own `.gitignore` of `*` keeps it out of git and
+marks it for cleanup on the next run, and a hand-made `docs/<key>/` stops the
+build), builds `docs/companies/`
 (one page per employer in `build_site.py`'s `EMPLOYER_VARIANTS` map, listing
 every pick with a speaker from that employer — the Employers tab) and writes the
 Conferences tracker. Style lives in `docs/stylesheets/extra.css` and `overrides/`,
-adapted from containerlab.dev. Never edit `docs/posts/`, `docs/talks/` or
+adapted from containerlab.dev. Never edit `docs/posts/`, `docs/<key>/` or
 `docs/companies/` — edit the digest.
 
 **Search** indexes each pick once, from its talk page. A digest post is found

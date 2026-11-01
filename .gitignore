@@ -13,3 +13,6 @@ docs/posts/
 docs/conferences.md
 zensical-build.log
 .venv/
+
+# cf (Cloudflare CLI) per-checkout cache: selected account id and name.
+.cloudflare/

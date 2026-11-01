@@ -110,13 +110,14 @@ program: what the field is collectively paying attention to this cycle.
 
 ## Output format
 
-Target renderer is GitHub (GitHub-Flavored Markdown viewed in a repo). Use only
-syntax GitHub renders reliably, and follow these rules:
+The digest is read on GitHub (GitHub-Flavored Markdown viewed in the repo) and
+on the project's Zensical site, which renders the same file. Use only syntax
+both render reliably, and follow these rules:
 
 - Headings with `#`/`##`/`###`; bold with `**...**`; italics with `*...*`.
-- Bullet lists with `-`. Put a blank line before every list and before every
-  heading, or GitHub won't render them correctly.
-- Keep nested-list indentation at two spaces per level; avoid deeper nesting.
+- Bullet lists with `-`. Put a blank line before every list, before every
+  heading, and between paragraphs, or they won't render correctly.
+- Indent nested lists by four spaces per level; avoid deeper nesting.
 - All links as `[text](url)` — never bare URLs. Use the exact pdf:/video: URLs
   from the program text.
 - No raw HTML except the metadata comment below. Do not use heading IDs,
@@ -131,7 +132,7 @@ show in the rendered view but stays in the source:
 conference: IETF 124 (Montreal)
 type: standards
 source_url: https://datatracker.ietf.org/meeting/124/agenda.json
-generated: 2026-10-26
+generated: 2026-11-01
 registry_key: ietf-124
 -->
 
@@ -243,21 +244,6 @@ This document defines a "P" flag in the Prefix Information Option
 This document describes Path MTU Discovery for IP version 6.  It is
    largely derived from RFC 1191, which describes Path MTU Discovery for
    IP version 4.  It obsoletes RFC1981.
-
-### IPv6 wants 802.11 Directed Multicast Service  (draft-ietf-6man-ieee80211-dms)
-There is consensus for switching this document from Flexible
-   Multicast Service (FMS) to Directed Multicast Service (DMS).  This
-   version has not been edited over yet and is being uploaded to check
-   if/how the name can be changed.
-
-   IEEE 802.11 Flexible Multicast Service (FMS) addresses reliability
-   issues in IPv6 due to aggressive powersave optimizations in 802.11
-   client devices.
-
-   The intent of this document is to collect consensus in the IETF 6man
-   (IPv6 Maintenance) working group to request either/both the IEEE
-   802.11 Working Group and/or the Wifi Alliance's certification process
-   to make implementing FMS a requirement.
 
 ### Analysis of the 64-bit Boundary in IPv6 Addressing  (draft-ietf-6man-why64)
 The IPv6 unicast addressing format includes a separation between the prefix used to route packets to a subnet and the interface identifier used to specify a given interface connected to that subnet.  Currently, the interface identifier is defined as 64 bits long for almost every case, leaving 64 bits for the subnet prefix.  This document describes the advantages of this fixed boundary and analyzes the issues that would be involved in treating it as a variable boundary.
@@ -476,6 +462,14 @@ This specification defines the addressing architecture of the IP
 
    This document obsoletes RFC 4291, "IP Version 6 Addressing
    Architecture".
+
+### Republishing the IPV6-MIB modules as obsolete  (draft-fenner-ipv6-mibs-obsolete)
+In 2005, the IPv6 MIB update group published updated versions of the
+   IP-MIB, UDP-MIB, TCP-MIB and IP-FORWARD-MIB modules, which use the
+   InetAddressType/InetAddress construct to handle IPv4 and IPv6 in the
+   same table.  This document contains versions of the obsoleted
+   IPV6-MIB, IPV6-TC, IPV6-ICMP-MIB, IPV6-TCP-MIB and IPV6-UDP-MIB
+   modules, for the purpose of updating MIB module repositories.
 
 ## Working Group: acme
 ### Automated Certificate Management Environment (ACME) Scoped DNS Challenges  (draft-ietf-acme-scoped-dns-challenges)
@@ -1152,23 +1146,18 @@ This document defines the Constrained Bootstrapping Remote Secure Key
 
 ### BRSKI discovery and variations  (draft-ietf-anima-brski-discovery)
 This document specifies procedures for variations of the
-   "Bootstrapping Remote Secure Key Infrastructure" (BRSKI) series of
-   protocols to automatically announce, discover and select responders
-   using different discovery mechanisms such as DNS-SD, GRASP or CORE-
-   LF.  Different variations are not interoperable so initiators need to
-   be able to find responders supporting the variation(s) they support.
-   Procedures for BRSKI proxies are defined that allow proxying of
-   traffic for any current and future variation.  Procedures to discover
-   BRSKI Pledges by their identifier are defined.
+   "Bootstrapping Remote Secure Key Infrastructure" (BRSKI) architecture
+   of protocols to automatically announce, discover, and select
+   responders using different discovery mechanisms such as DNS-SD,
+   GRASP, or CORE-LF.  Different variations are not interoperable, so
+   initiators need to be able to find responders that support the
+   variation(s) they support.  Procedures are defined for BRSKI proxies
+   that allow proxying of traffic for any current or future variation.
+   Procedures to discover BRSKI Pledges by their identifier are defined.
+   Extensibility is provided through a set of IANA registries.
 
-   All procedures are defined such that they rely on IANA defined tables
-   through which not only well specified but also possible but not yet
-   validated variations of BRSKI or additional discovery mechanisms can
-   be supported simply by adding entries to the IANA tables.
-
-   Many of the procedures and mechanisms covered by this document may
-   equally be applied to discovery of other protocols, especially when
-   they have non-interoperable variations.
+   This document updates I-D.ietf-anima-brski-prm, RFC 6690, and RFC
+   9733.
 
 ### Join Proxy for Onboarding of Constrained Network Elements  (draft-ietf-anima-constrained-join-proxy)
 This document supports the constrained Bootstrapping Remote Secure
@@ -1704,6 +1693,11 @@ This document describes procedures to damp Multicast VPN (MVPN) routing state ch
 ## Working Group: cose
 ### CBOR Object Signing and Encryption (COSE): AES-CTR and AES-CBC  (draft-ietf-cose-aes-ctr-and-cbc)
 The Concise Binary Object Representation (CBOR) data format is designed for small code size and small message size.  CBOR Object Signing and Encryption (COSE) is specified in RFC 9052 to provide basic security services using the CBOR data format.  This document specifies the conventions for using AES-CTR and AES-CBC as content encryption algorithms with COSE.
+
+### Post-Quantum Key Encapsulation Mechanisms (PQ KEMs) for COSE  (draft-ietf-cose-pqc-kem)
+This document describes conventions for using Post-Quantum Key
+   Encapsulation Mechanisms (PQ-KEMs) with CBOR Object Signing and
+   Encryption (COSE).
 
 ### COSE "typ" (type) Header Parameter  (draft-ietf-cose-typ-header-parameter)
 This specification adds the equivalent of the JSON Object Signing and
@@ -3267,6 +3261,12 @@ This document defines a YANG data model for configuring and managing
    confine the scope of Optional attributes within a given AS or a given
    BGP member-AS in Confederation
 
+### BGP Flow Specification for QUIC  (draft-ietf-idr-fsv2-quic)
+A BGP Flow Specification is an n-tuple consisting of several
+   matching criteria that can be applied to IP traffic. This document
+   defines how to perform Flow Specification traffic diversion based on
+   the characteristics of QUIC packets.
+
 ### Link-Local Next Hop Capability for BGP  (draft-white-linklocal-capability)
 BGP [RFC4271], was originally designed to provide reachability
    between domains and between the edges of a domain.  As such, BGP
@@ -3527,19 +3527,6 @@ This document presents a framework for inter-domain route aggregation and shows 
 
 ### Using a Dedicated AS for Sites  Homed to a Single Provider  (draft-ietf-idr-as-dedicated)
 With the increased growth of the Internet, the number of customers using BGP4 has grown significantly.  RFC1930 outlines a set of guidelines for when one needs and should use an AS.  However, the customer and service provider (ISP) are left with a problem as a result of this in that while there is no need for an allocated AS under the guidelines, certain conditions make the use of BGP4 a very pragmatic and perhaps only way to connect a customer homed to a single ISP.  This paper proposes a solution to this problem in line with recommendations set forth in RFC1930.  This memo provides information for the Internet community.  It does not specify an Internet standard of any kind.
-
-### Route Aggregation Tutorial  (draft-ietf-idr-aggregation-tutorial)
-Route aggregation is critical to the long-term viability of the
-   Internet.  This document presents practical information that network
-   managers can use to both understand the concepts of aggregation as
-   well as put those concepts into use in order to do their part to make
-   the Internet stable and allow its continued growth.  The intended
-   audience for this document is anyone responsible for configuring a
-   network which has its own Autonomous System Number (ASN) and
-   exchanges routing information with its Internet Service Provider(s)
-   (ISP(s)) using the Border Gateway Protocol (BGP).  This document does
-   not cover multi-homing, though multi-homed sites can still benefit
-   from understanding this material.
 
 ## Working Group: ipsecme
 ### Internet Key Exchange Protocol Version 2 (IKEv2) Configuration for Encrypted DNS  (draft-ietf-ipsecme-add-ike)
@@ -4737,9 +4724,10 @@ This document defines extensions for HTTP Datagram-based protocols
    enabling receivers to complete Internet checksums using sender-
    provided partial values.
 
-   These optimisations reduce per-packet overhead, processing cost, and
-   increase the effective maximum transmission unit (MTU) when datagrams
-   are encapsulated in QUIC DATAGRAM frames.
+   These optimisations reduce per-packet overhead and processing cost.
+   Compression can allow larger original packets to fit in QUIC DATAGRAM
+   frames, depending on the applicable processing context and path
+   maximum transmission unit (MTU).
 
 ### ECN and DSCP support for HTTPS's Connect-UDP  (draft-ietf-masque-connect-udp-ecn-dscp)
 HTTP's Extended Connect's Connect-UDP protocol enables a client to
@@ -5291,9 +5279,9 @@ This specification provides a mechanism for an application to use an
    identity assertion to obtain an access token for a third-party API by
    coordinating through an identity provider that the downstream
    Resource Authorization Server already trusts for single sign-on
-   (SSO), using Token Exchange [RFC8693] and JWT Profile for OAuth 2.0
-   Authorization Grants [RFC7523].  This pattern is informally referred
-   to as Cross-App Access (XAA).
+   (SSO), using OAuth 2.0 Token Exchange (RFC 8693) and the JWT Profile
+   for OAuth 2.0 Authorization Grants (RFC 7523).  This pattern is
+   informally referred to as Cross-App Access (XAA).
 
 ### OAuth 2.0 Attestation-Based Client Authentication  (draft-ietf-oauth-attestation-based-client-auth)
 This specification defines an extension to the OAuth 2.0 protocol
@@ -6174,7 +6162,7 @@ The term "measured component" refers to an object within the
 
 ### Remote Attestation with Multiple Verifiers  (draft-ietf-rats-multi-verifier)
 IETF RATS Architecture, defines the key role of a Verifier.  In a
-   complex system, this role needs to be performed by multiple Verfiers
+   complex system, this role needs to be performed by multiple Verifiers
    coordinating together to assess the full trustworthiness of an
    Attester.  This document focuses on various topological patterns for
    a multiple Verifier system.  It only covers the architectural aspects
@@ -6219,9 +6207,6 @@ This document specifies a vendor-agnostic format for Evidence
    scenario would be to submit this Evidence to a Certification
    Authority to aid in determining whether the storage properties of
    this key meet the requirements of a given certificate profile.
-
-   This specification also offers a format for requesting a
-   cryptographic module to produce Evidence tailored for expected use.
 
 ### RATS Conceptual Messages Wrapper (CMW)  (draft-ietf-rats-msg-wrap)
 The Conceptual Messages introduced by the RATS architecture (RFC
@@ -6268,6 +6253,20 @@ In the IETF Remote Attestation Procedures (RATS) architecture (RFC
    as actual state, reference state, or appraisal policy, and adds
    considerations on conditionally endorsed values, endorsing
    verification keys, timeliness, and multiple Endorsements.
+
+### An EAT Profile for Trustworthy Device Assignment  (draft-ietf-rats-eat-da)
+In confidential computing, device assignment (DA) is the method by
+   which a device (e.g., network adapter, GPU), whether on-chip or
+   behind a PCIe Root Port, is assigned to a Trusted Virtual Machine
+   (TVM).  For the TVM to trust an assigned device, the device must
+   provide the TVM with attestation Evidence confirming its identity,
+   the state of its firmware and configuration.
+
+   Since Evidence claims can be processed by 3rd party entities (e.g.,
+   Verifiers, Relying Parties) external to the TVM, there is a need to
+   standardize the representation of DA-related information in Evidence
+   to ensure interoperability.  This document defines an attestation
+   Evidence format for DA as an EAT (Entity Attestation Token) profile.
 
 ## Working Group: rift
 ### RIFT: Routing in Fat Trees  (draft-ietf-rift-rift)
@@ -7311,9 +7310,9 @@ Explicit Congestion Notification (ECN) is a mechanism where network
    of this updated TCP wire protocol by middleboxes.
 
 ### Cryptographic Algorithms That Produce 128-bit MACs For Use With TCP-AO  (draft-ietf-tcpm-tcp-ao-algs)
-RFC5926 creates a list of cryptographic algorithms that can be used
-   with TCP-AO.  This document expands that list, adding two Message
-   Authentication Code (MAC) algorithms, HMAC-SHA256-128 and
+RFC 5926 established a registry of cryptographic algorithms that can
+   be used with TCP-AO.  This document expands that registry, adding two
+   Message Authentication Code (MAC) algorithms, HMAC-SHA256-128 and
    KMAC256-128.  For each MAC algorithm, a corresponding Key Derivation
    Function (KDF) is also added.
 

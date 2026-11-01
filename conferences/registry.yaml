@@ -16,7 +16,7 @@
 #   type       One of: academic | standards | vendor | operator | security
 #              Drives how the universal prompt tells Claude to read the program.
 #   end_date   ISO date (YYYY-MM-DD) the event ended. Selection is based on this.
-#   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev
+#   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog
 #   program_url
 #              The machine-or-human-readable program endpoint the fetcher pulls.
 #   manual_fallback_url
@@ -248,3 +248,30 @@ conferences:
     manual_fallback_url: "https://datatracker.ietf.org/meeting/129/agenda"
     discovered: 2026-09-21
     notes: "Filter to WGs relevant to networking/security/identity (oauth, scitt, wimse, rats, masque, tls, dnsop, ipsecme, anima, savnet). Auto-discovered 2026-09-21 from series 'ietf'. end_date taken from the source."
+
+  - key: nanog-96
+    name: "NANOG 96"
+    type: operator
+    end_date: 2026-02-04
+    fetcher: nanog
+    program_url: "https://nanog.org/events/nanog-96/agenda/"
+    manual_fallback_url: "https://nanog.org/events/nanog-96/agenda/"
+    notes: "North American network operators: routing security, peering, optics, DC and backbone operations, automation. Read via Tavily Extract (nanog.org blocks automated clients). end_date from the agenda."
+
+  - key: nanog-97
+    name: "NANOG 97"
+    type: operator
+    end_date: 2026-06-03
+    fetcher: nanog
+    program_url: "https://nanog.org/events/nanog-97/agenda/"
+    manual_fallback_url: "https://nanog.org/events/nanog-97/agenda/"
+    notes: "North American network operators: routing security, peering, optics, DC and backbone operations, automation. Read via Tavily Extract (nanog.org blocks automated clients). end_date from the agenda."
+
+  - key: nanog-98
+    name: "NANOG 98"
+    type: operator
+    end_date: 2026-10-21
+    fetcher: nanog
+    program_url: "https://nanog.org/events/nanog-98/agenda/"
+    manual_fallback_url: "https://nanog.org/events/nanog-98/agenda/"
+    notes: "North American network operators: routing security, peering, optics, DC and backbone operations, automation. Read via Tavily Extract (nanog.org blocks automated clients). end_date from the agenda."

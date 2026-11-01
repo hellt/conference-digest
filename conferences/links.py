@@ -56,9 +56,12 @@ CHANNELS = {
     "usenix": ("usenix",),
     "sigcomm": ("acm sigcomm", "sigcomm"),
     "netdev": ("netdev",),
+    "nanog": ("nanog",),
 }
 DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon": "SREcon",
-           "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF"}
+           "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF", "nanog": "NANOG"}
+# URLs that only ever hold presentation decks, whatever the link text says.
+DECK_URLS = re.compile(r"static\.sched\.com/hosted_files/|storage\.googleapis\.com/site-media-prod/meetings/")
 STOP = {"the", "and", "for", "with", "from", "into", "over", "using", "via", "its", "our", "your",
         "of", "to", "in", "on", "a", "an", "at", "by", "is", "are", "how", "what", "why"}
 
@@ -162,13 +165,15 @@ def youtube_id(url: str) -> Optional[str]:
 
 
 def classify(found: dict[str, str], href: str, text: str) -> None:
-    """File a PDF link as slides or paper."""
+    """File a document link (PDF, or a PPTX/PPT/KEY/ODP deck) as slides or paper."""
     if not href.startswith("https://"):
         return
     label = f"{text} {href}".lower()
-    if not (href.lower().split("?")[0].endswith(".pdf") or "static.sched.com/hosted_files/" in href):
+    path = href.lower().split("?")[0]
+    deck = path.endswith((".pptx", ".ppt", ".key", ".odp")) or bool(DECK_URLS.search(href))
+    if not (path.endswith(".pdf") or deck):
         return
-    if "slide" in label or "static.sched.com/hosted_files/" in href:
+    if deck or "slide" in label:
         found.setdefault("slides", href)
     elif "paper" in label or "/system/files/" in href:
         found.setdefault("pdf", href)

@@ -11,10 +11,11 @@ in a universal triage prompt, commits the prompt, and opens a GitHub Issue.
 pull request. You review and merge it; the digest lands in `digests/`, the issue
 closes and the site rebuilds. You can still paste a prompt into Claude yourself.
 
-The scan needs no API keys: it uses the workflow's built-in `GITHUB_TOKEN`. The
-bot needs the `TOFAREV_API_KEY` secret, which reaches ToFaRev's isolated
-container and nothing else. An optional `TAVILY_API_KEY` secret lets ToFaRev read
-linked PDFs that block GitHub's runners.
+The scan uses the workflow's built-in `GITHUB_TOKEN`, plus `TAVILY_API_KEY` for
+the one source it reads through Tavily (nanog.org). The bot needs the
+`TOFAREV_API_KEY` secret, which reaches ToFaRev's isolated container and nothing
+else. `TAVILY_API_KEY` also lets ToFaRev read linked PDFs that block GitHub's
+runners.
 
 ## How it works
 
@@ -113,11 +114,13 @@ To move to a newer ToFaRev, run `make pin-tofarev SHA=<full commit sha>`.
 
 - Add the repository secret `TOFAREV_API_KEY`: a Nebius Token Factory API key
   (the one containerlab uses works).
-- Optional: add the repository secret `TAVILY_API_KEY`. Linked PDFs that
-  ToFaRev cannot fetch from a runner (ACM DL, USENIX) are then read through
-  Tavily Extract. Without it, those picks are written from the abstract. The
-  links step also uses it to read talk pages that block runners and as the
-  fallback recording search.
+- Add the repository secret `TAVILY_API_KEY`. NANOG needs it: nanog.org blocks
+  automated clients, so its agenda is read through Tavily Extract. For the
+  rest it is optional: linked PDFs that ToFaRev cannot fetch from a runner
+  (ACM DL, USENIX) are read through Tavily Extract, and the links step uses it
+  for talk pages that block runners and as the fallback recording search.
+  Without it, NANOG editions wait as `manual`, and those picks are written from
+  the abstract.
 - Settings → General → Features → enable **Issues** (forks start with Issues
   off). The scan opens one issue per conference.
 - Settings → Actions → General → enable **Allow GitHub Actions to create and
@@ -160,6 +163,7 @@ conferences/
     sched.py         # KubeCon / CNCF public Sched schedule (HTML)
     sigcomm.py       # SIGCOMM papers-info table (HTML)
     netdev.py        # netdevconf.info sessions index + per-session pages (HTML)
+    nanog.py         # nanog.org agenda + talk pages, read via Tavily Extract
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -192,30 +196,22 @@ docs/javascripts/video.js # click-to-play recordings on the site
 
 ## Adding a conference
 
-**If it recurs, add the series, not the edition.** `conferences/series.yaml`
-describes the conference itself — URL templates, how its editions are numbered
-(`kubecon-eu-{year}`, `ietf-{n}`, `netdev-0x{HEX}`) and where to fall back for
-an end date. Every scheduled run probes each series for editions the registry
-doesn't have yet and appends the ones the source confirms, so next year's
-KubeCon files itself. Check a new series without writing anything:
+See **[ADDING-A-CONFERENCE.md](ADDING-A-CONFERENCE.md)**: checking the source,
+reusing or writing a fetcher, the program-text format and its link keys
+(`page:`, `pdf:`, `slides:`, `video:`), recordings, the series or registry
+entry, a local trial, and shipping it.
+
+In short: **if it recurs, add the series, not the edition.**
+`conferences/series.yaml` describes the conference itself, and every scheduled
+run appends the editions its source confirms. Check a new series without
+writing anything:
 
 ```bash
 python3 scripts/discover_editions.py --dry-run --series kubecon-eu
 ```
 
-Sources that bot-block CI (`run_location: local`) are only discovered on a
-local run — in CI they're reported as needing one.
-
-**For a one-off event**, or to correct a discovered entry, copy a block in
-`registry.yaml` and set:
-
-- `key` — unique slug, also the prompt/digest filename
-- `type` — `academic | standards | vendor | operator | security` (drives how
-  the prompt tells Claude to read the program)
-- `end_date` — `YYYY-MM-DD` (selection is based on this)
-- `fetcher` — `usenix | ietf | sched | sigcomm | netdev`
-- `program_url` — the machine/human-readable program endpoint
-- `manual_fallback_url` — page for you to open if auto-fetch is blocked
+Sources that block CI (`run_location: local`) are only discovered on a local
+run.
 
 ## Fetcher notes & known fragilities
 
@@ -232,6 +228,14 @@ local run — in CI they're reported as needing one.
   YouTube recording. Each item links its draft page, slides, session recording
   and the session's materials page. A meeting whose WGs have posted no agenda
   or slides yet is `not_published` and retried.
+- **NANOG**: nanog.org blocks automated clients with Cloudflare, including
+  GitHub's runners, so the fetcher reads the public agenda through Tavily
+  Extract. The repository owner approved this on 2026-11-01. The agenda gives
+  each talk's page, presenters and abstract. Up to NANOG 96 it also gives the
+  recording and slides; from NANOG 97 those are on each talk page, read 20 per
+  request. The agenda's day headers give exact dates, so discovery adds each
+  meeting once its agenda is up. It needs `TAVILY_API_KEY`, and costs about 2
+  Tavily credits per agenda plus 2 per 5 talk pages.
 - **SIGCOMM** and **Netdev** are static HTML with no observed bot-block. Netdev
   does a second pass: the sessions index has only titles/speakers, so it follows
   each session page for the description, track label, slides and video. A

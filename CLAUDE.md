@@ -12,7 +12,10 @@ opens a pull request, and a person merges it. A Claude session (or the user)
 can still run a prompt by hand. Merged digests are published as a Zensical blog
 on GitHub Pages. The only model calls in CI happen inside ToFaRev's reusable
 workflow, with the `TOFAREV_API_KEY` secret (plus the optional
-`TAVILY_API_KEY` for PDFs that block runners); the scan itself has no keys. The
+`TAVILY_API_KEY` for PDFs that block runners). The scan uses `TAVILY_API_KEY`
+only for nanog.org, which blocks automated clients; reading it through Tavily
+Extract was approved by the repository owner (2026-11-01). Do not route other
+blocked sources around their bot protection without the same explicit approval. The
 model is set by `"model"` in `digest-bot.yml`'s `trusted_config`
 (`zai-org/GLM-5.3`).
 
@@ -104,7 +107,7 @@ pipeline.
    `standards`, `vendor`, `operator`, `security`.
 8. **Every `fetcher` value must be registered** in
    `conferences/fetchers/__init__.py::FETCHERS`. Today: `usenix`, `ietf`,
-   `sched`, `sigcomm`, `netdev`.
+   `sched`, `sigcomm`, `netdev`, `nanog`.
 9. **`run_location: local`** means the source bot-blocks datacenter IPs. In CI
    that edition is skipped without a fetch attempt (status `local_required`) and
    the issue tells the user to run it from their own machine. `--conference`
@@ -184,6 +187,8 @@ SHA must be pushed to `hellt/tofarev`; GitHub resolves it when the run starts.
 where `{PROGRAM_TEXT}` is — i.e. below the
 `==== PROGRAM TEXT ====` separator line at the end of the prompt. That hand-built prompt is committed like a
 generated one. State stays `manual`; the digest file is what closes the loop.
+
+**Add a new conference:** follow `ADDING-A-CONFERENCE.md` (source checks, fetcher, program-text link keys, series, local trial).
 
 **Add a conference edition:** you usually shouldn't have to — if the conference
 recurs, add it to `conferences/series.yaml` once and discovery files every

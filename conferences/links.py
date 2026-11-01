@@ -63,10 +63,11 @@ CHANNELS = {
     "nanog": ("nanog",),
     "autocon": ("autocon", "network automation forum"),
     "ovscon": ("openvswitch", "open vswitch", "ovs+ovncon", "ovscon"),
+    "ciscolive": ("cisco live", "ciscolive"),
 }
 DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon": "SREcon",
            "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF", "nanog": "NANOG",
-           "autocon": "AutoCon", "ovscon": "OVS OVN conference"}
+           "autocon": "AutoCon", "ovscon": "OVS OVN conference", "ciscolive": "Cisco Live"}
 # URLs that only ever hold presentation decks, whatever the link text says.
 DECK_URLS = re.compile(r"static\.sched\.com/hosted_files/|storage\.googleapis\.com/site-media-prod/meetings/")
 STOP = {"the", "and", "for", "with", "from", "into", "over", "using", "via", "its", "our", "your",
@@ -200,6 +201,11 @@ def scrape_page(url: str, tavily_key: str = "") -> dict[str, str]:
     through Tavily Extract instead, when a key is set.
     """
     parsed = urlparse(url)
+    if ((parsed.hostname or "").removeprefix("www.") == "ciscolive.com"
+            and parsed.path == "/on-demand/on-demand-library.html"):
+        # #/session/... is client-side: HTML/extraction sees the shared catalog,
+        # not this talk. Materials require login; never borrow promotional links.
+        return {}
     ovscon = ((parsed.hostname or "").removeprefix("www.") == "openvswitch.org"
               and re.fullmatch(r"/support/ovscon\d{4}/?", parsed.path) is not None)
     try:

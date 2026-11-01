@@ -17,7 +17,7 @@
 #              Drives how the universal prompt tells Claude to read the program.
 #   start_date Optional ISO date the conference program began, for the site header.
 #   end_date   ISO date (YYYY-MM-DD) the event ended. Selection is based on this.
-#   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog | autocon | ovscon
+#   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog | autocon | ovscon | ciscolive
 #   program_url
 #              The machine-or-human-readable program endpoint the fetcher pulls.
 #   manual_fallback_url
@@ -42,6 +42,26 @@
 # hand for a genuine one-off, or to fix something discovery got wrong.
 
 conferences:
+
+  - key: ciscolive-us-2025
+    name: "Cisco Live US 2025 (San Diego)"
+    type: vendor
+    start_date: 2025-06-08
+    end_date: 2025-06-12  # https://blogs.cisco.com/customerexperience/cisco-live-2025-back-in-san-diego
+    fetcher: ciscolive
+    program_url: "https://www.ciscolive.com/on-demand/on-demand-library.html?search.event=1748366287882001oJzH"
+    manual_fallback_url: "https://www.ciscolive.com/on-demand/on-demand-library.html?search.event=1748366287882001oJzH"
+    notes: "Public on-demand abstracts and speakers. Slides and recordings require a Cisco Live account; no guessed material URLs. Datacenter fabrics, silicon, automation, cloud networking, security and identity."
+
+  - key: ciscolive-eu-2025
+    name: "Cisco Live Europe 2025 (Amsterdam)"
+    type: vendor
+    start_date: 2025-02-09
+    end_date: 2025-02-14  # https://blogs.cisco.com/cisco-devnet/explore-cisco-ios-xe-automation-at-cisco-live-emea-2025
+    fetcher: ciscolive
+    program_url: "https://www.ciscolive.com/on-demand/on-demand-library.html?search.event=1737762187215001jsy4"
+    manual_fallback_url: "https://www.ciscolive.com/on-demand/on-demand-library.html?search.event=1737762187215001jsy4"
+    notes: "Public on-demand abstracts and speakers. Slides and recordings require a Cisco Live account; no guessed material URLs. Datacenter fabrics, silicon, automation, cloud networking, security and identity."
 
   # ----------------------------------------------------------------------- #
   # USENIX  (academic). Static program pages carry title + authors + abstract.

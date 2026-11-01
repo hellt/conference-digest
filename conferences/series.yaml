@@ -38,6 +38,32 @@
 
 series:
 
+  # Cisco Live publishes regional editions into one public on-demand catalog.
+  # The fetcher resolves year + region to the catalog's event ID; cities may
+  # change, so see CITIES in ciscolive.py. No API dates: hints deliberately
+  # overestimate the usual February/June event ends, and must be confirmed.
+  - series: ciscolive-us
+    enumerate: year
+    key_template: "ciscolive-us-{year}"
+    name_template: "Cisco Live US {year}"
+    type: vendor
+    fetcher: ciscolive
+    end_date_hint: "06-30"
+    program_url_template: "https://www.ciscolive.com/on-demand/on-demand-library.html"
+    manual_fallback_url_template: "https://www.ciscolive.com/on-demand/on-demand-library.html"
+    notes: "Public on-demand abstracts and speakers; slides/recordings require login. Discovery dates are estimates: confirm against the event site."
+
+  - series: ciscolive-eu
+    enumerate: year
+    key_template: "ciscolive-eu-{year}"
+    name_template: "Cisco Live Europe {year}"
+    type: vendor
+    fetcher: ciscolive
+    end_date_hint: "03-31"
+    program_url_template: "https://www.ciscolive.com/on-demand/on-demand-library.html"
+    manual_fallback_url_template: "https://www.ciscolive.com/on-demand/on-demand-library.html"
+    notes: "Public on-demand abstracts and speakers; slides/recordings require login. Discovery dates are estimates: confirm against the event site."
+
   # KubeCon EU and NA are separate series: different subdomains, different
   # halves of the year. Sched publishes the schedule months before the event,
   # so these get discovered early and then wait on end_date like anything else.

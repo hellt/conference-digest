@@ -572,3 +572,20 @@ series:
     program_url_template: "https://grnog.indico.nogalliance.org/category/0/"
     manual_fallback_url_template: "https://grnog.indico.nogalliance.org/"
     notes: "Greek network operators (Athens): peering and IX, routing and RPKI, optical transport, DC networking, automation. Contributions carry abstracts, speakers and material via the Indico export."
+
+  # DKNOG: each edition gets its own subdomain (dknog16.dknog.dk, ...), whose
+  # root redirects straight to the event on the shared events.dknog.dk
+  # backend — and the redirect target's host is also where the export API
+  # lives, which is how the generic Indico fetcher resolves both. Contributions
+  # carry abstracts and material.
+  - series: dknog
+    enumerate: ordinal
+    key_template: "dknog-{n}"
+    name_template: "DKNOG{n}"
+    type: operator
+    fetcher: indico
+    start: 16
+    lookahead: 2
+    program_url_template: "https://dknog{n}.dknog.dk/"
+    manual_fallback_url_template: "https://dknog{n}.dknog.dk/"
+    notes: "Danish network operators (Copenhagen): DC and backbone networking, BGP/EVPN, automation, security and operator workshops. Contributions carry abstracts, speakers and material via the Indico export."

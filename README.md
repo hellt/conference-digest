@@ -186,6 +186,7 @@ conferences/
     imc.py           # ACM IMC program: papers, abstracts, doi.org links
     conext.py        # ACM CoNEXT program partial: papers, abstracts, ACM DL links
     apricot.py       # APRICOT via the open APNIC conference API
+    fosdem.py        # FOSDEM Pentabarf XML, curated track filter
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -352,6 +353,12 @@ run.
   with speaker, affiliation, abstract and slides. A session's YouTube live
   link is attached only when it holds a single talk. Week-long workshops,
   breaks and sponsor invites are dropped.
+- **FOSDEM**: one schedule XML per edition gives every event's page, abstract,
+  speakers, slide attachments and video.fosdem.org recording. With ~1000
+  events over 71 tracks the fetcher keeps a curated track set (network, eBPF,
+  DNS, security, IAM, confidential computing, containers, virtualization,
+  kernel, main) and drops workshops and lightning talks; `RELEVANT_TRACKS` in
+  `fosdem.py` is the lever. The XML states the conference dates exactly.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

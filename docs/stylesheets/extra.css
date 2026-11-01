@@ -572,7 +572,7 @@
    stays at full opacity, and its negative margins keep the row at the tabs'
    line height so the text sits on the same line as theirs. */
 .md-tabs__item--powered {
-  margin-left: 0.6rem;
+  margin-left: 0.2rem;
 }
 
 .md-tabs__link.md-tabs__powered {
@@ -580,6 +580,17 @@
   align-items: center;
   gap: 0.4rem;
   opacity: 1;
+}
+
+/* A slanted hairline ("/") sets the credit apart from the site's own tabs. */
+.md-tabs__link.md-tabs__powered::before {
+  content: "";
+  flex: none;
+  width: 1px;
+  height: 0.9rem;   /* within the tabs' line height, or it lowers the text */
+  margin-right: 0.55rem;
+  background: var(--md-default-fg-color--lighter);
+  transform: rotate(20deg);
 }
 
 .md-tabs__powered-text {

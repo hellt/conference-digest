@@ -11,7 +11,6 @@ __pycache__/
 site/
 docs/posts/
 docs/companies/
-docs/talks/
 docs/conferences.md
 zensical-build.log
 .venv/

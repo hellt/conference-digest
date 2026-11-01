@@ -622,3 +622,18 @@ series:
     program_url_template: "https://www.netnod.se/netnod-tech-meeting-{year}"
     manual_fallback_url_template: "https://www.netnod.se/netnod-tech-meeting-{year}"
     notes: "Swedish IXP and NOG (200+ attendees, Stockholm): IX and interconnection, routing security (RPKI/ASPA), optics, DNS and NTP infrastructure, DC networking. Titles, speakers and slides; no abstracts."
+
+  # CfgMgmtCamp runs its CfP on Pretalx (cfp.cfgmgmtcamp.be, also served as
+  # cfp.cfgmgmtcamp.org) and exposes the schedule export JSON directly; the
+  # generic Pretalx fetcher reads it. Held in Ghent the days after FOSDEM.
+  - series: cfgmgmtcamp
+    enumerate: year
+    key_template: "cfgmgmtcamp-{year}"
+    name_template: "CfgMgmtCamp Ghent {year}"
+    type: vendor
+    fetcher: pretalx
+    start: 2026
+    lookahead: 2
+    program_url_template: "https://cfp.cfgmgmtcamp.be/ghent{year}/schedule/export/schedule.json"
+    manual_fallback_url_template: "https://cfp.cfgmgmtcamp.be/ghent{year}/schedule/"
+    notes: "The open automation conference next to FOSDEM: Ansible/Puppet/Salt/CFEngine communities, infrastructure automation, GitOps, network automation, immutable infrastructure. Full abstracts from the Pretalx export."

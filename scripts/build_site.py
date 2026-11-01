@@ -74,29 +74,32 @@ def youtube_id(url: str) -> str | None:
     return m.group(1) if m else None
 
 
-def links_block(row: str, title: str) -> list[str]:
-    """A pick's links row as chips, plus a click-to-play recording thumbnail."""
+def links_block(row: str, title: str) -> tuple[list[str], list[str]]:
+    """A pick's links row as chips, and its click-to-play recording (which
+    decorate() puts first in the card)."""
     links = MD_LINK.findall(row)
     if not links:
-        return [f"**Links:** {row}"]
+        return [f"**Links:** {row}"], []
     chips = " ".join(
         f"[:{ICONS.get(text.lower()) or ICONS.get(re.sub(r'\s*\(.*\)$|\s+\d+$', '', text.lower()), 'material-link-variant')}: {text}]({url}){{ .pick-link }}"
         for text, url in links
     )
     out = ['<div class="pick-links" markdown>', "", chips, "", "</div>", ""]
+    player: list[str] = []
     recording = next((url for text, url in links if text.lower() == "recording" and youtube_id(url)), None)
     video = youtube_id(recording) if recording else None
     if video:
         start = youtube_start(recording)
         alt = re.sub(r"[\"<>&]", "", f"Play the recording: {title}")[:160]
-        out += [
+        player = [
             f'<div class="pick-video"><a class="pick-video__thumb" data-yt="{video}" data-start="{start}" '
             f'href="https://www.youtube.com/watch?v={video}{f"&t={start}s" if start else ""}" target="_blank" rel="noopener">'
-            f'<img src="https://i.ytimg.com/vi/{video}/hqdefault.jpg" alt="{alt}" loading="lazy">'
+            f'<img src="https://i.ytimg.com/vi/{video}/hqdefault.jpg" '
+            f'data-hd="https://i.ytimg.com/vi/{video}/maxresdefault.jpg" alt="{alt}" loading="lazy">'
             f'<span class="pick-video__play" aria-hidden="true"></span></a></div>',
             "",
         ]
-    return out
+    return out, player
 
 
 def load_registry() -> dict[str, dict]:
@@ -178,6 +181,7 @@ def decorate(rest: str) -> tuple[str, dict[str, int]]:
     tier = None
     in_card = in_fence = False
     pick_title = ""
+    card_top = 0   # where a pick's recording goes: first in its card
 
     def close() -> None:
         nonlocal in_card
@@ -201,13 +205,17 @@ def decorate(rest: str) -> tuple[str, dict[str, int]]:
         if line.startswith("### ") and tier:
             close()
             counts[tier] += 1
-            out.extend([f'<div class="pick pick-{tier}" markdown>', "", line])
+            out.extend([f'<div class="pick pick-{tier}" markdown>', ""])
+            card_top = len(out)
+            out.append(line)
             in_card = True
             pick_title = line[4:].strip()
             continue
         row = LINKS_ROW.match(line) if in_card else None
         if row:
-            out.extend(links_block(row.group(1), pick_title))
+            chips, player = links_block(row.group(1), pick_title)
+            out.extend(chips)
+            out[card_top:card_top] = player
             continue
         # `**Why:** ...` lines written back to back would merge into one
         # paragraph; give each labelled line its own.
@@ -237,7 +245,9 @@ def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict
     category = TYPES.get(kind, kind.title() or "Other")
     written_by = str(meta.get("written_by", "")).strip()
     bot = written_by.lower().startswith("tofarev")
-    published = as_date(meta.get("generated")) or as_date(entry.get("end_date")) or date.today()
+    # Posts are dated by the conference, not by when the digest was written,
+    # so the blog lists the most recent conference first.
+    published = as_date(entry.get("end_date")) or as_date(meta.get("generated")) or date.today()
     ended = as_date(entry.get("end_date"))
     # The human-facing page; a fetcher's source_url can be an API endpoint.
     source = entry.get("manual_fallback_url") or meta.get("source_url") or entry.get("program_url") or ""

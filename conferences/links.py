@@ -86,11 +86,12 @@ CHANNELS = {
     "capacity": ("capacity europe", "capacity media"),
     "janog": ("janog",),
     "nogfi": ("nog.fi", "nogfi"),
+    "netuk": ("netuk",),
 }
 DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon": "SREcon",
            "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF", "nanog": "NANOG",
            "autocon": "AutoCon", "ovscon": "OVS OVN conference", "ciscolive": "Cisco Live",
-           "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG", "gtc": "GTC", "ccs": "CCS", "imc": "IMC", "conext": "CoNEXT", "apricot": "APRICOT", "fosdem": "FOSDEM", "hacklu": "hack.lu", "tnc": "TNC GÉANT", "arin": "ARIN", "lacnic": "LACNIC", "pets": "PETS", "ausnog": "AusNOG", "peeringdays": "Peering Days", "moreip": "MORE-IP", "swinog": "SwiNOG", "capacity": "Capacity Europe", "janog": "JANOG", "nogfi": "nog.fi"}
+           "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG", "gtc": "GTC", "ccs": "CCS", "imc": "IMC", "conext": "CoNEXT", "apricot": "APRICOT", "fosdem": "FOSDEM", "hacklu": "hack.lu", "tnc": "TNC GÉANT", "arin": "ARIN", "lacnic": "LACNIC", "pets": "PETS", "ausnog": "AusNOG", "peeringdays": "Peering Days", "moreip": "MORE-IP", "swinog": "SwiNOG", "capacity": "Capacity Europe", "janog": "JANOG", "nogfi": "nog.fi", "netuk": "NetUK"}
 # URLs that only ever hold presentation decks, whatever the link text says.
 DECK_URLS = re.compile(
     r"static\.sched\.com/hosted_files/|storage\.googleapis\.com/site-media-prod/meetings/"

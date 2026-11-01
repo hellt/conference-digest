@@ -431,6 +431,9 @@ run.
   past ones are hand-added with their event URL). DKNOG's per-edition
   subdomains redirect `/export/` to the main host, so its series sets
   `indico_export_url`.
+- **NetUK** uses the generic Indico fetcher: its event ids match the edition
+  numbers (event 3 = NetUK3), so the series template points straight at the
+  event page and the export gives titles, abstracts, speakers and material.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

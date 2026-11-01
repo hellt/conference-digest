@@ -541,3 +541,19 @@ series:
     program_url_template: "https://www.janog.gr.jp/meeting/janog{n}/program-timetable/"
     manual_fallback_url_template: "https://www.janog.gr.jp/meeting/janog{n}/program-timetable/"
     notes: "Japan's network operators group (~1,000 attendees, Japanese-language program): backbone and DC operations, IX and peering, optical transport, automation, network security."
+
+  # NetUK: the UK's new network infrastructure community. Its Indico event
+  # ids match the edition numbers (indico.netuk.org/event/3 = NetUK3), so the
+  # series template points straight at the event page and the generic Indico
+  # fetcher reads the open export. Contributions carry full abstracts.
+  - series: netuk
+    enumerate: ordinal
+    key_template: "netuk-{n}"
+    name_template: "NetUK{n}"
+    type: operator
+    fetcher: indico
+    start: 2
+    lookahead: 2
+    program_url_template: "https://indico.netuk.org/event/{n}/"
+    manual_fallback_url_template: "https://indico.netuk.org/event/{n}/"
+    notes: "UK network infrastructure community (The Brewery, London): backbone and DC networking, IX and peering, automation, security. Full abstracts from the Indico export."

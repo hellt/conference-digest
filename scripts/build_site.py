@@ -11,7 +11,7 @@ reads it and writes derived, gitignored files that `zensical build` publishes:
 
 The digest text itself is not rewritten: headings and wording pass through
 unchanged. Each pick's `**Links:**` row (written by conferences/links.py)
-becomes a row of link chips, and a talk recording on YouTube also gets a
+becomes a row of plain source links, and a talk recording on YouTube also gets a
 click-to-play thumbnail (docs/javascripts/video.js swaps in the player).
 Run it before every build (`make site` does).
 """
@@ -47,15 +47,6 @@ TIERS = ("core", "adjacent", "wildcard")
 LABEL = re.compile(r"^\*\*[A-Z][\w /-]{0,40}(?::\*\*|\*\*:)")
 LINKS_ROW = re.compile(r"^\s*(?:[-*]\s+)?\*\*Links?:?\*\*:?\s*(.+)$")
 MD_LINK = re.compile(r"\[([^\]\n]+)\]\((https?://[^)\s]+)\)")
-ICONS = {
-    "abstract": "material-text-box-outline",
-    "draft": "material-file-document-edit-outline",
-    "paper": "material-file-document-outline",
-    "slides": "material-presentation",
-    "recording": "material-play-circle-outline",
-    "session recording": "material-play-circle-outline",
-    "materials": "material-folder-open-outline",
-}
 
 
 def youtube_start(url: str) -> int:
@@ -80,16 +71,16 @@ WRITEUP_RE = re.compile(r"^\s*(?:[-*+]\s+)?\*\*(?:Why|What|How)\b")
 
 
 def links_block(row: str, title: str) -> tuple[list[str], list[str]]:
-    """A pick's links row as chips, and its click-to-play recording (which
+    """A pick's plain source links, and its click-to-play recording (which
     decorate() puts after the title and speakers, just before "Why")."""
     links = MD_LINK.findall(row)
     if not links:
         return [f"**Links:** {row}"], []
-    chips = " ".join(
-        f"[:{ICONS.get(text.lower()) or ICONS.get(re.sub(r'\s*\(.*\)$|\s+\d+$', '', text.lower()), 'material-link-variant')}: {text}]({url}){{ .pick-link }}"
+    source_links = " ".join(
+        f"[{text.strip()}]({url}){{ .pick-link }}"
         for text, url in links
     )
-    out = ['<div class="pick-links" markdown>', "", chips, "", "</div>", ""]
+    out = ['<div class="pick-links" markdown>', "", source_links, "", "</div>", ""]
     player: list[str] = []
     recording = next((url for text, url in links if text.lower() == "recording" and youtube_id(url)), None)
     video = youtube_id(recording) if recording else None
@@ -179,10 +170,9 @@ def nest_lists(text: str) -> str:
     return re.sub(r"^( +)(?=(?:[-*+]|\d+\.) )", lambda m: m.group(1) * 2, text, flags=re.M)
 
 
-def decorate(rest: str) -> tuple[str, dict[str, int]]:
+def decorate(rest: str) -> str:
     """Mark tier sections and wrap each pick in a card, leaving text as is."""
     out: list[str] = []
-    counts = {t: 0 for t in TIERS}
     tier = None
     in_card = in_fence = False
     pick_title = ""
@@ -213,15 +203,14 @@ def decorate(rest: str) -> tuple[str, dict[str, int]]:
             continue
         if line.startswith("### ") and tier:
             close()
-            counts[tier] += 1
             out.extend([f'<div class="pick pick-{tier}" markdown>', "", line])
             in_card = True
             pick_title = line[4:].strip()
             continue
         row = LINKS_ROW.match(line) if in_card else None
         if row:
-            chips, player = links_block(row.group(1), pick_title)
-            out.extend(chips)
+            source_links, player = links_block(row.group(1), pick_title)
+            out.extend(source_links)
             after_links = len(out)
             continue
         if player and WRITEUP_RE.match(line):
@@ -235,7 +224,7 @@ def decorate(rest: str) -> tuple[str, dict[str, int]]:
             out.append("")
         out.append(line)
     close()
-    return "\n".join(out).strip() + "\n", counts
+    return "\n".join(out).strip() + "\n"
 
 
 def plain(markdown: str, limit: int = 300) -> str:
@@ -251,6 +240,8 @@ def human(d: date | None) -> str:
 
 def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict]:
     h1, intro, rest = split_body(nest_lists(body))
+    if re.match(r"^\d+ picks\b", intro):
+        intro = intro.partition("\n\n")[2]
     name = entry.get("name") or meta.get("conference") or key
     title = clean_title(h1, name)
     kind = entry.get("type") or meta.get("type") or ""
@@ -260,35 +251,31 @@ def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict
     # Posts are dated by the conference, not by when the digest was written,
     # so the blog lists the most recent conference first.
     published = as_date(entry.get("end_date")) or as_date(meta.get("generated")) or date.today()
+    started = as_date(entry.get("start_date"))
     ended = as_date(entry.get("end_date"))
+    dates = f"{human(started)} – {human(ended)}" if started and ended else human(ended) if ended else ""
     # The human-facing page; a fetcher's source_url can be an API endpoint.
     source = entry.get("manual_fallback_url") or meta.get("source_url") or entry.get("program_url") or ""
-    decorated, counts = decorate(rest)
-    total = sum(counts.values())
-    picks = " · ".join(f"{counts[t]} {t}" for t in TIERS if counts[t])
-    if not intro:
-        intro = f"{total} picks from the {name} program: {picks}."
+    decorated = decorate(rest)
 
     front = {
         "date": published.isoformat(),
         "slug": key,
         "title": title,
-        "description": plain(intro),
+        "description": plain(intro or name),
         "categories": [category],
     }
     if bot:
         front["authors"] = ["tofarev"]
     facts = [
-        f":material-shape-outline: {category}",
-        f":material-calendar-check-outline: Ended {human(ended)}" if ended else "",
-        f":material-cards-outline: {total} picks ({picks})" if total else "",
-        f":material-link-variant: [Program]({source})" if source.startswith("http") else "",
-        f":material-robot-outline: {written_by}" if bot else ":material-account-edit-outline: Prompt run by hand",
+        category,
+        dates,
+        f"[Program]({source})" if source.startswith("http") else "",
     ]
     facts_html = "\n".join(f'<span class="digest-fact" markdown>{f}</span>' for f in facts if f)
     if bot:
         about = (
-            f"ToFaRev picked and wrote this digest with {written_by.removeprefix('ToFaRev').strip(' ()') or 'its model'} "
+            "ToFaRev picked and wrote this digest "
             "on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request "
             "before it was published. Write-ups marked \"from abstract only\" had no fuller source to read."
         )
@@ -310,7 +297,7 @@ def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict
         + "\n"
         + footer
     )
-    return page, {"key": key, "title": title, "date": published, "bot": bot, "picks": total}
+    return page, {"key": key, "title": title, "date": published, "bot": bot}
 
 
 STATUS = {

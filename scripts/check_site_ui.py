@@ -57,6 +57,9 @@ with sync_playwright() as p:
                 assert toc.is_visible()
                 assert toc.bounding_box()['x'] > page.locator('.md-content--post').bounding_box()['x']
                 assert page.locator('.pick-link').evaluate_all("links=>links.every(e=>getComputedStyle(e).borderRadius==='0px' && getComputedStyle(e).backgroundColor==='rgba(0, 0, 0, 0)')")
+                assert page.locator('.pick-link').evaluate_all("links=>links.every(e=>e.textContent===e.textContent.trim() && !e.querySelector('.twemoji'))"), 'Source links must not underline leftover icon spacing'
+                assert page.locator('.digest-facts + h2.tier').evaluate("e=>getComputedStyle(e).borderTopWidth==='0px'"), 'The first section must not duplicate the metadata divider'
+                assert page.locator('.digest-fact').all_text_contents() == ['Academic', 'April 28, 2025 – April 30, 2025', 'Program']
             page.mouse.move(0,0)
             page.screenshot(path=str(SHOTS/f'signal-site-{name}-{theme}.png'),animations='disabled')
             for width in [360,390,768,1024]:

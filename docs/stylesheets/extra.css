@@ -161,9 +161,9 @@ a:focus-visible, button:focus-visible, label:focus-visible {
 .md-typeset .digest-facts p { display: flex; flex-wrap: wrap; gap: .3rem 0; margin: 0; }
 .md-typeset .digest-fact { display: inline; color: var(--signal-muted); font-size: .55rem; line-height: 1.8; }
 .md-typeset .digest-fact + .digest-fact::before { content: '·'; margin: 0 .55rem; }
-.md-typeset .digest-fact .twemoji, .md-typeset .pick-link .twemoji { display: none; }
 .md-typeset .digest-fact a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
 .md-typeset h2.tier { border-top: 1px solid var(--signal-rule); padding-top: 1.3rem; margin-top: 2.4rem; }
+.md-typeset .digest-facts + h2.tier { border-top: 0; padding-top: 0; }
 .md-typeset .pick { margin: 1.5rem 0 2.4rem; padding: 0 0 1.6rem; border-bottom: 1px solid var(--signal-rule); }
 .md-typeset .pick h3 { margin: .4rem 0 .6rem; }
 .md-typeset .pick-links p { display: flex; flex-wrap: wrap; gap: .3rem 0; margin: .5rem 0 1rem; }

@@ -2,7 +2,7 @@
 
 Curated **digests** of conferences relevant to datacenter and cloud-native
 networking, network security, and identity, published as a blog at
-**https://hellt.github.io/conference-digest/**.
+**https://tldr.netdevops.me/**.
 
 A GitHub Actions workflow fetches each conference's published program, wraps it
 in a universal triage prompt, commits the prompt, and opens a GitHub Issue.
@@ -145,6 +145,14 @@ make site         # strict build into site/
 
 **One-time setup:** after the first `site.yml` run creates `gh-pages`, set
 Settings → Pages → Source to **Deploy from a branch**, `gh-pages` / root.
+
+**Domain:** the site is served at **https://tldr.netdevops.me/**. `site.yml`
+writes a `CNAME` file to `gh-pages` (the `cname:` input), which sets the Pages
+custom domain; the DNS record is `tldr` CNAME `hellt.github.io` in the
+netdevops.me zone (Cloudflare, DNS only, so GitHub can issue the HTTPS
+certificate). `site_url` in `mkdocs.yml` must match it: it builds every
+absolute link, the canonical URLs and the RSS feed. Old
+`hellt.github.io/conference-digest/` links redirect to the domain.
 
 ## Layout
 

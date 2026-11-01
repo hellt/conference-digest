@@ -589,3 +589,19 @@ series:
     program_url_template: "https://dknog{n}.dknog.dk/"
     manual_fallback_url_template: "https://dknog{n}.dknog.dk/"
     notes: "Danish network operators (Copenhagen): DC and backbone networking, BGP/EVPN, automation, security and operator workshops. Contributions carry abstracts, speakers and material via the Indico export."
+
+  # ITNOG: one static page per meeting (itnog.it/itnog<n>) with program
+  # tables — Start | End | Title | Speakers | Slides — linking PDF decks
+  # under files/. Titles are Italian and presented as-is; day-1 vendor
+  # workshops use a Title | Sponsor shape that the same parser reads.
+  - series: itnog
+    enumerate: ordinal
+    key_template: "itnog-{n}"
+    name_template: "ITNOG{n}"
+    type: operator
+    fetcher: itnog
+    start: 9
+    lookahead: 2
+    program_url_template: "https://www.itnog.it/itnog{n}"
+    manual_fallback_url_template: "https://www.itnog.it/itnog{n}"
+    notes: "Italian network operators: backbone and DC networking (SR-MPLS, EVPN/VXLAN), peering, IPv6, security. Italian titles, slides as PDFs; no abstracts published."

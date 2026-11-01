@@ -199,6 +199,7 @@ conferences/
     capacity.py       # Capacity Europe: server-rendered session library
     janog.py          # JANOG timetable + per-session pages (Japanese)
     indico.py         # generic Indico export API (nog.fi, NetUK, GRNOG, DKNOG)
+    itnog.py          # ITNOG program tables with PDF slides (Italian)
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -441,6 +442,8 @@ run.
 - **DKNOG** also uses the Indico fetcher. Each edition's subdomain root
   redirects to the event on the shared events.dknog.dk backend, and that
   redirect both resolves the event and names the export host.
+- **ITNOG**: a static page per meeting with program tables linking PDF
+  decks. Italian titles are presented as-is; no abstracts are published.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

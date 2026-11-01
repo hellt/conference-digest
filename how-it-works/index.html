@@ -916,7 +916,9 @@
 <li><strong>Compose.</strong> The program goes into a prompt with the reader profile, guidance for the conference type, and the output rules.</li>
 <li><strong>Write.</strong> <a href="https://github.com/hellt/tofarev">ToFaRev</a> runs the prompt in GitHub Actions with <code>zai-org/GLM-5.3</code> on Nebius Token Factory. Large programs go through stages. First, batches of the program are shortlisted in parallel. Then the final picks are selected. Last, the digest is written from the selected items. ToFaRev reads the papers and slides that the picks link to, and gives their text to the writer. The writer can also fetch each pick's talk page.</li>
 <li><strong>Check.</strong> Code, not the model, does the last checks. It removes any link that is not in the program and flags headings that do not match a program item. It also confirms that every tier is present.</li>
+<li><strong>Link.</strong> Code, not the model, adds a row of links to every pick: the abstract page, the paper, the slides and the recording. They come from the program and the talk's own page. A recording found by search is added only when its title, its channel and its upload date all match the talk and the event.</li>
 <li><strong>Review and publish.</strong> ToFaRev opens a pull request with the digest. When it is merged, the digest appears here and the tracking issue closes.</li>
+<li><strong>Refresh.</strong> Recordings and slides often appear weeks after an event. Every week, for four months after each conference, the links are checked again. New ones arrive in a small pull request; the write-ups do not change.</li>
 </ol>
 <h2 id="reading-a-digest">Reading a digest<a class="headerlink" href="#reading-a-digest" title="Permanent link">#</a></h2>
 <table>
@@ -945,6 +947,7 @@
 </tr>
 </tbody>
 </table>
+<p>Each pick starts with its links: <strong>Abstract</strong> (the talk or paper page, which usually lists every material), <strong>Paper</strong>, <strong>Slides</strong> and <strong>Recording</strong>, as far as they are published. A talk recording also shows a thumbnail: click it to play the talk on the page. For IETF drafts the links are the <strong>Draft</strong>, its <strong>Slides</strong>, the <strong>Session recording</strong> of the working group meeting and the session <strong>Materials</strong>.</p>
 <p>Each pick has the same parts. <strong>Why</strong> tells you why it is worth your time. <strong>What</strong> gives the contribution in plain terms, and <strong>How</strong> gives the mechanism. <strong>Where applicable</strong> tells you whether the work is general or specific to one organization, vendor, or deployment. A write-up marked <em>from abstract only</em> had no fuller source available. Links come from the program, so a pick without a link had none.</p>
 <h2 id="conference-status">Conference status<a class="headerlink" href="#conference-status" title="Permanent link">#</a></h2>
 <p>The <a href="../conferences/">Conferences</a> page shows where each edition stands:</p>
@@ -1125,6 +1128,8 @@
     
     
       <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
       
     
   </body>

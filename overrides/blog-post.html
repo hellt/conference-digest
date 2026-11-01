@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{# Keep Zensical's page content, heading anchors and right-hand table of contents. #}
+{% block container %}
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="{{ page.parent.url | url }}">← All digests</a>
+        {% if page.config.readtime %}
+          <span>{{ page.config.readtime }} min read</span>
+        {% endif %}
+      </div>
+      {% block content %}
+        {% include "partials/content.html" %}
+      {% endblock %}
+    </article>
+  </div>
+{% endblock %}

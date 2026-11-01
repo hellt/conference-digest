@@ -313,6 +313,22 @@
   
   
     <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../how-it-works/" class="md-tabs__link">
         
   
@@ -1095,6 +1111,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-it-works/" class="md-nav__link">
         
   
@@ -1513,7 +1555,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=y0qlhiKtDGo">Recording</a></p>
 </div>
-<p><em>Giri Kuncoro &amp; Joseph Pallamidessi, TikTok</em> — <strong>Core</strong></p>
+<p><em>Giri Kuncoro &amp; Joseph Pallamidessi, <a href="../companies/tiktok/">TikTok</a></em> — <strong>Core</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="y0qlhiKtDGo" data-start="0" href="https://www.youtube.com/watch?v=y0qlhiKtDGo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/y0qlhiKtDGo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/y0qlhiKtDGo/maxresdefault.jpg" alt="Play the recording: TikTok's IPv6 Journey To Cilium: Pitfalls and Lessons Learned" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: An IPv6-only production datacenter is still rare, and Cilium's battle-testing has overwhelmingly been on IPv4 / dual-stack. This is a concrete report of what actually breaks at the datapath when you remove IPv4 entirely — directly relevant to anyone planning a v6-only fabric.</li>
@@ -1527,7 +1569,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=3X0X4az_E_4">Recording</a></p>
 </div>
-<p><em>Daniel Borkmann &amp; Anton Protopopov, Isovalent at Cisco</em> — <strong>Core</strong></p>
+<p><em>Daniel Borkmann &amp; Anton Protopopov, <a href="../companies/cisco/">Isovalent at Cisco</a></em> — <strong>Core</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="3X0X4az_E_4" data-start="0" href="https://www.youtube.com/watch?v=3X0X4az_E_4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/3X0X4az_E_4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/3X0X4az_E_4/maxresdefault.jpg" alt="Play the recording: QEMU in the Fast Lane: Accelerating KubeVirt Networking With eBPF" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: VM-on-Kubernetes convergence keeps colliding with the latency/throughput tax of the virt networking path. The usual escape hatch, SR-IOV, costs you host-side observability and policy enforcement. This is a contributor-led internals talk from the people who build the Cilium datapath.</li>
@@ -1541,7 +1583,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=kHChbblwVwk">Recording</a></p>
 </div>
-<p><em>Isaac Wilson, The Trade Desk</em> — <strong>Core</strong></p>
+<p><em>Isaac Wilson, <a href="../companies/the-trade-desk/">The Trade Desk</a></em> — <strong>Core</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="kHChbblwVwk" data-start="0" href="https://www.youtube.com/watch?v=kHChbblwVwk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/kHChbblwVwk/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/kHChbblwVwk/maxresdefault.jpg" alt="Play the recording: On-Prem Load Balancing Reimagined: Serving 20 Million QPS With Gateway API and EnvoyGateway" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: One of the few talks with a real scale number (20M QPS) and an explicit "things we broke" framing — a bare-metal HAProxy to Kubernetes/Envoy migration at the high end of on-prem load balancing.</li>
@@ -1555,7 +1597,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=GYVNg0_FpwQ">Recording</a></p>
 </div>
-<p><em>Yangmin Zhu &amp; Matt Mathew, Uber</em> — <strong>Core</strong></p>
+<p><em>Yangmin Zhu &amp; Matt Mathew, <a href="../companies/uber/">Uber</a></em> — <strong>Core</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="GYVNg0_FpwQ" data-start="0" href="https://www.youtube.com/watch?v=GYVNg0_FpwQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/GYVNg0_FpwQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/GYVNg0_FpwQ/maxresdefault.jpg" alt="Play the recording: Authenticating and Authorizing Every Connection at Uber" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A multi-year, production-scale SPIFFE/SPIRE zero-trust rollout across thousands of polyglot microservices, with the hard constraint of no application code changes — exactly the workload-identity territory in the PM's wheelhouse, told with operational detail.</li>
@@ -1569,7 +1611,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=EVbFeCipis8">Recording</a></p>
 </div>
-<p><em>Mae Large &amp; Ivy Alkhaz, State Farm</em> — <strong>Core</strong></p>
+<p><em>Mae Large &amp; Ivy Alkhaz, <a href="../companies/state-farm/">State Farm</a></em> — <strong>Core</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="EVbFeCipis8" data-start="0" href="https://www.youtube.com/watch?v=EVbFeCipis8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/EVbFeCipis8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/EVbFeCipis8/maxresdefault.jpg" alt="Play the recording: From Bespoke To Bulletproof: SPIFFE/SPIRE With ESO for Enterprise Zero Trust" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A candid SPIFFE/SPIRE operations talk — what fell over at scale and how an HA topology fixed it — which is more useful than a greenfield demo for anyone running SPIRE in anger.</li>
@@ -1583,7 +1625,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=SWf3Z3fV0ic">Recording</a></p>
 </div>
-<p><em>Dan Winship &amp; Surya Seetharaman, Red Hat; Nadia Pinaeva, NVIDIA; Bowei Du, Google</em> — <strong>Core</strong></p>
+<p><em>Dan Winship &amp; Surya Seetharaman, <a href="../companies/red-hat/">Red Hat</a>; Nadia Pinaeva, <a href="../companies/nvidia/">NVIDIA</a>; Bowei Du, <a href="../companies/google/">Google</a></em> — <strong>Core</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="SWf3Z3fV0ic" data-start="0" href="https://www.youtube.com/watch?v=SWf3Z3fV0ic" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/SWf3Z3fV0ic/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/SWf3Z3fV0ic/maxresdefault.jpg" alt="Play the recording: AdminNetworkPolicy: From Alpha To Beta and Beyond" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: The SIG-Network policy API is where cluster-wide, admin-tier network security is actually being standardized. Knowing where AdminNetworkPolicy (ANP) and BaselineAdminNetworkPolicy are heading affects how every CNI will enforce policy.</li>
@@ -1597,7 +1639,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=SqdD9waaeno">Recording</a></p>
 </div>
-<p><em>Anish Ramasekar, Mo Khan, Stanislav Láznička, Rita Zhang &amp; Peter Engelbert, Microsoft</em> — <strong>Core</strong></p>
+<p><em>Anish Ramasekar, Mo Khan, Stanislav Láznička, Rita Zhang &amp; Peter Engelbert, <a href="../companies/microsoft/">Microsoft</a></em> — <strong>Core</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="SqdD9waaeno" data-start="0" href="https://www.youtube.com/watch?v=SqdD9waaeno" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/SqdD9waaeno/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/SqdD9waaeno/maxresdefault.jpg" alt="Play the recording: Strengthening Kubernetes Trust: SIG Auth's Latest Security Enhancements" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: The authoritative source on where Kubernetes core authentication and authorization are moving, straight from SIG Auth chairs/leads — foundational for the identity side of the PM's remit.</li>
@@ -1611,7 +1653,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=EXxa7Qxdveg">Recording</a></p>
 </div>
-<p><em>Ivy Zhuang &amp; Whitney Jenkins, Google</em> — <strong>Core</strong></p>
+<p><em>Ivy Zhuang &amp; Whitney Jenkins, <a href="../companies/google/">Google</a></em> — <strong>Core</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="EXxa7Qxdveg" data-start="0" href="https://www.youtube.com/watch?v=EXxa7Qxdveg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/EXxa7Qxdveg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/EXxa7Qxdveg/maxresdefault.jpg" alt="Play the recording: Kubernetes IP Management: From Core Concepts To Strategic Solutions" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: IPAM decisions are often irreversible and IP exhaustion is a recurring production wall. A structured treatment of IPAM modes, dual-stack, and the newer Extend Service IP Range feature is squarely on-topic.</li>
@@ -1625,7 +1667,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=liHY_dy-W0w">Recording</a></p>
 </div>
-<p><em>Antonio Ojea, Google</em> — <strong>Core</strong></p>
+<p><em>Antonio Ojea, <a href="../companies/google/">Google</a></em> — <strong>Core</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="liHY_dy-W0w" data-start="0" href="https://www.youtube.com/watch?v=liHY_dy-W0w" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/liHY_dy-W0w/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/liHY_dy-W0w/maxresdefault.jpg" alt="Play the recording: Navigating the AI/ML Networking Maze in Kubernetes: Lessons From the Trenches" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: HPC networking primitives — RDMA, MPI, collective-communication patterns — are being dragged into Kubernetes by AI workloads. Bridging traditional networking experience into this is exactly the PM's transition, told by a SIG-Network tech lead.</li>
@@ -1639,7 +1681,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=fBE6UiLROWA">Recording</a></p>
 </div>
-<p><em>Weizhou Lan, DaoCloud</em> — <strong>Core</strong> <em>(Project Lightning Talk)</em></p>
+<p><em>Weizhou Lan, <a href="../companies/daocloud/">DaoCloud</a></em> — <strong>Core</strong> <em>(Project Lightning Talk)</em></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="fBE6UiLROWA" data-start="0" href="https://www.youtube.com/watch?v=fBE6UiLROWA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/fBE6UiLROWA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/fBE6UiLROWA/maxresdefault.jpg" alt="Play the recording: Spiderpool: Dynamic Topology-Aware RDMA Allocation For GPU-Based AI Workloads" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A precise physical-topology networking problem — aligning RDMA NICs with PCIe-affined GPUs — that the standard device-plugin/CNI split can't solve. This sits right at the DC-hardware/cloud-native seam the PM cares about.</li>
@@ -1653,7 +1695,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=J-Zx64mJzVk">Recording</a></p>
 </div>
-<p><em>Zain Malik, Exostellar &amp; Grzegorz Głąb, Whatnot</em> — <strong>Core</strong></p>
+<p><em>Zain Malik, <a href="../companies/exostellar/">Exostellar</a> &amp; Grzegorz Głąb, <a href="../companies/whatnot/">Whatnot</a></em> — <strong>Core</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="J-Zx64mJzVk" data-start="0" href="https://www.youtube.com/watch?v=J-Zx64mJzVk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/J-Zx64mJzVk/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/J-Zx64mJzVk/maxresdefault.jpg" alt="Play the recording: Fix First, Investigate Later: When an eBPF Rollout Brought Down Our Network" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A genuine incident post-mortem with hard numbers (throughput collapse from ~800 MB/s to ~250 MB/s, packet loss spikes) caused by a silently rolled-out eBPF DaemonSet — the kind of failure-mode honesty the program mostly lacks.</li>
@@ -1668,7 +1710,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=qa5vSE86z-s">Recording</a></p>
 </div>
-<p><em>John Howard, Solo.io</em> — <strong>Adjacent</strong></p>
+<p><em>John Howard, <a href="../companies/solo-io/">Solo.io</a></em> — <strong>Adjacent</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="qa5vSE86z-s" data-start="0" href="https://www.youtube.com/watch?v=qa5vSE86z-s" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/qa5vSE86z-s/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/qa5vSE86z-s/maxresdefault.jpg" alt="Play the recording: Lessons Applied Building a Next-generation AI Proxy" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: From an Istio TOC/Steering member, this is the clearest articulation of why AI traffic breaks traditional proxies and what an AI-optimized data plane needs — relevant to where Envoy/Gateway data planes are heading.</li>
@@ -1682,7 +1724,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=UJy8n8uX8G4">Recording</a></p>
 </div>
-<p><em>Rob Scott, Google &amp; Daneyon Hansen, Solo.io</em> — <strong>Adjacent</strong></p>
+<p><em>Rob Scott, <a href="../companies/google/">Google</a> &amp; Daneyon Hansen, <a href="../companies/solo-io/">Solo.io</a></em> — <strong>Adjacent</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="UJy8n8uX8G4" data-start="0" href="https://www.youtube.com/watch?v=UJy8n8uX8G4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/UJy8n8uX8G4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/UJy8n8uX8G4/maxresdefault.jpg" alt="Play the recording: AI Inference Without Boundaries: Dynamic Routing With Multi-Cluster Inference Gateway" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Extends Gateway API into multi-cluster GPU scheduling — a networking-control-plane answer to GPU scarcity, from the maintainers of Gateway API and the Inference Extension.</li>
@@ -1696,7 +1738,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=-C76naL3PRc">Recording</a></p>
 </div>
-<p><em>Maroon Ayoub, IBM &amp; Michey Mehta, Red Hat</em> — <strong>Adjacent</strong></p>
+<p><em>Maroon Ayoub, <a href="../companies/ibm/">IBM</a> &amp; Michey Mehta, <a href="../companies/red-hat/">Red Hat</a></em> — <strong>Adjacent</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="-C76naL3PRc" data-start="0" href="https://www.youtube.com/watch?v=-C76naL3PRc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/-C76naL3PRc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/-C76naL3PRc/maxresdefault.jpg" alt="Play the recording: Routing Stateful AI Workloads in Kubernetes" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A layered, concrete treatment of why stateless K8s routing fails for LLM inference and how KV-cache-aware load balancing changes the picture — grounded in the multi-vendor <code>llm-d</code> effort.</li>
@@ -1710,7 +1752,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=RWFDjA6ZeWc">Recording</a></p>
 </div>
-<p><em>Shane Utt &amp; Candace Holman, Red Hat; Mike Morris, Microsoft; Lior Lieberman &amp; Kellen Swain, Google</em> — <strong>Adjacent</strong></p>
+<p><em>Shane Utt &amp; Candace Holman, <a href="../companies/red-hat/">Red Hat</a>; Mike Morris, <a href="../companies/microsoft/">Microsoft</a>; Lior Lieberman &amp; Kellen Swain, <a href="../companies/google/">Google</a></em> — <strong>Adjacent</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="RWFDjA6ZeWc" data-start="0" href="https://www.youtube.com/watch?v=RWFDjA6ZeWc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/RWFDjA6ZeWc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/RWFDjA6ZeWc/maxresdefault.jpg" alt="Play the recording: Gateway API: Table Stakes" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A maintainer-level status check on Gateway API as the converging standard for ingress, routing, and mesh — useful for tracking the direction of the API the PM's mesh/ingress choices now depend on.</li>
@@ -1724,7 +1766,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=tgs6Wq5UlBs">Recording</a></p>
 </div>
-<p><em>Henrik Rexed, Dynatrace</em> — <strong>Adjacent</strong></p>
+<p><em>Henrik Rexed, <a href="../companies/dynatrace/">Dynatrace</a></em> — <strong>Adjacent</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="tgs6Wq5UlBs" data-start="0" href="https://www.youtube.com/watch?v=tgs6Wq5UlBs" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/tgs6Wq5UlBs/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/tgs6Wq5UlBs/maxresdefault.jpg" alt="Play the recording: Return of the Mesh: Gateway API's Epic Quest for Unity" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A comparative, benchmark-driven look at how well Istio, Kuma, Linkerd, Traefik Mesh, and Ambient actually implement the Gateway API for mesh (GAMMA) — practical for mesh selection and migration.</li>
@@ -1738,7 +1780,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=vdCMLZ-4vUo">Recording</a></p>
 </div>
-<p><em>Keith Mattix, Microsoft</em> — <strong>Adjacent</strong></p>
+<p><em>Keith Mattix, <a href="../companies/microsoft/">Microsoft</a></em> — <strong>Adjacent</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="vdCMLZ-4vUo" data-start="0" href="https://www.youtube.com/watch?v=vdCMLZ-4vUo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/vdCMLZ-4vUo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/vdCMLZ-4vUo/maxresdefault.jpg" alt="Play the recording: Istio Project Updates: AI Inference, Ambient Multicluster  Default Deny" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: The official Istio roadmap signal — ambient multicluster, default-deny posture, and AI inference support indicate where the most-deployed mesh is investing.</li>
@@ -1752,7 +1794,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=J_Cf9TTOW98">Recording</a></p>
 </div>
-<p><em>Alex Leong, Buoyant</em> — <strong>Adjacent</strong></p>
+<p><em>Alex Leong, <a href="../companies/buoyant/">Buoyant</a></em> — <strong>Adjacent</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="J_Cf9TTOW98" data-start="0" href="https://www.youtube.com/watch?v=J_Cf9TTOW98" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/J_Cf9TTOW98/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/J_Cf9TTOW98/maxresdefault.jpg" alt="Play the recording: It's 2025; Why Are You OK With an Insecure Network?" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A maintainer's argument that the real blocker to in-cluster encryption/authn is operational simplicity, not technology — a useful framing for why mTLS adoption stalls, even if vendor-flavored.</li>
@@ -1766,7 +1808,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=fhjiLyntYBg">Recording</a></p>
 </div>
-<p><em>Shiva &amp; Abhishek Agrawal, Google</em> — <strong>Adjacent</strong></p>
+<p><em>Shiva &amp; Abhishek Agrawal, <a href="../companies/google/">Google</a></em> — <strong>Adjacent</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="fhjiLyntYBg" data-start="0" href="https://www.youtube.com/watch?v=fhjiLyntYBg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/fhjiLyntYBg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/fhjiLyntYBg/maxresdefault.jpg" alt="Play the recording: End-to-End Security With gRPC in Kubernetes" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A practical consolidation of the moving parts for securing gRPC service-to-service traffic — TLS/mTLS, JWT/OAuth2, cert lifecycle — relevant to the identity/authn remit.</li>
@@ -1780,7 +1822,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=v-Qt6op7BLU">Recording</a></p>
 </div>
-<p><em>José Padilla, Auth0 &amp; Alice Gibbons, Diagrid</em> — <strong>Adjacent</strong></p>
+<p><em>José Padilla, <a href="../companies/okta/">Auth0</a> &amp; Alice Gibbons, Diagrid</em> — <strong>Adjacent</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="v-Qt6op7BLU" data-start="0" href="https://www.youtube.com/watch?v=v-Qt6op7BLU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/v-Qt6op7BLU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/v-Qt6op7BLU/maxresdefault.jpg" alt="Play the recording: Design Patterns for Consistent Centralized Authorization" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Centralized fine-grained authorization (OpenFGA / Zanzibar-style) raises a real data-consistency problem — keeping authorization data in sync with distributed app state — that the identity side eventually hits.</li>
@@ -1795,7 +1837,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=wXuykaYSFCQ">Recording</a></p>
 </div>
-<p><em>Theophilus Benson (CMU) &amp; Prankur Gupta, Meta</em> — <strong>Wildcard</strong></p>
+<p><em>Theophilus Benson (<a href="../companies/carnegie-mellon-university/">CMU</a>) &amp; Prankur Gupta, <a href="../companies/meta/">Meta</a></em> — <strong>Wildcard</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="wXuykaYSFCQ" data-start="0" href="https://www.youtube.com/watch?v=wXuykaYSFCQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/wXuykaYSFCQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/wXuykaYSFCQ/maxresdefault.jpg" alt="Play the recording: Fast and the Furious: CICD Pipeline for eBPF Programs at Meta Scale" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Not a networking-design talk, but a rare look at the <em>release engineering</em> of eBPF at hyperscale — 150+ programs updated weekly across the fleet. The interesting question is how you test and roll out kernel-attached code without causing outages, which is adjacent to (and quietly underpins) everything Cilium/datapath related.</li>
@@ -1809,7 +1851,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=Jy0d9QXZXrQ">Recording</a></p>
 </div>
-<p><em>Nikola Grcevski, Grafana Labs &amp; Tyler Yahn, Splunk</em> — <strong>Wildcard</strong></p>
+<p><em>Nikola Grcevski, <a href="../companies/grafana-labs/">Grafana Labs</a> &amp; Tyler Yahn, <a href="../companies/splunk/">Splunk</a></em> — <strong>Wildcard</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="Jy0d9QXZXrQ" data-start="0" href="https://www.youtube.com/watch?v=Jy0d9QXZXrQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Jy0d9QXZXrQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Jy0d9QXZXrQ/maxresdefault.jpg" alt="Play the recording: Debugging Your Cluster When It's on Fire" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: The new OpenTelemetry eBPF Instrumentation project promises zero-config, on-demand distributed traces and connectivity graphs added to a live cluster without touching app config — a genuinely different operational capability worth seeing even if it's outside core networking design.</li>
@@ -1823,7 +1865,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.youtube.com/watch?v=Sw5uT4VkCHA">Recording</a></p>
 </div>
-<p><em>Yuan Tang &amp; Anjali Telang, Red Hat</em> — <strong>Wildcard</strong></p>
+<p><em>Yuan Tang &amp; Anjali Telang, <a href="../companies/red-hat/">Red Hat</a></em> — <strong>Wildcard</strong></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="Sw5uT4VkCHA" data-start="0" href="https://www.youtube.com/watch?v=Sw5uT4VkCHA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Sw5uT4VkCHA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Sw5uT4VkCHA/maxresdefault.jpg" alt="Play the recording: Sponsored Keynote: Anchoring Trust in the Age of AI — Identities Across Humans, Machines, and Models" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A sponsored keynote (so discount the pitch), but it stakes out a thesis the PM's agentic-identity interest should track: extending SPIFFE/SPIRE workload identity into the AI serving path so every model and pipeline step carries a verifiable identity. The "identity for models, not just services" framing is where the field is heading.</li>

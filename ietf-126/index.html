@@ -313,6 +313,22 @@
   
   
     <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../how-it-works/" class="md-tabs__link">
         
   
@@ -1117,6 +1133,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-it-works/" class="md-nav__link">
         
   
@@ -1557,7 +1599,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-xu-idr-fare/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-idr-sessa-1-5-1-fully-adaptive-routing-ethernet-fare-00">Slides</a> <a class="pick-link" href="https://youtu.be/csKXfIQpUXs">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/idr">Materials</a></p>
 </div>
-<p>Qingliang Zhang (H3C), with co-authors from Tencent, Baidu, China Mobile, Yandex, HPE, Arrcus, Broadcom, Ruijie, Centec, Huawei and IEIT SYSTEMS.</p>
+<p>Qingliang Zhang (<a href="../companies/h3c/">H3C</a>), with co-authors from <a href="../companies/tencent/">Tencent</a>, <a href="../companies/baidu/">Baidu</a>, <a href="../companies/china-mobile/">China Mobile</a>, <a href="../companies/yandex/">Yandex</a>, <a href="../companies/hpe/">HPE</a>, <a href="../companies/arrcus/">Arrcus</a>, <a href="../companies/broadcom/">Broadcom</a>, <a href="../companies/ruijie/">Ruijie</a>, <a href="../companies/centec/">Centec</a>, <a href="../companies/huawei/">Huawei</a> and <a href="../companies/ieit-systems/">IEIT SYSTEMS</a>.</p>
 <ul>
 <li><strong>Why</strong>: AI training on 3–5 stage Clos fabrics needs non-blocking behavior; static per-flow ECMP collapses when a few large flows hash-collide onto one path. This is the most implementation-backed routing draft at the meeting.</li>
 <li><strong>What</strong>: FARE-BGP — a BGP extension (path-bandwidth extended community) that lets switches do <em>weighted</em> ECMP based on real residual path capacity rather than uniform hashing. Version -05 adds handling for multiple BGP sessions per switch pair (bandwidth computed at node granularity, not session granularity) and packet forwarding over tunnels (WECMP applies to tunneled packets with loopback endpoints). The authors state the draft is ready for a WG adoption call.</li>
@@ -1570,7 +1612,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-xu-idr-fare-in-mpson/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-idr-sessa-1-5-2-fully-adaptive-routing-ethernet-in-multi-plane-scale-out-networks-fare-in-mpson-00">Slides</a> <a class="pick-link" href="https://youtu.be/csKXfIQpUXs">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/idr">Materials</a></p>
 </div>
-<p>Yinben Xia, Weifeng Zhang (Tencent), Peilong Wang (Baidu), Haibo Wang (Huawei), and a large RNIC/switch author group (Broadcom, Intel, Ruijie, Yandex, China Mobile, GPU vendors).</p>
+<p>Yinben Xia, Weifeng Zhang (<a href="../companies/tencent/">Tencent</a>), Peilong Wang (<a href="../companies/baidu/">Baidu</a>), Haibo Wang (<a href="../companies/huawei/">Huawei</a>), and a large RNIC/switch author group (<a href="../companies/broadcom/">Broadcom</a>, <a href="../companies/intel/">Intel</a>, <a href="../companies/ruijie/">Ruijie</a>, <a href="../companies/yandex/">Yandex</a>, <a href="../companies/china-mobile/">China Mobile</a>, GPU vendors).</p>
 <ul>
 <li><strong>Why</strong>: ~100K-GPU clusters are moving to multi-plane scale-out topologies (RNIC multi-homed across disjoint planes, no inter-plane links) — which pushes path selection into the NIC. Route scale is the blocker: 4 planes × 100K host routes ≈ 400K routes, impractical on an RNIC.</li>
 <li><strong>What</strong>: FARE-in-MPSON extends FARE-BGP from switches to RoCE NICs for multi-plane scale-out (complementing FARE-in-SUN for scale-up). It contributes two route-table suppression techniques: route aggregation with unreachability notification (zero-bandwidth community, or unreachable-prefix advertisement) and selective route filtering via Prefix ORF (RFC 5292), plus a transitive FIB-Suppress extended community so switches can omit RNIC host routes from FIB.</li>
@@ -1583,7 +1625,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-filsfils-srv6ops-srv6-ai-backend/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-srv6ops-34-srv6-in-ai-backend-01">Slides</a> <a class="pick-link" href="https://youtu.be/kxTId7do_y4">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/srv6ops">Materials</a></p>
 </div>
-<p>Ahmed Abdelsalam (Cisco), on behalf of co-authors from Cisco, Microsoft, Oracle Cloud, IBM Cloud, NVIDIA and Arrcus.</p>
+<p>Ahmed Abdelsalam (<a href="../companies/cisco/">Cisco</a>), on behalf of co-authors from Cisco, <a href="../companies/microsoft/">Microsoft</a>, <a href="../companies/oracle/">Oracle Cloud</a>, <a href="../companies/ibm/">IBM Cloud</a>, <a href="../companies/nvidia/">NVIDIA</a> and <a href="../companies/arrcus/">Arrcus</a>.</p>
 <ul>
 <li><strong>Why</strong>: This is the hyperscaler reference design for AI backends — the draft the SRv6/srv6ops community is rallying around, and it is requesting WG adoption at this meeting.</li>
 <li><strong>What</strong>: Describes how SRv6 NEXT-CSID enables deterministic path placement: the NIC's transport stack encodes each path as an ordered segment list in the packet header, and the fabric forwards statelessly. It documents the MRC (Multipath Reliable Connection) design: packet spraying, ECN-based adaptive load balancing, out-of-order memory placement, selective retransmission, and packet trimming for incast — reaching 131,000 GPUs with only two tiers of switches (8×100Gb/s per host instead of 1×800Gb/s).</li>
@@ -1596,7 +1638,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-idr-bgp-ls-bgp-only-fabric/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-idr-bgp-link-state-extensions-for-bgp-only-networks-00">Slides</a> <a class="pick-link" href="https://youtu.be/XclSKFBYC18">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/idr">Materials</a></p>
 </div>
-<p>Ketan Talaulikar, Aravind Babu MahendraBabu, Clarence Filsfils, Krishna Swamy (Cisco), Shawn Zandi (LinkedIn), Gaurav Dawra, Muhammad Durrani (Oracle).</p>
+<p>Ketan Talaulikar, Aravind Babu MahendraBabu, Clarence Filsfils, Krishna Swamy (<a href="../companies/cisco/">Cisco</a>), Shawn Zandi (<a href="../companies/linkedin/">LinkedIn</a>), Gaurav Dawra, Muhammad Durrani (<a href="../companies/oracle/">Oracle</a>).</p>
 <ul>
 <li><strong>Why</strong>: BGP-only fabrics (increasingly the default in AI/ML DCs) lose the topology visibility that link-state IGPs give to FRR and TE computation. This WG document supplies it — and its new use cases tie directly into the two AI-backend drafts above.</li>
 <li><strong>What</strong>: BGP-LS extensions (Protocol-ID 7) to advertise topology in BGP-only networks. Since IETF 125 it has added an IPFRR use case (LFA/TI-LFA/ERP in loss-sensitive AI Clos fabrics with strict convergence requirements) and SRv6 scenarios: unified SRv6 domain across DC frontend + WAN eliminating DCI gateway translation, and SR Policy computation for deterministic AI backend paths. Simplified procedures now reference RFC 9857/9514 directly.</li>
@@ -1622,7 +1664,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-cheng-rtgwg-enhanced-ecmp/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-rtgwg-08-enhanced-ecmp-for-ai-cluster-00">Slides</a> <a class="pick-link" href="https://youtu.be/0lOx_vRs1no">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/rtgwg">Materials</a></p>
 </div>
-<p>Weiqiang Cheng (China Mobile), Changwang Lin (New H3C Technologies).</p>
+<p>Weiqiang Cheng (<a href="../companies/china-mobile/">China Mobile</a>), Changwang Lin (<a href="../companies/h3c/">New H3C Technologies</a>).</p>
 <ul>
 <li><strong>Why</strong>: In AI training the flow count is small, so per-flow ECMP hash collisions are proportionally more damaging; per-packet ECMP balances perfectly but reorders — unacceptable for RDMA without reordering support.</li>
 <li><strong>What</strong>: Two complementary methods: (1) ingress-interface-group ECMP — group ingress interfaces and hash by in-group index so traffic from different ports lands on different ECMP egress ports; (2) egress-group ECMP — the egress leaf advertises a Group ID in a new BGP extended community (Router-ID + Group-ID, 6 bytes), and the ingress leaf maps flows to matching ECMP subgroups.</li>
@@ -1635,7 +1677,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-zhuang-rtgwg-aidc-gse-architecture/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-rtgwg-07-gse-architecture-for-aidc-00">Slides</a> <a class="pick-link" href="https://youtu.be/0lOx_vRs1no">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/rtgwg">Materials</a></p>
 </div>
-<p>Rui Zhuang (China Mobile), Sandy Zhang (ZTE).</p>
+<p>Rui Zhuang (<a href="../companies/china-mobile/">China Mobile</a>), Sandy Zhang (<a href="../companies/zte/">ZTE</a>).</p>
 <ul>
 <li><strong>Why</strong>: A fundamentally different answer to AI-cluster congestion: instead of reactive ECN/PFC, schedule everything before sending. China Mobile/ZTE are fielding this, so it will surface in AIDC requirements even if it doesn't win in IETF.</li>
 <li><strong>What</strong>: Global Scheduling Ethernet: credit-based authorization (a sender must get a bandwidth grant from the receiver-side last hop before transmitting), packet aggregation into uniform-size segments for forwarding, improved ECMP that sprays packets while preserving receiver-side ordering, and interworking with PFC/ECN. The draft presents intra-PoD (GPU-to-GPU credit negotiation) and inter-PoD (Leaf-to-Super-Spine) scenarios, with port IDs advertised via BGP (draft-zhang-idr-portid-ec).</li>
@@ -1648,7 +1690,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-he-rtgwg-wan-pfc/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-rtgwg-pfc-pause-frame-forwarded-transparently-in-wide-area-networks-00">Slides</a> <a class="pick-link" href="https://youtu.be/0lOx_vRs1no">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/rtgwg">Materials</a></p>
 </div>
-<p>Xiaoming He (China Telecom), Lijie Deng (China Telecom).</p>
+<p>Xiaoming He (<a href="../companies/china-telecom/">China Telecom</a>), Lijie Deng (China Telecom).</p>
 <ul>
 <li><strong>Why</strong>: AI and distributed-storage workloads now run RDMA across metro/wide-area links between data centers; the draft's argument is that AIDC interconnect needs lossless WAN transmission, and hop-by-hop PFC in the WAN is both costly and amplifies head-of-line blocking, deadlock and congestion diffusion.</li>
 <li><strong>What</strong>: China Telecom's proposal to carry PFC PAUSE frames <em>transparently</em> across the WAN: the egress PE validates the PFC frame (destination MAC must be 01-80-C2-00-00-01, source must be the directly-connected DC gateway port), encapsulates it in the DCI tunnel (SRv6, SR-MPLS, or VXLAN), and transit nodes forward it untouched; the ingress PE decapsulates, rewrites the source MAC to its own port, and delivers it to the source DC gateway. End-to-end flow control with zero PFC capability required in WAN nodes.</li>
@@ -1661,7 +1703,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ruan-spring-priority-flow-control-sid/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-spring-srv6-behavior-extension-for-flow-control-in-wan-00">Slides</a> <a class="pick-link" href="https://youtu.be/3ui3EfTTLkA">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/spring">Materials</a></p>
 </div>
-<p>Zhengxin Han (China Unicom, presenter), Zheng Ruan, Yao Liu, MengYao Han, Ying Liu (China Unicom/ZTE).</p>
+<p>Zhengxin Han (<a href="../companies/china-unicom/">China Unicom</a>, presenter), Zheng Ruan, Yao Liu, MengYao Han, Ying Liu (China Unicom/<a href="../companies/zte/">ZTE</a>).</p>
 <ul>
 <li><strong>Why</strong>: The SRv6-flavored answer to the same lossless-WAN problem — with two advantages over transparent PFC: backpressure can traverse legacy non-PFC devices, and it can be scoped to per-tenant/slice queues instead of coarse port-level pausing. The SPRING list already reached consensus (June–July 2025) that a new SRv6 behavior is the preferred approach.</li>
 <li><strong>What</strong>: A new <code>End.X.PFC</code> behavior that flags PFC-capable interfaces along an SRv6 path. PFC frames are encapsulated into <em>reverse</em> SRv6 tunnels whose final segment is the <code>End.X.PFC</code> SID of the target upstream interface, delivering backpressure precisely to the right node even across non-PFC legacy transit devices.</li>
@@ -1674,7 +1716,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-mazilu-tcpm-packet-trimming/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-tcpm-tcp-packet-trimming-slides-126-tcpm-packet-trimming-00">Slides</a> <a class="pick-link" href="https://youtu.be/pS7dKMeaHeE">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/tcpm">Materials</a></p>
 </div>
-<p>Flavius Mazilu, Valentin Bobaru, Costin Raiciu (University Politehnica of Bucharest).</p>
+<p>Flavius Mazilu, Valentin Bobaru, Costin Raiciu (<a href="../companies/university-politehnica-of-bucharest/">University Politehnica of Bucharest</a>).</p>
 <ul>
 <li><strong>Why</strong>: Modern datacenter switch silicon (Arista, Broadcom Tomahawk 5, Nvidia, Juniper are all cited) already supports packet trimming — discard payload, keep the header, mark it — but TCP has no way to consume the signal. This is the host-side counterpart to a shipping hardware feature, and it mirrors the trimming used in the MRC/SRv6 AI-backend design above.</li>
 <li><strong>What</strong>: A TCP extension: a "Trimming Permitted" option negotiated in the 3WHS; data packets then carry <code>DSCP_TRIMMABLE</code>; when a switch trims, the receiver gets the header (with <code>DSCP_TRIMMED</code> and updated IP checksum — TCP checksum is intentionally invalid) and returns a NACK option carrying the trimmed packet's sequence number. The sender treats the NACK as an explicit loss/congestion signal and enters fast recovery — deterministic loss recovery instead of SACK/RACK inference.</li>
@@ -1687,7 +1729,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-bess-evpn-first-hop-security/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-bess-evpn-first-hop-security-00">Slides</a> <a class="pick-link" href="https://youtu.be/3lzjKPn9HdE">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/bess">Materials</a></p>
 </div>
-<p>Ali Sajassi, Lukas Krattiger, Krishna Ananthamurthy (Cisco), Jorge Rabadan (Nokia), Wen Lin (Juniper).</p>
+<p>Ali Sajassi, Lukas Krattiger, Krishna Ananthamurthy (<a href="../companies/cisco/">Cisco</a>), Jorge Rabadan (<a href="../companies/nokia/">Nokia</a>), Wen Lin (<a href="../companies/juniper/">Juniper</a>).</p>
 <ul>
 <li><strong>Why</strong>: First Hop Security functions (DHCP snooping, DAI, ND Inspection, Source Guard) depend on a local DHCP snoop binding database — which silently breaks in EVPN fabrics where hosts move and multi-home across PEs, causing legitimate traffic to be dropped or spoofed traffic to pass.</li>
 <li><strong>What</strong>: A WG-adopted BESS draft defining a new EVPN BGP route to distribute and synchronize DHCP snooping bindings (IPv4/IPv6-to-MAC, binding state, lease/create time) among all PEs in an EVI, covering host mobility, multi-homing, and distributed IRB.</li>
@@ -1700,7 +1742,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-plants-merkle-tree-certs/">Draft</a> <a class="pick-link" href="https://youtu.be/0DOjvhF7VgU">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/acme">Materials</a></p>
 </div>
-<p>David Benjamin (Google), Devon O'Brien (Apple), Bas Westerbaan, Luke Valenta (Cloudflare), Filippo Valsorda (Geomys).</p>
+<p>David Benjamin (<a href="../companies/google/">Google</a>), Devon O'Brien (<a href="../companies/apple/">Apple</a>), Bas Westerbaan, Luke Valenta (<a href="../companies/cloudflare/">Cloudflare</a>), Filippo Valsorda (Geomys).</p>
 <ul>
 <li><strong>Why</strong>: The PKI arithmetic problem: post-quantum signatures are huge (ML-DSA-44: 2,420 bytes/sig; ML-DSA-65: 3,309) and certificate lifetimes are shrinking — two SCTs plus a leaf signature adds ~7,260–9,927 bytes of authentication overhead, and CT log storage scales with entry size and issuance rate. MTCs redesign the certificate to survive both trends.</li>
 <li><strong>What</strong>: A new X.509-adjacent certificate form where the CA <em>certifies by logging</em>: it appends TBSCertificate entries to append-only issuance logs, signs checkpoints and subtrees, and independent cosigners attest correct (optionally mirrored) operation. A certificate is the tbscert + a Merkle inclusion proof + cosignatures — log entries contain hashes instead of public keys and no signatures, so they don't scale with PQ key/sig size. An optional "landmark-relative" certificate eliminates signatures entirely for up-to-date relying parties, and "revoked ranges" let RPs bulk-discard long-expired log entries so monitoring infrastructure scales by retention policy, not log lifetime.</li>
@@ -1739,7 +1781,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-wimse-workload-creds/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-wimse-workload-credentials-witwic-01">Slides</a> <a class="pick-link" href="https://youtu.be/0a4HZRJ5d9c">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/wimse">Materials</a></p>
 </div>
-<p>Brian Campbell (Ping Identity), Joe Salowey (CyberArk), Arndt Schwenkschuster (Defakto Security), Yaron Sheffer (Intuit), Yaroslav Rosomakho (Zscaler).</p>
+<p>Brian Campbell (<a href="../companies/ping-identity/">Ping Identity</a>), Joe Salowey (<a href="../companies/cyberark/">CyberArk</a>), Arndt Schwenkschuster (<a href="../companies/defakto-security/">Defakto Security</a>), Yaron Sheffer (<a href="../companies/intuit/">Intuit</a>), Yaroslav Rosomakho (<a href="../companies/zscaler/">Zscaler</a>).</p>
 <ul>
 <li><strong>Why</strong>: The credential layer of the workload-identity stack that OAuth-SPIFFE, the TLS hint, and the agent drafts all build on — and it was in Working Group Last Call at this meeting.</li>
 <li><strong>What</strong>: Defines the Workload Identity Token (WIT, a JWT) and Workload Identity Certificate (WIC, X.509) that bind a key to a workload's WIMSE identifier, usable across protocols; proof-of-possession mechanisms are deliberately out of scope and defined in companion documents.</li>
@@ -1765,7 +1807,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-klrc-aiagent-auth/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-wimse-aims-00">Slides</a> <a class="pick-link" href="https://youtu.be/0a4HZRJ5d9c">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/wimse">Materials</a></p>
 </div>
-<p>Nick Steele (OpenAI), Aaron Parecki (Okta), Jeff Lombardo (AWS), Brian Campbell (Ping Identity), Yaroslav Rosomakho (Zscaler), Pieter Kasselman (Defakto Security).</p>
+<p>Nick Steele (<a href="../companies/openai/">OpenAI</a>), Aaron Parecki (<a href="../companies/okta/">Okta</a>), Jeff Lombardo (<a href="../companies/amazon/">AWS</a>), Brian Campbell (<a href="../companies/ping-identity/">Ping Identity</a>), Yaroslav Rosomakho (<a href="../companies/zscaler/">Zscaler</a>), Pieter Kasselman (<a href="../companies/defakto-security/">Defakto Security</a>).</p>
 <ul>
 <li><strong>Why</strong>: The strongest single framework document in the agent-identity land rush: deliberately anti-"invent a new AI protocol," it maps existing standards onto agent communications and surgically identifies what's missing. The author list (OpenAI, Okta, AWS) signals real platform intent.</li>
 <li><strong>What</strong>: An informational draft ("AIMS") covering the full stack: exactly one WIMSE identifier per agent (may be a SPIFFE ID); primary credentials as WIMSE WIC/WIT or SPIFFE SVIDs, secondary via OAuth token exchange and Transaction Tokens; authentication at transport (mTLS with workload X.509) or application layer (WIMSE proof tokens, RFC 9421 HTTP signatures over WIT); OAuth for delegated authorization including human-in-the-loop (noting CIBA doesn't fit mid-execution pauses); SSF/CAEP for continuous posture signals; policy and compliance explicitly out of scope.</li>
@@ -1778,7 +1820,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-chen-oauth-agent-authz-use-cases/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-oauth-agent-authorization-use-cases-and-gap-analysis-00">Slides</a> <a class="pick-link" href="https://youtu.be/yhE1FL8VW7E">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/oauth">Materials</a></p>
 </div>
-<p>Meiling Chen (China Mobile).</p>
+<p>Meiling Chen (<a href="../companies/china-mobile/">China Mobile</a>).</p>
 <ul>
 <li><strong>Why</strong>: The requirements document that justifies (and scopes) the OAuth WG's agent work — read it to understand <em>why</em> AIMS, PEDIGREE and delegate SD-JWT all exist.</li>
 <li><strong>What</strong>: Ten use cases across consumer, enterprise and security scenarios, each with authorization requirements and gaps: intent-to-permission mapping and interactive consent loops for personal assistants; scope explosion and missing conditional context in smart homes; the confused-deputy/agent-flagging problem when agents hit human-facing services (the "agent downloads 400 papers and gets the user's account banned" example); multi-hop delegation chains and group authorization for agent teams; and global/bulk revocation gaps (RFC 7009 revokes one token at a time — useless in an incident).</li>
@@ -1804,7 +1846,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-gco-oauth-delegate-sd-jwt/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-oauth-delegate-sd-jwts-00">Slides</a> <a class="pick-link" href="https://youtu.be/XxkhXxInz3k">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/oauth">Materials</a></p>
 </div>
-<p>Gareth Oliver (Google).</p>
+<p>Gareth Oliver (<a href="../companies/google/">Google</a>).</p>
 <ul>
 <li><strong>Why</strong>: Delegation of verifiable credentials with selective disclosure — the exact mechanism agentic payments need (user authorizes an agent to spend, merchant/bank sees only the delegated slice) and that plain SD-JWTs can't express.</li>
 <li><strong>What</strong>: An extension letting a Holder delegate to a Delegate Holder by making the Key Binding JWT itself an SD-JWT with its own disclosures and its own key binding: <code>&lt;issuer-jwt&gt;~&lt;disclosures&gt;~~&lt;kb-sd-jwt&gt;~&lt;disclosures&gt;~&lt;kb-jwt&gt;</code>. The whole design fits in that one line — the delegation is a holder-signed SD-JWT whose payload hashes and binds the issuer's original (<code>sd_hash</code>, <code>cnf</code> for the delegate's key).</li>
@@ -1818,7 +1860,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-wimse-http-signature/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-wimse-http-signatures-00">Slides</a> <a class="pick-link" href="https://youtu.be/0a4HZRJ5d9c">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/wimse">Materials</a></p>
 </div>
-<p>Joe Salowey (CyberArk), Yaron Sheffer (Intuit).</p>
+<p>Joe Salowey (<a href="../companies/cyberark/">CyberArk</a>), Yaron Sheffer (<a href="../companies/intuit/">Intuit</a>).</p>
 <ul>
 <li><strong>Why</strong>: The application-layer leg of WIMSE — authentication that survives the TLS-terminating proxies and load balancers that dominate real service topologies, which the PM's mesh/ingress world knows well.</li>
 <li><strong>What</strong>: WG draft -04 requesting WGLC. Two changes since -02: the audience indicator moved from a bespoke <code>Wimse-Audience</code> header to a <code>wimse-aud</code> HTTP Signatures parameter (still URI-shaped), letting a recipient confirm the signed message targets it; and a <code>wimse-req-nonce</code> parameter copies the request's random nonce into the signed response, closing a cut-and-paste attack where an on-path malicious proxy splices a valid response into the wrong request — RFC 9421 signs request and response but doesn't bind them.</li>
@@ -1831,7 +1873,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-acme-rats/">Draft</a> <a class="pick-link" href="https://youtu.be/0DOjvhF7VgU">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/acme">Materials</a></p>
 </div>
-<p>Peter Chunchi Liu (Huawei), Mike Ounsworth (Cryptic Forest Software), Michael Richardson (Sandelman Software Works), Ganesh Mallaya (AppViewX), Sven Rajala (Keyfactor).</p>
+<p>Peter Chunchi Liu (<a href="../companies/huawei/">Huawei</a>), Mike Ounsworth (<a href="../companies/cryptic-forest-software/">Cryptic Forest Software</a>), Michael Richardson (<a href="../companies/sandelman-software-works/">Sandelman Software Works</a>), Ganesh Mallaya (AppViewX), Sven Rajala (Keyfactor).</p>
 <ul>
 <li><strong>Why</strong>: Where device attestation meets automated certificate issuance: enterprises increasingly want to issue client (and server) certificates only to devices that can <em>prove</em> their posture — measured boot, HSM-held keys, MDM registration — and ACME had no standardized way to ask.</li>
 <li><strong>What</strong>: A WG document (-03) defining a <code>remote-attestation</code> identifier type whose value is a property hint (<code>measured-boot</code>, <code>hsm</code>, …) rather than a real identifier, plus a <code>remote-attest-01</code> challenge answered with a RATS Conceptual Message Wrapper (CMW) in any supported format (EAT, WebAuthn, TPM). The challenge object carries a <code>freshnessNonce</code>, an optional <code>attestClaimsHint</code> listing claims the server wants attested, and a <code>verifierEncryptionCredential</code> (JWK) so sensitive evidence can be JWE-encrypted in transit. The design supports both the RATS Passport model (attestation-result-01, mandatory to implement) and Background Check model (encrypted evidence), and is explicitly supplemental — the client still satisfies DNS-01/HTTP-01 for the identifiers that go into the certificate.</li>
@@ -1845,7 +1887,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-many-lsr-power-group/">Draft</a> <a class="pick-link" href="https://youtu.be/ExzDVs2e4o0">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/lsr">Materials</a></p>
 </div>
-<p>Colby Barth (Juniper), Tony Li, Vishnu Pavan Beeram, Ron Bonica (HPE).</p>
+<p>Colby Barth (<a href="../companies/juniper/">Juniper</a>), Tony Li, Vishnu Pavan Beeram, Ron Bonica (<a href="../companies/hpe/">HPE</a>).</p>
 <ul>
 <li><strong>Why</strong>: Not AI, not identity — but the signal that <em>energy</em> is entering the IGP standards track. PCPPS inverts usual traffic engineering: concentrate traffic onto a small set of links so the rest can be powered down until needed.</li>
 <li><strong>What</strong>: The IS-IS encoding for the power-state information that I-D.many-teas-power-steering's Power Conserving Path Placement Strategy needs distributed by an IGP. Notably, this individual draft has since been replaced by <code>draft-ietf-lsr-pcpps</code> with a call for WG adoption issued — i.e., LSR picked it up right after this meeting.</li>
@@ -1858,7 +1900,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-frochet-quicwg-reverso-for-quic/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-quic-reverso-for-quic-00">Slides</a> <a class="pick-link" href="https://youtu.be/Pzy_4svJ4vY">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/quic">Materials</a></p>
 </div>
-<p>Florentin Rochet (University of Namur).</p>
+<p>Florentin Rochet (<a href="../companies/university-of-namur/">University of Namur</a>).</p>
 <ul>
 <li><strong>Why</strong>: A genuinely surprising transport result: QUIC v1's wire layout — encrypted data potentially surrounded by encrypted control — makes <em>contiguous zero-copy at the receiver impossible</em> in a conforming implementation. This draft proposes a QUIC version that fixes it, and it's grounded in a published paper (ACM SIGCOMM CCR, Jan 2026).</li>
 <li><strong>What</strong>: vReverso changes three things from v1: a few more bytes in the short header (worst case 13 vs 5 — a stream ID and offset), a stream frame must be first in the packet, and frame element ordering is <em>reversed on the wire</em>. That's enough to drive data reassembly using decryption's hidden copy, so a receiver can expose a whole HTTP/3 data frame of arbitrary size in zero-copy.</li>
@@ -1871,7 +1913,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-lkspa-rats-verifiable-geo-fence/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-rats-verifiable-proof-of-environment-attestation-profile-v-pea-00">Slides</a> <a class="pick-link" href="https://youtu.be/IhxaSHCwdv0">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/rats">Materials</a></p>
 </div>
-<p>Michael Richardson (presenter), with R. Krishnan (JPMorgan Chase), N. Smith, D. Lopez (Telefonica), A. Prasad (Oracle), S. Addepalli (Aryaka), H. Birkholz (Fraunhofer SIT).</p>
+<p>Michael Richardson (presenter), with R. Krishnan (<a href="../companies/jpmorgan-chase/">JPMorgan Chase</a>), N. Smith, D. Lopez (<a href="../companies/telef-nica/">Telefonica</a>), A. Prasad (<a href="../companies/oracle/">Oracle</a>), S. Addepalli (Aryaka), H. Birkholz (<a href="../companies/fraunhofer-sit/">Fraunhofer SIT</a>).</p>
 <ul>
 <li><strong>Why</strong>: Sovereignty and regulated-deployment requirements (RBI India, Korea's spatial-data act, GDPR) are demanding <em>provable</em> geographic residency — and nothing today cryptographically links a workload's identity, its execution integrity, and its location. This draft fuses them.</li>
 <li><strong>What</strong>: V-PEA (formerly the verifiable geofencing draft) is a profile of the RATS architecture (RFC 9334) that binds two hardware-rooted dimensions into one TPM-sealed Evidence object: WHAT (TPM provenance, platform/boot integrity, workload-agent binary digest) and WHERE (physical residency per GNSS/MNO/timing location sources, with Galileo OSNMA and multi-constellation cross-checks against spoofing added since IETF 125). Neither dimension can be forged or transplanted without invalidating the other, and the credential is issued only if both pass. The WHERE dimension supports transparent zero-knowledge proofs so an Attester can prove in-boundary compliance without disclosing coordinates. A WIMSE Integration appendix ties the Attestation Result to credential issuance.</li>

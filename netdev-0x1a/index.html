@@ -313,6 +313,22 @@
   
   
     <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../how-it-works/" class="md-tabs__link">
         
   
@@ -1117,6 +1133,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-it-works/" class="md-nav__link">
         
   
@@ -1554,11 +1596,11 @@
 </div>
 <h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
 <div class="pick pick-core">
-<h3 id="resilient-ai-supercomputer-networking-using-mrc-and-srv6-christoph-paasch-openai-and-others-core">Resilient AI Supercomputer Networking using MRC and SRv6 — Christoph Paasch (OpenAI) and others — Core<a class="headerlink" href="#resilient-ai-supercomputer-networking-using-mrc-and-srv6-christoph-paasch-openai-and-others-core" title="Permanent link">#</a></h3>
+<h3 id="resilient-ai-supercomputer-networking-using-mrc-and-srv6-christoph-paasch-openai-and-others-core">Resilient AI Supercomputer Networking using MRC and SRv6 — Christoph Paasch (<a href="../companies/openai/">OpenAI</a>) and others — Core<a class="headerlink" href="#resilient-ai-supercomputer-networking-using-mrc-and-srv6-christoph-paasch-openai-and-others-core" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/talk/resilient-ai-supercomputer-networking-using-mrc-and-srv6.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper45-talk-slides/2026_MRC_netdevconf.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/qlVweM7rLx4">Recording</a></p>
 </div>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="qlVweM7rLx4" data-start="0" href="https://www.youtube.com/watch?v=qlVweM7rLx4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/qlVweM7rLx4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/qlVweM7rLx4/maxresdefault.jpg" alt="Play the recording: Resilient AI Supercomputer Networking using MRC and SRv6 — Christoph Paasch (OpenAI) and others — Core" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="qlVweM7rLx4" data-start="0" href="https://www.youtube.com/watch?v=qlVweM7rLx4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/qlVweM7rLx4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/qlVweM7rLx4/maxresdefault.jpg" alt="Play the recording: Resilient AI Supercomputer Networking using MRC and SRv6 — Christoph Paasch ([OpenAI](../companies/openai.md)) and others — Core" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why:</strong> This is the single most load-bearing talk of the program: production experience of running RDMA over a 75K-GPU fabric at OpenAI and Microsoft, and the clearest public statement yet of how frontier training clusters actually do path selection and failure recovery.</p>
 <p><strong>What:</strong> Three coupled pieces — MRC, an RDMA transport that sprays a single QP's packets across all fabric paths and actively load-balances; two-tier multi-plane Clos topologies (4 x 200G or 8 x 100G planes) that let &gt;100K-GPU clusters stay two-tier; and static SRv6 source routing so the endpoint, not the fabric, decides the path.</p>
 <p><strong>How:</strong> Regular RoCE pins a QP to one hash-selected path, so flow collisions leave links idle while collided flows drive tail latency — and tail latency directly sets step time in synchronous training. MRC keeps one logical QP for the application but sprays across path selectors, each PS resolving to a complete SRv6 destination address that names plane/NIC port and T0 uplink. Loss is treated as path feedback: bad PSs are swapped from a backup set, converging to &lt;1 loss/s/NIC within minutes with no pre-populated denylist. Switches stay dumb — static config, no resilient ECMP hashing, no BGP convergence — and a <code>clustermapper</code> loopback SRv6 probe feeds a denylist without needing a peer. Production incidents shown: a T1 that stopped forwarding hit ~25% of QPs and ~580K dropped packets before MRC routed around it; four flapping 200G links cost ~25% throughput for about a minute, with QPs staying alive.</p>
@@ -1566,11 +1608,11 @@
 <p><strong>Where applicable:</strong> Explicitly a large-operator design: it assumes a purpose-built multi-plane Clos, source-routing-capable NICs, and MRC silicon. The transferable ideas — endpoint-driven path selection, treating loss as path health, keeping switches static — apply well below that scale. Packet trimming and ECN load-balancing were mentioned but not covered.</p>
 </div>
 <div class="pick pick-core">
-<h3 id="srv6-workshop-chair-stefano-salsano-univ-of-rome-tor-vergata-with-cisco-ericsson-contributors-core">SRv6 Workshop — Chair: Stefano Salsano (Univ. of Rome Tor Vergata), with Cisco, Ericsson contributors — Core<a class="headerlink" href="#srv6-workshop-chair-stefano-salsano-univ-of-rome-tor-vergata-with-cisco-ericsson-contributors-core" title="Permanent link">#</a></h3>
+<h3 id="srv6-workshop-chair-stefano-salsano-univ-of-rome-tor-vergata-with-cisco-ericsson-contributors-core">SRv6 Workshop — Chair: Stefano Salsano (<a href="../companies/university-of-rome-tor-vergata/">Univ. of Rome Tor Vergata</a>), with <a href="../companies/cisco/">Cisco</a>, <a href="../companies/ericsson/">Ericsson</a> contributors — Core<a class="headerlink" href="#srv6-workshop-chair-stefano-salsano-univ-of-rome-tor-vergata-with-cisco-ericsson-contributors-core" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/workshop/srv6-workshop.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper48-talk-slides/netdev-0x1A-srv6-l2-services.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/VWlH9D7FSCU">Recording</a></p>
 </div>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="VWlH9D7FSCU" data-start="0" href="https://www.youtube.com/watch?v=VWlH9D7FSCU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/VWlH9D7FSCU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/VWlH9D7FSCU/maxresdefault.jpg" alt="Play the recording: SRv6 Workshop — Chair: Stefano Salsano (Univ. of Rome Tor Vergata), with Cisco, Ericsson contributors — Core" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="VWlH9D7FSCU" data-start="0" href="https://www.youtube.com/watch?v=VWlH9D7FSCU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/VWlH9D7FSCU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/VWlH9D7FSCU/maxresdefault.jpg" alt="Play the recording: SRv6 Workshop — Chair: Stefano Salsano ([Univ. of Rome Tor Vergata](../companies/university-of-rome-tor-vergata.md)), with [Cisco](../compan" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why:</strong> The counterpart to the MRC talk, and the more actionable one: SRv6 is the mechanism by which host-decided pathing and VXLAN replacement both become possible in mainline Linux, and this session covers exactly the gaps that still block that.</p>
 <p><strong>What:</strong> Three threads — source-routed AI backends (deterministic, congestion-aware path placement decided at host/NIC rather than by ECMP hashing); SRv6 L2 services beyond the current <code>End.DX2</code> cross-connect; and a provider-grade end-to-end design on Linux + FRR with a new observability tool.</p>
 <p><strong>How:</strong> On L2: RFC 8986 defines <code>End.DX2</code>/<code>DT2U</code>/<code>DT2M</code> and RFC 9252 the EVPN-over-SRv6 overlay, but the kernel only implements the <code>End.DX2</code> cross-connect with no native L2 endpoint netdevice; a recent netdev RFC series adds <code>End.DT2U</code> plus an <code>sr6</code> Ethernet pseudowire device, which is what would make a VXLAN-like deployment model (and therefore replacing VXLAN in Kubernetes CNIs, OVN, Neutron) viable. The provider thread adds <code>tablesnoop</code>, a lookup-level tracer sitting between tcpdump and pwru/retis that traces PBR, v4/v6 route lookups, SRv6 head-end/endpoint behaviors and MPLS label ops, plus SRv6 Redundancy Protection (a new R-SID format from <code>draft-ietf-spring-sr-redundancy-protection</code>) with 802.1CB FRER extended to SRv6 encapsulation via XDP. (From abstract and agenda.)</p>
@@ -1654,11 +1696,11 @@
 <p><strong>Where applicable:</strong> Anything BPF-based in the kernel datapath; this is upstream design discussion, so the value is in knowing which way the API is likely to land before building on the current workarounds.</p>
 </div>
 <div class="pick pick-core">
-<h3 id="one-layer-deeper-the-10-layer-cake-under-a-linux-network-interface-jesse-brandeburg-cloudflare-core">One Layer Deeper: The 10-Layer Cake Under a Linux Network Interface — Jesse Brandeburg (Cloudflare) — Core<a class="headerlink" href="#one-layer-deeper-the-10-layer-cake-under-a-linux-network-interface-jesse-brandeburg-cloudflare-core" title="Permanent link">#</a></h3>
+<h3 id="one-layer-deeper-the-10-layer-cake-under-a-linux-network-interface-jesse-brandeburg-cloudflare-core">One Layer Deeper: The 10-Layer Cake Under a Linux Network Interface — Jesse Brandeburg (<a href="../companies/cloudflare/">Cloudflare</a>) — Core<a class="headerlink" href="#one-layer-deeper-the-10-layer-cake-under-a-linux-network-interface-jesse-brandeburg-cloudflare-core" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/talk/one-layer-deeper-the-10-layer-cake-under-a-linux-network-interface.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper17-talk-slides/10%20layer%20cake%20of%20networking%20%281%29.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/Bd7ct9pPWTg">Recording</a></p>
 </div>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="Bd7ct9pPWTg" data-start="0" href="https://www.youtube.com/watch?v=Bd7ct9pPWTg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Bd7ct9pPWTg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Bd7ct9pPWTg/maxresdefault.jpg" alt="Play the recording: One Layer Deeper: The 10-Layer Cake Under a Linux Network Interface — Jesse Brandeburg (Cloudflare) — Core" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="Bd7ct9pPWTg" data-start="0" href="https://www.youtube.com/watch?v=Bd7ct9pPWTg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Bd7ct9pPWTg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Bd7ct9pPWTg/maxresdefault.jpg" alt="Play the recording: One Layer Deeper: The 10-Layer Cake Under a Linux Network Interface — Jesse Brandeburg ([Cloudflare](../companies/cloudflare.md)) — Core" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why:</strong> The most useful non-feature talk of the program: a production-performance mental model from someone who wrote Intel Ethernet drivers and now runs performance at Cloudflare, framed around the observability gap rather than a knob list.</p>
 <p><strong>What:</strong> A tour of the ten layers hidden under the "interface, socket, queue" abstraction — NIC hardware, drivers, CPU placement, packet hooks, traffic control, firewalls, socket buffers, application runtimes, microarchitecture, observability — and how to reason about which one is spending your budget.</p>
 <p><strong>How:</strong> The framing is that the old playbook ("turn everything off and go fast") no longer applies, because firewalls, observability and multi-tenant isolation are production requirements. Packets can vanish at the NIC, XDP, tc, conntrack, qdisc, softnet backlog, socket receive queue or the application runtime queue — and a service can honestly report it processed everything it received while the kernel drops packets it never saw. Concrete examples: why <code>sendmmsg()</code>/<code>recvmmsg()</code> still matter, why treating the socket receive queue as a warehouse causes loss and latency, where UDP loses segmentation offload behaviour, where VLAN acceleration hides metadata userspace needs, and the real cost of stacked XDP/tc/netfilter/conntrack/BPF hooks. Ends below the packet path at cache efficiency, code size and TLB misses. (From abstract only.)</p>

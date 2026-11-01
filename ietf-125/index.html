@@ -313,6 +313,22 @@
   
   
     <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../how-it-works/" class="md-tabs__link">
         
   
@@ -1117,6 +1133,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-it-works/" class="md-nav__link">
         
   
@@ -1557,7 +1599,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-xu-idr-fare/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-idr-sessb-4-1-fully-adaptive-routing-ethernet-using-bgp-01">Slides</a> <a class="pick-link" href="https://youtu.be/yw6h3n-7qXE">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/idr">Materials</a></p>
 </div>
-<p>Qingliang Zhang (H3C), Hang Wu (Ruijie), Yadong Liu, Yinben Xia (Tencent), Peilong Wang (Baidu), Xiaohu Xu (China Mobile), Shraddha Hegde (HPE), Keyur Patel (Arrcus), Zongying He (Broadcom), et al.</p>
+<p>Qingliang Zhang (<a href="../companies/h3c/">H3C</a>), Hang Wu (<a href="../companies/ruijie/">Ruijie</a>), Yadong Liu, Yinben Xia (<a href="../companies/tencent/">Tencent</a>), Peilong Wang (<a href="../companies/baidu/">Baidu</a>), Xiaohu Xu (<a href="../companies/china-mobile/">China Mobile</a>), Shraddha Hegde (<a href="../companies/hpe/">HPE</a>), Keyur Patel (<a href="../companies/arrcus/">Arrcus</a>), Zongying He (<a href="../companies/broadcom/">Broadcom</a>), et al.</p>
 <ul>
 <li><strong>Why</strong>: Static ECMP in Clos fabrics breaks down for elephant-flow AI training traffic — collisions on equal-cost paths cost throughput exactly when a multi-thousand-GPU job is running. This is the most implementation-proven adaptive-routing item in the routing area.</li>
 <li><strong>What</strong>: FARE extends BGP so that each node advertises real-time path bandwidth in a path-bandwidth extended community; receivers compute weighted ECMP (WECMP) next-hops and rebalance per the live capacity of each spine path. New in -04: multihoming handling — when a prefix is multihomed to N leaf nodes, the advertised path bandwidth is divided by N (or the local link bandwidth multiplied by N) before taking the minimum, so weights stay honest.</li>
@@ -1570,7 +1612,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-xu-rtgwg-fare-in-sun/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-rtgwg-06-xu-fare-in-sun-01">Slides</a> <a class="pick-link" href="https://youtu.be/nzitn4M1Tc8">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/rtgwg">Materials</a></p>
 </div>
-<p>Yongtao Yang (Centec), Yinben Xia, Weifeng Zhang (Tencent), Peilong Wang (Baidu), Yan Zhuang (Huawei), Xiaohu Xu (China Mobile), Zongying He (Broadcom), Nan Wang (Intel, Hygon), Jian Guo (Biren), Xiang Li (Enflame), et al.</p>
+<p>Yongtao Yang (<a href="../companies/centec/">Centec</a>), Yinben Xia, Weifeng Zhang (<a href="../companies/tencent/">Tencent</a>), Peilong Wang (<a href="../companies/baidu/">Baidu</a>), Yan Zhuang (<a href="../companies/huawei/">Huawei</a>), Xiaohu Xu (<a href="../companies/china-mobile/">China Mobile</a>), Zongying He (<a href="../companies/broadcom/">Broadcom</a>), Nan Wang (<a href="../companies/intel/">Intel</a>, Hygon), Jian Guo (Biren), Xiang Li (Enflame), et al.</p>
 <ul>
 <li><strong>Why</strong>: The same WECMP idea moved into the scale-up (GPU back-end) network, where MoE expert/tensor parallel traffic is low-entropy, bursty, and collision-prone across multi-plane topologies — and the GPU itself becomes a routing participant. This is where physical fabric design and GPU interconnect are converging (OCP ESUN, AMD UALoE, Broadcom SUE-T).</li>
 <li><strong>What</strong>: Extends FARE from switches to GPUs: each GPU has multiple 800G ports, at least one sub-port per scale-up plane, and performs per-flow or per-packet weighted load-balancing across planes using path-bandwidth feedback. New in -02: considerations for memory-semantic operations — weak ordering (full packet spray + GPU reorder buffers), strong ordering (in-order per QP), and partial ordering, selectable via the per-flow vs per-packet mode.</li>
@@ -1583,7 +1625,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-wang-idr-dpf/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-idr-sessb-2-bgp-deterministic-path-forwarding-dpf-00">Slides</a> <a class="pick-link" href="https://youtu.be/yw6h3n-7qXE">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/idr">Materials</a></p>
 </div>
-<p>Kevin Wang, Michal Styszynski, Wen Lin, Mahesh Subramaniam, Thomas Kampa, Diptanshu Singh (Juniper)</p>
+<p>Kevin Wang, Michal Styszynski, Wen Lin, Mahesh Subramaniam, Thomas Kampa, Diptanshu Singh (<a href="../companies/juniper/">Juniper</a>)</p>
 <ul>
 <li><strong>Why</strong>: Hop-by-hop EBGP gives every flow one best-effort service; AI/LLM flows, multi-tenant GPU-as-a-service SLAs, and PRP-style replication need path separation that plain IP fabrics don't offer. This is a lightweight traffic-engineering answer for IP fabrics.</li>
 <li><strong>What</strong>: Partitions a physical Clos fabric into multiple logical fabrics by "coloring" EBGP sessions and routes. Use cases shown: queue-pair pinning for ROCEv2 (pinning QPs to disjoint paths), per-tenant SLA separation for GPU-as-a-service, and fate-sharing avoidance (exception flows and PRP redundant flows mapped to different logical fabrics).</li>
@@ -1596,7 +1638,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-idr-bgp-ls-bgp-only-fabric/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-idr-bgp-link-state-extensions-for-bgp-only-networks-00">Slides</a> <a class="pick-link" href="https://youtu.be/a0BiAUtfF4c">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/idr">Materials</a></p>
 </div>
-<p>Ketan Talaulikar (independent), Aravind Babu MahendraBabu, Clarence Filsfils, Krishna Swamy (Cisco), Shawn Zandi (LinkedIn), Gaurav Dawra, Muhammad Durrani (Equinix)</p>
+<p>Ketan Talaulikar (independent), Aravind Babu MahendraBabu, Clarence Filsfils, Krishna Swamy (<a href="../companies/cisco/">Cisco</a>), Shawn Zandi (<a href="../companies/linkedin/">LinkedIn</a>), Gaurav Dawra, Muhammad Durrani (Equinix)</p>
 <ul>
 <li><strong>Why</strong>: In BGP-only DC/AI fabrics, nodes have no visibility beyond direct neighbors — which blocks LFA/TI-LFA computation, remote protection, and controller TE. This draft is the enabler several other RTGWG/IDR drafts depend on, including the IPFRR-for-AI/ML draft below.</li>
 <li><strong>What</strong>: A WG draft (draft-ietf-idr-bgp-ls-bgp-only-fabric-04, adopted by IDR) that lets each BGP speaker advertise its local topology via existing BGP-LS NLRI types (Node, Link, Prefix), giving controllers a full underlay link-state and TE view in networks with no IGP.</li>
@@ -1609,7 +1651,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-clad-rtgwg-ipfrr-aiml/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-rtgwg-07-ip-fast-reroute-for-aiml-fabrics-00">Slides</a> <a class="pick-link" href="https://youtu.be/nzitn4M1Tc8">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/rtgwg">Materials</a></p>
 </div>
-<p>Francois Clad, Clarence Filsfils (Cisco), Roy Jiang, Dennis Cai</p>
+<p>Francois Clad, Clarence Filsfils (<a href="../companies/cisco/">Cisco</a>), Roy Jiang, Dennis Cai</p>
 <ul>
 <li><strong>Why</strong>: AI backend networks lose huge compute value per millisecond of fabric failure; existing FRR (ECMP, LFA, TI-LFA) is CPU-activated and orders of magnitude too slow, plus it can't react to capacity/quality degradation (e.g., a failed bundle member or a down spine-to-super-spine path causing congestion rather than outage).</li>
 <li><strong>What</strong>: A requirements document for sub-100µs convergence in AI DC fabrics and DCI: it enumerates the limits of RFC 5714 mechanisms in large multi-tier Clos and BGP-only fabrics, and lays out what a replacement needs.</li>
@@ -1622,7 +1664,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-zzhang-bess-evpn-mh-fast-notification/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-bess-evpn-mh-fast-notification-01">Slides</a> <a class="pick-link" href="https://youtu.be/hr5963eGggU">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/bess">Materials</a></p>
 </div>
-<p>Jeffrey Zhang, Wen Lin (HPE), Changwang Lin (H3C)</p>
+<p>Jeffrey Zhang, Wen Lin (<a href="../companies/hpe/">HPE</a>), Changwang Lin (<a href="../companies/h3c/">H3C</a>)</p>
 <ul>
 <li><strong>Why</strong>: EVPN multihoming (DF election, local bias) assumes the Ethernet Segment type-4 route is withdrawn and processed quickly on link failure. BGP update propagation over TCP between routing engines isn't quick — delayed handling means traffic loss (DF down) or duplication (link-up local-bias lag). Per-<PE, ES> BFD doesn't scale.</li>
 <li><strong>What</strong>: A UDP-based data-plane notification originated and processed in the forwarding plane of MH peers, (near-)instantly updating DF-election/local-bias state without waiting for the BGP control plane. Optionally also notifies all remote PEs (useful for single-active backup switchover and load-balancing rebalance), preferring multicast for the notification address unless the PE count is small.</li>
@@ -1635,7 +1677,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-zhang-rtgwg-multicast-requirements-gaps-aidc/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-rtgwg-09-requirements-and-gap-analysis-of-multicast-in-ai-data-centers-00">Slides</a> <a class="pick-link" href="https://youtu.be/nzitn4M1Tc8">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/rtgwg">Materials</a></p>
 </div>
-<p>Junye Zhang, Weiqiang Cheng, Kefei Liu (China Mobile)</p>
+<p>Junye Zhang, Weiqiang Cheng, Kefei Liu (<a href="../companies/china-mobile/">China Mobile</a>)</p>
 <ul>
 <li><strong>Why</strong>: MoE token dispatch (AlltoAll), AllReduce broadcast phases, model distribution, and checkpoint saving are all point-to-multipoint; unicast replication burns source GPU/NIC capacity and bandwidth. If network multicast could serve AIDCs, it would offload replication to switches — but no existing multicast tech fits.</li>
 <li><strong>What</strong>: A requirements-and-gap document. Requirements: interactivity (backward MP2P forwarding and ACK/congestion-feedback aggregation), reliability (lossless — RDMA throughput collapses to 0 at ~2% loss), dynamics (µs-scale member-set adaptation for MoE gating, no pre-defined groups), sparseness (e.g., 9 of 256 experts active in DeepSeekV3 — no BIER BitString bloat), and simplicity.</li>
@@ -1648,7 +1690,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-han-rtgwg-codeployment-pfc-fgfc/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-rtgwg-07-use-cases-and-requirement-for-flow-control-collaboration-across-dcns-and-wan-00">Slides</a> <a class="pick-link" href="https://youtu.be/nzitn4M1Tc8">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/rtgwg">Materials</a></p>
 </div>
-<p>Zhengxin Han, Ran Pang, Yi Yue, Jie Dong, Zheng Ruan, Quan Xiong (China Unicom)</p>
+<p>Zhengxin Han, Ran Pang, Yi Yue, Jie Dong, Zheng Ruan, Quan Xiong (<a href="../companies/china-unicom/">China Unicom</a>)</p>
 <ul>
 <li><strong>Why</strong>: Distributed AI training and inference now span data centers over WAN, but PFC — the DCN lossless mechanism — fails badly in WANs: head-of-line blocking, congestion spreading, and deadlock under multipathing, with long RTTs amplifying everything. Extending lossless RDMA end-to-end across DCN+WAN requires the two flow-control regimes to interwork.</li>
 <li><strong>What</strong>: Use cases and requirements for co-deploying PFC inside DCNs with fine-grained flow control (fgfc) in the WAN: fgfc is a data-plane L3 backpressure mechanism (carried in ICMPv6 or UDP) operating at tenant/flow granularity, bounded to specific paths and slices, with ms-level response.</li>
@@ -1661,7 +1703,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-xu-ipsecme-esp-in-udp-lb/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-ipsecme-encapsulating-ipsec-esp-in-udp-for-load-balancing-00">Slides</a> <a class="pick-link" href="https://youtu.be/-0_gLUb5r3c">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/ipsecme">Materials</a></p>
 </div>
-<p>Xiaohu Xu (China Mobile), Shraddha Hegde (HPE), Boris Pismenny (Nvidia), Dacheng Zhang, Liang Xia (Huawei), Mahendra Puttaswamy (HPE)</p>
+<p>Xiaohu Xu (<a href="../companies/china-mobile/">China Mobile</a>), Shraddha Hegde (<a href="../companies/hpe/">HPE</a>), Boris Pismenny (<a href="../companies/nvidia/">Nvidia</a>), Dacheng Zhang, Liang Xia (<a href="../companies/huawei/">Huawei</a>), Mahendra Puttaswamy (HPE)</p>
 <ul>
 <li><strong>Why</strong>: ESP has no entropy, so IPsec tunnels hash onto one ECMP path / one LAG member and one CPU core (no RSS spread). For SD-WAN branch interconnects and, increasingly, cloud-provider encryption of DCI WAN traffic (financial/governmental clouds), this strands bandwidth and CPU.</li>
 <li><strong>What</strong>: A UDP encapsulation of ESP where the 16-bit UDP source port carries a per-flow entropy value, letting unmodified switches and routers load-balance IPsec traffic across ECMP/LAG, and letting x86 IPsec gateways RSS-distribute across cores. Alternative to running multiple parallel tunnels.</li>
@@ -1687,7 +1729,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-oauth-v2-1/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-oauth-identity-assertion-authorization-grant-00">Slides</a> <a class="pick-link" href="https://youtu.be/C72Saxe03tk">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/oauth">Materials</a></p>
 </div>
-<p>Dick Hardt (Hellō), Aaron Parecki (Okta), Torsten Lodderstedt (SPRIND)</p>
+<p>Dick Hardt (<a href="../companies/hell/">Hellō</a>), Aaron Parecki (<a href="../companies/okta/">Okta</a>), Torsten Lodderstedt (<a href="../companies/sprind/">SPRIND</a>)</p>
 <ul>
 <li><strong>Why</strong>: OAuth 2.1 will be the baseline spec every identity product implements for the next decade. It obsoletes RFC 6749 and RFC 6750, folding a decade of security BCPs into one normative document — anything the PM ships that speaks OAuth will be measured against it.</li>
 <li><strong>What</strong>: A consolidation of RFC 6749 (core), RFC 8252 (native apps), RFC 9700 (security BCP), and RFC 10017 (browser-based apps) into a single framework, removing features found insecure in RFC 9700 — the TOC confirms removal of the implicit grant, changes to the redirect URI parameter in token requests, and deeply reworked security considerations including mix-up defenses via issuer identification and distinct redirect URIs, sender-constrained tokens (DPoP, mTLS) promoted to SHOULD, and extensive native/browser app guidance.</li>
@@ -1700,7 +1742,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-oauth-security-topics-update/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-oauth-updates-to-oauth-20-security-best-current-practice-00">Slides</a> <a class="pick-link" href="https://youtu.be/C72Saxe03tk">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/oauth">Materials</a></p>
 </div>
-<p>Tim Würtele, Pedram Hosseyni (University of Stuttgart), Kaixuan Luo (CUHK), Adonis Fung (Samsung Research America)</p>
+<p>Tim Würtele, Pedram Hosseyni (<a href="../companies/university-of-stuttgart/">University of Stuttgart</a>), Kaixuan Luo (<a href="../companies/the-chinese-university-of-hong-kong/">CUHK</a>), Adonis Fung (<a href="../companies/samsung/">Samsung Research America</a>)</p>
 <ul>
 <li><strong>Why</strong>: This documents two new real-world attack classes found in production OAuth ecosystems — including agentic AI token vaults — with 20+ and 40+ affected vendors respectively. If the PM builds anything with connector marketplaces, integration platforms, or agent toolkits, these attack classes apply directly.</li>
 <li><strong>What</strong>: WG-adopted update to RFC 9700 covering: (1) audience injection attacks against client-authentication assertions, with attack mechanics and countermeasures (single audience value, issuer identifier, exact endpoint URI); (2) Cross-toolkit OAuth Account Takeover (COAT) — a malicious AS introduced via a connector/toolkit exploits mix-up defenses that don't work because issuer identifiers are unavailable, untrusted, or non-unique in practice (none of 20+ client vendors investigated applied issuer-based defenses); countermeasure: a client-assigned identifier for each toolkit, embedded in <code>redirect_uri</code>, matched at the client; (3) cross-user OAuth session fixation — platforms and AI token vaults introduce standalone auth sessions decoupled from the user-agent session, fixatable by sharing a request URL (Amazon Alexa, IFTTT, Microsoft Copilot, n8n, Perplexity, Manus, Bedrock AgentCore, Arcade.dev, Composio among 40+ affected); countermeasures are high-level (return to the origin where the original session lives; validate session binding), with concrete flows left to future profiling.</li>
@@ -1726,7 +1768,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-mw-spice-actor-chain/">Draft</a> <a class="pick-link" href="https://youtu.be/T43MLoaWsbI">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/spice">Materials</a></p>
 </div>
-<p>A Prasad, Ramki Krishnan, Diego Lopez (Telefónica), Srinivasa Addepalli (individual, SPICE WG)</p>
+<p>A Prasad, Ramki Krishnan, Diego Lopez (<a href="../companies/telef-nica/">Telefónica</a>), Srinivasa Addepalli (individual, SPICE WG)</p>
 <ul>
 <li><strong>Why</strong>: Multi-hop service-to-service and agentic workflows need delegation-path continuity: RFC 8693 allows nested <code>act</code> claims but prior actors are informational only — nothing today cryptographically proves the chain of token exchanges that produced a token. That's the auditability gap for agent-driven API access.</li>
 <li><strong>What</strong>: Six actor-chain profiles for RFC 8693 token exchange — Declared vs Verified, each in Full/Subset/Actor-Only disclosure variants — trading off visible chain-based authorization, cryptographic accountability, auditability, privacy, and long-running workflow support. <code>sub</code>, <code>act</code>, <code>may_act</code> semantics are preserved; plain RFC 8693 impersonation-shaped outputs remain valid but sit outside the profile family (from abstract only).</li>
@@ -1792,7 +1834,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-tls-mlkem/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/tls">Materials</a></p>
 </div>
-<p>Deirdre Connolly (Selkie Cryptography, TLS WG)</p>
+<p>Deirdre Connolly (<a href="../companies/selkie-cryptography/">Selkie Cryptography</a>, TLS WG)</p>
 <ul>
 <li><strong>Why</strong>: The standalone post-quantum key agreement for TLS 1.3 is essentially done — this defines what PQ TLS looks like at the wire level for every product the PM ships.</li>
 <li><strong>What</strong>: Registers ML-KEM-512/768/1024 as TLS NamedGroups (0x0200–0x0202) for use in supported_groups/key_share, replacing (EC)DHE in the TLS 1.3 key schedule. Encapsulation keys run 800–1568 bytes with 768–1568-byte ciphertexts — the handshake-size implications every implementation will feel.</li>
@@ -1831,7 +1873,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-idr-bgp-model/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/idr">Materials</a></p>
 </div>
-<p>Mahesh Jethanandani, Keyur Patel (Arrcus), Susan Hares, Jeff Haas (HPE) — IDR WG</p>
+<p>Mahesh Jethanandani, Keyur Patel (<a href="../companies/arrcus/">Arrcus</a>), Susan Hares, Jeff Haas (<a href="../companies/hpe/">HPE</a>) — IDR WG</p>
 <ul>
 <li><strong>Why</strong>: A standard YANG model for BGP config/ops matters to anyone building automated DC or WAN fabrics — today every vendor's BGP schema differs. Once published, this becomes the north-star schema for BGP automation.</li>
 <li><strong>What</strong>: YANG data model for configuring and managing BGP — protocol, policy, and operational aspects including RIB — based on data center, carrier, and content provider requirements. The draft (presented at -19, now at -23) is modular: separate submodules for types, capabilities, common/neighbor state, multiprotocol AFI/SAFI, policy, RIB tables/attributes, and session security (key chains, TCP-AO), with IANA-maintained modules for capabilities, notification codes, AFI/SAFI types, and community types.</li>
@@ -1845,7 +1887,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-mozleywilliams-dnsop-dnsaid/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/dnsop">Materials</a></p>
 </div>
-<p>Jim Mozley, Nic Williams (Infoblox), Behcet Sarikaya, Roland Schott (Deutsche Telekom), Jeffrey Damick (Amazon)</p>
+<p>Jim Mozley, Nic Williams (<a href="../companies/infoblox/">Infoblox</a>), Behcet Sarikaya, Roland Schott (<a href="../companies/deutsche-telekom/">Deutsche Telekom</a>), Jeffrey Damick (<a href="../companies/amazon/">Amazon</a>)</p>
 <ul>
 <li><strong>Why</strong>: A quietly ambitious idea: use DNS — not a third-party registry — as the discovery substrate for AI agents. If agentic workloads standardize on DNS for finding each other, discovery becomes cacheable, deterministic, and organization-controlled, and the PM's agents stop depending on brokered directories.</li>
 <li><strong>What</strong>: DNS-AID publishes agents via SVCB records at the agent's own name (TargetName, ipv4/ipv6 hints, ALPN carrying agent protocols <code>mcp</code>/<code>a2a</code> alongside h2/h3, well-known URI for the agent card, a <code>cap</code> capability-descriptor locator plus <code>cap-sha256</code> digest) and an organization-wide index at <code>_index._agents.&lt;domain&gt;</code>. Scope covers "known agent" and "known organization" discovery; cross-domain capability search is explicitly out of scope (derivable). No new RR types, opcodes, or response codes.</li>
@@ -1871,7 +1913,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-luan-rtgwg-sdaf/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-rtgwg-symmetry-driven-asynchronous-forwarding-with-fast-reroute-for-leo-satellite-networks-sdaf-00">Slides</a> <a class="pick-link" href="https://youtu.be/nzitn4M1Tc8">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/rtgwg">Materials</a></p>
 </div>
-<p>Shenshen Luan (Beihang University), Wenting Wei, Mingliang Ke (Xidian University), Dongxu Hou, Min Xiao (ZTE)</p>
+<p>Shenshen Luan (<a href="../companies/beihang-university/">Beihang University</a>), Wenting Wei, Mingliang Ke (<a href="../companies/xidian-university/">Xidian University</a>), Dongxu Hou, Min Xiao (<a href="../companies/zte/">ZTE</a>)</p>
 <ul>
 <li><strong>Why</strong>: Not the PM's domain — but a fresh routing idea: instead of fighting topology churn in LEO constellations, exploit the toroidal symmetry of Walker-Delta constellations to get microsecond convergence with almost no state. It's a reminder that geometric structure can replace protocol machinery.</li>
 <li><strong>What</strong>: SDAF performs failure-driven reverse-flow forwarding using only local link-state detection and a static Interface Symmetry Mapping Table — no control-plane convergence, no protocol extensions, no header changes. Compatible as-is with OSPFv3, IS-IS, MPLS.</li>

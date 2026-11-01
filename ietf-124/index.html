@@ -313,6 +313,22 @@
   
   
     <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../how-it-works/" class="md-tabs__link">
         
   
@@ -1128,6 +1144,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-it-works/" class="md-nav__link">
         
   
@@ -1579,7 +1621,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-dong-fantel-problem-statement/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-rtgwg-06-network-notifications-problem-statement-00">Slides</a> <a class="pick-link" href="https://youtu.be/cFekE0TpHng">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/rtgwg">Materials</a></p>
 </div>
-<p>Jie Dong (Huawei), Mike McBride (Futurewei), François Clad (Cisco), Zhaohui (Jeffrey) Zhang (Juniper), with contributors from China Telecom, China Mobile, China Unicom, Tencent, Telefónica, and Turkcell</p>
+<p>Jie Dong (<a href="../companies/huawei/">Huawei</a>), Mike McBride (Futurewei), François Clad (<a href="../companies/cisco/">Cisco</a>), Zhaohui (Jeffrey) Zhang (<a href="../companies/juniper/">Juniper</a>), with contributors from <a href="../companies/china-telecom/">China Telecom</a>, <a href="../companies/china-mobile/">China Mobile</a>, <a href="../companies/china-unicom/">China Unicom</a>, <a href="../companies/tencent/">Tencent</a>, <a href="../companies/telef-nica/">Telefónica</a>, and Turkcell</p>
 <ul>
 <li><strong>Why</strong>: AI training/inference and large-scale cloud services need the network to adapt faster than today's feedback loops allow. This is the anchor problem statement for the whole FANTEL (Fast Notifications for TE and Load Balancing) cluster in RTGWG, carried forward from the IETF 123 BoF with unusual breadth of operator/vendor co-authorship.</li>
 <li><strong>What</strong>: A structured problem statement defining what fast network notifications must carry, who must receive them, and how they get delivered — the requirements frame every other fast-notification draft at this meeting builds against.</li>
@@ -1592,7 +1634,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-hzh-fantel-wan-tunnel/">Draft</a> <a class="pick-link" href="https://youtu.be/cFekE0TpHng">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/rtgwg">Materials</a></p>
 </div>
-<p>Zehua Hu, Yongqing Zhu, Jiayuan Hu, Tanxin Pi (China Telecom)</p>
+<p>Zehua Hu, Yongqing Zhu, Jiayuan Hu, Tanxin Pi (<a href="../companies/china-telecom/">China Telecom</a>)</p>
 <ul>
 <li><strong>Why</strong>: Cross-AIDC LLM training and inference push RDMA through SRv6/GRE/VXLAN/MPLS tunnels over the WAN; a small number of losses collapses effective throughput, and neither ECN (end-to-end, long RTTs) nor PFC (link-local, DC-only) works there.</li>
 <li><strong>What</strong>: A concrete Fast Network Notification (FANN) protocol: transit (P) nodes detecting failure, congestion, or state change send structured notifications to the ingress PE, which reroutes to backup paths, rebalances across available paths, and/or throttles the affected traffic and notifies the sender and controller.</li>
@@ -1605,7 +1647,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-hu-rtgwg-cbfc-rsvp/">Draft</a> <a class="pick-link" href="https://youtu.be/cFekE0TpHng">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/rtgwg">Materials</a></p>
 </div>
-<p>Jiayuan Hu, Zehua Hu, Tanxin Pi, Yongqing Zhu (China Telecom)</p>
+<p>Jiayuan Hu, Zehua Hu, Tanxin Pi, Yongqing Zhu (<a href="../companies/china-telecom/">China Telecom</a>)</p>
 <ul>
 <li><strong>Why</strong>: The other half of lossless WAN RDMA: instead of notify-and-reroute, backpressure — credit-based flow control (the InfiniBand model) extended across the WAN for cross-AIDC training with elephant flows and extreme concurrency.</li>
 <li><strong>What</strong>: A credit-based flow control mechanism for RDMA traffic in SRv6 tunnels over the WAN, carried by an extended RSVP, aiming to provide high-throughput, zero-packet-loss transmission guarantees (from abstract only).</li>
@@ -1631,7 +1673,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-idr-next-next-hop-nodes/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-idr-sessb-1-8-bgp-next-next-hop-nodes-00">Slides</a> <a class="pick-link" href="https://youtu.be/fFc0kGI5arw">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/idr">Materials</a></p>
 </div>
-<p>Kevin Wang, Jeff Haas, Changwang Lin, Jeff Tantsura (Juniper)</p>
+<p>Kevin Wang, Jeff Haas, Changwang Lin, Jeff Tantsura (<a href="../companies/juniper/">Juniper</a>)</p>
 <ul>
 <li><strong>Why</strong>: AI/ML Clos fabrics carry high-throughput, low-entropy flows that random ECMP hashing cannot keep drop-free; local remedies (dynamic load balancing) can't see remote-link congestion. This draft is the BGP standardization of the topology discovery that Global Load Balancing (GLB) needs.</li>
 <li><strong>What</strong>: The NNHN characteristic for the NHC attribute, letting a leaf learn <code>&lt;next-hop, next-next-hop&gt;</code> tuples per route. Presented with GLB test results: on a 3-stage Clos with 100G links, a 90G flow that drops without GLB runs drop-free with it.</li>
@@ -1644,7 +1686,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-idr-entropy-label/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-idr-split-of-draft-ietf-idr-entropy-label-01">Slides</a> <a class="pick-link" href="https://youtu.be/fFc0kGI5arw">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/idr">Materials</a></p>
 </div>
-<p>John Scudder (Juniper) presenting the split of draft-ietf-idr-entropy-label</p>
+<p>John Scudder (<a href="../companies/juniper/">Juniper</a>) presenting the split of draft-ietf-idr-entropy-label</p>
 <ul>
 <li><strong>Why</strong>: NHC is the base container for per-next-hop forwarding-plane signaling in BGP — three other WG drafts (next-next-hop-nodes, iFIT capabilities, generic metric) now define their own NHC characteristics on top of it. The session resolves a two-year stall that was blocking them.</li>
 <li><strong>What</strong>: The NHC attribute — a transitive BGP attribute, extensible via TLVs, that conveys characteristics of the routes advertised in the UPDATE that carries it (unlike RFC 5492 capabilities). News at IETF 124: the parked <code>draft-ietf-idr-entropy-label</code> (WGLC'd November 2023, stuck "waiting for implementation") was split into <code>draft-ietf-idr-nhc</code> (the attribute plus a BGP Identifier characteristic) and <code>draft-ietf-idr-elc</code> (the Entropy Label Characteristic) — "nothing added or taken away."</li>
@@ -1657,7 +1699,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-vroonen-idr-bgp-bestpath-nh-selection/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-idr-sessb-1-5-bgp-best-path-next-hop-selection-enhancements-00">Slides</a> <a class="pick-link" href="https://youtu.be/fFc0kGI5arw">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/idr">Materials</a></p>
 </div>
-<p>Olivier Vroonen, Stéphane Litkowski (Cisco)</p>
+<p>Olivier Vroonen, Stéphane Litkowski (<a href="../companies/cisco/">Cisco</a>)</p>
 <ul>
 <li><strong>Why</strong>: BGP's resolvability and cost rules assume the NEXT_HOP is the actual forwarding endpoint. GRE/MPLS/SR-MPLS/SRv6 tunnels break that assumption, producing real blackholes and wrong picks — shown with concrete examples of a VRF route dropped because no transport tunnel exists to the best path's next hop, and a delay-optimized (colored) path chosen by lowest IGP metric.</li>
 <li><strong>What</strong>: Standardizes behavior vendors already implement: introduces the concept of a "forwarding address" (e.g., the tunnel endpoint) with a "forwarding context" (tunnel type and characteristics, resolution constraints such as which table to look up in); requires resolvability checks against the forwarding address, not just NEXT_HOP; makes costs from different contexts comparable via a preference notion (like RIB preference); and requires BGP to re-evaluate best paths whenever underlying reachability or cost changes (tracking).</li>
@@ -1670,7 +1712,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-idr-bgp4-rfc4271bis/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/idr">Materials</a></p>
 </div>
-<p>Yakov Rekhter (independent), Tony Li (HPE), Susan Hares (Huawei), John Scudder, Ed. (HPE) — IDR WG document</p>
+<p>Yakov Rekhter (independent), Tony Li (<a href="../companies/hpe/">HPE</a>), Susan Hares (<a href="../companies/huawei/">Huawei</a>), John Scudder, Ed. (HPE) — IDR WG document</p>
 <ul>
 <li><strong>Why</strong>: The once-in-a-generation rewrite of the BGP base specification — the document every BGP implementation will eventually be coded and tested against.</li>
 <li><strong>What</strong>: <code>draft-ietf-idr-bgp4-rfc4271bis-03</code> obsoletes RFC 4271 along with RFC 6286, 6608, 8212, and 9687, and subsumes the core of RFC 7606 (treat-as-withdraw error handling) into the base. Consolidation, not new machinery: restructured per-message and per-attribute error handling, the send-hold timer, typed NLRI parsing rules, an explicit route-resolvability condition in the decision process, and a roadmap distinguishing the "core extensions" (RFC 4760 multiprotocol, RFC 8654 extended messages) from the wider extension ecosystem.</li>
@@ -1696,7 +1738,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-tcpm-accurate-ecn/">Draft</a> <a class="pick-link" href="https://youtu.be/Z1qVCrIBVqQ">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/tcpm">Materials</a></p>
 </div>
-<p>Bob Briscoe (Independent), Mirja Kühlewind (Ericsson), Richard Scheffenegger (NetApp) — TCPM</p>
+<p>Bob Briscoe (Independent), Mirja Kühlewind (<a href="../companies/ericsson/">Ericsson</a>), Richard Scheffenegger (<a href="../companies/netapp/">NetApp</a>) — TCPM</p>
 <ul>
 <li><strong>Why</strong>: RFC 3168 ECN feedback allows one congestion signal per RTT; DCTCP, L4S, and ConEx need per-marking counts. This changes the TCP wire protocol itself — and it is now finished: published as <strong>RFC 9768</strong> (Proposed Standard, April 2026).</li>
 <li><strong>What</strong>: AccECN replaces Classic ECN feedback: the receiver continually feeds back a count of CE-marked packets using the three TCP header flags (the former NS bit renamed AE, plus overloaded CWR/ECE) as a 3-bit ACE counter, negotiated in the three-way handshake with careful backward compatibility. An optional AccECN TCP Option (two alternative field orders, never on the SYN) supplements this with 24-bit byte counters per ECN codepoint.</li>
@@ -1709,7 +1751,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-ipsecme-eesp-ikev2/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-ipsecme-eesp-ikev2-00">Slides</a> <a class="pick-link" href="https://youtu.be/ZwfypFEEcYY">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/ipsecme">Materials</a></p>
 </div>
-<p>Steffen Klassert, Antony Antony (secunet), Christian Hopps (LabN Consulting) — IPSECME WG document</p>
+<p>Steffen Klassert, Antony Antony (<a href="../companies/secunet/">secunet</a>), Christian Hopps (<a href="../companies/labn-consulting/">LabN Consulting</a>) — IPSECME WG document</p>
 <ul>
 <li><strong>Why</strong>: ESP has no version field and cannot evolve transparently; everything must be IKEv2-negotiated and is invisible to intermediaries. Meanwhile high-speed deployments need an inner-flow identifier for ECMP, CPU pinning, and QoS, and selective exposure of inner headers for middleboxes. This is the network-security wire-format change of the meeting.</li>
 <li><strong>What</strong>: EESP is a modernized ESP on a new IP protocol number: a Base Header (version, options length, 16-bit Session ID, SPI) that middleboxes can parse; a Peer Header (full 64-bit sequence number, IV) private to the peers; the ESP trailer eliminated (Next Header/Pad Length moved into a Payload Info Header); IPv6-style TLV options for future extension; and a Crypt Offset option to expose leading bytes of the inner packet for middlebox/telemetry use — covering the PSP (VNI/crypt-offset) use case, anti-replay subspaces, and shared-SA proposals in one mechanism.</li>
@@ -1748,7 +1790,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-wimse-wimse-applicability-for-ai-agents-02">Slides</a> <a class="pick-link" href="https://youtu.be/0UaVPLO_9Xk">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/wimse">Materials</a></p>
 </div>
-<p>Yuan Ni, Chunchi Peter Liu (Huawei) — draft-ni-wimse-ai-agent-identity</p>
+<p>Yuan Ni, Chunchi Peter Liu (<a href="../companies/huawei/">Huawei</a>) — draft-ni-wimse-ai-agent-identity</p>
 <ul>
 <li><strong>Why</strong>: Agentic identity made explicit in a standards body: AI agents blur network boundaries, exhibit unpredictable access patterns, arrive over-privileged, and escape accountability — "no identity → no access control → no accountability."</li>
 <li><strong>What</strong>: Applies the WIMSE architecture to AI agents: an identity server issues agent credentials via an identity proxy with attestation evidence, with requirements for bootstrapping-independent trustworthy identities, automated credential management, minimal-privilege access tokens, and explicit workflows.</li>
@@ -1774,7 +1816,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-li-oauth-delegated-authorization/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-oauth-sessb-refresh-token-and-authorization-expiration-00">Slides</a> <a class="pick-link" href="https://youtu.be/lT_E5vbqAyc">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/oauth">Materials</a></p>
 </div>
-<p>Ruochen Li, Haiguang Wang, Chunchi Peter Liu, Tieyan Li (Huawei) — individual draft</p>
+<p>Ruochen Li, Haiguang Wang, Chunchi Peter Liu, Tieyan Li (<a href="../companies/huawei/">Huawei</a>) — individual draft</p>
 <ul>
 <li><strong>Why</strong>: Down-scoping in OAuth today requires token exchange (RFC 8693) round-trips through the authorization server; this draft proposes client-local delegation with key-bound token chains — relevant to service chains and to how agentic clients might delegate constrained authority without AS involvement at each step.</li>
 <li><strong>What</strong>: Delegation Tokens (DTs) issued by the AS and bound to the client's key; the client locally issues Delegated Access Tokens (DATs) bound to a delegate's key. Only DATs are accepted at resource servers — DTs are never used as access tokens. The RS validates the ordered token chain, the restrictions imposed at each delegation step, and a DPoP proof signed by the key bound to the leaf token.</li>
@@ -1787,7 +1829,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-oauth-v2-1/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-oauth-sessa-delegated-authorization-00">Slides</a> <a class="pick-link" href="https://youtu.be/jSC4rGzkoh8">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/oauth">Materials</a></p>
 </div>
-<p>Dick Hardt (Hellō), Aaron Parecki, Ed. (Okta), Torsten Lodderstedt (SPRIND) — OAuth WG document</p>
+<p>Dick Hardt (<a href="../companies/hell/">Hellō</a>), Aaron Parecki, Ed. (<a href="../companies/okta/">Okta</a>), Torsten Lodderstedt (<a href="../companies/sprind/">SPRIND</a>) — OAuth WG document</p>
 <ul>
 <li><strong>Why</strong>: The consolidated successor to RFC 6749/6750 — every OAuth product roadmaps against it, and the WG milestone targets IESG submission in December 2026.</li>
 <li><strong>What</strong>: A single standards-track specification replacing OAuth 2.0 and Bearer Token Usage, folding in OAuth for Native Apps (RFC 8252), Browser-Based Apps (RFC 10017), and the Security BCP (RFC 9700), and removing features found insecure: the implicit grant is gone, PKCE is required for the authorization-code flow, the redirect URI must be sent in token requests, sender-constrained tokens (DPoP, mTLS) are recommended over bare bearers, and refresh-token/client-credential behavior is specified in the base.</li>
@@ -1800,7 +1842,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-oauth-rfc7523bis/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/oauth">Materials</a></p>
 </div>
-<p>Michael B. Jones (Self-Issued Consulting), Brian Campbell (Ping Identity), Chuck Mortimore (Disney), Filip Skokan (Okta) — OAuth WG, in the RFC Editor queue</p>
+<p>Michael B. Jones (Self-Issued Consulting), Brian Campbell (<a href="../companies/ping-identity/">Ping Identity</a>), Chuck Mortimore (<a href="../companies/disney/">Disney</a>), Filip Skokan (<a href="../companies/okta/">Okta</a>) — OAuth WG, in the RFC Editor queue</p>
 <ul>
 <li><strong>Why</strong>: Fixes a real, published vulnerability — "audience injection" attacks (Hosseyni, Küsters, Würtele, University of Stuttgart), found during security analysis of OpenID Federation — affecting <code>private_key_jwt</code>-style client authentication across OAuth/OIDC.</li>
 <li><strong>What</strong>: Updates RFC 7521, 7522, 7523, and 9126: for <strong>client authentication</strong>, the JWT <code>aud</code> claim MUST be the authorization server's issuer identifier as its sole value — the token endpoint URL is no longer an acceptable audience — and the AS MUST reject JWTs that don't comply. Authorization <em>grants</em> may still use either issuer identifier or token endpoint URL. SAML assertions for client authentication are deprecated; a new explicit type <code>client-authentication+jwt</code> SHOULD be used as a compliance signal.</li>
@@ -1826,7 +1868,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-oauth-sessa-sd-jwt-vc-00">Slides</a> <a class="pick-link" href="https://youtu.be/jSC4rGzkoh8">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/oauth">Materials</a></p>
 </div>
-<p>Oliver Terbu (MATTR), Daniel Fett (Authlete), Brian Campbell (Ping Identity) — OAuth WG document</p>
+<p>Oliver Terbu (<a href="../companies/mattr/">MATTR</a>), Daniel Fett (<a href="../companies/authlete/">Authlete</a>), Brian Campbell (<a href="../companies/ping-identity/">Ping Identity</a>) — OAuth WG document</p>
 <ul>
 <li><strong>Why</strong>: The leading JSON format for selectively disclosable verifiable credentials (the format behind most government/wallet pilots); this session shows it converging to working-group last call.</li>
 <li><strong>What</strong>: Data formats plus validation and processing rules for verifiable credentials with JSON payloads, with and without selective disclosure, built on SD-JWT and the JWT extensibility model; defines issuer signature mechanisms (web-based metadata via <code>.well-known</code>/JWKs, inline <code>x5c</code>) and Type Metadata (claim schemas, rendering/display metadata).</li>
@@ -1840,7 +1882,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-grow-bmp-tlv/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-grow-bmp-v2-tlv-support-01">Slides</a> <a class="pick-link" href="https://youtu.be/qkDDPaLey0Q">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/grow">Materials</a></p>
 </div>
-<p>Paolo Lucente (NTT Data), Yunan Gu (Huawei) — GROW WG document</p>
+<p>Paolo Lucente (<a href="../companies/ntt/">NTT Data</a>), Yunan Gu (<a href="../companies/huawei/">Huawei</a>) — GROW WG document</p>
 <ul>
 <li><strong>Why</strong>: BMP is how BGP is observed; Route Monitoring, Stats Reports, and Peer Down messages lack TLV extensibility, which blocks richer per-message telemetry — and the FlowSpec-feedback work below explicitly wants to export over BMP.</li>
 <li><strong>What</strong>: Updates RFC 7854 to support optional TLVs on all BMP message types, bumps the protocol version for backward compatibility, defines essential TLVs, and adds an Enterprise (E) bit allowing per-vendor type values.</li>
@@ -1853,7 +1895,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-cui-idr-flowspec-feedback-binding/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-idr-sessa-2-6-bgp-flow-specification-extension-for-feedback-binding-00">Slides</a> <a class="pick-link" href="https://youtu.be/36tw7gGeIdA">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/idr">Materials</a></p>
 </div>
-<p>Yong Cui (Tsinghua University), Yujia Gao, Lei Zhang (Zhongguancun Laboratory) — individual draft</p>
+<p>Yong Cui (<a href="../companies/tsinghua-university/">Tsinghua University</a>), Yujia Gao, Lei Zhang (<a href="../companies/zhongguancun-laboratory/">Zhongguancun Laboratory</a>) — individual draft</p>
 <ul>
 <li><strong>Why</strong>: FlowSpec is one-way control today: "rule delivered ≠ rule effective." DDoS scrubbing rules fail silently on local ACL conflicts, unresolved redirect next-hops, inactive rules, or vendor gaps — and the operator has no standard way to see which nodes actually enforced the mitigation. This touches the network-security interest directly, as closed-loop visibility for a security mechanism.</li>
 <li><strong>What</strong>: A FlowSpec extension carrying a Feedback Action as a Generic Transitive Extended Community: a Feedback Identifier (FID), a window exponent (WINC) defining the periodic reporting interval as 2^n seconds, an event flag, and a scope selector (global / inter-AS / intra-AS) — propagated across AS boundaries unchanged.</li>
@@ -1866,7 +1908,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-white-intarea-reordering/">Draft</a> <a class="pick-link" href="https://youtu.be/5zx9U6mxbFQ">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/tsvwg">Materials</a></p>
 </div>
-<p>Greg White (CableLabs), Ingemar Johansson (Ericsson), Dibakar Das (Intel), Chris Box</p>
+<p>Greg White (<a href="../companies/cablelabs/">CableLabs</a>), Ingemar Johansson (<a href="../companies/ericsson/">Ericsson</a>), Dibakar Das (<a href="../companies/intel/">Intel</a>), Chris Box</p>
 <ul>
 <li><strong>Why</strong>: Several link-technology standards mandate in-order L2 delivery and implement resequencing buffers that add delay — exactly the machinery that defeats packet-spraying multipath in modern fabrics. Modern TCP and QUIC tolerate reordering far better than the L2 standards bodies assume.</li>
 <li><strong>What</strong>: Informational guidance for layer-2 standards organizations: IETF transport protocols do not require guaranteed in-order delivery, so the resequencing requirement can be relaxed where it causes net performance degradation (from abstract only).</li>
@@ -1893,7 +1935,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-eddy-tcpm-scone/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-tcpm-scone-for-tcp-00">Slides</a> <a class="pick-link" href="https://youtu.be/Z1qVCrIBVqQ">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/tcpm">Materials</a></p>
 </div>
-<p>Wesley Eddy, Matt Joras (Meta) — individual draft in TCPM</p>
+<p>Wesley Eddy, Matt Joras (<a href="../companies/meta/">Meta</a>) — individual draft in TCPM</p>
 <ul>
 <li><strong>Why</strong>: A different direction of network→endpoint signaling than FANTEL: instead of telling the ingress to reroute, middleboxes tell endpoints their rate limits. Interesting precisely because it parallels the AI-fabric notification philosophy (network signals, endpoints adapt) in an entirely different problem space — and shows the SCONE WG's charter spilling beyond QUIC.</li>
 <li><strong>What</strong>: A TCP option that network elements can insert or modify to give endpoints throughput guidance — motivated by rate-limiting of ABR video in mobile networks, where knowing the limit lets the player pick a compliant rendition instead of oscillating through losses.</li>
@@ -1906,7 +1948,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-bless-rtgwg-kira/">Draft</a> <a class="pick-link" href="https://youtu.be/cFekE0TpHng">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/rtgwg">Materials</a></p>
 </div>
-<p>Roland Bless (Karlsruhe Institute of Technology) — individual draft, intended Experimental</p>
+<p>Roland Bless (<a href="../companies/karlsruhe-institute-of-technology/">Karlsruhe Institute of Technology</a>) — individual draft, intended Experimental</p>
 <ul>
 <li><strong>Why</strong>: A genuinely different routing architecture rather than an increment: zero-touch, ID-based control-plane routing that scales to hundreds of thousands of nodes with no hierarchy and no manual configuration. Not deployable tomorrow, but the clearest signal in the program of where autonomic-networking research is heading — and a notable data point in the "control planes shouldn't depend on the data plane they're configuring" argument.</li>
 <li><strong>What</strong>: A two-tier architecture. The Routing Tier runs R²/Kad — a <em>recursive</em> Kademlia over self-assigned, topologically independent 112-bit NodeIDs with the XOR metric: k-bucket routing tables that grow O(log n), source routing between overlay hops, Proximity Neighbor Selection preferring short paths, overhearing of transit messages, periodic path probing, and loop-free operation even during convergence. The Forwarding Tier uses PathIDs (hashes of path-segment NodeID sequences) as label-like forwarding state, encapsulated over SRv6, IPv6-in-IPv6, or GRE — reusing existing IPv6 forwarding hardware. Add-ons include a built-in DHT for name resolution and the KeLLy topology discovery service; a domain concept provides administrative grouping; an end-system mode supports non-routing participants.</li>

@@ -4,6 +4,9 @@
         <loc>https://tldr.netdevops.me/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/archive/2024/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/archive/2025/</loc>
       </url>
       <url>
@@ -758,6 +761,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/nsdi-2025/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2024/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/page/2/</loc>

@@ -185,6 +185,7 @@ conferences/
     ccs.py           # ACM CCS schedule: sessions, paper titles, authors
     imc.py           # ACM IMC program: papers, abstracts, doi.org links
     conext.py        # ACM CoNEXT program partial: papers, abstracts, ACM DL links
+    apricot.py       # APRICOT via the open APNIC conference API
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -345,6 +346,12 @@ run.
   ("Monday, 1st, Dec 2025") carry a comma plain date scanning misses, so the
   probe has its own day-header parser. A preliminary program parses zero
   papers and stays `not_published` until the real one is up.
+- **APRICOT**: every `{year}.apricot.net` schedule is served by one open API
+  (`api.apnic.net`). The events listing gives the edition id, dates and city —
+  the probe reads it directly — and the event document lists each agenda item
+  with speaker, affiliation, abstract and slides. A session's YouTube live
+  link is attached only when it holds a single talk. Week-long workshops,
+  breaks and sponsor invites are dropped.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

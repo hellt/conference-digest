@@ -17,7 +17,7 @@
 #              Drives how the universal prompt tells Claude to read the program.
 #   start_date Optional ISO date the conference program began, for the site header.
 #   end_date   ISO date (YYYY-MM-DD) the event ended. Selection is based on this.
-#   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog | autocon
+#   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog | autocon | ovscon
 #   program_url
 #              The machine-or-human-readable program endpoint the fetcher pulls.
 #   manual_fallback_url
@@ -322,3 +322,33 @@ conferences:
     program_url: "https://networkautomation.forum/autocon5"
     manual_fallback_url: "https://networkautomation.forum/autocon5"
     notes: "Network automation practitioners: source of truth, orchestration, observability, testing, AI for NetOps, adoption stories. Abstracts from NAF's program guide and YouTube uploads."
+
+  - key: ovscon-2024
+    name: "Open vSwitch and OVN 2024 Fall Conference (Prague)"
+    type: vendor
+    start_date: 2024-11-20
+    end_date: 2024-11-21
+    fetcher: ovscon
+    program_url: "https://www.openvswitch.org/support/ovscon2024/"
+    manual_fallback_url: "https://www.openvswitch.org/support/ovscon2024/"
+    notes: "OVS/OVN and OVN-Kubernetes: virtual networking, BGP/EVPN fabric integration, hardware offload, DPUs, network security and scale. Abstracts, recordings and slides from the official program."
+
+  - key: ovscon-2025
+    name: "Open vSwitch and OVN 2025 Fall Conference (Prague)"
+    type: vendor
+    start_date: 2025-11-19
+    end_date: 2025-11-20
+    fetcher: ovscon
+    program_url: "https://www.openvswitch.org/support/ovscon2025/"
+    manual_fallback_url: "https://www.openvswitch.org/support/ovscon2025/"
+    notes: "OVS/OVN and OVN-Kubernetes: virtual networking, BGP/EVPN fabric integration, hardware offload, DPUs, network security and scale. Abstracts, recordings and slides from the official program."
+
+  - key: ovscon-2026
+    name: "Open vSwitch and OVN 2026 Fall Conference"
+    type: vendor
+    end_date: 2026-11-04
+    fetcher: ovscon
+    program_url: "https://www.openvswitch.org/support/ovscon2026/"
+    manual_fallback_url: "https://www.openvswitch.org/support/ovscon2026/"
+    discovered: 2026-11-01
+    notes: "OVS/OVN and OVN-Kubernetes: virtual networking, BGP/EVPN fabric integration, hardware offload, DPUs, network security and scale. Auto-discovered 2026-11-01 from series 'ovscon'. end_date taken from the source."

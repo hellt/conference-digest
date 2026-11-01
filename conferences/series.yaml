@@ -172,3 +172,15 @@ series:
     manual_fallback_url_template: "https://networkautomation.forum/autocon{n}"
     notes: "Network automation practitioners: source of truth, orchestration, observability, testing, AI for NetOps, adoption stories."
 
+  # Annual OVS+OVN community conference. One static page joins schedule rows,
+  # abstracts and materials by #tN anchors; discovery reads dates from its intro.
+  - series: ovscon
+    enumerate: year
+    key_template: "ovscon-{year}"
+    name_template: "Open vSwitch and OVN {year} Fall Conference"
+    type: vendor
+    fetcher: ovscon
+    program_url_template: "https://www.openvswitch.org/support/ovscon{year}/"
+    manual_fallback_url_template: "https://www.openvswitch.org/support/ovscon{year}/"
+    notes: "OVS/OVN and OVN-Kubernetes: virtual networking, BGP/EVPN fabric integration, hardware offload, DPUs, network security and scale."
+

@@ -65,3 +65,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
+          # Served from https://tldr.netdevops.me/ (DNS: tldr CNAME hellt.github.io).
+          # The CNAME file this writes to gh-pages sets the Pages custom domain.
+          cname: tldr.netdevops.me

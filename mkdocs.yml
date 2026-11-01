@@ -7,7 +7,7 @@ site_name: Conference Digest
 site_description: >-
   The talks and papers worth a networking, security and identity PM's time,
   picked from each conference program and summarized by ToFaRev.
-site_url: "https://hellt.github.io/conference-digest/"
+site_url: "https://tldr.netdevops.me/"
 repo_name: hellt/conference-digest
 repo_url: https://github.com/hellt/conference-digest
 
@@ -89,7 +89,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/hellt/conference-digest
     - icon: material/rss
-      link: https://hellt.github.io/conference-digest/feed_rss_created.xml
+      link: https://tldr.netdevops.me/feed_rss_created.xml
 
 copyright: >-
   Digests are summaries of public conference programs. Titles, authors and

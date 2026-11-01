@@ -1,0 +1,2104 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A standards meeting, so the unit of value is the draft, not the talk. Maturity matters: below, WG-adopted &#x2f; WGLC documents (BGP-LS BGP-only fabric, EVPN First Hop Security, WIMSE credentials, Merkle Tree Certificates, OAuth-SPIFFE) are the ones closest to changing implementations; the AI-fabric…">
+      
+      
+      
+        <link rel="canonical" href="https://hellt.github.io/conference-digest/ietf-126/">
+      
+      
+      
+        <link rel="prev" href="../kubecon-eu-2026/">
+      
+      
+        <link rel="next" href="../ietf-125/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>IETF 126 (Vienna) — for a networking, security, and identity PM - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300,300i,400,400i,500,500i,700,700i%7CGoogle+Sans+Code:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Google Sans";--md-code-font:"Google Sans Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="IETF 126 (Vienna) — for a networking, security, and identity PM · Conference Digest" />
+<meta property="og:description" content="A standards meeting, so the unit of value is the draft, not the talk. Maturity matters: below, WG-adopted / WGLC documents (BGP-LS BGP-only fabric, EVPN First Hop Security, WIMSE credentials, Merkle Tree Certificates, OAuth-SPIFFE) are the ones closest to changing implementations; the AI-fabric…" />
+<meta property="og:url" content="https://hellt.github.io/conference-digest/ietf-126/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="IETF 126 (Vienna) — for a networking, security, and identity PM · Conference Digest" />
+<meta name="twitter:description" content="A standards meeting, so the unit of value is the draft, not the talk. Maturity matters: below, WG-adopted / WGLC documents (BGP-LS BGP-only fabric, EVPN First Hop Security, WIMSE credentials, Merkle Tree Certificates, OAuth-SPIFFE) are the ones closest to changing implementations; the AI-fabric…" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IETF 126 (Vienna) — for a networking, security, and identity PM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../category/academic/" class="md-tabs__link">
+          
+  
+  Conference type
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fully-adaptive-routing-ethernet-using-bgp" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fully Adaptive Routing Ethernet using BGP
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fully-adaptive-routing-ethernet-in-multi-plane-scale-out-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fully Adaptive Routing Ethernet in Multi-Plane Scale-Out Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srv6-for-deterministic-path-placement-in-ai-backends" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SRv6 for Deterministic Path Placement in AI Backends
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bgp-link-state-extensions-for-bgp-only-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BGP Link-State Extensions for BGP-only Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-rocev2-flow-level-load-balancing-method-based-on-the-ipv6-flow-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A RoCEv2 Flow-Level Load Balancing Method Based on the IPv6 Flow Label
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-ecmp-for-ai-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Enhanced ECMP for AI Cluster
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gse-architecture-for-aidc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        GSE architecture for AIDC
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pfc-pause-frame-forwarded-transparently-in-wide-area-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        PFC PAUSE Frame Forwarded Transparently in Wide Area Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srv6-behavior-extention-for-flow-control-in-wan" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SRv6 behavior extention for Flow Control in WAN
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-packet-trimming-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TCP Packet Trimming Extension
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evpn-first-hop-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        EVPN First Hop Security
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merkle-tree-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Merkle Tree Certificates
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-spiffe-client-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OAuth SPIFFE Client Authentication
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workload-identifier-origin-hint-for-tls-clienthello" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Workload Identifier Origin Hint for TLS ClientHello
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wimse-workload-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        WIMSE Workload Credentials
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wimse-trust-domain-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        WIMSE Trust Domain Discovery
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-agent-authentication-and-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AI Agent Authentication and Authorization
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-authorization-use-cases-and-gap-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Agent Authorization use cases and gap analysis
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pedigree-verifiable-delegation-identity-for-agentic-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        PEDIGREE: Verifiable Delegation Identity for Agentic AI Systems
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegate-sd-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Delegate SD-JWT
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wimse-workload-to-workload-authentication-with-http-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        WIMSE Workload-to-Workload Authentication with HTTP Signatures
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-certificate-management-environment-acme-remote-attestation-identifier-and-challenge-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automated Certificate Management Environment (ACME) Remote Attestation Identifier and Challenge Type
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is-is-support-for-the-power-conserving-path-placement-strategy-pcpps" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IS-IS Support For The Power Conserving Path Placement Strategy (PCPPS)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverso-for-the-quic-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reverso for the QUIC protocol
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifiable-proof-of-environment-attestation-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Verifiable Proof of Environment Attestation Profile
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conference type
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Conference type
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Academic
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operator
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standards
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendor
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fully-adaptive-routing-ethernet-using-bgp" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fully Adaptive Routing Ethernet using BGP
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fully-adaptive-routing-ethernet-in-multi-plane-scale-out-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fully Adaptive Routing Ethernet in Multi-Plane Scale-Out Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srv6-for-deterministic-path-placement-in-ai-backends" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SRv6 for Deterministic Path Placement in AI Backends
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bgp-link-state-extensions-for-bgp-only-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BGP Link-State Extensions for BGP-only Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-rocev2-flow-level-load-balancing-method-based-on-the-ipv6-flow-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A RoCEv2 Flow-Level Load Balancing Method Based on the IPv6 Flow Label
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-ecmp-for-ai-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Enhanced ECMP for AI Cluster
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gse-architecture-for-aidc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        GSE architecture for AIDC
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pfc-pause-frame-forwarded-transparently-in-wide-area-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        PFC PAUSE Frame Forwarded Transparently in Wide Area Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srv6-behavior-extention-for-flow-control-in-wan" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SRv6 behavior extention for Flow Control in WAN
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-packet-trimming-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TCP Packet Trimming Extension
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evpn-first-hop-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        EVPN First Hop Security
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merkle-tree-certificates" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Merkle Tree Certificates
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-spiffe-client-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OAuth SPIFFE Client Authentication
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workload-identifier-origin-hint-for-tls-clienthello" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Workload Identifier Origin Hint for TLS ClientHello
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wimse-workload-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        WIMSE Workload Credentials
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wimse-trust-domain-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        WIMSE Trust Domain Discovery
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-agent-authentication-and-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AI Agent Authentication and Authorization
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-authorization-use-cases-and-gap-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Agent Authorization use cases and gap analysis
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pedigree-verifiable-delegation-identity-for-agentic-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        PEDIGREE: Verifiable Delegation Identity for Agentic AI Systems
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegate-sd-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Delegate SD-JWT
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wimse-workload-to-workload-authentication-with-http-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        WIMSE Workload-to-Workload Authentication with HTTP Signatures
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-certificate-management-environment-acme-remote-attestation-identifier-and-challenge-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automated Certificate Management Environment (ACME) Remote Attestation Identifier and Challenge Type
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is-is-support-for-the-power-conserving-path-placement-strategy-pcpps" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IS-IS Support For The Power Conserving Path Placement Strategy (PCPPS)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverso-for-the-quic-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reverso for the QUIC protocol
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifiable-proof-of-environment-attestation-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Verifiable Proof of Environment Attestation Profile
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="./.." class="md-nav__link">
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="../images/tofarev.svg" alt="ToFaRev">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://github.com/hellt/tofarev">ToFaRev</a>
+                        
+                      </strong>
+                      <br>
+                      GLM-5.3-Flash on Nebius Token Factory
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-calendar-days" viewBox="0 0 24 24"><path d="M8 2v3M16 2v3"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg>
+                        <time datetime="2026-11-01 00:00:00+00:00" class="md-ellipsis">November 1, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-library" viewBox="0 0 24 24"><path d="m16 6 4 14M12 6v14M8 8v12M4 4v16"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../category/standards/">Standards</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              22 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      
+        
+
+  
+  
+
+
+<h1 id="ietf-126-vienna-for-a-networking-security-and-identity-pm">IETF 126 (Vienna) — for a networking, security, and identity PM<a class="headerlink" href="#ietf-126-vienna-for-a-networking-security-and-identity-pm" title="Permanent link">#</a></h1>
+<p>A standards meeting, so the unit of value is the draft, not the talk. Maturity matters: below, WG-adopted / WGLC documents (BGP-LS BGP-only fabric, EVPN First Hop Security, WIMSE credentials, Merkle Tree Certificates, OAuth-SPIFFE) are the ones closest to changing implementations; the AI-fabric drafts from IDR/RTG/SPRING are mostly early individual drafts but backed by unusually broad operator/vendor coalitions. Two clusters dominate this cycle: AI backend networking (adaptive routing, entropy, lossless WAN) and workload/agentic identity (WIMSE maturing, agent delegation exploding).</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 13.5v8H3v-8zm-2 2H5v4h4zM12 2l5.5 9h-11zm0 3.86L10.08 9h3.84zM17.5 13c2.5 0 4.5 2 4.5 4.5S20 22 17.5 22 13 20 13 17.5s2-4.5 4.5-4.5m0 2a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg></span> Standards</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2V5a2 2 0 0 0-2-2m0 16H5V9h14zM5 7V5h14v2zm5.56 10.46 5.94-5.93-1.07-1.06-4.87 4.87-2.11-2.11-1.06 1.06z"/></svg></span> Ended July 24, 2026</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.19 2.25c-.26 0-.52.06-.77.15L3.06 5.45a1.994 1.994 0 0 0-1.09 2.6L6.93 20a2 2 0 0 0 1.81 1.25c.26 0 .53-.03.79-.15l7.37-3.05a2.02 2.02 0 0 0 1.23-1.8c.01-.25-.04-.54-.13-.8L13 3.5a1.95 1.95 0 0 0-1.81-1.25m3.48 0 3.45 8.35V4.25a2 2 0 0 0-2-2m4.01 1.54v9.03l2.43-5.86a1.99 1.99 0 0 0-1.09-2.6m-10.28-.14 4.98 12.02-7.39 3.06L3.8 7.29"/></svg></span> 25 picks (20 core · 2 adjacent · 3 wildcard)</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42"/></svg></span> <a href="https://datatracker.ietf.org/meeting/126/agenda">Program</a></span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 15.5c0 1.11-.89 2-2 2s-2-.89-2-2 .9-2 2-2 2 .9 2 2m-9-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2z"/></svg></span> ToFaRev (zai-org/GLM-5.3)</span></p>
+</div>
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="fully-adaptive-routing-ethernet-using-bgp">Fully Adaptive Routing Ethernet using BGP<a class="headerlink" href="#fully-adaptive-routing-ethernet-using-bgp" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-xu-idr-fare/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-idr-sessa-1-5-1-fully-adaptive-routing-ethernet-fare-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/csKXfIQpUXs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/idr"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Qingliang Zhang (H3C), with co-authors from Tencent, Baidu, China Mobile, Yandex, HPE, Arrcus, Broadcom, Ruijie, Centec, Huawei and IEIT SYSTEMS.</p>
+<ul>
+<li><strong>Why</strong>: AI training on 3–5 stage Clos fabrics needs non-blocking behavior; static per-flow ECMP collapses when a few large flows hash-collide onto one path. This is the most implementation-backed routing draft at the meeting.</li>
+<li><strong>What</strong>: FARE-BGP — a BGP extension (path-bandwidth extended community) that lets switches do <em>weighted</em> ECMP based on real residual path capacity rather than uniform hashing. Version -05 adds handling for multiple BGP sessions per switch pair (bandwidth computed at node granularity, not session granularity) and packet forwarding over tunnels (WECMP applies to tunneled packets with loopback endpoints). The authors state the draft is ready for a WG adoption call.</li>
+<li><strong>How</strong>: The prefix-originating node (e.g., leaf) attaches a maximum path-bandwidth value; each node computes <code>path bandwidth = min(aggregate parallel-link bandwidth, advertised value)</code> and either spreads the weight across ECMP paths or prunes the ECMP set so remaining links match the computed bandwidth.</li>
+<li><strong>Where applicable</strong>: BGP-only AI/DC fabrics. Implemented by at least two cloud providers (China Mobile Cloud, Baidu Cloud) and six vendors, and adapted to 6+ switch ASIC generations — Broadcom Tomahawk 5 (51.2T) and Tomahawk 6 (102.4T), Nvidia Spectrum-4, Huawei SD58XX, Centec Arctic, Clounix CLX86. Explicitly multi-vendor, not org-specific.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="fully-adaptive-routing-ethernet-in-multi-plane-scale-out-networks">Fully Adaptive Routing Ethernet in Multi-Plane Scale-Out Networks<a class="headerlink" href="#fully-adaptive-routing-ethernet-in-multi-plane-scale-out-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-xu-idr-fare-in-mpson/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-idr-sessa-1-5-2-fully-adaptive-routing-ethernet-in-multi-plane-scale-out-networks-fare-in-mpson-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/csKXfIQpUXs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/idr"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Yinben Xia, Weifeng Zhang (Tencent), Peilong Wang (Baidu), Haibo Wang (Huawei), and a large RNIC/switch author group (Broadcom, Intel, Ruijie, Yandex, China Mobile, GPU vendors).</p>
+<ul>
+<li><strong>Why</strong>: ~100K-GPU clusters are moving to multi-plane scale-out topologies (RNIC multi-homed across disjoint planes, no inter-plane links) — which pushes path selection into the NIC. Route scale is the blocker: 4 planes × 100K host routes ≈ 400K routes, impractical on an RNIC.</li>
+<li><strong>What</strong>: FARE-in-MPSON extends FARE-BGP from switches to RoCE NICs for multi-plane scale-out (complementing FARE-in-SUN for scale-up). It contributes two route-table suppression techniques: route aggregation with unreachability notification (zero-bandwidth community, or unreachable-prefix advertisement) and selective route filtering via Prefix ORF (RFC 5292), plus a transitive FIB-Suppress extended community so switches can omit RNIC host routes from FIB.</li>
+<li><strong>How</strong>: BGP sessions terminate on RNICs; the RNIC evaluates per-plane reachability and path bandwidth for weighted ECMP. Because collectives mean each GPU talks to a limited peer set, RNICs can request only needed host routes; on unreachability they install a host route from the aggregate's remaining next-hops.</li>
+<li><strong>Where applicable</strong>: Hyperscale multi-plane AI scale-out with RNIC-resident BGP — relies on predictable collective-communication peer sets. Version -00, very early, but the author list signals real industry intent.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="srv6-for-deterministic-path-placement-in-ai-backends">SRv6 for Deterministic Path Placement in AI Backends<a class="headerlink" href="#srv6-for-deterministic-path-placement-in-ai-backends" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-filsfils-srv6ops-srv6-ai-backend/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-srv6ops-34-srv6-in-ai-backend-01"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/kxTId7do_y4"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/srv6ops"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Ahmed Abdelsalam (Cisco), on behalf of co-authors from Cisco, Microsoft, Oracle Cloud, IBM Cloud, NVIDIA and Arrcus.</p>
+<ul>
+<li><strong>Why</strong>: This is the hyperscaler reference design for AI backends — the draft the SRv6/srv6ops community is rallying around, and it is requesting WG adoption at this meeting.</li>
+<li><strong>What</strong>: Describes how SRv6 NEXT-CSID enables deterministic path placement: the NIC's transport stack encodes each path as an ordered segment list in the packet header, and the fabric forwards statelessly. It documents the MRC (Multipath Reliable Connection) design: packet spraying, ECN-based adaptive load balancing, out-of-order memory placement, selective retransmission, and packet trimming for incast — reaching 131,000 GPUs with only two tiers of switches (8×100Gb/s per host instead of 1×800Gb/s).</li>
+<li><strong>How</strong>: Switches carry no per-flow state, no resilient-ECMP hashing, no BGP convergence logic; the end host steers deterministically and can recover from failures within one RTT. Loopback SRv6 probes allow path probing without a peer.</li>
+<li><strong>Where applicable</strong>: Hyperscale production deployments (the deck cites OpenAI, Microsoft, and Oracle MRC+SRv6 deployments; rev04 adds Microsoft and Oracle as co-authors). Not directly transplantable to smaller estates, but it defines the pattern NICs and switches will be asked to support.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="bgp-link-state-extensions-for-bgp-only-networks">BGP Link-State Extensions for BGP-only Networks<a class="headerlink" href="#bgp-link-state-extensions-for-bgp-only-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-idr-bgp-ls-bgp-only-fabric/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-idr-bgp-link-state-extensions-for-bgp-only-networks-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/XclSKFBYC18"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/idr"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Ketan Talaulikar, Aravind Babu MahendraBabu, Clarence Filsfils, Krishna Swamy (Cisco), Shawn Zandi (LinkedIn), Gaurav Dawra, Muhammad Durrani (Oracle).</p>
+<ul>
+<li><strong>Why</strong>: BGP-only fabrics (increasingly the default in AI/ML DCs) lose the topology visibility that link-state IGPs give to FRR and TE computation. This WG document supplies it — and its new use cases tie directly into the two AI-backend drafts above.</li>
+<li><strong>What</strong>: BGP-LS extensions (Protocol-ID 7) to advertise topology in BGP-only networks. Since IETF 125 it has added an IPFRR use case (LFA/TI-LFA/ERP in loss-sensitive AI Clos fabrics with strict convergence requirements) and SRv6 scenarios: unified SRv6 domain across DC frontend + WAN eliminating DCI gateway translation, and SR Policy computation for deterministic AI backend paths. Simplified procedures now reference RFC 9857/9514 directly.</li>
+<li><strong>How</strong>: Standard BGP-LS address-family advertisement of nodes/links from the BGP-only fabric, consumed by controllers or local PCEs for path computation.</li>
+<li><strong>Where applicable</strong>: Any BGP-only DC or WAN. Implemented in SONiC-FRR (merged FRR PR); IANA early allocation for the BGP Route Type TLV is done. Requesting WG review — mature and moving.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="a-rocev2-flow-level-load-balancing-method-based-on-the-ipv6-flow-label">A RoCEv2 Flow-Level Load Balancing Method Based on the IPv6 Flow Label<a class="headerlink" href="#a-rocev2-flow-level-load-balancing-method-based-on-the-ipv6-flow-label" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-hu-6man-ipv6-flowlabel-load-balancing-rdma/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-6man-slides-126-6man-ipv6-flowlabel-load-balancing-rdma-01-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/MR_SV1EFB6Y"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/6man"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Jiayuan Hu (presenter), Jie Dong, Xia Gong.</p>
+<ul>
+<li><strong>Why</strong>: The classic RoCEv2 load-balancing flaw: many parallel RDMA sessions from one host share an identical 5-tuple, so ECMP hashes them all to one path — elephant flows, congestion, loss in AI/HPC clusters.</li>
+<li><strong>What</strong>: A 6man proposal to recover per-session entropy: the ingress network device parses the Queue Pair numbers (24-bit Source/Destination QP) from the RoCEv2 BTH/DETH headers, hashes them with the low 16 bits of each IPv6 address using CRC32, and writes the low 20 bits into the IPv6 Flow Label. Downstream devices then hash "5-tuple + Flow Label".</li>
+<li><strong>How</strong>: CRC32 with init 0xFFFFFFFF — deliberately hardware/ASIC-friendly; only the Flow Label field is modified, so firewalls and NAT behavior are untouched and hosts are fully transparent to the mechanism.</li>
+<li><strong>Where applicable</strong>: RoCEv2-over-IPv6 AI/HPC fabrics; requires ingress switch parsing capability. Early individual draft; the authors are asking for review, so expect evolution.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="enhanced-ecmp-for-ai-cluster">Enhanced ECMP for AI Cluster<a class="headerlink" href="#enhanced-ecmp-for-ai-cluster" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-cheng-rtgwg-enhanced-ecmp/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-rtgwg-08-enhanced-ecmp-for-ai-cluster-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/0lOx_vRs1no"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/rtgwg"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Weiqiang Cheng (China Mobile), Changwang Lin (New H3C Technologies).</p>
+<ul>
+<li><strong>Why</strong>: In AI training the flow count is small, so per-flow ECMP hash collisions are proportionally more damaging; per-packet ECMP balances perfectly but reorders — unacceptable for RDMA without reordering support.</li>
+<li><strong>What</strong>: Two complementary methods: (1) ingress-interface-group ECMP — group ingress interfaces and hash by in-group index so traffic from different ports lands on different ECMP egress ports; (2) egress-group ECMP — the egress leaf advertises a Group ID in a new BGP extended community (Router-ID + Group-ID, 6 bytes), and the ingress leaf maps flows to matching ECMP subgroups.</li>
+<li><strong>How</strong>: Purely control-plane/local hashing changes; no datapath encapsulation. Method 1 suits balanced GPU ingress traffic, method 2 suits balanced egress traffic.</li>
+<li><strong>Where applicable</strong>: Leaf-spine AI Clos. Individual draft -01 soliciting RTGWG feedback — with an explicit open question whether the BGP extended community should move to IDR. Overlaps in problem space with FARE and the flow-label draft but is a simpler, narrower fix.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="gse-architecture-for-aidc">GSE architecture for AIDC<a class="headerlink" href="#gse-architecture-for-aidc" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-zhuang-rtgwg-aidc-gse-architecture/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-rtgwg-07-gse-architecture-for-aidc-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/0lOx_vRs1no"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/rtgwg"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Rui Zhuang (China Mobile), Sandy Zhang (ZTE).</p>
+<ul>
+<li><strong>Why</strong>: A fundamentally different answer to AI-cluster congestion: instead of reactive ECN/PFC, schedule everything before sending. China Mobile/ZTE are fielding this, so it will surface in AIDC requirements even if it doesn't win in IETF.</li>
+<li><strong>What</strong>: Global Scheduling Ethernet: credit-based authorization (a sender must get a bandwidth grant from the receiver-side last hop before transmitting), packet aggregation into uniform-size segments for forwarding, improved ECMP that sprays packets while preserving receiver-side ordering, and interworking with PFC/ECN. The draft presents intra-PoD (GPU-to-GPU credit negotiation) and inter-PoD (Leaf-to-Super-Spine) scenarios, with port IDs advertised via BGP (draft-zhang-idr-portid-ec).</li>
+<li><strong>How</strong>: New Ethernet packet types carry a GSE header for uniform-size segments and for credit request/grant messages; switches recognize and forward GSE-framed traffic. PoDs from different vendors can interoperate by restoring original packets at the Core.</li>
+<li><strong>Where applicable</strong>: AI data centers. Implemented in prototype hardware/software with "early performance data [showing] significant gains over traditional RoCE" — no numbers published yet. China Mobile-driven; treat as one contender for the post-RoCE AIDC architecture rather than a settled standard.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="pfc-pause-frame-forwarded-transparently-in-wide-area-networks">PFC PAUSE Frame Forwarded Transparently in Wide Area Networks<a class="headerlink" href="#pfc-pause-frame-forwarded-transparently-in-wide-area-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-he-rtgwg-wan-pfc/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-rtgwg-pfc-pause-frame-forwarded-transparently-in-wide-area-networks-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/0lOx_vRs1no"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/rtgwg"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Xiaoming He (China Telecom), Lijie Deng (China Telecom).</p>
+<ul>
+<li><strong>Why</strong>: AI and distributed-storage workloads now run RDMA across metro/wide-area links between data centers; the draft's argument is that AIDC interconnect needs lossless WAN transmission, and hop-by-hop PFC in the WAN is both costly and amplifies head-of-line blocking, deadlock and congestion diffusion.</li>
+<li><strong>What</strong>: China Telecom's proposal to carry PFC PAUSE frames <em>transparently</em> across the WAN: the egress PE validates the PFC frame (destination MAC must be 01-80-C2-00-00-01, source must be the directly-connected DC gateway port), encapsulates it in the DCI tunnel (SRv6, SR-MPLS, or VXLAN), and transit nodes forward it untouched; the ingress PE decapsulates, rewrites the source MAC to its own port, and delivers it to the source DC gateway. End-to-end flow control with zero PFC capability required in WAN nodes.</li>
+<li><strong>How</strong>: The price is buffering: the destination DC gateway must reserve <code>Buffer &gt; (R − T) × D</code> per priority queue, where D is the PFC propagation delay across the WAN — the draft's key engineering constraint.</li>
+<li><strong>Where applicable</strong>: DCI/MAN interconnect of two AIDCs under one administrative intent. Individual draft -00; competing with the SRv6 approach below for the same problem.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="srv6-behavior-extention-for-flow-control-in-wan">SRv6 behavior extention for Flow Control in WAN<a class="headerlink" href="#srv6-behavior-extention-for-flow-control-in-wan" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ruan-spring-priority-flow-control-sid/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-spring-srv6-behavior-extension-for-flow-control-in-wan-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/3ui3EfTTLkA"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/spring"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Zhengxin Han (China Unicom, presenter), Zheng Ruan, Yao Liu, MengYao Han, Ying Liu (China Unicom/ZTE).</p>
+<ul>
+<li><strong>Why</strong>: The SRv6-flavored answer to the same lossless-WAN problem — with two advantages over transparent PFC: backpressure can traverse legacy non-PFC devices, and it can be scoped to per-tenant/slice queues instead of coarse port-level pausing. The SPRING list already reached consensus (June–July 2025) that a new SRv6 behavior is the preferred approach.</li>
+<li><strong>What</strong>: A new <code>End.X.PFC</code> behavior that flags PFC-capable interfaces along an SRv6 path. PFC frames are encapsulated into <em>reverse</em> SRv6 tunnels whose final segment is the <code>End.X.PFC</code> SID of the target upstream interface, delivering backpressure precisely to the right node even across non-PFC legacy transit devices.</li>
+<li><strong>How</strong>: Capability flooded via IGP (OSPF/IS-IS) and BGP-LS to a controller, which provisions reverse tunnels (E→C, C→A) before congestion; the data-plane pseudocode strips the outer IPv6/SRH on Ethernet next-header (143) and applies flow control when the PFC multicast MAC is seen.</li>
+<li><strong>Where applicable</strong>: Inter-DC RDMA over L2VPN/L3VPN SRv6 policies in mixed PFC/legacy infrastructure; multi-tenant isolation via NRP/slice queues. Draft -03, actively seeking operator co-review.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="tcp-packet-trimming-extension">TCP Packet Trimming Extension<a class="headerlink" href="#tcp-packet-trimming-extension" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-mazilu-tcpm-packet-trimming/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-tcpm-tcp-packet-trimming-slides-126-tcpm-packet-trimming-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/pS7dKMeaHeE"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/tcpm"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Flavius Mazilu, Valentin Bobaru, Costin Raiciu (University Politehnica of Bucharest).</p>
+<ul>
+<li><strong>Why</strong>: Modern datacenter switch silicon (Arista, Broadcom Tomahawk 5, Nvidia, Juniper are all cited) already supports packet trimming — discard payload, keep the header, mark it — but TCP has no way to consume the signal. This is the host-side counterpart to a shipping hardware feature, and it mirrors the trimming used in the MRC/SRv6 AI-backend design above.</li>
+<li><strong>What</strong>: A TCP extension: a "Trimming Permitted" option negotiated in the 3WHS; data packets then carry <code>DSCP_TRIMMABLE</code>; when a switch trims, the receiver gets the header (with <code>DSCP_TRIMMED</code> and updated IP checksum — TCP checksum is intentionally invalid) and returns a NACK option carrying the trimmed packet's sequence number. The sender treats the NACK as an explicit loss/congestion signal and enters fast recovery — deterministic loss recovery instead of SACK/RACK inference.</li>
+<li><strong>How</strong>: Optional two-queues-per-port scheme puts trimmed packets on a higher-priority queue so NACKs return quickly; NACKs could get their own DSCP (Ultra Ethernet's UET proposes <code>DSCP_CONTROL</code> for exactly this).</li>
+<li><strong>Where applicable</strong>: Data centers and controlled administrative domains only — explicitly not for the open Internet. Draft -00 with open questions (checksum handling, congestion-control response) posed to TCPM; watch whether the WG picks it up.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="evpn-first-hop-security">EVPN First Hop Security<a class="headerlink" href="#evpn-first-hop-security" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-bess-evpn-first-hop-security/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-bess-evpn-first-hop-security-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/3lzjKPn9HdE"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/bess"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Ali Sajassi, Lukas Krattiger, Krishna Ananthamurthy (Cisco), Jorge Rabadan (Nokia), Wen Lin (Juniper).</p>
+<ul>
+<li><strong>Why</strong>: First Hop Security functions (DHCP snooping, DAI, ND Inspection, Source Guard) depend on a local DHCP snoop binding database — which silently breaks in EVPN fabrics where hosts move and multi-home across PEs, causing legitimate traffic to be dropped or spoofed traffic to pass.</li>
+<li><strong>What</strong>: A WG-adopted BESS draft defining a new EVPN BGP route to distribute and synchronize DHCP snooping bindings (IPv4/IPv6-to-MAC, binding state, lease/create time) among all PEs in an EVI, covering host mobility, multi-homing, and distributed IRB.</li>
+<li><strong>How</strong>: Straightforward BGP route distribution with binding attributes; major technical issues are resolved and the authors consider the document ready for Working Group Last Call.</li>
+<li><strong>Where applicable</strong>: Any EVPN datacenter or campus fabric running FHS — broadly applicable, multi-vendor co-authored, and the most mature item in the DC-security space at this meeting.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="merkle-tree-certificates">Merkle Tree Certificates<a class="headerlink" href="#merkle-tree-certificates" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-plants-merkle-tree-certs/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://youtu.be/0DOjvhF7VgU"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/acme"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>David Benjamin (Google), Devon O'Brien (Apple), Bas Westerbaan, Luke Valenta (Cloudflare), Filippo Valsorda (Geomys).</p>
+<ul>
+<li><strong>Why</strong>: The PKI arithmetic problem: post-quantum signatures are huge (ML-DSA-44: 2,420 bytes/sig; ML-DSA-65: 3,309) and certificate lifetimes are shrinking — two SCTs plus a leaf signature adds ~7,260–9,927 bytes of authentication overhead, and CT log storage scales with entry size and issuance rate. MTCs redesign the certificate to survive both trends.</li>
+<li><strong>What</strong>: A new X.509-adjacent certificate form where the CA <em>certifies by logging</em>: it appends TBSCertificate entries to append-only issuance logs, signs checkpoints and subtrees, and independent cosigners attest correct (optionally mirrored) operation. A certificate is the tbscert + a Merkle inclusion proof + cosignatures — log entries contain hashes instead of public keys and no signatures, so they don't scale with PQ key/sig size. An optional "landmark-relative" certificate eliminates signatures entirely for up-to-date relying parties, and "revoked ranges" let RPs bulk-discard long-expired log entries so monitoring infrastructure scales by retention policy, not log lifetime.</li>
+<li><strong>How</strong>: Uses a "subtree" Merkle primitive (inclusion and consistency proofs) so proofs stay small; ACME extensions (Section 9, the part presented in Vienna) define issuance; TLS use covers both standalone and landmark-relative forms.</li>
+<li><strong>Where applicable</strong>: Public web PKI first, but the mechanism is general. This is a WG document (PLANTS) now at -07 — the most mature PKI redesign on the IETF's table, with the browser/CDN ecosystem already at the table.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="oauth-spiffe-client-authentication">OAuth SPIFFE Client Authentication<a class="headerlink" href="#oauth-spiffe-client-authentication" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-oauth-spiffe-client-auth/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-oauth-sessa-oauth-spiffe-client-authentication-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/yhE1FL8VW7E"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/oauth"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Stian Thorgersen, Scott Rose, Nancy Cam-Winget, Pieter Kasselman, Arndt Schwenkschuster.</p>
+<ul>
+<li><strong>Why</strong>: Workloads acting as OAuth clients today authenticate with static, long-lived client secrets — exactly the secret-sprawl problem SPIFFE/SPIRE exists to eliminate. This WG draft bridges the two worlds.</li>
+<li><strong>What</strong>: Profiles RFC 7521/7523, RFC 8705 (mTLS), and the attestation-based client-auth draft so JWT-SVIDs, X.509-SVIDs and WIT-SVIDs work as OAuth client credentials with no client secrets. Crucially it <em>removes</em> the "assertion subject == client_id" restriction of RFC 7521, since SPIFFE IDs are infrastructure-opinionated (<code>spiffe://example.org/us-east-1/cluster-A/service-Z/instance-1</code>) while OAuth client IDs are service-scoped and many workloads share one client.</li>
+<li><strong>How</strong>: The open problem is SPIFFE-ID → client-ID mapping, with three contending approaches: direct list, open-ended prefix wildcards, or path-segment wildcards — described as the last big remaining item.</li>
+<li><strong>Where applicable</strong>: Any shop running SPIRE/SPIFFE alongside an OAuth authorization server (the deck cites Entra, Google managed workload identity, Uber, Netflix, ByteDance deployments of SVIDs). WG document; blocked mainly on the WIT dependency (in WGLC) and mapping semantics.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="workload-identifier-origin-hint-for-tls-clienthello">Workload Identifier Origin Hint for TLS ClientHello<a class="headerlink" href="#workload-identifier-origin-hint-for-tls-clienthello" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-rosomakho-tls-wimse-cert-hint/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-tls-sessa-workload-identifier-scope-hint-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/RO-Drvzquc4"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/tls"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Yaroslav Rosomakho, Jonathan Hoyland.</p>
+<ul>
+<li><strong>Why</strong>: mTLS between workloads has an awkward bootstrap: a client can't know which cert/trust domain a server will accept, and servers can't enumerate acceptable trust domains — so deployments burn separate TLS endpoints. This fixes that with a small wire-format change.</li>
+<li><strong>What</strong>: A TLS ClientHello extension carrying one or more workload identifier <em>origins</em> (URI scheme + trust domain, drawn from the WIMSE identifier format). Presence of the extension signals the client won't choke on a CertificateRequest and can produce a certificate for a listed scope; the server uses the hint to decide whether client auth is required and which trust anchors apply.</li>
+<li><strong>How</strong>: An empty list is valid and degenerates into a "request mTLS" flag; for privacy, combine with ECH — empty list in the Outer ClientHello, real scopes in the Inner.</li>
+<li><strong>Where applicable</strong>: Cross-organization workload mTLS (the motivating case: a server with trust relationships with thousands of customer trust domains). Individual draft -02, with the authors asking whether there's appetite for an adoption call — this is the piece that makes WIMSE credentials usable in the TLS handshake.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="wimse-workload-credentials">WIMSE Workload Credentials<a class="headerlink" href="#wimse-workload-credentials" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-wimse-workload-creds/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-wimse-workload-credentials-witwic-01"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/0a4HZRJ5d9c"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/wimse"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Brian Campbell (Ping Identity), Joe Salowey (CyberArk), Arndt Schwenkschuster (Defakto Security), Yaron Sheffer (Intuit), Yaroslav Rosomakho (Zscaler).</p>
+<ul>
+<li><strong>Why</strong>: The credential layer of the workload-identity stack that OAuth-SPIFFE, the TLS hint, and the agent drafts all build on — and it was in Working Group Last Call at this meeting.</li>
+<li><strong>What</strong>: Defines the Workload Identity Token (WIT, a JWT) and Workload Identity Certificate (WIC, X.509) that bind a key to a workload's WIMSE identifier, usable across protocols; proof-of-possession mechanisms are deliberately out of scope and defined in companion documents.</li>
+<li><strong>How</strong>: Credential formats only — the separation of "what the credential is" from "how you prove possession" is the draft's main design contribution, letting the same credential work over mTLS, HTTP signatures, and proof tokens.</li>
+<li><strong>Where applicable</strong>: Any runtime in the WIMSE architecture, from basic single-service to multi-cloud multi-tenant. WG document past WGLC; the presentation indicated the road likely ends (i.e., publication) before the next meeting.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="wimse-trust-domain-discovery">WIMSE Trust Domain Discovery<a class="headerlink" href="#wimse-trust-domain-discovery" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-schwenkschuster-wimse-trust-domain-discovery/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-wimse-wimse-trust-domain-discovery-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/0a4HZRJ5d9c"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/wimse"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Arndt Schwenkschuster, Yaroslav Rosomakho.</p>
+<ul>
+<li><strong>Why</strong>: WIMSE scopes identifiers to a trust domain but leaves <em>how a relying party obtains that domain's trust anchors</em> undefined — the exact gap SPIFFE fills with the Bundle Endpoint. In open environments with no prior relationship, that gap blocks any cross-org WIMSE deployment.</li>
+<li><strong>What</strong>: Defines the WIMSE Trust Bundle (JWKS-formatted, with <code>use</code> values distinguishing <code>wimse-jwt</code> and <code>wimse-x509</code> signing material for both credential types) and a Trust Domain Metadata document at <code>/.well-known/wimse-trust-domain</code> (redirects allowed) that resolves a trust-domain name to its bundle endpoint.</li>
+<li><strong>How</strong>: A domain owner serves metadata and bundle publicly over HTTPS, mirroring the OIDC metadata/SPIFFE bundle patterns; private deployments can serve them privately or use <code>.internal</code> TLDs with different distribution.</li>
+<li><strong>Where applicable</strong>: Open federation-style workload identity. Individual draft asking "do we agree on the problem space?" — early, but it's the missing interoperability piece for the mature WIMSE credential docs.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="ai-agent-authentication-and-authorization">AI Agent Authentication and Authorization<a class="headerlink" href="#ai-agent-authentication-and-authorization" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-klrc-aiagent-auth/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-wimse-aims-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/0a4HZRJ5d9c"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/wimse"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Nick Steele (OpenAI), Aaron Parecki (Okta), Jeff Lombardo (AWS), Brian Campbell (Ping Identity), Yaroslav Rosomakho (Zscaler), Pieter Kasselman (Defakto Security).</p>
+<ul>
+<li><strong>Why</strong>: The strongest single framework document in the agent-identity land rush: deliberately anti-"invent a new AI protocol," it maps existing standards onto agent communications and surgically identifies what's missing. The author list (OpenAI, Okta, AWS) signals real platform intent.</li>
+<li><strong>What</strong>: An informational draft ("AIMS") covering the full stack: exactly one WIMSE identifier per agent (may be a SPIFFE ID); primary credentials as WIMSE WIC/WIT or SPIFFE SVIDs, secondary via OAuth token exchange and Transaction Tokens; authentication at transport (mTLS with workload X.509) or application layer (WIMSE proof tokens, RFC 9421 HTTP signatures over WIT); OAuth for delegated authorization including human-in-the-loop (noting CIBA doesn't fit mid-execution pauses); SSF/CAEP for continuous posture signals; policy and compliance explicitly out of scope.</li>
+<li><strong>How</strong>: Composition of existing specs with gaps named — the value is the map, not new mechanics.</li>
+<li><strong>Where applicable</strong>: Agent-to-LLM/tool/service/agent interactions generally. Requesting chairs consider WG adoption as a work item; expect it to become the umbrella the other agent drafts hang from.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="agent-authorization-use-cases-and-gap-analysis">Agent Authorization use cases and gap analysis<a class="headerlink" href="#agent-authorization-use-cases-and-gap-analysis" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-chen-oauth-agent-authz-use-cases/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-oauth-agent-authorization-use-cases-and-gap-analysis-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/yhE1FL8VW7E"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/oauth"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Meiling Chen (China Mobile).</p>
+<ul>
+<li><strong>Why</strong>: The requirements document that justifies (and scopes) the OAuth WG's agent work — read it to understand <em>why</em> AIMS, PEDIGREE and delegate SD-JWT all exist.</li>
+<li><strong>What</strong>: Ten use cases across consumer, enterprise and security scenarios, each with authorization requirements and gaps: intent-to-permission mapping and interactive consent loops for personal assistants; scope explosion and missing conditional context in smart homes; the confused-deputy/agent-flagging problem when agents hit human-facing services (the "agent downloads 400 papers and gets the user's account banned" example); multi-hop delegation chains and group authorization for agent teams; and global/bulk revocation gaps (RFC 7009 revokes one token at a time — useless in an incident).</li>
+<li><strong>How</strong>: Gap analysis against RAR (too static), DPoP (fixed keys break agent migration), Transaction Tokens (internal-only), and CIMD (no agent metadata, no delegation traceability), each with proposed optimizations like attenuating agent tokens and <code>parent_agent_id</code> claims.</li>
+<li><strong>Where applicable</strong>: Vendor-neutral; informational individual draft -01 with biweekly open meetings — the input document for whatever OAuth extensions follow.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="pedigree-verifiable-delegation-identity-for-agentic-ai-systems">PEDIGREE: Verifiable Delegation Identity for Agentic AI Systems<a class="headerlink" href="#pedigree-verifiable-delegation-identity-for-agentic-ai-systems" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-rampalli-pedigree/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-wimse-karthikrampalli-pedigree-deck-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/0a4HZRJ5d9c"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/wimse"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Karthik Rampalli.</p>
+<ul>
+<li><strong>Why</strong>: The sharpest statement of the agentic-authorization failure mode: an orchestrator takes one human consent and spawns sub-agents that all inherit its ambient credentials — so a relying party cannot tell which agent acted, on whose authority, or within what limits. A bad charge can't be attributed.</li>
+<li><strong>What</strong>: A delegation-identity layer <em>above</em> workload credentials (WIT/WIC or X.509 SVID, unmodified). The SIT is a signed JWT (<code>typ pedigree+jwt</code>, EdDSA) with a parent chain, scopes, a Cedar-encoded mandate, an operator ceiling reference, consent chain and delegation depth. Its three claimed advances over AAuth and AIP: monotonic scope attenuation enforced at mint and verify (AAuth explicitly rejects attenuation), dual-layer authority enforcement (per-parent mandate AND operator ceiling — a single-layer guard fails when the orchestrator is compromised), and strict cryptographic re-verification of every parent SIT, catching parent-swap attacks that append-only token chains miss.</li>
+<li><strong>How</strong>: Relying parties evaluate three inputs — workload credential, SIT chain, local policy + operator ceiling — with Cedar static-analysis proofs of narrowing; revocation is bounded-staleness and fail-closed, explicitly not real-time.</li>
+<li><strong>Where applicable</strong>: Any multi-agent orchestration where sub-agents act under delegated human authority. Very early individual draft — the deck is candid that wire details still belong on the mailing list — but the three-tests framing (attribution, attenuation, enforcement) is the right vocabulary for this problem space.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="delegate-sd-jwt">Delegate SD-JWT<a class="headerlink" href="#delegate-sd-jwt" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-gco-oauth-delegate-sd-jwt/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-oauth-delegate-sd-jwts-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/XxkhXxInz3k"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/oauth"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Gareth Oliver (Google).</p>
+<ul>
+<li><strong>Why</strong>: Delegation of verifiable credentials with selective disclosure — the exact mechanism agentic payments need (user authorizes an agent to spend, merchant/bank sees only the delegated slice) and that plain SD-JWTs can't express.</li>
+<li><strong>What</strong>: An extension letting a Holder delegate to a Delegate Holder by making the Key Binding JWT itself an SD-JWT with its own disclosures and its own key binding: <code>&lt;issuer-jwt&gt;~&lt;disclosures&gt;~~&lt;kb-sd-jwt&gt;~&lt;disclosures&gt;~&lt;kb-jwt&gt;</code>. The whole design fits in that one line — the delegation is a holder-signed SD-JWT whose payload hashes and binds the issuer's original (<code>sd_hash</code>, <code>cnf</code> for the delegate's key).</li>
+<li><strong>How</strong>: Standard SD-JWT disclosure machinery at each layer; the verifier sees the issuer credential, the holder's delegation statement with narrowed/selective claims, and the delegate's proof of possession.</li>
+<li><strong>Where applicable</strong>: Agentic systems and digital-credential delegation (power-of-attorney and vehicle-registration examples given). Individual draft; open questions include a common delegation policy language (aud, exp-style) and where revocation status lists are hosted.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="wimse-workload-to-workload-authentication-with-http-signatures">WIMSE Workload-to-Workload Authentication with HTTP Signatures<a class="headerlink" href="#wimse-workload-to-workload-authentication-with-http-signatures" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-wimse-http-signature/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-wimse-http-signatures-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/0a4HZRJ5d9c"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/wimse"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Joe Salowey (CyberArk), Yaron Sheffer (Intuit).</p>
+<ul>
+<li><strong>Why</strong>: The application-layer leg of WIMSE — authentication that survives the TLS-terminating proxies and load balancers that dominate real service topologies, which the PM's mesh/ingress world knows well.</li>
+<li><strong>What</strong>: WG draft -04 requesting WGLC. Two changes since -02: the audience indicator moved from a bespoke <code>Wimse-Audience</code> header to a <code>wimse-aud</code> HTTP Signatures parameter (still URI-shaped), letting a recipient confirm the signed message targets it; and a <code>wimse-req-nonce</code> parameter copies the request's random nonce into the signed response, closing a cut-and-paste attack where an on-path malicious proxy splices a valid response into the wrong request — RFC 9421 signs request and response but doesn't bind them.</li>
+<li><strong>How</strong>: RFC 9421 signatures over the Workload Identity Token and request components; response signing optional but recommended given the assumed-malicious-proxy threat model.</li>
+<li><strong>Where applicable</strong>: HTTP-based workload-to-workload traffic only (other protocols use other WIMSE proof mechanisms); needs updating of the draft's examples for the new parameters.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="automated-certificate-management-environment-acme-remote-attestation-identifier-and-challenge-type">Automated Certificate Management Environment (ACME) Remote Attestation Identifier and Challenge Type<a class="headerlink" href="#automated-certificate-management-environment-acme-remote-attestation-identifier-and-challenge-type" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-acme-rats/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://youtu.be/0DOjvhF7VgU"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/acme"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Peter Chunchi Liu (Huawei), Mike Ounsworth (Cryptic Forest Software), Michael Richardson (Sandelman Software Works), Ganesh Mallaya (AppViewX), Sven Rajala (Keyfactor).</p>
+<ul>
+<li><strong>Why</strong>: Where device attestation meets automated certificate issuance: enterprises increasingly want to issue client (and server) certificates only to devices that can <em>prove</em> their posture — measured boot, HSM-held keys, MDM registration — and ACME had no standardized way to ask.</li>
+<li><strong>What</strong>: A WG document (-03) defining a <code>remote-attestation</code> identifier type whose value is a property hint (<code>measured-boot</code>, <code>hsm</code>, …) rather than a real identifier, plus a <code>remote-attest-01</code> challenge answered with a RATS Conceptual Message Wrapper (CMW) in any supported format (EAT, WebAuthn, TPM). The challenge object carries a <code>freshnessNonce</code>, an optional <code>attestClaimsHint</code> listing claims the server wants attested, and a <code>verifierEncryptionCredential</code> (JWK) so sensitive evidence can be JWE-encrypted in transit. The design supports both the RATS Passport model (attestation-result-01, mandatory to implement) and Background Check model (encrypted evidence), and is explicitly supplemental — the client still satisfies DNS-01/HTTP-01 for the identifiers that go into the certificate.</li>
+<li><strong>How</strong>: A pseudo-identifier plus challenge/response in the existing ACME order flow; verification and appraisal policy remain the CA's business.</li>
+<li><strong>Where applicable</strong>: Enterprise client certs, WiFi/EAP-TLS onboarding, BYOD S/MIME, code-signing keys in HSMs. Complementary to (broader than) the WebAuthn-based ACME Device Attestation extension; also worth reading alongside V-PEA below, which generalizes the same WHAT+environment idea.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="is-is-support-for-the-power-conserving-path-placement-strategy-pcpps">IS-IS Support For The Power Conserving Path Placement Strategy (PCPPS)<a class="headerlink" href="#is-is-support-for-the-power-conserving-path-placement-strategy-pcpps" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-many-lsr-power-group/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://youtu.be/ExzDVs2e4o0"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/lsr"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Colby Barth (Juniper), Tony Li, Vishnu Pavan Beeram, Ron Bonica (HPE).</p>
+<ul>
+<li><strong>Why</strong>: Not AI, not identity — but the signal that <em>energy</em> is entering the IGP standards track. PCPPS inverts usual traffic engineering: concentrate traffic onto a small set of links so the rest can be powered down until needed.</li>
+<li><strong>What</strong>: The IS-IS encoding for the power-state information that I-D.many-teas-power-steering's Power Conserving Path Placement Strategy needs distributed by an IGP. Notably, this individual draft has since been replaced by <code>draft-ietf-lsr-pcpps</code> with a call for WG adoption issued — i.e., LSR picked it up right after this meeting.</li>
+<li><strong>How</strong>: IGP advertisement of the information a PCPPS computation needs to know which resources can be safely idled. (Write-up from the abstract and datatracker status; no slides were available.)</li>
+<li><strong>Where applicable</strong>: WAN/operator networks where energy cost is a first-order routing input. Interesting tension with the AI-fabric work elsewhere in this digest, which wants maximum parallelism, not consolidation — expect the two objectives to collide in DC design discussions.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="reverso-for-the-quic-protocol">Reverso for the QUIC protocol<a class="headerlink" href="#reverso-for-the-quic-protocol" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-frochet-quicwg-reverso-for-quic/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-quic-reverso-for-quic-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/Pzy_4svJ4vY"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/quic"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Florentin Rochet (University of Namur).</p>
+<ul>
+<li><strong>Why</strong>: A genuinely surprising transport result: QUIC v1's wire layout — encrypted data potentially surrounded by encrypted control — makes <em>contiguous zero-copy at the receiver impossible</em> in a conforming implementation. This draft proposes a QUIC version that fixes it, and it's grounded in a published paper (ACM SIGCOMM CCR, Jan 2026).</li>
+<li><strong>What</strong>: vReverso changes three things from v1: a few more bytes in the short header (worst case 13 vs 5 — a stream ID and offset), a stream frame must be first in the packet, and frame element ordering is <em>reversed on the wire</em>. That's enough to drive data reassembly using decryption's hidden copy, so a receiver can expose a whole HTTP/3 data frame of arbitrary size in zero-copy.</li>
+<li><strong>How</strong>: Reversed frame ordering minimizes added header info (no need to locate where control begins), and a bidirectional buffer abstraction means the same code parses both v1 and vReverso. Loopback microbenchmarks show ~15.4 Gb/s for the prototype vs ~15.2 Gb/s QUIC v1 on comparable stacks — the author himself flags these numbers as "to be taken with a grain of salt."</li>
+<li><strong>Where applicable</strong>: Receiver-side throughput optimization for QUIC and derivatives (QMux is called out). Early individual draft with real maintenance-cost questions, but a rare case of wire-format research feeding directly into a standards venue.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="verifiable-proof-of-environment-attestation-profile">Verifiable Proof of Environment Attestation Profile<a class="headerlink" href="#verifiable-proof-of-environment-attestation-profile" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-lkspa-rats-verifiable-geo-fence/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-rats-verifiable-proof-of-environment-attestation-profile-v-pea-00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides</a> <a class="pick-link" href="https://youtu.be/IhxaSHCwdv0"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/rats"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.1 10 4 18V8h17a2 2 0 0 0-2-2h-7l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h15c.9 0 1.7-.6 1.9-1.5l2.3-8.5zM19 18H6l1.6-6h13z"/></svg></span> Materials</a></p>
+</div>
+<p>Michael Richardson (presenter), with R. Krishnan (JPMorgan Chase), N. Smith, D. Lopez (Telefonica), A. Prasad (Oracle), S. Addepalli (Aryaka), H. Birkholz (Fraunhofer SIT).</p>
+<ul>
+<li><strong>Why</strong>: Sovereignty and regulated-deployment requirements (RBI India, Korea's spatial-data act, GDPR) are demanding <em>provable</em> geographic residency — and nothing today cryptographically links a workload's identity, its execution integrity, and its location. This draft fuses them.</li>
+<li><strong>What</strong>: V-PEA (formerly the verifiable geofencing draft) is a profile of the RATS architecture (RFC 9334) that binds two hardware-rooted dimensions into one TPM-sealed Evidence object: WHAT (TPM provenance, platform/boot integrity, workload-agent binary digest) and WHERE (physical residency per GNSS/MNO/timing location sources, with Galileo OSNMA and multi-constellation cross-checks against spoofing added since IETF 125). Neither dimension can be forged or transplanted without invalidating the other, and the credential is issued only if both pass. The WHERE dimension supports transparent zero-knowledge proofs so an Attester can prove in-boundary compliance without disclosing coordinates. A WIMSE Integration appendix ties the Attestation Result to credential issuance.</li>
+<li><strong>How</strong>: Location sources produce signed claims; a TPM quote seal binds them to the platform's integrity Evidence; a Verifier appraises, and the result can be embedded in standard X.509 so downstream consumers never need to understand RATS. Running code exists (LF Edge AegisSovereignAI: TPM 2.0, SPIRE, Keylime, Plonky2 ZKP).</li>
+<li><strong>Where applicable</strong>: Regulated, sovereign, high-assurance deployments rather than general web workloads — but as hardware-rooted identity meets workload identity (see AIMS/OAuth-SPIFFE above), this is where attestation-gated credential issuance is heading. The draft was presented as a call for RATS WG adoption.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>AI fabrics have captured the routing area.</strong> IDR, RTG, SPRING and srv6ops sessions are dominated by one problem: making 100K-GPU Clos/multi-plane fabrics non-blocking. Adaptive routing (FARE, FARE-in-MPSON), entropy recovery (flow-label, enhanced ECMP), and scheduling (GSE) are competing answers, and the unusually broad operator/ASIC-vendor author lists (Tomahawk &#8538;, Spectrum-4 ports already done) say this is deployment-driven, not academic.</li>
+<li><strong>Lossless is escaping the datacenter.</strong> Three drafts attack the same new requirement — RDMA over WAN/DCI — with different mechanics: transparently tunneled PFC PAUSE frames (rtgwg), PFC backpressure in reverse SRv6 tunnels with per-tenant granularity (spring), and multi-DC fabrics via BGP-LS/SRv6. The industry has decided cross-DC AI training is a WAN problem; the mechanism is unsettled.</li>
+<li><strong>Switches are becoming signal emitters, and host stacks must listen.</strong> Packet trimming is shipping in Arista/Broadcom/Nvidia/Juniper silicon, and now TCP (TCPM draft) and transport designs (MRC, UET's DSCP_CONTROL) are being extended to consume in-band congestion/trim signals — a real host/network contract shift worth tracking for NIC and OS roadmaps.</li>
+<li><strong>Workload identity has crossed into standards maturity.</strong> WIMSE credentials passed WGLC, HTTP signatures are requesting it, OAuth-SPIFFE is one mapping decision from done, and the TLS ClientHello hint plus trust-domain discovery fill the remaining handshake and federation gaps. The SPIFFE/SPIRE world is being standardized piece by piece, and the pieces now reference each other.</li>
+<li><strong>Agentic identity is the new land rush — early, overlapping, unresolved.</strong> AIMS (use existing standards, don't invent), PEDIGREE (per-hop attenuating delegation), delegate SD-JWT, and the OAuth use-case gap analysis all attack delegation/attribution/revocation from different angles, with AAuth and AIP outside this selection. Watch adoption calls: whichever framework the OAuth/WIMSE WGs bless will define interop for agent platforms.</li>
+<li><strong>PQ pressure is forcing PKI redesign, and energy is entering the IGP.</strong> Merkle Tree Certificates at -07 (log-size-free entries, signature-free landmark certs) is the concrete response to ML-DSA sizes plus short-lived certs; meanwhile PCPPS — concentrating traffic so links can be powered down — has been adopted by LSR, adding an objective (energy) that runs directly against the AI fabric's maximize-parallelism instinct.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest with zai-org/GLM-5.3 on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/ietf-126.md"><code>digests/ietf-126.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/ietf-126.md"><code>prompts/ietf-126.md</code></a></p>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../kubecon-eu-2026/" class="md-footer__link md-footer__link--prev" aria-label="Previous: KubeCon + CloudNativeCon Europe 2026">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                KubeCon + CloudNativeCon Europe 2026
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ietf-125/" class="md-footer__link md-footer__link--next" aria-label="Next: IETF 125 (Shenzhen)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                IETF 125 (Shenzhen)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and generator, styled after containerlab.dev -->
+<div class="md-copyright">
+    
+    <div class="md-copyright__highlight">
+        Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.
+    </div>
+    
+    Written by
+    <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+    on Nebius Token Factory · made with
+    <span class="twemoji heart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709q-.23.129-.463.252h-.002a.75.75 0 0 1-.686 0 17 17 0 0 1-.465-.252 31 31 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31 31 0 0 1 14 20.408"/></svg>
+    </span>
+    and <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hellt.github.io/conference-digest/feed_rss_created.xml" target="_blank" rel="noopener" title="hellt.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+    
+  </body>
+</html>

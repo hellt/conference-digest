@@ -1,0 +1,24 @@
+{#-
+  Zensical's partials/tabs.html (zensical_ui 0.0.41), plus a last item:
+  "Powered by" and the Nebius Token Factory logo, linked to the service, as
+  in ToFaRev's PR review footer. The logos (docs/images/nebius-token-factory-
+  {light,dark}.svg) are ToFaRev's assets; the CSS shows the one that suits the
+  site's colour scheme.
+-#}
+{% import "partials/tabs-item.html" as item with context %}
+<nav class="md-tabs" aria-label="{{ lang.t('tabs') }}" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      {% for nav_item in nav.items %}
+        {{ item.render(nav_item) }}
+      {% endfor %}
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-tabs__powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-tabs__powered-text">Powered by</span>
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--light" src="{{ 'images/nebius-token-factory-light.svg' | url }}" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--dark" src="{{ 'images/nebius-token-factory-dark.svg' | url }}" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

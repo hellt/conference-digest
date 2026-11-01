@@ -57,7 +57,8 @@ with it, and opens one PR per key.
 
 **Links rows.** Every pick gets one `**Links:** [Abstract](…) · [Paper](…) ·
 [Slides](…) · [Recording](…)` row under its heading, written by code
-(`conferences/links.py`), never by the model. Sources, in order: the program
+(`conferences/links.py`), never by the model. A deck in two formats keeps both
+(`slides` and `slides2`, shown as `Slides (PDF)` and `Slides (PPTX)`). Sources, in order: the program
 item's `page:`/`pdf:`/`slides:`/`video:`/`materials:` line (fetchers write it);
 the talk's `page:`, fetched again (USENIX, Sched and netdev pages gain slides and
 an embedded recording after the event; Tavily Extract reads pages that block the
@@ -107,7 +108,7 @@ pipeline.
    `standards`, `vendor`, `operator`, `security`.
 8. **Every `fetcher` value must be registered** in
    `conferences/fetchers/__init__.py::FETCHERS`. Today: `usenix`, `ietf`,
-   `sched`, `sigcomm`, `netdev`, `nanog`.
+   `sched`, `sigcomm`, `netdev`, `nanog`, `autocon`.
 9. **`run_location: local`** means the source bot-blocks datacenter IPs. In CI
    that edition is skipped without a fetch attempt (status `local_required`) and
    the issue tells the user to run it from their own machine. `--conference`

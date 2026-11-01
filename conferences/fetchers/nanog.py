@@ -90,9 +90,9 @@ def tavily_extract_many(urls: list[str], key: str, timeout: int = 240) -> dict[s
 
 def talk_media(md: str) -> dict[str, str]:
     """Slides and recording from a talk page ("Presentation Materials", "Recordings")."""
-    files = [u for _, u in MD_LINK.findall(md) if FILE_RE.search(u) and "/site-media-prod/meetings/" in u]
+    files = list(dict.fromkeys(u for _, u in MD_LINK.findall(md) if FILE_RE.search(u) and "/site-media-prod/meetings/" in u))
     video = YOUTUBE_RE.search(md)
-    return {k: v for k, v in (("slides", files[0] if files else ""), ("video", video.group(0) if video else "")) if v}
+    return {k: v for k, v in (("slides", files[:2]), ("video", video.group(0) if video else "")) if v}
 
 
 def _unescape(s: str) -> str:
@@ -162,7 +162,7 @@ def parse_agenda(md: str, year_hint: Optional[int] = None) -> tuple[list[dict], 
             "when": ", ".join(x for x in (f"{day:%A}, {day:%B} {day.day}, {day.year}" if day else "", slot[0]) if x),
             "where": _unescape(slot[1]),
             "video": recording.group(0) if recording else "",
-            "slides": files[0] if files else "",
+            "slides": list(dict.fromkeys(files))[:2],   # a deck may come as PDF and PPTX
             "abstract": abstract,
         }
         if LOGISTICS.search(title) or not (abstract or talk["video"] or talk["slides"]):
@@ -189,8 +189,7 @@ def program_text(talks: list[dict]) -> str:
             lines.append(f"Speakers: {t['presenters']}")
         lines.append(f"Session: {t['when']}" + (f", {t['where']}" if t["where"] else ""))
         links = [f"page: {t['page']}"]
-        if t["slides"]:
-            links.append(f"slides: {t['slides']}")
+        links += [f"slides: {u}" for u in t["slides"]]
         if t["video"]:
             links.append(f"video: {t['video']}")
         lines.append(" | ".join(links))

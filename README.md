@@ -84,7 +84,8 @@ Every pick gets one row under its heading, built by code
 **Links:** [Abstract](…) · [Paper](…) · [Slides](…) · [Recording](…)
 ```
 
-The links come from the program (fetchers record each item's `page:`, `pdf:`,
+A deck published in two formats gets both links (`Slides (PDF) · Slides
+(PPTX)`). The links come from the program (fetchers record each item's `page:`, `pdf:`,
 `slides:`, `video:` and IETF `materials:`), from the talk's own page read again
 (USENIX, Sched and netdev pages add slides and the recording after the event),
 and, for a pick still without a recording, from a YouTube search. A found
@@ -164,6 +165,7 @@ conferences/
     sigcomm.py       # SIGCOMM papers-info table (HTML)
     netdev.py        # netdevconf.info sessions index + per-session pages (HTML)
     nanog.py         # nanog.org agenda + talk pages, read via Tavily Extract
+    autocon.py       # AutoCon program + NAF guide, slides repo, YouTube uploads
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -236,6 +238,21 @@ run.
   request. The agenda's day headers give exact dates, so discovery adds each
   meeting once its agenda is up. It needs `TAVILY_API_KEY`, and costs about 2
   Tavily credits per agenda plus 2 per 5 talk pages.
+- **AutoCon** (Network Automation Forum): the open edition page
+  (`networkautomation.forum/autocon<n>`) lists each session as "time — speaker
+  - title", without abstracts. Abstracts come from NAF's program guide repo
+  when the edition has one (`Network-Automation-Forum/ac<n>-guide`, AutoCon 5
+  on), and otherwise from NAF's YouTube upload of the talk, whose description is
+  the abstract. Uploads are found through NAF's per-edition playlist
+  ("AutoCon 4"), which costs one request; each video is given to one talk only.
+  Without a playlist the fetcher searches per talk. The upload also gives the recording. Slides (PDF, or PPTX for
+  AutoCon 3) come from NAF's `handyinfo` repository
+  (`docs/autocon_coverage/slides/AutoCon<n>/`, in Git LFS, so links use
+  `media.githubusercontent.com`). They are paired with talks by the speaker
+  names and title words in their file names.
+  The page's form CAPTCHA trips `looks_blocked()`, so this fetcher trusts the
+  status code. Recordings arrive weeks after the event: an edition fetched
+  early has fewer abstracts, and Links Refresh adds the recordings later.
 - **SIGCOMM** and **Netdev** are static HTML with no observed bot-block. Netdev
   does a second pass: the sessions index has only titles/speakers, so it follows
   each session page for the description, track label, slides and video. A

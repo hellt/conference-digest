@@ -14,6 +14,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### TikTok's IPv6 Journey To Cilium: Pitfalls and Lessons Learned
 
+**Links:** [Recording](https://www.youtube.com/watch?v=y0qlhiKtDGo)
+
 *Giri Kuncoro & Joseph Pallamidessi, TikTok* — **Core**
 
 - **Why**: An IPv6-only production datacenter is still rare, and Cilium's battle-testing has overwhelmingly been on IPv4 / dual-stack. This is a concrete report of what actually breaks at the datapath when you remove IPv4 entirely — directly relevant to anyone planning a v6-only fabric.
@@ -22,6 +24,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: IPv6-only Kubernetes on Cilium specifically; the failure modes are general to v6-only Cilium deployments, not TikTok-specific infrastructure. A practical pre-flight checklist for that migration.
 
 ### QEMU in the Fast Lane: Accelerating KubeVirt Networking With eBPF
+
+**Links:** [Recording](https://www.youtube.com/watch?v=3X0X4az_E_4)
 
 *Daniel Borkmann & Anton Protopopov, Isovalent at Cisco* — **Core**
 
@@ -32,6 +36,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### On-Prem Load Balancing Reimagined: Serving 20 Million QPS With Gateway API and EnvoyGateway
 
+**Links:** [Recording](https://www.youtube.com/watch?v=kHChbblwVwk)
+
 *Isaac Wilson, The Trade Desk* — **Core**
 
 - **Why**: One of the few talks with a real scale number (20M QPS) and an explicit "things we broke" framing — a bare-metal HAProxy to Kubernetes/Envoy migration at the high end of on-prem load balancing.
@@ -40,6 +46,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: On-prem / bare-metal load balancing at large scale; broadly applicable to Gateway API + Envoy Gateway adopters, though the 20M QPS economics are specific to The Trade Desk's ad-tech workload.
 
 ### Authenticating and Authorizing Every Connection at Uber
+
+**Links:** [Recording](https://www.youtube.com/watch?v=GYVNg0_FpwQ)
 
 *Yangmin Zhu & Matt Mathew, Uber* — **Core**
 
@@ -50,6 +58,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### From Bespoke To Bulletproof: SPIFFE/SPIRE With ESO for Enterprise Zero Trust
 
+**Links:** [Recording](https://www.youtube.com/watch?v=EVbFeCipis8)
+
 *Mae Large & Ivy Alkhaz, State Farm* — **Core**
 
 - **Why**: A candid SPIFFE/SPIRE operations talk — what fell over at scale and how an HA topology fixed it — which is more useful than a greenfield demo for anyone running SPIRE in anger.
@@ -58,6 +68,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: Multi-cluster Kubernetes (here on ROSA / OpenShift on AWS) using SPIRE + ESO; the nested-SPIRE HA pattern is general, the ROSA specifics are org-specific.
 
 ### AdminNetworkPolicy: From Alpha To Beta and Beyond
+
+**Links:** [Recording](https://www.youtube.com/watch?v=SWf3Z3fV0ic)
 
 *Dan Winship & Surya Seetharaman, Red Hat; Nadia Pinaeva, NVIDIA; Bowei Du, Google* — **Core**
 
@@ -68,6 +80,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Strengthening Kubernetes Trust: SIG Auth's Latest Security Enhancements
 
+**Links:** [Recording](https://www.youtube.com/watch?v=SqdD9waaeno)
+
 *Anish Ramasekar, Mo Khan, Stanislav Láznička, Rita Zhang & Peter Engelbert, Microsoft* — **Core**
 
 - **Why**: The authoritative source on where Kubernetes core authentication and authorization are moving, straight from SIG Auth chairs/leads — foundational for the identity side of the PM's remit.
@@ -76,6 +90,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: All Kubernetes clusters; general, version-dependent on the releases the features ship in.
 
 ### Kubernetes IP Management: From Core Concepts To Strategic Solutions
+
+**Links:** [Recording](https://www.youtube.com/watch?v=EXxa7Qxdveg)
 
 *Ivy Zhuang & Whitney Jenkins, Google* — **Core**
 
@@ -86,6 +102,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Navigating the AI/ML Networking Maze in Kubernetes: Lessons From the Trenches
 
+**Links:** [Recording](https://www.youtube.com/watch?v=liHY_dy-W0w)
+
 *Antonio Ojea, Google* — **Core**
 
 - **Why**: HPC networking primitives — RDMA, MPI, collective-communication patterns — are being dragged into Kubernetes by AI workloads. Bridging traditional networking experience into this is exactly the PM's transition, told by a SIG-Network tech lead.
@@ -95,6 +113,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Spiderpool: Dynamic Topology-Aware RDMA Allocation For GPU-Based AI Workloads
 
+**Links:** [Recording](https://www.youtube.com/watch?v=fBE6UiLROWA)
+
 *Weizhou Lan, DaoCloud* — **Core** *(Project Lightning Talk)*
 
 - **Why**: A precise physical-topology networking problem — aligning RDMA NICs with PCIe-affined GPUs — that the standard device-plugin/CNI split can't solve. This sits right at the DC-hardware/cloud-native seam the PM cares about.
@@ -103,6 +123,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: GPU nodes doing distributed inference/training where a container needs a subset of GPUs; requires RDMA NICs with discoverable PCIe affinity and DRA/NRI support. Lightning-talk depth.
 
 ### Fix First, Investigate Later: When an eBPF Rollout Brought Down Our Network
+
+**Links:** [Recording](https://www.youtube.com/watch?v=J-Zx64mJzVk)
 
 *Zain Malik, Exostellar & Grzegorz Głąb, Whatnot* — **Core**
 
@@ -115,6 +137,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Lessons Applied Building a Next-generation AI Proxy
 
+**Links:** [Recording](https://www.youtube.com/watch?v=qa5vSE86z-s)
+
 *John Howard, Solo.io* — **Adjacent**
 
 - **Why**: From an Istio TOC/Steering member, this is the clearest articulation of why AI traffic breaks traditional proxies and what an AI-optimized data plane needs — relevant to where Envoy/Gateway data planes are heading.
@@ -123,6 +147,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: AI/LLM inference gateways; conceptual/architectural, broadly applicable to proxy and gateway designers.
 
 ### AI Inference Without Boundaries: Dynamic Routing With Multi-Cluster Inference Gateway
+
+**Links:** [Recording](https://www.youtube.com/watch?v=UJy8n8uX8G4)
 
 *Rob Scott, Google & Daneyon Hansen, Solo.io* — **Adjacent**
 
@@ -133,6 +159,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Routing Stateful AI Workloads in Kubernetes
 
+**Links:** [Recording](https://www.youtube.com/watch?v=-C76naL3PRc)
+
 *Maroon Ayoub, IBM & Michey Mehta, Red Hat* — **Adjacent**
 
 - **Why**: A layered, concrete treatment of why stateless K8s routing fails for LLM inference and how KV-cache-aware load balancing changes the picture — grounded in the multi-vendor `llm-d` effort.
@@ -141,6 +169,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: LLM inference platforms on Kubernetes; general technique tied to the Inference Extension.
 
 ### Gateway API: Table Stakes
+
+**Links:** [Recording](https://www.youtube.com/watch?v=RWFDjA6ZeWc)
 
 *Shane Utt & Candace Holman, Red Hat; Mike Morris, Microsoft; Lior Lieberman & Kellen Swain, Google* — **Adjacent**
 
@@ -151,6 +181,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Return of the Mesh: Gateway API's Epic Quest for Unity
 
+**Links:** [Recording](https://www.youtube.com/watch?v=tgs6Wq5UlBs)
+
 *Henrik Rexed, Dynatrace* — **Adjacent**
 
 - **Why**: A comparative, benchmark-driven look at how well Istio, Kuma, Linkerd, Traefik Mesh, and Ambient actually implement the Gateway API for mesh (GAMMA) — practical for mesh selection and migration.
@@ -159,6 +191,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: Teams choosing or migrating between service meshes; general. Independent benchmarking always warrants a skim of the methodology.
 
 ### Istio Project Updates: AI Inference, Ambient Multicluster & Default Deny
+
+**Links:** [Recording](https://www.youtube.com/watch?v=vdCMLZ-4vUo)
 
 *Keith Mattix, Microsoft* — **Adjacent**
 
@@ -169,6 +203,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### It's 2025; Why Are You OK With an Insecure Network?
 
+**Links:** [Recording](https://www.youtube.com/watch?v=J_Cf9TTOW98)
+
 *Alex Leong, Buoyant* — **Adjacent**
 
 - **Why**: A maintainer's argument that the real blocker to in-cluster encryption/authn is operational simplicity, not technology — a useful framing for why mTLS adoption stalls, even if vendor-flavored.
@@ -178,6 +214,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### End-to-End Security With gRPC in Kubernetes
 
+**Links:** [Recording](https://www.youtube.com/watch?v=fhjiLyntYBg)
+
 *Shiva & Abhishek Agrawal, Google* — **Adjacent**
 
 - **Why**: A practical consolidation of the moving parts for securing gRPC service-to-service traffic — TLS/mTLS, JWT/OAuth2, cert lifecycle — relevant to the identity/authn remit.
@@ -186,6 +224,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: gRPC microservices on Kubernetes; general. Likely practitioner-level rather than deep internals.
 
 ### Design Patterns for Consistent Centralized Authorization
+
+**Links:** [Recording](https://www.youtube.com/watch?v=v-Qt6op7BLU)
 
 *José Padilla, Auth0 & Alice Gibbons, Diagrid* — **Adjacent**
 
@@ -198,6 +238,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Fast and the Furious: CICD Pipeline for eBPF Programs at Meta Scale
 
+**Links:** [Recording](https://www.youtube.com/watch?v=wXuykaYSFCQ)
+
 *Theophilus Benson (CMU) & Prankur Gupta, Meta* — **Wildcard**
 
 - **Why**: Not a networking-design talk, but a rare look at the *release engineering* of eBPF at hyperscale — 150+ programs updated weekly across the fleet. The interesting question is how you test and roll out kernel-attached code without causing outages, which is adjacent to (and quietly underpins) everything Cilium/datapath related.
@@ -207,6 +249,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Debugging Your Cluster When It's on Fire
 
+**Links:** [Recording](https://www.youtube.com/watch?v=Jy0d9QXZXrQ)
+
 *Nikola Grcevski, Grafana Labs & Tyler Yahn, Splunk* — **Wildcard**
 
 - **Why**: The new OpenTelemetry eBPF Instrumentation project promises zero-config, on-demand distributed traces and connectivity graphs added to a live cluster without touching app config — a genuinely different operational capability worth seeing even if it's outside core networking design.
@@ -215,6 +259,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: Any Kubernetes cluster needing emergency observability; general, dependent on the OTel eBPF project's maturity.
 
 ### Sponsored Keynote: Anchoring Trust in the Age of AI — Identities Across Humans, Machines, and Models
+
+**Links:** [Recording](https://www.youtube.com/watch?v=Sw5uT4VkCHA)
 
 *Yuan Tang & Anjali Telang, Red Hat* — **Wildcard**
 

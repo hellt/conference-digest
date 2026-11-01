@@ -2,7 +2,7 @@
   "sigcomm-2025": {
     "status": "published",
     "attempts": 0,
-    "last_attempt": "2026-06-08T06:26:42.345600+00:00",
+    "last_attempt": "2026-11-01T14:14:31.578925+00:00",
     "last_error": ""
   },
   "nsdi-2025": {
@@ -32,19 +32,19 @@
   "ietf-122": {
     "status": "published",
     "attempts": 0,
-    "last_attempt": "2026-08-24T08:49:27.820410+00:00",
+    "last_attempt": "2026-11-01T14:14:32.911575+00:00",
     "last_error": ""
   },
   "ietf-123": {
     "status": "published",
     "attempts": 0,
-    "last_attempt": "2026-06-08T09:43:31.623649+00:00",
+    "last_attempt": "2026-11-01T14:14:58.036997+00:00",
     "last_error": ""
   },
   "kubecon-eu-2025": {
     "status": "published",
     "attempts": 0,
-    "last_attempt": "2026-08-30T11:12:55.994885+00:00",
+    "last_attempt": "2026-11-01T14:13:47.531677+00:00",
     "last_error": ""
   },
   "netdev-0x1a": {
@@ -56,7 +56,7 @@
   "kubecon-eu-2026": {
     "status": "published",
     "attempts": 0,
-    "last_attempt": "2026-09-14T10:15:57.446591+00:00",
+    "last_attempt": "2026-11-01T14:04:24.364484+00:00",
     "last_error": ""
   },
   "nsdi-2026": {
@@ -68,19 +68,19 @@
   "ietf-124": {
     "status": "published",
     "attempts": 0,
-    "last_attempt": "2026-11-01T13:24:19.095814+00:00",
+    "last_attempt": "2026-11-01T14:15:21.001277+00:00",
     "last_error": ""
   },
   "ietf-125": {
     "status": "published",
     "attempts": 0,
-    "last_attempt": "2026-11-01T13:24:19.095814+00:00",
+    "last_attempt": "2026-11-01T14:15:38.558583+00:00",
     "last_error": ""
   },
   "ietf-126": {
     "status": "published",
     "attempts": 0,
-    "last_attempt": "2026-11-01T13:24:19.095814+00:00",
+    "last_attempt": "2026-11-01T14:15:54.711737+00:00",
     "last_error": ""
   }
 }

@@ -9,8 +9,11 @@ reads it and writes derived, gitignored files that `zensical build` publishes:
                          sections and picks marked up for styling
   docs/conferences.md    every registry edition and where it stands
 
-The digest text itself is not rewritten: headings, links and wording pass
-through unchanged. Run it before every build (`make site` does).
+The digest text itself is not rewritten: headings and wording pass through
+unchanged. Each pick's `**Links:**` row (written by conferences/links.py)
+becomes a row of link chips, and a talk recording on YouTube also gets a
+click-to-play thumbnail (docs/javascripts/video.js swaps in the player).
+Run it before every build (`make site` does).
 """
 
 from __future__ import annotations
@@ -42,6 +45,58 @@ TYPES = {
 }
 TIERS = ("core", "adjacent", "wildcard")
 LABEL = re.compile(r"^\*\*[A-Z][\w /-]{0,40}(?::\*\*|\*\*:)")
+LINKS_ROW = re.compile(r"^\s*(?:[-*]\s+)?\*\*Links?:?\*\*:?\s*(.+)$")
+MD_LINK = re.compile(r"\[([^\]\n]+)\]\((https?://[^)\s]+)\)")
+ICONS = {
+    "abstract": "material-text-box-outline",
+    "draft": "material-file-document-edit-outline",
+    "paper": "material-file-document-outline",
+    "slides": "material-presentation",
+    "recording": "material-play-circle-outline",
+    "session recording": "material-play-circle-outline",
+    "materials": "material-folder-open-outline",
+}
+
+
+def youtube_start(url: str) -> int:
+    """Seconds from a `t=` / `start=` parameter (356, 356s, 5m56s, 1h2m3s); 0 if none."""
+    m = re.search(r"[?&#](?:t|start)=((?:\d+h)?(?:\d+m)?\d+s?)\b", url)
+    if not m:
+        return 0
+    parts = re.fullmatch(r"(?:(\d+)h)?(?:(\d+)m)?(\d+)s?", m.group(1))
+    h, mi, sec = (int(x or 0) for x in parts.groups()) if parts else (0, 0, 0)
+    return h * 3600 + mi * 60 + sec
+
+
+def youtube_id(url: str) -> str | None:
+    m = re.match(r"https?://(?:www\.|m\.)?(?:youtube(?:-nocookie)?\.com/(?:watch\?(?:.*&)?v=|embed/|live/)|youtu\.be/)"
+                 r"([A-Za-z0-9_-]{11})", url)
+    return m.group(1) if m else None
+
+
+def links_block(row: str, title: str) -> list[str]:
+    """A pick's links row as chips, plus a click-to-play recording thumbnail."""
+    links = MD_LINK.findall(row)
+    if not links:
+        return [f"**Links:** {row}"]
+    chips = " ".join(
+        f"[:{ICONS.get(text.lower(), 'material-link-variant')}: {text}]({url}){{ .pick-link }}"
+        for text, url in links
+    )
+    out = ['<div class="pick-links" markdown>', "", chips, "", "</div>", ""]
+    recording = next((url for text, url in links if text.lower() == "recording" and youtube_id(url)), None)
+    video = youtube_id(recording) if recording else None
+    if video:
+        start = youtube_start(recording)
+        alt = re.sub(r"[\"<>&]", "", f"Play the recording: {title}")[:160]
+        out += [
+            f'<div class="pick-video"><a class="pick-video__thumb" data-yt="{video}" data-start="{start}" '
+            f'href="https://www.youtube.com/watch?v={video}{f"&t={start}s" if start else ""}" target="_blank" rel="noopener">'
+            f'<img src="https://i.ytimg.com/vi/{video}/hqdefault.jpg" alt="{alt}" loading="lazy">'
+            f'<span class="pick-video__play" aria-hidden="true"></span></a></div>',
+            "",
+        ]
+    return out
 
 
 def load_registry() -> dict[str, dict]:
@@ -122,6 +177,7 @@ def decorate(rest: str) -> tuple[str, dict[str, int]]:
     counts = {t: 0 for t in TIERS}
     tier = None
     in_card = in_fence = False
+    pick_title = ""
 
     def close() -> None:
         nonlocal in_card
@@ -147,6 +203,11 @@ def decorate(rest: str) -> tuple[str, dict[str, int]]:
             counts[tier] += 1
             out.extend([f'<div class="pick pick-{tier}" markdown>', "", line])
             in_card = True
+            pick_title = line[4:].strip()
+            continue
+        row = LINKS_ROW.match(line) if in_card else None
+        if row:
+            out.extend(links_block(row.group(1), pick_title))
             continue
         # `**Why:** ...` lines written back to back would merge into one
         # paragraph; give each labelled line its own.

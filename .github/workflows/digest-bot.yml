@@ -141,6 +141,8 @@ jobs:
       - name: Open one pull request per digest
         env:
           GH_TOKEN: ${{ github.token }}
+          # Optional: links rows search fallback and reader for pages that block runners.
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           KEYS: ${{ needs.queue.outputs.keys }}
           SOURCE_REF: ${{ needs.queue.outputs.source_ref }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

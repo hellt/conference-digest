@@ -16,7 +16,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Resilient AI Supercomputer Networking using MRC and SRv6 — Christoph Paasch (OpenAI) and others — Core
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/resilient-ai-supercomputer-networking-using-mrc-and-srv6.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper45-talk-slides/2026_MRC_netdevconf.pdf) · [video](https://youtu.be/qlVweM7rLx4)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/resilient-ai-supercomputer-networking-using-mrc-and-srv6.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper45-talk-slides/2026_MRC_netdevconf.pdf) · [Recording](https://youtu.be/qlVweM7rLx4)
 
 **Why:** This is the single most load-bearing talk of the program: production experience of running RDMA over a 75K-GPU fabric at OpenAI and Microsoft, and the clearest public statement yet of how frontier training clusters actually do path selection and failure recovery.
 
@@ -30,7 +30,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### SRv6 Workshop — Chair: Stefano Salsano (Univ. of Rome Tor Vergata), with Cisco, Ericsson contributors — Core
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/workshop/srv6-workshop.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper48-talk-slides/netdev-0x1A-srv6-l2-services.pdf) · [video](https://youtu.be/VWlH9D7FSCU) · [workshop page with all decks](https://netgroup.github.io/netdev-0x1A-srv6-workshop/)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/workshop/srv6-workshop.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper48-talk-slides/netdev-0x1A-srv6-l2-services.pdf) · [Recording](https://youtu.be/VWlH9D7FSCU)
 
 **Why:** The counterpart to the MRC talk, and the more actionable one: SRv6 is the mechanism by which host-decided pathing and VXLAN replacement both become possible in mainline Linux, and this session covers exactly the gaps that still block that.
 
@@ -42,7 +42,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### What's next for the PSP Security Protocol (workshop) — Chair: Willem de Bruijn — Core
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/workshop/whats-next-for-the-psp-security-protocol.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper19-talk-slides/Netdevconf%202026%20Panel_%20What's%20next%20for%20the%20PSP%20Security%20Protocol.pdf) · [video](https://youtu.be/7rA3roMcrDg)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/workshop/whats-next-for-the-psp-security-protocol.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper19-talk-slides/Netdevconf%202026%20Panel_%20What's%20next%20for%20the%20PSP%20Security%20Protocol.pdf) · [Recording](https://youtu.be/7rA3roMcrDg)
 
 **Why:** PSP is now in mainline (v6.18), has silicon from Broadcom, Intel and NVIDIA, and became an Open Compute Project v1 spec in June 2026. That combination makes it the most credible datacenter alternative to IPsec for intra- and inter-DC and AI-fabric encryption — and this session is where v2 scope gets set.
 
@@ -54,7 +54,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### MACsec-Protected RDMA on DPUs: From Linux Netdev State to Workload Scheduling — Alkama Hasan and Vijay Ram Inavolu — Core
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/macsec-protected-rdma-on-dpus-from-linux-netdev-state-to-workload-scheduling.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper38-talk-slides/DRANET_SEC_NetDev0x1A.pdf) · [video](https://youtu.be/uetdaP9m11s)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/macsec-protected-rdma-on-dpus-from-linux-netdev-state-to-workload-scheduling.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper38-talk-slides/DRANET_SEC_NetDev0x1A.pdf) · [Recording](https://youtu.be/uetdaP9m11s)
 
 **Why:** It sits exactly on the intersection this PM cares about — physical fabric encryption, DPU offload, and Kubernetes scheduling — and it names a real gap: RDMA verbs bypass the kernel, so kTLS and in-kernel IPsec cannot protect the path that KV-cache, gradients and model weights actually cross.
 
@@ -66,7 +66,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Toward Host-Pluggable Congestion Control for RDMA/IP Datacenter Transports — Vivek Kashyap — Core
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/toward-host-pluggable-congestion-control-for-rdmaip-datacenter-transports.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper35-talk-slides/pluggable_congestion_management_netdev.pdf) · [video](https://youtu.be/cCkRoczzgrM)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/toward-host-pluggable-congestion-control-for-rdmaip-datacenter-transports.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper35-talk-slides/pluggable_congestion_management_netdev.pdf) · [Recording](https://youtu.be/cCkRoczzgrM)
 
 **Why:** RDMA congestion control is stuck in NIC firmware, which means every algorithm change is a vendor release. Breaking that open is the difference between DCQCN/PFC-shaped fabrics and fabrics you can actually tune per workload.
 
@@ -78,7 +78,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Can Homa and TCP Get Along? — John Ousterhout — Core
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/can-homa-and-tcp-get-along.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper23-talk-slides/TCPHoma.pdf) · [video](https://youtu.be/K9NZL_2qm4g)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/can-homa-and-tcp-get-along.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper23-talk-slides/TCPHoma.pdf) · [Recording](https://youtu.be/K9NZL_2qm4g)
 
 **Why:** Coexistence is the actual adoption blocker for any new datacenter transport. Nobody gets a greenfield fabric, so "what happens when it shares a NIC with TCP" decides whether Homa is deployable at all.
 
@@ -90,7 +90,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Linux QUIC: Bringing a Modern Secure Transport into the Kernel — Xin Long — Core
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/linux-quic-bringing-a-modern-secure-transport-into-the-kernel.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper15-talk-slides/Netdev%200x1A%20Slides%20-%20Linux%20QUIC.pdf) · [video](https://youtu.be/0opE9rssasw)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/linux-quic-bringing-a-modern-secure-transport-into-the-kernel.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper15-talk-slides/Netdev%200x1A%20Slides%20-%20Linux%20QUIC.pdf) · [Recording](https://youtu.be/0opE9rssasw)
 
 **Why:** QUIC in the kernel changes what kernel subsystems (SMB, NFS) can use as a secure transport, and it puts a POSIX-shaped API on a protocol that has so far been userspace-library-only. That has knock-on effects for anything doing per-connection identity and crypto offload.
 
@@ -102,7 +102,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Accelerating Software RDMA (RXE) with Netkit and Devmem — Yanjun Zhu — Core
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/accelerating-software-rdma-rxe-with-netkit-and-devmem.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper1-talk-slides/rxe_netkit_devmem_ebpf.pdf) · [video](https://youtu.be/kYTYzvWC-wc)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/accelerating-software-rdma-rxe-with-netkit-and-devmem.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper1-talk-slides/rxe_netkit_devmem_ebpf.pdf) · [Recording](https://youtu.be/kYTYzvWC-wc)
 
 **Why:** It wires together three things this PM tracks separately — netkit (the Cilium-era container device), devmem TCP/dma-buf, and software RDMA — into one datapath, and it targets the container/namespace case rather than bare metal.
 
@@ -114,7 +114,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Thrice the charm: an skb extension for BPF metadata — Jakub Sitnicki and Andrej Stender — Core
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/thrice-the-charm-an-skb-extension-for-bpf-metadata.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper31-talk-slides/Netdev%200x1A%20-%20Thrice%20the%20charm%20-%20an%20skb%20extension%20for%20BPF%20metadata.pdf) · [video](https://youtu.be/ot2K4-PFQDc)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/thrice-the-charm-an-skb-extension-for-bpf-metadata.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper31-talk-slides/Netdev%200x1A%20-%20Thrice%20the%20charm%20-%20an%20skb%20extension%20for%20BPF%20metadata.pdf) · [Recording](https://youtu.be/ot2K4-PFQDc)
 
 **Why:** Carrying custom per-packet metadata between BPF hooks is a recurring blocker for anything building policy or identity into the datapath (service mesh, per-connection labels, tenant tags). This is the third attempt at solving it and the write-up includes why the previous designs failed.
 
@@ -126,7 +126,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### One Layer Deeper: The 10-Layer Cake Under a Linux Network Interface — Jesse Brandeburg (Cloudflare) — Core
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/one-layer-deeper-the-10-layer-cake-under-a-linux-network-interface.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper17-talk-slides/10%20layer%20cake%20of%20networking%20%281%29.pdf) · [video](https://youtu.be/Bd7ct9pPWTg)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/one-layer-deeper-the-10-layer-cake-under-a-linux-network-interface.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper17-talk-slides/10%20layer%20cake%20of%20networking%20%281%29.pdf) · [Recording](https://youtu.be/Bd7ct9pPWTg)
 
 **Why:** The most useful non-feature talk of the program: a production-performance mental model from someone who wrote Intel Ethernet drivers and now runs performance at Cloudflare, framed around the observability gap rather than a knob list.
 
@@ -138,7 +138,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### DPU-Offloaded TLS Termination and Session Routing for Stateful MCP Traffic — Balakrishna Bhamidipati and Vijay Ram Inavolu — Core
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/dpu-offloaded-tls-termination-and-session-routing-for-stateful-mcp-traffic.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper39-talk-slides/netdev-39.pdf) · [video](https://youtu.be/peHxKX72H7U)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/dpu-offloaded-tls-termination-and-session-routing-for-stateful-mcp-traffic.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper39-talk-slides/netdev-39.pdf) · [Recording](https://youtu.be/peHxKX72H7U)
 
 **Why:** Agentic traffic is starting to generate its own infrastructure requirements, and this one is squarely identity-shaped: OAuth2/JWT validation moved onto the DPU, which relocates the authentication trust boundary off the inference host.
 
@@ -150,7 +150,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Tempesta xFW: open-source eBPF-based volumetric DDoS protection — Alexander Krizhanovsky — Core
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/tempesta-xfw-open-source-ebpf-based-volumetric-ddos-protection.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper26-talk-slides/slides.pdf) · [video](https://youtu.be/aTq9v_9CYVM)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/tempesta-xfw-open-source-ebpf-based-volumetric-ddos-protection.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper26-talk-slides/slides.pdf) · [Recording](https://youtu.be/aTq9v_9CYVM)
 
 **Why:** A rare open-source, architecture-level treatment of volumetric DDoS filtering in XDP/tc, including the parts that usually stay proprietary: rate-limiter design trade-offs, and what current eBPF API limits actually prevent.
 
@@ -164,7 +164,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### io_uring ZCRX: Progress and Next Steps — Pavel Begunkov — Adjacent
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/io_uring-zcrx-progress-and-next-steps.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper41-talk-slides/zcrx.pdf) · [video](https://youtu.be/oXyAF_xfdUw)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/io_uring-zcrx-progress-and-next-steps.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper41-talk-slides/zcrx.pdf) · [Recording](https://youtu.be/oXyAF_xfdUw)
 
 **Why:** Zero-copy receive that keeps the normal stack (and its tooling and observability) is the pragmatic alternative to kernel bypass; since 6.15 it has been real, and this is the honest status report.
 
@@ -174,7 +174,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### AF_XDP copy mode needs more love — Jason Xing — Adjacent
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/af_xdp-copy-mode-needs-more-love.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper7-talk-slides/netdev-0x1a-paper7.pdf) · [video](https://youtu.be/nmyuxyIxddU)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/af_xdp-copy-mode-needs-more-love.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper7-talk-slides/netdev-0x1a-paper7.pdf) · [Recording](https://youtu.be/nmyuxyIxddU)
 
 **Why:** Zero-copy AF_XDP only works on a handful of drivers (ice, bnxt, mlx5) — for VMs on virtio-net, containers on veth, and the long tail of NICs, copy mode *is* the datapath, and it has been under-optimized.
 
@@ -186,7 +186,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### TCP State of the union (2026) — Eric Dumazet — Adjacent
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/tcp-state-of-the-union-2026.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper40-talk-slides/State%20of%20the%20union%20in%20TCP%20land%20in%202026%20-%20Google%20Slides.pdf) · [video](https://youtu.be/OJnu6Pts-eo)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/tcp-state-of-the-union-2026.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper40-talk-slides/State%20of%20the%20union%20in%20TCP%20land%20in%202026%20-%20Google%20Slides.pdf) · [Recording](https://youtu.be/OJnu6Pts-eo)
 
 **Why:** The annual baseline on where kernel TCP performance work is going, from its principal author. **What/How:** Recent and upcoming TCP changes with a focus on performance on modern platforms — the abstract is one line, so the slides are the content. (From abstract only.)
 
@@ -194,7 +194,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Rakaia: Scalable In-Kernel Scheduling for TCP-Based RPCs — Rui Yang, Konstantinos Prasopoulos, Edouard Bugnion — Adjacent
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/rakaia-scalable-in-kernel-scheduling-for-tcp-based-rpcs.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper27-talk-slides/rakaia-netdev-talk.pdf) · [video](https://youtu.be/buZifwSNREM)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/rakaia-scalable-in-kernel-scheduling-for-tcp-based-rpcs.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper27-talk-slides/rakaia-netdev-talk.pdf) · [Recording](https://youtu.be/buZifwSNREM)
 
 **Why:** Every service-mesh and RPC stack pays for the same thing: POSIX exposes byte streams, so userspace rebuilds message semantics with I/O threads, work queues and thread pools. This attacks that at the source.
 
@@ -206,7 +206,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### The CXL Fabric End-Game: Bandwidth Realities and Networked Memory for AI Scale — PJ Waskiewicz — Adjacent
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/the-cxl-fabric-end-game-bandwidth-realities-and-networked-memory-for-ai-scale.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper21-talk-slides/CXL%20Memory%20Fabrics%20Coherency%20-%20Netdev%200x1A.pdf) · [video](https://youtu.be/idStzK7MPTc)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/the-cxl-fabric-end-game-bandwidth-realities-and-networked-memory-for-ai-scale.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper21-talk-slides/CXL%20Memory%20Fabrics%20Coherency%20-%20Netdev%200x1A.pdf) · [Recording](https://youtu.be/idStzK7MPTc)
 
 **Why:** A useful corrective to the "CXL memory is just a far NUMA node" framing that keeps showing up in AI infrastructure planning.
 
@@ -218,7 +218,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Securing IOAM in the Linux Kernel: Toward Trustworthy In Situ Network Telemetry — Maxime Goffart, Emilien Wansart, Benoit Donnet — Adjacent
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/securing-ioam-in-the-linux-kernel-toward-trustworthy-in-situ-network-telemetry.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper18-talk-slides/slides_ioam.pdf) · [video](https://youtu.be/TEM1JAgpYbg)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/securing-ioam-in-the-linux-kernel-toward-trustworthy-in-situ-network-telemetry.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper18-talk-slides/slides_ioam.pdf) · [Recording](https://youtu.be/TEM1JAgpYbg)
 
 **Why:** IOAM's security model is "assume the domain boundary holds" — one misconfigured filter and in-band telemetry leaks or, worse, can be forged by an on-path adversary.
 
@@ -230,7 +230,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Line-Rate Cybersecurity: Modern DPI and Encrypted Traffic Fingerprinting at 100 Gbps — Luca Deri, Alfredo Cardigliano — Adjacent
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/line-rate-cybersecurity-modern-dpi-and-encrypted-traffic-fingerprinting-at-100-gbps.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper29-talk-slides/Netdev_0x1A_slides_deri_cardigliano_v2.pdf) · [video](https://youtu.be/OrL_jLspYUc)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/line-rate-cybersecurity-modern-dpi-and-encrypted-traffic-fingerprinting-at-100-gbps.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper29-talk-slides/Netdev_0x1A_slides_deri_cardigliano_v2.pdf) · [Recording](https://youtu.be/OrL_jLspYUc)
 
 **Why:** The claim that JA3/JA4 have structural flaws against ephemeral TLS extensions is worth knowing if you rely on TLS fingerprints for detection or bot management.
 
@@ -242,7 +242,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Performance Comparison of Transport Mechanisms for LLM Inference KVCache Transfers — Jamal Hadi Salim, Nabil Bitar, Pedro Tammela, Victor Nogueira — Adjacent
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/performance-comparison-of-transport-mechanisms-for-llm-inference-kvcache-transfers.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper14-talk-slides/0x1A-kvcache-Presentation.pdf) · [video](https://youtu.be/0_ZREgPkJbY)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/performance-comparison-of-transport-mechanisms-for-llm-inference-kvcache-transfers.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper14-talk-slides/0x1A-kvcache-Presentation.pdf) · [Recording](https://youtu.be/0_ZREgPkJbY)
 
 **Why:** The methodology is the contribution: evaluating AI-fabric transports without owning GPUs, which makes transport comparison accessible to anyone with switches and NICs.
 
@@ -254,7 +254,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### LLMs and the kernel security process (keynote) — Greg Kroah-Hartman — Adjacent
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/keynote/llms-and-the-kernel-security-process.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper47-talk-slides/gregkh_netdev.pdf) · [video](https://youtu.be/w71JusTenBw)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/keynote/llms-and-the-kernel-security-process.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper47-talk-slides/gregkh_netdev.pdf) · [Recording](https://youtu.be/w71JusTenBw)
 
 **Why:** Networking is taking the brunt of the LLM-generated "security" report flood, and how the kernel security team absorbs it affects how fast real network security fixes move.
 
@@ -266,7 +266,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Promise Networks: Why a Bilateral Link Layer Solves Congestion Control at the Source — Anjali Singhai-Jain, Chihjen Chang, Paul Borrill, David Zage — Wildcard
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/promise-networks-why-a-bilateral-link-layer-solves-congestion-control-at-the-source.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper46-talk-slides/promise-networks-talk.pdf) · [video](https://youtu.be/AzSCfNtXfJE)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/promise-networks-why-a-bilateral-link-layer-solves-congestion-control-at-the-source.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper46-talk-slides/promise-networks-talk.pdf) · [Recording](https://youtu.be/AzSCfNtXfJE)
 
 **Why:** A deliberately foundational challenge to the entire congestion-control framing, presented for community critique — and the kind of argument that either goes nowhere or reshapes the debate in five years.
 
@@ -278,7 +278,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Networking Headless CXL Devices for AI Memory Services — Vijay Inavolu, Gaurav Agarwal — Wildcard
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/networking-headless-cxl-devices-for-ai-memory-services.html) · [video](https://youtu.be/JaqEdCahElA)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/networking-headless-cxl-devices-for-ai-memory-services.html) · [Recording](https://youtu.be/JaqEdCahElA)
 
 **Why:** A genuinely surprising construction: giving a CXL memory device — which exposes a memory window, not a NIC — a cluster-facing service identity, using nothing but stock kernel pieces.
 
@@ -290,7 +290,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### Scripting Netfilter with Lua: A Cooperative Kernel-Userspace Pipeline — Lourival Vieira Neto, Md. Shehar Yaar Tausif, Firas Shaari, Marcel S. A. de Moura, Arif Alam — Wildcard
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/talk/scripting-netfilter-with-lua-a-cooperative-kernel-userspace-pipeline.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper34-talk-slides/netdev-0x1a.pdf) · [video](https://youtu.be/TRETKtPAWck)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/talk/scripting-netfilter-with-lua-a-cooperative-kernel-userspace-pipeline.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper34-talk-slides/netdev-0x1a.pdf) · [Recording](https://youtu.be/TRETKtPAWck)
 
 **Why:** An L7 filtering design that deliberately does *not* intercept TLS — no CA on every client, no per-connection termination — and still ships in production on Wi-Fi access-point hardware. That trade-off is worth understanding even if you never write kernel Lua.
 
@@ -302,7 +302,7 @@ Write-ups are grounded in the session abstracts; three (MRC/SRv6, PSP, MACsec-on
 
 ### New Age Tooling BoF — Chair: Jamal Hadi Salim — Wildcard
 
-**Links:** [session](https://netdevconf.info/0x1A/sessions/bof/new-age-tooling-bof.html) · [slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper28-talk-slides/Yuan%20Tan.pdf) · [video](https://youtu.be/w-fGQuNK3pU)
+**Links:** [Abstract](https://netdevconf.info/0x1A/sessions/bof/new-age-tooling-bof.html) · [Slides](https://netdevconf.info/0x1A/docs/netdev-0x1a-paper28-talk-slides/Yuan%20Tan.pdf) · [Recording](https://youtu.be/w-fGQuNK3pU)
 
 **Why:** The most concrete public accounting so far of what AI-assisted kernel work actually produces — bugs found, patches rejected, and the review machinery being built in response. Read alongside the Greg KH keynote.
 

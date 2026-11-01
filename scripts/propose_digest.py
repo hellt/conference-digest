@@ -6,10 +6,12 @@
 
 ARTIFACT_DIR is the downloaded `tofarev-digest-<key>` artifact: digest.md plus
 result.json (stats and check notes). The digest is validated and written to
-digests/<key>.md; the commit message follows the repo convention (`digest:
-<key>`, where the program came from, the core signal) and the PR body lists the
-automatic checks for the human who merges it. Exits non-zero, writing nothing,
-if the artifact does not belong to KEY.
+digests/<key>.md, and every pick gets its links row (conferences/links.py:
+abstract, paper, slides, recording; TAVILY_API_KEY is the search fallback).
+The commit message follows the repo convention (`digest: <key>`, where the
+program came from, the core signal) and the PR body lists the automatic checks
+and link counts for the human who merges it. Exits non-zero, writing nothing,
+if the artifact does not belong to KEY or has no `###` picks.
 """
 
 from __future__ import annotations
@@ -23,6 +25,9 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+from conferences.links import context_for, enrich  # noqa: E402
+
 REGISTRY = ROOT / "conferences" / "registry.yaml"
 STATE = ROOT / "conferences" / "state.json"
 MAX_BYTES = 400_000
@@ -51,6 +56,7 @@ def main() -> int:
     ap.add_argument("--body", type=Path, required=True)
     ap.add_argument("--run-url", default="")
     ap.add_argument("--issue", default="")
+    ap.add_argument("--no-links", action="store_true", help="skip the links rows (offline use)")
     args = ap.parse_args()
     key = args.key
 
@@ -75,7 +81,15 @@ def main() -> int:
         return fail(f"digest.md does not start with the metadata block for {key}")
     written_by = re.search(r"^written_by: *(.+)$", meta.group(1), re.M)
     written_by = written_by.group(1).strip() if written_by else "ToFaRev"
+    if not re.search(r"^### +\S", markdown, re.M):
+        return fail("digest.md has no ### pick headings (the writer used another layout); "
+                    "no PR is opened, so the next Digest Bot run drafts it again")
 
+    links = None
+    if not args.no_links:
+        prompt = ROOT / "prompts" / f"{key}.md"
+        markdown, links = enrich(markdown, prompt.read_text(encoding="utf-8") if prompt.is_file() else "",
+                                 context_for(entry))
     (ROOT / "digests" / f"{key}.md").write_text(markdown, encoding="utf-8")
 
     state = json.loads(STATE.read_text(encoding="utf-8")).get(key, {}) if STATE.exists() else {}
@@ -104,6 +118,9 @@ def main() -> int:
         ("Selection", f"{stats.get('batches', 0)} shortlist batches → {stats.get('shortlisted', 0)} shortlisted → "
                       f"{stats.get('selected', 0)} sent to the writer" if staged else "whole program sent to the writer"),
         ("Picks", str(stats.get("picks", "?"))),
+        *([("Links", f"{links['page']} abstract pages, {links['pdf']} papers, {links['slides']} slides, "
+                     f"{links['video']} recordings ({links['video_from_search']} found by a verified search)")]
+          if links else []),
         ("Model", f"{written_by}, {stats.get('calls', '?')} calls in {stats.get('seconds', '?')} s"),
     ]
     if args.run_url:
@@ -119,13 +136,16 @@ def main() -> int:
         "",
         "### Automatic checks",
         "",
-        *([f"- {n}" for n in notes] or ["- Nothing to flag. Links come only from the program, and every heading matches a program item."]),
+        *([f"- {n}" for n in notes] or ["- Nothing to flag. Every heading matches a program item."]),
+        *([f"- No program links for: {h}" for h in links["unmatched"][:10]] if links else []),
         "",
         "### Before merging",
         "",
         "- [ ] Picks and tiers make sense for this program.",
         "- [ ] Spot-check two or three write-ups against their abstracts.",
         "- [ ] Any heading flagged above is a real program item.",
+        *(["- [ ] Open two or three recordings found by search: right talk, right event."]
+          if links and links["video_from_search"] else []),
         "",
         "Edit the digest on this branch if needed. To redo it, close this PR and run **Digest Bot** with this key.",
     ]

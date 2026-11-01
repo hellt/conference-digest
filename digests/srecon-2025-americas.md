@@ -14,6 +14,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 
 ### Improving the SRE Experience for 10 Years as a Free, Open, and Automated Certificate Authority
 
+**Links:** [Recording](https://www.youtube.com/watch?v=9jfpUHwLQsU)
+
 *Matthew McPherrin, Internet Security Research Group (Opening Plenary)* — **Core**
 
 - **Why**: A decade of operational history from the team running Let's Encrypt — now securing 500M+ websites — on what it actually takes to run free, automated PKI issuance reliably at Internet scale, plus a preview of upcoming changes to the ecosystem every TLS operator depends on.
@@ -22,6 +24,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 - **Where applicable**: General; directly relevant to the same certificate-lifecycle/crypto-agility theme surfaced in the Netflix Enigma talk at USENIX Security '25 this cycle (see that digest) — shortening cert lifetimes make automated issuance like Let's Encrypt's the operational baseline, not an option.
 
 ### Please Give Me Back My Network Cables! On Networking Limits in AWS
+
+**Links:** [Recording](https://www.youtube.com/watch?v=2AehFxKlUgQ)
 
 *Steffen Gebert and Miklos Tirpak, emnify* — **Core**
 
@@ -32,6 +36,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 
 ### Securing Distributed Cache: Achieving Secure-by-Default with Key Challenges & Insights
 
+**Links:** [Recording](https://www.youtube.com/watch?v=FznMXU506F4)
+
 *Akashdeep Goel, Sriram Rangarajan, and Samuel Fu, Netflix* — **Core**
 
 - **Why**: A concrete account of retrofitting security (cert lifecycle management, secured proxy calls for polyglot clients) onto an already-massive production system — 400M requests/sec, 14PB of data — rather than designing it in from day one, which is the situation most real security-hardening projects actually face.
@@ -41,6 +47,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 
 ### Network Flow Data in the Cloud
 
+**Links:** [Recording](https://www.youtube.com/watch?v=uIfw0FBPpaQ)
+
 *Steve Dodd, Slack* — **Core**
 
 - **Why**: An argument that classical network-engineering techniques (graph theory, the discrete math underlying traditional routing/traffic-engineering work) are directly applicable to modern cloud service-oriented architecture — and a concrete method for per-service traffic attribution without paying for vendor flow-logging products.
@@ -49,6 +57,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 - **Where applicable**: General for large-scale cloud service infrastructure wanting traffic/dependency visibility; the technique is explicitly framed as reviving under-used traditional networking analysis for cloud-native environments.
 
 ### Chaos Experiments - Datacenter Stress Testing
+
+**Links:** [Recording](https://www.youtube.com/watch?v=g4QLtRKinRA)
 
 *Clayton Krueger, USAA* — **Core**
 
@@ -61,6 +71,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 
 ### Handling the Largest Domains Migration, Ever!
 
+**Links:** [Recording](https://www.youtube.com/watch?v=PEomHTcNFZs)
+
 *Franklin Angulo and Divya Kamat, Squarespace* — **Adjacent**
 
 - **Why**: A concrete account of migrating 10M+ domains (the assets behind Google Domains, acquired by Squarespace in 2023) at a scale not previously seen in the domain-registrar industry — a rare data point on DNS/registrar infrastructure operations at extreme scale.
@@ -69,6 +81,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 - **Where applicable**: Domain registrar/registry operations specifically; general lessons on very-large-scale record migration likely apply more broadly.
 
 ### Taming the Beast: Understanding and Harnessing the Power of HTTP Proxies
+
+**Links:** [Recording](https://www.youtube.com/watch?v=ihv5a_qIvPU)
 
 *Guillaume Quintard, Varnish Software* — **Adjacent**
 
@@ -79,6 +93,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 
 ### Hijacking Service Discovery to Simulate Dependency Degradation
 
+**Links:** [Recording](https://www.youtube.com/watch?v=ljrZo3j41b8)
+
 *Abdulrahman Alhamali, Shopify* — **Adjacent**
 
 - **Why**: A cleaner alternative to proxy-based dependency-degradation simulation (circuit breaking, bulkheading, graceful degradation testing) — directly relevant to anyone testing resilience patterns in a service-mesh or service-discovery-based architecture.
@@ -87,6 +103,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 - **Where applicable**: General for service-discovery-based architectures (Kubernetes, service mesh, or custom) wanting to test resiliency mechanisms without waiting for a real incident.
 
 ### Maturing Your Data Architecture in a Week: How Bluesky Survived
+
+**Links:** [Recording](https://www.youtube.com/watch?v=rSjcV22zx5w)
 
 *Jaz Volpert, Bluesky PBC* — **Adjacent**
 
@@ -97,6 +115,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 
 ### Is the S in SRE for "Security"?
 
+**Links:** [Recording](https://www.youtube.com/watch?v=AjJdB2ZMxe0)
+
 *John Benninghoff, Security Differently* — **Adjacent**
 
 - **Why**: A structured argument for the operational and organizational overlap between SRE and security practice (patching/attack-surface management, observability, incident response, postmortems) — useful framing for anyone trying to align SRE and security teams.
@@ -105,6 +125,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 - **Where applicable**: General organizational-design question for any org with separate SRE and security functions.
 
 ### Lies Programmers Believe About Memory
+
+**Links:** [Recording](https://www.youtube.com/watch?v=7sjyqiMjmZk)
 
 *Chris Down, Meta (Linux kernel memory management maintainer)* — **Adjacent**
 
@@ -117,6 +139,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 
 ### AIOps: Prove It! An Open Letter to Vendors Selling AI for SREs
 
+**Links:** [Recording](https://www.youtube.com/watch?v=twl_PdIpRA0)
+
 *Charity Majors and Fred Hebert, Honeycomb.io (Closing Plenary)* — **Wildcard**
 
 - **Why**: Not a networking or identity talk, but a pointed, credible-source (Honeycomb's own co-founder) counter-narrative to the AI-for-ops hype dominating this cycle's program by sheer volume — worth having as a calibration point against the many AI/ML-infra-ops talks elsewhere in the schedule.
@@ -126,6 +150,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 
 ### Systems Thinking with Poisoned Systems
 
+**Links:** [Recording](https://www.youtube.com/watch?v=X_JcHQGC9u4)
+
 *Hazel Weakly, Nivenly Foundation; Sandeep Kanabar, Gen* — **Wildcard**
 
 - **Why**: An unusual framing — applying "garbage in, garbage out" and data-poisoning concepts not to ML training data but to the practice of operating carefully-tuned production systems with AI assistance layered on top — a genuinely different angle on AI-ops risk than the typical "AI will help SREs" pitch.
@@ -134,6 +160,8 @@ Program source is the expanded schedule (titles, speakers, and abstracts; no PDF
 - **Where applicable**: General for any org introducing AI-assisted tooling into existing operational systems.
 
 ### Fully Automated HW SKU Selection System to Optimize Apache Pinot's Cost-to-Serve at LinkedIn
+
+**Links:** [Recording](https://www.youtube.com/watch?v=emKh1bV2IyI)
 
 *Jia Guo and Dino Occhialini, LinkedIn; Yifan (Sabrina) Zhao, Netflix* — **Wildcard**
 

@@ -200,6 +200,7 @@ conferences/
     janog.py          # JANOG timetable + per-session pages (Japanese)
     indico.py         # generic Indico export API (nog.fi, NetUK, GRNOG, DKNOG)
     itnog.py          # ITNOG program tables with PDF slides (Italian)
+    netnod.py        # Netnod Tech Meeting agenda paragraphs
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -444,6 +445,9 @@ run.
   redirect both resolves the event and names the export host.
 - **ITNOG**: a static page per meeting with program tables linking PDF
   decks. Italian titles are presented as-is; no abstracts are published.
+- **Netnod**: the Tech Meeting page renders its agenda as Drupal paragraphs
+  — time, title, speaker with company, presentation links. Titles and
+  speakers only; the URL carries the year and the page scan finds the date.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

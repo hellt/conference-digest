@@ -91,8 +91,8 @@ A deck published in two formats gets both links (`Slides (PDF) · Slides
 and, for a pick still without a recording, from a YouTube search. A found
 recording is linked only if its title or description carries the talk's title,
 the conference or its channel is named, and it was uploaded within eight months
-after the event. On the site the row becomes chips, and a talk recording gets a
-thumbnail that plays in place.
+after the event. On the site the row becomes muted source links separated by
+centered dots, and a talk recording gets a thumbnail that plays in place.
 
 **Recordings come later.** CNCF uploads KubeCon talks about two weeks after
 the event, USENIX and SIGCOMM within a few months. `links-refresh.yml` reruns
@@ -131,8 +131,11 @@ To move to a newer ToFaRev, run `make pin-tofarev SHA=<full commit sha>`.
 
 The blog is built with [Zensical](https://zensical.org/) exactly like
 containerlab.dev: `uv` runs the pinned Zensical from the `docs` dependency group
-(`pyproject.toml`, `uv.lock`), `mkdocs.yml` carries the theme settings, and
-`overrides/` + `docs/stylesheets/extra.css` are adapted from containerlab's.
+(`pyproject.toml`, `uv.lock`), and `mkdocs.yml` carries the theme settings.
+`overrides/` + `docs/stylesheets/extra.css` implement Quiet Signal in light and
+dark, with a locally served Inter font. Search results, heading permalinks,
+right-hand scroll tracking, theme persistence and instant navigation use
+Zensical’s native components.
 `scripts/build_site.py` turns every `digests/<key>.md` into a post (the digest
 text is unchanged; tiers and picks get markup for styling) and writes the
 Conferences tracker. `site.yml` builds it on PRs and publishes it to the

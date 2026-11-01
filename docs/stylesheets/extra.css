@@ -1,619 +1,252 @@
-/* Conference Digest theme.
-   The base is containerlab.dev's stylesheet: brand accent, thin scrollbars,
-   gradient quote bar, accent square bullets and the animated light/dark
-   switch (overrides/partials/palette.html). The digest-specific part at the
-   end styles the facts strip, tier sections and pick cards that
-   scripts/build_site.py marks up. */
-
-/* START brand accent (custom cyan, as on containerlab.dev) ------------------ */
+/* Quiet Signal. Zensical owns search, navigation, palette persistence and TOC
+   tracking; this stylesheet changes their presentation only. */
+@font-face {
+  font-family: Inter;
+  src: url('../fonts/inter.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
 :root {
-  --cd-brand: #00c9ff;
-  --cd-core: #00a8d6;
-  --cd-adjacent: #7c6cf2;
-  --cd-wildcard: #f08c00;
-  --cd-themes: #2f9e6e;
-  --cd-border: color-mix(in srgb, var(--md-default-fg-color) 14%, transparent);
-  --cd-surface: color-mix(in srgb, var(--md-default-fg-color) 3%, var(--md-default-bg-color));
+  --md-text-font: Inter, Arial, sans-serif;
+  --md-code-font: ui-monospace, SFMono-Regular, Consolas, monospace;
 }
-
+[data-md-color-scheme="default"] {
+  --signal-paper: #f4f6f5;
+  --signal-ink: #202b2d;
+  --signal-muted: #5b686a;
+  --signal-rule: #ccd3d2;
+  --signal-accent: #566140;
+  color-scheme: light;
+}
 [data-md-color-scheme="slate"] {
-  --cd-core: #00c9ff;
-  --cd-adjacent: #9d91ff;
-  --cd-wildcard: #ffb347;
-  --cd-themes: #4cc38a;
-  --cd-border: color-mix(in srgb, #fff 16%, transparent);
-  --cd-surface: color-mix(in srgb, #fff 4%, var(--md-default-bg-color));
+  --signal-paper: #1e2326;
+  --signal-ink: #efeee8;
+  --signal-muted: #a1aaa9;
+  --signal-rule: #3d4548;
+  --signal-accent: #c5c9ac;
+  color-scheme: dark;
 }
-
-[data-md-color-accent="custom"] {
-  --md-accent-fg-color: var(--cd-brand);
-  --md-accent-fg-color--transparent: color-mix(in srgb, var(--cd-brand) 10%, transparent);
+[data-md-color-scheme][data-md-color-primary] {
+  --md-default-bg-color: var(--signal-paper);
+  --md-default-bg-color--light: var(--signal-paper);
+  --md-default-fg-color: var(--signal-ink);
+  --md-default-fg-color--light: var(--signal-muted);
+  --md-default-fg-color--lighter: var(--signal-rule);
+  --md-default-fg-color--lightest: color-mix(in srgb, var(--signal-ink) 5%, transparent);
+  --md-typeset-color: var(--signal-ink);
+  --md-typeset-a-color: var(--signal-accent);
+  --md-primary-fg-color: var(--signal-paper);
+  --md-primary-bg-color: var(--signal-ink);
+  --md-primary-bg-color--light: var(--signal-muted);
+  --md-accent-fg-color: var(--signal-accent);
+  --md-accent-fg-color--transparent: color-mix(in srgb, var(--signal-accent) 10%, transparent);
+  --md-accent-bg-color: var(--signal-paper);
+  --md-code-bg-color: color-mix(in srgb, var(--signal-ink) 5%, var(--signal-paper));
+  --md-code-fg-color: var(--signal-ink);
+  --md-footer-bg-color: var(--signal-paper);
+  --md-footer-bg-color--dark: var(--signal-paper);
+  --md-footer-fg-color: var(--signal-ink);
+  --md-footer-fg-color--light: var(--signal-muted);
+  --md-footer-fg-color--lighter: var(--signal-muted);
 }
-
-/* [data-md-color-primary] raises specificity above the palette's own
-   primary-specific link colors (black primary turns links blue otherwise). */
-[data-md-color-scheme="default"][data-md-color-primary] {
-  --md-typeset-a-color: #0098c4;
+body { background: var(--signal-paper); }
+::selection { background: var(--signal-accent); color: var(--signal-paper); }
+a:focus-visible, button:focus-visible, label:focus-visible {
+  outline: 2px solid var(--signal-accent);
+  outline-offset: 4px;
 }
-
-[data-md-color-scheme="slate"][data-md-color-primary] {
-  --md-typeset-a-color: var(--cd-brand);
+.md-grid { max-width: 64rem; }
+.md-header {
+  background: var(--signal-paper);
+  color: var(--signal-ink);
+  box-shadow: none;
+  border-bottom: 1px solid var(--signal-rule);
 }
-
-.md-typeset .md-button--primary {
-  background-color: var(--cd-brand);
-  border-color: var(--cd-brand);
-  color: #00131f;
+.md-header__inner { padding-block: .45rem; }
+.md-header__title { font-size: .95rem; letter-spacing: -.035em; font-weight: 500; }
+.md-header__button.md-logo { color: var(--signal-ink); }
+.md-header__source { display: none; }
+.md-search__button {
+  border: 1px solid var(--signal-rule);
+  border-radius: 0;
+  background: transparent;
+  color: var(--signal-muted);
+  font-size: .65rem;
 }
+.md-tabs { background: var(--signal-paper); color: var(--signal-muted); border: 0; }
+.md-tabs__list { align-items: center; }
+.md-tabs__item { height: 2.6rem; }
+.md-tabs__link { font-size: .6rem; margin-top: .85rem; opacity: 1; }
+.md-tabs__link:hover, .md-tabs__item--active .md-tabs__link { color: var(--signal-ink); }
+.md-tabs__item--powered { margin-left: auto; }
+.md-tabs__link.md-tabs__powered { display: flex; align-items: center; gap: .55rem; }
+.md-tabs__powered-text { color: var(--signal-muted); font-size: .5rem; }
+.md-tabs__powered-logo { height: 1rem; width: auto; }
+.md-tabs__powered-logo--dark,
+[data-md-color-scheme="slate"] .md-tabs__powered-logo--light { display: none; }
+[data-md-color-scheme="slate"] .md-tabs__powered-logo--dark { display: inline; }
 
-.md-typeset .md-button--primary:hover,
-.md-typeset .md-button--primary:focus {
-  background-color: color-mix(in srgb, var(--cd-brand) 85%, #000);
-  border-color: color-mix(in srgb, var(--cd-brand) 85%, #000);
-  color: #00131f;
-}
-
-/* END brand accent */
-
-.md-grid {
-  max-width: 65rem;
-}
-
-.mdx-content__footer {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.mdx-content__footer a {
-  display: inline-block;
-  transition: transform 250ms cubic-bezier(0.1, 0.7, 0.1, 1), color 125ms;
-}
-
-.mdx-content__footer hr {
-  display: inline-block;
-  width: 40px;
-  margin: 16px;
-  vertical-align: middle;
-  background-color: currentColor;
-  border: none;
-}
-
-@keyframes heart {
-  0%, 40%, 80%, to { transform: scale(1) }
-  20%, 60% { transform: scale(1.15) }
-}
-
-.heart {
-  animation: heart 1s infinite;
-  color: #e91e63
-}
-
-/* START thin scrollbar styles */
-/* First unset all rules that break Chrome styling */
-.md-typeset pre>code,
-.md-search__scrollwrap,
-.md-sidebar__scrollwrap {
-  scrollbar-color: unset;
-  scrollbar-width: unset;
-}
-
-.md-typeset pre>code:hover,
-.md-search__scrollwrap:hover,
-.md-sidebar__scrollwrap:focus-within,
-.md-sidebar__scrollwrap:hover {
-  scrollbar-color: unset;
-}
-
-.md-tooltip2__inner {
-  scrollbar-width: unset;
-}
-
-/* Wrap new scrollbar properties in @supports rule for browsers without `::-webkit-scrollbar-*` support */
-/* This way chrome won't override `::-webkit-scrollbar-*` selectors */
-/* https://developer.chrome.com/docs/css-ui/scrollbar-styling */
-@supports not selector(::-webkit-scrollbar) {
-
-  .md-typeset pre>code,
-  .md-search__scrollwrap,
-  .md-sidebar__scrollwrap {
-    scrollbar-color: var(--md-default-fg-color--lighter) #0000;
-    scrollbar-width: thin;
-  }
-
-  .md-typeset pre>code:hover,
-  .md-search__scrollwrap:hover,
-  .md-sidebar__scrollwrap:focus-within,
-  .md-sidebar__scrollwrap:hover {
-    scrollbar-color: var(--md-accent-fg-color) #0000;
-  }
-
-  .md-tooltip2__inner {
-    scrollbar-width: thin;
-  }
-}
-
-/* Restore hover color for Chrome */
-@supports selector(::-webkit-scrollbar) {
-
-  .md-typeset pre>code:hover::-webkit-scrollbar-thumb,
-  .md-search__scrollwrap:hover::-webkit-scrollbar-thumb,
-  .md-sidebar__scrollwrap:focus-within::-webkit-scrollbar-thumb,
-  .md-sidebar__scrollwrap:hover::-webkit-scrollbar-thumb {
-    background-color: var(--md-accent-fg-color);
-  }
-}
-
-/* END thin scrollbar styles */
-
-/* quote styling */
-[dir="ltr"] .md-typeset blockquote {
-  position: relative;
-  padding-left: 1rem;
-  border: none;
-
-}
-
-[dir="ltr"] .md-typeset blockquote::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.1rem;
-  bottom: 0.1rem;
-  width: 0.15em;
-  border-radius: 0.25rem;
-  background: linear-gradient(to bottom, var(--md-default-fg-color--lighter), var(--md-accent-fg-color));
-}
-
-/* accent-colored square bullets for unordered lists */
-.md-typeset ul li {
-  list-style-type: square;
-}
-
-.md-typeset ul li::marker {
-  color: var(--md-accent-fg-color);
-}
-
-/* START light/dark switcher (styled after the search button) ------------------
-   The palette markup lives in overrides/partials/palette.html. The host
-   square borrows the search button's design language of the modern variant:
-   a 1.6rem square with 0.4rem corner radius on a faint --md-default-fg-color
-   fill (hover: fg--lighter, same as the search button). It holds a single
-   animated sun/moon glyph: the sun core scales up while a mask circle slides
-   in to carve the crescent and the beams fade out — the morph is driven
-   purely by the scheme attribute. The palette <input>s and their <label>
-   click targets keep the structure the Zensical palette JS expects (input,
-   label, input, label): the JS unhides the label of the active palette and
-   reacts to radio change events. The visible control is a persistent
-   sibling, so the glyph morphs in place instead of the whole button being
-   swapped on toggle. */
+/* Retain the existing native palette radio controls and sun/moon glyph. */
 .md-header__option[data-md-component="palette"] {
   position: relative;
   flex-shrink: 0;
   width: 1.6rem;
   height: 1.6rem;
-  margin: 0.2rem;
+  margin: .2rem;
 }
+.md-switch__target { position: absolute; inset: 0; cursor: pointer; }
+.md-switch__track { pointer-events: none; position: absolute; inset: 0; color: var(--signal-muted); }
+.md-switch__track .sun-and-moon { position: absolute; top: .375rem; left: .375rem; width: .85rem; height: .85rem; stroke-linecap: round; }
+.sun-and-moon > :is(.moon, .sun, .sun-beams) { transform-origin: center; }
+.sun-and-moon > .sun { fill: currentColor; }
+.sun-and-moon > .sun-beams { stroke: currentColor; stroke-width: 2px; }
+[data-md-color-scheme="slate"] .sun-and-moon > .sun { transform: scale(1.75); }
+[data-md-color-scheme="slate"] .sun-and-moon > .sun-beams { opacity: 0; }
+[data-md-color-scheme="slate"] .sun-and-moon .moon > circle { transform: translate(-7px); }
 
-/* invisible click targets; one per palette, toggled via the `hidden` attr */
-.md-switch__target {
-  position: absolute;
-  inset: 0;
-  cursor: pointer;
+/* An open reading surface with one right-hand contents rail. */
+.md-main__inner { margin-top: 2rem; }
+.md-content__inner { padding-top: 0; padding-bottom: 2rem; }
+.md-content--post { display: block; }
+.md-typeset { font-size: .75rem; line-height: 1.85; }
+.md-typeset h1 { color: var(--signal-ink); font-size: clamp(2rem, 4vw, 3.35rem); line-height: 1.12; font-weight: 350; letter-spacing: -.05em; margin: .8rem 0 1.4rem; }
+.md-typeset h2 { color: var(--signal-ink); font-size: 1.45rem; font-weight: 400; letter-spacing: -.035em; }
+.md-typeset h3 { color: var(--signal-ink); font-size: 1.2rem; line-height: 1.4; font-weight: 450; letter-spacing: -.025em; }
+.md-typeset h1, .md-typeset h2, .md-typeset h3 { scroll-margin-top: 7rem; }
+.md-typeset hr { border-color: var(--signal-rule); }
+.md-typeset blockquote { border-left: 1px solid var(--signal-rule); color: var(--signal-muted); }
+.md-typeset .headerlink {
+  display: inline;
+  visibility: visible;
+  opacity: .6;
+  font-size: .65em;
+  font-weight: 100;
+  color: var(--signal-muted);
+  margin-left: .45em;
+  text-decoration: none;
 }
+.md-typeset .headerlink:hover, .md-typeset .headerlink:focus-visible { opacity: 1; color: var(--signal-accent); }
+.cd-back { display: inline-block; font-size: .6rem; color: var(--signal-muted) !important; margin-bottom: .65rem; }
+.cd-post-toolbar { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.cd-post-toolbar > span { font-size: .55rem; color: var(--signal-muted); }
+.md-content--post .md-content__inner > p { color: var(--signal-muted); }
 
-/* the host square, same surface as the search button */
-.md-switch__track {
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  border-radius: 0.4rem;
-  background-color: var(--md-default-fg-color--lightest);
-  color: var(--md-default-fg-color);
-  transition: background-color 0.4s, color 0.4s;
-}
+/* Compact introduction, followed immediately by Zensical's actual post list. */
+.md-typeset .cd-hero { padding: .4rem 0 1.8rem; max-width: 48rem; }
+.md-typeset .cd-eyebrow { font-size: .5rem; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 1rem; color: var(--signal-muted); }
+.md-typeset .cd-hero h1 { font-size: clamp(2.2rem, 4.7vw, 3.8rem); margin: 0 0 .8rem; }
+.md-typeset .cd-hero h1 em { font-style: normal; font-weight: 300; color: var(--signal-accent); }
+.md-typeset .cd-hero > p:last-child { max-width: 34rem; margin: 0; color: var(--signal-muted); font-size: .7rem; }
+.md-typeset .cd-hero .headerlink { display: none; }
+.md-content__inner > header.md-typeset > h2 { padding: 1.1rem 0; margin: 0; border-top: 1px solid var(--signal-rule); font-size: 1.25rem; }
+.md-content__inner > header.md-typeset > h2 .headerlink { display: none; }
+.md-post--excerpt { display: grid; grid-template-columns: 9rem minmax(0,1fr); gap: 1.4rem; margin: 0; padding: 1.5rem 0; border-top: 1px solid var(--signal-rule); }
+.md-post--excerpt .md-post__header { margin: 0; }
+.md-post--excerpt .md-post__authors { display: none; }
+.md-post--excerpt .md-meta__list { display: flex; flex-direction: column; align-items: flex-start; gap: .35rem; font-size: .55rem; color: var(--signal-muted); }
+.md-post--excerpt .md-meta__item { margin: 0; }
+.md-post--excerpt .md-meta__item::after { display: none; }
+.md-post--excerpt .md-post__content { margin: 0; min-width: 0; }
+.md-post--excerpt .md-post__content h2 { margin: 0 0 .45rem; font-size: 1.1rem; font-weight: 450; line-height: 1.4; }
+.md-post--excerpt .md-post__content h2 a { color: var(--signal-ink); }
+.md-post--excerpt .md-post__content h2 a:hover { color: var(--signal-accent); }
+.md-post--excerpt .md-post__content > p { margin: .4rem 0; color: var(--signal-muted); font-size: .65rem; line-height: 1.75; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.md-post--excerpt .md-post__action { margin-top: .65rem; font-size: .6rem; }
+.md-post--excerpt .md-post__action a { color: var(--signal-ink); text-decoration: underline; text-underline-offset: .25em; }
+.md-post--excerpt .md-post__action a::after { content: ' →'; }
 
-.md-header__option[data-md-component="palette"]:hover .md-switch__track {
-  background-color: var(--md-default-fg-color--lighter);
-}
-
-/* the animated sun/moon glyph — sized so its painted extent matches the
-   magnifier's (~16px): lucide-search's glyph spans 18/24 of its viewBox,
-   while the sun's beams reach the box edges (round line caps), so the glyph
-   box is tuned to 0.85rem. The dark crescent's bite removes its widest edge,
-   so in dark mode the whole glyph grows slightly (12%) to restore the same
-   painted extent as the sun. */
-.md-switch__track .sun-and-moon {
-  position: absolute;
-  top: 0.375rem;
-  left: 0.375rem;
-  width: 0.85rem;
-  height: 0.85rem;
-  stroke-linecap: round;
-}
-
-[data-md-color-scheme="slate"] .md-switch__track .sun-and-moon {
-  transform: scale(1.12);
-}
-
-.sun-and-moon > :is(.moon, .sun, .sun-beams) {
-  transform-origin: center center;
-}
-
-.sun-and-moon > .sun {
-  fill: currentColor;
-}
-
-.sun-and-moon > .sun-beams {
-  stroke: currentColor;
-  stroke-width: 2px;
-}
-
-/* resting states: full sun with beams, or crescent with the beams gone */
-.sun-and-moon > .sun-beams {
-  opacity: 1;
-  transform: rotate(0deg);
-}
-
-.sun-and-moon .moon > circle {
-  transform: translate(0);
-}
-
-[data-md-color-scheme="slate"] .sun-and-moon > .sun {
-  transform: scale(1.75);
-}
-
-[data-md-color-scheme="slate"] .sun-and-moon > .sun-beams {
-  opacity: 0;
-  transform: rotate(-25deg);
-}
-
-[data-md-color-scheme="slate"] .sun-and-moon .moon > circle {
-  transform: translate(-7px);
-}
-
-/* the palette CSS zeroes every transition while data-md-color-switching is
-   set (it wraps each scheme change), which would skip the morph; re-declare
-   the glyph's own timing with a specificity that beats the zeroing. The
-   outer glyph scale rides the same timing as the core scale. */
-@media (prefers-reduced-motion: no-preference) {
-  .md-switch__track .sun-and-moon,
-  .sun-and-moon > .sun {
-    transition: transform 0.5s cubic-bezier(0.5, 1.25, 0.75, 1.25) !important;
-  }
-
-  .sun-and-moon > .sun-beams {
-    transition:
-      transform 0.5s cubic-bezier(0.5, 1.5, 0.75, 1.25),
-      opacity 0.5s cubic-bezier(0.25, 0, 0.3, 1) !important;
-  }
-
-  .sun-and-moon .moon > circle {
-    transition: transform 0.25s cubic-bezier(0, 0, 0, 1) !important;
-  }
-
-  [data-md-color-scheme="slate"] .md-switch__track .sun-and-moon,
-  [data-md-color-scheme="slate"] .sun-and-moon > .sun {
-    transition: transform 0.25s cubic-bezier(0.25, 0, 0.3, 1) !important;
-  }
-
-  [data-md-color-scheme="slate"] .sun-and-moon > .sun-beams {
-    transition:
-      transform 0.15s cubic-bezier(0.5, 1.5, 0.75, 1.25),
-      opacity 0.15s cubic-bezier(0.25, 0, 0.3, 1) !important;
-  }
-
-  [data-md-color-scheme="slate"] .sun-and-moon .moon > circle {
-    transition: transform 0.5s cubic-bezier(0, 0, 0, 1) 0.25s !important;
-  }
-}
-
-/* END light/dark switcher */
-/* START digest site ----------------------------------------------------------
-   Hero on the home page. */
-.md-typeset .cd-hero {
-  margin: 0 0 2rem;
-  padding: 1.2rem 1.4rem;
-  border: 1px solid var(--cd-border);
-  border-radius: 0.8rem;
-  background:
-    radial-gradient(120% 140% at 100% 0%, color-mix(in srgb, var(--cd-brand) 14%, transparent) 0%, transparent 55%),
-    var(--cd-surface);
-}
-
-.md-typeset .cd-hero > p:first-child {
-  margin-top: 0;
-  font-size: 1.05rem;
-  line-height: 1.5;
-}
-
-.md-typeset .cd-hero .md-button {
-  margin: 0.2rem 0.3rem 0.2rem 0;
-  font-size: 0.7rem;
-  padding: 0.4em 1.1em;
-  border-radius: 2rem;
-}
-
-/* Post excerpts on the index read as cards. */
-.md-post--excerpt {
-  max-width: 44rem;
-  margin: 0 0 1.4rem;
-  padding: 0.4rem 1.2rem 0.6rem;
-  border: 1px solid var(--cd-border);
-  border-radius: 0.8rem;
-  background: var(--cd-surface);
-  transition: border-color 125ms, box-shadow 125ms;
-}
-
-.md-post--excerpt:hover {
-  border-color: color-mix(in srgb, var(--cd-brand) 55%, transparent);
-  box-shadow: 0 0.3rem 1rem color-mix(in srgb, var(--cd-brand) 12%, transparent);
-}
-
-.md-post--excerpt .md-post__header {
-  margin-top: 0.6rem;
-}
-
-/* Facts strip under the post title. */
-.md-typeset .digest-facts p {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0 0 1.6rem;
-}
-
-.md-typeset .digest-fact {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35em;
-  padding: 0.2rem 0.65rem;
-  border: 1px solid var(--cd-border);
-  border-radius: 2rem;
-  background: var(--cd-surface);
-  font-size: 0.68rem;
-  line-height: 1.4;
-}
-
-.md-typeset .digest-fact .twemoji {
-  color: var(--md-accent-fg-color);
-}
-
-/* Tier sections: a colored dot and a rule that fades out. */
-.tier-core { --tier: var(--cd-core); }
-.tier-adjacent { --tier: var(--cd-adjacent); }
-.tier-wildcard { --tier: var(--cd-wildcard); }
-.tier-themes { --tier: var(--cd-themes); }
-.pick-core { --tier: var(--cd-core); }
-.pick-adjacent { --tier: var(--cd-adjacent); }
-.pick-wildcard { --tier: var(--cd-wildcard); }
-
-.md-typeset h2.tier {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-top: 2.4rem;
-  font-weight: 700;
-  letter-spacing: 0;
-}
-
-.md-typeset h2.tier::before {
-  content: "";
-  flex: none;
-  width: 0.65rem;
-  height: 0.65rem;
-  border-radius: 50%;
-  background: var(--tier);
-  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--tier) 20%, transparent);
-}
-
-.md-typeset h2.tier::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  margin-left: 0.4rem;
-  background: linear-gradient(to right, color-mix(in srgb, var(--tier) 60%, transparent), transparent);
-}
-
-.md-typeset h2.tier .headerlink {
-  order: 3;
-}
-
-/* Each pick is a card with a tier-colored edge. */
-.md-typeset .pick {
-  position: relative;
-  margin: 1.1rem 0;
-  padding: 0.1rem 1.2rem 0.3rem 1.4rem;
-  border: 1px solid var(--cd-border);
-  border-radius: 0.7rem;
-  background: var(--cd-surface);
-}
-
-.md-typeset .pick::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.9rem;
-  bottom: 0.9rem;
-  width: 0.2rem;
-  border-radius: 0 0.2rem 0.2rem 0;
-  background: var(--tier);
-}
-
-.md-typeset .pick > h3 {
-  margin: 0.9rem 0 0.4rem;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.md-typeset .pick > h3 + p > em:only-child {
-  color: var(--md-default-fg-color--light);
-}
-
-/* Why / What / How / Where applicable read as labelled rows. */
-.md-typeset .pick ul {
-  margin-left: 0;
-  list-style: none;
-}
-
-.md-typeset .pick ul > li {
-  margin-left: 0;
-  list-style: none;
-}
-
+/* Digest metadata and resources are text separated by centered dots. */
+.md-typeset .digest-facts { padding: .85rem 0; margin: 1.4rem 0 2rem; border-block: 1px solid var(--signal-rule); }
+.md-typeset .digest-facts p { display: flex; flex-wrap: wrap; gap: .3rem 0; margin: 0; }
+.md-typeset .digest-fact { display: inline; color: var(--signal-muted); font-size: .55rem; line-height: 1.8; }
+.md-typeset .digest-fact + .digest-fact::before { content: '·'; margin: 0 .55rem; }
+.md-typeset .digest-fact a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
+.md-typeset h2.tier { border-top: 1px solid var(--signal-rule); padding-top: 1.3rem; margin-top: 2.4rem; }
+.md-typeset .digest-facts + h2.tier { border-top: 0; padding-top: 0; }
+.md-typeset .pick { margin: 1.5rem 0 2.4rem; padding: 0 0 1.6rem; border-bottom: 1px solid var(--signal-rule); }
+.md-typeset .pick h3 { margin: .4rem 0 .6rem; }
+.md-typeset .pick-links p { display: flex; flex-wrap: wrap; gap: .3rem 0; margin: .5rem 0 1rem; }
+.md-typeset .pick-link { display: inline; color: var(--signal-muted); font-size: .6rem; border: 0; border-radius: 0; background: none; }
+.md-typeset .pick-link + .pick-link::before { content: '·'; display: inline-block; margin: 0 .6rem; color: var(--signal-muted); font-weight: 100; }
+.md-typeset .pick-link:hover { color: var(--signal-accent); text-decoration: underline; text-underline-offset: .2em; }
+.md-typeset .pick > p > em:only-child { color: var(--signal-muted); font-size: .65rem; }
+.md-typeset .pick ul { margin-left: 0; list-style: none; }
+.md-typeset .pick ul > li { margin-left: 0; margin-bottom: .75rem; list-style: none; }
 .md-typeset .pick ul > li > strong:first-child,
 .md-typeset .pick ul > li > p:first-child > strong:first-child,
-.md-typeset .pick > p > strong:first-child {
-  color: var(--tier);
-  font-weight: 700;
+.md-typeset .pick > p > strong:first-child { color: var(--signal-accent); font-weight: 550; }
+
+/* Full-width recording stays after the speaker and before Why. */
+.md-typeset .pick-video { margin: 1.2rem 0; }
+.md-typeset .pick-video__thumb, .md-typeset .pick-video__frame { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 0; border-radius: 0; background: #000; }
+.md-typeset .pick-video__thumb img { width: 100%; height: 100%; object-fit: cover; }
+.md-typeset .pick-video__play { position: absolute; inset: 50% auto auto 50%; width: 4.2rem; height: 2.9rem; transform: translate(-50%,-50%); border-radius: .3rem; background: rgb(0 0 0 / .75); }
+.md-typeset .pick-video__play::after { content: ''; position: absolute; inset: 50% auto auto 54%; transform: translate(-50%,-50%); border-style: solid; border-width: .6rem 0 .6rem 1rem; border-color: transparent transparent transparent #fff; }
+.md-typeset .pick-video__thumb:hover .pick-video__play { background: #b52424; }
+
+/* The generated TOC is also Zensical's scrollspy, including instant navigation. */
+.md-nav--secondary .md-nav__title { font-size: .5rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--signal-muted); box-shadow: none; background: var(--signal-paper); padding-block: .4rem .6rem; }
+.md-nav--secondary .md-nav__link { font-size: .57rem; line-height: 1.6; color: var(--signal-muted); }
+.md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav__link { font-size: .65rem; font-weight: 450; margin-top: .9rem; }
+.md-nav--secondary .md-nav__link--active { color: var(--signal-accent); font-weight: 600; }
+.md-nav--secondary .md-nav__link:hover { color: var(--signal-ink); }
+.md-nav--secondary .md-ellipsis { white-space: normal; }
+.md-typeset .admonition, .md-typeset details { border: 1px solid var(--signal-rule); border-radius: 0; box-shadow: none; background: transparent; }
+.md-typeset .admonition-title { background: color-mix(in srgb, var(--signal-ink) 4%, transparent); }
+.md-typeset table:not([class]) { border: 1px solid var(--signal-rule); border-radius: 0; font-size: .65rem; }
+.md-typeset table:not([class]) th { background: color-mix(in srgb, var(--signal-ink) 4%, transparent); }
+.md-footer { border-top: 1px solid var(--signal-rule); }
+.md-footer-meta { background: transparent; }
+.md-copyright { font-size: .55rem; line-height: 1.8; color: var(--signal-muted); }
+.md-footer__title { font-size: .8rem; }
+.md-top { border: 1px solid var(--signal-rule); border-radius: 0; box-shadow: none; }
+
+@media(min-width:76.25em) {
+  .md-sidebar--primary { display: none; }
+  .md-sidebar--secondary { width: 13rem; margin-left: 2.5rem; }
+  .md-sidebar--secondary .md-sidebar__inner { width: 13rem; }
+  .md-content__inner, [dir=ltr] .md-sidebar--primary:not([hidden])~.md-content>.md-content__inner { margin-left: .6rem; }
+  .md-content--post .md-content__inner { max-width: 42rem; margin-right: auto; }
+}
+@media(max-width:76.234375em) {
+  .md-grid { max-width: calc(100% - 2rem); }
+  .md-main__inner { margin-top: 1.4rem; }
+  .md-typeset h1 { font-size: 2.4rem; }
+}
+@media(max-width:59.984375em) {
+  .md-sidebar--secondary .md-sidebar__inner { border: 1px solid var(--signal-rule); border-radius: 0; background: var(--signal-paper); }
+  .md-sidebar--secondary .md-sidebar-button { border-radius: 0; border: 1px solid var(--signal-rule); box-shadow: none; }
+}
+@media(max-width:44.984375em) {
+  .md-grid { max-width: 100%; }
+  .md-header__inner { padding-block: .25rem; }
+  .md-header__title { font-size: .8rem; margin-left: 0; }
+  .md-content__inner { margin-inline: 1.1rem; }
+  .md-typeset .cd-hero { padding-bottom: 1.3rem; }
+  .md-typeset .cd-hero h1 { font-size: 2rem; }
+  .md-typeset h1 { font-size: 2rem; }
+  .md-typeset h2 { font-size: 1.3rem; }
+  .md-typeset h3 { font-size: 1.1rem; }
+  .md-post--excerpt { display: block; padding: 1.2rem 0; }
+  .md-post--excerpt .md-post__header { margin-bottom: .5rem; }
+  .md-post--excerpt .md-meta__list { flex-direction: row; flex-wrap: wrap; gap: .3rem .65rem; }
+  .md-typeset .digest-fact { font-size: .55rem; }
+  .md-typeset .digest-fact + .digest-fact::before { margin-inline: .4rem; }
+}
+@media(prefers-reduced-motion:reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
 }
 
-/* Themes: an accented panel. */
-.md-typeset h2.tier-themes ~ ul {
-  padding: 0.6rem 1.2rem 0.6rem 2rem;
-  border-radius: 0.7rem;
-  background: color-mix(in srgb, var(--cd-themes) 7%, transparent);
-}
-
-/* Wide tracker table. */
-.md-typeset table:not([class]) {
-  font-size: 0.7rem;
-}
-
-/* END digest site */
-
-/* Links row under each pick: abstract, paper, slides, recording as chips. */
-.md-typeset .pick-links p {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  margin: 0.2rem 0 0.8rem;
-}
-
-.md-typeset .pick-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3em;
-  padding: 0.15rem 0.6rem;
-  border: 1px solid var(--cd-border);
-  border-radius: 2rem;
-  background: var(--md-default-bg-color);
-  color: var(--md-default-fg-color);
-  font-size: 0.68rem;
-  line-height: 1.5;
-  text-decoration: none;
-  transition: border-color 125ms, color 125ms;
-}
-
-.md-typeset .pick-link:hover,
-.md-typeset .pick-link:focus-visible {
-  border-color: var(--tier, var(--cd-brand));
-  color: var(--tier, var(--cd-brand));
-}
-
-.md-typeset .pick-link .twemoji {
-  color: var(--tier, var(--md-accent-fg-color));
-}
-
-/* A talk recording opens the card, as wide as the card; a click swaps in the player. */
-.md-typeset .pick-video {
-  margin: 1rem 0 0.2rem;
-}
-
-.md-typeset .pick-video__thumb,
-.md-typeset .pick-video__frame {
-  position: relative;
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border: 0;
-  border-radius: 0.5rem;
-  background: #000;
-}
-
-.md-typeset .pick-video__thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.9;
-  transition: opacity 125ms;
-}
-
-.md-typeset .pick-video__thumb:hover img {
-  opacity: 1;
-}
-
-.md-typeset .pick-video__play {
-  position: absolute;
-  inset: 50% auto auto 50%;
-  width: 4.2rem;
-  height: 2.9rem;
-  transform: translate(-50%, -50%);
-  border-radius: 0.6rem;
-  background: rgb(0 0 0 / 0.72);
-  transition: background 125ms;
-}
-
-.md-typeset .pick-video__play::after {
-  content: "";
-  position: absolute;
-  inset: 50% auto auto 54%;
-  transform: translate(-50%, -50%);
-  border-style: solid;
-  border-width: 0.6rem 0 0.6rem 1rem;
-  border-color: transparent transparent transparent #fff;
-}
-
-.md-typeset .pick-video__thumb:hover .pick-video__play {
-  background: #f00;
-}
-
-/* "Powered by Nebius Token Factory" as the last tab, as in ToFaRev's reviews.
-   The text matches the other tabs (their 0.7 opacity, full on hover); the logo
-   stays at full opacity, and its negative margins keep the row at the tabs'
-   line height so the text sits on the same line as theirs. */
-.md-tabs__item--powered {
-  margin-left: 0.2rem;
-}
-
-.md-tabs__link.md-tabs__powered {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  opacity: 1;
-}
-
-/* A slanted hairline ("/") sets the credit apart from the site's own tabs. */
-.md-tabs__link.md-tabs__powered::before {
-  content: "";
-  flex: none;
-  width: 1px;
-  height: 0.9rem;   /* within the tabs' line height, or it lowers the text */
-  margin-right: 0.55rem;
-  background: var(--md-default-fg-color--lighter);
-  transform: rotate(20deg);
-}
-
-.md-tabs__powered-text {
-  opacity: 0.7;
-  transition: opacity 250ms;
-}
-
-.md-tabs__powered:hover .md-tabs__powered-text,
-.md-tabs__powered:focus-visible .md-tabs__powered-text {
-  opacity: 1;
-}
-
-.md-tabs__powered-logo {
-  width: auto;
-  height: 1.05rem;
-  margin-block: -0.07rem;
-}
-
-.md-tabs__powered-logo--dark,
-[data-md-color-scheme="slate"] .md-tabs__powered-logo--light {
-  display: none;
-}
-
-[data-md-color-scheme="slate"] .md-tabs__powered-logo--dark {
-  display: inline;
+/* Search's native shadow DOM inherits this theme font variable. */
+:root { --md-text-font-family: Inter, Arial, sans-serif; }
+.md-header__topic { font-weight: 500; }
+.md-nav--secondary .md-typeset { font: inherit; letter-spacing: inherit; }
+/* Keep the provider credit visible beside the mobile drawer navigation. */
+@media(max-width:76.234375em) {
+  .md-tabs { display: block; }
+  .md-tabs__item:not(.md-tabs__item--powered) { display: none; }
+  .md-tabs__item--powered { margin-left: 0; height: 2rem; }
+  .md-tabs__link.md-tabs__powered { margin-top: .45rem; }
+  .md-tabs__list { padding-left: .6rem; }
 }

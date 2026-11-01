@@ -15,6 +15,7 @@
 #   name       Human-readable conference + year.
 #   type       One of: academic | standards | vendor | operator | security
 #              Drives how the universal prompt tells Claude to read the program.
+#   start_date Optional ISO date the conference program began, for the site header.
 #   end_date   ISO date (YYYY-MM-DD) the event ended. Selection is based on this.
 #   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog | autocon
 #   program_url
@@ -51,6 +52,7 @@ conferences:
   - key: nsdi-2025
     name: "NSDI '25 (22nd USENIX Symposium on Networked Systems Design and Implementation)"
     type: academic
+    start_date: 2025-04-28
     end_date: 2025-04-30
     fetcher: usenix
     run_location: local
@@ -61,6 +63,7 @@ conferences:
   - key: usenix-security-2025
     name: "USENIX Security '25 (34th USENIX Security Symposium)"
     type: academic
+    start_date: 2025-08-13
     end_date: 2025-08-15
     fetcher: usenix
     run_location: local
@@ -71,6 +74,7 @@ conferences:
   - key: srecon-2025-americas
     name: "SREcon25 Americas"
     type: operator
+    start_date: 2025-03-25
     end_date: 2025-03-27
     fetcher: usenix
     run_location: local
@@ -88,6 +92,7 @@ conferences:
   - key: ietf-122
     name: "IETF 122 (Bangkok)"
     type: standards
+    start_date: 2025-03-15
     end_date: 2025-03-21
     fetcher: ietf
     program_url: "https://datatracker.ietf.org/meeting/122/agenda.json"
@@ -97,6 +102,7 @@ conferences:
   - key: ietf-123
     name: "IETF 123 (Madrid)"
     type: standards
+    start_date: 2025-07-19
     end_date: 2025-07-25
     fetcher: ietf
     program_url: "https://datatracker.ietf.org/meeting/123/agenda.json"
@@ -114,6 +120,7 @@ conferences:
   - key: kubecon-eu-2025
     name: "KubeCon + CloudNativeCon Europe 2025 (London)"
     type: vendor
+    start_date: 2025-04-01
     end_date: 2025-04-04
     fetcher: sched
     program_url: "https://kccnceu2025.sched.com/list/descriptions/"
@@ -123,7 +130,8 @@ conferences:
   - key: kubecon-na-2025
     name: "KubeCon + CloudNativeCon North America 2025"
     type: vendor
-    end_date: 2025-11-14
+    start_date: 2025-11-10
+    end_date: 2025-11-13  # https://events.linuxfoundation.org/sponsor-cncf-events
     fetcher: sched
     program_url: "https://kccncna2025.sched.com/list/descriptions/"
     manual_fallback_url: "https://kccncna2025.sched.com/"
@@ -139,6 +147,7 @@ conferences:
   - key: sigcomm-2025
     name: "ACM SIGCOMM 2025 (Coimbra)"
     type: academic
+    start_date: 2025-09-08
     end_date: 2025-09-11
     fetcher: sigcomm
     program_url: "https://conferences.sigcomm.org/sigcomm/2025/program/papers-info/"
@@ -155,6 +164,7 @@ conferences:
   - key: netdev-0x1a
     name: "Netdev 0x1A (Rome)"
     type: vendor
+    start_date: 2026-07-13
     end_date: 2026-07-16
     fetcher: netdev
     program_url: "https://netdevconf.info/0x1A/pages/sessions.html"
@@ -171,7 +181,8 @@ conferences:
   - key: kubecon-eu-2026
     name: "KubeCon + CloudNativeCon Europe 2026"
     type: vendor
-    end_date: 2026-03-27
+    start_date: 2026-03-23
+    end_date: 2026-03-26  # https://events.linuxfoundation.org/about/calendar/archive/
     fetcher: sched
     program_url: "https://kccnceu2026.sched.com/list/descriptions/"
     manual_fallback_url: "https://kccnceu2026.sched.com/"
@@ -192,6 +203,7 @@ conferences:
   - key: ietf-124
     name: "IETF 124 (Montreal)"
     type: standards
+    start_date: 2025-11-01
     end_date: 2025-11-07
     fetcher: ietf
     program_url: "https://datatracker.ietf.org/meeting/124/agenda.json"
@@ -202,6 +214,7 @@ conferences:
   - key: ietf-125
     name: "IETF 125 (Shenzhen)"
     type: standards
+    start_date: 2026-03-14
     end_date: 2026-03-20
     fetcher: ietf
     program_url: "https://datatracker.ietf.org/meeting/125/agenda.json"
@@ -212,6 +225,7 @@ conferences:
   - key: ietf-126
     name: "IETF 126 (Vienna)"
     type: standards
+    start_date: 2026-07-18
     end_date: 2026-07-24
     fetcher: ietf
     program_url: "https://datatracker.ietf.org/meeting/126/agenda.json"
@@ -252,6 +266,7 @@ conferences:
   - key: nanog-96
     name: "NANOG 96"
     type: operator
+    start_date: 2026-02-02
     end_date: 2026-02-04
     fetcher: nanog
     program_url: "https://nanog.org/events/nanog-96/agenda/"
@@ -261,6 +276,7 @@ conferences:
   - key: nanog-97
     name: "NANOG 97"
     type: operator
+    start_date: 2026-06-01
     end_date: 2026-06-03
     fetcher: nanog
     program_url: "https://nanog.org/events/nanog-97/agenda/"
@@ -270,6 +286,7 @@ conferences:
   - key: nanog-98
     name: "NANOG 98"
     type: operator
+    start_date: 2026-10-19
     end_date: 2026-10-21
     fetcher: nanog
     program_url: "https://nanog.org/events/nanog-98/agenda/"
@@ -279,6 +296,7 @@ conferences:
   - key: autocon-3
     name: "AutoCon 3 (Prague)"
     type: operator
+    start_date: 2025-05-28
     end_date: 2025-05-30
     fetcher: autocon
     program_url: "https://networkautomation.forum/autocon3"
@@ -288,6 +306,7 @@ conferences:
   - key: autocon-4
     name: "AutoCon 4 (Austin)"
     type: operator
+    start_date: 2025-11-19
     end_date: 2025-11-21
     fetcher: autocon
     program_url: "https://networkautomation.forum/autocon4"
@@ -297,6 +316,7 @@ conferences:
   - key: autocon-5
     name: "AutoCon 5 (Munich)"
     type: operator
+    start_date: 2026-06-10
     end_date: 2026-06-12
     fetcher: autocon
     program_url: "https://networkautomation.forum/autocon5"

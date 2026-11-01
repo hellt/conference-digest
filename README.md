@@ -183,6 +183,7 @@ conferences/
     nlnog.py         # NLNOG Day program tables, slides and recordings (no abstracts)
     denog.py         # official DENOG agenda -> Pretalx JSON export
     ccs.py           # ACM CCS schedule: sessions, paper titles, authors
+    imc.py           # ACM IMC program: papers, abstracts, doi.org links
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -333,6 +334,10 @@ run.
   times. Abstracts and papers are ACM DL-only, so prompts say picks are written
   from title, authors and session. The schedule appears about two weeks before
   the event; `start: 2026` because older editions keep no schedule page.
+- **IMC**: the program page is server-rendered with every paper's title,
+  authors, full abstract and doi.org Paper link, grouped by session. The
+  page anchors double as each item's `page:` link. Same static site family as
+  SIGCOMM; no bot blocking observed.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

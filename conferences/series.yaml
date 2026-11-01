@@ -283,3 +283,18 @@ series:
     program_url_template: "https://www.sigsac.org/ccs/CCS{year}/program/schedule.html"
     manual_fallback_url_template: "https://www.sigsac.org/ccs/CCS{year}/program/schedule.html"
     notes: "Top-tier security research: applied crypto, authentication and identity, network security, systems security, measurement. Papers and abstracts are ACM DL-only; the schedule carries titles, authors and sessions."
+
+  # ACM IMC: the program page lists every paper with authors, a full abstract
+  # and the doi.org Paper link, grouped by session. Older editions (2025 and
+  # back) are not kept on this program layout, so the series starts at 2026.
+  - series: imc
+    enumerate: year
+    key_template: "imc-{year}"
+    name_template: "ACM IMC {year}"
+    type: academic
+    fetcher: imc
+    start: 2026
+    end_date_hint: "10-31"
+    program_url_template: "https://conferences.sigcomm.org/imc/{year}/program/"
+    manual_fallback_url_template: "https://conferences.sigcomm.org/imc/{year}/program/"
+    notes: "Premier Internet measurement research: datacenter and CDN measurement, topology and interdomain, transport, DNS, security and censorship measurement. Papers link doi.org ACM DL pages."

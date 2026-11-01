@@ -12,6 +12,8 @@ from .nlnog import NlnogFetcher
 from .denog import DenogFetcher
 from .gtc import GtcFetcher
 from .ccs import CcsFetcher
+from .imc import ImcFetcher
+from .imc import ImcFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -28,6 +30,7 @@ FETCHERS = {
     "denog": DenogFetcher(),
     "gtc": GtcFetcher(),
     "ccs": CcsFetcher(),
+    "imc": ImcFetcher(),
 }
 
 

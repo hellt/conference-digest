@@ -17,7 +17,7 @@
 #              Drives how the universal prompt tells Claude to read the program.
 #   start_date Optional ISO date the conference program began, for the site header.
 #   end_date   ISO date (YYYY-MM-DD) the event ended. Selection is based on this.
-#   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog | autocon | ovscon | ciscolive
+#   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog | autocon | ovscon | ciscolive | ripe | nlnog | denog
 #   program_url
 #              The machine-or-human-readable program endpoint the fetcher pulls.
 #   manual_fallback_url
@@ -372,3 +372,73 @@ conferences:
     manual_fallback_url: "https://www.openvswitch.org/support/ovscon2026/"
     discovered: 2026-11-01
     notes: "OVS/OVN and OVN-Kubernetes: virtual networking, BGP/EVPN fabric integration, hardware offload, DPUs, network security and scale. Auto-discovered 2026-11-01 from series 'ovscon'. end_date taken from the source."
+
+  - key: ripe-91
+    name: "RIPE 91 (Bucharest)"
+    type: operator
+    start_date: 2025-10-20
+    end_date: 2025-10-24
+    fetcher: ripe
+    program_url: "https://ripe91.ripe.net/programme/meeting-plan/"
+    manual_fallback_url: "https://ripe91.ripe.net/programme/meeting-plan/"
+    notes: "European network operators: routing security, IPv6, peering, DNS, measurement and automation. Full abstracts and materials from individual talk pages."
+
+  - key: ripe-92
+    name: "RIPE 92 (Edinburgh)"
+    type: operator
+    start_date: 2026-05-18
+    end_date: 2026-05-22
+    fetcher: ripe
+    program_url: "https://ripe92.ripe.net/programme/meeting-plan/"
+    manual_fallback_url: "https://ripe92.ripe.net/programme/meeting-plan/"
+    notes: "European network operators: routing security, IPv6, peering, DNS, measurement and automation. Full abstracts and materials from individual talk pages."
+
+  - key: nlnog-2025
+    name: "NLNOG Day 2025 (Amsterdam)"
+    type: operator
+    start_date: 2025-09-30
+    end_date: 2025-09-30
+    fetcher: nlnog
+    program_url: "https://nlnog.net/events/nlnog-day-2025/"
+    manual_fallback_url: "https://nlnog.net/events/nlnog-day-2025/"
+    notes: "Dutch network operators: routing, IPv6, automation and infrastructure operations. No abstracts published; use the linked slides and recordings."
+
+  - key: nlnog-2026
+    name: "NLNOG Day 2026 (Hilversum)"
+    type: operator
+    start_date: 2026-09-04
+    end_date: 2026-09-04
+    fetcher: nlnog
+    program_url: "https://nlnog.net/events/nlnog-day-2026/"
+    manual_fallback_url: "https://nlnog.net/events/nlnog-day-2026/"
+    notes: "Dutch network operators: routing, IPv6, automation and infrastructure operations. No abstracts published; use the linked slides and recordings."
+
+  - key: denog-17
+    name: "DENOG 17 (Essen)"
+    type: operator
+    start_date: 2025-11-09
+    end_date: 2025-11-11
+    fetcher: denog
+    program_url: "https://www.denog.de/de/meetings/denog17/agenda.html"
+    manual_fallback_url: "https://www.denog.de/de/meetings/denog17/agenda.html"
+    notes: "German network operators: datacenter and backbone networking, BGP/EVPN, optics, automation, security and workshops. Abstracts and slides from the official Pretalx export."
+
+  - key: denog-18
+    name: "DENOG 18 (Essen)"
+    type: operator
+    start_date: 2026-11-15
+    end_date: 2026-11-17
+    fetcher: denog
+    program_url: "https://www.denog.de/de/meetings/denog18/agenda.html"
+    manual_fallback_url: "https://www.denog.de/de/meetings/denog18/agenda.html"
+    notes: "German network operators: datacenter and backbone networking, BGP/EVPN, optics, automation, security and workshops. Abstracts and slides from the official Pretalx export."
+
+  - key: ripe-93
+    name: "RIPE 93"
+    type: operator
+    end_date: 2026-10-30
+    fetcher: ripe
+    program_url: "https://ripe93.ripe.net/programme/meeting-plan/"
+    manual_fallback_url: "https://ripe93.ripe.net/programme/meeting-plan/"
+    discovered: 2026-11-01
+    notes: "European network operators: routing security, IPv6, peering, DNS, measurement and network automation. Auto-discovered 2026-11-01 from series 'ripe'. end_date taken from the source."

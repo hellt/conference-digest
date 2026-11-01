@@ -179,6 +179,9 @@ conferences/
     autocon.py       # AutoCon program + NAF guide, slides repo, YouTube uploads
     ovscon.py        # OVS+OVNcon schedule + anchored abstracts, slides and recordings
     ciscolive.py     # Cisco Live public on-demand abstracts and speakers (US/Europe)
+    ripe.py          # RIPE 91+: meeting plan -> sessions -> full talk pages
+    nlnog.py         # NLNOG Day program tables, slides and recordings (no abstracts)
+    denog.py         # official DENOG agenda -> Pretalx JSON export
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -288,6 +291,23 @@ run.
   Discovery uses conservative date estimates (June 30 / March 31); confirm
   discovered dates against the event site. A move to an unknown city requires
   updating `CITIES` in `ciscolive.py`; unknown locations fail closed.
+- **RIPE Meetings**: from RIPE 91 onward, the meeting plan links sessions and
+  individual talk pages. Session cards truncate abstracts, so the fetcher reads
+  the full talk pages for abstracts, decks and native MP4 recordings. Failed
+  talk fetches retain a clearly labelled session excerpt. Discovery reads only
+  the meeting's date banner, not CFP deadlines. The registry starts with
+  RIPE 91–93; ordinal discovery handles the twice-yearly meetings.
+- **NLNOG Day**: the annual program table provides exact titles, speakers,
+  slides and YouTube recordings, but no abstracts. Prompts state that limitation.
+  The fetcher follows the site's explicit HTML canonical redirects; it never
+  treats the shared program as a talk page. Ambiguous recordings reused for
+  multiple talks (a source error in 2026) are omitted for verified search later.
+- **DENOG**: the official agenda links its Pretalx schedule, whose JSON export
+  gives full abstracts, speakers, attachments and exact event dates. Following
+  that link handles the move from `pretalx.com` (DENOG17) to `cfp.denog.de`
+  (DENOG18). Missing recordings use the normal verified links search. The
+  registry includes DENOG17–18 and NLNOG Day 2025–2026. All three new sources
+  are open; blocks fall back to manual input, never an extraction service.
 - **SIGCOMM** and **Netdev** are static HTML with no observed bot-block. Netdev
   does a second pass: the sessions index has only titles/speakers, so it follows
   each session page for the description, track label, slides and video. A

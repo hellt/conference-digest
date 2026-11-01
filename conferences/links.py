@@ -39,6 +39,7 @@ from bs4 import BeautifulSoup
 
 from conferences.fetchers.base import BROWSER_HEADERS, looks_blocked
 from conferences.fetchers.ovscon import talk_links as ovscon_talk_links
+from conferences.fetchers.ripe import talk_links as ripe_talk_links
 
 # slides2 holds a second format of the deck (PDF and PPTX both shown).
 KEYS = ("page", "pdf", "slides", "slides2", "video", "materials")
@@ -64,12 +65,19 @@ CHANNELS = {
     "autocon": ("autocon", "network automation forum"),
     "ovscon": ("openvswitch", "open vswitch", "ovs+ovncon", "ovscon"),
     "ciscolive": ("cisco live", "ciscolive"),
+    "ripe": ("ripe", "ripe ncc"),
+    "nlnog": ("nlnog",),
+    "denog": ("denog",),
 }
 DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon": "SREcon",
            "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF", "nanog": "NANOG",
-           "autocon": "AutoCon", "ovscon": "OVS OVN conference", "ciscolive": "Cisco Live"}
+           "autocon": "AutoCon", "ovscon": "OVS OVN conference", "ciscolive": "Cisco Live",
+           "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG"}
 # URLs that only ever hold presentation decks, whatever the link text says.
-DECK_URLS = re.compile(r"static\.sched\.com/hosted_files/|storage\.googleapis\.com/site-media-prod/meetings/")
+DECK_URLS = re.compile(
+    r"static\.sched\.com/hosted_files/|storage\.googleapis\.com/site-media-prod/meetings/"
+    r"|(?:pretalx\.com|cfp\.denog\.de)/media/denog\d+/submissions/"
+)
 STOP = {"the", "and", "for", "with", "from", "into", "over", "using", "via", "its", "our", "your",
         "of", "to", "in", "on", "a", "an", "at", "by", "is", "are", "how", "what", "why"}
 
@@ -201,12 +209,16 @@ def scrape_page(url: str, tavily_key: str = "") -> dict[str, str]:
     through Tavily Extract instead, when a key is set.
     """
     parsed = urlparse(url)
-    if ((parsed.hostname or "").removeprefix("www.") == "ciscolive.com"
+    host = parsed.hostname or ""
+    if (host.removeprefix("www.") == "ciscolive.com"
             and parsed.path == "/on-demand/on-demand-library.html"):
         # #/session/... is client-side: HTML/extraction sees the shared catalog,
         # not this talk. Materials require login; never borrow promotional links.
         return {}
-    ovscon = ((parsed.hostname or "").removeprefix("www.") == "openvswitch.org"
+    ripe = re.fullmatch(r"ripe\d+\.ripe\.net", host) is not None
+    operator_source = (ripe or host == "nlnog.net" or host.endswith(".denog.de")
+                       or (host == "pretalx.com" and parsed.path.startswith("/denog")))
+    ovscon = (host.removeprefix("www.") == "openvswitch.org"
               and re.fullmatch(r"/support/ovscon\d{4}/?", parsed.path) is not None)
     try:
         resp = HTTP.get(url, timeout=20)
@@ -215,10 +227,12 @@ def scrape_page(url: str, tavily_key: str = "") -> dict[str, str]:
         ok = False
     if not ok:
         # Extraction of a shared program cannot safely be treated as one talk.
-        return tavily_page(url, tavily_key) if tavily_key and not ovscon else {}
+        return tavily_page(url, tavily_key) if tavily_key and not (ovscon or operator_source) else {}
     soup = BeautifulSoup(resp.text, "html.parser")
     if ovscon:
         return ovscon_talk_links(soup, url)
+    if ripe:
+        return ripe_talk_links(soup, url)
     found: dict[str, str] = {}
     embeds = [youtube_id(f.get("src", "")) for f in soup.find_all("iframe")]
     embeds = [v for v in embeds if v]

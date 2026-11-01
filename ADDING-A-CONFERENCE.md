@@ -40,6 +40,9 @@ Reuse a fetcher when the conference is hosted on a platform one already reads:
 | `autocon` | One AutoCon edition: the program, NAF's program guide, its slides repository and NAF's YouTube uploads |
 | `ovscon` | One OVS+OVNcon annual program: schedule rows, anchored abstracts, slides and YouTube recordings |
 | `ciscolive` | One Cisco Live US/Europe edition from the public RainFocus on-demand catalog; abstracts and speakers, without login-only materials |
+| `ripe` | RIPE 91+ meeting plan, sessions and full talk pages, including decks and native MP4 recordings |
+| `nlnog` | Annual NLNOG Day table: titles, speakers, slides and videos (no abstracts) |
+| `denog` | Official DENOG agenda's linked Pretalx JSON schedule export and attachments |
 
 Otherwise add `conferences/fetchers/<name>.py`:
 

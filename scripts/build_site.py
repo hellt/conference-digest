@@ -80,7 +80,7 @@ def links_block(row: str, title: str) -> list[str]:
     if not links:
         return [f"**Links:** {row}"]
     chips = " ".join(
-        f"[:{ICONS.get(text.lower(), 'material-link-variant')}: {text}]({url}){{ .pick-link }}"
+        f"[:{ICONS.get(text.lower()) or ICONS.get(re.sub(r'\s*\(.*\)$|\s+\d+$', '', text.lower()), 'material-link-variant')}: {text}]({url}){{ .pick-link }}"
         for text, url in links
     )
     out = ['<div class="pick-links" markdown>', "", chips, "", "</div>", ""]

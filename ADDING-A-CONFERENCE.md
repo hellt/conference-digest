@@ -37,7 +37,7 @@ Reuse a fetcher when the conference is hosted on a platform one already reads:
 | `sigcomm` | The SIGCOMM papers-info table |
 | `netdev` | netdevconf.info sessions index and session pages |
 | `nanog` | One NANOG meeting's agenda and talk pages, via Tavily Extract |
-| `autocon` | One AutoCon edition: the program, NAF's program guide, and NAF's YouTube uploads |
+| `autocon` | One AutoCon edition: the program, NAF's program guide, its slides repository and NAF's YouTube uploads |
 
 Otherwise add `conferences/fetchers/<name>.py`:
 
@@ -90,13 +90,17 @@ The abstract, as published.
 | --- | --- | --- |
 | `page:` | Abstract | The talk or paper page. It usually lists every material, and it is read again for slides and recordings. |
 | `pdf:` | Paper | The paper. ToFaRev reads it before writing. |
-| `slides:` | Slides | The deck: PDF, PPTX, PPT, KEY or ODP. ToFaRev reads a PDF deck when there is no `pdf:`. |
+| `slides:` | Slides | The deck: PDF, PPTX, PPT, KEY or ODP. Give it twice when the deck is published in two formats; both are shown, as `Slides (PDF)` and `Slides (PPTX)`. Put the PDF first: ToFaRev reads the first `slides:` link when there is no `pdf:`, and it can read only PDFs. |
 | `video:` | Recording | The recording. YouTube links are embedded on the site, and a `?t=` timestamp sets where playback starts. |
 | `materials:` | Materials | A page that collects a session's materials (IETF). |
 
 The abstract follows on the next lines. With no abstract, the writer marks the pick "from abstract only", or works from the title and speakers alone.
 
+**Slides kept outside the program** can be paired by file name, as AutoCon's are: NAF keeps each edition's decks in a GitHub repository, named after the speakers and a short title (`AC4-AndyLapteff-CLILifer.pdf`). `match_slides()` in `autocon.py` scores every talk–file pair: a speaker's name in the file name is required, and title words break ties. The best pairs are assigned first, so a speaker with two decks gets each one right. Files in Git LFS must be linked through `media.githubusercontent.com`; `raw.githubusercontent.com` serves only the LFS pointer.
+
 **A program without abstracts** can borrow them from the official recordings, as AutoCon does. NAF uploads each talk with its abstract as the description, so the fetcher calls `conferences.links.find_video()`. That returns the checked upload with its description, and the description becomes the abstract. Import it inside `fetch()`: `conferences.links` imports the fetchers package.
+
+**Prefer the conference's own playlist to per-talk search.** One playlist page lists every upload of an edition (`youtube_playlists()` finds it by title and channel, and `youtube_playlist()` lists it). Per-talk search costs a search and up to twelve video pages per talk. Under that load YouTube starts answering "sign in to confirm you're not a bot", and its results change from run to run. When the player data is withheld, `youtube_video()` reads the title, channel, date and description from the page's own data. Never try to get around the sign-in check itself.
 
 ## 3. Let the links step find recordings
 

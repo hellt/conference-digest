@@ -24,15 +24,26 @@ official sources fill them in:
 
 The page states the dates ("the week of 26-30 May 2025"). Logistics lines
 (registration, meals, breaks, sponsor messages, opening and closing remarks)
-are not program items. NAF publishes no slides.
+are not program items.
+
+Slides: NAF publishes each edition's decks (PDF and/or PPTX) in its handyinfo
+repository, docs/autocon_coverage/slides/AutoCon<n>/<day>/, named after the
+speakers and a short title ("AC4-AndyLapteff-CLILifer.pdf", "AC5 - Leo
+Fleskes - ….pdf"). The files are in Git LFS, so links point at
+media.githubusercontent.com, which serves the file itself. Decks are paired
+with talks by speaker names, then title words; workshop and sponsor decks are
+left out. A deck published as both PDF and PPTX gets both links, PDF first
+(ToFaRev reads the first `slides:` link, and it can read only PDFs).
 """
 
 from __future__ import annotations
 
 import re
 import time
+import unicodedata
 from datetime import date, datetime
 from typing import Iterable, Optional
+from urllib.parse import quote
 
 import requests
 from bs4 import BeautifulSoup
@@ -52,6 +63,10 @@ LOGISTICS = re.compile(
     re.I,
 )
 GUIDE_URL = "https://raw.githubusercontent.com/Network-Automation-Forum/ac{n}-guide/main/index.html"
+HANDYINFO_TREE = "https://api.github.com/repos/Network-Automation-Forum/handyinfo/git/trees/HEAD?recursive=1"
+SLIDES_DIR = "docs/autocon_coverage/slides/AutoCon{n}/"
+LFS_MEDIA = "https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/"
+DECK_EXT = re.compile(r"\.(pdf|pptx?|key)$", re.I)
 
 
 def _week_dates(week: re.Match) -> list[date]:
@@ -209,6 +224,64 @@ def merge_guide(talks: list[dict], guide: list[dict]) -> int:
     return matched
 
 
+def _ascii(s: str) -> str:
+    return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
+
+
+def _name_forms(name: str) -> set[str]:
+    """How a name shows up in a file name: "Antonio Óscar Balmaseda Blanco" ->
+    antonioscarbalmasedablanco, antonioblanco, antoniobalmaseda, …"""
+    tokens = re.findall(r"[a-z0-9]+", _ascii(name))
+    if len(tokens) < 2:
+        return set()
+    forms = {"".join(tokens)} | {tokens[0] + t for t in tokens[1:]} | {tokens[0] + "".join(tokens[1:3])}
+    return {f for f in forms if len(f) >= 6}
+
+
+def _file_words(path: str) -> set[str]:
+    stem = DECK_EXT.sub("", path.rsplit("/", 1)[-1])
+    stem = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", stem)   # CamelCase -> words
+    return {w for w in re.findall(r"[a-z0-9]+", _ascii(stem)) if len(w) > 2} - {"ac3", "ac4", "ac5", "ac6", "ac7"}
+
+
+def slide_files(n: str) -> list[list[str]]:
+    """Decks of one edition in NAF's handyinfo repository: each deck's files, PDF first."""
+    resp = requests.get(HANDYINFO_TREE, timeout=60, headers={"Accept": "application/vnd.github+json"})
+    resp.raise_for_status()
+    prefix = SLIDES_DIR.format(n=n)
+    decks: dict[str, list[str]] = {}
+    for item in resp.json().get("tree", []):
+        path = item.get("path", "")
+        if item.get("type") != "blob" or not path.startswith(prefix) or not DECK_EXT.search(path):
+            continue
+        if re.search(r"/workshops?/|sponsor", path, re.I):
+            continue
+        decks.setdefault(DECK_EXT.sub("", path), []).append(path)
+    return [sorted(files, key=lambda f: (not f.lower().endswith(".pdf"), f)) for _, files in sorted(decks.items())]
+
+
+def match_slides(talks: list[dict], decks: list[list[str]], names) -> int:
+    """Pair decks with talks: speakers named in the file name first, then title words."""
+    pairs = []
+    for i, t in enumerate(talks):
+        speakers = [_name_forms(n) for n in names(t["speakers"])]
+        title = {w for w in re.findall(r"[a-z0-9]+", _ascii(t["title"])) if len(w) > 2}
+        for j, files in enumerate(decks):
+            path = files[0]
+            flat = re.sub(r"[^a-z0-9]+", "", _ascii(path.rsplit("/", 1)[-1]))
+            hits = sum(any(f in flat for f in forms) for forms in speakers)
+            if hits:
+                pairs.append((hits * 10 + len(title & _file_words(path)), i, j))
+    used_t, used_f, matched = set(), set(), 0
+    for _, i, j in sorted(pairs, reverse=True):
+        if i in used_t or j in used_f:
+            continue
+        used_t.add(i); used_f.add(j)
+        talks[i]["slides"] = [LFS_MEDIA + quote(f, safe="/") for f in decks[j][:2]]
+        matched += 1
+    return matched
+
+
 def program_text(talks: list[dict]) -> str:
     lines: list[str] = []
     day = None
@@ -220,8 +293,11 @@ def program_text(talks: list[dict]) -> str:
         if t["speakers"]:
             lines.append(f"Speakers: {t['speakers']}")
         lines.append(f"Session: {t['when']}" + (f" ({t['kind']})" if t["kind"] else ""))
-        if t["video"]:
-            lines.append(f"video: {t['video']}")
+        decks = t.get("slides") or []
+        links = [f"slides: {u}" for u in (decks if isinstance(decks, list) else [decks])]
+        links += [f"video: {t['video']}"] if t.get("video") else []
+        if links:
+            lines.append(" | ".join(links))
         if t["abstract"]:
             lines.append(t["abstract"])
         lines.append("")
@@ -266,25 +342,70 @@ class AutoconFetcher(Fetcher):
             except Exception:
                 pass
 
-        # Each talk's upload on NAF's channel: the recording, and the abstract
-        # when the guide had none. Imported here: conferences.links imports this
-        # package.
         from conferences.links import Context, find_video, speaker_names
+        with_slides = 0
+        if n:
+            try:
+                with_slides = match_slides(talks, slide_files(n), speaker_names)
+            except Exception:
+                pass
+
+        # Each talk's upload on NAF's channel: the recording, and the abstract
+        # when the guide had none. NAF keeps one playlist per edition ("AutoCon
+        # 4"): list it once, match talks to its titles, and open only the
+        # matches. Without a playlist, search per talk. Nothing is uploaded
+        # before the event ends (discovery fetches upcoming editions), so skip
+        # it until then.
+        from conferences.links import Video, title_matches, youtube_playlist, youtube_playlists, youtube_video
         ctx = Context(key=entry.get("key") or f"autocon-{n}",
                       end_date=max(days) if days else (end if isinstance(end, date) else None))
-        # Nothing is uploaded before the event ends (discovery fetches upcoming
-        # editions to confirm them): skip the searches until then.
         ended = ctx.end_date is not None and ctx.end_date < date.today()
-        for t in talks if ended else []:
-            v = find_video(t["title"], ctx, tuple(speaker_names(t["speakers"])))
-            if v:
-                t["video"] = f"https://www.youtube.com/watch?v={v.id}"
-                if not t["abstract"]:
-                    desc = v.description.strip()
-                    first, _, rest = desc.partition("\n")
-                    # The description often repeats the title on its first line.
-                    t["abstract"] = re.sub(r"\s+", " ", rest if _norm(first) == _norm(t["title"]) else desc).strip()[:1500]
-            time.sleep(0.3)
+        playlist = []
+        if ended and n:
+            try:
+                pid = next((pid for pid, title, channel in youtube_playlists(f"AutoCon {n}")
+                            if _norm(title) == f"autocon{n}" and "network automation forum" in channel.lower()), None)
+                playlist = youtube_playlist(pid) if pid else []
+            except Exception:
+                playlist = []
+        from conferences.links import words as title_words
+        found: dict[int, Optional[Video]] = {}
+        if playlist:
+            # A title match in NAF's own playlist for this edition is the talk.
+            # Score every talk-video pair (exact title first, then shared words)
+            # and give each video to one talk only: one speaker can give two
+            # talks with similar titles.
+            pairs = []
+            for i, t in enumerate(talks if ended else []):
+                speakers = tuple(speaker_names(t["speakers"]))
+                for vid, title in playlist:
+                    if title_matches(t["title"], Video(vid, title, ""), speakers):
+                        exact = _norm(t["title"]) in _norm(title)
+                        pairs.append((exact * 100 + len(title_words(t["title"]) & title_words(title)), i, vid))
+            used: set[str] = set()
+            for _, i, vid in sorted(pairs, reverse=True):
+                if i in found or vid in used:
+                    continue
+                used.add(vid)
+                talks[i]["video"] = f"https://www.youtube.com/watch?v={vid}"
+                # The video page adds the description (the abstract); if it
+                # cannot be read, the recording stays linked without it.
+                cand = youtube_video(vid)
+                found[i] = cand if cand and cand.description else None
+                time.sleep(0.3)
+        else:
+            for i, t in enumerate(talks if ended else []):
+                v = find_video(t["title"], ctx, tuple(speaker_names(t["speakers"])))
+                if v:
+                    t["video"] = f"https://www.youtube.com/watch?v={v.id}"
+                    found[i] = v
+        for i, v in found.items():
+            t = talks[i]
+            if v and not t["abstract"]:
+                desc = v.description.strip()
+                first, _, rest = desc.partition("\n")
+                # The description often repeats the title on its first line.
+                t["abstract"] = re.sub(r"\s+", " ", rest if _norm(first) == _norm(t["title"]) else desc).strip()[:1500]
 
         with_video = sum(bool(t["video"]) for t in talks)
         with_abstract = sum(bool(t["abstract"]) for t in talks)
@@ -294,7 +415,7 @@ class AutoconFetcher(Fetcher):
             source_url=url,
             item_count=len(talks),
             detail=(f"{len(talks)} talks; {with_abstract} with an abstract ({from_guide} from the program guide), "
-                    f"{with_video} with a recording"),
+                    f"{with_slides} with slides, {with_video} with a recording"),
             meta={"end_date": max(days).isoformat() if days else ""},
         )
 

@@ -39,13 +39,16 @@ from bs4 import BeautifulSoup
 
 from conferences.fetchers.base import BROWSER_HEADERS, looks_blocked
 
-KEYS = ("page", "pdf", "slides", "video", "materials")
+# slides2 holds a second format of the deck (PDF and PPTX both shown).
+KEYS = ("page", "pdf", "slides", "slides2", "video", "materials")
 # A URL runs to the end of its " | " part: some file names contain spaces.
 LINK_LINE = re.compile(r"^(page|pdf|slides|video|materials):\s*(https?://.+?)\s*$")
 SEPARATOR = re.compile(r"^=+ *PROGRAM TEXT *=+$", re.M)
 ROW = re.compile(r"^\s*(?:[-*]\s+)?\*\*Links?:?\*\*:?\s*(.*)$")
 MD_LINK = re.compile(r"\[([^\]\n]+)\]\((https?://[^)\s]+)\)")
-YT_HEADERS = {**BROWSER_HEADERS, "Accept-Language": "en", "Cookie": "CONSENT=YES+1"}
+# SOCS=CAI is YouTube's "reject all" cookie choice; playlist pages show the
+# consent screen without it.
+YT_HEADERS = {**BROWSER_HEADERS, "Accept-Language": "en", "Cookie": "CONSENT=YES+1; SOCS=CAI"}
 
 # Words that name a conference in a video's title, description or channel,
 # keyed by the first segment of the registry key.
@@ -118,8 +121,12 @@ def program_items(prompt: str) -> list[Item]:
         for line in text.splitlines():
             for part in line.split(" | "):
                 lm = LINK_LINE.match(part.strip())
-                if lm and lm.group(1) not in item.links:
-                    item.links[lm.group(1)] = lm.group(2)
+                if not lm:
+                    continue
+                key = lm.group(1)
+                if key == "slides" and "slides" in item.links:
+                    key = "slides2"   # a second format of the deck
+                item.links.setdefault(key, lm.group(2))
         items.append(item)
     return items
 
@@ -176,7 +183,10 @@ def classify(found: dict[str, str], href: str, text: str) -> None:
     if not (path.endswith(".pdf") or deck):
         return
     if deck or "slide" in label:
-        found.setdefault("slides", href)
+        if "slides" not in found:
+            found["slides"] = href
+        elif found["slides"] != href:
+            found.setdefault("slides2", href)
     elif "paper" in label or "/system/files/" in href:
         found.setdefault("pdf", href)
 
@@ -266,6 +276,53 @@ def youtube_search(query: str) -> list[str]:
     return ids
 
 
+def _yt_initial_data(html: str):
+    m = re.search(r"var ytInitialData = (\{.*?\});</script>", html)
+    return json.loads(m.group(1)) if m else None
+
+
+def _walk(o):
+    if isinstance(o, dict):
+        yield o
+        for x in o.values():
+            yield from _walk(x)
+    elif isinstance(o, list):
+        for x in o:
+            yield from _walk(x)
+
+
+def youtube_playlists(query: str) -> list[tuple[str, str, str]]:
+    """(playlist id, title, channel) from YouTube's playlist search."""
+    resp = HTTP.get("https://www.youtube.com/results", headers=YT_HEADERS, timeout=30,
+                    params={"search_query": query, "sp": "EgIQAw==", "hl": "en"})
+    data = _yt_initial_data(resp.text) or {}
+    out = []
+    for o in _walk(data):
+        lv = o.get("lockupViewModel")
+        if isinstance(lv, dict) and "PLAYLIST" in str(lv.get("contentType", "")):
+            meta = (lv.get("metadata") or {}).get("lockupMetadataViewModel") or {}
+            channel = re.search(r'"content": "([^"]+)"', json.dumps(meta.get("metadata", {})))
+            out.append((lv.get("contentId", ""), (meta.get("title") or {}).get("content", ""),
+                        channel.group(1) if channel else ""))
+    return out
+
+
+def youtube_playlist(playlist_id: str) -> list[tuple[str, str]]:
+    """(video id, title) of a playlist's first 100 videos."""
+    resp = HTTP.get("https://www.youtube.com/playlist", headers=YT_HEADERS, timeout=30,
+                    params={"list": playlist_id, "hl": "en"})
+    out: dict[str, str] = {}
+    for o in _walk(_yt_initial_data(resp.text) or {}):
+        lv = o.get("lockupViewModel")
+        if isinstance(lv, dict) and "VIDEO" in str(lv.get("contentType", "")):
+            meta = (lv.get("metadata") or {}).get("lockupMetadataViewModel") or {}
+            out.setdefault(lv.get("contentId", ""), (meta.get("title") or {}).get("content", ""))
+        v = o.get("playlistVideoRenderer")
+        if isinstance(v, dict) and v.get("videoId"):
+            out.setdefault(v["videoId"], "".join(x.get("text", "") for x in (v.get("title") or {}).get("runs", [])))
+    return [(k, t) for k, t in out.items() if k]
+
+
 def tavily_search(query: str, key: str) -> list[str]:
     resp = requests.post("https://api.tavily.com/search", timeout=60,
                          headers={"Authorization": f"Bearer {key}"},
@@ -274,7 +331,7 @@ def tavily_search(query: str, key: str) -> list[str]:
     return [v for r in resp.json().get("results", []) if (v := youtube_id(r.get("url", "")))]
 
 
-def youtube_video(vid: str) -> Optional[Video]:
+def youtube_video(vid: str, retry: bool = True) -> Optional[Video]:
     """Title, channel, description and upload date from the watch page; oEmbed as a fallback."""
     try:
         resp = HTTP.get(f"https://www.youtube.com/watch?v={vid}&hl=en", headers=YT_HEADERS, timeout=30)
@@ -291,8 +348,17 @@ def youtube_video(vid: str) -> Optional[Video]:
             if vd.get("title"):
                 return Video(vid, vd["title"], vd.get("author", ""), vd.get("shortDescription", ""),
                              published, int(vd.get("lengthSeconds") or 0))
+        # Player data withheld ("sign in to confirm you're not a bot", common
+        # for datacenter IPs): the page's own data still states the title,
+        # channel, upload date and description.
+        page = _video_page_data(vid, resp.text)
+        if page:
+            return page
     except Exception:
         pass
+    if retry:   # YouTube sometimes serves an empty page under load; ask once more
+        time.sleep(2)
+        return youtube_video(vid, retry=False)
     try:
         o = HTTP.get("https://www.youtube.com/oembed", timeout=20,
                      params={"format": "json", "url": f"https://www.youtube.com/watch?v={vid}"}).json()
@@ -309,6 +375,24 @@ def speaker_names(text: str) -> list[str]:
         if 2 <= len(name.split()) <= 4 and not re.search(r"\d", name):
             names.append(name)
     return names
+
+
+def _video_page_data(vid: str, html: str) -> Optional[Video]:
+    data = _yt_initial_data(html) or {}
+    title = author = desc = ""
+    published = None
+    for o in _walk(data):
+        if not title and isinstance(o.get("videoPrimaryInfoRenderer"), dict):
+            title = "".join(r.get("text", "") for r in (o["videoPrimaryInfoRenderer"].get("title") or {}).get("runs", []))
+        if not author and isinstance(o.get("videoOwnerRenderer"), dict):
+            author = "".join(r.get("text", "") for r in (o["videoOwnerRenderer"].get("title") or {}).get("runs", []))
+        if not desc and isinstance(o.get("attributedDescription"), dict):
+            desc = o["attributedDescription"].get("content", "")
+        if published is None and isinstance(o.get("dateText"), dict):
+            m = re.search(r"([A-Z][a-z]{2})[a-z]* (\d{1,2}), (\d{4})", o["dateText"].get("simpleText", ""))
+            if m:
+                published = datetime.strptime(f"{m.group(1)} {m.group(2)} {m.group(3)}", "%b %d %Y").date()
+    return Video(vid, title, author, desc, published) if title else None
 
 
 def title_matches(talk: str, video: Video, speakers: tuple[str, ...] = ()) -> bool:
@@ -330,7 +414,15 @@ def title_matches(talk: str, video: Video, speakers: tuple[str, ...] = ()) -> bo
     # Retitled uploads ("Opening Keynote: Jeff Gray - Building a Business Case
     # for …"): a speaker's full name in the video title, plus half the words.
     named = any(len(norm(n)) >= 6 and norm(n) in norm(video.title) for n in speakers)
-    return named and len(want) >= 2 and len(want & words(video.title)) / len(want) >= 0.5
+    if not named:
+        return False
+    # Uploads shortened to the start of the title: "Coding for infrastructure
+    # is just coding - Antonio Balmaseda & …" for a much longer talk title.
+    for part in re.split(r"\s+[-–—|]\s+|:\s+", video.title):
+        core = norm(part)
+        if len(core) >= 15 and t.startswith(core):
+            return True
+    return len(want) >= 2 and len(want & words(video.title)) / len(want) >= 0.5
 
 
 def event_matches(video: Video, ctx: Context) -> bool:
@@ -398,7 +490,20 @@ def find_video(talk: str, ctx: Context, speakers: tuple[str, ...] = ()) -> Optio
 
 # --------------------------------------------------------------------- rows --
 
+FORMATS = {"pdf": "PDF", "pptx": "PPTX", "ppt": "PPT", "key": "Keynote", "odp": "ODP"}
+
+
+def deck_format(url: str) -> str:
+    ext = requests.utils.unquote(urlparse(url).path).rsplit(".", 1)[-1].lower()
+    return FORMATS.get(ext, "")
+
+
 def label(kind: str, url: str, links: dict[str, str]) -> str:
+    if kind in ("slides", "slides2"):
+        if links.get("slides") and links.get("slides2"):
+            fmt = deck_format(url)
+            return f"Slides ({fmt})" if fmt else ("Slides" if kind == "slides" else "Slides 2")
+        return "Slides"
     if kind == "page":
         return "Draft" if "datatracker.ietf.org/doc/" in url else "Abstract"
     if kind == "video":
@@ -443,7 +548,7 @@ def parse_row(rest: str) -> dict[str, str]:
     for text, url in pairs:
         t = text.lower()
         kind = ("video" if any(w in t for w in ("recording", "video")) else
-                "slides" if "slide" in t else
+                ("slides2" if "slides" in out else "slides") if "slide" in t else
                 "materials" if "material" in t else
                 "pdf" if any(w in t for w in ("paper", "pdf")) else
                 "page" if any(w in t for w in ("abstract", "draft", "session", "page", "talk")) else None)

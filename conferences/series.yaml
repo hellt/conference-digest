@@ -246,4 +246,22 @@ series:
     program_url_template: "https://www.denog.de/de/meetings/denog{n}/agenda.html"
     manual_fallback_url_template: "https://www.denog.de/de/meetings/denog{n}/agenda.html"
     notes: "German network operators: datacenter and backbone networking, BGP/EVPN, optics, automation, security and operator workshops."
+  # NVIDIA GTC (San Jose), each March. The catalog page is a client-rendered
+  # app, so the fetcher resolves the per-year JS bundle it embeds (gtc26.js),
+  # which carries the opaque event id the JSON catalog API needs plus a
+  # day->date map — discovery gets exact dates from the source. A year's
+  # bundle 404s until that edition's site is built and disappears once the
+  # site moves on; redo past editions from the committed prompt. Recordings
+  # land on NVIDIA on-demand (login-gated) and many later on NVIDIA's
+  # YouTube channel, which the links step finds.
+  - series: gtc
+    enumerate: year
+    key_template: "gtc-{year}"
+    name_template: "NVIDIA GTC {year} (San Jose)"
+    type: vendor
+    fetcher: gtc
+    end_date_hint: "03-21"
+    program_url_template: "https://www.nvidia.com/gtc/session-catalog/"
+    manual_fallback_url_template: "https://www.nvidia.com/en-us/on-demand/search/?facet.event_name%5B%5D=GTC%20San%20Jose&facet.event_year%5B%5D={year}"
+    notes: "NVIDIA's AI conference: AI-factory networking (Spectrum-X, InfiniBand, NVLink, BlueField/DOCA), accelerated infrastructure, AI security and confidential computing."
 

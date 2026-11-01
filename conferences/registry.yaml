@@ -17,7 +17,7 @@
 #              Drives how the universal prompt tells Claude to read the program.
 #   start_date Optional ISO date the conference program began, for the site header.
 #   end_date   ISO date (YYYY-MM-DD) the event ended. Selection is based on this.
-#   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog | autocon | ovscon | ciscolive | ripe | nlnog | denog
+#   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog | autocon | ovscon | ciscolive | ripe | nlnog | denog | gtc
 #   program_url
 #              The machine-or-human-readable program endpoint the fetcher pulls.
 #   manual_fallback_url
@@ -190,6 +190,23 @@ conferences:
     program_url: "https://netdevconf.info/0x1A/pages/sessions.html"
     manual_fallback_url: "https://netdevconf.info/0x1A/pages/sessions.html"
     notes: "Linux kernel networking conference, Rome, 13-16 July 2026. Kernel datapath/eBPF/XDP, NIC offload, transport internals. Edition slug is hex (0x1A); next edition bumps to 0x1B."
+
+  # ----------------------------------------------------------------------- #
+  # NVIDIA GTC (vendor). San Jose each March. The catalog is a client-
+  # rendered app backed by an open JSON API; the fetcher resolves the event
+  # id from the per-year JS bundle the catalog page embeds. Only the current
+  # edition is served — re-run past editions from the committed prompt.
+  # ----------------------------------------------------------------------- #
+
+  - key: gtc-2026
+    name: "NVIDIA GTC 2026 (San Jose)"
+    type: vendor
+    start_date: 2026-03-16
+    end_date: 2026-03-19
+    fetcher: gtc
+    program_url: "https://www.nvidia.com/gtc/session-catalog/"
+    manual_fallback_url: "https://www.nvidia.com/en-us/on-demand/search/?facet.event_name%5B%5D=GTC%20San%20Jose&facet.event_year%5B%5D=2026"
+    notes: "NVIDIA's AI conference: AI-factory networking (Spectrum-X, InfiniBand, NVLink, BlueField/DOCA), accelerated infrastructure, AI security and confidential computing. end_date is the last main-conference day; the post-event Chinese-language livestream days (Mar 22-25) are filtered out by the fetcher."
 
   # --------------------------------------------------------------------- #
   # Auto-discovered editions (scripts/discover_editions.py).

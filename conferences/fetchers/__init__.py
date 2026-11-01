@@ -10,6 +10,7 @@ from .ciscolive import CiscoLiveFetcher
 from .ripe import RipeFetcher
 from .nlnog import NlnogFetcher
 from .denog import DenogFetcher
+from .gtc import GtcFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -24,6 +25,7 @@ FETCHERS = {
     "ripe": RipeFetcher(),
     "nlnog": NlnogFetcher(),
     "denog": DenogFetcher(),
+    "gtc": GtcFetcher(),
 }
 
 

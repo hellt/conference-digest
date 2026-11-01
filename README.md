@@ -313,6 +313,20 @@ run.
   each session page for the description, track label, slides and video. A
   session page that fails to fetch degrades to title+speakers rather than
   failing the run.
+- **GTC**: `www.nvidia.com/gtc/session-catalog/` is a client-rendered app, but
+  its JSON catalog API (`api-prod.nvidia.com/services/sessioncatalog`) is open
+  and unauthenticated. The event id is opaque and changes yearly; the fetcher
+  resolves it from the per-year JS bundle the catalog page embeds
+  (`.../gtc/rf/gtc26.js`), which also carries the day→date map discovery reads.
+  Only the current edition's bundle exists: a year's bundle 404s until its site
+  is built (discovery's "not yet" signal) and 404s again once the site moves on
+  (re-run past editions from the committed prompt; the fetcher returns `manual`
+  then, pointing at the on-demand library). The API lists ~950 sessions of every
+  type; the fetcher keeps presentation-like ones with an abstract (~550 for
+  GTC26) and drops posters, hands-on labs, office hours, watch parties and the
+  Chinese-language post-event days. Recordings are not in the catalog API —
+  sessions go to NVIDIA on-demand (login-gated) and many later to NVIDIA's
+  YouTube channel, which the links step finds and verifies.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

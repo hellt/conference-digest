@@ -82,5 +82,23 @@
     "attempts": 0,
     "last_attempt": "2026-11-01T14:15:54.711737+00:00",
     "last_error": ""
+  },
+  "nanog-96": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T15:42:52.522750+00:00",
+    "last_error": ""
+  },
+  "nanog-97": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T15:43:03.866508+00:00",
+    "last_error": ""
+  },
+  "nanog-98": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T15:43:08.182795+00:00",
+    "last_error": ""
   }
 }

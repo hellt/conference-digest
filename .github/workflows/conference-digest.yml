@@ -43,10 +43,15 @@ jobs:
       - name: Discover new editions
         if: github.event.inputs.conference == ''
         id: discover
+        env:
+          # The NANOG fetcher reads nanog.org through Tavily Extract.
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
         run: python scripts/discover_editions.py
 
       - name: Generate prompts and update state
         id: generate
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
         run: |
           if [ -n "${{ github.event.inputs.conference }}" ]; then
             python scripts/generate_digest_prompt.py --conference "${{ github.event.inputs.conference }}"

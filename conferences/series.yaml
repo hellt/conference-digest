@@ -140,3 +140,18 @@ series:
     program_url_template: "https://netdevconf.info/0x{HEX}/pages/sessions.html"
     manual_fallback_url_template: "https://netdevconf.info/0x{HEX}/pages/sessions.html"
     notes: "Linux kernel networking: kernel datapath/eBPF/XDP, NIC offload, transport internals."
+
+  # NANOG meets three times a year (February, June, October). nanog.org blocks
+  # automated clients, so the fetcher reads the public agenda through Tavily
+  # Extract (owner-approved; see conferences/fetchers/nanog.py) and needs the
+  # TAVILY_API_KEY secret. The agenda's day headers give exact dates.
+  - series: nanog
+    enumerate: ordinal
+    key_template: "nanog-{n}"
+    name_template: "NANOG {n}"
+    type: operator
+    fetcher: nanog
+    lookahead: 2
+    program_url_template: "https://nanog.org/events/nanog-{n}/agenda/"
+    manual_fallback_url_template: "https://nanog.org/events/nanog-{n}/agenda/"
+    notes: "North American network operators: routing security, peering, optics, DC and backbone operations, automation."

@@ -567,3 +567,33 @@
   background: #f00;
 }
 
+/* "Powered by Nebius Token Factory" as the last tab, as in ToFaRev's reviews. */
+.md-tabs__item--powered {
+  margin-left: 0.6rem;
+}
+
+.md-tabs__powered {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  opacity: 0.85;
+}
+
+.md-tabs__powered:hover,
+.md-tabs__powered:focus-visible {
+  opacity: 1;
+}
+
+.md-tabs__powered-logo {
+  width: auto;
+  height: 1.05rem;
+}
+
+.md-tabs__powered-logo--dark,
+[data-md-color-scheme="slate"] .md-tabs__powered-logo--light {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__powered-logo--dark {
+  display: inline;
+}

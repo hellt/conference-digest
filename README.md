@@ -90,8 +90,6 @@ To move to a newer ToFaRev, run `make pin-tofarev SHA=<full commit sha>`.
   off). The scan opens one issue per conference.
 - Settings → Actions → General → enable **Allow GitHub Actions to create and
   approve pull requests**.
-- A fork runs no workflows until someone enables them: open the **Actions** tab
-  and accept the prompt if GitHub shows one.
 
 ## Site
 

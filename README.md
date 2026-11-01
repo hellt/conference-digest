@@ -434,6 +434,10 @@ run.
 - **NetUK** uses the generic Indico fetcher: its event ids match the edition
   numbers (event 3 = NetUK3), so the series template points straight at the
   event page and the export gives titles, abstracts, speakers and material.
+- **GRNOG** also uses the Indico fetcher, through the NOG Alliance instance.
+  Its category listing shows only upcoming events, so discovery resolves
+  future editions by name and past ones (GRNOG 20) are hand-added with their
+  event URL.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

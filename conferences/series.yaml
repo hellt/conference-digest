@@ -469,3 +469,20 @@ series:
     program_url_template: "https://{year}.peeringdays.eu/programme/"
     manual_fallback_url_template: "https://{year}.peeringdays.eu/programme/"
     notes: "The largest peering conference in Central and Eastern Europe (NIX.CZ, BIX, VIX): peering, interconnection, RPKI, optics, datacenter interconnect. Titles, speakers (IXP - speaker), slide PDFs; abstracts only for workshops."
+
+  # MORE-IP, AMS-IX's interconnection event. The agenda page is plain
+  # WordPress HTML — day sections, one article per slot with title, speaker
+  # ("Name - Company"), a short blurb and, for some items, the YouTube
+  # recording. Breaks are grey articles. Attendance is AMS-IX member- and
+  # partner-facing but the agenda and recordings are public.
+  - series: moreip
+    enumerate: year
+    key_template: "moreip-{year}"
+    name_template: "MORE-IP {year}"
+    type: operator
+    fetcher: moreip
+    start: 2025
+    end_date_hint: "05-29"
+    program_url_template: "https://more-ip-event.net/more-ip-{year}/agenda/"
+    manual_fallback_url_template: "https://more-ip-event.net/more-ip-{year}/agenda/"
+    notes: "AMS-IX interconnection event (~300 participants): IX and DC interconnect, peering, European connectivity policy, DNS and internet resilience. Titles, speakers, blurbs and YouTube recordings."

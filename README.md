@@ -194,6 +194,7 @@ conferences/
     pets.py          # PETS accepted papers: titles, authors, issues
     ausnog.py        # AusNOG day tables: titles, speakers, PDFs, YouTube
     peeringdays.py   # Peering Days per-year sites: talks, speakers, decks
+    moreip.py         # MORE-IP (AMS-IX): agenda articles with speakers, blurbs
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -399,6 +400,10 @@ run.
   slot's title, an "(Speaker: IXP - Name)" line and Download deck links; only
   workshops publish abstracts, which prompts state. The 2027 site was
   announced with broken TLS at add time; discovery retries until it serves.
+- **MORE-IP**: AMS-IX's agenda is plain WordPress HTML: title, "Name - Company"
+  speaker lines, short blurbs and YouTube recordings on some items. The
+  theme's CSS mentions captcha classes, so `looks_blocked()` markers are
+  skipped there — status codes alone decide.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

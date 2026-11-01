@@ -23,6 +23,7 @@ from .lacnic import LacnicFetcher
 from .pets import PetsFetcher
 from .ausnog import AusnogFetcher
 from .peeringdays import PeeringDaysFetcher
+from .moreip import MoreIpFetcher
 from .imc import ImcFetcher
 from .conext import ConextFetcher
 from .apricot import ApricotFetcher
@@ -34,6 +35,7 @@ from .lacnic import LacnicFetcher
 from .pets import PetsFetcher
 from .ausnog import AusnogFetcher
 from .peeringdays import PeeringDaysFetcher
+from .moreip import MoreIpFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -61,6 +63,7 @@ FETCHERS = {
     "pets": PetsFetcher(),
     "ausnog": AusnogFetcher(),
     "peeringdays": PeeringDaysFetcher(),
+    "moreip": MoreIpFetcher(),
 }
 
 

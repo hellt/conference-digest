@@ -20,6 +20,7 @@ from .pretalx import PretalxFetcher
 from .tnc import TncFetcher
 from .arin import ArinFetcher
 from .lacnic import LacnicFetcher
+from .pets import PetsFetcher
 from .imc import ImcFetcher
 from .conext import ConextFetcher
 from .apricot import ApricotFetcher
@@ -28,6 +29,7 @@ from .pretalx import PretalxFetcher
 from .tnc import TncFetcher
 from .arin import ArinFetcher
 from .lacnic import LacnicFetcher
+from .pets import PetsFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -52,6 +54,7 @@ FETCHERS = {
     "tnc": TncFetcher(),
     "arin": ArinFetcher(),
     "lacnic": LacnicFetcher(),
+    "pets": PetsFetcher(),
 }
 
 

@@ -88,8 +88,9 @@ pipeline.
    discovery appends to it; nothing else in CI may write it. The Digest Bot
    pushes only `digests/<key>.md` to its own PR branches (`tofarev/digest-<key>`,
    and `tofarev/links-<key>` for Links Refresh), and `site.yml` pushes only the
-   `gh-pages` branch. The site sources `docs/posts/`, `docs/companies/` and
-   `docs/conferences.md` are generated at build time and gitignored.
+   `gh-pages` branch. The site sources `docs/posts/`, `docs/talks/`,
+   `docs/companies/` and `docs/conferences.md` are generated at build time and
+   gitignored.
    `run_summary.json`, `issues.json` and `discovery_summary.json` are ephemeral,
    gitignored, and passed between steps in one job — never commit them.
 4. **`state.json` is bookkeeping, not truth.** It tracks
@@ -177,12 +178,30 @@ links and rewrites nothing else.
 `make serve-site` (live on :8001). Both run `scripts/build_site.py` first, which
 turns each digest into `docs/posts/<key>.md` (front matter, excerpt, facts strip,
 tier/pick markup; the digest text is unchanged except that employer names in
-a pick's speaker line link to that employer's page), builds `docs/companies/`
+a pick's speaker line link to that employer's page, and each pick heading
+links to its talk page), writes `docs/talks/<key>/<slug>.md` (one page per pick:
+its links, recording, speakers and write-up), builds `docs/companies/`
 (one page per employer in `build_site.py`'s `EMPLOYER_VARIANTS` map, listing
 every pick with a speaker from that employer — the Employers tab) and writes the
 Conferences tracker. Style lives in `docs/stylesheets/extra.css` and `overrides/`,
-adapted from containerlab.dev. Never edit `docs/posts/` or `docs/companies/` —
-edit the digest.
+adapted from containerlab.dev. Never edit `docs/posts/`, `docs/talks/` or
+`docs/companies/` — edit the digest.
+
+**Search** indexes each pick once, from its talk page. A digest post is found
+by its title, intro and facts line only: `build_site.py` marks its body and
+every heading in it `data-search-exclude` (Zensical drops a section only when
+its heading carries the attribute).
+
+**Social cards:** Zensical's `social` plugin draws a 1200×630 card per page
+from `layouts/night.yml` (with `layouts/assets/night.svg` behind it) and writes
+the page's `og:`/`twitter:` tags. Pages from `build_site.py` pass the card's
+text in a `card:` front-matter mapping (`conference`, `when`, `title`,
+`presenter`); other pages fall back to their title and description. A talk's
+card shows its title, presenter and conference, which is why each talk has its
+own page: link previews ignore `#anchors`, so a link into a digest shows the
+digest's card. The build fetches Inter from Google Fonts. In a layout a word
+wider than its box is clipped rather than wrapped, and text size follows the
+box height.
 
 **Move the bot to a new ToFaRev commit:** `make pin-tofarev SHA=<full sha>`. The
 SHA must be pushed to `hellt/tofarev`; GitHub resolves it when the run starts.

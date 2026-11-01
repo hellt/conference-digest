@@ -2,6 +2,11 @@
 title: Digests
 hide:
   - toc
+card:
+  conference: Conference Digest
+  when: Networking · Security · Identity
+  title: The talks worth your time.
+  presenter: Selected talks and papers from networking, security and identity conferences.
 ---
 
 <div class="cd-hero" markdown>

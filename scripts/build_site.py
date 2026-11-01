@@ -6,7 +6,12 @@ reads it and writes derived, gitignored files that `zensical build` publishes:
 
   docs/posts/<key>.md    one blog post per digest: front matter, an excerpt,
                          a facts strip, and the digest body with its tier
-                         sections and picks marked up for styling
+                         sections and picks marked up for styling; each pick
+                         heading links to the pick's talk page
+  docs/talks/<key>/<slug>.md
+                         one page per pick: its links, recording, speakers and
+                         write-up, so a shared link to one talk gets a card
+                         with that talk's title, presenter and conference
   docs/companies/*.md    one page per employer, linking every picked talk with
                          a speaker from that employer; employer names in each
                          pick's speaker line link here (built with the index
@@ -19,6 +24,9 @@ becomes a row of plain source links, a talk recording on YouTube also gets a
 click-to-play thumbnail (docs/javascripts/video.js swaps in the player), and
 employer names in the speaker line link to that employer's companies/ page.
 Run it before every build (`make site` does).
+
+Every generated page also carries a `card:` mapping in its front matter, which
+layouts/night.yml turns into the page's social card (Zensical's social plugin).
 """
 
 from __future__ import annotations
@@ -42,6 +50,7 @@ POSTS = DOCS / "posts"
 TRACKER = DOCS / "conferences.md"
 REPO = "https://github.com/hellt/conference-digest"
 COMPANIES = DOCS / "companies"
+TALKS = DOCS / "talks"
 
 TYPES = {
     "academic": "Academic",
@@ -358,11 +367,12 @@ def employer_spans(text: str) -> list[tuple[int, int, str]]:
     return picked
 
 
-def link_employers(line: str) -> str:
-    """Link each employer mention in `line` to its page under companies/."""
+def link_employers(line: str, base: str = "..") -> str:
+    """Link each employer mention in `line` to its page under companies/;
+    `base` is the path from the page's directory to docs/."""
     spans = employer_spans(line)
     for s, e, canonical in reversed(spans):
-        line = line[:s] + f"[{line[s:e]}](../companies/{file_slug(canonical)}.md)" + line[e:]
+        line = line[:s] + f"[{line[s:e]}]({base}/companies/{file_slug(canonical)}.md)" + line[e:]
     return line
 
 
@@ -471,14 +481,27 @@ def nest_lists(text: str) -> str:
     return re.sub(r"^( +)(?=(?:[-*+]|\d+\.) )", lambda m: m.group(1) * 2, text, flags=re.M)
 
 
-def decorate(rest: str) -> str:
-    """Mark tier sections and wrap each pick in a card, leaving text as is."""
+def link_heading(heading: str, href: str) -> str:
+    """`Title` -> `[Title](href)`. In a "Title — Speakers — Tier" heading only
+    the title is linked; a title that already holds a link or brackets is left
+    alone rather than nesting links."""
+    title, sep, tail = heading.partition(" — ") if HEADED.match(f"### {heading}") else (heading, "", "")
+    if "[" in title or "]" in title:
+        return heading
+    return f"[{title}]({href}){sep}{tail}"
+
+
+def decorate(rest: str, talk_links: list[str] | None = None) -> str:
+    """Mark tier sections and wrap each pick in a card, leaving text as is.
+    `talk_links` (one href per pick, in order) links each pick heading to the
+    pick's own page."""
     out: list[str] = []
     tier = None
     in_card = in_fence = False
     pick_title = ""
     player: list[str] = []   # the pick's recording, waiting for its "Why"
     after_links = 0          # fallback spot: right after the links row
+    hrefs = list(talk_links or [])
 
     def close() -> None:
         nonlocal in_card, player
@@ -504,9 +527,11 @@ def decorate(rest: str) -> str:
             continue
         if line.startswith("### ") and tier:
             close()
-            out.extend([f'<div class="pick pick-{tier}" markdown>', "", line])
-            in_card = True
             pick_title = line[4:].strip()
+            href = hrefs.pop(0) if hrefs else None
+            heading = f"### {link_heading(pick_title, href)}" if href else line
+            out.extend([f'<div class="pick pick-{tier}" markdown>', "", heading])
+            in_card = True
             continue
         row = LINKS_ROW.match(line) if in_card else None
         if row:
@@ -528,6 +553,22 @@ def decorate(rest: str) -> str:
     return "\n".join(out).strip() + "\n"
 
 
+def exclude_from_search(markdown: str) -> str:
+    """Mark every heading `data-search-exclude`. Zensical drops a search
+    section only when its heading carries the attribute; on a wrapping block
+    it drops the text but leaves an empty entry per heading."""
+    out, in_fence = [], False
+    for line in markdown.split("\n"):
+        if line.lstrip().startswith("```"):
+            in_fence = not in_fence
+        if not in_fence and re.match(r"#{1,6} ", line):
+            attrs = re.search(r"\{ (#[^}]*)\}$", line)
+            line = (line[: attrs.start()] + f"{{ {attrs.group(1)}data-search-exclude }}") if attrs \
+                else f"{line} {{ data-search-exclude }}"
+        out.append(line)
+    return "\n".join(out)
+
+
 def plain(markdown: str, limit: int = 300) -> str:
     text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", markdown)
     text = re.sub(r"[*_`>#]", "", text)
@@ -539,7 +580,19 @@ def human(d: date | None) -> str:
     return f"{d:%B} {d.day}, {d.year}" if d else "unknown"
 
 
-def annotate_employers(rest: str) -> tuple[str, list[dict]]:
+def attribution_line(lines: list[str], i: int) -> int:
+    """Index of the attribution line of the pick headed at lines[i], or -1
+    when the heading carries it (netdev, SIGCOMM) or there is none (IETF)."""
+    return next(
+        (
+            k for k in range(i + 1, min(i + 7, len(lines)))
+            if lines[k].strip() and not lines[k].startswith("#") and not NON_ATTRIBUTION.match(lines[k])
+        ),
+        -1,
+    )
+
+
+def annotate_employers(rest: str, base: str = "..") -> tuple[str, list[dict]]:
     """Link employer names in every pick's attribution, and return the pick
     records companies pages are built from.
 
@@ -558,18 +611,12 @@ def annotate_employers(rest: str) -> tuple[str, list[dict]]:
             tier = slug if slug in TIERS else None
         elif line.startswith("### ") and tier:
             heading = line[4:].strip()
-            j = next(
-                (
-                    k for k in range(i + 1, min(i + 7, len(lines)))
-                    if lines[k].strip() and not lines[k].startswith("#") and not NON_ATTRIBUTION.match(lines[k])
-                ),
-                -1,
-            )
+            j = attribution_line(lines, i)
             if j < 0:  # netdev/SIGCOMM: attribution is the heading itself
                 spans = employer_spans(line)
                 if not spans:
                     continue
-                lines[i] = link_employers(line)
+                lines[i] = link_employers(line, base)
                 m = HEADED.match(line)
                 picks.append({
                     "tier": tier,
@@ -583,7 +630,7 @@ def annotate_employers(rest: str) -> tuple[str, list[dict]]:
                 spans = employer_spans(attributed)
                 if not spans:
                     continue
-                lines[j] = link_employers(attributed)
+                lines[j] = link_employers(attributed, base)
                 speakers = AUTHORS.sub("", attributed.strip()).strip("*")
                 picks.append({
                     "tier": tier,
@@ -595,7 +642,156 @@ def annotate_employers(rest: str) -> tuple[str, list[dict]]:
     return "\n".join(lines), picks
 
 
-def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict, list[dict]]:
+def front_matter(fields: dict) -> str:
+    """YAML front matter, one JSON value per key (JSON is valid YAML)."""
+    return "---\n" + "".join(f"{k}: {json.dumps(v, ensure_ascii=False)}\n" for k, v in fields.items()) + "---\n\n"
+
+
+def conference_parts(name: str) -> tuple[str, str]:
+    """("AutoCon 5", "Munich") from "AutoCon 5 (Munich)". A parenthetical that
+    isn't a place ("22nd USENIX Symposium on ...") is dropped."""
+    m = re.fullmatch(r"(.*?)\s*\(([^()]*)\)", name.strip())
+    if not m:
+        return name.strip(), ""
+    inner = m.group(2).strip()
+    place = inner if not re.search(r"\d", inner) and len(inner.split()) <= 3 else ""
+    return m.group(1), place
+
+
+def date_span(start: date | None, end: date | None) -> str:
+    """"19–21 October 2026", "30 May – 2 June 2026"."""
+    if not end:
+        return ""
+    if not start or start >= end:
+        return f"{end.day} {end:%B} {end.year}"
+    if (start.year, start.month) == (end.year, end.month):
+        return f"{start.day}–{end.day} {end:%B} {end.year}"
+    if start.year == end.year:
+        return f"{start.day} {start:%B} – {end.day} {end:%B} {end.year}"
+    return f"{start.day} {start:%B} {start.year} – {end.day} {end:%B} {end.year}"
+
+
+# A tier tag closing an attribution line: "— **Core**", "*Core.*".
+TIER_TAIL = re.compile(r"\s*(?:[—–-]\s*)?\*{0,2}(?:Core|Adjacent|Wildcard)\b[.*]*\s*$")
+LABEL_LEAD = re.compile(r"^\s*(?:[-*+]\s+)?\*\*(?:Why|What|How)\b[^*]*\*\*:?\s*")
+
+
+def pick_sections(rest: str) -> list[dict]:
+    """Each pick in `rest` (the digest from its first ##), in order: tier,
+    heading and the lines under the heading. Same rules as decorate(), so the
+    n-th section here is the n-th pick card there."""
+    picks: list[dict] = []
+    tier, in_fence, current = None, False, None
+    for line in rest.split("\n"):
+        if line.lstrip().startswith("```"):
+            in_fence = not in_fence
+        if not in_fence and line.startswith("## "):
+            slug = tier_of(line[3:].strip())
+            tier = slug if slug in TIERS else None
+            current = None
+            continue
+        if not in_fence and line.startswith("### "):
+            current = {"tier": tier, "heading": line[4:].strip(), "lines": []} if tier else None
+            if current:
+                picks.append(current)
+            continue
+        if current is not None:
+            current["lines"].append(line)
+    return picks
+
+
+def summary(text: str, limit: int = 240) -> str:
+    """Plain text cut at the last sentence that fits, else at a word."""
+    text = plain(text, 10_000)
+    if len(text) <= limit:
+        return text
+    cut = text[:limit].rfind(". ")
+    return text[: cut + 1] if cut >= limit // 3 else plain(text, limit)
+
+
+def tidy_presenter(text: str) -> str:
+    """Drop a sentence-final period ("…(Tsinghua University).") but keep one
+    that ends an abbreviation ("Inc.", "Ed.")."""
+    text = plain(text, 240)
+    last = text.rsplit(" ", 1)[-1]
+    return text[:-1] if text.endswith(".") and (last.endswith(").") or len(last) > 4) else text
+
+
+def first_writeup(lines: list[str]) -> str:
+    """The pick's first Why/What/How paragraph as plain text, label dropped."""
+    for i, line in enumerate(lines):
+        if WRITEUP_RE.match(line):
+            text = [LABEL_LEAD.sub("", line)]
+            for more in lines[i + 1:]:
+                if not more.strip() or re.match(r"\s*(?:[-*+]\s|\*\*)", more):
+                    break
+                text.append(more.strip())
+            return " ".join(text)
+    return ""
+
+
+def render_talks(key: str, name: str, digest_title: str, started: date | None, ended: date | None,
+                 sections: list[dict]) -> tuple[list[tuple[str, str]], list[str]]:
+    """One page per pick, as (path under docs/talks/, page text), and each
+    page's href from docs/posts/, in pick order. The pick's text is rendered
+    as on the digest; the page adds a facts strip and the card front matter."""
+    conference, place = conference_parts(name)
+    dates = date_span(started, ended)
+    pages: list[tuple[str, str]] = []
+    hrefs: list[str] = []
+    used: set[str] = set()
+    for pick in sections:
+        heading, tier, lines = pick["heading"], pick["tier"], list(pick["lines"])
+        headed = HEADED.match(f"### {heading}")
+        title = headed.group(1) if headed else heading
+        if headed:   # netdev/SIGCOMM: speakers ride in the heading; give them their own line
+            presenter = plain(headed.group(2), 400)
+            at = next((k + 1 for k, l in enumerate(lines) if LINKS_ROW.match(l)), 0)
+            lines[at:at] = ["", f"*{presenter}*", ""]
+        else:
+            j = attribution_line([f"### {heading}", *lines], 0)
+            presenter = plain(TIER_TAIL.sub("", AUTHORS.sub("", lines[j - 1].strip())), 400) if j > 0 else ""
+        slug = anchor_id(plain(title, 1000))[:72].strip("-") or "talk"
+        stem, n = slug, 2
+        while slug in used:
+            slug, n = f"{stem}-{n}", n + 1
+        used.add(slug)
+
+        annotated, _ = annotate_employers(f"## {tier}\n\n### {title}\n" + "\n".join(lines), base="../..")
+        body = decorate(annotated).split("\n")
+        body = [l for l in body if not l.startswith("## ")]
+        body.pop(next(k for k, l in enumerate(body) if l.startswith("### ")))
+
+        facts = [
+            f"[{digest_title} digest](../../posts/{key}.md#{anchor_id(heading)})",
+            f"{tier.title()} pick",
+            " · ".join(x for x in (place, dates) if x),
+        ]
+        facts_html = "\n".join(f'<span class="digest-fact" markdown>{f}</span>' for f in facts if f)
+        front = {
+            "title": plain(title, 1000),
+            "description": summary(first_writeup(lines)) or f"A {tier} pick from the {digest_title} digest.",
+            "card": {
+                "kind": "talk",
+                "conference": conference,
+                "when": " · ".join(x for x in (place, dates, f"{tier.title()} pick") if x),
+                "title": plain(title, 1000),
+                "presenter": tidy_presenter(presenter),
+            },
+        }
+        page = (
+            front_matter(front)
+            + f"# {title}\n\n"
+            + f'<div class="digest-facts" markdown>\n{facts_html}\n</div>\n\n'
+            + "\n".join(body).strip()
+            + "\n"
+        )
+        pages.append((f"{key}/{slug}.md", page))
+        hrefs.append(f"../talks/{key}/{slug}.md")
+    return pages, hrefs
+
+
+def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict, list[dict], list[tuple[str, str]]]:
     h1, intro, rest = split_body(nest_lists(body))
     if re.match(r"^\d+ picks\b", intro):
         intro = intro.partition("\n\n")[2]
@@ -613,15 +809,27 @@ def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict
     dates = f"{human(started)} – {human(ended)}" if started and ended else human(ended) if ended else ""
     # The human-facing page; a fetcher's source_url can be an API endpoint.
     source = entry.get("manual_fallback_url") or meta.get("source_url") or entry.get("program_url") or ""
+    sections = pick_sections(rest)
+    talks, talk_links = render_talks(key, name, title, started, ended, sections)
     decorated, picks = annotate_employers(rest)
-    decorated = decorate(decorated)
+    decorated = decorate(decorated, talk_links)
 
+    counts = {t: sum(1 for s in sections if s["tier"] == t) for t in TIERS}
+    total = sum(counts.values())
     front = {
         "date": published.isoformat(),
         "slug": key,
         "title": title,
         "description": plain(intro or name),
         "categories": [category],
+        "card": {
+            "kind": "digest",
+            "conference": "Conference digest",
+            "when": " · ".join(x for x in (conference_parts(name)[1], date_span(started, ended)) if x),
+            "title": title,
+            "presenter": f"{total} pick{'' if total == 1 else 's'}: "
+                         + ", ".join(f"{n} {t}" for t, n in counts.items() if n),
+        },
     }
     if bot:
         front["authors"] = ["tofarev"]
@@ -646,16 +854,18 @@ def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict
         + "\n"
     )
     page = (
-        "---\n"
-        + "".join(f"{k}: {json.dumps(v, ensure_ascii=False)}\n" for k, v in front.items())
-        + "---\n\n"
+        front_matter(front)
         + f"# {title}\n\n{intro}\n\n<!-- more -->\n\n"
         + f'<div class="digest-facts" markdown>\n{facts_html}\n</div>\n\n'
-        + decorated
+        # Search finds a digest by its name and intro only; each pick is
+        # indexed once, from its talk page, so results lead to talk pages.
+        + '<div class="digest-body" data-search-exclude markdown>\n\n'
+        + exclude_from_search(decorated)
         + "\n"
         + footer
+        + "\n</div>\n"
     )
-    return page, {"key": key, "title": title, "date": published, "bot": bot}, picks
+    return page, {"key": key, "title": title, "date": published, "bot": bot}, picks, talks
 
 
 STATUS = {
@@ -709,16 +919,17 @@ def render_companies(companies: dict[str, list[dict]], posts: dict[str, dict]) -
         for p in sorted(picks, key=lambda p: posts[p["key"]]["date"], reverse=True):
             digests.setdefault(p["key"], []).append(p)
         order = sorted(digests, key=lambda k: posts[k]["date"], reverse=True)
+        summary = f"{len(picks)} picked talk{plural(len(picks))} across {len(digests)} digest{plural(len(digests))}"
         page = [
-            "---",
-            f"title: {json.dumps(name, ensure_ascii=False)}",
-            f"description: {json.dumps(f'Every picked talk across the conference digests with a speaker from {name}.', ensure_ascii=False)}",
-            "---",
+            front_matter({
+                "title": name,
+                "description": f"Every picked talk across the conference digests with a speaker from {name}.",
+                "card": {"kind": "employer", "conference": "Employer", "title": name, "presenter": summary},
+            }).rstrip("\n"),
             "",
             f"# {name}",
             "",
-            f"{len(picks)} picked talk{plural(len(picks))} across {len(digests)} digest{plural(len(digests))} "
-            f"with a speaker from {name}, newest first.",
+            f"{summary} with a speaker from {name}, newest first.",
             "",
         ]
         for k in order:
@@ -752,13 +963,20 @@ def main() -> int:
     if POSTS.exists():
         shutil.rmtree(POSTS)
     POSTS.mkdir(parents=True)
+    if TALKS.exists():
+        shutil.rmtree(TALKS)
     posts: dict[str, dict] = {}
     companies: dict[str, list[dict]] = {}
+    talk_count = 0
     for path in sorted(DIGESTS.glob("*.md")):
         key = path.stem
         meta, body = read_digest(path)
-        page, info, picks = render_post(key, registry.get(key, {}), meta, body)
+        page, info, picks, talks = render_post(key, registry.get(key, {}), meta, body)
         (POSTS / f"{key}.md").write_text(page, encoding="utf-8")
+        for rel, text in talks:
+            (TALKS / rel).parent.mkdir(parents=True, exist_ok=True)
+            (TALKS / rel).write_text(text, encoding="utf-8")
+        talk_count += len(talks)
         posts[key] = info
         for p in picks:
             p["key"] = key
@@ -766,7 +984,8 @@ def main() -> int:
                 companies.setdefault(employer, []).append(p)
     render_companies(companies, posts)
     TRACKER.write_text(render_tracker(registry, posts), encoding="utf-8")
-    print(f"rendered {len(posts)} digest post(s), {len(companies)} employer page(s) and the tracker of {len(registry)} edition(s)")
+    print(f"rendered {len(posts)} digest post(s), {talk_count} talk page(s), {len(companies)} employer page(s) "
+          f"and the tracker of {len(registry)} edition(s)")
     return 0
 
 

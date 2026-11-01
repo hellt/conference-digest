@@ -170,6 +170,9 @@ a:focus-visible, button:focus-visible, label:focus-visible {
 .md-typeset .digest-facts + h2.tier { border-top: 0; padding-top: 0; }
 .md-typeset .pick { margin: 1.5rem 0 2.4rem; padding: 0 0 1.6rem; border-bottom: 1px solid var(--signal-rule); }
 .md-typeset .pick h3 { margin: .4rem 0 .6rem; }
+/* A pick heading links to the talk's own page (and its share card). */
+.md-typeset .pick h3 a:not(.headerlink) { color: inherit; text-decoration: none; }
+.md-typeset .pick h3 a:not(.headerlink):hover { color: var(--signal-accent); text-decoration: underline; text-underline-offset: .2em; }
 .md-typeset .pick-links p { display: flex; flex-wrap: wrap; gap: .3rem 0; margin: .5rem 0 1rem; }
 .md-typeset .pick-link { display: inline; color: var(--signal-muted); font-size: .6rem; border: 0; border-radius: 0; background: none; }
 .md-typeset .pick-link + .pick-link::before { content: '·'; display: inline-block; margin: 0 .6rem; color: var(--signal-muted); font-weight: 100; }

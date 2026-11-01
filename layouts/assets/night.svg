@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="1040" cy="560" r="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c5c9ac" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#c5c9ac" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sweep" x1="672" y1="192" x2="780" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c5c9ac" stop-opacity="0"/>
+      <stop offset="1" stop-color="#c5c9ac" stop-opacity="0.20"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g fill="none" stroke="#3d4548" stroke-width="1.5">
+    <circle cx="1040" cy="560" r="130"/>
+    <circle cx="1040" cy="560" r="260"/>
+    <circle cx="1040" cy="560" r="390"/>
+    <circle cx="1040" cy="560" r="520"/>
+    <line x1="1040" y1="560" x2="1040" y2="0"/>
+    <line x1="1040" y1="560" x2="460" y2="560"/>
+  </g>
+  <path d="M1040 560 L672.3 192.3 A520 520 0 0 1 780 109.7 Z" fill="url(#sweep)"/>
+  <line x1="1040" y1="560" x2="780" y2="109.7" stroke="#c5c9ac" stroke-opacity="0.55" stroke-width="2"/>
+  <circle cx="972.3" cy="175.9" r="16" fill="#c5c9ac" fill-opacity="0.18"/>
+  <circle cx="972.3" cy="175.9" r="6" fill="#c5c9ac"/>
+</svg>

@@ -1492,7 +1492,7 @@
 <div class="digest-body">
 <h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
 <div class="pick pick-core">
-<h3 id="integrating-ovn-into-the-network-fabric"><a href="../talks/ovscon-2024/integrating-ovn-into-the-network-fabric/">Integrating OVN into the Network Fabric</a><a class="headerlink" href="#integrating-ovn-into-the-network-fabric" title="Permanent link">#</a></h3>
+<h3 id="integrating-ovn-into-the-network-fabric"><a href="integrating-ovn-into-the-network-fabric/">Integrating OVN into the Network Fabric</a><a class="headerlink" href="#integrating-ovn-into-the-network-fabric" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t4">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/2024_ovn-con_fabric-integration.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=dCKNrAdISWY">Recording</a></p>
 </div>
@@ -1504,7 +1504,7 @@
 <p><strong>Where applicable</strong>: OVN-based clouds generally — the speakers come from STACKIT (OpenStack) and Canonical, and the design supersedes the ovn-bgp-agent pattern. The stretched-L2 drawbacks it enumerates (bonding/MLAG requirements, MAC moves on failover) are universal; the fix requires upstream OVN patches that were not yet merged at talk time.</p>
 </div>
 <div class="pick pick-core">
-<h3 id="running-open-vswitch-on-a-large-cpu-system"><a href="../talks/ovscon-2024/running-open-vswitch-on-a-large-cpu-system/">Running Open vSwitch on a large CPU System</a><a class="headerlink" href="#running-open-vswitch-on-a-large-cpu-system" title="Permanent link">#</a></h3>
+<h3 id="running-open-vswitch-on-a-large-cpu-system"><a href="running-open-vswitch-on-a-large-cpu-system/">Running Open vSwitch on a large CPU System</a><a class="headerlink" href="#running-open-vswitch-on-a-large-cpu-system" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t1">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/Running%20OVS%20on%20a%20large%20CPU%20system.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=jX5dVJVSUoc">Recording</a></p>
 </div>
@@ -1516,7 +1516,7 @@
 <p><strong>Where applicable</strong>: Kernel datapath (the <code>sw_flow_stat</code> issues are OVS kmod-specific) on large-CPU hosts — K8s nodes, NFV compute. Follow-ups listed: remove the <code>nl_dump_next()</code> mutex, optimize kmod stats gathering, possibly patch glibc's <code>getifaddrs()</code> (which wastes ~6% gathering unneeded per-CPU IPv6 stats).</p>
 </div>
 <div class="pick pick-core">
-<h3 id="pluggable-dpif-unlocking-accelerated-ovs-full-potential"><a href="../talks/ovscon-2024/pluggable-dpif-unlocking-accelerated-ovs-full-potential/">Pluggable DPIF - Unlocking accelerated OVS full potential</a><a class="headerlink" href="#pluggable-dpif-unlocking-accelerated-ovs-full-potential" title="Permanent link">#</a></h3>
+<h3 id="pluggable-dpif-unlocking-accelerated-ovs-full-potential"><a href="pluggable-dpif-unlocking-accelerated-ovs-full-potential/">Pluggable DPIF - Unlocking accelerated OVS full potential</a><a class="headerlink" href="#pluggable-dpif-unlocking-accelerated-ovs-full-potential" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t7">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/pluggable-dpif-1.pptx">Slides (PPTX)</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/pluggable-dpif-2.pptx">Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=LukzSDekjx4">Recording</a></p>
 </div>
@@ -1528,7 +1528,7 @@
 <p><strong>Where applicable</strong>: OVS community architecture decision with ecosystem-wide implications. The reference implementation is NVIDIA's DOCA DPIF, but the proposal is explicitly multi-vendor (P4 vs DOCA Flow cited as different integration styles). Watch this if you have any SmartNIC/DPU strategy.</p>
 </div>
 <div class="pick pick-core">
-<h3 id="openshift-networking-transformed-fully-embracing-dpdk-datapaths-in-ovn-k8s"><a href="../talks/ovscon-2024/openshift-networking-transformed-fully-embracing-dpdk-datapaths-in-ovn-k/">OpenShift Networking Transformed: Fully Embracing DPDK Datapaths in OVN-K8s!</a><a class="headerlink" href="#openshift-networking-transformed-fully-embracing-dpdk-datapaths-in-ovn-k8s" title="Permanent link">#</a></h3>
+<h3 id="openshift-networking-transformed-fully-embracing-dpdk-datapaths-in-ovn-k8s"><a href="openshift-networking-transformed-fully-embracing-dpdk-datapaths-in-ovn-k/">OpenShift Networking Transformed: Fully Embracing DPDK Datapaths in OVN-K8s!</a><a class="headerlink" href="#openshift-networking-transformed-fully-embracing-dpdk-datapaths-in-ovn-k8s" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t8">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/OpenShift%20Networking%20Transformed.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=KwznQq8f7LM">Recording</a></p>
 </div>
@@ -1540,7 +1540,7 @@
 <p><strong>Where applicable</strong>: OpenShift/RHEL PoC today (activated by kernel args, <code>prepare-ovs.sh</code>, vfio-pci binding); the VDUSE technique itself is general for K8s clusters wanting partitioned, deterministic pod networking. Preliminary results, explicitly framed as a PoC with upstream productization as future work.</p>
 </div>
 <div class="pick pick-core">
-<h3 id="psampling-kubernetes-network-policies"><a href="../talks/ovscon-2024/psampling-kubernetes-network-policies/">(P)sampling kubernetes network policies</a><a class="headerlink" href="#psampling-kubernetes-network-policies" title="Permanent link">#</a></h3>
+<h3 id="psampling-kubernetes-network-policies"><a href="psampling-kubernetes-network-policies/">(P)sampling kubernetes network policies</a><a class="headerlink" href="#psampling-kubernetes-network-policies" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t19">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/OVS_OVN%20Conf%2024_%20_%28P%29sampling%20kubernetes%20network%20policies_%20.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=gLwDsaiUuN4&amp;t=2s">Recording</a></p>
 </div>
@@ -1552,7 +1552,7 @@
 <p><strong>Where applicable</strong>: OVN-Kubernetes/OpenShift deployments of any size. Note the psample action is implemented in the kernel datapath (ACL sampling itself works with either IPFIX or psample collectors). The pattern — OVN-generated metadata riding packet samples — is extensible to other observability applications.</p>
 </div>
 <div class="pick pick-core">
-<h3 id="low-on-stack-flexible-protocols-vs-limited-memory"><a href="../talks/ovscon-2024/low-on-stack-flexible-protocols-vs-limited-memory/">Low on Stack: Flexible protocols vs. Limited Memory</a><a class="headerlink" href="#low-on-stack-flexible-protocols-vs-limited-memory" title="Permanent link">#</a></h3>
+<h3 id="low-on-stack-flexible-protocols-vs-limited-memory"><a href="low-on-stack-flexible-protocols-vs-limited-memory/">Low on Stack: Flexible protocols vs. Limited Memory</a><a class="headerlink" href="#low-on-stack-flexible-protocols-vs-limited-memory" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t2">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/Low%20on%20Stack_%20Flexible%20protocols%20vs%20limited%20memory.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=MpXC7CuTKMQ">Recording</a></p>
 </div>
@@ -1564,7 +1564,7 @@
 <p><strong>Where applicable</strong>: All OVS deployments, kernel and userspace; most acute where controller-generated pipelines (OVN, or any SDN app composing deep resubmit chains) stress translation depth.</p>
 </div>
 <div class="pick pick-core">
-<h3 id="open-vswitch-ovs-performance-case-study-from-software-to-hardware-offloading-from-kernel-to-userspace"><a href="../talks/ovscon-2024/open-vswitch-ovs-performance-case-study-from-software-to-hardware-offloa/">Open vSwitch (OVS) performance case study - From software to hardware offloading, from kernel to userspace</a><a class="headerlink" href="#open-vswitch-ovs-performance-case-study-from-software-to-hardware-offloading-from-kernel-to-userspace" title="Permanent link">#</a></h3>
+<h3 id="open-vswitch-ovs-performance-case-study-from-software-to-hardware-offloading-from-kernel-to-userspace"><a href="open-vswitch-ovs-performance-case-study-from-software-to-hardware-offloa/">Open vSwitch (OVS) performance case study - From software to hardware offloading, from kernel to userspace</a><a class="headerlink" href="#open-vswitch-ovs-performance-case-study-from-software-to-hardware-offloading-from-kernel-to-userspace" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t6">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/ovscon24-CT-offloads.pptx">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=_7YEmJrqJJE">Recording</a></p>
 </div>
@@ -1576,7 +1576,7 @@
 <p><strong>Where applicable</strong>: NVIDIA hardware via the DOCA framework — vendor-specific. But the design lessons (offload has real per-connection cost; elephant/mice traffic distribution determines whether offloading pays; state synchronization between HW and SW is the hard part) generalize to any CT-offload strategy.</p>
 </div>
 <div class="pick pick-core">
-<h3 id="p4ovn-offloading-ovn-to-intel-ipu-for-intel-developer-cloud"><a href="../talks/ovscon-2024/p4ovn-offloading-ovn-to-intel-ipu-for-intel-developer-cloud/">P4OVN: Offloading OVN to Intel IPU for Intel Developer Cloud</a><a class="headerlink" href="#p4ovn-offloading-ovn-to-intel-ipu-for-intel-developer-cloud" title="Permanent link">#</a></h3>
+<h3 id="p4ovn-offloading-ovn-to-intel-ipu-for-intel-developer-cloud"><a href="p4ovn-offloading-ovn-to-intel-ipu-for-intel-developer-cloud/">P4OVN: Offloading OVN to Intel IPU for Intel Developer Cloud</a><a class="headerlink" href="#p4ovn-offloading-ovn-to-intel-ipu-for-intel-developer-cloud" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t23">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=CgecMK9EhPU">Recording</a></p>
 </div>
@@ -1588,7 +1588,7 @@
 <p><strong>Where applicable</strong>: Intel IPU-specific today; interesting as a template for the "programmable-P4 fast path + OVS slow path on DPU compute" pattern that parallels NVIDIA's DOCA DPIF and Marvell's approach.</p>
 </div>
 <div class="pick pick-core">
-<h3 id="composable-services-in-ovn"><a href="../talks/ovscon-2024/composable-services-in-ovn/">Composable Services in OVN</a><a class="headerlink" href="#composable-services-in-ovn" title="Permanent link">#</a></h3>
+<h3 id="composable-services-in-ovn"><a href="composable-services-in-ovn/">Composable Services in OVN</a><a class="headerlink" href="#composable-services-in-ovn" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t22">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=Gf4M-ZSmTz4">Recording</a></p>
 </div>
@@ -1601,7 +1601,7 @@
 </div>
 <h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
 <div class="pick pick-adjacent">
-<h3 id="ovs-doca-the-evolution-of-hardware-acceleration"><a href="../talks/ovscon-2024/ovs-doca-the-evolution-of-hardware-acceleration/">OVS DOCA - The Evolution of hardware acceleration</a><a class="headerlink" href="#ovs-doca-the-evolution-of-hardware-acceleration" title="Permanent link">#</a></h3>
+<h3 id="ovs-doca-the-evolution-of-hardware-acceleration"><a href="ovs-doca-the-evolution-of-hardware-acceleration/">OVS DOCA - The Evolution of hardware acceleration</a><a class="headerlink" href="#ovs-doca-the-evolution-of-hardware-acceleration" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t18">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/OVS%20DOCA%20-%20The%20Evolution%20of%20hardware%20acceleration.pptx">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=SpJClGod0uE">Recording</a></p>
 </div>
@@ -1613,7 +1613,7 @@
 <p><strong>Where applicable</strong>: NVIDIA hardware; the upstream DOCA DPIF item is the one with community-wide consequences (see Pluggable DPIF).</p>
 </div>
 <div class="pick pick-adjacent">
-<h3 id="current-challenges-with-openstack-ironic-sr-iov-and-ovn"><a href="../talks/ovscon-2024/current-challenges-with-openstack-ironic-sr-iov-and-ovn/">Current Challenges with OpenStack Ironic, SR-IOV, and OVN</a><a class="headerlink" href="#current-challenges-with-openstack-ironic-sr-iov-and-ovn" title="Permanent link">#</a></h3>
+<h3 id="current-challenges-with-openstack-ironic-sr-iov-and-ovn"><a href="current-challenges-with-openstack-ironic-sr-iov-and-ovn/">Current Challenges with OpenStack Ironic, SR-IOV, and OVN</a><a class="headerlink" href="#current-challenges-with-openstack-ironic-sr-iov-and-ovn" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t3">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/Current%20Challenges%20with%20OpenStack%20Ironic,%20SR-IOV,%20and%20OVN.odp">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=irHtlLm9ACw">Recording</a></p>
 </div>
@@ -1624,7 +1624,7 @@
 <p><strong>How / Where applicable</strong>: No fuller source available; treat as an OpenStack-specific status report useful for anyone doing bare-metal + SR-IOV integration with OVN.</p>
 </div>
 <div class="pick pick-adjacent">
-<h3 id="harnessing-marvell-accelerators-with-ovs-hardware-offload-for-accelerated-network-performance"><a href="../talks/ovscon-2024/harnessing-marvell-accelerators-with-ovs-hardware-offload-for-accelerate/">Harnessing Marvell Accelerators with OVS Hardware Offload for Accelerated Network Performance</a><a class="headerlink" href="#harnessing-marvell-accelerators-with-ovs-hardware-offload-for-accelerated-network-performance" title="Permanent link">#</a></h3>
+<h3 id="harnessing-marvell-accelerators-with-ovs-hardware-offload-for-accelerated-network-performance"><a href="harnessing-marvell-accelerators-with-ovs-hardware-offload-for-accelerate/">Harnessing Marvell Accelerators with OVS Hardware Offload for Accelerated Network Performance</a><a class="headerlink" href="#harnessing-marvell-accelerators-with-ovs-hardware-offload-for-accelerated-network-performance" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t11">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/Harman-Jerin%20-%20Harnessing%20Marvell%20Accelerators%20with%20Open%20vSwitch%28OVS%29%20Hardware%20Offload%20for%20Accelerated%20Network%20Performance.pptx">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=80biE5L7jqw">Recording</a></p>
 </div>
@@ -1636,7 +1636,7 @@
 <p><strong>Where applicable</strong>: Marvell Octeon CN10K-specific; the extracted slides are diagram-heavy and number-light, so treat the performance claims as vendor-stated.</p>
 </div>
 <div class="pick pick-adjacent">
-<h3 id="vm-migration-enhancements"><a href="../talks/ovscon-2024/vm-migration-enhancements/">VM Migration Enhancements</a><a class="headerlink" href="#vm-migration-enhancements" title="Permanent link">#</a></h3>
+<h3 id="vm-migration-enhancements"><a href="vm-migration-enhancements/">VM Migration Enhancements</a><a class="headerlink" href="#vm-migration-enhancements" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t16">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/OVN_VM_Migration_Enhancements.pptx">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=aHHK5RUcRCw">Recording</a></p>
 </div>
@@ -1648,7 +1648,7 @@
 <p><strong>Where applicable</strong>: OVN generally (upstream options); the cross-AZ migration topology is Nutanix's use case, but the failure modes are universal to any live migration over OVN.</p>
 </div>
 <div class="pick pick-adjacent">
-<h3 id="ofprotodetrace-the-missing-link"><a href="../talks/ovscon-2024/ofprotodetrace-the-missing-link/">ofproto/detrace - The missing link.</a><a class="headerlink" href="#ofprotodetrace-the-missing-link" title="Permanent link">#</a></h3>
+<h3 id="ofprotodetrace-the-missing-link"><a href="ofprotodetrace-the-missing-link/">ofproto/detrace - The missing link.</a><a class="headerlink" href="#ofprotodetrace-the-missing-link" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t10">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/ofproto_detrace%20-%20The%20missing%20link..pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=OP3F1o3ozjM">Recording</a></p>
 </div>
@@ -1660,7 +1660,7 @@
 <p><strong>Where applicable</strong>: Any OVS/OVN deployment on OVS ≥ 3.4; the mantra — "UFIDs → cookies → stage-hints → external-ids" — is worth remembering regardless of tooling.</p>
 </div>
 <div class="pick pick-adjacent">
-<h3 id="tracing-packets-in-ovs-an-update-on-retis"><a href="../talks/ovscon-2024/tracing-packets-in-ovs-an-update-on-retis/">Tracing packets in OVS: an update on Retis</a><a class="headerlink" href="#tracing-packets-in-ovs-an-update-on-retis" title="Permanent link">#</a></h3>
+<h3 id="tracing-packets-in-ovs-an-update-on-retis"><a href="tracing-packets-in-ovs-an-update-on-retis/">Tracing packets in OVS: an update on Retis</a><a class="headerlink" href="#tracing-packets-in-ovs-an-update-on-retis" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t20">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/OVS_OVN%20Conf%2024_%20_Tracing%20packets%20in%20OVS_%20an%20update%20on%20Retis__%20.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=K0ldVsWkLJw">Recording</a></p>
 </div>
@@ -1672,7 +1672,7 @@
 <p><strong>Where applicable</strong>: Linux + OVS kernel datapath debugging; valuable for anyone who has tried to answer "what did OVS do to this packet" with tcpdump and failed.</p>
 </div>
 <div class="pick pick-adjacent">
-<h3 id="introducing-exact-match-hardware-offload-for-ovs"><a href="../talks/ovscon-2024/introducing-exact-match-hardware-offload-for-ovs/">Introducing exact-match hardware offload for OVS</a><a class="headerlink" href="#introducing-exact-match-hardware-offload-for-ovs" title="Permanent link">#</a></h3>
+<h3 id="introducing-exact-match-hardware-offload-for-ovs"><a href="introducing-exact-match-hardware-offload-for-ovs/">Introducing exact-match hardware offload for OVS</a><a class="headerlink" href="#introducing-exact-match-hardware-offload-for-ovs" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t17">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=bAIrGaNbBWk">Recording</a></p>
 </div>
@@ -1683,7 +1683,7 @@
 <p><strong>How / Where applicable</strong>: Early-stage, demo-based work from a semiconductor startup; no performance numbers in the abstract. Relevant to anyone modeling DPU lookup-plane power/scalability tradeoffs.</p>
 </div>
 <div class="pick pick-adjacent">
-<h3 id="scalable-multi-node-ai-workloads-in-multi-tenant-ai-clouds-using-sdn-k8s-networking"><a href="../talks/ovscon-2024/scalable-multi-node-ai-workloads-in-multi-tenant-ai-clouds-using-sdn-k8s/">Scalable Multi-Node AI Workloads in Multi-Tenant AI Clouds using SDN K8s Networking</a><a class="headerlink" href="#scalable-multi-node-ai-workloads-in-multi-tenant-ai-clouds-using-sdn-k8s-networking" title="Permanent link">#</a></h3>
+<h3 id="scalable-multi-node-ai-workloads-in-multi-tenant-ai-clouds-using-sdn-k8s-networking"><a href="scalable-multi-node-ai-workloads-in-multi-tenant-ai-clouds-using-sdn-k8s/">Scalable Multi-Node AI Workloads in Multi-Tenant AI Clouds using SDN K8s Networking</a><a class="headerlink" href="#scalable-multi-node-ai-workloads-in-multi-tenant-ai-clouds-using-sdn-k8s-networking" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t15">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/Scalable%20Workloads.pptx">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=68xaDx8mXqQ">Recording</a></p>
 </div>
@@ -1695,7 +1695,7 @@
 </div>
 <h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
 <div class="pick pick-wildcard">
-<h3 id="improving-megaflow-cache-performance-in-open-vswitch-with-branch-prediction"><a href="../talks/ovscon-2024/improving-megaflow-cache-performance-in-open-vswitch-with-branch-predict/">Improving megaflow cache performance in Open vSwitch with branch prediction</a><a class="headerlink" href="#improving-megaflow-cache-performance-in-open-vswitch-with-branch-prediction" title="Permanent link">#</a></h3>
+<h3 id="improving-megaflow-cache-performance-in-open-vswitch-with-branch-prediction"><a href="improving-megaflow-cache-performance-in-open-vswitch-with-branch-predict/">Improving megaflow cache performance in Open vSwitch with branch prediction</a><a class="headerlink" href="#improving-megaflow-cache-performance-in-open-vswitch-with-branch-prediction" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t13">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=hCVegvOWrqk">Recording</a></p>
 </div>
@@ -1707,7 +1707,7 @@
 <p><strong>Where applicable</strong>: Single-node simulation with synthetic traces — research-stage, not production guidance. The idea of predictive cache warming in a vSwitch is the novel hook.</p>
 </div>
 <div class="pick pick-wildcard">
-<h3 id="automating-root-cause-analysis-in-ovsovn-based-deployments-using-aiml"><a href="../talks/ovscon-2024/automating-root-cause-analysis-in-ovsovn-based-deployments-using-aiml/">Automating Root Cause Analysis in OVS/OVN-Based Deployments Using AI/ML</a><a class="headerlink" href="#automating-root-cause-analysis-in-ovsovn-based-deployments-using-aiml" title="Permanent link">#</a></h3>
+<h3 id="automating-root-cause-analysis-in-ovsovn-based-deployments-using-aiml"><a href="automating-root-cause-analysis-in-ovsovn-based-deployments-using-aiml/">Automating Root Cause Analysis in OVS/OVN-Based Deployments Using AI/ML</a><a class="headerlink" href="#automating-root-cause-analysis-in-ovsovn-based-deployments-using-aiml" title="Permanent link">#</a></h3>
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t9">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/Automating%20Root%20Cause%20Analysis%20in%20OVS_OVN-Based%20Deployments%20Using%20AI_ML.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=2OB29dygaH0">Recording</a></p>
 </div>

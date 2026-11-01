@@ -164,6 +164,7 @@ conferences/
     sigcomm.py       # SIGCOMM papers-info table (HTML)
     netdev.py        # netdevconf.info sessions index + per-session pages (HTML)
     nanog.py         # nanog.org agenda + talk pages, read via Tavily Extract
+    autocon.py       # AutoCon program + NAF program guide + NAF YouTube uploads
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -236,6 +237,15 @@ run.
   request. The agenda's day headers give exact dates, so discovery adds each
   meeting once its agenda is up. It needs `TAVILY_API_KEY`, and costs about 2
   Tavily credits per agenda plus 2 per 5 talk pages.
+- **AutoCon** (Network Automation Forum): the open edition page
+  (`networkautomation.forum/autocon<n>`) lists each session as "time — speaker
+  - title", without abstracts. Abstracts come from NAF's program guide repo
+  when the edition has one (`Network-Automation-Forum/ac<n>-guide`, AutoCon 5
+  on), and otherwise from NAF's YouTube upload of the talk, whose description is
+  the abstract. The upload also gives the recording. NAF publishes no slides.
+  The page's form CAPTCHA trips `looks_blocked()`, so this fetcher trusts the
+  status code. Recordings arrive weeks after the event: an edition fetched
+  early has fewer abstracts, and Links Refresh adds the recordings later.
 - **SIGCOMM** and **Netdev** are static HTML with no observed bot-block. Netdev
   does a second pass: the sessions index has only titles/speakers, so it follows
   each session page for the description, track label, slides and video. A

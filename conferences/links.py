@@ -57,9 +57,11 @@ CHANNELS = {
     "sigcomm": ("acm sigcomm", "sigcomm"),
     "netdev": ("netdev",),
     "nanog": ("nanog",),
+    "autocon": ("autocon", "network automation forum"),
 }
 DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon": "SREcon",
-           "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF", "nanog": "NANOG"}
+           "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF", "nanog": "NANOG",
+           "autocon": "AutoCon"}
 # URLs that only ever hold presentation decks, whatever the link text says.
 DECK_URLS = re.compile(r"static\.sched\.com/hosted_files/|storage\.googleapis\.com/site-media-prod/meetings/")
 STOP = {"the", "and", "for", "with", "from", "into", "over", "using", "via", "its", "our", "your",
@@ -299,7 +301,17 @@ def youtube_video(vid: str) -> Optional[Video]:
         return None
 
 
-def title_matches(talk: str, video: Video) -> bool:
+def speaker_names(text: str) -> list[str]:
+    """Full names from a speakers line: "Jane Doe - Org, John Roe · Role — Org & Ann Lee"."""
+    names = []
+    for part in re.split(r"\s*(?:,|&|;|\band\b)\s*", text or ""):
+        name = re.split(r"\s+(?:·|[-–—]|\()\s*", part)[0].strip()
+        if 2 <= len(name.split()) <= 4 and not re.search(r"\d", name):
+            names.append(name)
+    return names
+
+
+def title_matches(talk: str, video: Video, speakers: tuple[str, ...] = ()) -> bool:
     t = norm(talk)
     haystack = f"{video.title}\n{video.description[:600]}"
     if len(t) >= 12 and t in norm(haystack):
@@ -312,8 +324,13 @@ def title_matches(talk: str, video: Video) -> bool:
     # Word overlap, for retitled uploads; most words must be in the video's own
     # title, so a description that merely mentions the talk is not enough.
     want = words(talk)
-    return (len(want) >= 4 and len(want & words(haystack)) / len(want) >= 0.85
-            and len(want & words(video.title)) / len(want) >= 0.6)
+    if (len(want) >= 4 and len(want & words(haystack)) / len(want) >= 0.85
+            and len(want & words(video.title)) / len(want) >= 0.6):
+        return True
+    # Retitled uploads ("Opening Keynote: Jeff Gray - Building a Business Case
+    # for …"): a speaker's full name in the video title, plus half the words.
+    named = any(len(norm(n)) >= 6 and norm(n) in norm(video.title) for n in speakers)
+    return named and len(want) >= 2 and len(want & words(video.title)) / len(want) >= 0.5
 
 
 def event_matches(video: Video, ctx: Context) -> bool:
@@ -333,36 +350,50 @@ def event_matches(video: Video, ctx: Context) -> bool:
     return ctx.end_date - timedelta(days=14) <= video.published <= ctx.end_date + timedelta(days=240)
 
 
-def verify(talk: str, video: Video, ctx: Context) -> bool:
+def verify(talk: str, video: Video, ctx: Context, speakers: tuple[str, ...] = ()) -> bool:
     if video.seconds and video.seconds < 90:
         return False
-    return title_matches(talk, video) and event_matches(video, ctx)
+    return title_matches(talk, video, speakers) and event_matches(video, ctx)
 
 
-def find_recording(talk: str, ctx: Context) -> Optional[str]:
-    query = f"{talk} {ctx.query_term}"
-    try:
-        ids = youtube_search(query)[:6]
-    except Exception:
-        ids = []
-        if ctx.tavily_key:
-            try:
-                ids = tavily_search(query, ctx.tavily_key)
-            except Exception:
-                return None
+def find_recording(talk: str, ctx: Context, speakers: tuple[str, ...] = ()) -> Optional[str]:
+    video = find_video(talk, ctx, speakers)
+    return f"https://www.youtube.com/watch?v={video.id}" if video else None
+
+
+def find_video(talk: str, ctx: Context, speakers: tuple[str, ...] = ()) -> Optional[Video]:
+    """The verified upload of a talk (title, channel, description, date), or None.
+
+    YouTube's results vary: "title + conference" sometimes surfaces the
+    conference's promo clips instead of the talk, so the bare title is tried
+    next when nothing passed.
+    """
     accepted: list[Video] = []
-    for vid in ids:
-        time.sleep(ctx.delay)
-        v = youtube_video(vid)
-        if v and verify(talk, v, ctx):
-            accepted.append(v)
-            if v.published is None or ctx.end_date is None:
-                break
+    seen: set[str] = set()
+    for query in (f"{talk} {ctx.query_term}", talk):
+        try:
+            ids = youtube_search(query)[:6]
+        except Exception:
+            ids = []
+            if ctx.tavily_key:
+                try:
+                    ids = tavily_search(query, ctx.tavily_key)
+                except Exception:
+                    ids = []
+        for vid in ids:
+            if vid in seen:
+                continue
+            seen.add(vid)
+            time.sleep(ctx.delay)
+            v = youtube_video(vid)
+            if v and verify(talk, v, ctx, speakers):
+                accepted.append(v)
+        if accepted:
+            break
     if not accepted:
         return None
     # A talk given at two editions: take the upload closest after this one.
-    best = min(accepted, key=lambda v: abs((v.published - ctx.end_date).days) if v.published and ctx.end_date else 0)
-    return f"https://www.youtube.com/watch?v={best.id}"
+    return min(accepted, key=lambda v: abs((v.published - ctx.end_date).days) if v.published and ctx.end_date else 0)
 
 
 # --------------------------------------------------------------------- rows --
@@ -469,7 +500,8 @@ def enrich(markdown: str, prompt: str, ctx: Context, log=print) -> tuple[str, di
             stats["unmatched"].append(heading[:120])
         if ctx.search and not links.get("video") and ctx.marker != "ietf":
             title = item.title if item else re.split(r"\s+[—–]\s+", MD_LINK.sub(r"\1", heading))[0]
-            found = find_recording(title, ctx)
+            said = re.search(r"^(?:Speakers|Authors):\s*(.+)$", item.text, re.M) if item else None
+            found = find_recording(title, ctx, tuple(speaker_names(said.group(1))) if said else ())
             if found:
                 links["video"] = found
                 stats["video_from_search"] += 1

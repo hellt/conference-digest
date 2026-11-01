@@ -155,3 +155,20 @@ series:
     program_url_template: "https://nanog.org/events/nanog-{n}/agenda/"
     manual_fallback_url_template: "https://nanog.org/events/nanog-{n}/agenda/"
     notes: "North American network operators: routing security, peering, optics, DC and backbone operations, automation."
+
+  # AutoCon, the Network Automation Forum's conference: spring in Europe, fall in
+  # the US. The edition page is open HTML; abstracts come from NAF's program
+  # guide repo when it has one and from NAF's YouTube uploads (see
+  # conferences/fetchers/autocon.py). Placeholder pages for future editions
+  # have no program, so discovery only adds an edition once its program is up.
+  - series: autocon
+    enumerate: ordinal
+    key_template: "autocon-{n}"
+    name_template: "AutoCon {n}"
+    type: operator
+    fetcher: autocon
+    lookahead: 2
+    program_url_template: "https://networkautomation.forum/autocon{n}"
+    manual_fallback_url_template: "https://networkautomation.forum/autocon{n}"
+    notes: "Network automation practitioners: source of truth, orchestration, observability, testing, AI for NetOps, adoption stories."
+

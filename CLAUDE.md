@@ -107,7 +107,7 @@ pipeline.
    `standards`, `vendor`, `operator`, `security`.
 8. **Every `fetcher` value must be registered** in
    `conferences/fetchers/__init__.py::FETCHERS`. Today: `usenix`, `ietf`,
-   `sched`, `sigcomm`, `netdev`, `nanog`.
+   `sched`, `sigcomm`, `netdev`, `nanog`, `autocon`.
 9. **`run_location: local`** means the source bot-blocks datacenter IPs. In CI
    that edition is skipped without a fetch attempt (status `local_required`) and
    the issue tells the user to run it from their own machine. `--conference`

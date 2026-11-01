@@ -16,7 +16,7 @@
 #   type       One of: academic | standards | vendor | operator | security
 #              Drives how the universal prompt tells Claude to read the program.
 #   end_date   ISO date (YYYY-MM-DD) the event ended. Selection is based on this.
-#   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog
+#   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog | autocon
 #   program_url
 #              The machine-or-human-readable program endpoint the fetcher pulls.
 #   manual_fallback_url
@@ -275,3 +275,30 @@ conferences:
     program_url: "https://nanog.org/events/nanog-98/agenda/"
     manual_fallback_url: "https://nanog.org/events/nanog-98/agenda/"
     notes: "North American network operators: routing security, peering, optics, DC and backbone operations, automation. Read via Tavily Extract (nanog.org blocks automated clients). end_date from the agenda."
+
+  - key: autocon-3
+    name: "AutoCon 3 (Prague)"
+    type: operator
+    end_date: 2025-05-30
+    fetcher: autocon
+    program_url: "https://networkautomation.forum/autocon3"
+    manual_fallback_url: "https://networkautomation.forum/autocon3"
+    notes: "Network automation practitioners: source of truth, orchestration, observability, testing, AI for NetOps, adoption stories. Abstracts from NAF's program guide and YouTube uploads."
+
+  - key: autocon-4
+    name: "AutoCon 4 (Austin)"
+    type: operator
+    end_date: 2025-11-21
+    fetcher: autocon
+    program_url: "https://networkautomation.forum/autocon4"
+    manual_fallback_url: "https://networkautomation.forum/autocon4"
+    notes: "Network automation practitioners: source of truth, orchestration, observability, testing, AI for NetOps, adoption stories. Abstracts from NAF's program guide and YouTube uploads."
+
+  - key: autocon-5
+    name: "AutoCon 5 (Munich)"
+    type: operator
+    end_date: 2026-06-12
+    fetcher: autocon
+    program_url: "https://networkautomation.forum/autocon5"
+    manual_fallback_url: "https://networkautomation.forum/autocon5"
+    notes: "Network automation practitioners: source of truth, orchestration, observability, testing, AI for NetOps, adoption stories. Abstracts from NAF's program guide and YouTube uploads."

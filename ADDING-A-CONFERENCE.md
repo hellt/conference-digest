@@ -37,6 +37,7 @@ Reuse a fetcher when the conference is hosted on a platform one already reads:
 | `sigcomm` | The SIGCOMM papers-info table |
 | `netdev` | netdevconf.info sessions index and session pages |
 | `nanog` | One NANOG meeting's agenda and talk pages, via Tavily Extract |
+| `autocon` | One AutoCon edition: the program, NAF's program guide, and NAF's YouTube uploads |
 
 Otherwise add `conferences/fetchers/<name>.py`:
 
@@ -95,6 +96,8 @@ The abstract, as published.
 
 The abstract follows on the next lines. With no abstract, the writer marks the pick "from abstract only", or works from the title and speakers alone.
 
+**A program without abstracts** can borrow them from the official recordings, as AutoCon does. NAF uploads each talk with its abstract as the description, so the fetcher calls `conferences.links.find_video()`. That returns the checked upload with its description, and the description becomes the abstract. Import it inside `fetch()`: `conferences.links` imports the fetchers package.
+
 ## 3. Let the links step find recordings
 
 `conferences/links.py` adds every pick's links row and searches YouTube for a missing recording. A search result is linked only when all three checks pass:
@@ -102,6 +105,8 @@ The abstract follows on the next lines. With no abstract, the writer marks the p
 1. The talk title appears in the video's title or description.
 2. The conference is named in the title or description, or the video is on the conference's channel.
 3. The upload date is within eight months after the event.
+
+For check 1, an upload that was renamed ("Opening Keynote: Jane Doe - A shorter title") still passes if one of the talk's speakers is named in the video title and half the title's words match. Speakers come from the item's `Speakers:` line.
 
 For check 2, add the conference to `CHANNELS` and `DISPLAY` in `conferences/links.py`, keyed by the first segment of its registry key:
 
@@ -188,3 +193,10 @@ Adding NANOG took these steps:
 5. **Series and editions.** The series `nanog` uses `enumerate: ordinal` and `key_template: "nanog-{n}"`. NANOG 96, 97 and 98 went into the registry by hand. Discovery adds NANOG 99 once its agenda is published.
 6. **Secrets and workflow.** `TAVILY_API_KEY` was added to the scan's discovery and prompt-generation steps.
 7. **Local trial.** `generate_digest_prompt.py --conference nanog-98` read 53 talks, 44 with recordings and 45 with slides. `enrich_links.py` on a scratch digest added Abstract, Slides and Recording links. For a talk with no recording in the program, it found and verified the upload on NANOG's YouTube channel.
+
+## Redoing a digest when better material arrives
+
+Links Refresh adds recordings and slides to a published digest, but it never rewrites the text. If a program first had little to read (AutoCon's abstracts arrive with the recordings, weeks after the event), redo the digest once the material is out:
+
+1. Regenerate the prompt: run **Conference Digest** with `conference: <key>`, or run `generate_digest_prompt.py --conference <key>` locally and push the prompt.
+2. Run **Digest Bot** with `conference: <key>`. It drafts the digest again and opens a PR that replaces the published one.

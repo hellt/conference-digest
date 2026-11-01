@@ -27,6 +27,7 @@ from .moreip import MoreIpFetcher
 from .swinog import SwinogFetcher
 from .capacity import CapacityFetcher
 from .janog import JanogFetcher
+from .indico import IndicoFetcher
 from .imc import ImcFetcher
 from .conext import ConextFetcher
 from .apricot import ApricotFetcher
@@ -42,6 +43,7 @@ from .moreip import MoreIpFetcher
 from .swinog import SwinogFetcher
 from .capacity import CapacityFetcher
 from .janog import JanogFetcher
+from .indico import IndicoFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -73,6 +75,7 @@ FETCHERS = {
     "swinog": SwinogFetcher(),
     "capacity": CapacityFetcher(),
     "janog": JanogFetcher(),
+    "indico": IndicoFetcher(),
 }
 
 

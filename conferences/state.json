@@ -142,5 +142,11 @@
     "attempts": 1,
     "last_attempt": "2026-11-01T22:58:24.037310+00:00",
     "last_error": "programme is a client-side app with no public data endpoint (programme page reachable; event ended 2026-06-12); open manual_fallback_url and paste the programme into the prompt"
+  },
+  "nogfi-2026-06": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:10:23.642953+00:00",
+    "last_error": ""
   }
 }

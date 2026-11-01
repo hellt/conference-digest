@@ -298,3 +298,20 @@ series:
     program_url_template: "https://conferences.sigcomm.org/imc/{year}/program/"
     manual_fallback_url_template: "https://conferences.sigcomm.org/imc/{year}/program/"
     notes: "Premier Internet measurement research: datacenter and CDN measurement, topology and interdomain, transport, DNS, security and censorship measurement. Papers link doi.org ACM DL pages."
+
+  # ACM CoNEXT: the conference site is an Angular app whose pages are all
+  # server-rendered partials; the program partial lists every paper with
+  # authors, a full abstract and its ACM DL links, grouped by session. The
+  # preliminary program (few months out) holds no papers yet, so discovery
+  # adds an edition only once the full program is up.
+  - series: conext
+    enumerate: year
+    key_template: "conext-{year}"
+    name_template: "ACM CoNEXT {year}"
+    type: academic
+    fetcher: conext
+    start: 2025
+    end_date_hint: "12-05"
+    program_url_template: "https://conferences.sigcomm.org/co-next/{year}/partials/program.html"
+    manual_fallback_url_template: "https://conferences.sigcomm.org/co-next/{year}/partials/program.html"
+    notes: "Emerging networking research: datacenter, transport (QUIC), edge and wireless, measurement, network security. Papers link their ACM DL page and PDF."

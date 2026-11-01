@@ -1,0 +1,1822 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AutoCon 5 is a network-automation operator conference, so nothing here touches optics, RDMA&#x2f;lossless fabrics, eBPF&#x2f;Cilium, or FIDO&#x2f;SPIFFE directly. The value for this PM is in the physical-fabric and WAN automation war stories (EVPN&#x2f;VXLAN, SRv6 backbones, an 800G pan-European migration), one…">
+      
+      
+      
+        <link rel="canonical" href="https://hellt.github.io/conference-digest/autocon-5/">
+      
+      
+      
+        <link rel="prev" href="../ietf-124/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>AutoCon 5 (Munich) — Operator Program - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300,300i,400,400i,500,500i,700,700i%7CGoogle+Sans+Code:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Google Sans";--md-code-font:"Google Sans Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="AutoCon 5 (Munich) — Operator Program · Conference Digest" />
+<meta property="og:description" content="AutoCon 5 is a network-automation operator conference, so nothing here touches optics, RDMA/lossless fabrics, eBPF/Cilium, or FIDO/SPIFFE directly. The value for this PM is in the physical-fabric and WAN automation war stories (EVPN/VXLAN, SRv6 backbones, an 800G pan-European migration), one…" />
+<meta property="og:url" content="https://hellt.github.io/conference-digest/autocon-5/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="AutoCon 5 (Munich) — Operator Program · Conference Digest" />
+<meta name="twitter:description" content="AutoCon 5 is a network-automation operator conference, so nothing here touches optics, RDMA/lossless fabrics, eBPF/Cilium, or FIDO/SPIFFE directly. The value for this PM is in the physical-fabric and WAN automation war stories (EVPN/VXLAN, SRv6 backbones, an 800G pan-European migration), one…" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AutoCon 5 (Munich) — Operator Program
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../category/academic/" class="md-tabs__link">
+          
+  
+  Conference type
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-operations-automation-at-de-cix" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Network Operations Automation at DE-CIX
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rethinking-network-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rethinking Network Monitoring
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reaching-fully-automated-backbone-networks-a-network-developers-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reaching Fully Automated Backbone Networks: A Network Developer's Journey
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automation-at-scale-across-domains-dc-campus-and-wan" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automation at Scale Across Domains: DC, Campus, and WAN
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ten-years-of-network-automation-at-linx" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ten Years of Network Automation at LINX
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitops-the-hard-way-rebuilding-a-source-of-truth-three-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        GitOps the Hard Way: Rebuilding a Source of Truth (Three Times)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automating-firewall-rule-deployment-in-a-highly-regulated-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automating firewall rule deployment in a highly regulated environment
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrating-the-geant-network-to-a-new-vendor" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Migrating the GÉANT Network to a new vendor
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modernizing-workflows-as-old-as-the-railways-operationalizing-network-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modernizing Workflows as Old as the Railways: Operationalizing Network Automation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lessons-learned-testing-network-automation-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lessons Learned Testing Network Automation Solutions
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-workflow-driven-automation-becomes-operable-under-air-gap-compliance-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How Workflow-Driven Automation Becomes Operable Under Air Gap &amp; Compliance Constraints
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-network-reliability-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Practical Network Reliability Engineering
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-data-to-decisions-real-time-network-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Data to Decisions: Real-Time Network Context
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naf-framework-deep-dive-parts-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NAF Framework — Deep Dive (Parts 1 &amp; 2)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-netops-can-embrace-ai-to-lead-enterprise-innovation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How NetOps Can Embrace AI to Lead Enterprise Innovation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecting-network-automation-with-software-engineering-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Architecting Network Automation with Software Engineering Principles
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-computer-must-never-make-a-management-decision-can-we-let-ai-run-our-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        "A Computer Must Never Make a Management Decision." Can We Let AI Run Our Infrastructure?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conference type
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Conference type
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Academic
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operator
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standards
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendor
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-operations-automation-at-de-cix" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Network Operations Automation at DE-CIX
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rethinking-network-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rethinking Network Monitoring
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reaching-fully-automated-backbone-networks-a-network-developers-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reaching Fully Automated Backbone Networks: A Network Developer's Journey
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automation-at-scale-across-domains-dc-campus-and-wan" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automation at Scale Across Domains: DC, Campus, and WAN
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ten-years-of-network-automation-at-linx" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ten Years of Network Automation at LINX
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitops-the-hard-way-rebuilding-a-source-of-truth-three-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        GitOps the Hard Way: Rebuilding a Source of Truth (Three Times)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automating-firewall-rule-deployment-in-a-highly-regulated-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automating firewall rule deployment in a highly regulated environment
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrating-the-geant-network-to-a-new-vendor" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Migrating the GÉANT Network to a new vendor
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modernizing-workflows-as-old-as-the-railways-operationalizing-network-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modernizing Workflows as Old as the Railways: Operationalizing Network Automation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lessons-learned-testing-network-automation-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lessons Learned Testing Network Automation Solutions
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-workflow-driven-automation-becomes-operable-under-air-gap-compliance-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How Workflow-Driven Automation Becomes Operable Under Air Gap &amp; Compliance Constraints
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-network-reliability-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Practical Network Reliability Engineering
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-data-to-decisions-real-time-network-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Data to Decisions: Real-Time Network Context
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naf-framework-deep-dive-parts-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NAF Framework — Deep Dive (Parts 1 &amp; 2)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-netops-can-embrace-ai-to-lead-enterprise-innovation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How NetOps Can Embrace AI to Lead Enterprise Innovation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecting-network-automation-with-software-engineering-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Architecting Network Automation with Software Engineering Principles
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-computer-must-never-make-a-management-decision-can-we-let-ai-run-our-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        "A Computer Must Never Make a Management Decision." Can We Let AI Run Our Infrastructure?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="./.." class="md-nav__link">
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="../images/tofarev.svg" alt="ToFaRev">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://github.com/hellt/tofarev">ToFaRev</a>
+                        
+                      </strong>
+                      <br>
+                      GLM-5.3-Flash on Nebius Token Factory
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-calendar-days" viewBox="0 0 24 24"><path d="M8 2v3M16 2v3"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg>
+                        <time datetime="2026-11-01 00:00:00+00:00" class="md-ellipsis">November 1, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-library" viewBox="0 0 24 24"><path d="m16 6 4 14M12 6v14M8 8v12M4 4v16"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../category/operator/">Operator</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              18 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      
+        
+
+  
+  
+
+
+<h1 id="autocon-5-munich-operator-program">AutoCon 5 (Munich) — Operator Program<a class="headerlink" href="#autocon-5-munich-operator-program" title="Permanent link">#</a></h1>
+<p>AutoCon 5 is a network-automation operator conference, so nothing here touches optics, RDMA/lossless fabrics, eBPF/Cilium, or FIDO/SPIFFE directly. The value for this PM is in the physical-fabric and WAN automation war stories (EVPN/VXLAN, SRv6 backbones, an 800G pan-European migration), one genuinely strong network-security automation case, and the agentic-AI governance debate that dominated the leadership track. Picks below are grouped accordingly.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 13.5v8H3v-8zm-2 2H5v4h4zM12 2l5.5 9h-11zm0 3.86L10.08 9h3.84zM17.5 13c2.5 0 4.5 2 4.5 4.5S20 22 17.5 22 13 20 13 17.5s2-4.5 4.5-4.5m0 2a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg></span> Operator</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2V5a2 2 0 0 0-2-2m0 16H5V9h14zM5 7V5h14v2zm5.56 10.46 5.94-5.93-1.07-1.06-4.87 4.87-2.11-2.11-1.06 1.06z"/></svg></span> Ended June 12, 2026</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.19 2.25c-.26 0-.52.06-.77.15L3.06 5.45a1.994 1.994 0 0 0-1.09 2.6L6.93 20a2 2 0 0 0 1.81 1.25c.26 0 .53-.03.79-.15l7.37-3.05a2.02 2.02 0 0 0 1.23-1.8c.01-.25-.04-.54-.13-.8L13 3.5a1.95 1.95 0 0 0-1.81-1.25m3.48 0 3.45 8.35V4.25a2 2 0 0 0-2-2m4.01 1.54v9.03l2.43-5.86a1.99 1.99 0 0 0-1.09-2.6m-10.28-.14 4.98 12.02-7.39 3.06L3.8 7.29"/></svg></span> 17 picks (8 core · 6 adjacent · 3 wildcard)</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42"/></svg></span> <a href="https://networkautomation.forum/autocon5">Program</a></span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 15.5c0 1.11-.89 2-2 2s-2-.89-2-2 .9-2 2-2 2 .9 2 2m-9-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2z"/></svg></span> ToFaRev (zai-org/GLM-5.3)</span></p>
+</div>
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="network-operations-automation-at-de-cix">Network Operations Automation at DE-CIX<a class="headerlink" href="#network-operations-automation-at-de-cix" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%201%20-%20Wednesday/AC5%20-%20Lucas%20Immanuel%20Nickel%20-%20Network%20Operations%20Automation%20at%20DE-CIX.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%201%20-%20Wednesday/AC5%20-%20Lucas%20Immanuel%20Nickel%20-%20Network%20Operations%20Automation%20at%20DE-CIX.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=k1TMAgNROh8"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="k1TMAgNROh8" data-start="0" href="https://www.youtube.com/watch?v=k1TMAgNROh8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/k1TMAgNROh8/hqdefault.jpg" alt="Play the recording: Network Operations Automation at DE-CIX" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Lucas Immanuel Nickel · Network Operations Engineer — DE-CIX</p>
+<ul>
+<li><strong>Why</strong>: One of the few talks treating network automation itself as production infrastructure with SRE discipline — reliable delivery, observability, safe failure — at an interconnection platform whose fabric is the product.</li>
+<li><strong>What</strong>: DE-CIX (3,700+ connected networks, 100+ routers, hundreds of circuits) runs 15+ production web services, 20+ cron jobs and 500+ executions/day from one shared library. Two shipped patterns: a gNMIc config-generation job driven from Zabbix + NetBox, and a geospatial network view service; both deploy via GitOps in under 10 minutes.</li>
+<li><strong>How</strong>: All workloads (cron jobs and web services) run in Kubernetes behind a single standardized CI/CD path (Kaniko → Harbor → Helm → K8s, Renovate for deps). The gNMIc generator turns Zabbix host/proxy and NetBox device data into proxy configs exposing device telemetry as Prometheus metrics. "Geo" correlates NetBox + Zabbix into a live geographic view, inferring relationships from imperfect data and preferring "incomplete but honest output" over silent success. 1 in 3 deploys is rejected before production — failure moved deliberately left.</li>
+<li><strong>Where applicable</strong>: The GitOps delivery and defensive-automation patterns are broadly applicable; the scale and IXP workflows (route servers, FPU fiber switching) are DE-CIX-specific. The Kubernetes investment assumes you already run a container platform for network tooling.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="rethinking-network-monitoring">Rethinking Network Monitoring<a class="headerlink" href="#rethinking-network-monitoring" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%201%20-%20Wednesday/AC5%20-%20Christian%20Adell%20-%09David%20Flores%20-%20Rethinking%20Network%20Monitoring.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%201%20-%20Wednesday/AC5%20-%20Christian%20Adell%20-%09David%20Flores%20-%20Rethinking%20Network%20Monitoring.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=F6_f1piv0LI"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="F6_f1piv0LI" data-start="0" href="https://www.youtube.com/watch?v=F6_f1piv0LI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/F6_f1piv0LI/hqdefault.jpg" alt="Play the recording: Rethinking Network Monitoring" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Christian Adell &amp; David Flores · CoreWeave</p>
+<ul>
+<li><strong>Why</strong>: The clearest architectural statement at the conference that monitoring is the feedback signal for automation, not a dashboard problem — from a GPU-cloud operator running hyperscale DC fabrics.</li>
+<li><strong>What</strong>: The argument is that the gap isn't tooling but architecture: observability is a pipeline (collector → processor → distribution → persistence → visualization) that must be <em>diverse</em> (metrics, logs, flows, state, config), <em>integrable</em> (tied to the SoT and the orchestrator so the loop closes), and <em>scalable</em> (federated, cardinality-aware). The stated goal: a device added to the SoT starts being monitored automatically; a 3am interface degradation is verified and remediated by a workflow, no human.</li>
+<li><strong>How</strong>: Normalize multi-vendor telemetry (gNMI vs SNMP schemas) into a common shape; enrich with SoT context (role, location, owner, maintenance status) — but only with labels that drive decisions, since every label multiplies time series. SoT decides what gets monitored (push/webhook over periodic sync); "an alert is a contract, not a notification" — alerts must be machine-consumable by the orchestrator.</li>
+<li><strong>Where applicable</strong>: The pipeline pattern is vendor-agnostic and transfers to any fleet. The "hundreds of thousands of devices" framing is CoreWeave-scale; smaller operators can adopt the architecture without the federation complexity.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="reaching-fully-automated-backbone-networks-a-network-developers-journey">Reaching Fully Automated Backbone Networks: A Network Developer's Journey<a class="headerlink" href="#reaching-fully-automated-backbone-networks-a-network-developers-journey" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20General%20Session/AC5%20-%20Eugen%20Serban%20-%20Bartek%20Bacal%20-%20Reaching%20fully%20automated%20backbone%20networks%2C%20a%20Network%20Developer%27s%20journey.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20General%20Session/AC5%20-%20Eugen%20Serban%20-%20Bartek%20Bacal%20-%20Reaching%20fully%20automated%20backbone%20networks%2C%20a%20Network%20Developer%27s%20journey.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=d4yRszRS6FI"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="d4yRszRS6FI" data-start="0" href="https://www.youtube.com/watch?v=d4yRszRS6FI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/d4yRszRS6FI/hqdefault.jpg" alt="Play the recording: Reaching Fully Automated Backbone Networks: A Network Developer's Journey" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Eugen Serban &amp; Bartek Bacal · Swisscom</p>
+<ul>
+<li><strong>Why</strong>: A production SRv6 backbone at carrier scale, with the honest four-year delta between architecture PowerPoints and reality — squarely in this PM's WAN/protocol territory.</li>
+<li><strong>What</strong>: Today: &gt;3,000 devices (~10k target) running SRv6 orchestrated by NSO with zero manual CLI, &gt;25k public-facing service instances (&gt;150k target), and zero escalated major incidents. The candid part: standardization struggles, early engineering choices that hurt, toolkit woes, organizational and cultural hurdles (Dev vs Ops, Network Engineer vs Developer), and northbound processes that didn't adapt.</li>
+<li><strong>How</strong>: A virtual dev stage with repeatable testing superseded earlier tooling; automatic documentation; a deliberately small standardized service catalog (L2VPN/EVPN, L3VPN, SRv6) so each component is replaceable. Open challenges named explicitly: true CI/CD, scale testing (YANG leafrefs and "for loops" causing exponential runtime growth), and closed-loop self-healing split into awareness → analysis → decision → execution.</li>
+<li><strong>Where applicable</strong>: Swisscom-specific SP environment, NSO-centric. The org lessons (the hardest problems were not the network) and the scale-testing pitfalls transfer to any backbone automation program.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="automation-at-scale-across-domains-dc-campus-and-wan">Automation at Scale Across Domains: DC, Campus, and WAN<a class="headerlink" href="#automation-at-scale-across-domains-dc-campus-and-wan" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20General%20Session/AC5%20-%20Christian%20Breunig%20-%20Automation%20at%20scale%20across%20domains%20%28DC-Campus-WAN%29.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20General%20Session/AC5%20-%20Christian%20Breunig%20-%20Automation%20at%20scale%20across%20domains%20%28DC-Campus-WAN%29.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=seiputEwZVg"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="seiputEwZVg" data-start="0" href="https://www.youtube.com/watch?v=seiputEwZVg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/seiputEwZVg/hqdefault.jpg" alt="Play the recording: Automation at Scale Across Domains: DC, Campus, and WAN" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Christian Breunig · Network Architect — Rohde &amp; Schwarz</p>
+<ul>
+<li><strong>Why</strong>: A full EVPN-VXLAN fabric program — dual DCs, campus, WAN — with a quantitative answer to "how much Day-2 work will there really be?" (much more than you think).</li>
+<li><strong>What</strong>: 500+ devices under unified Git/Ansible/GitLab CI. Change volume grew from 109 (2021) to 1,060 (2025) as the network became a service-provider-like internal backbone — the "few VLANs a year" assumption died quickly. They maintain a 100% EVE-NG replica of the network at all times and spend ~80% of their time in the QA environment.</li>
+<li><strong>How</strong>: Declarative, data-driven model: NetBox as SoT, data determines what gets rendered (VLANs on port-channels, VLAN database, VNIs). One inventory per domain (DC/LAN/WAN) with domain-specific inheritance (DC.yml/LAN.yml/WAN.yml); ANTA for post-change validation (e.g., detecting decommissioned endpoint ports); ansible-lint/yamllint enforced. Scaling tips include 2-byte vs 4-byte ASN pitfalls (the RD is only 32-bit) and careful MLAG peer-link addressing to avoid customer-VRF conflicts.</li>
+<li><strong>Where applicable</strong>: Single-vendor (Arista + AVD + CloudVision) — that's the constraint. The QA-digital-twin discipline, the change-rate data, and the MLAG/ASN gotchas transfer to any EVPN fabric program.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="ten-years-of-network-automation-at-linx">Ten Years of Network Automation at LINX<a class="headerlink" href="#ten-years-of-network-automation-at-linx" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20General%20Session/AC5%20-%20Riccardo%20Verzeni%20-%20Ten%20Years%20of%20Network%20Automation%20at%20LINX.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20General%20Session/AC5%20-%20Riccardo%20Verzeni%20-%20Ten%20Years%20of%20Network%20Automation%20at%20LINX.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=MRyNX4gDSfI"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="MRyNX4gDSfI" data-start="0" href="https://www.youtube.com/watch?v=MRyNX4gDSfI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/MRyNX4gDSfI/hqdefault.jpg" alt="Play the recording: Ten Years of Network Automation at LINX" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Riccardo Verzeni · Director of Software Engineering — LINX</p>
+<ul>
+<li><strong>Why</strong>: A decade-long incremental journey at a large IXP — customer port provisioning, MAC ACL port security, rate limiting, quarantine testing, thousands of route-server BGP sessions — the physical interconnect + BGP combination this PM lives in.</li>
+<li><strong>What</strong>: Three phases: NCA (config-as-code from structured data, Jinja2/Ansible/NAPALM, reviewable diffs, git audit trails), NCA 2.0 (unsupervised, asynchronous member self-service via API → message queue → worker), and OMS-based service orchestration plus route-server automation. A bespoke SoT (TSI) was built because nothing on the market fit an IXP with a telco's workflows but not its scale — today they'd probably use NetBox.</li>
+<li><strong>How</strong>: The standout pattern is the pause–resume hybrid model: the OMS workflow pauses when external action is required (member validates config in quarantine VLAN, invited member accepts a private VLAN, NOC patches a physical port) and resumes automatically once satisfied. Explicit guardrails: locking, serialized deploys, hash-verification of pushed files, defaulting to humans for corner cases.</li>
+<li><strong>Where applicable</strong>: IXP workflows are LINX-specific, but the pause-resume pattern, the phase-by-phase trust building, and the DO/DON'T list (don't build bespoke by default; don't over-engineer error handling) are broadly transferable.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="gitops-the-hard-way-rebuilding-a-source-of-truth-three-times">GitOps the Hard Way: Rebuilding a Source of Truth (Three Times)<a class="headerlink" href="#gitops-the-hard-way-rebuilding-a-source-of-truth-three-times" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%203%20-%20Friday/AC5%20-%20Radim%20Ro%C5%A1ka%20-%20GitOps%20the%20Hard%20Way%3A%20Rebuilding%20a%20Source%20of%20Truth%20for%20an%20EVPN%20Fabric%20%28Three%20Times%29.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%203%20-%20Friday/AC5%20-%20Radim%20Ro%C5%A1ka%20-%20GitOps%20the%20Hard%20Way%3A%20Rebuilding%20a%20Source%20of%20Truth%20for%20an%20EVPN%20Fabric%20%28Three%20Times%29.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=Bv5WSaNfblE"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="Bv5WSaNfblE" data-start="0" href="https://www.youtube.com/watch?v=Bv5WSaNfblE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Bv5WSaNfblE/hqdefault.jpg" alt="Play the recording: GitOps the Hard Way: Rebuilding a Source of Truth (Three Times)" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Radim Roška · ALTEPRO solutions (per slides)</p>
+<ul>
+<li><strong>Why</strong>: The hardest problem in EVPN fabric automation is the data model, not the tooling — demonstrated by rebuilding the schema three times before it survived production. Directly relevant DC-fabric territory.</li>
+<li><strong>What</strong>: A dual-DC EVPN/VXLAN fabric, ~40 Arista switches, automated from day one with AVD, Git and GitLab CI. The real work: extracting a coherent service model from a network that had no source of truth, discovering vendor-provided data models (AVD's) didn't fit their operational requirements, and building operator tooling (a CLI editor, validator, and search) so junior engineers could actually use the SOT. One year on, the ops team uses it daily; the biggest shift was in how they think about configuration, not speed.</li>
+<li><strong>How</strong>: Two layers: a CRA service SOT capturing service intent, and a translator to the AVD data model — service identity is global while VLAN/VNI mapping is POD-local, which forced the separate abstraction. Day-2 pipeline: edit → commit → MR → validate → translate → build → deploy, with avd-editor/avd-validator/avd-finder as operator-facing tools.</li>
+<li><strong>Where applicable</strong>: Arista/AVD-specific implementation at small-mid scale (40 switches, 2 DCs). The core lesson — service intent needs its own abstraction above the vendor model — generalizes to any fabric program.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="automating-firewall-rule-deployment-in-a-highly-regulated-environment">Automating firewall rule deployment in a highly regulated environment<a class="headerlink" href="#automating-firewall-rule-deployment-in-a-highly-regulated-environment" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%203%20-%20Friday/AC5%20-%20Jo%C3%A3o%20Soares%20-%20Automating%20firewall%20rule%20deployment%20in%20a%20highly%20regulated%20environment.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%203%20-%20Friday/AC5%20-%20Jo%C3%A3o%20Soares%20-%20Automating%20firewall%20rule%20deployment%20in%20a%20highly%20regulated%20environment.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=PZUpC_SVAsk"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="PZUpC_SVAsk" data-start="0" href="https://www.youtube.com/watch?v=PZUpC_SVAsk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/PZUpC_SVAsk/hqdefault.jpg" alt="Play the recording: Automating firewall rule deployment in a highly regulated environment" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>João Soares · Ørsted (per talk content)</p>
+<ul>
+<li><strong>Why</strong>: The strongest network-security item in the program: policy-as-code firewall automation with hard production numbers, in a highly regulated energy company.</li>
+<li><strong>What</strong>: DRAGØN, Ørsted's self-service firewall platform: internal customers define, validate and deploy their own rules via a request form or full GitOps workflow, with no firewall team involvement. Results as of 2026: 40+ teams, 150+ users, 3,500+ successful deployments, 3,000+ rejected-by-validation attempts, automated requests 0% → 80%, human-handled lead time down 88% — and total request volume up ~250%, exposing the hidden cost of the old slow process.</li>
+<li><strong>How</strong>: Security principles were moved out of SharePoint/Word/gut-feeling into policy-as-code: custom Nautobot models abstracting business/security concepts, related to real network constructs, connected by policy, exposed to humans via GUI and machines via API. Validation runs automatically against those policies; security is pulled in automatically when a rule requires it; Terraform deploys to the firewall management platform and Ansible commits to the firewalls. Compliant-by-design, fully versioned and revertable.</li>
+<li><strong>Where applicable</strong>: Regulated-enterprise specific (Danish critical energy infrastructure), but the pattern — security policy as queryable models rather than documents, plus treating the automation as a real product with versioning/changelog/support — transfers to any security-governed org.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="migrating-the-geant-network-to-a-new-vendor">Migrating the GÉANT Network to a new vendor<a class="headerlink" href="#migrating-the-geant-network-to-a-new-vendor" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%203%20-%20Friday/AC5%20-%20Simone%20Spinelli%20-%20Migrating%20the%20G%C3%89ANT%20Network%20to%20a%20new%20vendor%20using%20WFO%20and%20Ansible.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%203%20-%20Friday/AC5%20-%20Simone%20Spinelli%20-%20Migrating%20the%20G%C3%89ANT%20Network%20to%20a%20new%20vendor%20using%20WFO%20and%20Ansible.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=UlbrvLODuNg"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="UlbrvLODuNg" data-start="0" href="https://www.youtube.com/watch?v=UlbrvLODuNg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/UlbrvLODuNg/hqdefault.jpg" alt="Play the recording: Migrating the GÉANT Network to a new vendor" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Simone Spinelli · GÉANT (per talk content)</p>
+<ul>
+<li><strong>Why</strong>: A two-year, zero-major-disruption Juniper → Nokia migration of a pan-European IP/MPLS WAN at 800G — physical backbone and interconnection work at continental scale, exactly this PM's core.</li>
+<li><strong>What</strong>: GÉANT (31 PoPs, 44 nodes, &gt;1,000 services: BGP-based L3, L2 circuits, directly attached servers) migrated to Nokia 7750-SR (SR-OS, not SR-Linux) between June 2024 and February 2026, while simultaneously building the in-house GÉANT Automation Platform (GAP) on open-source Workflow Orchestrator and Ansible.</li>
+<li><strong>How</strong>: Top-down modeling: every config line exists because it belongs to the node or to a service; one network construct = one Ansible role, with lifecycle management embedded. Peering is modeled org-centrically with lifecycle states (provisioned/active/disabled), covering IX peering, private peering, and upstreams. Concrete migration example: moving an IX port where GAP finds all peers, Moodi starts monitoring, Ansible generates config, operator confirms — AMS-IX with ~120 peers took 30 minutes.</li>
+<li><strong>Where applicable</strong>: GÉANT/NREN scale, but WFO is a genuinely open, joinable community (SURF, ESnet as partners; public money, public code). The "design as the primary source of truth" and per-construct role patterns transfer to any multi-vendor WAN.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="modernizing-workflows-as-old-as-the-railways-operationalizing-network-automation">Modernizing Workflows as Old as the Railways: Operationalizing Network Automation<a class="headerlink" href="#modernizing-workflows-as-old-as-the-railways-operationalizing-network-automation" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%201%20-%20Wednesday/AC5%20-%20Leo%20Fleskes%09-%20Gerasimos%20Tzakis%20-%20Modernizing%20Workflows%20as%20old%20as%20the%20Railways%3A%20Operationalizing%20Network%20Automation.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%201%20-%20Wednesday/AC5%20-%20Leo%20Fleskes%09-%20Gerasimos%20Tzakis%20-%20Modernizing%20Workflows%20as%20old%20as%20the%20Railways%3A%20Operationalizing%20Network%20Automation.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=49j4WqMxm98"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="49j4WqMxm98" data-start="0" href="https://www.youtube.com/watch?v=49j4WqMxm98" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/49j4WqMxm98/hqdefault.jpg" alt="Play the recording: Modernizing Workflows as Old as the Railways: Operationalizing Network Automation" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Leo Fleskes · Network Automation Architect — DB Systel GmbH (with Gerasimos Tzakis, Network to Code)</p>
+<ul>
+<li><strong>Why</strong>: The best data-quality war story in the program — two years of IPAM/inventory cleanup before any automation was possible at a 2,500+-router railway WAN. IPAM data hygiene is directly in this PM's wheelhouse.</li>
+<li><strong>What</strong>: Building a Single Source of Truth uncovered the brownfield mess: empty locations, "Düsseldorf" vs "Dusseldorf", VRF mismatches, DNS misconfigurations, missing or mis-attributed prefixes. A dedicated cleanup team plus daily issue reports produced +25% documented IP addresses and, crucially, organizational momentum. A VPN rollout that took 70 minutes across four teams now takes 25 across one.</li>
+<li><strong>How</strong>: Stage-by-stage: SoR interaction through small Nautobot jobs (allocation 25 → 5 min), configuration through an NSO service fed by the Nautobot job (30 → 1 min), documentation still manual. Platform scaling follows Conway: weekly integration meetings, shared responsibility split between platform team and device-owner teams, PRs reviewed from both sides.</li>
+<li><strong>Where applicable</strong>: Deutsche Bahn-scale brownfield WAN; the sequencing (data first, MVP workflows, blameless cleanup culture) and the "give us a 'let's fix it' mentality" tactic transfer to any brownfield IPAM/SoT effort.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="lessons-learned-testing-network-automation-solutions">Lessons Learned Testing Network Automation Solutions<a class="headerlink" href="#lessons-learned-testing-network-automation-solutions" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20General%20Session/AC5%20-%20Ivan%20Pepelnjak%20-%20Lessons%20Learned%20Testing%20Network%20Automation%20Solutions.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20General%20Session/AC5%20-%20Ivan%20Pepelnjak%20-%20Lessons%20Learned%20Testing%20Network%20Automation%20Solutions.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=JuLozEjA45U"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="JuLozEjA45U" data-start="0" href="https://www.youtube.com/watch?v=JuLozEjA45U" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/JuLozEjA45U/hqdefault.jpg" alt="Play the recording: Lessons Learned Testing Network Automation Solutions" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Ivan Pepelnjak · ipSpace.net</p>
+<ul>
+<li><strong>Why</strong>: The most transferable engineering talk of the conference — the testing methodology behind netlab, plus a multi-vendor NOS bug catalog that anyone testing across platforms will hit.</li>
+<li><strong>What</strong>: ~100 transformation tests plus ~100 error tests comparing against YAML-stored expected results (diffs reviewed in PRs); 25+ integration suites, 250+ individual tests across ~30 device types, requiring 3,700+ lab instances and days of runtime. Hard lessons: testing distributed systems takes longer than planned and vendor implementations will surprise you.</li>
+<li><strong>How</strong>: Multi-platform testing is solved by <em>not</em> parsing show output on ~20 platforms — instead, FRRouting probe containers attached to the device under test run JSON show commands and validate protocol behavior indirectly. Tiered CI: pre-commit (linting, some tests) → push → PR (all transformations) → dedicated server (full integration before release).</li>
+<li><strong>Where applicable</strong>: Broadly applicable to anyone building or testing multi-vendor automation. The quirks list is directly useful: Junos advertising wide IS-IS metrics as 63, Aruba CX invalid VXLAN IP checksums, mostly-broken OSPF NSSA implementations, divergent EVPN/ARP defaults, unresolved VRRPv3 checksum and MPLS entropy-label disagreements.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="how-workflow-driven-automation-becomes-operable-under-air-gap-compliance-constraints">How Workflow-Driven Automation Becomes Operable Under Air Gap &amp; Compliance Constraints<a class="headerlink" href="#how-workflow-driven-automation-becomes-operable-under-air-gap-compliance-constraints" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20General%20Session/AC5%20-%20Henry%20%C3%96lsner%20-%20Christian%20Miene%20-%20How%20Workflow%20Driven%20Automation%20Becomes%20Operable%20Under%20Air%20Gap%20and%20Compliance%20Constraints.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20General%20Session/AC5%20-%20Henry%20%C3%96lsner%20-%20Christian%20Miene%20-%20How%20Workflow%20Driven%20Automation%20Becomes%20Operable%20Under%20Air%20Gap%20and%20Compliance%20Constraints.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=zBvGy34XRUI"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="zBvGy34XRUI" data-start="0" href="https://www.youtube.com/watch?v=zBvGy34XRUI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/zBvGy34XRUI/hqdefault.jpg" alt="Play the recording: How Workflow-Driven Automation Becomes Operable Under Air Gap  Compliance Constraints" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Henry Ölsner · NTT Germany &amp; Christian Miene · 50Hertz</p>
+<ul>
+<li><strong>Why</strong>: Automation under German critical-infrastructure rules where always-on connectivity is not a given — and the use-case list includes an 802.1X migration (the only identity-adjacent item in the whole program) and MPLS VRF WAN segmentation.</li>
+<li><strong>What</strong>: A transmission-system operator's journey from unmanaged Python scripts, regex parsing and undocumented cron jobs on a backup server to a platform (DINA) run by a 5-person team: 106,654 workflow executions and 719 sub-process executions, covering CMDB sync, 802.1X migration, MPLS VRF rollout, a DC self-service portal, and VM network provisioning across ~4,000 devices in 6 network zones.</li>
+<li><strong>How</strong>: The Workflow Definition Document (WDD) is the centerpiece: one formal, auditable contract per use case containing goal/KPI, BPMN workflow, UI design, data models, constraints, and external dependencies — reviewed by stakeholders on a fixed cadence. Platform principles: air-gapped by design, build once/deploy unchanged, develop without live-system access, workload distributed via Django + Celery.</li>
+<li><strong>Where applicable</strong>: Specific to air-gapped, compliance-heavy critical infrastructure (dependency wheels chains, no GitLab connectivity), but the WDD-as-contract pattern is a strong fit for any change-managed environment, regulated or not.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="practical-network-reliability-engineering">Practical Network Reliability Engineering<a class="headerlink" href="#practical-network-reliability-engineering" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20Leadership%20Track/AC5%20-%20John%20Howard%20-%20Practical%20Network%20Reliability%20Engineering.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20Leadership%20Track/AC5%20-%20John%20Howard%20-%20Practical%20Network%20Reliability%20Engineering.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=I2thHjtCXzM"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="I2thHjtCXzM" data-start="0" href="https://www.youtube.com/watch?v=I2thHjtCXzM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/I2thHjtCXzM/hqdefault.jpg" alt="Play the recording: Practical Network Reliability Engineering" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>John Howard · Head of Network Infrastructure — Proton AG</p>
+<ul>
+<li><strong>Why</strong>: Four years of applying NRE (SLI/SLO discipline) to a real network, with outcomes: 10x capacity since 2021, -40% per-port cost, zero extra headcount, zero out-of-hours change windows.</li>
+<li><strong>What</strong>: A reframing from device health to capabilities and services: a 100G wavelength is a <em>service</em>; "packets DC1→DC2 within 8–10ms with N+1 redundancy" is a <em>capability</em> — and capabilities map cleanly to SLIs. Notably, "we missed targets early on. That was a feature not a bug — it surfaced which layer needed attention."</li>
+<li><strong>How</strong>: Design contracts between layers (Edge ↔ Core ↔ Fabric ↔ OOBM) and between network and applications — e.g., apps never exceed 50% of assigned capacity (p99), the network never reduces capacity &gt;50%, anycast instead of VRRP, default-deny VRF egress. SLIs composed in Prometheus recording rules (port state + MACsec CA + IS-IS adjacency + BGP session = DCI health); a gNMIc/NATS/Prometheus/Grafana/Alertmanager stack with Sloth for SLO burn-downs; canary rollouts and auto-isolation for residual risk.</li>
+<li><strong>Where applicable</strong>: Proton-specific design (EVPN fabrics, MACsec-protected DCI wavelengths), but the capability→SLI method and the bilateral contract framing are generally applicable. Includes a hot take worth arguing with: you cannot be a network engineer and a software engineer concurrently — pick one.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="from-data-to-decisions-real-time-network-context">From Data to Decisions: Real-Time Network Context<a class="headerlink" href="#from-data-to-decisions-real-time-network-context" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%203%20-%20Friday/AC5%20-%20V%C3%ADctor%20Fern%C3%A1ndez%20-%20From%20Data%20to%20Decisions%3A%20Real%E2%80%91Time%20Network%20Context.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%203%20-%20Friday/AC5%20-%20V%C3%ADctor%20Fern%C3%A1ndez%20-%20From%20Data%20to%20Decisions%3A%20Real%E2%80%91Time%20Network%20Context.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=GvZjayObzWQ"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="GvZjayObzWQ" data-start="0" href="https://www.youtube.com/watch?v=GvZjayObzWQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/GvZjayObzWQ/hqdefault.jpg" alt="Play the recording: From Data to Decisions: Real-Time Network Context" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Víctor Fernández · Senior Network &amp; Systems Architect — Colt Technology Services</p>
+<ul>
+<li><strong>Why</strong>: The data-layer talk that underpins both safer automation and the agentic-AI direction: unifying configs, telemetry, BGP data, service relationships, and change history into one live model.</li>
+<li><strong>What</strong>: A real-time context platform (ingest → normalize → relate → expose) that answers, when an interface goes down: which services are affected, which customers, whether redundancy exists, and whether there was a recent change. Exposed via API, MCP, and web UI to three consumer types — engineers, automation, and agents.</li>
+<li><strong>How</strong>: The core scenario: a change in New York and a degradation in Paris — independent events or a hidden dependency? Lessons from applying it at scale: data quality over everything, "same thing, same id" identifiers, relationships expose hidden risks, semantics over links. Framing: "automation scales actions, context speeds up decision-making."</li>
+<li><strong>Where applicable</strong>: Colt-scale carrier environment; requires serious data-quality discipline first. The MCP exposure makes it a concrete early example of the agent-context plumbing several other talks gesture at.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="naf-framework-deep-dive-parts-1-2">NAF Framework — Deep Dive (Parts 1 &amp; 2)<a class="headerlink" href="#naf-framework-deep-dive-parts-1-2" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20NAF%20Framework%20Track/AC5%20-%20Damien%20Garros%20-%20Christian%20Adell%20-%20The%20Network%20Automation%20Map.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20NAF%20Framework%20Track/AC5%20-%20Damien%20Garros%20-%20Christian%20Adell%20-%20The%20Network%20Automation%20Map.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=d-kjSJxJVKk"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="d-kjSJxJVKk" data-start="0" href="https://www.youtube.com/watch?v=d-kjSJxJVKk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/d-kjSJxJVKk/hqdefault.jpg" alt="Play the recording: NAF Framework — Deep Dive (Parts 1  2)" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Christian Adell &amp; Damien Garros · CoreWeave / NAF</p>
+<ul>
+<li><strong>Why</strong>: The shared vocabulary the rest of the conference keeps mapping to (LINX explicitly, CoreWeave's monitoring talk, the anti-patterns talk). For a PM, it's a vendor-neutral yardstick to assess automation claims against.</li>
+<li><strong>What</strong>: A tool-agnostic decomposition of any automation system into functional blocks — Intent, Orchestration, Executor, Collector, Observability, Presentation, Infrastructure — each with MUST/SHOULD/MAY capabilities, boundaries, and responsibilities. Explicitly not a protocol or reference architecture; any tool can map to one or more blocks, and you implement only what your use case needs.</li>
+<li><strong>How</strong>: Worked example: deploy a subnet across 50 mixed-vendor NETCONF branch sites — Infrahub (intent) → AAP (orchestration) → Ansible (executor via NETCONF) → gNMIc/SuzieQ/Kentik (collection) → Prometheus/SuzieQ/Kentik (drift detection) → orchestrated re-run on the failing site → Grafana compliance dashboard, closing a 5→6→3→4→5 remediation loop.</li>
+<li><strong>Where applicable</strong>: Generally applicable as a vocabulary and scoping tool; no ordering imposed and no requirement for completeness. Useful as the mental model that ties together the LINX, DE-CIX and Colt architectures in this digest.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="how-netops-can-embrace-ai-to-lead-enterprise-innovation">How NetOps Can Embrace AI to Lead Enterprise Innovation<a class="headerlink" href="#how-netops-can-embrace-ai-to-lead-enterprise-innovation" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%203%20-%20Friday/AC5%20-%20Chris%20Wade%20-%20Closing%20Keynote%20-%20How%20NetOps%20can%20embrace%20AI%20to%20lead%20innovation.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%203%20-%20Friday/AC5%20-%20Chris%20Wade%20-%20Closing%20Keynote%20-%20How%20NetOps%20can%20embrace%20AI%20to%20lead%20innovation.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=KmXwu7354os"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="KmXwu7354os" data-start="0" href="https://www.youtube.com/watch?v=KmXwu7354os" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/KmXwu7354os/hqdefault.jpg" alt="Play the recording: How NetOps Can Embrace AI to Lead Enterprise Innovation" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Chris Wade · CTO — Itential</p>
+<ul>
+<li><strong>Why</strong>: The closing keynote and the clearest articulation of where the field believes it's heading: agents, skills, and MCP as complementary layers of an operating model. Vendor vantage point (Itential CTO), so read it as direction-setting rather than deployed practice.</li>
+<li><strong>What</strong>: Agents decide WHEN (orchestrators with observe→think→act loops), Skills encode HOW (procedural knowledge in ~100-token SKILL.md files — "runbooks turned into agent-consumable procedures"), MCP provides WHAT (a "USB-C for AI" connector to databases, APIs, tools). An honest capability map for 2026: LLMs are strong on protocols, RFCs and general reasoning; weak on vendor specifics behind paywalls, unpublished APIs, and TAC-ticket knowledge.</li>
+<li><strong>How</strong>: A build/execute/operate arc: build agents doing spec-driven development of deterministic automations (LLMs have vastly more training data for native code than Ansible YAML); centrally-run "execute" agent fleets with tools fixed and limited at build time (a read-only device-health agent literally lacks the tool to change config); and "operate" agents managed by engineers like team members, picking tools at runtime. A worked NOC connectivity-troubleshooting agent shows restricted tools, skills, and policies in action. Notably, customer conversations put AI governance and guardrails above the question of whether agents functionally work.</li>
+<li><strong>Where applicable</strong>: Vision-stage. The NAF-block framing appears throughout (down to musing "Network Agentic Forum? — can we consider agents as users?"), which is a strong signal the framework intends to absorb the agentic wave.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="architecting-network-automation-with-software-engineering-principles">Architecting Network Automation with Software Engineering Principles<a class="headerlink" href="#architecting-network-automation-with-software-engineering-principles" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%203%20-%20Friday/AC5%20-%20Leandro%20Lerena%20-%20Paradigms%20of%20Trust%3A%20Architecting%20Network%20Automation%20with%20Software%20Engineering%20Principles.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%203%20-%20Friday/AC5%20-%20Leandro%20Lerena%20-%20Paradigms%20of%20Trust%3A%20Architecting%20Network%20Automation%20with%20Software%20Engineering%20Principles.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=HI1SM9RBLJU"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="HI1SM9RBLJU" data-start="0" href="https://www.youtube.com/watch?v=HI1SM9RBLJU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/HI1SM9RBLJU/hqdefault.jpg" alt="Play the recording: Architecting Network Automation with Software Engineering Principles" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Leandro Lerena · zebbra AG (per slides)</p>
+<ul>
+<li><strong>Why</strong>: The most genuinely novel technical idea in the program: applying database-transaction semantics and typed safety profiles to network operations — and deriving a principled safety model for agentic AI from it.</li>
+<li><strong>What</strong>: A response to scripts reaching their structural limits (no versioning, unknown safety profiles, undetectable race conditions, weak auditability). The replacement: "function blocks" with declared properties (pure / idempotent / reversible), pessimistic locking, and a workflow state machine distinguishing FAILED_SAFE (pure steps only, or rollback succeeded) from FAILED_UNSAFE (side effects may have occurred; resources stay locked to prevent more workflows from touching unknown state).</li>
+<li><strong>How</strong>: Race conditions are treated as the read-modify-write problem relational databases already solved — a central orchestrator locks context, executes blocks transactionally, rolls back reversible ones, and escalates unsafe ones. Vendor plugins (Cisco IOS via Scrapli, SR Linux via Netmiko, etc.) implement capability interfaces so business logic stays vendor-agnostic; every block is tested against netlab virtual labs via pytest fixtures (remote-lab developer preview on GitHub). The agentic tiers fall out naturally: autonomous read-only agents (pure blocks only), autonomous allow-list (pre-approved idempotent/reversible blocks), and supervised everything else — agents never touch device credentials.</li>
+<li><strong>Where applicable</strong>: Greenfield framework thinking from a consultancy, not a hyperscaler postmortem — but the safety-tier model is directly reusable by anyone designing the agent-to-network boundary, which this PM will likely have to opine on soon.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="a-computer-must-never-make-a-management-decision-can-we-let-ai-run-our-infrastructure">"A Computer Must Never Make a Management Decision." Can We Let AI Run Our Infrastructure?<a class="headerlink" href="#a-computer-must-never-make-a-management-decision-can-we-let-ai-run-our-infrastructure" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20Leadership%20Track/AC5%20-%20Marc%20Stadtherr%20-%20%E2%80%9CA%20Computer%20Must%20Never%20Make%20a%20Management%20Decision.%E2%80%9D%20Can%20We%20Let%20AI%20Run%20Our%20Infrastructure%3F.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon5/Day%202%20-%20Leadership%20Track/AC5%20-%20Marc%20Stadtherr%20-%20%E2%80%9CA%20Computer%20Must%20Never%20Make%20a%20Management%20Decision.%E2%80%9D%20Can%20We%20Let%20AI%20Run%20Our%20Infrastructure%3F.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a></p>
+</div>
+<p>Marc Stadtherr · Kumorai Inc.</p>
+<ul>
+<li><strong>Why</strong>: The governance counterpart to the AI enthusiasm: the binding constraint on safe AI adoption is <em>systemic legibility</em> — can your organization even explain what its infrastructure is, who owns it, and what intent governs it? This framing has obvious resonance with identity and ownership models.</li>
+<li><strong>What</strong>: The claim is we have an "execution surplus and an understanding deficit": more tools, less coherence. Four recurring symptoms — operational drag, fragmented automation, broken governance, and an AI readiness gap — all traced to the same root: no unified model reconciling Source of Truth (what infrastructure should look like) with System of Record (what it looks like now). The proposed fix is an "Infrastructure Intent Control Plane" that renders, encodes, and reconciles both.</li>
+<li><strong>How</strong>: An advise-versus-act boundary: AI may act only when intent, ownership, and reconciliation are explicit <em>and continuous</em>; it must explain itself whenever any of the three is missing. Three grounding scenarios show the failure modes: a 300-site SD-WAN migration stalled on unknown owners and dependencies; an MSP outage with fragmented accountability; a 15k-rule firewall cleanup impossible without explicit intent ("maintain until Q2 decommissioning" vs "delete this rule").</li>
+<li><strong>Where applicable</strong>: Conceptual, with vendor framing (Kumorai) rather than a deployed system. Still, the 30-second test it implies — can you explain what happens when the AI is wrong? — is a useful gate for any agentic-ops roadmap, and it converges with the supervision tiers in the Lerena talk.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>The data model is the hard part, not the tooling.</strong> DB Systel's two years of IPAM cleanup, Roška's three schema rebuilds, Ørsted's policy-as-code conversion, and LINX's bespoke SoT all say the same thing: pipelines are easy, coherent intent models that survive production contact are the actual work.</li>
+<li><strong>A shared vocabulary is consolidating.</strong> The NAF functional-block map was invoked across the program (LINX mapped its decade-old architecture onto it; the anti-patterns talk recommends it as the recovery path). Tool-agnostic blocks are becoming the industry's common language for scoping and comparing automation stacks.</li>
+<li><strong>Testing and guardrails are the new default posture.</strong> netlab's 3,700-lab multi-vendor test matrix, pytest/pyATS pre/post-test layers, 50Hertz's auditable Workflow Definition Documents, DE-CIX's "1 in 3 deploys rejected before production," and Lerena's transactional safety profiles all treat validation as architecture, not afterthought.</li>
+<li><strong>Observability is becoming the actuator signal.</strong> CoreWeave's monitoring-as-feedback-loop, Colt's real-time context platform, Proton's SLI/SLO composition, and the Kentik self-healing narrative converge on closed loops where telemetry drives orchestrated action — with human gates at the risky end.</li>
+<li><strong>Agentic ops arrived in the discourse, cautiously.</strong> The closing keynote (agents/skills/MCP), the governance talks (Stadtherr's legibility gate, the "digital intern" framing), and MCP-based context exposure at Colt sketch a supervised, tool-limited, auditable adoption path — nobody credible is proposing unsupervised agents touching devices.</li>
+<li><strong>Physical fabric and WAN scale is back on the agenda — as automation substrate.</strong> SRv6 at Swisscom, GÉANT's 800G vendor migration, dual-DC EVPN fabrics at Rohde &amp; Schwarz and Roška's project: the automation conversation now spans backbone hardware lifecycle and fabric topology, not just enterprise campus tooling. Notably absent: anything on optics/RDMA specifics, cloud-native dataplanes (eBPF/Cilium), or digital identity beyond 50Hertz's 802.1X migration — none of this PM's deepest specialties had dedicated sessions.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest with zai-org/GLM-5.3 on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/autocon-5.md"><code>digests/autocon-5.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/autocon-5.md"><code>prompts/autocon-5.md</code></a></p>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ietf-124/" class="md-footer__link md-footer__link--prev" aria-label="Previous: IETF 124 (Montreal) — Standards">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                IETF 124 (Montreal) — Standards
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and generator, styled after containerlab.dev -->
+<div class="md-copyright">
+    
+    <div class="md-copyright__highlight">
+        Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.
+    </div>
+    
+    Written by
+    <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+    on Nebius Token Factory · made with
+    <span class="twemoji heart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709q-.23.129-.463.252h-.002a.75.75 0 0 1-.686 0 17 17 0 0 1-.465-.252 31 31 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31 31 0 0 1 14 20.408"/></svg>
+    </span>
+    and <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hellt.github.io/conference-digest/feed_rss_created.xml" target="_blank" rel="noopener" title="hellt.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+    
+  </body>
+</html>

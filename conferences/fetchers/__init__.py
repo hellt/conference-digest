@@ -6,6 +6,7 @@ from .netdev import NetdevFetcher
 from .nanog import NanogFetcher
 from .autocon import AutoconFetcher
 from .ovscon import OvsconFetcher
+from .ciscolive import CiscoLiveFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -16,6 +17,7 @@ FETCHERS = {
     "nanog": NanogFetcher(),
     "autocon": AutoconFetcher(),
     "ovscon": OvsconFetcher(),
+    "ciscolive": CiscoLiveFetcher(),
 }
 
 

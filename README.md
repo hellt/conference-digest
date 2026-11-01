@@ -178,6 +178,7 @@ conferences/
     nanog.py         # nanog.org agenda + talk pages, read via Tavily Extract
     autocon.py       # AutoCon program + NAF guide, slides repo, YouTube uploads
     ovscon.py        # OVS+OVNcon schedule + anchored abstracts, slides and recordings
+    ciscolive.py     # Cisco Live public on-demand abstracts and speakers (US/Europe)
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -272,6 +273,21 @@ run.
   Refresh reads only the matching row, never another talk's materials. The
   registry includes 2024 and 2025; annual discovery reads event dates from the
   introduction and adds future editions once their abstracts are published.
+- **Cisco Live**: the public RainFocus on-demand catalog lists regional events,
+  exact session titles (including session codes), speakers and HTML abstracts.
+  The fetcher resolves each `ciscolive-us-<year>` / `ciscolive-eu-<year>` key to
+  one event and reads the entire program, refusing mixed or partial results.
+  Searches are capped at 500 results, so larger editions are split using public
+  session-type, level, track and technology filters; the deduplicated union must
+  account for every session in the edition's advertised total.
+  The widget/profile IDs in the fetcher are public catalog identifiers, not
+  credentials. No bot blocking observed. Slides and recordings require login;
+  the fetcher never guesses PDF paths or bypasses authentication. Picks link to
+  the public `#/session/<id>` page; verified YouTube search can add recordings.
+  Links Refresh skips the shared catalog HTML to avoid unrelated materials.
+  Discovery uses conservative date estimates (June 30 / March 31); confirm
+  discovered dates against the event site. A move to an unknown city requires
+  updating `CITIES` in `ciscolive.py`; unknown locations fail closed.
 - **SIGCOMM** and **Netdev** are static HTML with no observed bot-block. Netdev
   does a second pass: the sessions index has only titles/speakers, so it follows
   each session page for the description, track label, slides and video. A

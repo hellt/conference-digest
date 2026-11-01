@@ -1,0 +1,1912 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A triaged set of sessions for a PM working across physical DC&#x2f;WAN networking, cloud-native networking, network security, and identity. The published program provides titles, speakers, and abstracts only — no per-session paper&#x2f;slide&#x2f;recording links — so every write-up below is grounded in the…">
+      
+      
+      
+        <link rel="canonical" href="https://hellt.github.io/conference-digest/kubecon-eu-2025/">
+      
+      
+      
+        <link rel="prev" href="../srecon-2025-americas/">
+      
+      
+        <link rel="next" href="../ietf-122/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>KubeCon + CloudNativeCon Europe 2025 (London) - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300,300i,400,400i,500,500i,700,700i%7CGoogle+Sans+Code:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Google Sans";--md-code-font:"Google Sans Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="KubeCon + CloudNativeCon Europe 2025 (London) · Conference Digest" />
+<meta property="og:description" content="A triaged set of sessions for a PM working across physical DC/WAN networking, cloud-native networking, network security, and identity. The published program provides titles, speakers, and abstracts only — no per-session paper/slide/recording links — so every write-up below is grounded in the…" />
+<meta property="og:url" content="https://hellt.github.io/conference-digest/kubecon-eu-2025/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="KubeCon + CloudNativeCon Europe 2025 (London) · Conference Digest" />
+<meta name="twitter:description" content="A triaged set of sessions for a PM working across physical DC/WAN networking, cloud-native networking, network security, and identity. The published program provides titles, speakers, and abstracts only — no per-session paper/slide/recording links — so every write-up below is grounded in the…" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              KubeCon + CloudNativeCon Europe 2025 (London)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../category/academic/" class="md-tabs__link">
+          
+  
+  Conference type
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iam-agent-identity-for-autonomous-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IAM, Agent: Identity for Autonomous AI
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beyond-classical-cryptography-building-quantum-resistant-cloud-native-infrastructure-with-spiffe" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Beyond Classical Cryptography: Building Quantum-Resistant Cloud Native Infrastructure With SPIFFE
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-trust-at-shopify-scale-automating-mtls-across-thousands-of-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Zero Trust at Shopify Scale: Automating MTLS Across Thousands of Services
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spiffe-in-practice-universal-identity-for-webassembly-workloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SPIFFE in Practice: Universal Identity for WebAssembly Workloads
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workload-identity-for-humans-a-twelve-factor-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Workload Identity for Humans: A Twelve-Factor Approach
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplifying-the-networking-and-security-stack-with-cilium-hubble-and-tetragon" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Simplifying the Networking and Security Stack With Cilium, Hubble, and Tetragon
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-the-leap-what-gateway-api-needs-to-support-ingress-nginx-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Making the Leap: What Gateway API Needs To Support Ingress-NGINX Users
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uncharted-waters-dynamic-resource-allocation-for-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Uncharted Waters: Dynamic Resource Allocation for Networking
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption-identities-and-everything-in-between-building-secure-kubernetes-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Encryption, Identities, and Everything in Between; Building Secure Kubernetes Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-great-sidecar-debate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Great Sidecar Debate
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revolutionizing-sidecarless-service-mesh-with-ebpf-and-remote-gateway-kmesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Revolutionizing Sidecarless Service Mesh with eBPF and Remote Gateway (Kmesh)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identity-based-trust-till-death-do-we-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Identity-based Trust — Till Death Do We Part?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cncf-project-demos-bgp-beyond-loadbalancers-with-metallb-and-frr-k8s" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CNCF Project Demos | BGP Beyond Loadbalancers with MetalLB and FRR-K8s
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sig-network-intro-and-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SIG Network Intro and Updates
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cncf-tag-network-and-cloud-native-network-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CNCF TAG Network and Cloud Native Network Landscape
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tutorial-mind-your-pods-business-network-isolation-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tutorial: Mind Your Pod's Business: Network Isolation Workshop
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-envoy-tunnels-a-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Debugging Envoy Tunnels: A Deep Dive
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuf-en-up-your-software-supply-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TUF-en up Your Software Supply Chain
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#istio-the-past-present-and-future-of-the-project-and-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Istio: The Past, Present and Future of the Project and Community
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-ebpf-for-non-invasive-performant-instant-network-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Using eBPF for Non-invasive, Performant, Instant Network Monitoring
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-cloud-native-workflow-for-hardware-in-the-loop-software-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Cloud Native Workflow for Hardware-in-the-Loop Software Development
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateful-connections-in-kubernetes-the-scaling-secrets-nobody-talks-about" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Stateful Connections in Kubernetes: The Scaling Secrets Nobody Talks About
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conference type
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Conference type
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Academic
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operator
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standards
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendor
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iam-agent-identity-for-autonomous-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IAM, Agent: Identity for Autonomous AI
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beyond-classical-cryptography-building-quantum-resistant-cloud-native-infrastructure-with-spiffe" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Beyond Classical Cryptography: Building Quantum-Resistant Cloud Native Infrastructure With SPIFFE
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-trust-at-shopify-scale-automating-mtls-across-thousands-of-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Zero Trust at Shopify Scale: Automating MTLS Across Thousands of Services
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spiffe-in-practice-universal-identity-for-webassembly-workloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SPIFFE in Practice: Universal Identity for WebAssembly Workloads
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workload-identity-for-humans-a-twelve-factor-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Workload Identity for Humans: A Twelve-Factor Approach
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplifying-the-networking-and-security-stack-with-cilium-hubble-and-tetragon" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Simplifying the Networking and Security Stack With Cilium, Hubble, and Tetragon
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-the-leap-what-gateway-api-needs-to-support-ingress-nginx-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Making the Leap: What Gateway API Needs To Support Ingress-NGINX Users
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uncharted-waters-dynamic-resource-allocation-for-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Uncharted Waters: Dynamic Resource Allocation for Networking
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encryption-identities-and-everything-in-between-building-secure-kubernetes-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Encryption, Identities, and Everything in Between; Building Secure Kubernetes Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-great-sidecar-debate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Great Sidecar Debate
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revolutionizing-sidecarless-service-mesh-with-ebpf-and-remote-gateway-kmesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Revolutionizing Sidecarless Service Mesh with eBPF and Remote Gateway (Kmesh)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identity-based-trust-till-death-do-we-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Identity-based Trust — Till Death Do We Part?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cncf-project-demos-bgp-beyond-loadbalancers-with-metallb-and-frr-k8s" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CNCF Project Demos | BGP Beyond Loadbalancers with MetalLB and FRR-K8s
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sig-network-intro-and-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SIG Network Intro and Updates
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cncf-tag-network-and-cloud-native-network-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CNCF TAG Network and Cloud Native Network Landscape
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tutorial-mind-your-pods-business-network-isolation-workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tutorial: Mind Your Pod's Business: Network Isolation Workshop
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-envoy-tunnels-a-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Debugging Envoy Tunnels: A Deep Dive
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuf-en-up-your-software-supply-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TUF-en up Your Software Supply Chain
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#istio-the-past-present-and-future-of-the-project-and-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Istio: The Past, Present and Future of the Project and Community
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-ebpf-for-non-invasive-performant-instant-network-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Using eBPF for Non-invasive, Performant, Instant Network Monitoring
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-cloud-native-workflow-for-hardware-in-the-loop-software-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Cloud Native Workflow for Hardware-in-the-Loop Software Development
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateful-connections-in-kubernetes-the-scaling-secrets-nobody-talks-about" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Stateful Connections in Kubernetes: The Scaling Secrets Nobody Talks About
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="./.." class="md-nav__link">
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-calendar-days" viewBox="0 0 24 24"><path d="M8 2v3M16 2v3"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg>
+                        <time datetime="2026-08-30 00:00:00+00:00" class="md-ellipsis">August 30, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-library" viewBox="0 0 24 24"><path d="m16 6 4 14M12 6v14M8 8v12M4 4v16"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../category/vendor/">Vendor</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              14 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      
+        
+
+  
+  
+
+
+<h1 id="kubecon-cloudnativecon-europe-2025-london">KubeCon + CloudNativeCon Europe 2025 (London)<a class="headerlink" href="#kubecon-cloudnativecon-europe-2025-london" title="Permanent link">#</a></h1>
+<p>A triaged set of sessions for a PM working across physical DC/WAN networking, cloud-native networking, network security, and identity. The published program provides titles, speakers, and abstracts only — no per-session paper/slide/recording links — so every write-up below is grounded in the abstract and is marked accordingly. Sponsor pitches, cloakroom/logistics entries, DEI/community programming, and content-free "we adopted X" talks were dropped. Picks are deliberately tight given the size of the program (500+ sessions across the main conference and ~15 co-located day events).</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 13.5v8H3v-8zm-2 2H5v4h4zM12 2l5.5 9h-11zm0 3.86L10.08 9h3.84zM17.5 13c2.5 0 4.5 2 4.5 4.5S20 22 17.5 22 13 20 13 17.5s2-4.5 4.5-4.5m0 2a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg></span> Vendor</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2V5a2 2 0 0 0-2-2m0 16H5V9h14zM5 7V5h14v2zm5.56 10.46 5.94-5.93-1.07-1.06-4.87 4.87-2.11-2.11-1.06 1.06z"/></svg></span> Ended April 4, 2025</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.19 2.25c-.26 0-.52.06-.77.15L3.06 5.45a1.994 1.994 0 0 0-1.09 2.6L6.93 20a2 2 0 0 0 1.81 1.25c.26 0 .53-.03.79-.15l7.37-3.05a2.02 2.02 0 0 0 1.23-1.8c.01-.25-.04-.54-.13-.8L13 3.5a1.95 1.95 0 0 0-1.81-1.25m3.48 0 3.45 8.35V4.25a2 2 0 0 0-2-2m4.01 1.54v9.03l2.43-5.86a1.99 1.99 0 0 0-1.09-2.6m-10.28-.14 4.98 12.02-7.39 3.06L3.8 7.29"/></svg></span> 22 picks (12 core · 7 adjacent · 3 wildcard)</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42"/></svg></span> <a href="https://kccnceu2025.sched.com/">Program</a></span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 17v3h8v-1.89H3.9V17c0-.64 3.13-2.1 6.1-2.1.96.01 1.91.14 2.83.38l1.52-1.52c-1.4-.47-2.85-.73-4.35-.76-2.67 0-8 1.33-8 4m8-13C7.79 4 6 5.79 6 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4m0 6c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2m11.7 3.35-1 1-2.05-2 1-1a.55.55 0 0 1 .77 0l1.28 1.28c.21.21.21.56 0 .77M12 18.94l6.06-6.06 2.05 2-6 6.07H12z"/></svg></span> Prompt run by hand</span></p>
+</div>
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="iam-agent-identity-for-autonomous-ai">IAM, Agent: Identity for Autonomous AI<a class="headerlink" href="#iam-agent-identity-for-autonomous-ai" title="Permanent link">#</a></h3>
+<p><em>Matthew Bates, Cofide</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: This is the session that most directly hits the PM's agentic-identity interest: applying zero-trust and workload identity principles to multi-agent AI systems, explicitly citing SPIFFE/SPIRE and the IETF's WIMSE standard.</li>
+<li><strong>What</strong>: A talk on IAM for autonomous, multi-agent AI systems — dynamic identity provisioning, agent-to-agent authentication, and cryptographic attestation for AI agent workloads. (from abstract only)</li>
+<li><strong>How</strong>: Applies zero-trust principles using CNCF SPIFFE/SPIRE for workload identity combined with emerging IETF standards (WIMSE) to handle the trust interplay between human and agent identities. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General; aimed at anyone building multi-agent AI architectures who needs standards-based identity rather than bespoke API keys per agent.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="beyond-classical-cryptography-building-quantum-resistant-cloud-native-infrastructure-with-spiffe">Beyond Classical Cryptography: Building Quantum-Resistant Cloud Native Infrastructure With SPIFFE<a class="headerlink" href="#beyond-classical-cryptography-building-quantum-resistant-cloud-native-infrastructure-with-spiffe" title="Permanent link">#</a></h3>
+<p><em>Andrés Vega, M42 &amp; Hugo Landau, Messier42</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: A concrete, working demonstration of post-quantum cryptography threaded through the exact identity/networking stack the PM tracks (SPIFFE/SPIRE, Cilium, Envoy) rather than a standards-committee abstraction — a preview of what PQ migration actually touches in a real cluster.</li>
+<li><strong>What</strong>: A live demo of end-to-end post-quantum cryptography in Kubernetes: PQC-enabled SPIRE issuing Kyber KEM / Dilithium3 X.509 certificates, quantum-resistant mTLS, and Cilium L7 policy enforcement over that identity. (from abstract only)</li>
+<li><strong>How</strong>: Deploys PQC-enabled SPIRE, Cilium, and Envoy together — Kyber for key exchange, Dilithium3 for certificate signatures — with Cilium network policies doing L7 filtering and Envoy handling inter-node mTLS with the PQ algorithms. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General technique for any SPIFFE/SPIRE + Cilium/Envoy deployment; depends on NIST's 2024 PQC algorithm choices (ML-KEM/Kyber, ML-DSA/Dilithium) holding up, which is the same assumption the IETF PQ-migration work (see the ietf-122 digest) is built on.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="zero-trust-at-shopify-scale-automating-mtls-across-thousands-of-services">Zero Trust at Shopify Scale: Automating MTLS Across Thousands of Services<a class="headerlink" href="#zero-trust-at-shopify-scale-automating-mtls-across-thousands-of-services" title="Permanent link">#</a></h3>
+<p><em>Dani Santos &amp; Michelle Mali, Shopify</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: A real production account — with failure modes, not just success framing — of the operational problem every SPIFFE/SPIRE or cert-manager deployment eventually hits: rotating certificates across thousands of services without an outage.</li>
+<li><strong>What</strong>: How Shopify automates mTLS certificate lifecycle (issuance, rotation, cross-cluster distribution) at thousands-of-services scale, including the evolution of their approach and the failure modes they hit along the way. (from abstract only)</li>
+<li><strong>How</strong>: Evolved from custom admission controllers to patterns that work across Kubernetes and non-Kubernetes environments — mounting CA certificates at container startup with periodic CronJob-driven renewal, plus RBAC and graceful rollover mechanisms. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General mTLS-at-scale problem; the specific CronJob-renewal pattern is one implementation choice among several, useful as a reference for anyone hitting cert-rotation pain at scale.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="spiffe-in-practice-universal-identity-for-webassembly-workloads">SPIFFE in Practice: Universal Identity for WebAssembly Workloads<a class="headerlink" href="#spiffe-in-practice-universal-identity-for-webassembly-workloads" title="Permanent link">#</a></h3>
+<p><em>Joonas Bergius, Cosmonic &amp; Colin Murphy, Adobe</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: SPIFFE's "universal identity across any workload platform" claim gets tested against a genuinely different runtime model (WASM components, not containers) — useful signal for how far the standard actually stretches.</li>
+<li><strong>What</strong>: The journey of adopting SPIFFE as the identity foundation for WebAssembly workloads on CNCF wasmCloud, from concept to production. (from abstract only)</li>
+<li><strong>How</strong>: Not detailed beyond "lessons learned integrating SPIFFE with a WASM component runtime rather than a container runtime" — the abstract flags this as introducing unique challenges versus a straight lift-and-shift of container-based SPIFFE integration. (from abstract only — thin on mechanism)</li>
+<li><strong>Where applicable</strong>: WebAssembly-based workload platforms (wasmCloud specifically); general lesson for anyone extending SPIFFE beyond containers.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="workload-identity-for-humans-a-twelve-factor-approach">Workload Identity for Humans: A Twelve-Factor Approach<a class="headerlink" href="#workload-identity-for-humans-a-twelve-factor-approach" title="Permanent link">#</a></h3>
+<p><em>Vish Abrams, Heroku</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: A useful counterpoint to the platform-level SPIFFE/SPIRE talks above: an argument that workload identity primitives are powerful but leave application developers reinventing bespoke integration per platform, and a proposal for a more opinionated developer-facing layer.</li>
+<li><strong>What</strong>: A developer-focused workload identity approach layered on top of existing CNCF primitives (Kubernetes Service Accounts, SPIFFE/SPIRE), applying Twelve-Factor App principles to make identity integration feel natural rather than bespoke. (from abstract only)</li>
+<li><strong>How</strong>: Not detailed mechanically in the abstract; framed as an opinionated abstraction layer over existing identity primitives rather than a new protocol. (from abstract only — thin on mechanism)</li>
+<li><strong>Where applicable</strong>: General; relevant to anyone whose application teams treat workload identity as ops-only plumbing rather than a first-class app concern.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="simplifying-the-networking-and-security-stack-with-cilium-hubble-and-tetragon">Simplifying the Networking and Security Stack With Cilium, Hubble, and Tetragon<a class="headerlink" href="#simplifying-the-networking-and-security-stack-with-cilium-hubble-and-tetragon" title="Permanent link">#</a></h3>
+<p><em>Bill Mulligan &amp; Anna Kapuścińska, Isovalent at Cisco; Bowei Du, Google; Amir Kheirkhahan, DBSchenker</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: The flagship Cilium project update, with real adopter voices (DB Schenker, Google) rather than just maintainer roadmap — worth tracking as the state of the eBPF networking/security/observability stack the PM already follows.</li>
+<li><strong>What</strong>: Updates on Cilium's latest release covering multi-cluster networking, scaling to 65,000 nodes, service-mesh use cases, plus Hubble (network observability) and Tetragon (security observability/runtime enforcement) sub-projects. (from abstract only)</li>
+<li><strong>How</strong>: A single eBPF-powered datapath replaces a fragmented toolchain (separate CNI, observability agent, and runtime security tools) with one unified stack. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General Kubernetes CNI/networking-security deployments; the 65,000-node scaling claim is a specific data point worth verifying against your own scale requirements rather than assuming linear applicability.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="making-the-leap-what-gateway-api-needs-to-support-ingress-nginx-users">Making the Leap: What Gateway API Needs To Support Ingress-NGINX Users<a class="headerlink" href="#making-the-leap-what-gateway-api-needs-to-support-ingress-nginx-users" title="Permanent link">#</a></h3>
+<p><em>Rob Scott, Google &amp; James Strong, Isovalent at Cisco</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: Ingress-NGINX has been the de facto standard for years; its maintainers moving to a Gateway API-focused implementation is a significant ecosystem signal, and this talk is literally about the compatibility gaps blocking that migration — directly relevant to anyone planning an ingress-to-Gateway-API transition.</li>
+<li><strong>What</strong>: An inventory of commonly-used Ingress-NGINX features not yet supported by Gateway API, and a call for community input on closing those gaps to make Gateway API a true Ingress-NGINX successor. (from abstract only)</li>
+<li><strong>How</strong>: Not a new mechanism — a gap analysis between the mature, feature-rich Ingress-NGINX annotation surface and Gateway API's current spec coverage. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General; anyone currently on Ingress-NGINX evaluating or planning a Gateway API migration should treat this as a pre-migration checklist source.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="uncharted-waters-dynamic-resource-allocation-for-networking">Uncharted Waters: Dynamic Resource Allocation for Networking<a class="headerlink" href="#uncharted-waters-dynamic-resource-allocation-for-networking" title="Permanent link">#</a></h3>
+<p><em>Miguel Duarte Barroso, Red Hat &amp; Lionel Jouin, Ericsson Software Technology</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: After a rejected "modify the Pod spec directly" proposal, Kubernetes networking is pivoting to Dynamic Resource Allocation (DRA) as the extensibility mechanism — this is a first-order architectural direction for how multi-network and specialized-NIC support lands in core Kubernetes.</li>
+<li><strong>What</strong>: Introduces the DRA CNI Driver approach to bringing native multi-network and advanced networking support into Kubernetes via the DRA mechanism, rather than further Pod-spec modification. (from abstract only)</li>
+<li><strong>How</strong>: Uses Dynamic Resource Allocation — the same Kubernetes-native mechanism being built out for GPU/TPU/NIC device management — as the plumbing for exposing and requesting specialized network resources/interfaces per pod. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General direction for Kubernetes multi-network and specialized-NIC (RDMA, SR-IOV-class) support; still an upstream-in-progress effort, so treat as a roadmap signal rather than a shipped feature to adopt today.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="encryption-identities-and-everything-in-between-building-secure-kubernetes-networks">Encryption, Identities, and Everything in Between; Building Secure Kubernetes Networks<a class="headerlink" href="#encryption-identities-and-everything-in-between-building-secure-kubernetes-networks" title="Permanent link">#</a></h3>
+<p><em>Lior Lieberman, Google &amp; Igor Velichkovich, Stealth Startup</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: A rare talk that explicitly frames encryption and identity/AuthN/AuthZ as one problem for Kubernetes networking rather than separate concerns, and calls for the community to standardize and simplify it — a useful survey of where the ecosystem actually stands.</li>
+<li><strong>What</strong>: A tour of the current encryption and AuthN/AuthZ project landscape for Kubernetes networking, framed around defense-in-depth and least-privilege, with real-world scaling scenarios. (from abstract only)</li>
+<li><strong>How</strong>: Not a single mechanism — a synthesis across existing projects, aimed at identifying design requirements for resilient, secure networks at scale. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General; most useful as an orientation talk for evaluating the fragmented landscape of Kubernetes network encryption/identity tooling rather than a specific implementation guide.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="the-great-sidecar-debate">The Great Sidecar Debate<a class="headerlink" href="#the-great-sidecar-debate" title="Permanent link">#</a></h3>
+<p><em>William Morgan, Buoyant</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: The sidecar-vs-sidecarless architectural question is the central fault line in service mesh right now (Istio ambient, Cilium mesh, Kmesh below); this is a maintainer-level, engineering-tradeoffs framing rather than a vendor pitch for one side.</li>
+<li><strong>What</strong>: A pragmatic evaluation of sidecar vs. sidecarless (ambient/eBPF) service mesh architectures across resource consumption, operational blast radius, and security threat models. (from abstract only)</li>
+<li><strong>How</strong>: Frames every architectural choice as a tradeoff and works through concrete scenarios where sidecars still win versus where ambient/eBPF approaches are strictly better. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General service mesh architecture decisions; useful as a mental framework regardless of which mesh implementation you're evaluating.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="revolutionizing-sidecarless-service-mesh-with-ebpf-and-remote-gateway-kmesh">Revolutionizing Sidecarless Service Mesh with eBPF and Remote Gateway (Kmesh)<a class="headerlink" href="#revolutionizing-sidecarless-service-mesh-with-ebpf-and-remote-gateway-kmesh" title="Permanent link">#</a></h3>
+<p><em>Zhonghu Xu, Huawei</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: Concrete performance numbers for the sidecarless-mesh direction discussed above — a specific implementation (Kmesh) claiming a 90% resource-consumption reduction versus sidecar-based meshes while staying Istio-API-compatible.</li>
+<li><strong>What</strong>: A demo of Kmesh, an eBPF-based sidecarless service mesh combining an L4 eBPF acceleration layer with an L7 control plane via remote waypoint proxies, claiming full Istio API compatibility. (from abstract only)</li>
+<li><strong>How</strong>: eBPF hooks handle L4 traffic redirection and kernel-space connection management directly; L7 features (canary, traffic splitting, fault injection) are handled by a decoupled remote waypoint gateway rather than a per-pod sidecar proxy. (from abstract only)</li>
+<li><strong>Where applicable</strong>: Istio-API-compatible deployments looking to cut sidecar resource overhead; vendor-reported numbers (90% resource reduction, 10x CPU improvement) should be treated as claims to verify against your own workload, not assumed universal.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="identity-based-trust-till-death-do-we-part">Identity-based Trust — Till Death Do We Part?<a class="headerlink" href="#identity-based-trust-till-death-do-we-part" title="Permanent link">#</a></h3>
+<p><em>John Kjell, ControlPlane &amp; Kairo De Araujo, Independent</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: A threat-model-first look at OIDC-based "trusted publishing" (PyPI, npm, RubyGems, Homebrew, all built on Sigstore's Fulcio/Rekor) — directly relevant to identity infrastructure design, specifically the hard problem of what happens when the identity backing a signature is compromised in an append-only trust log.</li>
+<li><strong>What</strong>: A threat model for compromise in Sigstore-based identity signing systems, and mitigation/recovery mechanisms using in-toto and The Update Framework (TUF), including a concrete implementation in in-toto's Archivista sub-project. (from abstract only)</li>
+<li><strong>How</strong>: Sigstore's Rekor transparency log is append-only with no entry removal, so identity compromise can't simply be "erased" — the talk covers mitigation and recovery patterns that work within that constraint rather than against it. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General for OIDC-based signing/attestation systems (trusted publishing, artifact signing); specifically relevant to anyone building or relying on Sigstore-backed supply-chain identity.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="cncf-project-demos-bgp-beyond-loadbalancers-with-metallb-and-frr-k8s">CNCF Project Demos | BGP Beyond Loadbalancers with MetalLB and FRR-K8s<a class="headerlink" href="#cncf-project-demos-bgp-beyond-loadbalancers-with-metallb-and-frr-k8s" title="Permanent link">#</a></h3>
+<p><em>(Project Pavilion demo)</em> — <strong>Adjacent</strong></p>
+<ul>
+<li><strong>Why</strong>: MetalLB's BGP engine (backed by FRR-K8s) moving beyond simple LoadBalancer-service advertisement into general BGP features on bare-metal clusters is a small but concrete signal of cloud-native networking absorbing more real routing-protocol capability.</li>
+<li><strong>What</strong>: A demo of using MetalLB with FRR-K8s as a backend to add BGP features to Kubernetes clusters beyond basic LoadBalancer service advertisement to an on-prem fabric. (from abstract only)</li>
+<li><strong>How</strong>: FRR-K8s (Free Range Routing wrapped for Kubernetes) backs MetalLB's evolved BGP engine, letting it speak more of BGP's feature surface to the on-prem fabric than the original simple advertisement model. (from abstract only)</li>
+<li><strong>Where applicable</strong>: Bare-metal/on-prem Kubernetes needing BGP-based LoadBalancer integration; general for that deployment shape.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="sig-network-intro-and-updates">SIG Network Intro and Updates<a class="headerlink" href="#sig-network-intro-and-updates" title="Permanent link">#</a></h3>
+<p><em>Dan Winship &amp; Nadia Pinaeva, Red Hat; Bowei Du, Google; Daman Arora, Broadcom</em> — <strong>Adjacent</strong></p>
+<ul>
+<li><strong>Why</strong>: The direct roadmap source for core Kubernetes networking (kube-proxy, EndpointSlice, Gateway API, network-policy direction) from the SIG that owns it — useful as an orientation point even without deep technical content.</li>
+<li><strong>What</strong>: Status and progress update on SIG Network's core components and sub-projects, plus forward-looking considerations for the SIG's direction. (from abstract only)</li>
+<li><strong>How</strong>: A maintainer panel format covering kube-proxy, ovn-kubernetes network-policy work, and other core networking component status. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General Kubernetes networking roadmap awareness; not a technical deep-dive.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="cncf-tag-network-and-cloud-native-network-landscape">CNCF TAG Network and Cloud Native Network Landscape<a class="headerlink" href="#cncf-tag-network-and-cloud-native-network-landscape" title="Permanent link">#</a></h3>
+<p><em>Zhonghu Xu, Huawei &amp; Nic Jackson, Hashicorp</em> — <strong>Adjacent</strong></p>
+<ul>
+<li><strong>Why</strong>: A map of the CNCF's own networking-project taxonomy and governance — useful context for understanding how the various networking projects (Cilium, Kmesh, Istio, MetalLB, etc.) relate to each other institutionally.</li>
+<li><strong>What</strong>: An introduction to the CNCF Network TAG, how it works with the CNCF TOC, and how to get involved. (from abstract only)</li>
+<li><strong>How</strong>: Not a technical talk — governance and landscape orientation. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General orientation for anyone tracking the CNCF networking-project ecosystem as a whole.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="tutorial-mind-your-pods-business-network-isolation-workshop">Tutorial: Mind Your Pod's Business: Network Isolation Workshop<a class="headerlink" href="#tutorial-mind-your-pods-business-network-isolation-workshop" title="Permanent link">#</a></h3>
+<p><em>Surya Seetharaman &amp; Miguel Duarte Barroso, Red Hat; Keith Burdis, Goldman Sachs</em> — <strong>Adjacent</strong></p>
+<ul>
+<li><strong>Why</strong>: A concrete, regulation-driven use case (EU NIS2 Directive) for network segmentation beyond Kubernetes' unrestricted-by-default pod networking, including the Layer 2 gap (VM/telecom workloads) that plain NetworkPolicies don't cover.</li>
+<li><strong>What</strong>: A hands-on workshop achieving native network isolation for pods and VMs using CNI, KubeVirt, and OVN-Kubernetes, addressing both standard NetworkPolicy gaps and Layer 2 (Ethernet-level) isolation needs. (from abstract only)</li>
+<li><strong>How</strong>: Configures CNI/OVN-Kubernetes/KubeVirt plugins on KIND clusters to create isolated networks and attach workloads (pods and VMs) to them, covering the segmentation cases plain NetworkPolicies leave open. (from abstract only)</li>
+<li><strong>Where applicable</strong>: Regulated environments (explicitly framed around EU NIS2 compliance) and mixed VM/container workloads via KubeVirt; general technique for Layer 2 isolation gaps in Kubernetes networking.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="debugging-envoy-tunnels-a-deep-dive">Debugging Envoy Tunnels: A Deep Dive<a class="headerlink" href="#debugging-envoy-tunnels-a-deep-dive" title="Permanent link">#</a></h3>
+<p><em>Carlos Sanchez &amp; Alexandra Stoica, Adobe</em> — <strong>Adjacent</strong></p>
+<ul>
+<li><strong>Why</strong>: A practitioner's account of a specific, painful operational pattern — Envoy tunnels with mTLS connecting Kubernetes pods to on-prem/customer infrastructure — with real troubleshooting scenarios rather than a theoretical overview.</li>
+<li><strong>What</strong>: An interactive walkthrough of debugging Envoy tunnel failures in a production setup connecting Kubernetes pods to customer-dedicated on-prem infrastructure via dedicated egress IPs and mTLS. (from abstract only)</li>
+<li><strong>How</strong>: Adobe's setup uses Envoy tunnels and mTLS to give pods dedicated egress identity/IPs and VPN-style connectivity to on-prem services; the talk works through categories of tunnel failure and how to diagnose them. (from abstract only)</li>
+<li><strong>Where applicable</strong>: Envoy-based hybrid connectivity (Kubernetes-to-on-prem) specifically; the debugging methodology generalizes to other mTLS-tunnel troubleshooting.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="tuf-en-up-your-software-supply-chain">TUF-en up Your Software Supply Chain<a class="headerlink" href="#tuf-en-up-your-software-supply-chain" title="Permanent link">#</a></h3>
+<p><em>Marina Moore, Edera &amp; Kairo De Araujo, Independent</em> — <strong>Adjacent</strong></p>
+<ul>
+<li><strong>Why</strong>: Complements the identity-trust talk above from the artifact-integrity side — how The Update Framework (TUF) and in-toto tie signed images to supply-chain metadata for end-to-end verifiable distribution.</li>
+<li><strong>What</strong>: How to securely distribute container images along with supply-chain metadata (SBOMs, attestations) using TUF for update/distribution security and in-toto for attestation verification. (from abstract only)</li>
+<li><strong>How</strong>: TUF ensures image and metadata freshness and tamper-resistance; in-toto layers on attestation verification for a combined secure-distribution pipeline, demonstrated live. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General software supply-chain security for container image distribution; relevant to anyone building or evaluating SBOM/attestation pipelines.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="istio-the-past-present-and-future-of-the-project-and-community">Istio: The Past, Present and Future of the Project and Community<a class="headerlink" href="#istio-the-past-present-and-future-of-the-project-and-community" title="Permanent link">#</a></h3>
+<p><em>Lin Sun &amp; Louis Ryan, Solo.io; Raymond Wong, Forbes</em> — <strong>Adjacent</strong></p>
+<ul>
+<li><strong>Why</strong>: The state-of-the-project update from Istio's own leadership, including ambient (sidecarless) data-plane progress and Gateway API support — useful as the anchor reference point for the sidecar-debate and Kmesh talks above.</li>
+<li><strong>What</strong>: An update on Istio's health, recent feature releases, ambient sidecar-less data plane progress, Gateway API support, and project roadmap. (from abstract only)</li>
+<li><strong>How</strong>: Not a technical mechanism talk — a project/community status update. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General Istio-ecosystem awareness; most useful paired with the Kmesh and sidecar-debate sessions above for a fuller picture of where service mesh architecture is heading.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="using-ebpf-for-non-invasive-performant-instant-network-monitoring">Using eBPF for Non-invasive, Performant, Instant Network Monitoring<a class="headerlink" href="#using-ebpf-for-non-invasive-performant-instant-network-monitoring" title="Permanent link">#</a></h3>
+<p><em>Mario Macías &amp; Marc Tudurí, Grafana</em> — <strong>Wildcard</strong></p>
+<ul>
+<li><strong>Why</strong>: Not a design talk, but a genuinely different operational capability: getting L3–L7 network observability without redeploying network infrastructure or instrumenting applications, purely by attaching eBPF at different stack layers — worth seeing even outside core networking-design interest.</li>
+<li><strong>What</strong>: How Grafana built plug-and-play network and service observability by attaching eBPF probes across network layers, correlating low-level packet flow with L7 request/response detail and Kubernetes metadata. (from abstract only)</li>
+<li><strong>How</strong>: eBPF hooks into different layers of the service-infrastructure stack to extract flow and request-level data automatically, without needing SDN-provider support or invasive packet-analyzer deployments. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General; particularly useful where you don't control the underlying SDN/network infrastructure and need observability anyway.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="a-cloud-native-workflow-for-hardware-in-the-loop-software-development">A Cloud Native Workflow for Hardware-in-the-Loop Software Development<a class="headerlink" href="#a-cloud-native-workflow-for-hardware-in-the-loop-software-development" title="Permanent link">#</a></h3>
+<p><em>Miguel Angel Ajo, Red Hat</em> — <strong>Wildcard</strong></p>
+<ul>
+<li><strong>Why</strong>: A genuine crossover between cloud-native tooling and physical hardware testing — using Kubernetes-native CI (Tekton) to drive real firmware flashing, booting, and hardware interfaces (CAN bus, serial, video) rather than simulating them. Not a fit for the PM's networking/identity focus directly, but a "cloud-native reaches into physical hardware" pattern worth having on the radar.</li>
+<li><strong>What</strong>: Jumpstarter, an open-source project connecting a software factory (CI/CD) to physical hardware, automating firmware testing on real devices from within Kubernetes. (from abstract only)</li>
+<li><strong>How</strong>: Tekton Pipelines and GitLab drive device leasing and automation for tasks like firmware flashing and booting, interfacing through serial, CAN bus, audio, and video; Eclipse Che supports the dev/debug loop. (from abstract only)</li>
+<li><strong>Where applicable</strong>: Embedded/firmware development for hardware devices (developed with an automotive manufacturer); the pattern of "Kubernetes-native CI orchestrating physical device labs" generalizes beyond automotive to any hardware-in-the-loop testing need.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="stateful-connections-in-kubernetes-the-scaling-secrets-nobody-talks-about">Stateful Connections in Kubernetes: The Scaling Secrets Nobody Talks About<a class="headerlink" href="#stateful-connections-in-kubernetes-the-scaling-secrets-nobody-talks-about" title="Permanent link">#</a></h3>
+<p><em>André Mocke &amp; Rodrigo Fior Kuntzer, Miro</em> — <strong>Wildcard</strong></p>
+<ul>
+<li><strong>Why</strong>: Long-lived, stateful TCP/WebSocket connections are the awkward case Kubernetes' pod-churn model wasn't designed for, and this is a specific, non-networking-standards account of solving it in production for real-time collaboration at scale — a useful counterpoint to the mostly-stateless assumptions elsewhere in the program.</li>
+<li><strong>What</strong>: How Miro built and operates a custom WebSocket connection manager in Kubernetes for real-time collaboration, handling connection rebalancing, draining, and graceful shutdown under enterprise compliance constraints. (from abstract only)</li>
+<li><strong>How</strong>: Custom Kubernetes operators manage the WebSocket connection lifecycle — rebalancing live connections and draining them gracefully during scaling/deployment events instead of dropping them. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General for any Kubernetes workload with long-lived stateful client connections (real-time collaboration, gaming, trading); Miro-specific compliance constraints aside, the connection-lifecycle patterns generalize.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Agentic and AI-agent identity is arriving as a named problem, not a hypothetical.</strong> Multiple sessions (IAM for autonomous AI, workload identity for humans, SPIFFE for WASM) treat "how does an AI agent or non-container workload prove who it is" as current work, explicitly citing SPIFFE/SPIRE and IETF WIMSE — directly mirroring the standards work seen in the concurrent IETF 122 digest.</li>
+<li><strong>Post-quantum cryptography has reached live demos in cloud-native identity infrastructure</strong>, not just standards documents — the SPIFFE/SPIRE + Cilium + Envoy PQC demo is a concrete preview of what a PQ migration actually touches in a running cluster.</li>
+<li><strong>Service mesh's sidecar-vs-sidecarless fight has matured into engineering tradeoffs, not tribalism</strong> — the same cycle produced a neutral tradeoffs talk (Buoyant/Linkerd), a concrete eBPF-sidecarless implementation with performance numbers (Kmesh/Huawei), and an Istio ambient-mode project update, letting you triangulate rather than take one vendor's word for it.</li>
+<li><strong>Kubernetes networking extensibility is consolidating on Dynamic Resource Allocation</strong> as the mechanism of choice for multi-network and specialized-NIC support, after a more invasive Pod-spec-modification approach was rejected upstream — the same DRA mechanism being built out for GPU/TPU device management.</li>
+<li><strong>Gateway API's gravity keeps increasing</strong>: Ingress-NGINX's own maintainers moving toward it, plus a session literally cataloguing the remaining feature gaps, signals the migration pressure is now bidirectional (community push <em>and</em> maintainer pull) rather than CNCF evangelism alone.</li>
+<li><strong>Zero trust at scale is graduating from architecture talks to operations talks</strong> — the standout identity sessions (Shopify mTLS automation, Sigstore identity-compromise threat modeling) are about the unglamorous lifecycle problems (rotation, revocation, recovery) rather than initial design, suggesting the field has moved past "should we do this" to "how do we operate this without an outage."</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>This digest was produced by running the repository's digest prompt by hand, from the conference's published program. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/kubecon-eu-2025.md"><code>digests/kubecon-eu-2025.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/kubecon-eu-2025.md"><code>prompts/kubecon-eu-2025.md</code></a></p>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../srecon-2025-americas/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SREcon25 Americas">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                SREcon25 Americas
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ietf-122/" class="md-footer__link md-footer__link--next" aria-label="Next: IETF 122 (Bangkok)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                IETF 122 (Bangkok)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and generator, styled after containerlab.dev -->
+<div class="md-copyright">
+    
+    <div class="md-copyright__highlight">
+        Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.
+    </div>
+    
+    Written by
+    <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+    on Nebius Token Factory · made with
+    <span class="twemoji heart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709q-.23.129-.463.252h-.002a.75.75 0 0 1-.686 0 17 17 0 0 1-.465-.252 31 31 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31 31 0 0 1 14 20.408"/></svg>
+    </span>
+    and <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hellt.github.io/conference-digest/feed_rss_created.xml" target="_blank" rel="noopener" title="hellt.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+    
+  </body>
+</html>

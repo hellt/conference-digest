@@ -1,0 +1,1780 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A triage of NSDI &#x27;25 papers for a PM working on physical DC networking, cloud-native networking, network security, and identity. Picks are grouped into Core, Adjacent, and Wildcard tiers. Links point to the USENIX presentation page for each paper, which carries the open-access PDF (and, where…">
+      
+      
+      
+        <link rel="canonical" href="https://hellt.github.io/conference-digest/nsdi-2025/">
+      
+      
+      
+        <link rel="prev" href="../sigcomm-2025/">
+      
+      
+        <link rel="next" href="../kubecon-na-2025/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>NSDI '25 - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300,300i,400,400i,500,500i,700,700i%7CGoogle+Sans+Code:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Google Sans";--md-code-font:"Google Sans Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="NSDI '25 · Conference Digest" />
+<meta property="og:description" content="A triage of NSDI '25 papers for a PM working on physical DC networking, cloud-native networking, network security, and identity. Picks are grouped into Core, Adjacent, and Wildcard tiers. Links point to the USENIX presentation page for each paper, which carries the open-access PDF (and, where…" />
+<meta property="og:url" content="https://hellt.github.io/conference-digest/nsdi-2025/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="NSDI '25 · Conference Digest" />
+<meta name="twitter:description" content="A triage of NSDI '25 papers for a PM working on physical DC networking, cloud-native networking, network security, and identity. Picks are grouped into Core, Adjacent, and Wildcard tiers. Links point to the USENIX presentation page for each paper, which carries the open-access PDF (and, where…" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NSDI '25
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../category/academic/" class="md-tabs__link">
+          
+  
+  Conference type
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oncache-a-cache-based-low-overhead-container-overlay-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ONCache: A Cache-Based Low-Overhead Container Overlay Network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mitigating-scalability-walls-of-rdma-based-container-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mitigating Scalability Walls of RDMA-based Container Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etran-extensible-kernel-transport-with-ebpf" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        eTran: Extensible Kernel Transport with eBPF
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#everything-matters-in-programmable-packet-scheduling-packs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Everything Matters in Programmable Packet Scheduling (PACKS)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securing-public-cloud-networks-with-efficient-role-based-micro-segmentation-zts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Securing Public Cloud Networks with Efficient Role-based Micro-Segmentation (ZTS)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preacher-secure-and-practical-password-pre-authentication-by-content-delivery-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        PreAcher: Secure and Practical Password Pre-Authentication by Content Delivery Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#achieving-wire-latency-storage-systems-by-exploiting-hardware-acks-juneberry" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Achieving Wire-Latency Storage Systems by Exploiting Hardware ACKs (Juneberry)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suppressing-bgp-zombies-with-route-status-transparency-rost" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Suppressing BGP Zombies with Route Status Transparency (RoST)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-address-blocks-to-authorized-prefixes-redesigning-rpki-rov-with-a-hierarchical-hashing-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Address Blocks to Authorized Prefixes: Redesigning RPKI ROV with a Hierarchical Hashing Scheme
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#efficient-direct-connect-topologies-for-collective-communications" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Efficient Direct-Connect Topologies for Collective Communications
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyrrha-congestion-root-based-flow-control-to-eliminate-head-of-line-blocking-in-datacenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Pyrrha: Congestion-Root-Based Flow Control to Eliminate Head-of-Line Blocking in Datacenter
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ndd-a-decision-diagram-for-network-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NDD: A Decision Diagram for Network Verification
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efficient-multi-wan-transport-for-5g-with-otter" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Efficient Multi-WAN Transport for 5G with OTTER
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutant-learning-congestion-control-from-existing-protocols-via-online-reinforcement-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mutant: Learning Congestion Control from Existing Protocols via Online Reinforcement Learning
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#towards-energy-efficient-5g-vran-servers-renc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Towards Energy Efficient 5G vRAN Servers (RENC)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quicksand-harnessing-stranded-datacenter-resources-with-granular-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Quicksand: Harnessing Stranded Datacenter Resources with Granular Computing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-benefits-and-limitations-of-user-interrupts-for-preemptive-userspace-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Benefits and Limitations of User Interrupts for Preemptive Userspace Scheduling
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conference type
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Conference type
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Academic
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operator
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standards
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendor
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oncache-a-cache-based-low-overhead-container-overlay-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ONCache: A Cache-Based Low-Overhead Container Overlay Network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mitigating-scalability-walls-of-rdma-based-container-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mitigating Scalability Walls of RDMA-based Container Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etran-extensible-kernel-transport-with-ebpf" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        eTran: Extensible Kernel Transport with eBPF
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#everything-matters-in-programmable-packet-scheduling-packs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Everything Matters in Programmable Packet Scheduling (PACKS)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securing-public-cloud-networks-with-efficient-role-based-micro-segmentation-zts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Securing Public Cloud Networks with Efficient Role-based Micro-Segmentation (ZTS)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preacher-secure-and-practical-password-pre-authentication-by-content-delivery-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        PreAcher: Secure and Practical Password Pre-Authentication by Content Delivery Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#achieving-wire-latency-storage-systems-by-exploiting-hardware-acks-juneberry" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Achieving Wire-Latency Storage Systems by Exploiting Hardware ACKs (Juneberry)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suppressing-bgp-zombies-with-route-status-transparency-rost" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Suppressing BGP Zombies with Route Status Transparency (RoST)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-address-blocks-to-authorized-prefixes-redesigning-rpki-rov-with-a-hierarchical-hashing-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Address Blocks to Authorized Prefixes: Redesigning RPKI ROV with a Hierarchical Hashing Scheme
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#efficient-direct-connect-topologies-for-collective-communications" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Efficient Direct-Connect Topologies for Collective Communications
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pyrrha-congestion-root-based-flow-control-to-eliminate-head-of-line-blocking-in-datacenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Pyrrha: Congestion-Root-Based Flow Control to Eliminate Head-of-Line Blocking in Datacenter
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ndd-a-decision-diagram-for-network-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NDD: A Decision Diagram for Network Verification
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efficient-multi-wan-transport-for-5g-with-otter" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Efficient Multi-WAN Transport for 5G with OTTER
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutant-learning-congestion-control-from-existing-protocols-via-online-reinforcement-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mutant: Learning Congestion Control from Existing Protocols via Online Reinforcement Learning
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#towards-energy-efficient-5g-vran-servers-renc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Towards Energy Efficient 5G vRAN Servers (RENC)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quicksand-harnessing-stranded-datacenter-resources-with-granular-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Quicksand: Harnessing Stranded Datacenter Resources with Granular Computing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-benefits-and-limitations-of-user-interrupts-for-preemptive-userspace-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Benefits and Limitations of User Interrupts for Preemptive Userspace Scheduling
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="./.." class="md-nav__link">
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-calendar-days" viewBox="0 0 24 24"><path d="M8 2v3M16 2v3"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg>
+                        <time datetime="2026-06-08 00:00:00+00:00" class="md-ellipsis">June 8, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-library" viewBox="0 0 24 24"><path d="m16 6 4 14M12 6v14M8 8v12M4 4v16"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../category/academic/">Academic</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              13 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      
+        
+
+  
+  
+
+
+<h1 id="nsdi-25">NSDI '25<a class="headerlink" href="#nsdi-25" title="Permanent link">#</a></h1>
+<p>A triage of NSDI '25 papers for a PM working on physical DC networking, cloud-native networking, network security, and identity. Picks are grouped into Core, Adjacent, and Wildcard tiers. Links point to the USENIX presentation page for each paper, which carries the open-access PDF (and, where posted, slides and video). The program text supplied did not contain per-item pdf:/video: links, so these URLs were resolved against the public USENIX proceedings; slide/video availability varies by paper.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 13.5v8H3v-8zm-2 2H5v4h4zM12 2l5.5 9h-11zm0 3.86L10.08 9h3.84zM17.5 13c2.5 0 4.5 2 4.5 4.5S20 22 17.5 22 13 20 13 17.5s2-4.5 4.5-4.5m0 2a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg></span> Academic</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2V5a2 2 0 0 0-2-2m0 16H5V9h14zM5 7V5h14v2zm5.56 10.46 5.94-5.93-1.07-1.06-4.87 4.87-2.11-2.11-1.06 1.06z"/></svg></span> Ended April 30, 2025</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.19 2.25c-.26 0-.52.06-.77.15L3.06 5.45a1.994 1.994 0 0 0-1.09 2.6L6.93 20a2 2 0 0 0 1.81 1.25c.26 0 .53-.03.79-.15l7.37-3.05a2.02 2.02 0 0 0 1.23-1.8c.01-.25-.04-.54-.13-.8L13 3.5a1.95 1.95 0 0 0-1.81-1.25m3.48 0 3.45 8.35V4.25a2 2 0 0 0-2-2m4.01 1.54v9.03l2.43-5.86a1.99 1.99 0 0 0-1.09-2.6m-10.28-.14 4.98 12.02-7.39 3.06L3.8 7.29"/></svg></span> 17 picks (9 core · 5 adjacent · 3 wildcard)</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42"/></svg></span> <a href="https://www.usenix.org/conference/nsdi25/technical-sessions">Program</a></span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 17v3h8v-1.89H3.9V17c0-.64 3.13-2.1 6.1-2.1.96.01 1.91.14 2.83.38l1.52-1.52c-1.4-.47-2.85-.73-4.35-.76-2.67 0-8 1.33-8 4m8-13C7.79 4 6 5.79 6 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4m0 6c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2m11.7 3.35-1 1-2.05-2 1-1a.55.55 0 0 1 .77 0l1.28 1.28c.21.21.21.56 0 .77M12 18.94l6.06-6.06 2.05 2-6 6.07H12z"/></svg></span> Prompt run by hand</span></p>
+</div>
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<p>These map directly onto the PM's day-to-day: container/cloud-native datapaths, eBPF transport, programmable switching, RDMA fabric, micro-segmentation, and routing security.</p>
+<div class="pick pick-core">
+<h3 id="oncache-a-cache-based-low-overhead-container-overlay-network">ONCache: A Cache-Based Low-Overhead Container Overlay Network<a class="headerlink" href="#oncache-a-cache-based-low-overhead-container-overlay-network" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Shengkai Lin, Shizhen Zhao, Peirui Cao, Xinchi Han (Shanghai Jiao Tong University); Quan Tian, Wenfeng Liu, Qi Wu, Donghai Han (Broadcom); Xinbing Wang (SJTU). <em>Core.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/lin-shengkai">paper / page</a></li>
+<li><strong>Why</strong>: Overlay networks (VXLAN/Geneve CNIs) are the default in Kubernetes but impose a per-packet tax versus bare metal. This is the exact tradeoff a cloud-native networking PM lives with, and the paper quantifies where the kernel datapath actually spends its time.</li>
+<li><strong>What</strong>: The authors profile the overlay datapath segment by segment, observe that most of the extra overhead recomputes the same results across packets of a flow, and cache those invariant results. The result reaches near-bare-metal throughput while keeping overlay flexibility and compatibility.</li>
+<li><strong>How</strong>: Three caches (egress, ingress, filter) hold the invariant per-flow results; implemented as four eBPF programs plus three eBPF maps and a small userspace component, in roughly 524 lines of eBPF C — far less than prior approaches like Slim or Falcon. Reported gains: ~12% TCP throughput and ~36% transaction-rate improvement (20%/34% for UDP), with reduced soft-interrupt CPU.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to overlay CNIs; the prototype is shipped as an Antrea plugin (Broadcom is a co-author), so the cleanest integration path is Antrea/OVS-based fabrics. The technique itself is CNI-agnostic.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="mitigating-scalability-walls-of-rdma-based-container-networks">Mitigating Scalability Walls of RDMA-based Container Networks<a class="headerlink" href="#mitigating-scalability-walls-of-rdma-based-container-networks" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Wei Liu (Tsinghua and Alibaba Cloud); Kun Qian (Alibaba Cloud); Zhenhua Li (Tsinghua); Feng Qian (USC); Tianyin Xu (UIUC); Yunhao Liu (Tsinghua); Yu Guan, Shuhong Zhu, Hongfei Xu, Lanlan Xi, Chao Qin, Ennan Zhai (Alibaba Cloud). <em>Core.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/liu-wei">paper / page</a></li>
+<li><strong>Why</strong>: RDMA-offloaded container networks deliver big wins (the paper shows ~21 Gbps TCP rising to ~180 Gbps once forwarding and VXLAN move to the RNIC and RDMA carries packets), but performance collapses unexpectedly at the scale of millions of containers. Anyone betting on RNIC offload for container fabric needs to understand this ceiling.</li>
+<li><strong>What</strong>: The "scalability wall" is traced to the RNICs themselves — design/implementation defects that are invisible because RNIC internals are closed. They build ScalaCN, which infers the most likely causes despite that opacity and proactively reschedules NF offload.</li>
+<li><strong>How</strong>: Combinatorial causal testing reconstructs an approximate RNIC architecture and performance model from black-box behavior; ScalaCN then optimizes the network-function offload schedule against that model. On production workloads: ~1.4x end-to-end bandwidth and ~31% lower forwarding latency after resolving 82% of inferred causes. Issues were reported to and confirmed by vendors.</li>
+<li><strong>Where applicable</strong>: Production RDMA container networks at hyperscale; evaluation is on Alibaba's production RCN with NVIDIA ConnectX-6 RNICs, so specifics are vendor- and deployment-tied, but the causal-inference methodology for black-box NICs generalizes.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="etran-extensible-kernel-transport-with-ebpf">eTran: Extensible Kernel Transport with eBPF<a class="headerlink" href="#etran-extensible-kernel-transport-with-ebpf" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Zhongjie Chen (Tsinghua); Qingkai Meng (Nanjing University); ChonLam Lao (Harvard); Yifan Liu, Fengyuan Ren (Tsinghua); Minlan Yu (Harvard); Yang Zhou (UC Berkeley and UC Davis). <em>Core.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/chen-zhongjie">paper / page</a></li>
+<li><strong>Why</strong>: New transport designs almost never reach the mainline kernel, and when they do it takes years. eTran is a credible answer to "how do we get customizable transports into production without forking the kernel" — directly relevant to anyone reasoning about datapath internals and congestion control.</li>
+<li><strong>What</strong>: A framework that makes kernel transport extensible: operators implement and customize transports (it ships DCTCP-style TCP and Homa) as eBPF rather than kernel patches, while keeping kernel-level safety and absorbing userspace-transport performance tricks.</li>
+<li><strong>How</strong>: Core transport ops run in the kernel via eBPF; packets reach a thin, untrusted userspace library through AF_XDP sockets, where they are reassembled into TCP flows or Homa RPCs. All packets traverse eBPF hooks, so monitoring, access control, and rate limiting are modular eBPF programs chained via <code>bpf_tail_call</code>. Reported up to ~7.5x lower P99 latency than Linux Homa on RPC workloads. Open source.</li>
+<li><strong>Where applicable</strong>: Datacenter Linux hosts (evaluated on kernel 6.6.0 with AF_XDP). General technique, but tied to a recent kernel and AF_XDP; synchronization support in eBPF is a noted limitation.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="everything-matters-in-programmable-packet-scheduling-packs">Everything Matters in Programmable Packet Scheduling (PACKS)<a class="headerlink" href="#everything-matters-in-programmable-packet-scheduling-packs" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Albert Gran Alcoz (ETH Zürich); Balázs Vass (BME-TMIT); Pooria Namyar (USC); Behnaz Arzani (Microsoft Research); Gábor Rétvári (BME-TMIT); Laurent Vanbever (ETH Zürich). <em>Core.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/alcoz">paper / page</a></li>
+<li><strong>Why</strong>: PIFO is the ideal programmable scheduler but can't be built at line rate in hardware. Prior approximations (SP-PIFO, AIFO) each capture only one of PIFO's two behaviors. This advances the "one scheduling abstraction on commodity switches" agenda that matters for anyone tuning FCT on Tofino-class hardware.</li>
+<li><strong>What</strong>: PACKS approximates PIFO while capturing both required behaviors — scheduling order and admission control — which prior schemes handled only separately.</li>
+<li><strong>How</strong>: Packets are tagged with ranks; PACKS uses a sliding window of recent ranks plus queue-occupancy to make admission decisions, and maps ranks across a small set of priority queues to minimize rank inversions. Reported: up to 7x and 15x fewer rank inversions than SP-PIFO and AIFO, up to 60% fewer drops vs SP-PIFO, and up to 33%/2.6x lower mean FCT for small flows under pFabric ranks.</li>
+<li><strong>Where applicable</strong>: Existing programmable switches; implemented in P4 and shown to run at line rate on Intel Tofino. General technique within the constraints of fixed-queue hardware.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="securing-public-cloud-networks-with-efficient-role-based-micro-segmentation-zts">Securing Public Cloud Networks with Efficient Role-based Micro-Segmentation (ZTS)<a class="headerlink" href="#securing-public-cloud-networks-with-efficient-role-based-micro-segmentation-zts" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Sathiya Kumaran Mani, Kevin Hsieh (Microsoft); Santiago Segarra (Rice); Ranveer Chandra (Microsoft); Yajie Zhou (University of Maryland); Srikanth Kandula (Microsoft). <em>Core.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/mani">paper / page</a></li>
+<li><strong>Why</strong>: Micro-segmentation is the canonical zero-trust control for limiting blast radius, but authoring precise policies at cloud scale is the perennial blocker. This sits squarely in network security and is grounded in real deployment.</li>
+<li><strong>What</strong>: ZTS (Zero Trust Segmentation) ingests large volumes of flow logs, infers endpoint roles, and generates micro-segmentation policies automatically, with continuous communication-graph generation and policy enforcement.</li>
+<li><strong>How</strong>: Role inference combines domain knowledge with communication patterns rather than relying on manual tagging (which breaks as pods migrate or scale). Evaluated against ground truth across 11 first- and third-party deployments; reported up to 21.5x more cost-efficient than Apache Flink for the stream-processing workload, with higher role-inference accuracy than prior algorithms.</li>
+<li><strong>Where applicable</strong>: Large public-cloud networks; built and evaluated inside Microsoft's environment, so the productized form is Azure-flavored, but the role-inference approach is general.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="preacher-secure-and-practical-password-pre-authentication-by-content-delivery-networks">PreAcher: Secure and Practical Password Pre-Authentication by Content Delivery Networks<a class="headerlink" href="#preacher-secure-and-practical-password-pre-authentication-by-content-delivery-networks" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Shihan Lin, Xiaowei Yang (Duke); Suting Chen, Aleksandar Kuzmanovic (Northwestern); Yunming Xiao (University of Michigan); Yanqi Gu (UC Irvine). <em>Core.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/lin-shihan">paper / page</a></li>
+<li><strong>Why</strong>: Sits in the identity/authentication lane: it offloads password authentication to CDNs to absorb application-layer DoS against login interfaces, without ever revealing passwords to the CDN. A genuinely novel three-party auth architecture.</li>
+<li><strong>What</strong>: A system that inserts a third-party CDN into the password-auth path to pre-authenticate users and filter ADoS traffic before it reaches the origin, while preserving password secrecy and usability.</li>
+<li><strong>How</strong>: A three-party (client/CDN/server) protocol combining an Oblivious Pseudorandom Function (OPRF) with Locality-Sensitive Hashing (LSH). The client derives a secret key from the password via OPRF+LSH and interacts with the CDN rather than the server, so the CDN can validate login attempts without learning the password. Demonstrated against a commercial-CDN setup where login-interface ADoS slips past standard WAF/rate-limit protections.</li>
+<li><strong>Where applicable</strong>: Web services fronted by CDNs that want login-layer DoS protection; deployable unilaterally by a server operator. General architecture, though it changes the login flow and assumes CDN cooperation.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="achieving-wire-latency-storage-systems-by-exploiting-hardware-acks-juneberry">Achieving Wire-Latency Storage Systems by Exploiting Hardware ACKs (Juneberry)<a class="headerlink" href="#achieving-wire-latency-storage-systems-by-exploiting-hardware-acks-juneberry" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Qing Wang, Jiwu Shu, Jing Wang, Yuhao Zhang (Tsinghua University). <em>Core.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/wang-qing">paper / page</a></li>
+<li><strong>Why</strong>: Touches RDMA datapath internals directly: it questions whether storage requests need a full RPC round trip plus server-CPU involvement to commit, which is relevant to anyone designing lossless-fabric storage paths.</li>
+<li><strong>What</strong>: Juneberry gives storage requests a fast path that commits in a single round trip while bypassing the server CPU, with request execution happening asynchronously on the server afterward.</li>
+<li><strong>How</strong>: An "Ordered Queue" abstraction treats the NIC's hardware ACK as the commit signal while preserving linearizability; durability comes from landing requests in persistent memory. Built on commodity RDMA NICs and integrated into Memcached and PMemKV, with significantly lower latency than RPC under write-intensive workloads.</li>
+<li><strong>Where applicable</strong>: RDMA + persistent-memory storage deployments on commodity RNICs. General mechanism, but the durability story assumes PM availability.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="suppressing-bgp-zombies-with-route-status-transparency-rost">Suppressing BGP Zombies with Route Status Transparency (RoST)<a class="headerlink" href="#suppressing-bgp-zombies-with-route-status-transparency-rost" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Yosef Edery Anahory, Yossi Gilad (Hebrew University of Jerusalem); Jie Kong, Nicholas Scaglione, Justin Furuness, Amir Herzberg, Bing Wang (University of Connecticut); Hemi Leibowitz (College of Management Academic Studies). <em>Core.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/anahory">paper / page</a></li>
+<li><strong>Why</strong>: Withdrawal suppression ("zombie" routes that stay active after withdrawal) has been a known BGP weakness for over a decade, with real reliability and security consequences. This is the first systematic defense, relevant to anyone tracking inter-domain routing security alongside RPKI.</li>
+<li><strong>What</strong>: RoST lets an AS efficiently and securely verify whether a route has actually been withdrawn, defeating both misconfiguration-driven and adversarial withdrawal suppression.</li>
+<li><strong>How</strong>: A verification scheme that is compatible with BGP and composes with existing BGP security enhancements (rather than replacing them). The design targets efficient per-route status checks.</li>
+<li><strong>Where applicable</strong>: Inter-domain routing broadly; an incrementally deployable addition to BGP/RPKI-style security rather than a clean-slate redesign.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="from-address-blocks-to-authorized-prefixes-redesigning-rpki-rov-with-a-hierarchical-hashing-scheme">From Address Blocks to Authorized Prefixes: Redesigning RPKI ROV with a Hierarchical Hashing Scheme<a class="headerlink" href="#from-address-blocks-to-authorized-prefixes-redesigning-rpki-rov-with-a-hierarchical-hashing-scheme" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Zedong Ni (CNIC, CAS / Southeast University); Yinbo Xu, Hui Zou, Yanbiao Li (CNIC, CAS / UCAS); Guang Cheng (Southeast University / Purple Mountain Labs); Gaogang Xie (CNIC, CAS / UCAS). <em>Core.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/ni">paper / page</a></li>
+<li><strong>Why</strong>: RPKI Route Origin Validation is becoming table stakes for routing security, and its memory/lookup cost on routers is a practical adoption barrier. Directly relevant to the security-and-routing side of the PM's remit.</li>
+<li><strong>What</strong>: A redesign of ROV's validation data structure to make origin validation fast and memory-efficient, reframing the problem from address blocks to authorized prefixes.</li>
+<li><strong>How</strong>: A hierarchical hashing scheme for prefix-to-authorization lookup. (Specific performance numbers were not captured in this digest pass; confirm them from the paper.)</li>
+<li><strong>Where applicable</strong>: Router-side ROV implementations; broadly applicable to any operator deploying RPKI.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<p>Useful context and near-term influence: DC fabric for ML, transport/queueing, verification tooling, and operator-grade WAN.</p>
+<div class="pick pick-adjacent">
+<h3 id="efficient-direct-connect-topologies-for-collective-communications">Efficient Direct-Connect Topologies for Collective Communications<a class="headerlink" href="#efficient-direct-connect-topologies-for-collective-communications" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Liangyu Zhao, Tapan Chugh, Arvind Krishnamurthy (University of Washington); Siddharth Pal, Jason Fantl, Prithwish Basu, Joud Khoury (Raytheon BBN); Weiyang Wang (MIT CSAIL). <em>Adjacent.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/zhao-liangyu">paper / page</a></li>
+<li><strong>Why</strong>: Sits at the physical-topology/collective-communication boundary that increasingly drives ML cluster fabric design — relevant context for DC topology and interconnect decisions.</li>
+<li><strong>What</strong>: An algorithmic framework that jointly synthesizes direct-connect topologies and their communication schedules, then picks the topology/schedule best suited to a given workload's latency-vs-bandwidth profile and degree constraints.</li>
+<li><strong>How</strong>: Start from small optimal base topologies and schedules, then iteratively expand them to large sizes; a novel polynomial-time algorithm produces efficient collective schedules for well-known large-scale graph topologies. Validated on multiple testbeds plus large-scale simulation.</li>
+<li><strong>Where applicable</strong>: Degree-constrained direct-connect networks (e.g., optical/cabled interconnects without a central switch). General framework; most valuable where you control the physical topology.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="pyrrha-congestion-root-based-flow-control-to-eliminate-head-of-line-blocking-in-datacenter">Pyrrha: Congestion-Root-Based Flow Control to Eliminate Head-of-Line Blocking in Datacenter<a class="headerlink" href="#pyrrha-congestion-root-based-flow-control-to-eliminate-head-of-line-blocking-in-datacenter" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Kexin Liu, Zhaochen Zhang, Chang Liu, Yizhi Wang (Nanjing University); Vamsi Addanki, Stefan Schmid (TU Berlin); additional co-authors at Nanjing University and Huawei. <em>Adjacent.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/liu-kexin">paper / page</a></li>
+<li><strong>Why</strong>: Head-of-line blocking in lossless DC fabrics (PFC and friends) is a recurring operational pain. Congestion-root-based flow control is a notable angle for anyone working on RDMA/lossless fabrics.</li>
+<li><strong>What</strong>: A flow-control scheme that targets the root of congestion rather than reacting hop-by-hop, aiming to eliminate HoL blocking. (Detailed mechanism not captured in this digest pass; confirm specifics from the paper.)</li>
+<li><strong>Where applicable</strong>: Lossless datacenter fabrics; involvement of Huawei co-authors suggests hardware-oriented validation. Treat as fabric-class research relevant to RDMA deployments.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="ndd-a-decision-diagram-for-network-verification">NDD: A Decision Diagram for Network Verification<a class="headerlink" href="#ndd-a-decision-diagram-for-network-verification" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Zechun Li, Peng Zhang, Yichi Zhang (Xi'an Jiaotong University); Hongkun Yang (Google). <em>Adjacent.</em> <strong>Awarded Outstanding Paper.</strong></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/li-zechun">paper / page</a></li>
+<li><strong>Why</strong>: Network verification underpins config-change safety and reachability analysis. BDDs have been the standard data structure for a decade; an Outstanding Paper that improves the substrate is worth tracking even if you consume verification rather than build it.</li>
+<li><strong>What</strong>: Network Decision Diagram (NDD), a data structure customized for verification that natively supports equivalence classes and beats BDD on memory and computation.</li>
+<li><strong>How</strong>: NDD wraps BDD in another decision-diagram layer — each NDD node represents a header field, and each edge is labeled with a BDD encoding that field's values. Because field-based matching is local, NDD sharply reduces BDD node counts and makes equivalence-class handling transparent to verifiers. Released as a library; existing verifiers (AP Verifier, APT) were ported to it.</li>
+<li><strong>Where applicable</strong>: General — a drop-in substrate for BDD-based verification tools.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="efficient-multi-wan-transport-for-5g-with-otter">Efficient Multi-WAN Transport for 5G with OTTER<a class="headerlink" href="#efficient-multi-wan-transport-for-5g-with-otter" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Mary Hogan (Oberlin College); Gerry Wan (Google); Yiming Qiu (University of Michigan); Sharad Agarwal, Ryan Beckett (Microsoft); Rachee Singh (Cornell); Paramvir Bahl (Microsoft). <em>Adjacent.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/hogan">paper / page</a></li>
+<li><strong>Why</strong>: WAN interconnect is core to the PM, and multi-WAN coordination for 5G is an operator-grade problem. The paper shows a way to stitch routes across multiple WANs using existing cloud primitives.</li>
+<li><strong>What</strong>: OTTER coordinates transport across multiple WANs to improve performance for 5G traffic, managing route identification and use across providers from one system.</li>
+<li><strong>How</strong>: Uses cloud-native components (VNet peering, VPN gateways, firewalls) configured so that VMs in one region can use a gateway in another and carry transit traffic, with scale-up/scale-out per component to span large geographies without per-component code changes; supports asymmetric paths. Reported &gt;25 Gbps between VMs in their GCP topology.</li>
+<li><strong>Where applicable</strong>: Multi-cloud/multi-WAN operators; the prototype leans on specific cloud networking features, so it's somewhat provider-configuration-specific.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="mutant-learning-congestion-control-from-existing-protocols-via-online-reinforcement-learning">Mutant: Learning Congestion Control from Existing Protocols via Online Reinforcement Learning<a class="headerlink" href="#mutant-learning-congestion-control-from-existing-protocols-via-online-reinforcement-learning" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Lorenzo Pappone (Saint Louis University); Alessio Sacco (Politecnico di Torino); Flavio Esposito (Saint Louis University). <em>Adjacent.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/pappone">paper / page</a></li>
+<li><strong>Why</strong>: Congestion control is core datapath territory; the "learn to switch among existing CCAs online" framing is a pragmatic middle ground between hand-tuned and clean-slate learned CC, worth watching as a design pattern.</li>
+<li><strong>What</strong>: An online-RL approach that adapts among existing congestion-control protocols rather than learning one from scratch. (Detailed mechanism and results not captured in this digest pass; confirm from the paper.)</li>
+<li><strong>Where applicable</strong>: General transport; treat performance claims as to-be-verified.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<p>Outside the PM's core focus, but novel enough to be worth the detour.</p>
+<div class="pick pick-wildcard">
+<h3 id="towards-energy-efficient-5g-vran-servers-renc">Towards Energy Efficient 5G vRAN Servers (RENC)<a class="headerlink" href="#towards-energy-efficient-5g-vran-servers-renc" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Anuj Kalia (Microsoft); Nikita Lazarev (MIT); Leyang Xue (University of Edinburgh); Xenofon Foukas, Bozidar Radunovic (Microsoft); Francis Y. Yan (Microsoft Research and UIUC). <em>Wildcard.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/kalia">paper / page</a></li>
+<li><strong>Why</strong>: A surprising result at the intersection of real-time systems and power: you can claw back substantial CPU energy from vRAN servers despite hard sub-millisecond deadlines and black-box proprietary software. The eBPF-based slack-measurement trick is a clever pattern beyond RAN.</li>
+<li><strong>What</strong>: RENC saves energy by adjusting CPU frequency in response to sub-second cellular-load variation without missing real-time deadlines.</li>
+<li><strong>How</strong>: It establishes safe low-load intervals by coupling MAC-layer rate limiting to frequency changes; computes safe frequencies by measuring deadline slack in vRAN threads via Linux eBPF hooks (or minor binary rewriting of the closed vRAN binary); and handles control-driven load spikes (e.g., new-user attach). Reported up to 45% CPU power reduction (29% server-wide) on a state-of-the-art vRAN testbed.</li>
+<li><strong>Where applicable</strong>: vRAN/telco edge servers; the technique is specific to real-time-deadline workloads, but the "measure slack with eBPF, then undervolt/underclock safely" idea generalizes to other latency-critical services.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="quicksand-harnessing-stranded-datacenter-resources-with-granular-computing">Quicksand: Harnessing Stranded Datacenter Resources with Granular Computing<a class="headerlink" href="#quicksand-harnessing-stranded-datacenter-resources-with-granular-computing" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Zhenyuan Ruan, Kaiyan Fan, Adam Belay (MIT CSAIL); Shihang Li, Malte Schwarzkopf (Brown); Seo Jin Park (USC); Marcos K. Aguilera (VMware Research by Broadcom). <em>Wildcard.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/ruan">paper / page</a></li>
+<li><strong>Why</strong>: Stranded resources (memory/CPU that exist but can't be allocated) are a real efficiency drain in datacenters. The granular-computing angle is an emerging subfield a DC-infra PM wouldn't necessarily search for but should see.</li>
+<li><strong>What</strong>: A runtime that reclaims stranded datacenter resources by exposing computation at fine (granular) units that can be packed into otherwise-unusable capacity. (Detailed mechanism not captured in this digest pass; confirm from the paper.)</li>
+<li><strong>Where applicable</strong>: Datacenter resource scheduling; research-grade, but points at where utilization-efficiency work is heading.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="the-benefits-and-limitations-of-user-interrupts-for-preemptive-userspace-scheduling">The Benefits and Limitations of User Interrupts for Preemptive Userspace Scheduling<a class="headerlink" href="#the-benefits-and-limitations-of-user-interrupts-for-preemptive-userspace-scheduling" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Authors / tier</strong>: Linsong Guo, Danial Zuberi, Tal Garfinkel, Amy Ousterhout (UC San Diego). <em>Wildcard.</em></li>
+<li><strong>Links</strong>: <a href="https://www.usenix.org/conference/nsdi25/presentation/guo">paper / page</a></li>
+<li><strong>Why</strong>: A clear-eyed measurement study of a newer x86 hardware feature (user interrupts) for preemptive userspace scheduling — the kind of "here's what the new primitive actually buys you, and where it doesn't" result that informs datapath and dataplane-OS design.</li>
+<li><strong>What</strong>: An evaluation of user interrupts as a mechanism for preemptive scheduling in userspace, characterizing both the wins and the limits rather than pitching a single system.</li>
+<li><strong>Where applicable</strong>: Userspace network/dataplane stacks and low-latency runtimes on hardware that supports user interrupts. General, forward-looking.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li>
+<p><strong>eBPF as the universal kernel-extension substrate.</strong> It shows up across very different problems this cycle — overlay-network acceleration (ONCache), extensible transport (eTran), and even real-time power management (RENC measuring deadline slack). The pattern is "customize the kernel datapath safely, in production, without forking it."</p>
+</li>
+<li>
+<p><strong>Closed hardware, inferred from the outside.</strong> Multiple papers cope with black-box silicon and binaries by building approximate models: ScalaCN reconstructs RNIC behavior via causal testing; RENC reasons about a proprietary vRAN binary. Expect more "reverse-model the device you can't see inside" methodology.</p>
+</li>
+<li>
+<p><strong>ML clusters are reshaping the fabric agenda.</strong> Collective-communication topologies (Direct-Connect), LLM-training resilience and simulation, and disaggregated/granular resource reclamation occupy a large share of the program — the network is increasingly designed around training and inference traffic.</p>
+</li>
+<li>
+<p><strong>Programmable scheduling and queueing keep maturing.</strong> PACKS, ClubHeap, and Self-Clocked Round-Robin all push on approximating ideal schedulers (PIFO) within real switch constraints, signaling the "one scheduling abstraction on commodity hardware" goal is still very active.</p>
+</li>
+<li>
+<p><strong>Routing security is consolidating around incremental, deployable defenses.</strong> RoST (BGP withdrawal suppression) and the RPKI ROV redesign both aim to compose with existing BGP/RPKI rather than replace it, with an emphasis on memory/lookup efficiency on real routers.</p>
+</li>
+<li>
+<p><strong>Verification and testing are broadening past the data plane.</strong> NDD (an Outstanding Paper) rethinks the core data structure; alongside P4 temporal verification, eBPF verification (VEP), service-mesh testing (MeshTest), and protocol-refinement checking, the field is investing in correctness tooling across the whole stack.</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>This digest was produced by running the repository's digest prompt by hand, from the conference's published program. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/nsdi-2025.md"><code>digests/nsdi-2025.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/nsdi-2025.md"><code>prompts/nsdi-2025.md</code></a></p>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../sigcomm-2025/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SIGCOMM 2025">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                SIGCOMM 2025
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../kubecon-na-2025/" class="md-footer__link md-footer__link--next" aria-label="Next: KubeCon + CloudNativeCon North America 2025">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                KubeCon + CloudNativeCon North America 2025
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and generator, styled after containerlab.dev -->
+<div class="md-copyright">
+    
+    <div class="md-copyright__highlight">
+        Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.
+    </div>
+    
+    Written by
+    <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+    on Nebius Token Factory · made with
+    <span class="twemoji heart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709q-.23.129-.463.252h-.002a.75.75 0 0 1-.686 0 17 17 0 0 1-.465-.252 31 31 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31 31 0 0 1 14 20.408"/></svg>
+    </span>
+    and <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hellt.github.io/conference-digest/feed_rss_created.xml" target="_blank" rel="noopener" title="hellt.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+    
+  </body>
+</html>

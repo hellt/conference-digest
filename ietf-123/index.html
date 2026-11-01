@@ -1,0 +1,1885 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A standards meeting, so the unit of work is the Internet-Draft, not the session. This cycle&#x27;s signal is concentrated in three places that map directly onto your interests: workload identity finally cohering into a full WG-adopted stack (WIMSE), the post-quantum migration moving from algorithm…">
+      
+      
+      
+        <link rel="canonical" href="https://hellt.github.io/conference-digest/ietf-123/">
+      
+      
+      
+        <link rel="prev" href="../kubecon-na-2025/">
+      
+      
+        <link rel="next" href="../usenix-security-2025/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>IETF 123 (Madrid) - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300,300i,400,400i,500,500i,700,700i%7CGoogle+Sans+Code:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Google Sans";--md-code-font:"Google Sans Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="IETF 123 (Madrid) · Conference Digest" />
+<meta property="og:description" content="A standards meeting, so the unit of work is the Internet-Draft, not the session. This cycle's signal is concentrated in three places that map directly onto your interests: workload identity finally cohering into a full WG-adopted stack (WIMSE), the post-quantum migration moving from algorithm…" />
+<meta property="og:url" content="https://hellt.github.io/conference-digest/ietf-123/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="IETF 123 (Madrid) · Conference Digest" />
+<meta name="twitter:description" content="A standards meeting, so the unit of work is the Internet-Draft, not the session. This cycle's signal is concentrated in three places that map directly onto your interests: workload identity finally cohering into a full WG-adopted stack (WIMSE), the post-quantum migration moving from algorithm…" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IETF 123 (Madrid)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../category/academic/" class="md-tabs__link">
+          
+  
+  Conference type
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workload-identity-in-a-multi-system-environment-wimse-architecture-draft-ietf-wimse-arch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Workload Identity in a Multi System Environment (WIMSE) Architecture — <code>draft-ietf-wimse-arch</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wimse-workload-to-workload-authentication-draft-ietf-wimse-s2s-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        WIMSE Workload-to-Workload Authentication — <code>draft-ietf-wimse-s2s-protocol</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wimse-workload-proof-token-wpt-workload-credentials-http-signatures-draft-ietf-wimse-wpt-draft-ietf-wimse-workload-creds-draft-ietf-wimse-http-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        WIMSE Workload Proof Token (WPT) + Workload Credentials + HTTP Signatures — <code>draft-ietf-wimse-wpt</code>, <code>draft-ietf-wimse-workload-creds</code>, <code>draft-ietf-wimse-http-signature</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workload-identifier-draft-ietf-wimse-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Workload Identifier — <code>draft-ietf-wimse-identifier</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-identity-and-authorization-chaining-across-domains-transaction-tokens-draft-ietf-oauth-identity-chaining-draft-ietf-oauth-transaction-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OAuth Identity and Authorization Chaining Across Domains + Transaction Tokens — <code>draft-ietf-oauth-identity-chaining</code>, <code>draft-ietf-oauth-transaction-tokens</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-20-attestation-based-client-authentication-draft-ietf-oauth-attestation-based-client-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OAuth 2.0 Attestation-Based Client Authentication — <code>draft-ietf-oauth-attestation-based-client-auth</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvo3-geneve-evpn-applicability-active-oam-for-geneve-draft-ietf-nvo3-geneve-draft-ietf-nvo3-evpn-applicability-draft-ietf-nvo3-geneve-oam" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NVO3: Geneve + EVPN applicability + Active OAM for Geneve — <code>draft-ietf-nvo3-geneve</code>, <code>draft-ietf-nvo3-evpn-applicability</code>, <code>draft-ietf-nvo3-geneve-oam</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-evpn-draft-ietf-bess-secure-evpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Secure EVPN — <code>draft-ietf-bess-secure-evpn</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savnet-intra-and-inter-domain-source-address-validation-architecture-bar-sav-draft-ietf-savnet-intra-domain-architecture-draft-ietf-savnet-inter-domain-architecture-draft-ietf-sidrops-bar-sav" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SAVNET: Intra- and Inter-domain Source Address Validation Architecture + BAR-SAV — <code>draft-ietf-savnet-intra-domain-architecture</code>, <code>draft-ietf-savnet-inter-domain-architecture</code>, <code>draft-ietf-sidrops-bar-sav</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tls-pqc-migration-ecdhe-mlkem-hybrid-ml-dsa-auth-trust-anchor-ids-draft-ietf-tls-ecdhe-mlkem-draft-ietf-tls-mldsa-draft-ietf-tls-trust-anchor-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TLS PQC migration: ECDHE-MLKEM hybrid + ML-DSA auth + Trust Anchor IDs — <code>draft-ietf-tls-ecdhe-mlkem</code>, <code>draft-ietf-tls-mldsa</code>, <code>draft-ietf-tls-trust-anchor-ids</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#masque-proxying-ip-and-ethernet-in-http-draft-ietf-masque-connect-ip-draft-ietf-masque-connect-ethernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MASQUE: Proxying IP and Ethernet in HTTP — <code>draft-ietf-masque-connect-ip</code>, <code>draft-ietf-masque-connect-ethernet</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abridged-compression-for-webpki-certificates-draft-ietf-tls-cert-abridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Abridged Compression for WebPKI Certificates — <code>draft-ietf-tls-cert-abridge</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cosejose-post-quantum-signatures-ml-dsa-slh-dsa-fn-dsa-pq-kems-draft-ietf-cose-dilithium-draft-ietf-cose-sphincs-plus-draft-ietf-cose-falcon-draft-ietf-jose-pqc-kem" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        COSE/JOSE Post-Quantum Signatures: ML-DSA, SLH-DSA, FN-DSA + PQ KEMs — <code>draft-ietf-cose-dilithium</code>, <code>draft-ietf-cose-sphincs-plus</code>, <code>draft-ietf-cose-falcon</code>, <code>draft-ietf-jose-pqc-kem</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lamps-pq-pki-ml-kem-and-composite-kem-certificates-draft-ietf-lamps-kyber-certificates-draft-ietf-lamps-pq-composite-kem" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        LAMPS PQ PKI: ML-KEM and Composite KEM certificates — <code>draft-ietf-lamps-kyber-certificates</code>, <code>draft-ietf-lamps-pq-composite-kem</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rats-remote-posture-assessment-eat-for-systems-containers-and-applications-draft-ietf-rats-posture-assessment-draft-ietf-rats-eat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        RATS: Remote Posture Assessment + EAT for Systems, Containers, and Applications — <code>draft-ietf-rats-posture-assessment</code>, <code>draft-ietf-rats-eat</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spice-selective-disclosure-cwt-sd-cwt-verifiable-digital-credentials-architecture-draft-ietf-spice-sd-cwt-draft-ietf-spice-vdcarch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SPICE: Selective Disclosure CWT (SD-CWT) + Verifiable Digital Credentials architecture — <code>draft-ietf-spice-sd-cwt</code>, <code>draft-ietf-spice-vdcarch</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anima-brski-with-pledge-in-responder-mode-constrained-brski-draft-ietf-anima-brski-prm-draft-ietf-anima-constrained-voucher" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ANIMA: BRSKI with Pledge in Responder Mode + Constrained BRSKI — <code>draft-ietf-anima-brski-prm</code>, <code>draft-ietf-anima-constrained-voucher</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rift-routing-in-fat-trees-rift-auto-evpn-draft-ietf-rift-rift-draft-ietf-rift-auto-evpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        RIFT: Routing in Fat Trees + RIFT Auto-EVPN — <code>draft-ietf-rift-rift</code>, <code>draft-ietf-rift-auto-evpn</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipsec-ip-traffic-flow-security-ip-tfs-aggfrag-draft-ietf-ipsecme-iptfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IPsec IP Traffic Flow Security (IP-TFS / AGGFRAG) — <code>draft-ietf-ipsecme-iptfs</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scitt-architecture-for-trustworthy-and-transparent-digital-supply-chains-draft-ietf-scitt-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SCITT: Architecture for Trustworthy and Transparent Digital Supply Chains — <code>draft-ietf-scitt-architecture</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jose-json-web-proof-jwp-draft-ietf-jose-json-web-proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        JOSE JSON Web Proof (JWP) — <code>draft-ietf-jose-json-web-proof</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conference type
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Conference type
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Academic
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operator
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standards
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendor
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workload-identity-in-a-multi-system-environment-wimse-architecture-draft-ietf-wimse-arch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Workload Identity in a Multi System Environment (WIMSE) Architecture — <code>draft-ietf-wimse-arch</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wimse-workload-to-workload-authentication-draft-ietf-wimse-s2s-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        WIMSE Workload-to-Workload Authentication — <code>draft-ietf-wimse-s2s-protocol</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wimse-workload-proof-token-wpt-workload-credentials-http-signatures-draft-ietf-wimse-wpt-draft-ietf-wimse-workload-creds-draft-ietf-wimse-http-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        WIMSE Workload Proof Token (WPT) + Workload Credentials + HTTP Signatures — <code>draft-ietf-wimse-wpt</code>, <code>draft-ietf-wimse-workload-creds</code>, <code>draft-ietf-wimse-http-signature</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workload-identifier-draft-ietf-wimse-identifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Workload Identifier — <code>draft-ietf-wimse-identifier</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-identity-and-authorization-chaining-across-domains-transaction-tokens-draft-ietf-oauth-identity-chaining-draft-ietf-oauth-transaction-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OAuth Identity and Authorization Chaining Across Domains + Transaction Tokens — <code>draft-ietf-oauth-identity-chaining</code>, <code>draft-ietf-oauth-transaction-tokens</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oauth-20-attestation-based-client-authentication-draft-ietf-oauth-attestation-based-client-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OAuth 2.0 Attestation-Based Client Authentication — <code>draft-ietf-oauth-attestation-based-client-auth</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvo3-geneve-evpn-applicability-active-oam-for-geneve-draft-ietf-nvo3-geneve-draft-ietf-nvo3-evpn-applicability-draft-ietf-nvo3-geneve-oam" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NVO3: Geneve + EVPN applicability + Active OAM for Geneve — <code>draft-ietf-nvo3-geneve</code>, <code>draft-ietf-nvo3-evpn-applicability</code>, <code>draft-ietf-nvo3-geneve-oam</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-evpn-draft-ietf-bess-secure-evpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Secure EVPN — <code>draft-ietf-bess-secure-evpn</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savnet-intra-and-inter-domain-source-address-validation-architecture-bar-sav-draft-ietf-savnet-intra-domain-architecture-draft-ietf-savnet-inter-domain-architecture-draft-ietf-sidrops-bar-sav" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SAVNET: Intra- and Inter-domain Source Address Validation Architecture + BAR-SAV — <code>draft-ietf-savnet-intra-domain-architecture</code>, <code>draft-ietf-savnet-inter-domain-architecture</code>, <code>draft-ietf-sidrops-bar-sav</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tls-pqc-migration-ecdhe-mlkem-hybrid-ml-dsa-auth-trust-anchor-ids-draft-ietf-tls-ecdhe-mlkem-draft-ietf-tls-mldsa-draft-ietf-tls-trust-anchor-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TLS PQC migration: ECDHE-MLKEM hybrid + ML-DSA auth + Trust Anchor IDs — <code>draft-ietf-tls-ecdhe-mlkem</code>, <code>draft-ietf-tls-mldsa</code>, <code>draft-ietf-tls-trust-anchor-ids</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#masque-proxying-ip-and-ethernet-in-http-draft-ietf-masque-connect-ip-draft-ietf-masque-connect-ethernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MASQUE: Proxying IP and Ethernet in HTTP — <code>draft-ietf-masque-connect-ip</code>, <code>draft-ietf-masque-connect-ethernet</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abridged-compression-for-webpki-certificates-draft-ietf-tls-cert-abridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Abridged Compression for WebPKI Certificates — <code>draft-ietf-tls-cert-abridge</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cosejose-post-quantum-signatures-ml-dsa-slh-dsa-fn-dsa-pq-kems-draft-ietf-cose-dilithium-draft-ietf-cose-sphincs-plus-draft-ietf-cose-falcon-draft-ietf-jose-pqc-kem" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        COSE/JOSE Post-Quantum Signatures: ML-DSA, SLH-DSA, FN-DSA + PQ KEMs — <code>draft-ietf-cose-dilithium</code>, <code>draft-ietf-cose-sphincs-plus</code>, <code>draft-ietf-cose-falcon</code>, <code>draft-ietf-jose-pqc-kem</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lamps-pq-pki-ml-kem-and-composite-kem-certificates-draft-ietf-lamps-kyber-certificates-draft-ietf-lamps-pq-composite-kem" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        LAMPS PQ PKI: ML-KEM and Composite KEM certificates — <code>draft-ietf-lamps-kyber-certificates</code>, <code>draft-ietf-lamps-pq-composite-kem</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rats-remote-posture-assessment-eat-for-systems-containers-and-applications-draft-ietf-rats-posture-assessment-draft-ietf-rats-eat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        RATS: Remote Posture Assessment + EAT for Systems, Containers, and Applications — <code>draft-ietf-rats-posture-assessment</code>, <code>draft-ietf-rats-eat</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spice-selective-disclosure-cwt-sd-cwt-verifiable-digital-credentials-architecture-draft-ietf-spice-sd-cwt-draft-ietf-spice-vdcarch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SPICE: Selective Disclosure CWT (SD-CWT) + Verifiable Digital Credentials architecture — <code>draft-ietf-spice-sd-cwt</code>, <code>draft-ietf-spice-vdcarch</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anima-brski-with-pledge-in-responder-mode-constrained-brski-draft-ietf-anima-brski-prm-draft-ietf-anima-constrained-voucher" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ANIMA: BRSKI with Pledge in Responder Mode + Constrained BRSKI — <code>draft-ietf-anima-brski-prm</code>, <code>draft-ietf-anima-constrained-voucher</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rift-routing-in-fat-trees-rift-auto-evpn-draft-ietf-rift-rift-draft-ietf-rift-auto-evpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        RIFT: Routing in Fat Trees + RIFT Auto-EVPN — <code>draft-ietf-rift-rift</code>, <code>draft-ietf-rift-auto-evpn</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipsec-ip-traffic-flow-security-ip-tfs-aggfrag-draft-ietf-ipsecme-iptfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IPsec IP Traffic Flow Security (IP-TFS / AGGFRAG) — <code>draft-ietf-ipsecme-iptfs</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scitt-architecture-for-trustworthy-and-transparent-digital-supply-chains-draft-ietf-scitt-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SCITT: Architecture for Trustworthy and Transparent Digital Supply Chains — <code>draft-ietf-scitt-architecture</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jose-json-web-proof-jwp-draft-ietf-jose-json-web-proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        JOSE JSON Web Proof (JWP) — <code>draft-ietf-jose-json-web-proof</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="./.." class="md-nav__link">
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-calendar-days" viewBox="0 0 24 24"><path d="M8 2v3M16 2v3"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg>
+                        <time datetime="2026-06-08 00:00:00+00:00" class="md-ellipsis">June 8, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-library" viewBox="0 0 24 24"><path d="m16 6 4 14M12 6v14M8 8v12M4 4v16"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../category/standards/">Standards</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              15 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      
+        
+
+  
+  
+
+
+<h1 id="ietf-123-madrid">IETF 123 (Madrid)<a class="headerlink" href="#ietf-123-madrid" title="Permanent link">#</a></h1>
+<p>A standards meeting, so the unit of work is the Internet-Draft, not the session. This cycle's signal is concentrated in three places that map directly onto your interests: <strong>workload identity</strong> finally cohering into a full WG-adopted stack (WIMSE), the <strong>post-quantum migration</strong> moving from algorithm definition into deployment mechanics across TLS/PKIX/COSE/JOSE, and <strong>datacenter fabric</strong> work in NVO3, RIFT, and SAVNET. Selection is from the program; every write-up below is grounded in the draft abstract only (no paper links were available to enrich from), and is flagged as such.</p>
+<p>A note on maturity, since it's the whole game in a standards venue: <code>draft-ietf-*</code> means a working group has adopted the work (it carries weight); <code>draft-&lt;author&gt;-*</code> is an individual submission (early, may go nowhere). Where both exist for the same title, the WG copy is the one to track.</p>
+<hr />
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 13.5v8H3v-8zm-2 2H5v4h4zM12 2l5.5 9h-11zm0 3.86L10.08 9h3.84zM17.5 13c2.5 0 4.5 2 4.5 4.5S20 22 17.5 22 13 20 13 17.5s2-4.5 4.5-4.5m0 2a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg></span> Standards</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2V5a2 2 0 0 0-2-2m0 16H5V9h14zM5 7V5h14v2zm5.56 10.46 5.94-5.93-1.07-1.06-4.87 4.87-2.11-2.11-1.06 1.06z"/></svg></span> Ended July 25, 2025</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.19 2.25c-.26 0-.52.06-.77.15L3.06 5.45a1.994 1.994 0 0 0-1.09 2.6L6.93 20a2 2 0 0 0 1.81 1.25c.26 0 .53-.03.79-.15l7.37-3.05a2.02 2.02 0 0 0 1.23-1.8c.01-.25-.04-.54-.13-.8L13 3.5a1.95 1.95 0 0 0-1.81-1.25m3.48 0 3.45 8.35V4.25a2 2 0 0 0-2-2m4.01 1.54v9.03l2.43-5.86a1.99 1.99 0 0 0-1.09-2.6m-10.28-.14 4.98 12.02-7.39 3.06L3.8 7.29"/></svg></span> 21 picks (11 core · 6 adjacent · 4 wildcard)</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42"/></svg></span> <a href="https://datatracker.ietf.org/meeting/123/agenda">Program</a></span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 17v3h8v-1.89H3.9V17c0-.64 3.13-2.1 6.1-2.1.96.01 1.91.14 2.83.38l1.52-1.52c-1.4-.47-2.85-.73-4.35-.76-2.67 0-8 1.33-8 4m8-13C7.79 4 6 5.79 6 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4m0 6c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2m11.7 3.35-1 1-2.05-2 1-1a.55.55 0 0 1 .77 0l1.28 1.28c.21.21.21.56 0 .77M12 18.94l6.06-6.06 2.05 2-6 6.07H12z"/></svg></span> Prompt run by hand</span></p>
+</div>
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="workload-identity-in-a-multi-system-environment-wimse-architecture-draft-ietf-wimse-arch">Workload Identity in a Multi System Environment (WIMSE) Architecture — <code>draft-ietf-wimse-arch</code><a class="headerlink" href="#workload-identity-in-a-multi-system-environment-wimse-architecture-draft-ietf-wimse-arch" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Core</li>
+<li><strong>Why</strong>: This is the architectural anchor for standardizing how workloads get and use identity across multi-cloud, multi-tenant, multi-service deployments — the exact problem SPIFFE/SPIRE solved proprietarily. An IETF-stream architecture means the surrounding protocol drafts (below) have a shared frame, and implementations stop being per-vendor.</li>
+<li><strong>What</strong>: An architecture document defining how to convey workload identity and security-context information, where a workload is software running for a specific purpose, possibly across many instances. (from abstract only)</li>
+<li><strong>How</strong>: It scopes the problem and defines the component model that the credential, token, and authentication drafts plug into, rather than specifying wire formats itself.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to any container-orchestration or microservice estate; vendor-neutral by design. This is the document to read first before the rest of the WIMSE set.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="wimse-workload-to-workload-authentication-draft-ietf-wimse-s2s-protocol">WIMSE Workload-to-Workload Authentication — <code>draft-ietf-wimse-s2s-protocol</code><a class="headerlink" href="#wimse-workload-to-workload-authentication-draft-ietf-wimse-s2s-protocol" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Core</li>
+<li><strong>Why</strong>: The atomic unit of the whole architecture: how two workloads verify each other for a single HTTP request/response. It directly addresses the "do I use mTLS or app-layer tokens?" question that every service-mesh and zero-trust deployment hits.</li>
+<li><strong>What</strong>: Defines two compatible protocols — one at the application layer, one riding trusted TLS transport — that can be mixed within a single call chain. (from abstract only)</li>
+<li><strong>How</strong>: Workload A → B can use mutual TLS while B → C authenticates at the application level; the two are interoperable across hops, so you don't have to pick one model estate-wide.</li>
+<li><strong>Where applicable</strong>: General; aimed at service-to-service traffic in mixed environments where some hops terminate TLS at proxies/load balancers and some are end-to-end.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="wimse-workload-proof-token-wpt-workload-credentials-http-signatures-draft-ietf-wimse-wpt-draft-ietf-wimse-workload-creds-draft-ietf-wimse-http-signature">WIMSE Workload Proof Token (WPT) + Workload Credentials + HTTP Signatures — <code>draft-ietf-wimse-wpt</code>, <code>draft-ietf-wimse-workload-creds</code>, <code>draft-ietf-wimse-http-signature</code><a class="headerlink" href="#wimse-workload-proof-token-wpt-workload-credentials-http-signatures-draft-ietf-wimse-wpt-draft-ietf-wimse-workload-creds-draft-ietf-wimse-http-signature" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Core</li>
+<li><strong>Why</strong>: This trio is the concrete proof-of-possession machinery under the architecture, and it's the part that touches implementations: a credential format, a way to prove you hold the key, and an HTTP-signature option for when TLS isn't end-to-end. If you're evaluating workload-identity tooling, these define the interop surface.</li>
+<li><strong>What</strong>: <code>workload-creds</code> defines the credential a workload uses to represent its identity (usable in X.509 or token form), deliberately separated from the PoP mechanism. <code>wpt</code> defines the Workload Proof Token — a signed JWT binding authentication to a specific HTTP request, providing application-level proof of possession of the key behind a Workload Identity Token (WIT). <code>http-signature</code> defines an HTTP Signatures–based authentication option that gives end-to-end request (and optionally response) protection even through TLS proxies and load balancers. (from abstract only)</li>
+<li><strong>How</strong>: Credentials and proof-of-possession are split into separate documents so the same credential can be proven in different ways; WPT binds to the request to resist replay; the HTTP-signature variant protects requests across intermediaries that would otherwise break end-to-end mTLS.</li>
+<li><strong>Where applicable</strong>: General. The HTTP-signature path is HTTP-only but specifically useful where you have L7 proxies/LBs in the path — i.e. most real service meshes and API gateways.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="workload-identifier-draft-ietf-wimse-identifier">Workload Identifier — <code>draft-ietf-wimse-identifier</code><a class="headerlink" href="#workload-identifier-draft-ietf-wimse-identifier" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Core</li>
+<li><strong>Why</strong>: A canonical URI for naming a workload within a trust domain, embeddable in X.509 certs and security tokens. This is the SPIFFE-ID-shaped piece, and getting it standardized is what makes cross-system authorization and federation consistent.</li>
+<li><strong>What</strong>: Defines a Workload Identifier as a URI that uniquely identifies a workload inside a specific trust domain, intended for embedding in credentials to drive authn, authz, and policy. (from abstract only)</li>
+<li><strong>How</strong>: Standardizes the identifier format so the same identity semantics hold across certificates, tokens, and policy engines from different vendors.</li>
+<li><strong>Where applicable</strong>: General; foundational for any federation or policy enforcement that spans trust domains.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="oauth-identity-and-authorization-chaining-across-domains-transaction-tokens-draft-ietf-oauth-identity-chaining-draft-ietf-oauth-transaction-tokens">OAuth Identity and Authorization Chaining Across Domains + Transaction Tokens — <code>draft-ietf-oauth-identity-chaining</code>, <code>draft-ietf-oauth-transaction-tokens</code><a class="headerlink" href="#oauth-identity-and-authorization-chaining-across-domains-transaction-tokens-draft-ietf-oauth-identity-chaining-draft-ietf-oauth-transaction-tokens" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Core</li>
+<li><strong>Why</strong>: These two are the agentic/multi-hop authorization story. As calls fan out across services and trust-domain boundaries, you need to carry <em>who originated this</em> and <em>what they're allowed to do</em> without re-minting broad bearer tokens at every hop. This is directly the workload-and-agentic-identity space you track.</li>
+<li><strong>What</strong>: <code>identity-chaining</code> preserves identity and authorization across OAuth trust domains by chaining context through JWT authorization grants obtained via Token Exchange (RFC 8693) and JWT Bearer (RFC 7523). <code>transaction-tokens</code> (Txn-Tokens) carry user identity, workload identity, and authorization context through an entire internal call chain within a trust domain for a given external request. (from abstract only)</li>
+<li><strong>How</strong>: Identity-chaining repeats the same Token-Exchange-based protocol each time a domain boundary is crossed, so the chain composes across multiple domains. Transaction Tokens scope context to a single inbound request and propagate it internally, so downstream services act with the originator's narrow context rather than a reusable broad token.</li>
+<li><strong>Where applicable</strong>: General OAuth deployments with microservice call chains; especially relevant where requests cross organizational/trust boundaries (B2B, federated enterprise SSO).</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="oauth-20-attestation-based-client-authentication-draft-ietf-oauth-attestation-based-client-auth">OAuth 2.0 Attestation-Based Client Authentication — <code>draft-ietf-oauth-attestation-based-client-auth</code><a class="headerlink" href="#oauth-20-attestation-based-client-authentication-draft-ietf-oauth-attestation-based-client-auth" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Core</li>
+<li><strong>Why</strong>: Lets a client instance present a key-bound attestation to an AS/RS without revealing its target audience to the attester. That audience-blinding property matters for privacy-preserving workload and device auth, and it's a cleaner client-authentication primitive than shared secrets.</li>
+<li><strong>What</strong>: An OAuth extension where a client includes a key-bound attestation, verified by a separate client attester, that can serve as client authentication. (from abstract only)</li>
+<li><strong>How</strong>: The attestation binds to the client's key and is verifiable by the AS/RS, but the attester issuing it does not learn which audience the client is talking to.</li>
+<li><strong>Where applicable</strong>: General; useful for mobile/device clients and workloads where you want hardware- or platform-backed client identity without a static client secret.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="nvo3-geneve-evpn-applicability-active-oam-for-geneve-draft-ietf-nvo3-geneve-draft-ietf-nvo3-evpn-applicability-draft-ietf-nvo3-geneve-oam">NVO3: Geneve + EVPN applicability + Active OAM for Geneve — <code>draft-ietf-nvo3-geneve</code>, <code>draft-ietf-nvo3-evpn-applicability</code>, <code>draft-ietf-nvo3-geneve-oam</code><a class="headerlink" href="#nvo3-geneve-evpn-applicability-active-oam-for-geneve-draft-ietf-nvo3-geneve-draft-ietf-nvo3-evpn-applicability-draft-ietf-nvo3-geneve-oam" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Core</li>
+<li><strong>Why</strong>: This is the datacenter overlay stack you work on directly. The WG settled on <strong>Geneve as the common encapsulation</strong> (over VXLAN-GPE/GUE), EVPN is the unified control plane for NVE auto-discovery and MAC/IP dissemination, and the missing piece operationally — OAM for Geneve — is being framed here. The encap choice and its OAM story affect both software and hardware tunnel-endpoint implementations.</li>
+<li><strong>What</strong>: <code>geneve</code> specifies the flexible, extensible overlay encapsulation designed to accommodate evolving software and hardware tunnel endpoints. <code>evpn-applicability</code> describes using EVPN as the NVO3 control plane (auto-discovery, MAC mobility, multihoming, DCI) without introducing new EVPN procedures or requiring PIM in the underlay. <code>geneve-oam</code> frames the OAM functions needed to monitor and troubleshoot Geneve overlays. (from abstract only)</li>
+<li><strong>How</strong>: Geneve uses extensible option fields so new capabilities ship without a new wire format; EVPN reuses BGP for the overlay control plane while keeping the underlay IP fabric independent; the OAM draft sets requirements for active monitoring across the overlay path.</li>
+<li><strong>Where applicable</strong>: Multi-tenant DC fabrics. Note the encapsulation-considerations work flags a real operational constraint: mixing encapsulations along a path makes things like path-MTU discovery and OAM harder — relevant if you run heterogeneous hardware/software endpoints.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="secure-evpn-draft-ietf-bess-secure-evpn">Secure EVPN — <code>draft-ietf-bess-secure-evpn</code><a class="headerlink" href="#secure-evpn-draft-ietf-bess-secure-evpn" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Core</li>
+<li><strong>Why</strong>: EVPN underpins most modern DC and DCI fabrics; adding a security/encryption story to it closes a gap that today usually gets papered over with separate IPsec. Worth tracking if you care about encrypted fabric and DCI.</li>
+<li><strong>What</strong>: A WG-adopted BESS draft addressing security for EVPN. (from abstract only — the program text for this entry was limited to its title/identifier)</li>
+<li><strong>How</strong>: Not determinable from the program text beyond that it targets EVPN; treat specifics as unconfirmed.</li>
+<li><strong>Where applicable</strong>: EVPN-based fabrics and DCI. Flagging explicitly that this write-up is title-level only — read the draft before relying on mechanism details.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="savnet-intra-and-inter-domain-source-address-validation-architecture-bar-sav-draft-ietf-savnet-intra-domain-architecture-draft-ietf-savnet-inter-domain-architecture-draft-ietf-sidrops-bar-sav">SAVNET: Intra- and Inter-domain Source Address Validation Architecture + BAR-SAV — <code>draft-ietf-savnet-intra-domain-architecture</code>, <code>draft-ietf-savnet-inter-domain-architecture</code>, <code>draft-ietf-sidrops-bar-sav</code><a class="headerlink" href="#savnet-intra-and-inter-domain-source-address-validation-architecture-bar-sav-draft-ietf-savnet-intra-domain-architecture-draft-ietf-savnet-inter-domain-architecture-draft-ietf-sidrops-bar-sav" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Core</li>
+<li><strong>Why</strong>: Anti-spoofing that's actually automated. uRPF and hand-maintained ACLs both fail in asymmetric-routing reality; SAVNET generates SAV rules from routing plus dedicated SAV signaling, and BAR-SAV derives filters from BGP UPDATEs + ASPA + ROA. This is the security-meets-routing intersection, and it directly affects edge/fabric filtering correctness.</li>
+<li><strong>What</strong>: The intra-domain architecture produces accurate SAV at network edges automatically, using both local routing info and SAV-specific info exchanged between routers — more accurate than uRPF under asymmetric routing and less manual than ACLs. The inter-domain architecture does AS-level SAV by sharing SAV-specific info between ASes, falling back to general routing info during partial deployment. BAR-SAV (updates RFC 8704) derives robust SAV filters from BGP UPDATEs, ASPA, and ROA while preserving directionality and minimizing false positives. (from abstract only)</li>
+<li><strong>How</strong>: SAVNET routers exchange purpose-built SAV information rather than inferring validity solely from the FIB, which is what kills uRPF accuracy in asymmetric paths; BAR-SAV combines three existing RPKI/BGP data sources to reduce both over-blocking and under-blocking.</li>
+<li><strong>Where applicable</strong>: Intra-domain version applies to any operator edge; inter-domain version assumes incremental cross-AS adoption (designed to degrade gracefully when peers haven't deployed it). Broadly applicable, not vendor-specific.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="tls-pqc-migration-ecdhe-mlkem-hybrid-ml-dsa-auth-trust-anchor-ids-draft-ietf-tls-ecdhe-mlkem-draft-ietf-tls-mldsa-draft-ietf-tls-trust-anchor-ids">TLS PQC migration: ECDHE-MLKEM hybrid + ML-DSA auth + Trust Anchor IDs — <code>draft-ietf-tls-ecdhe-mlkem</code>, <code>draft-ietf-tls-mldsa</code>, <code>draft-ietf-tls-trust-anchor-ids</code><a class="headerlink" href="#tls-pqc-migration-ecdhe-mlkem-hybrid-ml-dsa-auth-trust-anchor-ids-draft-ietf-tls-ecdhe-mlkem-draft-ietf-tls-mldsa-draft-ietf-tls-trust-anchor-ids" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Core</li>
+<li><strong>Why</strong>: This is the post-quantum transition arriving in the protocol you actually deploy. Hybrid key agreement is shipping in browsers/servers now; ML-DSA authentication and the certificate-size problems it creates are the next wave. Trust Anchor IDs is the quiet but important piece for surviving large/multiple CA sets during the migration.</li>
+<li><strong>What</strong>: <code>ecdhe-mlkem</code> defines three hybrid groups (X25519MLKEM768, SecP256r1MLKEM768, SecP384r1MLKEM1024) combining ML-KEM with classical ECDHE. <code>mldsa</code> specifies using ML-DSA (FIPS 204) for TLS 1.3 authentication. <code>trust-anchor-ids</code> lets relying parties convey trusted CAs compactly and lets servers advertise available certification paths (including via DNS) so clients select one — addressing the bloat of carrying many trust anchors. (from abstract only)</li>
+<li><strong>How</strong>: Hybrids run PQ and classical key exchange together so you're safe if either holds; ML-DSA replaces classical signatures for handshake auth; Trust Anchor IDs trims what has to be sent and supports path negotiation, which matters once PQ certs make chains larger.</li>
+<li><strong>Where applicable</strong>: General TLS 1.3 deployments. Hybrid KEX is the low-risk piece to adopt first; ML-DSA auth and cert-size mitigations (see also <code>draft-ietf-tls-cert-abridge</code>, below in Adjacent) are where the operational pain concentrates.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="masque-proxying-ip-and-ethernet-in-http-draft-ietf-masque-connect-ip-draft-ietf-masque-connect-ethernet">MASQUE: Proxying IP and Ethernet in HTTP — <code>draft-ietf-masque-connect-ip</code>, <code>draft-ietf-masque-connect-ethernet</code><a class="headerlink" href="#masque-proxying-ip-and-ethernet-in-http-draft-ietf-masque-connect-ip-draft-ietf-masque-connect-ethernet" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Core</li>
+<li><strong>Why</strong>: CONNECT-IP (and now CONNECT-Ethernet) turns HTTP/3 into a general-purpose tunneling substrate — VPN-like IP transport and even L2 transport over QUIC. This is increasingly relevant to cloud-native datapath and edge connectivity, and it overlaps your software-networking and WAN-interconnect interests.</li>
+<li><strong>What</strong>: <code>connect-ip</code> defines proxying IP packets in HTTP; <code>connect-ethernet</code> extends the same model to Ethernet frames. (from abstract only)</li>
+<li><strong>How</strong>: Both build on the HTTP Datagrams / Capsule Protocol so packets ride QUIC datagrams through an HTTP proxy, with IP- or Ethernet-level framing as the payload.</li>
+<li><strong>Where applicable</strong>: General; useful for VPN replacement, network-to-network tunneling, and reaching workloads behind HTTP proxies. CONNECT-Ethernet is the more experimental of the two.</li>
+</ul>
+<hr />
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="abridged-compression-for-webpki-certificates-draft-ietf-tls-cert-abridge">Abridged Compression for WebPKI Certificates — <code>draft-ietf-tls-cert-abridge</code><a class="headerlink" href="#abridged-compression-for-webpki-certificates-draft-ietf-tls-cert-abridge" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Adjacent</li>
+<li><strong>Why</strong>: A pragmatic answer to PQ certificate bloat: a shared dictionary of root/intermediate WebPKI certs that removes them from the chain on the wire without changing trust negotiation. Smooths the PQ transition and also helps CT log storage.</li>
+<li><strong>What</strong>: A TLS certificate-compression scheme using a shared dictionary of known CA certificates, claiming better compression than alternatives while treating CAs and operators fairly. (from abstract only)</li>
+<li><strong>How</strong>: Roots and intermediates are referenced from a shared dictionary instead of transmitted, shrinking the chain; trust decisions are unaffected.</li>
+<li><strong>Where applicable</strong>: General TLS, and any system storing cert chains (e.g. CT logs). Pairs naturally with the TLS PQC drafts in Core.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="cosejose-post-quantum-signatures-ml-dsa-slh-dsa-fn-dsa-pq-kems-draft-ietf-cose-dilithium-draft-ietf-cose-sphincs-plus-draft-ietf-cose-falcon-draft-ietf-jose-pqc-kem">COSE/JOSE Post-Quantum Signatures: ML-DSA, SLH-DSA, FN-DSA + PQ KEMs — <code>draft-ietf-cose-dilithium</code>, <code>draft-ietf-cose-sphincs-plus</code>, <code>draft-ietf-cose-falcon</code>, <code>draft-ietf-jose-pqc-kem</code><a class="headerlink" href="#cosejose-post-quantum-signatures-ml-dsa-slh-dsa-fn-dsa-pq-kems-draft-ietf-cose-dilithium-draft-ietf-cose-sphincs-plus-draft-ietf-cose-falcon-draft-ietf-jose-pqc-kem" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Adjacent</li>
+<li><strong>Why</strong>: The token/credential layer's PQ story. Once your TLS is hybrid, the JWTs/CWTs and signed credentials underneath still use classical signatures; these drafts bring ML-DSA/SLH-DSA/FN-DSA and PQ KEMs to JOSE/COSE, which is what SD-JWT, CWT, and verifiable-credential formats sit on.</li>
+<li><strong>What</strong>: Encodings for the three NIST PQ signature schemes (ML-DSA, SLH-DSA/SPHINCS+, FN-DSA/Falcon) in JOSE and COSE, plus PQ KEM registrations. (from abstract only)</li>
+<li><strong>How</strong>: Defines the algorithm identifiers and encodings so existing JOSE/COSE-based formats can adopt PQ signatures without redesign.</li>
+<li><strong>Where applicable</strong>: General; relevant anywhere you sign tokens or credentials (identity tokens, attestations, supply-chain receipts).</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="lamps-pq-pki-ml-kem-and-composite-kem-certificates-draft-ietf-lamps-kyber-certificates-draft-ietf-lamps-pq-composite-kem">LAMPS PQ PKI: ML-KEM and Composite KEM certificates — <code>draft-ietf-lamps-kyber-certificates</code>, <code>draft-ietf-lamps-pq-composite-kem</code><a class="headerlink" href="#lamps-pq-pki-ml-kem-and-composite-kem-certificates-draft-ietf-lamps-kyber-certificates-draft-ietf-lamps-pq-composite-kem" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Adjacent</li>
+<li><strong>Why</strong>: The X.509/PKI plumbing for PQ. Composite KEM (classical + PQ in one cert) is the hedging strategy most enterprises will actually deploy first, mirroring the hybrid approach in TLS.</li>
+<li><strong>What</strong>: Algorithm identifiers for ML-KEM in X.509 PKI, and a composite ML-KEM construction combining PQ and traditional KEMs in a single certificate. (from abstract only)</li>
+<li><strong>How</strong>: Composite binds two algorithms so a certificate remains secure if either survives, easing migration where you can't yet trust PQ alone.</li>
+<li><strong>Where applicable</strong>: General PKI; especially conservative environments that want PQ without abandoning classical assurance.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="rats-remote-posture-assessment-eat-for-systems-containers-and-applications-draft-ietf-rats-posture-assessment-draft-ietf-rats-eat">RATS: Remote Posture Assessment + EAT for Systems, Containers, and Applications — <code>draft-ietf-rats-posture-assessment</code>, <code>draft-ietf-rats-eat</code><a class="headerlink" href="#rats-remote-posture-assessment-eat-for-systems-containers-and-applications-draft-ietf-rats-posture-assessment-draft-ietf-rats-eat" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Adjacent</li>
+<li><strong>Why</strong>: Attestation is the trust root under workload identity — "is this workload running what it claims, on hardware I trust?" The posture-assessment draft explicitly extends to containers and applications at scale, which connects attestation to the WIMSE/agentic-identity world you track.</li>
+<li><strong>What</strong>: <code>eat</code> defines the Entity Attestation Token; <code>posture-assessment</code> defines remote posture assessment for systems, containers, and applications at scale. (from abstract only)</li>
+<li><strong>How</strong>: EAT carries signed claims about an entity's state; posture assessment frames how verifiers consume that evidence across many targets.</li>
+<li><strong>Where applicable</strong>: General; the container/application angle is the relevant one for cloud-native estates.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="spice-selective-disclosure-cwt-sd-cwt-verifiable-digital-credentials-architecture-draft-ietf-spice-sd-cwt-draft-ietf-spice-vdcarch">SPICE: Selective Disclosure CWT (SD-CWT) + Verifiable Digital Credentials architecture — <code>draft-ietf-spice-sd-cwt</code>, <code>draft-ietf-spice-vdcarch</code><a class="headerlink" href="#spice-selective-disclosure-cwt-sd-cwt-verifiable-digital-credentials-architecture-draft-ietf-spice-sd-cwt-draft-ietf-spice-vdcarch" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Adjacent</li>
+<li><strong>Why</strong>: The CBOR-native counterpart to SD-JWT, plus a reference architecture for direct credential presentation. This is the digital-credential/wallet direction of identity, adjacent to your authn interests and worth watching as it converges with OAuth's SD-JWT VC work.</li>
+<li><strong>What</strong>: <code>sd-cwt</code> brings SD-JWT-style selective disclosure to CBOR Web Tokens, aligned with COSE; <code>vdcarch</code> defines a reference architecture introducing a "presentation mediator" for managing and selectively disclosing credentials. (from abstract only)</li>
+<li><strong>How</strong>: SD-CWT adapts the selective-disclosure technique to CBOR/COSE encodings; the architecture centers a mediator component that handles presentation and disclosure with defined privacy properties.</li>
+<li><strong>Where applicable</strong>: General; constrained/IoT and mdoc-adjacent ecosystems favor the CBOR path.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="anima-brski-with-pledge-in-responder-mode-constrained-brski-draft-ietf-anima-brski-prm-draft-ietf-anima-constrained-voucher">ANIMA: BRSKI with Pledge in Responder Mode + Constrained BRSKI — <code>draft-ietf-anima-brski-prm</code>, <code>draft-ietf-anima-constrained-voucher</code><a class="headerlink" href="#anima-brski-with-pledge-in-responder-mode-constrained-brski-draft-ietf-anima-brski-prm-draft-ietf-anima-constrained-voucher" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Adjacent</li>
+<li><strong>Why</strong>: Zero-touch secure onboarding of devices is the bootstrap problem that precedes any workload/device identity. BRSKI's variants (responder mode, constrained/IoT) matter for how fleets of network gear and edge devices get their first trust anchor.</li>
+<li><strong>What</strong>: <code>brski-prm</code> defines a BRSKI flow where the pledge acts in responder mode; <code>constrained-voucher</code> (cBRSKI) adapts the voucher/bootstrap flow to constrained devices. (from abstract only)</li>
+<li><strong>How</strong>: Both adapt the BRSKI voucher exchange to deployment realities where the standard pledge-initiated, unconstrained flow doesn't fit.</li>
+<li><strong>Where applicable</strong>: Network-equipment and IoT onboarding; constrained variant assumes limited devices.</li>
+</ul>
+<hr />
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="rift-routing-in-fat-trees-rift-auto-evpn-draft-ietf-rift-rift-draft-ietf-rift-auto-evpn">RIFT: Routing in Fat Trees + RIFT Auto-EVPN — <code>draft-ietf-rift-rift</code>, <code>draft-ietf-rift-auto-evpn</code><a class="headerlink" href="#rift-routing-in-fat-trees-rift-auto-evpn-draft-ietf-rift-rift-draft-ietf-rift-auto-evpn" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Wildcard</li>
+<li><strong>Why</strong>: You wouldn't go searching for a brand-new IGP, but RIFT is genuinely novel: a routing protocol <em>purpose-built for Clos/fat-tree DC fabrics</em> rather than retrofitted (like BGP-in-the-DC). It's link-state northbound and distance-vector southbound, which is an elegant fit for the topology. Auto-EVPN layering on top is a tell that it's aiming at real DC deployment, not just academic interest.</li>
+<li><strong>What</strong>: A fat-tree-specific routing protocol; the auto-EVPN draft automates EVPN service provisioning over a RIFT underlay. (from abstract only)</li>
+<li><strong>How</strong>: Exploits the regularity of fat-tree topologies to minimize flooding and state — flooding link-state info toward the spine, summarizing toward the leaves. (Mechanism stated from general draft framing; treat specifics as unconfirmed pending the draft.)</li>
+<li><strong>Where applicable</strong>: Clos/fat-tree datacenter fabrics specifically — by construction it's not a general-purpose IGP. Worth a look as a contrast to the "BGP everywhere in the DC" orthodoxy (cf. <code>draft-ietf-rtgwg-bgp-routing-large-dc</code>).</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="ipsec-ip-traffic-flow-security-ip-tfs-aggfrag-draft-ietf-ipsecme-iptfs">IPsec IP Traffic Flow Security (IP-TFS / AGGFRAG) — <code>draft-ietf-ipsecme-iptfs</code><a class="headerlink" href="#ipsec-ip-traffic-flow-security-ip-tfs-aggfrag-draft-ietf-ipsecme-iptfs" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Wildcard</li>
+<li><strong>Why</strong>: Traffic-flow confidentiality is usually ignored, but IP-TFS tackles a real and under-appreciated leak: packet sizes and timing reveal information even when payloads are encrypted. The aggregation-and-fragmentation approach to hide flow characteristics is a neat technique with WAN and high-assurance relevance.</li>
+<li><strong>What</strong>: An aggregation/fragmentation mode for ESP that provides traffic-flow security by obscuring the size and timing pattern of the original packets. (from abstract only)</li>
+<li><strong>How</strong>: Packets are aggregated and/or fragmented into fixed-shape ESP traffic so observed flow characteristics no longer map to the underlying packets.</li>
+<li><strong>Where applicable</strong>: IPsec tunnels where metadata leakage matters — government/high-assurance and some WAN scenarios. Has bandwidth/overhead tradeoffs inherent to padding-style schemes.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="scitt-architecture-for-trustworthy-and-transparent-digital-supply-chains-draft-ietf-scitt-architecture">SCITT: Architecture for Trustworthy and Transparent Digital Supply Chains — <code>draft-ietf-scitt-architecture</code><a class="headerlink" href="#scitt-architecture-for-trustworthy-and-transparent-digital-supply-chains-draft-ietf-scitt-architecture" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Wildcard</li>
+<li><strong>Why</strong>: Software supply-chain integrity as an IETF-standardized transparency layer (think CT logs, generalized to any supply-chain statement). It's a signal of where "verifiable provenance" is heading, and it leans on the same COSE/receipts primitives as the identity work — a cross-pollination worth seeing even if it's not your day job.</li>
+<li><strong>What</strong>: An architecture for registering signed supply-chain statements in append-only transparency services that issue verifiable receipts. (from abstract only)</li>
+<li><strong>How</strong>: Statements are signed (COSE) and recorded so a verifier can later confirm inclusion via a receipt, giving tamper-evident provenance.</li>
+<li><strong>Where applicable</strong>: General software supply-chain and artifact provenance; relevant to anyone consuming signed build/attestation metadata.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="jose-json-web-proof-jwp-draft-ietf-jose-json-web-proof">JOSE JSON Web Proof (JWP) — <code>draft-ietf-jose-json-web-proof</code><a class="headerlink" href="#jose-json-web-proof-jwp-draft-ietf-jose-json-web-proof" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Tier</strong>: Wildcard</li>
+<li><strong>Why</strong>: A new container format alongside JWS/JWE built specifically for multi-message, zero-knowledge-style proofs (e.g. BBS) — i.e. selective disclosure and unlinkable presentations as a first-class primitive rather than a bolt-on. If privacy-preserving credentials go mainstream, this is plumbing you'll encounter.</li>
+<li><strong>What</strong>: JSON Web Proof, plus its algorithms and token format, defining a JWS/JWE-sibling structure for proofs over multiple messages. (from abstract only)</li>
+<li><strong>How</strong>: Unlike JWS (sign one payload), JWP is designed around several individually-disclosable messages and proof algorithms that support selective disclosure / ZK properties.</li>
+<li><strong>Where applicable</strong>: General, forward-looking; verifiable-credential and privacy-preserving-identity ecosystems. Early relative to SD-JWT, but architecturally more ambitious.</li>
+</ul>
+<hr />
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Post-quantum has moved from "which algorithm" to "how do we ship it."</strong> The action is in hybrids (ECDHE-MLKEM, composite KEM), the second-order problems PQ creates (certificate bloat → cert-abridge, Trust Anchor IDs), and propagating PQ down into the token/PKI layers (COSE/JOSE signatures, LAMPS certs). Algorithm selection is largely settled; deployment mechanics are the work.</li>
+<li><strong>Workload identity is consolidating into a real standard.</strong> WIMSE went from individual drafts to a WG-adopted architecture plus a full credential/proof-of-possession/authentication stack this cycle — the open-standards counterpart to what SPIFFE/SPIRE did proprietarily.</li>
+<li><strong>Authorization is going multi-hop and context-preserving.</strong> Identity chaining, Transaction Tokens, and attestation-based client auth all converge on carrying <em>who and what's allowed</em> across service and trust-domain boundaries without minting broad reusable bearer tokens — the substrate the "agentic identity" conversation needs.</li>
+<li><strong>Datacenter fabric standards are maturing in parallel tracks.</strong> Geneve settled as the NVO3 encapsulation with EVPN as control plane and OAM now being specified; RIFT offers a topology-native alternative to BGP-in-the-DC; SAVNET automates anti-spoofing that uRPF/ACLs handle badly.</li>
+<li><strong>HTTP/3 is becoming a general transport substrate.</strong> MASQUE's CONNECT-IP and CONNECT-Ethernet push IP and even L2 tunneling over QUIC, blurring the line between application proxying and network connectivity.</li>
+<li><strong>Selective disclosure and transparency are recurring primitives.</strong> SD-CWT, JSON Web Proof, SCITT receipts, and RATS attestation all build on signed-claims-plus-verifiable-proof patterns (largely COSE-based), showing privacy-preserving credentials and verifiable provenance converging on shared machinery.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>This digest was produced by running the repository's digest prompt by hand, from the conference's published program. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/ietf-123.md"><code>digests/ietf-123.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/ietf-123.md"><code>prompts/ietf-123.md</code></a></p>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../kubecon-na-2025/" class="md-footer__link md-footer__link--prev" aria-label="Previous: KubeCon + CloudNativeCon North America 2025">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                KubeCon + CloudNativeCon North America 2025
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../usenix-security-2025/" class="md-footer__link md-footer__link--next" aria-label="Next: USENIX Security &#x27;25 (34th USENIX Security Symposium)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                USENIX Security '25 (34th USENIX Security Symposium)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and generator, styled after containerlab.dev -->
+<div class="md-copyright">
+    
+    <div class="md-copyright__highlight">
+        Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.
+    </div>
+    
+    Written by
+    <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+    on Nebius Token Factory · made with
+    <span class="twemoji heart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709q-.23.129-.463.252h-.002a.75.75 0 0 1-.686 0 17 17 0 0 1-.465-.252 31 31 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31 31 0 0 1 14 20.408"/></svg>
+    </span>
+    and <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hellt.github.io/conference-digest/feed_rss_created.xml" target="_blank" rel="noopener" title="hellt.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,481 @@
+/* Conference Digest theme.
+   The base is containerlab.dev's stylesheet: brand accent, thin scrollbars,
+   gradient quote bar, accent square bullets and the animated light/dark
+   switch (overrides/partials/palette.html). The digest-specific part at the
+   end styles the facts strip, tier sections and pick cards that
+   scripts/build_site.py marks up. */
+
+/* START brand accent (custom cyan, as on containerlab.dev) ------------------ */
+:root {
+  --cd-brand: #00c9ff;
+  --cd-core: #00a8d6;
+  --cd-adjacent: #7c6cf2;
+  --cd-wildcard: #f08c00;
+  --cd-themes: #2f9e6e;
+  --cd-border: color-mix(in srgb, var(--md-default-fg-color) 14%, transparent);
+  --cd-surface: color-mix(in srgb, var(--md-default-fg-color) 3%, var(--md-default-bg-color));
+}
+
+[data-md-color-scheme="slate"] {
+  --cd-core: #00c9ff;
+  --cd-adjacent: #9d91ff;
+  --cd-wildcard: #ffb347;
+  --cd-themes: #4cc38a;
+  --cd-border: color-mix(in srgb, #fff 16%, transparent);
+  --cd-surface: color-mix(in srgb, #fff 4%, var(--md-default-bg-color));
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: var(--cd-brand);
+  --md-accent-fg-color--transparent: color-mix(in srgb, var(--cd-brand) 10%, transparent);
+}
+
+/* [data-md-color-primary] raises specificity above the palette's own
+   primary-specific link colors (black primary turns links blue otherwise). */
+[data-md-color-scheme="default"][data-md-color-primary] {
+  --md-typeset-a-color: #0098c4;
+}
+
+[data-md-color-scheme="slate"][data-md-color-primary] {
+  --md-typeset-a-color: var(--cd-brand);
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--cd-brand);
+  border-color: var(--cd-brand);
+  color: #00131f;
+}
+
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus {
+  background-color: color-mix(in srgb, var(--cd-brand) 85%, #000);
+  border-color: color-mix(in srgb, var(--cd-brand) 85%, #000);
+  color: #00131f;
+}
+
+/* END brand accent */
+
+.md-grid {
+  max-width: 65rem;
+}
+
+.mdx-content__footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mdx-content__footer a {
+  display: inline-block;
+  transition: transform 250ms cubic-bezier(0.1, 0.7, 0.1, 1), color 125ms;
+}
+
+.mdx-content__footer hr {
+  display: inline-block;
+  width: 40px;
+  margin: 16px;
+  vertical-align: middle;
+  background-color: currentColor;
+  border: none;
+}
+
+@keyframes heart {
+  0%, 40%, 80%, to { transform: scale(1) }
+  20%, 60% { transform: scale(1.15) }
+}
+
+.heart {
+  animation: heart 1s infinite;
+  color: #e91e63
+}
+
+/* START thin scrollbar styles */
+/* First unset all rules that break Chrome styling */
+.md-typeset pre>code,
+.md-search__scrollwrap,
+.md-sidebar__scrollwrap {
+  scrollbar-color: unset;
+  scrollbar-width: unset;
+}
+
+.md-typeset pre>code:hover,
+.md-search__scrollwrap:hover,
+.md-sidebar__scrollwrap:focus-within,
+.md-sidebar__scrollwrap:hover {
+  scrollbar-color: unset;
+}
+
+.md-tooltip2__inner {
+  scrollbar-width: unset;
+}
+
+/* Wrap new scrollbar properties in @supports rule for browsers without `::-webkit-scrollbar-*` support */
+/* This way chrome won't override `::-webkit-scrollbar-*` selectors */
+/* https://developer.chrome.com/docs/css-ui/scrollbar-styling */
+@supports not selector(::-webkit-scrollbar) {
+
+  .md-typeset pre>code,
+  .md-search__scrollwrap,
+  .md-sidebar__scrollwrap {
+    scrollbar-color: var(--md-default-fg-color--lighter) #0000;
+    scrollbar-width: thin;
+  }
+
+  .md-typeset pre>code:hover,
+  .md-search__scrollwrap:hover,
+  .md-sidebar__scrollwrap:focus-within,
+  .md-sidebar__scrollwrap:hover {
+    scrollbar-color: var(--md-accent-fg-color) #0000;
+  }
+
+  .md-tooltip2__inner {
+    scrollbar-width: thin;
+  }
+}
+
+/* Restore hover color for Chrome */
+@supports selector(::-webkit-scrollbar) {
+
+  .md-typeset pre>code:hover::-webkit-scrollbar-thumb,
+  .md-search__scrollwrap:hover::-webkit-scrollbar-thumb,
+  .md-sidebar__scrollwrap:focus-within::-webkit-scrollbar-thumb,
+  .md-sidebar__scrollwrap:hover::-webkit-scrollbar-thumb {
+    background-color: var(--md-accent-fg-color);
+  }
+}
+
+/* END thin scrollbar styles */
+
+/* quote styling */
+[dir="ltr"] .md-typeset blockquote {
+  position: relative;
+  padding-left: 1rem;
+  border: none;
+
+}
+
+[dir="ltr"] .md-typeset blockquote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  bottom: 0.1rem;
+  width: 0.15em;
+  border-radius: 0.25rem;
+  background: linear-gradient(to bottom, var(--md-default-fg-color--lighter), var(--md-accent-fg-color));
+}
+
+/* accent-colored square bullets for unordered lists */
+.md-typeset ul li {
+  list-style-type: square;
+}
+
+.md-typeset ul li::marker {
+  color: var(--md-accent-fg-color);
+}
+
+/* START light/dark switcher (styled after the search button) ------------------
+   The palette markup lives in overrides/partials/palette.html. The host
+   square borrows the search button's design language of the modern variant:
+   a 1.6rem square with 0.4rem corner radius on a faint --md-default-fg-color
+   fill (hover: fg--lighter, same as the search button). It holds a single
+   animated sun/moon glyph: the sun core scales up while a mask circle slides
+   in to carve the crescent and the beams fade out — the morph is driven
+   purely by the scheme attribute. The palette <input>s and their <label>
+   click targets keep the structure the Zensical palette JS expects (input,
+   label, input, label): the JS unhides the label of the active palette and
+   reacts to radio change events. The visible control is a persistent
+   sibling, so the glyph morphs in place instead of the whole button being
+   swapped on toggle. */
+.md-header__option[data-md-component="palette"] {
+  position: relative;
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0.2rem;
+}
+
+/* invisible click targets; one per palette, toggled via the `hidden` attr */
+.md-switch__target {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+
+/* the host square, same surface as the search button */
+.md-switch__track {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: 0.4rem;
+  background-color: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color);
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.md-header__option[data-md-component="palette"]:hover .md-switch__track {
+  background-color: var(--md-default-fg-color--lighter);
+}
+
+/* the animated sun/moon glyph — sized so its painted extent matches the
+   magnifier's (~16px): lucide-search's glyph spans 18/24 of its viewBox,
+   while the sun's beams reach the box edges (round line caps), so the glyph
+   box is tuned to 0.85rem. The dark crescent's bite removes its widest edge,
+   so in dark mode the whole glyph grows slightly (12%) to restore the same
+   painted extent as the sun. */
+.md-switch__track .sun-and-moon {
+  position: absolute;
+  top: 0.375rem;
+  left: 0.375rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  stroke-linecap: round;
+}
+
+[data-md-color-scheme="slate"] .md-switch__track .sun-and-moon {
+  transform: scale(1.12);
+}
+
+.sun-and-moon > :is(.moon, .sun, .sun-beams) {
+  transform-origin: center center;
+}
+
+.sun-and-moon > .sun {
+  fill: currentColor;
+}
+
+.sun-and-moon > .sun-beams {
+  stroke: currentColor;
+  stroke-width: 2px;
+}
+
+/* resting states: full sun with beams, or crescent with the beams gone */
+.sun-and-moon > .sun-beams {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.sun-and-moon .moon > circle {
+  transform: translate(0);
+}
+
+[data-md-color-scheme="slate"] .sun-and-moon > .sun {
+  transform: scale(1.75);
+}
+
+[data-md-color-scheme="slate"] .sun-and-moon > .sun-beams {
+  opacity: 0;
+  transform: rotate(-25deg);
+}
+
+[data-md-color-scheme="slate"] .sun-and-moon .moon > circle {
+  transform: translate(-7px);
+}
+
+/* the palette CSS zeroes every transition while data-md-color-switching is
+   set (it wraps each scheme change), which would skip the morph; re-declare
+   the glyph's own timing with a specificity that beats the zeroing. The
+   outer glyph scale rides the same timing as the core scale. */
+@media (prefers-reduced-motion: no-preference) {
+  .md-switch__track .sun-and-moon,
+  .sun-and-moon > .sun {
+    transition: transform 0.5s cubic-bezier(0.5, 1.25, 0.75, 1.25) !important;
+  }
+
+  .sun-and-moon > .sun-beams {
+    transition:
+      transform 0.5s cubic-bezier(0.5, 1.5, 0.75, 1.25),
+      opacity 0.5s cubic-bezier(0.25, 0, 0.3, 1) !important;
+  }
+
+  .sun-and-moon .moon > circle {
+    transition: transform 0.25s cubic-bezier(0, 0, 0, 1) !important;
+  }
+
+  [data-md-color-scheme="slate"] .md-switch__track .sun-and-moon,
+  [data-md-color-scheme="slate"] .sun-and-moon > .sun {
+    transition: transform 0.25s cubic-bezier(0.25, 0, 0.3, 1) !important;
+  }
+
+  [data-md-color-scheme="slate"] .sun-and-moon > .sun-beams {
+    transition:
+      transform 0.15s cubic-bezier(0.5, 1.5, 0.75, 1.25),
+      opacity 0.15s cubic-bezier(0.25, 0, 0.3, 1) !important;
+  }
+
+  [data-md-color-scheme="slate"] .sun-and-moon .moon > circle {
+    transition: transform 0.5s cubic-bezier(0, 0, 0, 1) 0.25s !important;
+  }
+}
+
+/* END light/dark switcher */
+/* START digest site ----------------------------------------------------------
+   Hero on the home page. */
+.md-typeset .cd-hero {
+  margin: 0 0 2rem;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--cd-border);
+  border-radius: 0.8rem;
+  background:
+    radial-gradient(120% 140% at 100% 0%, color-mix(in srgb, var(--cd-brand) 14%, transparent) 0%, transparent 55%),
+    var(--cd-surface);
+}
+
+.md-typeset .cd-hero > p:first-child {
+  margin-top: 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.md-typeset .cd-hero .md-button {
+  margin: 0.2rem 0.3rem 0.2rem 0;
+  font-size: 0.7rem;
+  padding: 0.4em 1.1em;
+  border-radius: 2rem;
+}
+
+/* Post excerpts on the index read as cards. */
+.md-post--excerpt {
+  max-width: 44rem;
+  margin: 0 0 1.4rem;
+  padding: 0.4rem 1.2rem 0.6rem;
+  border: 1px solid var(--cd-border);
+  border-radius: 0.8rem;
+  background: var(--cd-surface);
+  transition: border-color 125ms, box-shadow 125ms;
+}
+
+.md-post--excerpt:hover {
+  border-color: color-mix(in srgb, var(--cd-brand) 55%, transparent);
+  box-shadow: 0 0.3rem 1rem color-mix(in srgb, var(--cd-brand) 12%, transparent);
+}
+
+.md-post--excerpt .md-post__header {
+  margin-top: 0.6rem;
+}
+
+/* Facts strip under the post title. */
+.md-typeset .digest-facts p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1.6rem;
+}
+
+.md-typeset .digest-fact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.2rem 0.65rem;
+  border: 1px solid var(--cd-border);
+  border-radius: 2rem;
+  background: var(--cd-surface);
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
+.md-typeset .digest-fact .twemoji {
+  color: var(--md-accent-fg-color);
+}
+
+/* Tier sections: a colored dot and a rule that fades out. */
+.tier-core { --tier: var(--cd-core); }
+.tier-adjacent { --tier: var(--cd-adjacent); }
+.tier-wildcard { --tier: var(--cd-wildcard); }
+.tier-themes { --tier: var(--cd-themes); }
+.pick-core { --tier: var(--cd-core); }
+.pick-adjacent { --tier: var(--cd-adjacent); }
+.pick-wildcard { --tier: var(--cd-wildcard); }
+
+.md-typeset h2.tier {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.md-typeset h2.tier::before {
+  content: "";
+  flex: none;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: var(--tier);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--tier) 20%, transparent);
+}
+
+.md-typeset h2.tier::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  margin-left: 0.4rem;
+  background: linear-gradient(to right, color-mix(in srgb, var(--tier) 60%, transparent), transparent);
+}
+
+.md-typeset h2.tier .headerlink {
+  order: 3;
+}
+
+/* Each pick is a card with a tier-colored edge. */
+.md-typeset .pick {
+  position: relative;
+  margin: 1.1rem 0;
+  padding: 0.1rem 1.2rem 0.3rem 1.4rem;
+  border: 1px solid var(--cd-border);
+  border-radius: 0.7rem;
+  background: var(--cd-surface);
+}
+
+.md-typeset .pick::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.9rem;
+  bottom: 0.9rem;
+  width: 0.2rem;
+  border-radius: 0 0.2rem 0.2rem 0;
+  background: var(--tier);
+}
+
+.md-typeset .pick > h3 {
+  margin: 0.9rem 0 0.4rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.md-typeset .pick > h3 + p > em:only-child {
+  color: var(--md-default-fg-color--light);
+}
+
+/* Why / What / How / Where applicable read as labelled rows. */
+.md-typeset .pick ul {
+  margin-left: 0;
+  list-style: none;
+}
+
+.md-typeset .pick ul > li {
+  margin-left: 0;
+  list-style: none;
+}
+
+.md-typeset .pick ul > li > strong:first-child,
+.md-typeset .pick ul > li > p:first-child > strong:first-child,
+.md-typeset .pick > p > strong:first-child {
+  color: var(--tier);
+  font-weight: 700;
+}
+
+/* Themes: an accented panel. */
+.md-typeset h2.tier-themes ~ ul {
+  padding: 0.6rem 1.2rem 0.6rem 2rem;
+  border-radius: 0.7rem;
+  background: color-mix(in srgb, var(--cd-themes) 7%, transparent);
+}
+
+/* Wide tracker table. */
+.md-typeset table:not([class]) {
+  font-size: 0.7rem;
+}
+
+/* END digest site */

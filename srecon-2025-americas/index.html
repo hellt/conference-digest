@@ -1,0 +1,1655 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Program source is the expanded schedule (titles, speakers, and abstracts; no PDF&#x2f;slide&#x2f;recording links were present in the pasted program text, so no Links field is included below — every write-up is grounded in the abstract only). This cycle&#x27;s program skews heavily toward observability tooling,…">
+      
+      
+      
+        <link rel="canonical" href="https://hellt.github.io/conference-digest/srecon-2025-americas/">
+      
+      
+      
+        <link rel="prev" href="../usenix-security-2025/">
+      
+      
+        <link rel="next" href="../kubecon-eu-2025/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>SREcon25 Americas - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300,300i,400,400i,500,500i,700,700i%7CGoogle+Sans+Code:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Google Sans";--md-code-font:"Google Sans Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="SREcon25 Americas · Conference Digest" />
+<meta property="og:description" content="Program source is the expanded schedule (titles, speakers, and abstracts; no PDF/slide/recording links were present in the pasted program text, so no Links field is included below — every write-up is grounded in the abstract only). This cycle's program skews heavily toward observability tooling,…" />
+<meta property="og:url" content="https://hellt.github.io/conference-digest/srecon-2025-americas/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="SREcon25 Americas · Conference Digest" />
+<meta name="twitter:description" content="Program source is the expanded schedule (titles, speakers, and abstracts; no PDF/slide/recording links were present in the pasted program text, so no Links field is included below — every write-up is grounded in the abstract only). This cycle's program skews heavily toward observability tooling,…" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SREcon25 Americas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../category/academic/" class="md-tabs__link">
+          
+  
+  Conference type
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#improving-the-sre-experience-for-10-years-as-a-free-open-and-automated-certificate-authority" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Improving the SRE Experience for 10 Years as a Free, Open, and Automated Certificate Authority
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#please-give-me-back-my-network-cables-on-networking-limits-in-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Please Give Me Back My Network Cables! On Networking Limits in AWS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securing-distributed-cache-achieving-secure-by-default-with-key-challenges-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Securing Distributed Cache: Achieving Secure-by-Default with Key Challenges &amp; Insights
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-flow-data-in-the-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Network Flow Data in the Cloud
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaos-experiments-datacenter-stress-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Chaos Experiments - Datacenter Stress Testing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handling-the-largest-domains-migration-ever" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Handling the Largest Domains Migration, Ever!
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taming-the-beast-understanding-and-harnessing-the-power-of-http-proxies" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Taming the Beast: Understanding and Harnessing the Power of HTTP Proxies
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hijacking-service-discovery-to-simulate-dependency-degradation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Hijacking Service Discovery to Simulate Dependency Degradation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maturing-your-data-architecture-in-a-week-how-bluesky-survived" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Maturing Your Data Architecture in a Week: How Bluesky Survived
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-the-s-in-sre-for-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Is the S in SRE for "Security"?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lies-programmers-believe-about-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lies Programmers Believe About Memory
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aiops-prove-it-an-open-letter-to-vendors-selling-ai-for-sres" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AIOps: Prove It! An Open Letter to Vendors Selling AI for SREs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systems-thinking-with-poisoned-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Systems Thinking with Poisoned Systems
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fully-automated-hw-sku-selection-system-to-optimize-apache-pinots-cost-to-serve-at-linkedin" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fully Automated HW SKU Selection System to Optimize Apache Pinot's Cost-to-Serve at LinkedIn
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conference type
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Conference type
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Academic
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operator
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standards
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendor
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#improving-the-sre-experience-for-10-years-as-a-free-open-and-automated-certificate-authority" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Improving the SRE Experience for 10 Years as a Free, Open, and Automated Certificate Authority
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#please-give-me-back-my-network-cables-on-networking-limits-in-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Please Give Me Back My Network Cables! On Networking Limits in AWS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securing-distributed-cache-achieving-secure-by-default-with-key-challenges-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Securing Distributed Cache: Achieving Secure-by-Default with Key Challenges &amp; Insights
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-flow-data-in-the-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Network Flow Data in the Cloud
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaos-experiments-datacenter-stress-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Chaos Experiments - Datacenter Stress Testing
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handling-the-largest-domains-migration-ever" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Handling the Largest Domains Migration, Ever!
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taming-the-beast-understanding-and-harnessing-the-power-of-http-proxies" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Taming the Beast: Understanding and Harnessing the Power of HTTP Proxies
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hijacking-service-discovery-to-simulate-dependency-degradation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Hijacking Service Discovery to Simulate Dependency Degradation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maturing-your-data-architecture-in-a-week-how-bluesky-survived" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Maturing Your Data Architecture in a Week: How Bluesky Survived
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-the-s-in-sre-for-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Is the S in SRE for "Security"?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lies-programmers-believe-about-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lies Programmers Believe About Memory
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aiops-prove-it-an-open-letter-to-vendors-selling-ai-for-sres" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AIOps: Prove It! An Open Letter to Vendors Selling AI for SREs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systems-thinking-with-poisoned-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Systems Thinking with Poisoned Systems
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fully-automated-hw-sku-selection-system-to-optimize-apache-pinots-cost-to-serve-at-linkedin" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fully Automated HW SKU Selection System to Optimize Apache Pinot's Cost-to-Serve at LinkedIn
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="./.." class="md-nav__link">
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-calendar-days" viewBox="0 0 24 24"><path d="M8 2v3M16 2v3"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg>
+                        <time datetime="2026-08-30 00:00:00+00:00" class="md-ellipsis">August 30, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-library" viewBox="0 0 24 24"><path d="m16 6 4 14M12 6v14M8 8v12M4 4v16"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../category/operator/">Operator</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              10 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      
+        
+
+  
+  
+
+
+<h1 id="srecon25-americas">SREcon25 Americas<a class="headerlink" href="#srecon25-americas" title="Permanent link">#</a></h1>
+<p>Program source is the expanded schedule (titles, speakers, and abstracts; no PDF/slide/recording links were present in the pasted program text, so no Links field is included below — every write-up is grounded in the abstract only). This cycle's program skews heavily toward observability tooling, incident-response process, and organizational/human-factors content, plus a large AI/ML-infrastructure-operations cluster (safe model rollout, ML training governance, AI-assisted ops) — none of which is core to the PM's stated interests. The pick count below is intentionally small: it reflects genuinely thin coverage of DC/WAN networking, cloud-native networking, network security, and identity this cycle, not aggressive filtering of a networking-heavy program.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 13.5v8H3v-8zm-2 2H5v4h4zM12 2l5.5 9h-11zm0 3.86L10.08 9h3.84zM17.5 13c2.5 0 4.5 2 4.5 4.5S20 22 17.5 22 13 20 13 17.5s2-4.5 4.5-4.5m0 2a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg></span> Operator</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2V5a2 2 0 0 0-2-2m0 16H5V9h14zM5 7V5h14v2zm5.56 10.46 5.94-5.93-1.07-1.06-4.87 4.87-2.11-2.11-1.06 1.06z"/></svg></span> Ended March 27, 2025</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.19 2.25c-.26 0-.52.06-.77.15L3.06 5.45a1.994 1.994 0 0 0-1.09 2.6L6.93 20a2 2 0 0 0 1.81 1.25c.26 0 .53-.03.79-.15l7.37-3.05a2.02 2.02 0 0 0 1.23-1.8c.01-.25-.04-.54-.13-.8L13 3.5a1.95 1.95 0 0 0-1.81-1.25m3.48 0 3.45 8.35V4.25a2 2 0 0 0-2-2m4.01 1.54v9.03l2.43-5.86a1.99 1.99 0 0 0-1.09-2.6m-10.28-.14 4.98 12.02-7.39 3.06L3.8 7.29"/></svg></span> 14 picks (5 core · 6 adjacent · 3 wildcard)</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42"/></svg></span> <a href="https://www.usenix.org/conference/srecon25americas/program">Program</a></span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 17v3h8v-1.89H3.9V17c0-.64 3.13-2.1 6.1-2.1.96.01 1.91.14 2.83.38l1.52-1.52c-1.4-.47-2.85-.73-4.35-.76-2.67 0-8 1.33-8 4m8-13C7.79 4 6 5.79 6 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4m0 6c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2m11.7 3.35-1 1-2.05-2 1-1a.55.55 0 0 1 .77 0l1.28 1.28c.21.21.21.56 0 .77M12 18.94l6.06-6.06 2.05 2-6 6.07H12z"/></svg></span> Prompt run by hand</span></p>
+</div>
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="improving-the-sre-experience-for-10-years-as-a-free-open-and-automated-certificate-authority">Improving the SRE Experience for 10 Years as a Free, Open, and Automated Certificate Authority<a class="headerlink" href="#improving-the-sre-experience-for-10-years-as-a-free-open-and-automated-certificate-authority" title="Permanent link">#</a></h3>
+<p><em>Matthew McPherrin, Internet Security Research Group (Opening Plenary)</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: A decade of operational history from the team running Let's Encrypt — now securing 500M+ websites — on what it actually takes to run free, automated PKI issuance reliably at Internet scale, plus a preview of upcoming changes to the ecosystem every TLS operator depends on.</li>
+<li><strong>What</strong>: A retrospective on ten years of Let's Encrypt's certificate authority and Certificate Transparency log operations, covering lessons for anyone managing TLS certificates and guidance on upcoming changes to the CA. (from abstract only)</li>
+<li><strong>How</strong>: Not detailed mechanically in the abstract; framed as historical/operational context plus forward guidance rather than a single technique. (from abstract only — thin on mechanism)</li>
+<li><strong>Where applicable</strong>: General; directly relevant to the same certificate-lifecycle/crypto-agility theme surfaced in the Netflix Enigma talk at USENIX Security '25 this cycle (see that digest) — shortening cert lifetimes make automated issuance like Let's Encrypt's the operational baseline, not an option.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="please-give-me-back-my-network-cables-on-networking-limits-in-aws">Please Give Me Back My Network Cables! On Networking Limits in AWS<a class="headerlink" href="#please-give-me-back-my-network-cables-on-networking-limits-in-aws" title="Permanent link">#</a></h3>
+<p><em>Steffen Gebert and Miklos Tirpak, emnify</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: A specific, hard-won account of where "the cloud network" abstraction breaks down — running a mobile core network's packet-processing functions on EC2 and hitting undocumented and semi-documented AWS networking limits (packets-per-second, connection tracking) directly relevant to anyone building network-function or high-PPS workloads on public cloud.</li>
+<li><strong>What</strong>: A catalog of AWS EC2 networking limits (bandwidth caps, packet-per-second ceilings, connection tracking limits) discovered the hard way while running a mobile virtual network operator's custom mobile core network functions on AWS, including which limits are documented versus not, and how to monitor remaining quota. (from abstract only)</li>
+<li><strong>How</strong>: Explains how limits like PPS and connection tracking affect network traffic once exceeded, and diagnostic approaches for identifying when an incident is actually an undocumented cloud networking-limit rather than an application bug. (from abstract only)</li>
+<li><strong>Where applicable</strong>: Network-function/packet-processing workloads on AWS EC2 specifically; the underlying lesson (cloud "unlimited" networking has real, sometimes-undocumented ceilings) generalizes to any high-PPS or connection-dense workload on public cloud.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="securing-distributed-cache-achieving-secure-by-default-with-key-challenges-insights">Securing Distributed Cache: Achieving Secure-by-Default with Key Challenges &amp; Insights<a class="headerlink" href="#securing-distributed-cache-achieving-secure-by-default-with-key-challenges-insights" title="Permanent link">#</a></h3>
+<p><em>Akashdeep Goel, Sriram Rangarajan, and Samuel Fu, Netflix</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: A concrete account of retrofitting security (cert lifecycle management, secured proxy calls for polyglot clients) onto an already-massive production system — 400M requests/sec, 14PB of data — rather than designing it in from day one, which is the situation most real security-hardening projects actually face.</li>
+<li><strong>What</strong>: How Netflix secured its multi-region distributed caching system (used for both streaming and gaming workloads) after the fact, covering certificate lifecycle management, eliminating spurious policy lookup calls, and securing proxy calls across clients written in different languages. (from abstract only)</li>
+<li><strong>How</strong>: Debugged and validated using CPU profiling and memory dumps to find the performance/correctness cost of retrofitted security controls, then executed a global-scale rollout. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General for retrofitting security/mTLS-style controls onto an existing high-throughput distributed system; the polyglot-client proxy-securing pattern is broadly applicable beyond caching specifically.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="network-flow-data-in-the-cloud">Network Flow Data in the Cloud<a class="headerlink" href="#network-flow-data-in-the-cloud" title="Permanent link">#</a></h3>
+<p><em>Steve Dodd, Slack</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: An argument that classical network-engineering techniques (graph theory, the discrete math underlying traditional routing/traffic-engineering work) are directly applicable to modern cloud service-oriented architecture — and a concrete method for per-service traffic attribution without paying for vendor flow-logging products.</li>
+<li><strong>What</strong>: A framework for building per-service network traffic attribution in cloud infrastructure using network-graph analysis techniques borrowed from traditional network engineering (the kind of work "manual OSPF metric tuning" represents), without relying on expensive vendor logging solutions. (from abstract only)</li>
+<li><strong>How</strong>: Applies graph-theoretic analysis of network topology/flow to optimize data flow, routing, and resilience visibility at the service level — essentially traffic engineering applied to service-mesh-era cloud infrastructure. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General for large-scale cloud service infrastructure wanting traffic/dependency visibility; the technique is explicitly framed as reviving under-used traditional networking analysis for cloud-native environments.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="chaos-experiments-datacenter-stress-testing">Chaos Experiments - Datacenter Stress Testing<a class="headerlink" href="#chaos-experiments-datacenter-stress-testing" title="Permanent link">#</a></h3>
+<p><em>Clayton Krueger, USAA</em> — <strong>Core</strong></p>
+<ul>
+<li><strong>Why</strong>: Most chaos-engineering practice targets individual applications or services; this is chaos testing applied to an entire datacenter as the blast-radius unit, which is a meaningfully different (and harder) failure-domain scope directly relevant to physical DC operations.</li>
+<li><strong>What</strong>: An account of building a comprehensive, automated, leadership-backed chaos engineering program at a financial services provider, elevated from individual-application testing to whole-datacenter stress testing. (from abstract only)</li>
+<li><strong>How</strong>: Not detailed mechanically in the abstract; framed around the organizational and technical stages of scaling chaos testing to datacenter scope, including overcoming fear/uncertainty/doubt as an adoption barrier. (from abstract only — thin on mechanism)</li>
+<li><strong>Where applicable</strong>: General for organizations with the operational maturity to test at datacenter-wide blast radius; financial-services-specific framing but the scaling journey generalizes.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="handling-the-largest-domains-migration-ever">Handling the Largest Domains Migration, Ever!<a class="headerlink" href="#handling-the-largest-domains-migration-ever" title="Permanent link">#</a></h3>
+<p><em>Franklin Angulo and Divya Kamat, Squarespace</em> — <strong>Adjacent</strong></p>
+<ul>
+<li><strong>Why</strong>: A concrete account of migrating 10M+ domains (the assets behind Google Domains, acquired by Squarespace in 2023) at a scale not previously seen in the domain-registrar industry — a rare data point on DNS/registrar infrastructure operations at extreme scale.</li>
+<li><strong>What</strong>: The challenges of executing a domain-registrar migration involving more than 10 million domains following Squarespace's acquisition of the Google Domains business. (from abstract only)</li>
+<li><strong>How</strong>: Not detailed mechanically in the abstract. (from abstract only — thin on mechanism)</li>
+<li><strong>Where applicable</strong>: Domain registrar/registry operations specifically; general lessons on very-large-scale record migration likely apply more broadly.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="taming-the-beast-understanding-and-harnessing-the-power-of-http-proxies">Taming the Beast: Understanding and Harnessing the Power of HTTP Proxies<a class="headerlink" href="#taming-the-beast-understanding-and-harnessing-the-power-of-http-proxies" title="Permanent link">#</a></h3>
+<p><em>Guillaume Quintard, Varnish Software</em> — <strong>Adjacent</strong></p>
+<ul>
+<li><strong>Why</strong>: A practitioner deep-dive on reverse proxies as active operational tooling (debugging, traffic manipulation, incident mitigation) rather than passive infrastructure — relevant datapath/operational context for anyone running proxy-fronted services.</li>
+<li><strong>What</strong>: How reverse proxies enhance observability, performance, and resilience in modern SRE/DevOps workflows, with a focus on using proxies as active tools during production incidents rather than just static traffic routers. (from abstract only)</li>
+<li><strong>How</strong>: Combines HTTP fundamentals with reverse-proxy traffic manipulation techniques and OpenTelemetry integration for debugging and active mitigation. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General for any proxy-fronted (Varnish, Envoy, nginx-class) service architecture.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="hijacking-service-discovery-to-simulate-dependency-degradation">Hijacking Service Discovery to Simulate Dependency Degradation<a class="headerlink" href="#hijacking-service-discovery-to-simulate-dependency-degradation" title="Permanent link">#</a></h3>
+<p><em>Abdulrahman Alhamali, Shopify</em> — <strong>Adjacent</strong></p>
+<ul>
+<li><strong>Why</strong>: A cleaner alternative to proxy-based dependency-degradation simulation (circuit breaking, bulkheading, graceful degradation testing) — directly relevant to anyone testing resilience patterns in a service-mesh or service-discovery-based architecture.</li>
+<li><strong>What</strong>: Techniques for simulating dependency degradation (slowdowns, bandwidth limits, outages) by hijacking service discovery rather than requiring all traffic to route through a dedicated simulation proxy. (from abstract only)</li>
+<li><strong>How</strong>: Streamlines traffic-forwarding for degradation simulation by manipulating what service discovery returns, avoiding the overhead of a full proxy-based simulation layer. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General for service-discovery-based architectures (Kubernetes, service mesh, or custom) wanting to test resiliency mechanisms without waiting for a real incident.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="maturing-your-data-architecture-in-a-week-how-bluesky-survived">Maturing Your Data Architecture in a Week: How Bluesky Survived<a class="headerlink" href="#maturing-your-data-architecture-in-a-week-how-bluesky-survived" title="Permanent link">#</a></h3>
+<p><em>Jaz Volpert, Bluesky PBC</em> — <strong>Adjacent</strong></p>
+<ul>
+<li><strong>Why</strong>: A real account of a small team (~6 engineers) rapidly scaling physical infrastructure under a genuine viral-growth event (1,200% DAU increase in a week) — notable specifically because Bluesky runs its own physical infrastructure rather than purely cloud-native services.</li>
+<li><strong>What</strong>: How Bluesky's backend team matured its data architecture in 11 days of intense effort to handle a surge to 1M+ new users/day and 1,600+ events/sec, while running core infrastructure on owned physical hardware. (from abstract only)</li>
+<li><strong>How</strong>: Not detailed mechanically in the abstract beyond "rapidly matured data architecture." (from abstract only — thin on mechanism)</li>
+<li><strong>Where applicable</strong>: Physical/self-hosted infrastructure under sudden extreme load; a useful contrast case to cloud-elastic scaling stories since Bluesky couldn't simply autoscale.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="is-the-s-in-sre-for-security">Is the S in SRE for "Security"?<a class="headerlink" href="#is-the-s-in-sre-for-security" title="Permanent link">#</a></h3>
+<p><em>John Benninghoff, Security Differently</em> — <strong>Adjacent</strong></p>
+<ul>
+<li><strong>Why</strong>: A structured argument for the operational and organizational overlap between SRE and security practice (patching/attack-surface management, observability, incident response, postmortems) — useful framing for anyone trying to align SRE and security teams.</li>
+<li><strong>What</strong>: An argument that SRE and Security teams share enough operational DNA (attack-surface management, observability, incident response, testing) that organizations most effectively reduce cybersecurity risk by improving general technology/operational performance rather than treating security as a separate discipline. (from abstract only)</li>
+<li><strong>How</strong>: Draws on safety-science and DevOps research linking organizational performance across development, operations, SRE, and security; proposes Security Level Objectives as an SLO-style mechanism for prioritizing security work. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General organizational-design question for any org with separate SRE and security functions.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="lies-programmers-believe-about-memory">Lies Programmers Believe About Memory<a class="headerlink" href="#lies-programmers-believe-about-memory" title="Permanent link">#</a></h3>
+<p><em>Chris Down, Meta (Linux kernel memory management maintainer)</em> — <strong>Adjacent</strong></p>
+<ul>
+<li><strong>Why</strong>: A from-the-source explanation of Linux kernel memory internals (TLBs, page tables, cgroup memory classes) from an actual kernel memory-management maintainer — low-level systems knowledge that underlies performance/reliability work on any Linux-hosted infrastructure, DC or cloud.</li>
+<li><strong>What</strong>: A tour of kernel memory management internals — CPU memory hardware abstractions (TLBs, page tables) and Linux's own internal memory classes and their often-misunderstood properties — aimed at helping SREs reason correctly about application memory behavior. (from abstract only)</li>
+<li><strong>How</strong>: Explains the actual mechanics of virtual memory, page tables, and cgroup-based memory accounting rather than treating them as opaque abstractions. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General for anyone debugging memory-related performance or reliability issues on Linux, DC or cloud; particularly relevant to cgroups-based container/Kubernetes memory limits.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="aiops-prove-it-an-open-letter-to-vendors-selling-ai-for-sres">AIOps: Prove It! An Open Letter to Vendors Selling AI for SREs<a class="headerlink" href="#aiops-prove-it-an-open-letter-to-vendors-selling-ai-for-sres" title="Permanent link">#</a></h3>
+<p><em>Charity Majors and Fred Hebert, Honeycomb.io (Closing Plenary)</em> — <strong>Wildcard</strong></p>
+<ul>
+<li><strong>Why</strong>: Not a networking or identity talk, but a pointed, credible-source (Honeycomb's own co-founder) counter-narrative to the AI-for-ops hype dominating this cycle's program by sheer volume — worth having as a calibration point against the many AI/ML-infra-ops talks elsewhere in the schedule.</li>
+<li><strong>What</strong>: A critical framework for evaluating vendor claims about AI-powered SRE/ops tooling, arguing that skeptical operators need to engage with genAI rather than dismiss it, while vendors need to demonstrate good-faith engagement with real SRE problems rather than hype. (from abstract only)</li>
+<li><strong>How</strong>: Not a technical mechanism talk — an argued position piece from two well-known observability practitioners. (from abstract only)</li>
+<li><strong>Where applicable</strong>: General; useful as a lens for evaluating any AIOps/AI-for-reliability vendor pitch.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="systems-thinking-with-poisoned-systems">Systems Thinking with Poisoned Systems<a class="headerlink" href="#systems-thinking-with-poisoned-systems" title="Permanent link">#</a></h3>
+<p><em>Hazel Weakly, Nivenly Foundation; Sandeep Kanabar, Gen</em> — <strong>Wildcard</strong></p>
+<ul>
+<li><strong>Why</strong>: An unusual framing — applying "garbage in, garbage out" and data-poisoning concepts not to ML training data but to the practice of operating carefully-tuned production systems with AI assistance layered on top — a genuinely different angle on AI-ops risk than the typical "AI will help SREs" pitch.</li>
+<li><strong>What</strong>: A discussion of drawbacks (data poisoning, bias, inaccessibility, de-skilling) that emerge when AI assistance is introduced into carefully-tuned operational systems, plus strategies for keeping AI transparent and reliable rather than an inscrutable black box. (from abstract only)</li>
+<li><strong>How</strong>: Draws on the speakers' personal experience working around biased/broken AI-assisted systems. (from abstract only — thin on mechanism)</li>
+<li><strong>Where applicable</strong>: General for any org introducing AI-assisted tooling into existing operational systems.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="fully-automated-hw-sku-selection-system-to-optimize-apache-pinots-cost-to-serve-at-linkedin">Fully Automated HW SKU Selection System to Optimize Apache Pinot's Cost-to-Serve at LinkedIn<a class="headerlink" href="#fully-automated-hw-sku-selection-system-to-optimize-apache-pinots-cost-to-serve-at-linkedin" title="Permanent link">#</a></h3>
+<p><em>Jia Guo and Dino Occhialini, LinkedIn; Yifan (Sabrina) Zhao, Netflix</em> — <strong>Wildcard</strong></p>
+<ul>
+<li><strong>Why</strong>: Not a networking or identity fit, but a genuinely novel operational capability — automatically recommending optimal hardware SKUs across a ~14,000-machine fleet based on live workload profiling — that touches the PM's "physical" interest from an unusual angle (hardware selection as an automated, continuous optimization problem rather than a one-time procurement decision).</li>
+<li><strong>What</strong>: A fully automated system that recommends optimal hardware SKU profiles for Apache Pinot's production OLAP database fleet (~14K machines) at LinkedIn, cutting cost-to-serve by nearly 50% across highly varied workload, cost, and dataset-size characteristics. (from abstract only)</li>
+<li><strong>How</strong>: Low-overhead profiling collects high-cardinality resource-usage data (CPU, memory, IO) from production clusters across multiple SKU profiles, feeding a cost-optimization algorithm that recommends SKU allocation with minimal operational overhead. (from abstract only)</li>
+<li><strong>Where applicable</strong>: Large heterogeneous-hardware fleets running variable workloads; the general pattern (continuous, profiling-driven hardware-fit optimization rather than static procurement) generalizes beyond Pinot/OLAP specifically.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Certificate lifecycle management keeps surfacing as unglamorous but critical infrastructure.</strong> Let's Encrypt's decade of free automated CA operations and Netflix's cert-lifecycle-hardening of a 400M req/s cache both treat certs as load-bearing infrastructure requiring dedicated engineering — echoing the same crypto-agility theme from the Netflix Enigma talk at this cycle's USENIX Security (see that digest).</li>
+<li><strong>The cloud networking abstraction keeps leaking at scale.</strong> emnify's AWS networking-limits war stories and Slack's revival of classical network-graph-theory traffic attribution both argue that treating "the cloud network" as an infinite, opaque resource stops working once you're pushing real packet/connection volume.</li>
+<li><strong>Datacenter-scale chaos engineering is a maturity signal.</strong> USAA's whole-datacenter (not single-service) chaos testing suggests some organizations are moving failure-domain testing to match actual production blast radius rather than testing individual services in isolation.</li>
+<li><strong>AI/ML infrastructure operations dominated this cycle's program by sheer volume</strong> — safe model rollout, ML training governance, AI-assisted ops, AIOps vendor skepticism — but almost none of it intersects the PM's stated core interests; flagged here as a program-wide trend rather than pulled into the picks above.</li>
+<li><strong>This cycle's program is genuinely thin on networking and identity architecture specifically.</strong> Most content is observability tooling, incident-response process, and organizational/human-factors material — worth noting as a property of this program, not a sign that relevant content was filtered out.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>This digest was produced by running the repository's digest prompt by hand, from the conference's published program. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/srecon-2025-americas.md"><code>digests/srecon-2025-americas.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/srecon-2025-americas.md"><code>prompts/srecon-2025-americas.md</code></a></p>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../usenix-security-2025/" class="md-footer__link md-footer__link--prev" aria-label="Previous: USENIX Security &#x27;25 (34th USENIX Security Symposium)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                USENIX Security '25 (34th USENIX Security Symposium)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../kubecon-eu-2025/" class="md-footer__link md-footer__link--next" aria-label="Next: KubeCon + CloudNativeCon Europe 2025 (London)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                KubeCon + CloudNativeCon Europe 2025 (London)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and generator, styled after containerlab.dev -->
+<div class="md-copyright">
+    
+    <div class="md-copyright__highlight">
+        Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.
+    </div>
+    
+    Written by
+    <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+    on Nebius Token Factory · made with
+    <span class="twemoji heart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709q-.23.129-.463.252h-.002a.75.75 0 0 1-.686 0 17 17 0 0 1-.465-.252 31 31 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31 31 0 0 1 14 20.408"/></svg>
+    </span>
+    and <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hellt.github.io/conference-digest/feed_rss_created.xml" target="_blank" rel="noopener" title="hellt.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+    
+  </body>
+</html>

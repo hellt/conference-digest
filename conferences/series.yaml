@@ -402,3 +402,21 @@ series:
     program_url_template: "https://www.arin.net/participate/meetings/ARIN{n}"
     manual_fallback_url_template: "https://www.arin.net/participate/meetings/ARIN{n}"
     notes: "North American RIR meeting: IPv6, routing security/RPKI, Internet number resource policy, DNS and ARIN services. Agenda items with speakers, slide PDFs and timestamped YouTube webcasts."
+
+  # LACNIC: every lacnic<n>.lacnic.net site is a React app that loads from one
+  # open WP REST API (apievt.lacnic.net). The our_events taxonomy maps edition
+  # numbers to term ids; the agenda posts then give each item an English and
+  # Spanish title, description, speakers, session group, YouTube recordings
+  # (per language) and presentation media ids resolved to slide URLs. The
+  # agenda timestamps are also the probe's date source.
+  - series: lacnic
+    enumerate: ordinal
+    key_template: "lacnic-{n}"
+    name_template: "LACNIC {n}"
+    type: operator
+    fetcher: lacnic
+    start: 45
+    lookahead: 3
+    program_url_template: "https://apievt.lacnic.net/wp-json/wp/v2"
+    manual_fallback_url_template: "https://lacnic{n}.lacnic.net/"
+    notes: "Latin American RIR meeting with LACNOG: routing, IPv6, DNS, peering and IX, network security, CSIRTs. Titles are English when the source has them, Spanish otherwise."

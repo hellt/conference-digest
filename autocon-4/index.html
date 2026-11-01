@@ -1,0 +1,1840 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An operator-focused network automation program. Note up front: this cycle is heavy on automation practice, Day-2 operations, and the first wave of agentic-AI-in-production stories — lighter on the deep datapath&#x2f;optics&#x2f;identity material than a SIGCOMM or OSNA program, but the DC-fabric and WAN…">
+      
+      
+      
+        <link rel="canonical" href="https://hellt.github.io/conference-digest/autocon-4/">
+      
+      
+      
+        <link rel="prev" href="../autocon-5/">
+      
+      
+        <link rel="next" href="../autocon-3/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>AutoCon 4 (Austin) — Operator - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300,300i,400,400i,500,500i,700,700i%7CGoogle+Sans+Code:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Google Sans";--md-code-font:"Google Sans Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="AutoCon 4 (Austin) — Operator · Conference Digest" />
+<meta property="og:description" content="An operator-focused network automation program. Note up front: this cycle is heavy on automation practice, Day-2 operations, and the first wave of agentic-AI-in-production stories — lighter on the deep datapath/optics/identity material than a SIGCOMM or OSNA program, but the DC-fabric and WAN…" />
+<meta property="og:url" content="https://hellt.github.io/conference-digest/autocon-4/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="AutoCon 4 (Austin) — Operator · Conference Digest" />
+<meta name="twitter:description" content="An operator-focused network automation program. Note up front: this cycle is heavy on automation practice, Day-2 operations, and the first wave of agentic-AI-in-production stories — lighter on the deep datapath/optics/identity material than a SIGCOMM or OSNA program, but the DC-fabric and WAN…" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AutoCon 4 (Austin) — Operator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../category/academic/" class="md-tabs__link">
+          
+  
+  Conference type
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg>
+
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spectron-network-orchestration-in-practice-at-scale-what-works-what-hurts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Spectron: network orchestration in practice at scale; what works, what hurts
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kubernetes-network-emulation-a-standard-interface-to-design-and-validate-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kubernetes Network Emulation, a standard interface to design and validate networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overhauling-data-center-network-automation-intels-data-centric-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Overhauling Data Center Network Automation: Intel's Data-Centric Journey
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esnets-new-micro-service-based-discovery-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ESnet's new Micro-Service based Discovery Service
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling-network-operations-with-modular-ansible-a-multi-environment-automation-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Scaling Network Operations with Modular Ansible: A Multi-Environment Automation Framework
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-band-aids-to-best-practices-usaas-network-automation-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Band-Aids to Best Practices: USAA's Network Automation Journey
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-secret-to-network-config-security-compliance-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Secret to Network Config &amp; Security Compliance at Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-mcp-just-an-api-abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Is MCP just an API Abstraction?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-manual-to-marathon-my-automation-journey-at-heb" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Manual to Marathon: My Automation Journey at HEB
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toward-autonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Toward Autonomy
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2025-state-of-network-automation-survey-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2025 State of Network Automation Survey Results
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hawat-an-ai-assistant-for-network-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        HAWAT: An AI Assistant for Network Troubleshooting
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-netdevops-journey-manual-firefighting-to-agentic-autonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The NetDevOps Journey: Manual Firefighting to Agentic Autonomy
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-cli-to-model-building-a-foundational-source-of-truth-for-brownfield-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From CLI to Model: Building a Foundational Source of Truth for Brownfield Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bridging-infrastructure-and-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Bridging Infrastructure and Data
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-harmonized-standards-based-ontology-for-telco-grade-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Harmonized, Standards-based Ontology for Telco-grade Agents
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battle-of-the-bots-which-ai-models-actually-work-for-network-engineering-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Battle of the Bots: Which AI Models Actually Work for Network Engineering Tasks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conference type
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Conference type
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Academic
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operator
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standards
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendor
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spectron-network-orchestration-in-practice-at-scale-what-works-what-hurts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Spectron: network orchestration in practice at scale; what works, what hurts
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kubernetes-network-emulation-a-standard-interface-to-design-and-validate-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kubernetes Network Emulation, a standard interface to design and validate networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overhauling-data-center-network-automation-intels-data-centric-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Overhauling Data Center Network Automation: Intel's Data-Centric Journey
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esnets-new-micro-service-based-discovery-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ESnet's new Micro-Service based Discovery Service
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling-network-operations-with-modular-ansible-a-multi-environment-automation-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Scaling Network Operations with Modular Ansible: A Multi-Environment Automation Framework
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-band-aids-to-best-practices-usaas-network-automation-journey" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Band-Aids to Best Practices: USAA's Network Automation Journey
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-secret-to-network-config-security-compliance-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Secret to Network Config &amp; Security Compliance at Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-mcp-just-an-api-abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Is MCP just an API Abstraction?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-manual-to-marathon-my-automation-journey-at-heb" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Manual to Marathon: My Automation Journey at HEB
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toward-autonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Toward Autonomy
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2025-state-of-network-automation-survey-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2025 State of Network Automation Survey Results
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hawat-an-ai-assistant-for-network-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        HAWAT: An AI Assistant for Network Troubleshooting
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-netdevops-journey-manual-firefighting-to-agentic-autonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The NetDevOps Journey: Manual Firefighting to Agentic Autonomy
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-cli-to-model-building-a-foundational-source-of-truth-for-brownfield-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From CLI to Model: Building a Foundational Source of Truth for Brownfield Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bridging-infrastructure-and-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Bridging Infrastructure and Data
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-harmonized-standards-based-ontology-for-telco-grade-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Harmonized, Standards-based Ontology for Telco-grade Agents
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#battle-of-the-bots-which-ai-models-actually-work-for-network-engineering-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Battle of the Bots: Which AI Models Actually Work for Network Engineering Tasks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="./.." class="md-nav__link">
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="../images/tofarev.svg" alt="ToFaRev">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://github.com/hellt/tofarev">ToFaRev</a>
+                        
+                      </strong>
+                      <br>
+                      GLM-5.3-Flash on Nebius Token Factory
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-calendar-days" viewBox="0 0 24 24"><path d="M8 2v3M16 2v3"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg>
+                        <time datetime="2026-11-01 00:00:00+00:00" class="md-ellipsis">November 1, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-library" viewBox="0 0 24 24"><path d="m16 6 4 14M12 6v14M8 8v12M4 4v16"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../category/operator/">Operator</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              21 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      
+        
+
+  
+  
+
+
+<h1 id="autocon-4-austin-operator">AutoCon 4 (Austin) — Operator<a class="headerlink" href="#autocon-4-austin-operator" title="Permanent link">#</a></h1>
+<p>An operator-focused network automation program. Note up front: this cycle is heavy on automation practice, Day-2 operations, and the first wave of agentic-AI-in-production stories — lighter on the deep datapath/optics/identity material than a SIGCOMM or OSNA program, but the DC-fabric and WAN operator case studies below are directly on-target.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 13.5v8H3v-8zm-2 2H5v4h4zM12 2l5.5 9h-11zm0 3.86L10.08 9h3.84zM17.5 13c2.5 0 4.5 2 4.5 4.5S20 22 17.5 22 13 20 13 17.5s2-4.5 4.5-4.5m0 2a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg></span> Operator</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2V5a2 2 0 0 0-2-2m0 16H5V9h14zM5 7V5h14v2zm5.56 10.46 5.94-5.93-1.07-1.06-4.87 4.87-2.11-2.11-1.06 1.06z"/></svg></span> Ended November 21, 2025</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.19 2.25c-.26 0-.52.06-.77.15L3.06 5.45a1.994 1.994 0 0 0-1.09 2.6L6.93 20a2 2 0 0 0 1.81 1.25c.26 0 .53-.03.79-.15l7.37-3.05a2.02 2.02 0 0 0 1.23-1.8c.01-.25-.04-.54-.13-.8L13 3.5a1.95 1.95 0 0 0-1.81-1.25m3.48 0 3.45 8.35V4.25a2 2 0 0 0-2-2m4.01 1.54v9.03l2.43-5.86a1.99 1.99 0 0 0-1.09-2.6m-10.28-.14 4.98 12.02-7.39 3.06L3.8 7.29"/></svg></span> 17 picks (8 core · 7 adjacent · 2 wildcard)</span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42"/></svg></span> <a href="https://networkautomation.forum/autocon4">Program</a></span>
+<span class="digest-fact" markdown><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 15.5c0 1.11-.89 2-2 2s-2-.89-2-2 .9-2 2-2 2 .9 2 2m-9-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2z"/></svg></span> ToFaRev (zai-org/GLM-5.3)</span></p>
+</div>
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="spectron-network-orchestration-in-practice-at-scale-what-works-what-hurts">Spectron: network orchestration in practice at scale; what works, what hurts<a class="headerlink" href="#spectron-network-orchestration-in-practice-at-scale-what-works-what-hurts" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_General-Session/AC4-KatarzynaKurowska-AldrinIsaac-Spectron.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_General-Session/AC4-KatarzynaKurowska-AldrinIsaac-Spectron.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=RbBlNKj2IW8"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="RbBlNKj2IW8" data-start="0" href="https://www.youtube.com/watch?v=RbBlNKj2IW8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/RbBlNKj2IW8/hqdefault.jpg" alt="Play the recording: Spectron: network orchestration in practice at scale; what works, what hurts" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Katarzyna Kurowska &amp; Aldrin Isaac — eBay (Senior Software Engineer; Director, Site Network Engineering &amp; Security)</p>
+<ul>
+<li><strong>Why</strong>: The single most relevant talk for physical DC fabric work: how a hyperscale-adjacent operator designs, provisions, and validates diverse DC topologies with an in-house intent-based system — including a candid "what hurts" section, which is rarer and more useful than the wins.</li>
+<li><strong>What</strong>: Spectron is eBay's spec-driven, intent-based fabric orchestration covering the ZTP lifecycle: fabric planning, spec generation, rack/TOR power-on, and deployment. Engineers write JSON topology specs (site, IP spec, node/interface specs for spines/leaves); the system renders device config, validates against a digital twin, and deploys. Multi-vendor, with explicit SONiC support. The "what hurts" half is the real value: abstractions that came out too generic or too limiting, prototypes that silently became production code, and SONiC's promise of a unified software stack across interchangeable hardware colliding with per-vendor functionality and API discrepancies.</li>
+<li><strong>How</strong>: Layered, composable abstractions — Layout (NodeSpec + InterfaceSpec), IP addressing (IPSpec + IPAllocationSpec), routing (RoutingSpec), and fungible hardware via PlatformSpec + NodeProfile — with rendering decoupled from generation and renderers composed from reusable blocks. GNS3-based topology emulation verifies before production deploy. A custom schema language and model generator keep it extensible; an adapter principle absorbs multi-vendor SONiC differences.</li>
+<li><strong>Where applicable</strong>: eBay-specific build, but the architecture lessons (define your domain early, design around primitives, embed NetEng in the dev cycle, early verification at every lifecycle stage) transfer to any operator building or buying fabric automation. Future work listed: EVPN/VXLAN overlay, test/Day-2 framework, traffic filters, HA/scalability — worth tracking if you have adjacency with the team.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="kubernetes-network-emulation-a-standard-interface-to-design-and-validate-networks">Kubernetes Network Emulation, a standard interface to design and validate networks<a class="headerlink" href="#kubernetes-network-emulation-a-standard-interface-to-design-and-validate-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_General-Session/AC4-ManodiptoGhose-RyanElliott-KubernetesNetworkEmulation.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_General-Session/AC4-ManodiptoGhose-RyanElliott-KubernetesNetworkEmulation.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a></p>
+</div>
+<p>Manodipto Ghose &amp; Ryan Elliott (no affiliation given in program)</p>
+<ul>
+<li><strong>Why</strong>: Sits exactly at the intersection of the PM's cloud-native and physical-network interests: it uses Kubernetes as the substrate for emulating real multi-vendor network OSes, enabling shift-left validation without lab hardware.</li>
+<li><strong>What</strong>: KNE (openconfig/KNE) is a vendor-neutral network device emulation framework: containerized vendor NOS images wired into arbitrary topologies on Kubernetes, with lifecycle management provided by k8s. Paired with the OpenConfig Feature Profiles repo and the ONDATRA test framework, it enables "write test once, run anywhere" — the same tests against a virtual KNE testbed and a physical one. Claimed outcomes: weeks/months saved over waiting for testbed procurement, and at least 50% savings in testbed build costs.</li>
+<li><strong>How</strong>: Topology defined as nodes (vendor NOS containers, e.g. Arista cEOS, with bootstrap config and certs) plus A-to-Z links; Ixia-c (containerized Open Traffic Generator, OTG model-based API with Snappir/GoSnappi SDKs) injects traffic and emulates control planes (e.g. BGP peers) at points in the topology. OTG scales from containers to hardware generators via the same API.</li>
+<li><strong>Where applicable</strong>: Open-source and broadly applicable, with one hard dependency: your NOS must have a container image (major vendors do). Best fit for feature/compliance testing and CI; not a performance- or optics-fidelity tool — control-plane and functional behavior only. The "compliance as code" angle (shared test suites in featureprofiles) is a genuine standardization play worth watching.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="overhauling-data-center-network-automation-intels-data-centric-journey">Overhauling Data Center Network Automation: Intel's Data-Centric Journey<a class="headerlink" href="#overhauling-data-center-network-automation-intels-data-centric-journey" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day1_Wed_19Nov_Single-Track/AC4-GregBotts-IntelsDataCentricJourney.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day1_Wed_19Nov_Single-Track/AC4-GregBotts-IntelsDataCentricJourney.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=wl1STXalmEQ"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="wl1STXalmEQ" data-start="0" href="https://www.youtube.com/watch?v=wl1STXalmEQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/wl1STXalmEQ/hqdefault.jpg" alt="Play the recording: Overhauling Data Center Network Automation: Intel's Data-Centric Journey" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Greg Botts — Intel (Senior Network Engineer)</p>
+<ul>
+<li><strong>Why</strong>: A rare full-journey DC automation case study at real scale (global, 5k+ devices, new network platform + new automation system simultaneously), with a clear architectural position: data first, everything else is a by-product.</li>
+<li><strong>What</strong>: Intel IT replaced a turnkey vendor automation solution (inflection point: roadmap, scale, and cost limits) with a data-centric system built on Nautobot as the network source of truth, plus open-source components, DBaaS, and config generation. Timelines are concrete: 6-month prototype, 8-month pilot, 1-year migrations — delivered on time and under budget. Results: provisioning time reduced ~75%, 100% standardized configs.</li>
+<li><strong>How</strong>: Foundation is modeled, centralized, programmatically accessible network data (device inventory, device data, jobs, golden config → intended config). Key learnings: model for scale, right-size and enable log-cleaner (hosting matters), and "relentlessly standardize" — eliminate one-offs. The modeled data is explicitly positioned as the on-ramp for AI ("table is set for AI") and self-service for partners and customers.</li>
+<li><strong>Where applicable</strong>: Intel-internal, but the methodology (data-first, NSoT as foundation, staged rollout) is general and vendor-neutral — Nautobot is open source. Most useful if you run a large multi-site DC estate and are weighing build-vs-buy on automation; the talk includes their actual build/buy criteria list.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="esnets-new-micro-service-based-discovery-service">ESnet's new Micro-Service based Discovery Service<a class="headerlink" href="#esnets-new-micro-service-based-discovery-service" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_PM_General-Session/AC4-MarcKoerner-ESnetDiscoveryService.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_PM_General-Session/AC4-MarcKoerner-ESnetDiscoveryService.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=AxSFCr7zo40"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="AxSFCr7zo40" data-start="0" href="https://www.youtube.com/watch?v=AxSFCr7zo40" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/AxSFCr7zo40/hqdefault.jpg" alt="Play the recording: ESnet's new Micro-Service based Discovery Service" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Marc Koerner — ESnet</p>
+<ul>
+<li><strong>Why</strong>: ESnet operates a national science WAN with optical line systems — the closest thing in this program to the PM's DC/WAN interconnect and optics interests. This is a production (since June 2025) redesign of how bulk network data is collected and normalized, born from real operational pain.</li>
+<li><strong>What</strong>: A Kafka-based, notification-driven discovery and document-repository architecture replacing per-application polling. Previously, multiple tools independently queried devices for overlapping purposes (optical circuit sync with the config DB, L2/L3 topology for the OSCARS L2VPN tool), causing redundant collection, inconsistent data across apps, and unnecessary device/network load. The Discovery Service centralizes this into one low-friction mechanism with pluggable normalizers.</li>
+<li><strong>How</strong>: Agent Controller (scheduler, dedup of discovery requests) distributes work via Kafka to Discovery Agents, which pull data from sources — NETCONF from devices, RESTCONF from the TNMS management system, or even spreadsheets. Documents (up to 80MB, compressed) land in the "Andy Lake Service" repository with metadata and history; stacked/parallel normalizers (implementing the TOWL equipment ontology) generate normalized views and compute change notifications. Fine-grained controls: configurable audit intervals, namespace-level gets, regex filters to strip counters and sensitive data before storage. Deployed as microservices on Kubernetes (two prod clusters plus staging) with GitLab/Argo CD/Rancher.</li>
+<li><strong>Where applicable</strong>: ESnet-specific stack (Kafka, TOWL, k8s), but the design pattern — notification-driven bulk data management with normalized views — generalizes to any multi-tool operator drowning in redundant polling. The honesty about equipment is valuable: vendor NETCONF/YANG standard violations, devices that lock up under discovery, models so large the device times out, and NSO being slow at non-config retrieval. Budget for these if you attempt the same.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="scaling-network-operations-with-modular-ansible-a-multi-environment-automation-framework">Scaling Network Operations with Modular Ansible: A Multi-Environment Automation Framework<a class="headerlink" href="#scaling-network-operations-with-modular-ansible-a-multi-environment-automation-framework" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_Advanced-Track/AC4-JosephNicholson-ScalingNetOpsWithModularAnsible.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_Advanced-Track/AC4-JosephNicholson-ScalingNetOpsWithModularAnsible.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=mVq5bdkiskg"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="mVq5bdkiskg" data-start="0" href="https://www.youtube.com/watch?v=mVq5bdkiskg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/mVq5bdkiskg/hqdefault.jpg" alt="Play the recording: Scaling Network Operations with Modular Ansible: A Multi-Environment Automation Framework" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Joseph Nicholson — NTT DATA, Global IP Network (AS2914)</p>
+<ul>
+<li><strong>Why</strong>: A Tier-1 transit backbone operator's playbook for scaling Ansible across a multi-vendor WAN including DWDM — backbone routers across three vendors, optical across two — which matches the PM's WAN and interconnect focus.</li>
+<li><strong>What</strong>: Six years of evolving an Ansible repository into a modular, multi-environment automation framework serving GIN's 800+ network elements (250+ backbone routers, 100+ DWDM elements across 5 continents, 40+ countries, 90+ PoPs), covering software upgrades, maintenance snapshots, traffic updates, and circuit testing — run from CLI and AWX.</li>
+<li><strong>How</strong>: Dynamic inventory is a Python script pulling all device data (platform, vendor, OS, location, monitoring status) from GUMS, their in-house change-management system with 25+ years of lineage (started as Verio tooling in the late 1990s) — groups are built per vendor/platform/device-type on every playbook run. CI/CD pipeline gates merges on <code>#FIXME</code> tags and syncs revision vars to AWX hourly; task files are shared across playbooks with a careful include (dynamic) vs import (static) discipline; folder structure is per-playbook, subdivided per NOS.</li>
+<li><strong>Where applicable</strong>: NTT GIN-specific in its dependence on GUMS and org history, but the transferable lessons are explicit: adopt pipeline and AWX APIs earlier, enforce repository naming policy, use dynamic inventory from your existing change system rather than maintaining static files, and understand include/import semantics before sharing task files. Honest about the trade-off: shared task files update many playbooks at once — and break many at once.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="from-band-aids-to-best-practices-usaas-network-automation-journey">From Band-Aids to Best Practices: USAA's Network Automation Journey<a class="headerlink" href="#from-band-aids-to-best-practices-usaas-network-automation-journey" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_PM_General-Session/AC4-BrandonCavett-BestPracticesAtUSAA.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_PM_General-Session/AC4-BrandonCavett-BestPracticesAtUSAA.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=MEDwtGy99jQ"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="MEDwtGy99jQ" data-start="0" href="https://www.youtube.com/watch?v=MEDwtGy99jQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/MEDwtGy99jQ/hqdefault.jpg" alt="Play the recording: From Band-Aids to Best Practices: USAA's Network Automation Journey" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Brandon Cavett — USAA (Senior Infrastructure Engineer)</p>
+<ul>
+<li><strong>Why</strong>: A concrete, Arista-centric DC story of the pattern most enterprises actually live: Day-1 rack provisioning automated early, Day-2 becoming the real problem, and config-as-code (AVD) as the resolution — including retrofit difficulty and engineer-training costs.</li>
+<li><strong>What</strong>: USAA built end-to-end automated rack provisioning (CloudVision config builders via API, switch provisioning in under an hour hands-off), then hit Day-2 reality: CLI-first changes, drift between designed and running config in CloudVision when standalone Ansible playbooks pushed directly to switches, and heavy per-playbook testing. They adopted Arista AVD (Architect, Validate, Deploy), which standardized config fabric-wide, enabled sweeping changes quickly, and let them use CloudVision's change-control process to pre-stage and review changes. Most recent environments are 100% config-as-code; the Day-1 provisioning pipeline was replaced by AVD entirely.</li>
+<li><strong>How</strong>: AVD (Ansible collection) generates config from structured intent and deploys via eAPI or CloudVision; pre-provisioning pipelines export the data needed to add new switches into AVD. Next steps: wrap the whole process in CI/CD with Arista Cloud Test (ACT) for pre-deployment testing and ANTA for post-validation, plus retrofitting legacy environments.</li>
+<li><strong>Where applicable</strong>: USAA/Arista-specific (AVD, CloudVision, ACT/ANTA are Arista tooling), so directly applicable only to EOS/CVP estates — but the drift problem from out-of-band playbook changes, the change-control-integration pattern, and the "training traditional network engineers on Git/CI/Ansible is the hard part" observation generalize broadly.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="the-secret-to-network-config-security-compliance-at-scale">The Secret to Network Config &amp; Security Compliance at Scale<a class="headerlink" href="#the-secret-to-network-config-security-compliance-at-scale" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day3_Fri_21Nov_Single-Track/AC4-VincentPhelan-Compliance.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day3_Fri_21Nov_Single-Track/AC4-VincentPhelan-Compliance.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=nSlSDb8B2Ks"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="nSlSDb8B2Ks" data-start="0" href="https://www.youtube.com/watch?v=nSlSDb8B2Ks" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/nSlSDb8B2Ks/hqdefault.jpg" alt="Play the recording: The Secret to Network Config  Security Compliance at Scale" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Vincent Phelan — Head of Network Architecture &amp; Automation (financial sector)</p>
+<ul>
+<li><strong>Why</strong>: The PM's network-security interest gets its strongest entry here: a working, scaled config-compliance system at a bank, with real numbers, built on open components (OPA, TextFSM, GitOps) rather than a compliance product.</li>
+<li><strong>What</strong>: A config/security compliance pipeline that runs compliance for 7,000 devices against 70 policies in about one minute, treating architecture (constraints, standardization, cutting the product count) and automation as one discipline rather than two teams. Includes five anti-patterns from 20 years of war stories — premature optimization, snowflake-tolerant design, manual data massaging, imaginary scaling fears, and forcing formats (YAML/Jinja2) on engineers who don't natively speak them.</li>
+<li><strong>How</strong>: Collect generic data from any source via device command output, parse with TextFSM ("yet to find something more generic and not AI"), filter junk before processing, and keep everything with a "not yet" adage. Compliance rules are expressed as Open Policy Agent (Rego) policies — and, in the "write programs that write programs" spirit, the OPA policies themselves are auto-generated with expected/actual/allow fields and control-mapping metadata (control ID, description) baked into each evaluation, producing per-device, per-control, per-evaluation overviews. The GitOps repo scales to 3.5M objects / ~20GB. Drift detection and remediation close the loop.</li>
+<li><strong>Where applicable</strong>: Technique is org-agnostic and built on open source; the control-mapping metadata pattern is especially transferable to any regulated environment (financial, healthcare) where compliance evidence must tie to specific controls. The architecture-first stance (reduce product count before automating) is a prerequisite, not an option — the speaker is explicit that automation bolted onto a patchwork fails.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="is-mcp-just-an-api-abstraction">Is MCP just an API Abstraction?<a class="headerlink" href="#is-mcp-just-an-api-abstraction" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_Advanced-Track/AC4-WilliamCollins-MCP.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_Advanced-Track/AC4-WilliamCollins-MCP.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=-SKWJhKseEE"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="-SKWJhKseEE" data-start="0" href="https://www.youtube.com/watch?v=-SKWJhKseEE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/-SKWJhKseEE/hqdefault.jpg" alt="Play the recording: Is MCP just an API Abstraction?" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>William Collins — Director, Technical Evangelism</p>
+<ul>
+<li><strong>Why</strong>: MCP is the emerging protocol substrate for agentic systems interacting with infrastructure — directly relevant to the PM's workload/agentic identity and protocol interests (how agents authenticate, discover capabilities, and get scoped access is the same problem class as OAuth/OIDC/SPIFFE, one layer up). This is the sharpest protocol-level dissection in the program.</li>
+<li><strong>What</strong>: A point-by-point architectural comparison of MCP against REST APIs, concluding MCP is not merely an API wrapper: REST is stateless, URL-routed, and built for human developers; MCP is a stateful, session-based JSON-RPC protocol with dynamic capability discovery, built for AI models to interact with external systems safely. The framing of the N×M integration problem (N models × M tools = N×M custom integrations, with quadratic maintenance and vendor lock-in) collapsing to N+M (N clients + M servers) is the clearest articulation of why the protocol matters.</li>
+<li><strong>How</strong>: MCP's three primitives — Resources (read data/context), Prompts (templates), Tools (execute actions) — plus context (semantically-tagged data loaded into the model's window) and logs (diagnostics pushed back). Decorators auto-generate tool schemas from docstrings, eliminating the glue code and agent-loop plumbing of hand-rolled function calling. The talk's best design guidance is intention-based tool design (<code>run_compliance_check(device_group, policy)</code> rather than endpoint-mapped getters), role-based capability filtering via tags to prevent decision paralysis, and MCP gateway patterns as evolution paths. It also cleanly separates intelligence (understanding intent) from scale (concurrency, multi-tenancy).</li>
+<li><strong>Where applicable</strong>: Protocol-general, vendor-neutral, with working code (github.com/wcollins/talks). Caveat: the speaker is a technical evangelist, but the content is architecture analysis, not a product pitch. Directly applicable to anyone designing agent-to-infrastructure access — and the role-based tool-exposure idea is effectively least-privilege scoping for agents, a live question in agentic identity.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="from-manual-to-marathon-my-automation-journey-at-heb">From Manual to Marathon: My Automation Journey at HEB<a class="headerlink" href="#from-manual-to-marathon-my-automation-journey-at-heb" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_General-Session/AC4-ErichCrosswhite-ManualToMarathonAtHEB.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_General-Session/AC4-ErichCrosswhite-ManualToMarathonAtHEB.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=jhxgJNrWeY0"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="jhxgJNrWeY0" data-start="0" href="https://www.youtube.com/watch?v=jhxgJNrWeY0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/jhxgJNrWeY0/hqdefault.jpg" alt="Play the recording: From Manual to Marathon: My Automation Journey at HEB" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Erich Crosswhite — H-E-B</p>
+<ul>
+<li><strong>Why</strong>: The best near-miss postmortem in the program: a change that nearly removed DNS servers from the production config chain, what guardrail failed, and how the pipeline was hardened afterward.</li>
+<li><strong>What</strong>: An IaC journey for a new Arista environment at a 400+ store retailer: AVD-based config generation, GitLab MRs with peer review, AWX webhooks, CloudVision (CVaaS) change controls, auto-generated Confluence docs, and — after the near-miss — Nautobot integration for access-port config that was subsequently removed, not because the product failed, but because the author's scripting lacked controls.</li>
+<li><strong>How</strong>: The DNS incident: a Nautobot data cleanup (logical cables disconnected) propagated through CI/CD and the generated config dropped DNS servers; luck (<code>execute_tasks: false</code> in CloudVision) prevented an outage. The fix: build stage generating config from both main and feature branches, a validate stage diffing them plus Batfish verification, results reported directly into the merge request for review before deploy. Also includes a lab cautionary tale (a <code>state: absent</code> that wiped the lab fabric to ZTP) and future work toward Container Lab digital twins with ANTA validation.</li>
+<li><strong>Where applicable</strong>: H-E-B/enterprise-specific and Arista-stack-specific, but the pipeline design (MR-integrated diff + Batfish gates, guardrails around SoT-driven generation) is adoptable by anyone. The core lesson — the SoT product was fine; the unguarded integration was the risk — generalizes completely.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="toward-autonomy">Toward Autonomy<a class="headerlink" href="#toward-autonomy" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_General-Session/AC4-ScottRobohn-TowardAutonomy.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_General-Session/AC4-ScottRobohn-TowardAutonomy.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=esVkHChgSg8"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="esVkHChgSg8" data-start="0" href="https://www.youtube.com/watch?v=esVkHChgSg8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/esVkHChgSg8/hqdefault.jpg" alt="Play the recording: Toward Autonomy" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Scott Robohn — NAF | Solutional</p>
+<ul>
+<li><strong>Why</strong>: The best framing talk of the cycle for where closed-loop network operations is heading — useful context for any PM whose roadmap touches autonomous remediation.</li>
+<li><strong>What</strong>: "Control Plane 3.0": autonomy as a continuum (scripted automation → goal-driven adaptive behavior), not a feature you turn on. Argues we already run autonomous systems — BGP being the exemplary model (distributed, convergent, bounded impact) — and enumerates the necessary ingredients: control loops fed by telemetry, fail-safe error handling for states you didn't anticipate, incremental workflow-by-workflow development, and people and trust built through measurable experiments and gated rollouts.</li>
+<li><strong>How</strong>: Phased rollout per use case (experiment → PoC → limited prod → scale), with a difficulty tiering that rings true (easy: device OS upgrade, branch CPE turn-up; medium: SP edge turn-up, multi-tenant segmentation; hard: global failover orchestration, brownout mitigation, intent-drift remediation). AI is positioned as a "how, not a what" — one tool among several, with hybrids of AI and traditional mechanisms called the most likely effective path. Reference scaffolds: TM Forum autonomy models, ETSI ENI, IBN — "models as scaffolding, not doctrine."</li>
+<li><strong>Where applicable</strong>: Conceptual rather than a case study, but the difficulty tiers and cross-domain orchestration framing (LAN + DC + WAN + cloud + security, and IP/optical alignment as an opportunity) are directly relevant to DC/WAN planning. No org-specific dependencies.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="2025-state-of-network-automation-survey-results">2025 State of Network Automation Survey Results<a class="headerlink" href="#2025-state-of-network-automation-survey-results" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day1_Wed_19Nov_Single-Track/AC4-ChrisGrundemann-2025NetworkAutomationSurveyResults.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day1_Wed_19Nov_Single-Track/AC4-ChrisGrundemann-2025NetworkAutomationSurveyResults.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=DihuRAAXA0A"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="DihuRAAXA0A" data-start="0" href="https://www.youtube.com/watch?v=DihuRAAXA0A" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/DihuRAAXA0A/hqdefault.jpg" alt="Play the recording: 2025 State of Network Automation Survey Results" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Chris Grundemann — Network Automation Forum</p>
+<ul>
+<li><strong>Why</strong>: Field-wide data every PM in this space should have on hand: 681 responses (352 complete) across 58 countries and 34 industries — an order of magnitude larger than prior years (106 in 2024, 78 in 2023).</li>
+<li><strong>What</strong>: The headline findings paint a less rosy picture than conference hallways suggest. Mean self-assessed automation is 37.5% (down from ~42% the prior two years — plausibly a sampling effect from more early-stage and enterprise respondents), 73% of orgs are at or below 50% automated. The "half-nots": half of organizations have less than 30% automation, no LLM plans (only 3% have LLMs deployed with production network access; ~45% have no plans), zero dedicated automation staff, don't measure automation success, and are misaligned with leadership. 44% of reported barriers are "people" problems (skills 27%, organizational 20%, cultural 14%); technical is only 10%.</li>
+<li><strong>How</strong>: Survey methodology with year-over-year comparability caveats the presenter himself flags ("Caveat Emptor" — sample composition shifted notably: 39% USA vs 58% in 2023, enterprise share up to 42%). Tooling data: 82% homebrew, Ansible dominates OSS (53%), Python at 93% of scripting; top automated tasks are backups and device deployment; the largest gaps between current and desired automation are troubleshooting (+223), capacity planning (+167), and traffic engineering (+156).</li>
+<li><strong>Where applicable</strong>: Globally sourced and broadly indicative rather than statistically pure — use the directional findings (people barriers, the troubleshooting gap, minimal production AI) to calibrate roadmap assumptions, not as precise benchmarks.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="hawat-an-ai-assistant-for-network-troubleshooting">HAWAT: An AI Assistant for Network Troubleshooting<a class="headerlink" href="#hawat-an-ai-assistant-for-network-troubleshooting" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_PM_General-Session/AC4-KarlNewell-HAWAT.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_PM_General-Session/AC4-KarlNewell-HAWAT.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=nEWnIYK3koI"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="nEWnIYK3koI" data-start="0" href="https://www.youtube.com/watch?v=nEWnIYK3koI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/nEWnIYK3koI/hqdefault.jpg" alt="Play the recording: HAWAT: An AI Assistant for Network Troubleshooting" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Karl Newell &amp; Matt Mullins — Internet2</p>
+<ul>
+<li><strong>Why</strong>: A working agentic AI assistant interfacing directly with network hardware at a national research network — one of the few demos in the program where an LLM-driven agent reasons through real protocol failure modes.</li>
+<li><strong>What</strong>: HAWAT (Heuristic Analysis With Adaptive Troubleshooting): an agentic chatbot that interprets network conditions and executes commands on infrastructure. Demonstrated on both a lab topology and Internet2's 88-device production-scale national network (aggregation routers, core routers, global exchange points), including live latency tests (NY–LA, ~69ms) and BGP route-origin analysis per neighbor/VRF.</li>
+<li><strong>How</strong>: LLM + RAG (over network documentation) + ReAct agentic framework. The demos shown are the convincing kind: diagnosing an OSPF adjacency failure to a hello-interval mismatch (10s vs 20s) with the specific log lines, explaining adjacency flapping from "inactivity timer expired" / "nbr did not list our router ID", and drawing ASCII topology with data-plane vs management-plane distinction. Next steps are MCP and agent-to-agent protocols.</li>
+<li><strong>Where applicable</strong>: Internet2 research-network context, and the demos include pre-recorded sessions — evaluate the failure-diagnosis patterns rather than production readiness. The approach (LLM as reasoning front-end over a bounded command set, with RAG grounding in topology and docs) is replicable in any environment; the risk profile of letting it execute commands is yours to scope.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="the-netdevops-journey-manual-firefighting-to-agentic-autonomy">The NetDevOps Journey: Manual Firefighting to Agentic Autonomy<a class="headerlink" href="#the-netdevops-journey-manual-firefighting-to-agentic-autonomy" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day3_Fri_21Nov_Single-Track/AC4-ClosingKeynote-GregFreeman.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day3_Fri_21Nov_Single-Track/AC4-ClosingKeynote-GregFreeman.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=woGsjPS7cro"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="woGsjPS7cro" data-start="0" href="https://www.youtube.com/watch?v=woGsjPS7cro" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/woGsjPS7cro/hqdefault.jpg" alt="Play the recording: The NetDevOps Journey: Manual Firefighting to Agentic Autonomy" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Greg Freeman — Lumen (VP Network &amp; Customer Transformation) — Closing Keynote</p>
+<ul>
+<li><strong>Why</strong>: Scale and candor from one of the world's largest networks — ~340,000 fiber route miles, 350+ Tbps backbone, AS1 — on both what large-scale automation achieved and a sober reading of AI's failure statistics.</li>
+<li><strong>What</strong>: Lumen's operational transformation: 80% "hands out of the network" via machine-to-machine communication, 350+ workflows developed, running at a pace of ~10 workflows per minute 24×7, built on Itential orchestration with an integration layer spanning ticketing, alarming (Splunk, RFM), CMDB, and dozens of system adapters. The second half pivots to AI: an MCP architecture with an MCP service layer (Ollama in DDC, Databricks/Claude) exposing internal tools to agents, plus a "Supervisor Agent" above them — and an AI use case for pinpointing fiber-cut GPS locations.</li>
+<li><strong>How</strong>: The automation strategy is standards-plus-process ("no shortcuts": PDDs, SDDs, training, "upscaling employees" rather than replacing them). The AI section is notable for citing both Wharton's optimistic outlook and MIT's cautionary one (of $30–40B invested in custom AI projects, ~95% see zero return; organizational readiness, not technology, is the limiter), plus clear "what AI is not" caveats: non-deterministic outputs need human oversight, it is not a universal replacement, and it requires continual upkeep.</li>
+<li><strong>Where applicable</strong>: Lumen-specific scale and Itential-based stack — the workflow counts and mediation architecture are their topology. Transferable: the tiered support-culture shift, the supervisor-agent-over-MCP-services pattern, and the discipline of treating AI adoption as an organizational-readiness problem. Treat the ROI claims as directional; the cited MIT/Wharton tension is the honest part.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="from-cli-to-model-building-a-foundational-source-of-truth-for-brownfield-networks">From CLI to Model: Building a Foundational Source of Truth for Brownfield Networks<a class="headerlink" href="#from-cli-to-model-building-a-foundational-source-of-truth-for-brownfield-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_Advanced-Track/AC4-MunachimsoNwaiwu-FromCLItoModel.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_Advanced-Track/AC4-MunachimsoNwaiwu-FromCLItoModel.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=5iIx-PYqbBI"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="5iIx-PYqbBI" data-start="0" href="https://www.youtube.com/watch?v=5iIx-PYqbBI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/5iIx-PYqbBI/hqdefault.jpg" alt="Play the recording: From CLI to Model: Building a Foundational Source of Truth for Brownfield Networks" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Munachimso Nwaiwu — Revelo (open-source project)</p>
+<ul>
+<li><strong>Why</strong>: Addresses the barrier that stops most brownfield automation: no source of truth on a legacy network with no budget — with an open-source methodology and working code rather than advice.</li>
+<li><strong>What</strong>: A three-step pipeline ("Revelo"): bootstrap an inventory (either explicit IP/credentials/platform, or discovered via <code>nmap -O</code> including hidden subnet devices), build a structured SOT by parsing live state into JSON, and validate state with automated diffs. Demonstrated on a multi-vendor lab (Cisco IOS/IOS-XE/NX-OS, Junos).</li>
+<li><strong>How</strong>: NAPALM for vendor-neutral getters (facts, interfaces IPs, LLDP neighbors), Netmiko as the "truck" for CLI commands NAPALM doesn't cover, and Genie (pyATS) as the parser. The versioning design is the clever part: <code>inventory/1/</code>, <code>sot/1_2/</code> (snapshot 2 under inventory 1), <code>diff/1_2/</code> — producing an auditable history and two validation modes: live compliance ("is the network compliant right now?") and offline audit ("what changed last night?") with clean structured diffs instead of config noise.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to any brownfield network with programmatic CLI/API access — no greenfield or budget required, and the components are all mainstream open source. Limits: it captures operational state as the baseline, so your "intended state" is initially defined by whatever is actually running — a starting point, not a governance model.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="bridging-infrastructure-and-data">Bridging Infrastructure and Data<a class="headerlink" href="#bridging-infrastructure-and-data" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_Advanced-Track/AC4-MarcoMartinez-BridgingInfrastructureAndData.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day2_Thurs_20Nov_AM_Advanced-Track/AC4-MarcoMartinez-BridgingInfrastructureAndData.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=eU6-fYqch8Y"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="eU6-fYqch8Y" data-start="0" href="https://www.youtube.com/watch?v=eU6-fYqch8Y" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/eU6-fYqch8Y/hqdefault.jpg" alt="Play the recording: Bridging Infrastructure and Data" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Marco Martinez — Swisscom (Infrastructure Automation Architect)</p>
+<ul>
+<li><strong>Why</strong>: An IPAM-relevant engineering talk: dynamic, SoT-driven resource allocation (e.g. "give me an unused IP") pushed directly into Terraform, solving the impedance mismatch between dynamic schemas and static provider definitions.</li>
+<li><strong>What</strong>: A proof-of-concept custom Terraform provider for Infrahub, powered by GraphQL, that eliminates static <code>.tfvars</code> files and makes infrastructure data (unused IPs, standard vSwitch configs, cloud-provider IP reservations) directly available — read-only and read-write — inside IaC workflows, with an automated pipeline that builds and publishes the provider.</li>
+<li><strong>How</strong>: The core problem is that Infrahub has a dynamic schema (no default schema; it changes per instance and branch) while Terraform providers expect static schemas in Go — and no Go SDK existed for Infrahub. The solution: a generator that takes your GraphQL queries, uses genqlient to produce a typed Go SDK, and templates a provider from them — schema baked in per version, published to a private registry, <code>make all</code> to build. Documented honestly: the design choices brought significant complexity, and self-built providers are not the norm.</li>
+<li><strong>Where applicable</strong>: PoC-stage and Swisscom-context; the pattern (dynamically generating a provider from queries rather than hand-maintaining one) generalizes to any GraphQL-backed SoT/IPAM system (Infrahub, or similar). Directly relevant to anyone who wants IPAM allocation to happen inside Terraform plans instead of spreadsheets.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="a-harmonized-standards-based-ontology-for-telco-grade-agents">A Harmonized, Standards-based Ontology for Telco-grade Agents<a class="headerlink" href="#a-harmonized-standards-based-ontology-for-telco-grade-agents" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day3_Fri_21Nov_Single-Track/AC4-DaveDuggal-Graphs.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day3_Fri_21Nov_Single-Track/AC4-DaveDuggal-Graphs.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=LydZQboIm5E"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="LydZQboIm5E" data-start="0" href="https://www.youtube.com/watch?v=LydZQboIm5E" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/LydZQboIm5E/hqdefault.jpg" alt="Play the recording: A Harmonized, Standards-based Ontology for Telco-grade Agents" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Dave Duggal — EnterpriseWeb (founder/CEO)</p>
+<ul>
+<li><strong>Why</strong>: Not a fit for the PM's core stack, but it is the most idea-dense 30 minutes in the program: a serious architectural argument for why LLM agents can't be telco-grade without formal knowledge engineering — and a critique of the industry's current GraphRAG/RAG direction.</li>
+<li><strong>What</strong>: The argument: statistical pattern matching (GenAI/agentic AI) is not good enough for reliable, available networks — backed by cited benchmarks (best-performing models at 25% full-sequence-match accuracy on nested API-call tasks; "context rot" research; Apple's "illusion of thinking"). The proposal: knowledge graphs with formal ontologies (harmonizing 3GPP, O-RAN, TMF, ETSI NFV, TOSCA, MPLIFY LSO) as the deterministic layer, with the KG as a "control language" over language models — low-token, low-latency, energy-efficient, deterministically validating inferences — and as a secure blackboard providing shared memory, domain knowledge, temporal history, and tools to agents under strong governance.</li>
+<li><strong>How</strong>: The technical meat is a "ladder of abstraction" from relational tables through labeled-property graphs and RDF triplestores to hypergraphs supporting multi-dimensional, conditional, n-ary relationships — with pointed analysis of why each lower rung fails (joins are expensive; LPGs can't model n-ary object relationships; RDF triples explode with complexity). The KG sits behind an MCP server as "Context-as-a-Service."</li>
+<li><strong>Where applicable</strong>: Telco-centric (3GPP/TMF framing, 6G "AI-native" vision) and vendor-originated (EnterpriseWeb CEO), so discount accordingly — but the underlying critique and the hypergraph-over-RDF/LPG reasoning apply to anyone building agent governance for infrastructure where determinism matters. Pairs naturally with the PM's identity interest: this is effectively an argument for formal, governable agent context and permissions.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="battle-of-the-bots-which-ai-models-actually-work-for-network-engineering-tasks">Battle of the Bots: Which AI Models Actually Work for Network Engineering Tasks<a class="headerlink" href="#battle-of-the-bots-which-ai-models-actually-work-for-network-engineering-tasks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day3_Fri_21Nov_Single-Track/AC4-EricChou-BattleOfAIBots.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PDF)</a> <a class="pick-link" href="https://media.githubusercontent.com/media/Network-Automation-Forum/handyinfo/main/docs/autocon_coverage/slides/AutoCon4/Day3_Fri_21Nov_Single-Track/AC4-EricChou-BattleOfAIBots.pptx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"/></svg></span> Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=77doPhGapwE"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5 6-4.5-6-4.5z"/></svg></span> Recording</a></p>
+</div>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="77doPhGapwE" data-start="0" href="https://www.youtube.com/watch?v=77doPhGapwE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/77doPhGapwE/hqdefault.jpg" alt="Play the recording: Battle of the Bots: Which AI Models Actually Work for Network Engineering Tasks" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<p>Eric Chou — Network to Code</p>
+<ul>
+<li><strong>Why</strong>: A genuinely reusable decision framework rather than another AI demo — and the methodology (expected-value analysis plus task-specific evaluation) transfers to any AI adoption decision, including agent/identity tooling.</li>
+<li><strong>What</strong>: The premise: "which model is best?" is the wrong question; the right one is "what is the expected value of using AI for <em>this</em> task with <em>this</em> model?" A lightning talk with a decision-tree method: map decision points, calculate probabilities of success, and derive expected value per option — illustrated with a worked RCA example (AI root-cause platform at 75% success rate, 30-minute resolution vs 4-hour manual, $4k/hr downtime cost, $10k SLA penalty — EV of AI-powered RCA $11,000 vs -$26,000 for manual).</li>
+<li><strong>How</strong>: Three practical evaluation methods to establish the probability inputs: expert review (human in the loop), automated code evaluation (digital twin for pass/fail), and AI-as-judge. The takeaway: build your own evaluation system and iterate — with a sensible default (Claude) as the starting point, not the conclusion.</li>
+<li><strong>Where applicable</strong>: Task- and org-specific by construction — the whole point is that you run it on your tasks with your cost/downtime numbers. Broadly applicable wherever AI tooling is being considered for repeatable technical work; the evaluation-system pattern (expert + code + AI judge) is the durable part.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Data-first is the settled consensus</strong>: Intel (Nautobot NSoT as foundation), ESnet (centralized discovery + normalization), the brownfield SOT talk, and Swisscom's Infrahub integration all independently converged on "model the data first; everything else is a by-product." Source-of-truth design is where the architectural effort now goes.</li>
+<li><strong>Agentic AI crossed from demos into operator practice — but production reality is thin</strong>: HAWAT, Lumen's supervisor-agent-over-MCP architecture, and constrained-accuracy pipelines (Building AI with AI) show real systems; the survey shows only 3% of orgs with LLMs deployed against production network data and ~45% with no plans. The gap between conference content and field adoption is the widest it's been.</li>
+<li><strong>MCP specifically, not "AI" generally, is the concrete protocol story</strong>: the MCP dissection talk, Lumen's MCP service layer, HAWAT's roadmap, and the telco-ontology talk (MCP as context server) all treat MCP as the integration substrate — with intention-based tool design and role-based capability filtering emerging as the de-facto scoping model for agent access.</li>
+<li><strong>Validation shift-left went mainstream</strong>: digital twins (Spectron/GNS3, KNE, Container Lab), pre-merge config diffs with Batfish, ONDATRA "write once, run anywhere" against virtual and physical testbeds — verify-before-deploy is now assumed practice, not novelty.</li>
+<li><strong>Day-2 is the honest battleground</strong>: USAA's drift-and-retrofit story, HEB's near-miss, NTT's upgrade workflows, and the lifecycle-automation material all describe the same arc — provisioning gets automated first, then Day-2 maintainability (guardrails, change control, training) is where programs succeed or stall.</li>
+<li><strong>The constraints are organizational, not technical</strong>: the survey's 44% "people" barriers, Lumen's MIT citation (95% of custom AI projects see zero return for readiness reasons), and the leadership track's sociotechnical framing all point the same direction — skills, trust, and sponsorship, not tooling, are the rate limiters this cycle.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest with zai-org/GLM-5.3 on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/autocon-4.md"><code>digests/autocon-4.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/autocon-4.md"><code>prompts/autocon-4.md</code></a></p>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../autocon-5/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AutoCon 5 (Munich) — Operator Program">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                AutoCon 5 (Munich) — Operator Program
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../autocon-3/" class="md-footer__link md-footer__link--next" aria-label="Next: AutoCon 3 (Prague) — Operator">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                AutoCon 3 (Prague) — Operator
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and generator, styled after containerlab.dev -->
+<div class="md-copyright">
+    
+    <div class="md-copyright__highlight">
+        Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.
+    </div>
+    
+    Written by
+    <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+    on Nebius Token Factory · made with
+    <span class="twemoji heart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 20.408c-.492.308-.903.546-1.192.709q-.23.129-.463.252h-.002a.75.75 0 0 1-.686 0 17 17 0 0 1-.465-.252 31 31 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31 31 0 0 1 14 20.408"/></svg>
+    </span>
+    and <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hellt.github.io/conference-digest/feed_rss_created.xml" target="_blank" rel="noopener" title="hellt.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+    
+  </body>
+</html>

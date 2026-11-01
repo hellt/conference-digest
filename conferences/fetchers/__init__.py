@@ -7,6 +7,9 @@ from .nanog import NanogFetcher
 from .autocon import AutoconFetcher
 from .ovscon import OvsconFetcher
 from .ciscolive import CiscoLiveFetcher
+from .ripe import RipeFetcher
+from .nlnog import NlnogFetcher
+from .denog import DenogFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -18,6 +21,9 @@ FETCHERS = {
     "autocon": AutoconFetcher(),
     "ovscon": OvsconFetcher(),
     "ciscolive": CiscoLiveFetcher(),
+    "ripe": RipeFetcher(),
+    "nlnog": NlnogFetcher(),
+    "denog": DenogFetcher(),
 }
 
 

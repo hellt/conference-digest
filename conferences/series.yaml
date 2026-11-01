@@ -210,3 +210,40 @@ series:
     manual_fallback_url_template: "https://www.openvswitch.org/support/ovscon{year}/"
     notes: "OVS/OVN and OVN-Kubernetes: virtual networking, BGP/EVPN fabric integration, hardware offload, DPUs, network security and scale."
 
+  # RIPE meets twice a year. The new meeting-plan layout starts with RIPE 91.
+  - series: ripe
+    enumerate: ordinal
+    start: 91
+    key_template: "ripe-{n}"
+    name_template: "RIPE {n}"
+    type: operator
+    fetcher: ripe
+    lookahead: 2
+    program_url_template: "https://ripe{n}.ripe.net/programme/meeting-plan/"
+    manual_fallback_url_template: "https://ripe{n}.ripe.net/programme/meeting-plan/"
+    notes: "European network operators: routing security, IPv6, peering, DNS, measurement and network automation."
+
+  - series: nlnog
+    enumerate: year
+    start: 2025
+    key_template: "nlnog-{year}"
+    name_template: "NLNOG Day {year}"
+    type: operator
+    fetcher: nlnog
+    program_url_template: "https://nlnog.net/events/nlnog-day-{year}/"
+    manual_fallback_url_template: "https://nlnog.net/events/nlnog-day-{year}/"
+    notes: "Dutch network operators: routing, IPv6, automation and infrastructure operations. Program lists titles, speakers, slides and recordings, not abstracts."
+
+  # The official agenda links to the right Pretalx host (changed after DENOG17).
+  - series: denog
+    enumerate: ordinal
+    start: 17
+    key_template: "denog-{n}"
+    name_template: "DENOG {n}"
+    type: operator
+    fetcher: denog
+    lookahead: 2
+    program_url_template: "https://www.denog.de/de/meetings/denog{n}/agenda.html"
+    manual_fallback_url_template: "https://www.denog.de/de/meetings/denog{n}/agenda.html"
+    notes: "German network operators: datacenter and backbone networking, BGP/EVPN, optics, automation, security and operator workshops."
+

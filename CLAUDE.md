@@ -88,7 +88,7 @@ pipeline.
    discovery appends to it; nothing else in CI may write it. The Digest Bot
    pushes only `digests/<key>.md` to its own PR branches (`tofarev/digest-<key>`,
    and `tofarev/links-<key>` for Links Refresh), and `site.yml` pushes only the
-   `gh-pages` branch. The site sources `docs/posts/` and
+   `gh-pages` branch. The site sources `docs/posts/`, `docs/companies/` and
    `docs/conferences.md` are generated at build time and gitignored.
    `run_summary.json`, `issues.json` and `discovery_summary.json` are ephemeral,
    gitignored, and passed between steps in one job — never commit them.
@@ -176,9 +176,13 @@ links and rewrites nothing else.
 **Build or preview the site:** `make site` (strict build into `site/`) or
 `make serve-site` (live on :8001). Both run `scripts/build_site.py` first, which
 turns each digest into `docs/posts/<key>.md` (front matter, excerpt, facts strip,
-tier/pick markup; the digest text is unchanged) and writes the Conferences
-tracker. Style lives in `docs/stylesheets/extra.css` and `overrides/`, adapted
-from containerlab.dev. Never edit `docs/posts/` — edit the digest.
+tier/pick markup; the digest text is unchanged except that employer names in
+a pick's speaker line link to that employer's page), builds `docs/companies/`
+(one page per employer in `build_site.py`'s `EMPLOYER_VARIANTS` map, listing
+every pick with a speaker from that employer — the Employers tab) and writes the
+Conferences tracker. Style lives in `docs/stylesheets/extra.css` and `overrides/`,
+adapted from containerlab.dev. Never edit `docs/posts/` or `docs/companies/` —
+edit the digest.
 
 **Move the bot to a new ToFaRev commit:** `make pin-tofarev SHA=<full sha>`. The
 SHA must be pushed to `hellt/tofarev`; GitHub resolves it when the run starts.

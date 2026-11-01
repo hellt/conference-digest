@@ -10,6 +10,7 @@ __pycache__/
 # Site: build output and pages rendered from digests/ by scripts/build_site.py.
 site/
 docs/posts/
+docs/companies/
 docs/conferences.md
 zensical-build.log
 .venv/

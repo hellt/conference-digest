@@ -7,12 +7,17 @@ reads it and writes derived, gitignored files that `zensical build` publishes:
   docs/posts/<key>.md    one blog post per digest: front matter, an excerpt,
                          a facts strip, and the digest body with its tier
                          sections and picks marked up for styling
+  docs/companies/*.md    one page per employer, linking every picked talk with
+                         a speaker from that employer; employer names in each
+                         pick's speaker line link here (built with the index
+                         companies/index.md, the Employers tab)
   docs/conferences.md    every registry edition and where it stands
 
 The digest text itself is not rewritten: headings and wording pass through
 unchanged. Each pick's `**Links:**` row (written by conferences/links.py)
-becomes a row of plain source links, and a talk recording on YouTube also gets a
-click-to-play thumbnail (docs/javascripts/video.js swaps in the player).
+becomes a row of plain source links, a talk recording on YouTube also gets a
+click-to-play thumbnail (docs/javascripts/video.js swaps in the player), and
+employer names in the speaker line link to that employer's companies/ page.
 Run it before every build (`make site` does).
 """
 
@@ -21,6 +26,7 @@ from __future__ import annotations
 import json
 import re
 import shutil
+import unicodedata
 from datetime import date, datetime
 from pathlib import Path
 
@@ -35,6 +41,7 @@ DOCS = ROOT / "docs"
 POSTS = DOCS / "posts"
 TRACKER = DOCS / "conferences.md"
 REPO = "https://github.com/hellt/conference-digest"
+COMPANIES = DOCS / "companies"
 
 TYPES = {
     "academic": "Academic",
@@ -68,6 +75,300 @@ def youtube_id(url: str) -> str | None:
 # The first write-up label of a pick ("**Why:**", or "- **Why:**" in list
 # style); the recording goes just before it.
 WRITEUP_RE = re.compile(r"^\s*(?:[-*+]\s+)?\*\*(?:Why|What|How)\b")
+
+# A pick's attribution line ("Lucas Immanuel Nickel · Network Operations
+# Engineer — DE-CIX", "*Names, Employer* — **Core**", "- **Authors / tier**:
+# Names (Employer). *Tier.*") is the first line after the heading that is
+# neither the links row nor a write-up bullet; netdev and SIGCOMM embed it in
+# the heading itself ("### Title — Speakers (Employer) — Tier").
+NON_ATTRIBUTION = re.compile(r"^\s*(?:[-*+]\s+)?\*\*(?:Links?:?|Why|What|How|Where|Tier)\b")
+HEADED = re.compile(r"^### (.+?) — (.+) — (?:Core|Adjacent|Wildcard)$")
+AUTHORS = re.compile(r"^- \*\*Authors / tier\*\*:\s*")
+
+# Employers worth browsing by, mapped to the canonical name their page uses.
+# The canonical spelling is matched as written; each alias adds a variant
+# seen in digests ("Cisco Systems" and "Cisco ThousandEyes" are Cisco, "AWS"
+# is Amazon, universities appear under both full and short names). A name the
+# map doesn't know simply isn't linked — nothing is invented (invariant 15).
+EMPLOYER_VARIANTS = {
+    "Cisco": ("Cisco Systems", "Cisco ThousandEyes", "Isovalent at Cisco"),
+    "Juniper": ("Juniper Networks",),
+    "Nokia": ("NOKIA",),
+    "Huawei": (),
+    "H3C": ("New H3C Technologies",),
+    "Ruijie": (),
+    "Centec": (),
+    "ZTE": (),
+    "Arrcus": (),
+    "Broadcom": (),
+    "Arista Networks": (),
+    "HPE": (),
+    "NVIDIA": ("Nvidia",),
+    "Microsoft": ("Microsoft Research", "Microsoft Azure"),
+    "Google": (),
+    "Meta": ("Meta Platforms, Inc", "Meta Platforms Inc"),
+    "Amazon": ("AWS",),
+    "Apple": (),
+    "IBM": ("IBM Research", "IBM Cloud"),
+    "Intel": (),
+    "Oracle": ("Oracle Cloud",),
+    "Samsung": ("Samsung Research America",),
+    "Hitachi": (),
+    "Cloudflare": (),
+    "LinkedIn": (),
+    "ByteDance": (),
+    "TikTok": (),
+    "Tencent": (),
+    "Alibaba": ("Alibaba Cloud", "Alibaba Group"),
+    "Baidu": (),
+    "China Mobile": (),
+    "China Telecom": (),
+    "China Unicom": (),
+    "Yandex": (),
+    "IEIT Systems": ("IEIT SYSTEMS",),
+    "Telefónica": ("Telefonica",),
+    "Deutsche Telekom": (),
+    "T-Mobile": ("T-Mobile USA",),
+    "Swisscom": (),
+    "NTT": ("NTT DATA", "NTT Data", "NTT Germany", "NTT, Inc."),
+    "ESnet": (),
+    "Internet2": ("Internet2.edu",),
+    "CAIDA": (),
+    "APNIC": (),
+    "RIPE NCC": (),
+    "Kentik": (),
+    "TeleGeography": (),
+    "Aalyria": (),
+    "EdgeNOS": (),
+    "Petabit Scale": (),
+    "Crusoe": (),
+    "Quantum Foundry": (),
+    "NIX.CZ": (),
+    "Bitred Group SpA": (),
+    "OpenX": (),
+    "Vegvisir Systems": (),
+    "InMon": ("InMon Corp.",),
+    "IPinfo": (),
+    "AHEAD": (),
+    "Comcast": (),
+    "Clockwork": (),
+    "Flexoptix": ("Flexoptix GmbH",),
+    "FastNetMon": ("FastNetMon Inc",),
+    "nexthop.ai": (),
+    "Ductus": (),
+    "Zscaler": (),
+    "Fastah": ("Fastah Inc.",),
+    "CableLabs": (),
+    "NetApp": (),
+    "secunet": (),
+    "LabN Consulting": (),
+    "Infoblox": (),
+    "Selkie Cryptography": (),
+    "Cryptic Forest Software": (),
+    "Sandelman Software Works": (),
+    "Mysten Labs": (),
+    "Okta": ("Auth0",),
+    "Ping Identity": (),
+    "CyberArk": (),
+    "Intuit": (),
+    "OpenAI": (),
+    "Defakto Security": (),
+    "MATTR": (),
+    "Authlete": (),
+    "SPRIND": (),
+    "Hellō": (),
+    "Disney": (),
+    "JPMorgan Chase": (),
+    "Netflix": (),
+    "Spotify": (),
+    "Shopify": (),
+    "Squarespace": (),
+    "The Trade Desk": (),
+    "Uber": (),
+    "State Farm": (),
+    "Goldman Sachs": (),
+    "Skyscanner": (),
+    "Slack": (),
+    "emnify": (),
+    "Varnish Software": (),
+    "Bluesky": ("Bluesky PBC",),
+    "Security Differently": (),
+    "Honeycomb": ("Honeycomb.io",),
+    "Nivenly Foundation": (),
+    "Gen": (),
+    "Dynatrace": (),
+    "Splunk": (),
+    "Antithesis": (),
+    "Exostellar": (),
+    "Whatnot": (),
+    "Solo.io": (),
+    "Edera": (),
+    "Cofide": (),
+    "M42": (),
+    "Messier42": (),
+    "Cosmonic": (),
+    "Adobe": (),
+    "Heroku": (),
+    "Red Hat": (),
+    "Ericsson": ("Ericsson Software Technology",),
+    "Buoyant": (),
+    "ControlPlane": (),
+    "HashiCorp": ("Hashicorp",),
+    "Forbes": (),
+    "Miro": (),
+    "DaoCloud": ("Daocloud",),
+    "Ivanti": (),
+    "Teleport": (),
+    "LY Corporation": (),
+    "SK Telecom": (),
+    "Telstra": (),
+    "D3TN": ("D3TN GmbH",),
+    "DB Schenker": ("DBSchenker",),
+    "Grafana Labs": ("Grafana",),
+    "Rohde & Schwarz": (),
+    "CoreWeave": (),
+    "DE-CIX": (),
+    "LINX": (),
+    "GÉANT": (),
+    "Ørsted": (),
+    "50Hertz": (),
+    "DB Systel": ("DB Systel GmbH",),
+    "Colt": ("Colt Technology", "Colt Technology Services"),
+    "Itential": (),
+    "zebbra AG": (),
+    "Kumorai Inc.": (),
+    "ALTEPRO Solutions": (),
+    "Network to Code": (),
+    "Network Automation Forum": ("NAF",),
+    "Solutional": (),
+    "Lumen": (),
+    "Revelo": (),
+    "EnterpriseWeb": (),
+    "Roche": (),
+    "Megaport": (),
+    "GARR": (),
+    "Telecom Infrastructure Project": (),
+    "AEG": (),
+    "eBay": (),
+    "USAA": (),
+    "H-E-B": (),
+    "ipSpace.net": (),
+    "Internet Security Research Group": (),
+    "Censys": ("Censys Inc.",),
+    "Anapaya": (),
+    "Proton AG": (),
+    "UC Berkeley": (),
+    "HKUST": (),
+    "MIT": ("MIT CSAIL",),
+    "Harvard University": ("Harvard",),
+    "Johns Hopkins University": ("JHU",),
+    "Northwestern University": ("Northwestern",),
+    "Purdue University": ("Purdue",),
+    "University of Michigan": ("Michigan",),
+    "University of Washington": (),
+    "University of Maryland": ("U. Maryland",),
+    "Georgia Institute of Technology": ("Georgia Tech",),
+    "Virginia Tech": (),
+    "University of Idaho": (),
+    "KAIST": (),
+    "University of Massachusetts Amherst": ("UMass",),
+    "University of Southern California": ("USC",),
+    "Information Sciences Institute": (),
+    "Carnegie Mellon University": ("CMU",),
+    "ETH Zurich": ("ETH Zürich",),
+    "KU Leuven": (),
+    "Tsinghua University": ("Tsinghua",),
+    "Shanghai Jiao Tong University": ("SJTU",),
+    "Peking University": ("Peking U.",),
+    "Zhongguancun Laboratory": ("Zhongguancun Lab",),
+    "Quan Cheng Laboratory": (),
+    "Stanford University": ("Stanford",),
+    "Princeton University": (),
+    "Cornell University": ("Cornell Tech", "Cornell"),
+    "New York University": (),
+    "University of Wisconsin–Madison": ("UW-Madison",),
+    "Northeastern University": (),
+    "Paderborn University": (),
+    "Indiana University Bloomington": (),
+    "University of Colorado Boulder": (),
+    "Institute of Computing Technology": (),
+    "Chinese Academy of Sciences": (),
+    "Fraunhofer SIT": (),
+    "ATHENE": (),
+    "Ruhr University Bochum": (),
+    "Max Planck Institute for Informatics": ("MPI-INF",),
+    "Delft University of Technology": (),
+    "CISPA Helmholtz Center for Information Security": ("CISPA",),
+    "Nanyang Technological University": (),
+    "University of Bern": (),
+    "IMDEA Networks": (),
+    "University of Cambridge": (),
+    "University of Edinburgh": (),
+    "University of Strathclyde": (),
+    "University of Illinois Chicago": (),
+    "University of Illinois Urbana-Champaign": ("UIUC",),
+    "University of Namur": (),
+    "University Politehnica of Bucharest": (),
+    "Karlsruhe Institute of Technology": (),
+    "Beihang University": (),
+    "Xidian University": (),
+    "University of Stuttgart": (),
+    "The Chinese University of Hong Kong": ("CUHK",),
+    "University of Rome Tor Vergata": ("Univ. of Rome Tor Vergata",),
+    "University of St Andrews": (),
+    "Visa": ("Visa Research",),
+    "GFW Report": (),
+}
+EMPLOYER_PAGES = {  # every spelling (lowercase) -> canonical title
+    spelling.lower(): canonical
+    for canonical, aliases in EMPLOYER_VARIANTS.items()
+    for spelling in (canonical, *aliases)
+}
+_EMPLOYER_RES = [
+    (re.compile(r"(?<![A-Za-z0-9])" + re.escape(alias) + r"(?![A-Za-z0-9])", re.I), canonical)
+    for alias, canonical in sorted(EMPLOYER_PAGES.items(), key=lambda kv: -len(kv[0]))
+]
+
+
+def anchor_id(heading: str) -> str:
+    """The id a `###` heading gets from Python-Markdown's toc slugify."""
+    text = unicodedata.normalize("NFKD", heading).encode("ascii", "ignore").decode("ascii")
+    text = re.sub(r"[^\w\s-]", "", text).strip().lower()
+    return re.sub(r"[-\s]+", "-", text)
+
+
+def employer_spans(text: str) -> list[tuple[int, int, str]]:
+    """(start, end, canonical) of each employer mention in `text`; when spans
+    overlap the longer name wins ("Cisco ThousandEyes" over "Cisco"), and each
+    employer links at most once per line."""
+    found = []
+    for rx, canonical in _EMPLOYER_RES:
+        for m in rx.finditer(text):
+            found.append((m.start(), m.end(), canonical))
+    found.sort(key=lambda f: (f[0], f[0] - f[1]))  # by start, longest span first
+    picked, taken, seen = [], [], set()
+    for s, e, c in found:
+        if any(s < t and e > b for b, t in taken):
+            continue
+        if c in seen:
+            continue
+        taken.append((s, e))
+        picked.append((s, e, c))
+        seen.add(c)
+    return picked
+
+
+def link_employers(line: str) -> str:
+    """Link each employer mention in `line` to its page under companies/."""
+    spans = employer_spans(line)
+    for s, e, canonical in reversed(spans):
+        line = line[:s] + f"[{line[s:e]}](../companies/{file_slug(canonical)}.md)" + line[e:]
+    return line
+
+
+def file_slug(name: str) -> str:
+    """The companies/ filename of an employer page."""
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
 
 def links_block(row: str, title: str) -> tuple[list[str], list[str]]:
@@ -238,7 +539,63 @@ def human(d: date | None) -> str:
     return f"{d:%B} {d.day}, {d.year}" if d else "unknown"
 
 
-def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict]:
+def annotate_employers(rest: str) -> tuple[str, list[dict]]:
+    """Link employer names in every pick's attribution, and return the pick
+    records companies pages are built from.
+
+    The attribution is the first line after the heading that is neither the
+    links row nor a write-up bullet; netdev and SIGCOMM put it in the heading
+    ("### Title — Speakers (Employer) — Tier"), in which case the heading is
+    linkified instead — and never both, so a talk whose *title* names a company
+    ("TikTok's IPv6 Journey") doesn't get linked by its title.
+    """
+    lines = rest.split("\n")
+    tier = None
+    picks: list[dict] = []
+    for i, line in enumerate(lines):
+        if line.startswith("## "):
+            slug = tier_of(line[3:])
+            tier = slug if slug in TIERS else None
+        elif line.startswith("### ") and tier:
+            heading = line[4:].strip()
+            j = next(
+                (
+                    k for k in range(i + 1, min(i + 7, len(lines)))
+                    if lines[k].strip() and not lines[k].startswith("#") and not NON_ATTRIBUTION.match(lines[k])
+                ),
+                -1,
+            )
+            if j < 0:  # netdev/SIGCOMM: attribution is the heading itself
+                spans = employer_spans(line)
+                if not spans:
+                    continue
+                lines[i] = link_employers(line)
+                m = HEADED.match(line)
+                picks.append({
+                    "tier": tier,
+                    "title": m.group(1) if m else heading,
+                    "speakers": plain(m.group(2)) if m else plain(heading),
+                    "anchor": anchor_id(heading),
+                    "employers": sorted({c for _, _, c in spans}),
+                })
+            else:
+                attributed = lines[j]
+                spans = employer_spans(attributed)
+                if not spans:
+                    continue
+                lines[j] = link_employers(attributed)
+                speakers = AUTHORS.sub("", attributed.strip()).strip("*")
+                picks.append({
+                    "tier": tier,
+                    "title": heading,
+                    "speakers": plain(speakers),
+                    "anchor": anchor_id(heading),
+                    "employers": sorted({c for _, _, c in spans}),
+                })
+    return "\n".join(lines), picks
+
+
+def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict, list[dict]]:
     h1, intro, rest = split_body(nest_lists(body))
     if re.match(r"^\d+ picks\b", intro):
         intro = intro.partition("\n\n")[2]
@@ -256,7 +613,8 @@ def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict
     dates = f"{human(started)} – {human(ended)}" if started and ended else human(ended) if ended else ""
     # The human-facing page; a fetcher's source_url can be an API endpoint.
     source = entry.get("manual_fallback_url") or meta.get("source_url") or entry.get("program_url") or ""
-    decorated = decorate(rest)
+    decorated, picks = annotate_employers(rest)
+    decorated = decorate(decorated)
 
     front = {
         "date": published.isoformat(),
@@ -297,7 +655,7 @@ def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict
         + "\n"
         + footer
     )
-    return page, {"key": key, "title": title, "date": published, "bot": bot}
+    return page, {"key": key, "title": title, "date": published, "bot": bot}, picks
 
 
 STATUS = {
@@ -338,20 +696,77 @@ def render_tracker(registry: dict[str, dict], posts: dict[str, dict]) -> str:
     )
 
 
+def render_companies(companies: dict[str, list[dict]], posts: dict[str, dict]) -> None:
+    """One page per employer — every picked talk with one of its speakers,
+    grouped by digest, newest first — plus the Employers index."""
+    if COMPANIES.exists():
+        shutil.rmtree(COMPANIES)
+    COMPANIES.mkdir(parents=True)
+    plural = lambda n: "" if n == 1 else "s"
+    for name in sorted(companies, key=str.lower):
+        picks = companies[name]
+        digests: dict[str, list[dict]] = {}
+        for p in sorted(picks, key=lambda p: posts[p["key"]]["date"], reverse=True):
+            digests.setdefault(p["key"], []).append(p)
+        order = sorted(digests, key=lambda k: posts[k]["date"], reverse=True)
+        page = [
+            "---",
+            f"title: {json.dumps(name, ensure_ascii=False)}",
+            f"description: {json.dumps(f'Every picked talk across the conference digests with a speaker from {name}.', ensure_ascii=False)}",
+            "---",
+            "",
+            f"# {name}",
+            "",
+            f"{len(picks)} picked talk{plural(len(picks))} across {len(digests)} digest{plural(len(digests))} "
+            f"with a speaker from {name}, newest first.",
+            "",
+        ]
+        for k in order:
+            page += [f"## {posts[k]['title']}", ""]
+            for p in digests[k]:
+                page.append(f"- [{p['title']}](../posts/{k}.md#{p['anchor']}) · *{p['tier'].title()}* — {p['speakers']}")
+            page.append("")
+        (COMPANIES / f"{file_slug(name)}.md").write_text("\n".join(page) + "\n", encoding="utf-8")
+    entries = "\n".join(
+        f"- [{name}]({file_slug(name)}.md) — {len(companies[name])} talk{plural(len(companies[name]))}"
+        for name in sorted(companies, key=str.lower)
+    )
+    index = (
+        "---\n"
+        "title: Employers\n"
+        "description: Every employer behind the picked talks, with all their talks across the digests.\n"
+        "hide:\n"
+        "  - toc\n"
+        "---\n\n"
+        "# Employers\n\n"
+        "Each digest names the people behind its picks and who they speak for. These pages collect "
+        "the picked talks by employer, across every conference, newest first; employer names in a "
+        "digest link here.\n\n"
+        f"{entries}\n"
+    )
+    (COMPANIES / "index.md").write_text(index, encoding="utf-8")
+
+
 def main() -> int:
     registry = load_registry()
     if POSTS.exists():
         shutil.rmtree(POSTS)
     POSTS.mkdir(parents=True)
     posts: dict[str, dict] = {}
+    companies: dict[str, list[dict]] = {}
     for path in sorted(DIGESTS.glob("*.md")):
         key = path.stem
         meta, body = read_digest(path)
-        page, info = render_post(key, registry.get(key, {}), meta, body)
+        page, info, picks = render_post(key, registry.get(key, {}), meta, body)
         (POSTS / f"{key}.md").write_text(page, encoding="utf-8")
         posts[key] = info
+        for p in picks:
+            p["key"] = key
+            for employer in p["employers"]:
+                companies.setdefault(employer, []).append(p)
+    render_companies(companies, posts)
     TRACKER.write_text(render_tracker(registry, posts), encoding="utf-8")
-    print(f"rendered {len(posts)} digest post(s) and the tracker of {len(registry)} edition(s)")
+    print(f"rendered {len(posts)} digest post(s), {len(companies)} employer page(s) and the tracker of {len(registry)} edition(s)")
     return 0
 
 

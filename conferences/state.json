@@ -130,5 +130,11 @@
     "attempts": 0,
     "last_attempt": "2026-11-01T19:51:50.980845+00:00",
     "last_error": ""
+  },
+  "gtc-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T21:11:51.209000+00:00",
+    "last_error": ""
   }
 }

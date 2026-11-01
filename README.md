@@ -182,6 +182,7 @@ conferences/
     ripe.py          # RIPE 91+: meeting plan -> sessions -> full talk pages
     nlnog.py         # NLNOG Day program tables, slides and recordings (no abstracts)
     denog.py         # official DENOG agenda -> Pretalx JSON export
+    ccs.py           # ACM CCS schedule: sessions, paper titles, authors
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -327,6 +328,11 @@ run.
   Chinese-language post-event days. Recordings are not in the catalog API —
   sessions go to NVIDIA on-demand (login-gated) and many later to NVIDIA's
   YouTube channel, which the links step finds and verifies.
+- **CCS**: `sigsac.org` serves the full schedule as plain HTML: every paper
+  with its exact title and authors, grouped by session with room, dates and
+  times. Abstracts and papers are ACM DL-only, so prompts say picks are written
+  from title, authors and session. The schedule appears about two weeks before
+  the event; `start: 2026` because older editions keep no schedule page.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

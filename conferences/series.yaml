@@ -265,3 +265,21 @@ series:
     manual_fallback_url_template: "https://www.nvidia.com/en-us/on-demand/search/?facet.event_name%5B%5D=GTC%20San%20Jose&facet.event_year%5B%5D={year}"
     notes: "NVIDIA's AI conference: AI-factory networking (Spectrum-X, InfiniBand, NVLink, BlueField/DOCA), accelerated infrastructure, AI security and confidential computing."
 
+
+  # ACM CCS: the Big-Four security conference. The public schedule lists every
+  # paper with its exact title and authors, grouped by session with room and
+  # dates; abstracts and full papers stay behind the ACM DL, so picks are
+  # written from title, authors and session only. The schedule appears about
+  # two weeks before the event; older editions keep no schedule page, so the
+  # series starts at 2026.
+  - series: ccs
+    enumerate: year
+    key_template: "ccs-{year}"
+    name_template: "ACM CCS {year}"
+    type: academic
+    fetcher: ccs
+    start: 2026
+    end_date_hint: "11-21"
+    program_url_template: "https://www.sigsac.org/ccs/CCS{year}/program/schedule.html"
+    manual_fallback_url_template: "https://www.sigsac.org/ccs/CCS{year}/program/schedule.html"
+    notes: "Top-tier security research: applied crypto, authentication and identity, network security, systems security, measurement. Papers and abstracts are ACM DL-only; the schedule carries titles, authors and sessions."

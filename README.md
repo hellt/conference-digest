@@ -177,6 +177,7 @@ conferences/
     netdev.py        # netdevconf.info sessions index + per-session pages (HTML)
     nanog.py         # nanog.org agenda + talk pages, read via Tavily Extract
     autocon.py       # AutoCon program + NAF guide, slides repo, YouTube uploads
+    ovscon.py        # OVS+OVNcon schedule + anchored abstracts, slides and recordings
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -264,6 +265,12 @@ run.
   The page's form CAPTCHA trips `looks_blocked()`, so this fetcher trusts the
   status code. Recordings arrive weeks after the event: an edition fetched
   early has fewer abstracts, and Links Refresh adds the recordings later.
+- **OVS+OVNcon**: `openvswitch.org/support/ovscon<year>/` is open static HTML.
+  The fetcher joins schedule rows to abstracts by their `#tN` anchors, keeping
+  speakers, slide decks (PDF/PPTX/ODP) and official YouTube recordings. Links
+  Refresh reads only the matching row, never another talk's materials. The
+  registry includes 2024 and 2025; annual discovery reads event dates from the
+  introduction and adds future editions once their abstracts are published.
 - **SIGCOMM** and **Netdev** are static HTML with no observed bot-block. Netdev
   does a second pass: the sessions index has only titles/speakers, so it follows
   each session page for the description, track label, slides and video. A

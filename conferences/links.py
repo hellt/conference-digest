@@ -38,6 +38,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from conferences.fetchers.base import BROWSER_HEADERS, looks_blocked
+from conferences.fetchers.ovscon import talk_links as ovscon_talk_links
 
 # slides2 holds a second format of the deck (PDF and PPTX both shown).
 KEYS = ("page", "pdf", "slides", "slides2", "video", "materials")
@@ -61,10 +62,11 @@ CHANNELS = {
     "netdev": ("netdev",),
     "nanog": ("nanog",),
     "autocon": ("autocon", "network automation forum"),
+    "ovscon": ("openvswitch", "open vswitch", "ovs+ovncon", "ovscon"),
 }
 DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon": "SREcon",
            "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF", "nanog": "NANOG",
-           "autocon": "AutoCon"}
+           "autocon": "AutoCon", "ovscon": "OVS OVN conference"}
 # URLs that only ever hold presentation decks, whatever the link text says.
 DECK_URLS = re.compile(r"static\.sched\.com/hosted_files/|storage\.googleapis\.com/site-media-prod/meetings/")
 STOP = {"the", "and", "for", "with", "from", "into", "over", "using", "via", "its", "our", "your",
@@ -197,14 +199,20 @@ def scrape_page(url: str, tavily_key: str = "") -> dict[str, str]:
     A page that blocks this runner (USENIX blocks datacenter IPs) is read
     through Tavily Extract instead, when a key is set.
     """
+    parsed = urlparse(url)
+    ovscon = ((parsed.hostname or "").removeprefix("www.") == "openvswitch.org"
+              and re.fullmatch(r"/support/ovscon\d{4}/?", parsed.path) is not None)
     try:
         resp = HTTP.get(url, timeout=20)
         ok = resp.status_code == 200 and not looks_blocked(resp) and "html" in resp.headers.get("content-type", "")
     except Exception:
         ok = False
     if not ok:
-        return tavily_page(url, tavily_key) if tavily_key else {}
+        # Extraction of a shared program cannot safely be treated as one talk.
+        return tavily_page(url, tavily_key) if tavily_key and not ovscon else {}
     soup = BeautifulSoup(resp.text, "html.parser")
+    if ovscon:
+        return ovscon_talk_links(soup, url)
     found: dict[str, str] = {}
     embeds = [youtube_id(f.get("src", "")) for f in soup.find_all("iframe")]
     embeds = [v for v in embeds if v]

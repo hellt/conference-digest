@@ -5,6 +5,7 @@ from .sigcomm import SigcommFetcher
 from .netdev import NetdevFetcher
 from .nanog import NanogFetcher
 from .autocon import AutoconFetcher
+from .ovscon import OvsconFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -14,6 +15,7 @@ FETCHERS = {
     "netdev": NetdevFetcher(),
     "nanog": NanogFetcher(),
     "autocon": AutoconFetcher(),
+    "ovscon": OvsconFetcher(),
 }
 
 

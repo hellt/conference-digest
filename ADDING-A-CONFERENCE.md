@@ -38,6 +38,7 @@ Reuse a fetcher when the conference is hosted on a platform one already reads:
 | `netdev` | netdevconf.info sessions index and session pages |
 | `nanog` | One NANOG meeting's agenda and talk pages, via Tavily Extract |
 | `autocon` | One AutoCon edition: the program, NAF's program guide, its slides repository and NAF's YouTube uploads |
+| `ovscon` | One OVS+OVNcon annual program: schedule rows, anchored abstracts, slides and YouTube recordings |
 
 Otherwise add `conferences/fetchers/<name>.py`:
 

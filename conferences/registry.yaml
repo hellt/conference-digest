@@ -459,3 +459,12 @@ conferences:
     manual_fallback_url: "https://ripe93.ripe.net/programme/meeting-plan/"
     discovered: 2026-11-01
     notes: "European network operators: routing security, IPv6, peering, DNS, measurement and network automation. Auto-discovered 2026-11-01 from series 'ripe'. end_date taken from the source."
+
+  - key: tnc-2026
+    name: "TNC26 (GÉANT research networking conference)"
+    type: operator
+    end_date: 2026-06-12
+    fetcher: tnc
+    program_url: "https://tnc26.geant.org/"
+    manual_fallback_url: "https://tnc26.geant.org/programme/"
+    notes: "Helsinki, 8-12 June 2026, hosted by CSC/Funet. The programme is a JS app (no public data endpoint) and GÉANT's Indico is bot-walled, so the program text must be pasted by hand from the programme page. Recordings are on the GÉANT YouTube channel."

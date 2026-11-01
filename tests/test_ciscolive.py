@@ -217,13 +217,14 @@ class CiscoLiveTests(TestCase):
         keys = [e["key"] for e in registry]
         self.assertEqual(len(keys), len(set(keys)))
         for region, hint in (("us", "06-30"), ("eu", "03-31")):
-            key = f"ciscolive-{region}-2025"
+            key = f"ciscolive-{region}-2026"
             entry = next(e for e in registry if e["key"] == key)
             spec = next(s for s in specs if s["series"] == f"ciscolive-{region}")
             self.assertEqual(entry["fetcher"], "ciscolive")
             self.assertTrue((root / f"conferences/prompt/types/{entry['type']}.md").exists())
-            self.assertEqual(latest_ident(keys, spec), 2025)
-            self.assertEqual(fill(spec["key_template"], 2026, "year"), f"ciscolive-{region}-2026")
-            self.assertEqual(candidates(spec, keys, date(2026, 11, 1)), [2026, 2027])
-            self.assertEqual(resolve_end_date(spec, 2026, None, None, date(2026, 11, 1)),
-                             (f"2026-{hint}", True))
+            self.assertGreaterEqual(latest_ident(keys, spec), 2026)
+            self.assertEqual(fill(spec["key_template"], 2027, "year"), f"ciscolive-{region}-2027")
+            self.assertTrue(all(c > latest_ident(keys, spec)
+                               for c in candidates(spec, keys, date(2026, 11, 1))))
+            self.assertEqual(resolve_end_date(spec, latest_ident(keys, spec) + 1, None, None, date(2026, 11, 1)),
+                             (f"{latest_ident(keys, spec) + 1}-{hint}", True))

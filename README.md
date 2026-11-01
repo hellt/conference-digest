@@ -69,9 +69,39 @@ rewrite).
    in the program text are reduced to plain text, headings that match no
    program item are flagged, and the canonical metadata block is applied (with
    `written_by`).
-3. `propose` validates each artifact (`scripts/propose_digest.py`), builds the
-   site with it, and opens a PR on `tofarev/digest-<key>` whose body lists the
-   check notes. Merging it is the human review step.
+3. `propose` validates each artifact (`scripts/propose_digest.py`), adds each
+   pick's links row (below), builds the site with it, and opens a PR on
+   `tofarev/digest-<key>` whose body lists the check notes and link counts.
+   Merging it is the human review step.
+
+### Links: abstract, paper, slides, recording
+
+Every pick gets one row under its heading, built by code
+(`conferences/links.py`), never by the model:
+
+```
+**Links:** [Abstract](…) · [Paper](…) · [Slides](…) · [Recording](…)
+```
+
+The links come from the program (fetchers record each item's `page:`, `pdf:`,
+`slides:`, `video:` and IETF `materials:`), from the talk's own page read again
+(USENIX, Sched and netdev pages add slides and the recording after the event),
+and, for a pick still without a recording, from a YouTube search. A found
+recording is linked only if its title or description carries the talk's title,
+the conference or its channel is named, and it was uploaded within eight months
+after the event. On the site the row becomes chips, and a talk recording gets a
+thumbnail that plays in place.
+
+**Recordings come later.** CNCF uploads KubeCon talks about two weeks after
+the event, USENIX and SIGCOMM within a few months. `links-refresh.yml` reruns
+the links step every Wednesday for each digest whose conference ended in the
+last 120 days, and opens a `links: <key>` PR listing the picks that gained
+links; the digest text is not touched and earlier links are kept. Run it from
+the Actions tab with `conference: <key>` for an older digest, or locally:
+
+```bash
+python3 scripts/enrich_links.py <key>     # rewrites digests/<key>.md in place
+```
 
 The model is `zai-org/GLM-5.3`, set as `"model"` in the workflow's
 `trusted_config`. It won a trial of nine Token Factory models on digest
@@ -85,7 +115,9 @@ To move to a newer ToFaRev, run `make pin-tofarev SHA=<full commit sha>`.
   (the one containerlab uses works).
 - Optional: add the repository secret `TAVILY_API_KEY`. Linked PDFs that
   ToFaRev cannot fetch from a runner (ACM DL, USENIX) are then read through
-  Tavily Extract. Without it, those picks are written from the abstract.
+  Tavily Extract. Without it, those picks are written from the abstract. The
+  links step also uses it to read talk pages that block runners and as the
+  fallback recording search.
 - Settings → General → Features → enable **Issues** (forks start with Issues
   off). The scan opens one issue per conference.
 - Settings → Actions → General → enable **Allow GitHub Actions to create and
@@ -120,10 +152,11 @@ conferences/
                      #   {CONFERENCE} {TYPE} {TYPE_GUIDANCE} {PROGRAM_TEXT} ...)
     types/*.md       #   per-type reading guidance, one injected per conference
   state.json         # auto-managed bookkeeping (created on first run)
+  links.py           # links rows: program links, talk pages, verified search
   fetchers/
     base.py          # shared fetch + result types + bot-block heuristic
     usenix.py        # NSDI / USENIX Security / SREcon (static HTML)
-    ietf.py          # datatracker documents API (per-WG active drafts)
+    ietf.py          # datatracker meeting API: agenda drafts, slides, recordings
     sched.py         # KubeCon / CNCF public Sched schedule (HTML)
     sigcomm.py       # SIGCOMM papers-info table (HTML)
     netdev.py        # netdevconf.info sessions index + per-session pages (HTML)
@@ -132,6 +165,8 @@ scripts/
   build_issue.py              # renders run_summary.json -> issue body
   bot_queue.py                # which prompts the Digest Bot writes this run
   propose_digest.py           # validates a ToFaRev artifact, writes PR text
+  enrich_links.py             # adds/refreshes each pick's links row
+  links_queue.py              # which digests Links Refresh revisits
   build_site.py               # digests/ -> docs/posts/ + Conferences page
 prompts/             # generated, committed by the workflow
 digests/             # merged digests; presence = done
@@ -142,6 +177,8 @@ mkdocs.yml pyproject.toml uv.lock Makefile
   digest-bot.yml          # ToFaRev drafts digests as PRs
   close-digest-issue.yml  # closes the issue when a digest lands
   site.yml                # builds + publishes the site
+  links-refresh.yml       # weekly: new recordings/slides -> links PRs
+docs/javascripts/video.js # click-to-play recordings on the site
 ```
 
 ## Running it
@@ -188,11 +225,13 @@ local run — in CI they're reported as needing one.
   selectors are best-effort; if a site restyles, the fetcher returns zero items
   (`not_published`) and eventually trips the stall flag rather than producing
   wrong output. **The first live run is the real test of these selectors.**
-- **IETF** uses the open datatracker documents API (no key, no bot-block). It
-  iterates a curated `RELEVANT_WGS` list (edit in `ietf.py` as interests shift)
-  and pulls each WG's active drafts. Draft "active" filtering is intentionally
-  permissive — when the API returns state as opaque URIs it keeps the draft;
-  worst case is a few extra drafts in the prompt, which Claude filters anyway.
+- **IETF** uses the open datatracker API (no key, no bot-block) for one
+  meeting: for each WG in the curated `RELEVANT_WGS` list (edit in `ietf.py` as
+  interests shift) that met, the drafts named on its agenda, the slide decks
+  presented (decks with no draft become their own items), and the session's
+  YouTube recording. Each item links its draft page, slides, session recording
+  and the session's materials page. A meeting whose WGs have posted no agenda
+  or slides yet is `not_published` and retried.
 - **SIGCOMM** and **Netdev** are static HTML with no observed bot-block. Netdev
   does a second pass: the sessions index has only titles/speakers, so it follows
   each session page for the description, track label, slides and video. A

@@ -14,6 +14,8 @@ Program source is the expanded technical-sessions schedule (titles, authors, and
 
 ### Trust Agility in an Era of Transient Ties: Rethinking TLS Trust in a Rapidly Evolving Ecosystem
 
+**Links:** [Recording](https://www.youtube.com/watch?v=Q2ByAdSiNGI)
+
 *Hoss Shafagh, Netflix (Enigma track)* — **Core**
 
 - **Why**: A practitioner-level look at the most consequential near-term shift in the Web PKI — root programs shortening server certificate lifetimes to a maximum of 47 days by 2029 — from someone who runs PKI and workload-identity infrastructure at Netflix scale, not a standards document.
@@ -23,6 +25,8 @@ Program source is the expanded technical-sessions schedule (titles, authors, and
 
 ### BGP Vortex: Update Message Floods Can Create Internet Instabilities
 
+**Links:** [Recording](https://www.youtube.com/watch?v=dd6L1mdQLmk)
+
 *Felix Stöger, ETH Zurich; Henry Birge-Lee, Princeton University; Giacomo Giuliari, Mysten Labs; Jordi Subira-Nieto and Adrian Perrig, ETH Zurich* — **Core**
 
 - **Why**: A new BGP instability attack that neither BGPSEC nor RPKI can prevent, because every message involved is a legitimate, standards-compliant BGP UPDATE — a reminder that route-origin validation alone doesn't close the routing-security gap.
@@ -31,6 +35,8 @@ Program source is the expanded technical-sessions schedule (titles, authors, and
 - **Where applicable**: General for any BGP-speaking network; the mitigation framework is for router vendors and operators using BGP Communities-based traffic engineering.
 
 ### Ares: Comprehensive Path Hijacking Detection via Routing Tree
+
+**Links:** [Recording](https://www.youtube.com/watch?v=1dLH8iMBgro)
 
 *Yinxiang Tao et al., Tsinghua University / Zhongguancun Laboratory / Quan Cheng Laboratory; Congcong Miao, Tencent* — **Core**
 
@@ -67,6 +73,8 @@ Program source is the expanded technical-sessions schedule (titles, authors, and
 - **Where applicable**: General for QUIC/UDP traffic traversing state-level middleboxes; the weaponization finding is a general lesson about any inline-decryption censorship/inspection architecture, not GFW-specific.
 
 ### Universal Cross-app Attacks: Exploiting and Securing OAuth 2.0 in Integration Platforms
+
+**Links:** [Recording](https://www.youtube.com/watch?v=Mq2nYuqAbQk)
 
 *Kaixuan Luo et al., The Chinese University of Hong Kong; Samsung Research America* — **Core**
 
@@ -113,6 +121,8 @@ Program source is the expanded technical-sessions schedule (titles, authors, and
 
 ### X.509DoS: Exploiting and Detecting Denial-of-Service Vulnerabilities in Cryptographic Libraries Using Crafted X.509 Certificates
 
+**Links:** [Recording](https://www.youtube.com/watch?v=VeO-3Pjnvpo)
+
 *Bing Shi et al., Alibaba Group; Luyi Xing, Indiana University Bloomington* — **Core**
 
 - **Why**: A systematic study of an underexplored class of cryptographic-library vulnerability — availability, not confidentiality/integrity — finding 18 new and 12 previously known CVEs across seven mainstream crypto libraries, all reachable via crafted certificates rather than exotic inputs.
@@ -123,6 +133,8 @@ Program source is the expanded technical-sessions schedule (titles, authors, and
 ## Adjacent
 
 ### Assessing the Aftermath: The Effects of a Global Takedown Against DDoS-for-hire Services
+
+**Links:** [Recording](https://www.youtube.com/watch?v=fDQ80hnChOw)
 
 *Anh V. Vu et al., University of Cambridge; University of Edinburgh; University of Strathclyde; University of Illinois Chicago* — **Adjacent**
 
@@ -160,6 +172,8 @@ Program source is the expanded technical-sessions schedule (titles, authors, and
 
 ### An Industry Interview Study of Software Signing for Supply Chain Security
 
+**Links:** [Recording](https://www.youtube.com/watch?v=OhHwC7LXuvM)
+
 *Kelechi G. Kalu et al., Purdue University* — **Adjacent**
 
 - **Why**: Software signing is widely recommended by supply-chain security frameworks but adoption remains low — this is the first in-depth practitioner account of why, complementing the technical PKI/cert-validation picks above with the human/organizational side.
@@ -189,6 +203,8 @@ Program source is the expanded technical-sessions schedule (titles, authors, and
 
 ### Catch-22: Uncovering Compromised Hosts Using SSH Public Keys
 
+**Links:** [Recording](https://www.youtube.com/watch?v=vNAth4yOdJ4)
+
 *Cristian Munteanu et al., Max Planck Institute for Informatics; Delft University of Technology (Distinguished Paper Award Winner)* — **Wildcard**
 
 - **Why**: A clever, minimally-invasive Internet-scale detection technique — using SSH's own public-key-authentication challenge behavior to fingerprint compromise without ever needing valid credentials or touching the compromised system — that found state-actor-associated keys inside sensitive ASes.
@@ -206,6 +222,8 @@ Program source is the expanded technical-sessions schedule (titles, authors, and
 - **Where applicable**: LEO satellite communication systems specifically; general technique for physical-layer secure ranging that could generalize to other wireless ranging contexts.
 
 ### Red Bleed: A Pragmatic Near-Infrared Presentation Attack on Facial Biometric Authentication Systems
+
+**Links:** [Recording](https://www.youtube.com/watch?v=DkzXowYO52g)
 
 *Bowen Hu, Kuo Wang, and Chip Hong Chang, Nanyang Technological University* — **Wildcard**
 

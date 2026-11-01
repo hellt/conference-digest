@@ -1,0 +1,96 @@
+name: Links Refresh
+
+# Recordings and slides are published weeks after a conference ends, after the
+# digest was written. Every week this rebuilds the links row of each pick in
+# recent digests (conference ended in the last 120 days) with
+# scripts/enrich_links.py: talk pages are read again, missing recordings are
+# searched for and verified (conferences/links.py). A digest that gained links
+# gets one "links: <key>" pull request; merging it republishes the site. The
+# digest text is never changed, and links found before are kept.
+#
+# Run it by hand for one digest of any age: Actions -> Links Refresh -> Run
+# workflow, with `conference: <key>`.
+
+on:
+  schedule:
+    - cron: '0 6 * * 3'   # Wednesdays 06:00 UTC
+  workflow_dispatch:
+    inputs:
+      conference:
+        description: 'Registry key to refresh, any age. Leave blank for every digest of the last 120 days.'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: links-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Refresh links and open one pull request per digest
+        env:
+          GH_TOKEN: ${{ github.token }}
+          # Optional: search fallback when YouTube blocks the runner, and the
+          # reader for talk pages that block it (USENIX).
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          CONFERENCE: ${{ github.event.inputs.conference }}
+          BASE: ${{ github.event.repository.default_branch }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          git config user.name  "conference-digest-bot"
+          git config user.email "actions@github.com"
+          gh label create links-refresh --color 2f9e6e --description "New recordings or slides for a digest" --force >/dev/null
+          base=$(git rev-parse HEAD)
+          for key in $(python scripts/links_queue.py --conference "$CONFERENCE"); do
+            branch="tofarev/links-$key"
+            git switch --quiet --force-create "$branch" "$base"
+            added="$RUNNER_TEMP/added-$key.md"
+            python scripts/enrich_links.py "$key" --summary "$added"
+            if git diff --quiet -- "digests/$key.md"; then
+              echo "$key: no new links"
+              continue
+            fi
+            git add "digests/$key.md"
+            git commit --quiet -m "links: $key" -m "New links for these picks:" -m "$(cat "$added")" -m "Workflow run: $RUN_URL"
+            git push --quiet --force origin "$branch"
+            {
+              echo "Links Refresh found new links for picks in [\`digests/$key.md\`](../blob/$BASE/digests/$key.md). The digest text is unchanged."
+              echo
+              cat "$added"
+              echo
+              echo "Recordings found by search were verified: the talk title is in the video's title or description, the conference or its channel is named, and the upload falls after the event. Open one or two before merging."
+              echo
+              echo "[Workflow run]($RUN_URL)"
+            } > "$RUNNER_TEMP/body-$key.md"
+            pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')
+            if [ -n "$pr" ]; then
+              gh pr edit "$pr" --body-file "$RUNNER_TEMP/body-$key.md"
+              echo "updated #$pr for $key"
+            else
+              gh pr create --base "$BASE" --head "$branch" --title "links: $key" \
+                --body-file "$RUNNER_TEMP/body-$key.md" --label links-refresh
+            fi
+            echo "- \`$key\`: $(grep -c '^- ' "$added") pick(s) gained links" >> "$GITHUB_STEP_SUMMARY"
+          done

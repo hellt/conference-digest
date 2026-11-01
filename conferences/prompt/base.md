@@ -19,7 +19,7 @@ of the talks/papers/sessions most worth their attention.
 ## Enriching from the source material (best effort)
 
 The program text gives you a title, authors, and an abstract per item, and
-often links (`pdf:`, `page:`, `video:`). The abstract alone is thin — the full
+often links (`page:`, `pdf:`, `slides:`, `video:`). The abstract alone is thin — the full
 paper has the methodology, real results, and limitations that make the What /
 How / Where-applicable sections accurate instead of guessed.
 
@@ -60,11 +60,13 @@ Group selected items into three relevance tiers:
   are only two true wildcards, list two.
 
 For each selected item provide, in this structure:
-- **Title** and speaker(s)/author(s) with affiliation, and the tier.
-- **Links**: reference links to the paper, slides, and recording where the
-  program provides them (the program text below includes pdf:/video: links per
-  item when available — use those exact URLs; omit a link if not present rather
-  than guessing).
+- **Title**: the `###` heading is the item's title exactly as the program
+  gives it, with nothing added. Speaker(s)/author(s) with affiliation go on
+  the line below it.
+- No links section: the pipeline puts a links row (abstract page, paper,
+  slides, recording) under every heading after you finish, from the program's
+  `page:`/`pdf:`/`slides:`/`video:` lines and from verified sources. Do not
+  write one, and do not link the title.
 - **Why**: why this matters — the problem it addresses and why it's worth the
   PM's time.
 - **What**: what the work actually is — the core contribution or finding, in
@@ -100,8 +102,8 @@ both render reliably, and follow these rules:
 - Bullet lists with `-`. Put a blank line before every list, before every
   heading, and between paragraphs, or they won't render correctly.
 - Indent nested lists by four spaces per level; avoid deeper nesting.
-- All links as `[text](url)` — never bare URLs. Use the exact pdf:/video: URLs
-  from the program text.
+- Any link you do write is `[text](url)` — never a bare URL — and uses a URL
+  exactly as the program text gives it.
 - No raw HTML except the metadata comment below. Do not use heading IDs,
   footnotes, definition lists, or other non-GFM extensions.
 - You may use tables and `code spans` where they genuinely help, since GitHub

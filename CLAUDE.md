@@ -28,16 +28,19 @@ registry.yaml (an edition)
   -> GitHub issue "Digest: <name>"       labeled conf:<key>
   -> digest-bot.yml                      ToFaRev drafts the digest
        (or a Claude session reads prompts/<key>.md and follows it)
+  -> scripts/propose_digest.py           validate, add each pick's links row
   -> PR "digest: <key>" on tofarev/digest-<key>  -> a person merges it
   -> digests/<key>.md                    on main only via that merge (or a human/Claude commit)
   -> close-digest-issue.yml closes the issue
   -> site.yml renders digests/ with Zensical -> gh-pages
+  -> links-refresh.yml (weekly, 120 days) new recordings/slides -> PR "links: <key>"
 ```
 
-Four workflows: `conference-digest.yml` (weekly cron + `workflow_dispatch` with
+Five workflows: `conference-digest.yml` (weekly cron + `workflow_dispatch` with
 an optional `conference` key), `digest-bot.yml` (after each scan, on a human push
 to `prompts/*.md`, or `workflow_dispatch` for one key), `close-digest-issue.yml`
-(push to `digests/*.md`), and `site.yml` (build on PRs, build + publish on main).
+(push to `digests/*.md`), `site.yml` (build on PRs, build + publish on main), and
+`links-refresh.yml` (Wednesdays, or `workflow_dispatch` for one key of any age).
 
 `digest-bot.yml` calls ToFaRev's reusable `digest.yml` pinned to a full commit
 SHA, exactly like containerlab calls `/tofarev review`. ToFaRev reads only
@@ -46,7 +49,20 @@ SHA, exactly like containerlab calls `/tofarev review`. ToFaRev reads only
 only tool) and returns `digest.md` + `result.json` as an artifact. Its checks
 strip links that are not in the program text and flag headings that match no
 program item. The `propose` job here validates the artifact
-(`scripts/propose_digest.py`), builds the site with it, and opens one PR per key.
+(`scripts/propose_digest.py`, which also adds the links rows), builds the site
+with it, and opens one PR per key.
+
+**Links rows.** Every pick gets one `**Links:** [Abstract](…) · [Paper](…) ·
+[Slides](…) · [Recording](…)` row under its heading, written by code
+(`conferences/links.py`), never by the model. Sources, in order: the program
+item's `page:`/`pdf:`/`slides:`/`video:`/`materials:` line (fetchers write it);
+the talk's `page:`, fetched again (USENIX, Sched and netdev pages gain slides and
+an embedded recording after the event; Tavily Extract reads pages that block the
+runner); then, for a pick without a recording, a YouTube search (Tavily search
+as the fallback) whose candidates must pass `verify()`. Recordings appear weeks
+after a conference, so `links-refresh.yml` reruns this for 120 days and opens a
+`links: <key>` PR when a digest gained links. A rerun keeps every link found
+before. `build_site.py` turns the row into chips and a click-to-play thumbnail.
 
 ## Invariants
 
@@ -66,8 +82,9 @@ pipeline.
 3. **The scan commits only `prompts/`, `conferences/state.json` and
    `conferences/registry.yaml`.** registry.yaml is in that list *only* because
    discovery appends to it; nothing else in CI may write it. The Digest Bot
-   pushes only `digests/<key>.md` to its own PR branches, and `site.yml` pushes
-   only the `gh-pages` branch. The site sources `docs/posts/` and
+   pushes only `digests/<key>.md` to its own PR branches (`tofarev/digest-<key>`,
+   and `tofarev/links-<key>` for Links Refresh), and `site.yml` pushes only the
+   `gh-pages` branch. The site sources `docs/posts/` and
    `docs/conferences.md` are generated at build time and gitignored.
    `run_summary.json`, `issues.json` and `discovery_summary.json` are ephemeral,
    gitignored, and passed between steps in one job — never commit them.
@@ -101,8 +118,9 @@ pipeline.
     `type`, `source_url`, `generated`, `registry_key`, plus `written_by` on
     bot-written digests, which the site uses for attribution), then `##` tier sections
     (Core / Adjacent / Wildcard) and a final `## Themes`. GitHub-flavored
-    markdown only; links as `[text](url)` using the exact URLs from the program
-    text.
+    markdown only. Each `###` pick heading is the program item's title, and the
+    line under it is the code-built `**Links:**` row (see Links rows above);
+    the writer adds no links of its own beyond exact program URLs.
 12. **Discovery only ever appends, and only what it confirmed.**
     `discover_editions.py` writes new blocks at the end of `registry.yaml` and
     re-parses the file afterwards; if the result doesn't contain exactly the
@@ -124,7 +142,10 @@ pipeline.
     Editing that date by hand afterwards is expected and safe.
 15. **Never invent program content.** If a fetch or enrichment fails, write from
     the abstract and say so ("from abstract only"). Enrichment deepens a
-    write-up; it never changes selection or tier.
+    write-up; it never changes selection or tier. A link that is not in the
+    program text is only added by `conferences/links.py`, from the talk's own
+    page or a recording that passed `verify()` (title, conference or channel,
+    upload window); when in doubt it adds nothing.
 
 ## Common tasks
 
@@ -140,7 +161,13 @@ python3 scripts/generate_digest_prompt.py --conference <key>   # force one
 **Produce a digest:** normally ToFaRev drafts it and opens a PR; review and
 merge. To redo one, close its PR and run Digest Bot with `conference: <key>`. By
 hand: read `prompts/<key>.md`, follow it, write `digests/<key>.md`. Best-effort
-fetch the per-item `pdf:`/`page:` links to ground the What/How sections.
+fetch the per-item `pdf:`/`page:` links to ground the What/How sections, then run
+`python3 scripts/enrich_links.py <key>` to add the links rows.
+
+**Refresh a digest's links** (new recordings or slides): `python3
+scripts/enrich_links.py <key>` locally (USENIX pages need a non-datacenter IP or
+`TAVILY_API_KEY`), or run Links Refresh with `conference: <key>`. It only adds
+links and rewrites nothing else.
 
 **Build or preview the site:** `make site` (strict build into `site/`) or
 `make serve-site` (live on :8001). Both run `scripts/build_site.py` first, which
@@ -186,6 +213,10 @@ picked out. Bot commits are `digest run: update prompts and state (<date>)`.
 
 ## Known drift
 
+- `digests/ietf-122.md` and `digests/ietf-123.md` were written from the old IETF
+  fetcher, which listed each WG's *current* drafts rather than the meeting's
+  agenda. Their prompts are now real meeting programs, so picks that were never
+  on that meeting's agenda match no program item and get no links row.
 - `conferences/prompt.md` is a deprecated stub; the live prompt is
   `conferences/prompt/base.md` + `types/`.
 - `digests/sigcomm-2025.md` uses `---` front matter and `digests/ietf-123.md` a

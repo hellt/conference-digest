@@ -98,6 +98,9 @@ copyright: >-
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/video.js
+
 markdown_extensions:
   - abbr
   - admonition

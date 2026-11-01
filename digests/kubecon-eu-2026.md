@@ -19,6 +19,8 @@ numbers without stating them, that is called out rather than guessed at.*
 
 ### Multi-Network Step-by-Step: Enabling SR-IOV Support From Kubernetes Network (DRA) Drivers
 
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CW67/multi-network-step-by-step-enabling-sr-iov-support-from-kubernetes-network-dra-drivers-masaharu-kanda-ntt-inc-lionel-jouin-red-hat) · [Recording](https://www.youtube.com/watch?v=vINwfpvvpKI)
+
 *Masaharu Kanda, NTT, Inc. & Lionel Jouin, Red Hat*
 
 - **Why**: This is the session where physical NICs stop being a bolt-on. Multus has
@@ -39,6 +41,8 @@ numbers without stating them, that is called out rather than guessed at.*
 
 ### Kubernetes Network Driver Unpacked: Modularity, Trade-offs and the Road Ahead
 
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CVz9/kubernetes-network-driver-unpacked-modularity-trade-offs-and-the-road-ahead-lionel-jouin-sebastian-scheinkman-red-hat-antonio-ojea-google-sunyanan-choochotkaew-ibm) · [Recording](https://www.youtube.com/watch?v=xJ9R7NNZMyQ)
+
 *Lionel Jouin & Sebastian Scheinkman, Red Hat; Antonio Ojea, Google; Sunyanan Choochotkaew, IBM*
 
 - **Why**: The companion strategy session to the SR-IOV talk, and the more important
@@ -57,6 +61,8 @@ numbers without stating them, that is called out rather than guessed at.*
 
 ### The Latest in GPU, TPU, NIC and Other Device Support — WG Device Management
 
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2EIbN/the-latest-in-gpu-tpu-nic-and-other-device-support-wg-device-management-john-belamaric-google-patrick-ohly-intel) · [Recording](https://www.youtube.com/watch?v=MAwL8A1WCjw)
+
 *John Belamaric, Google & Patrick Ohly, Intel*
 
 - **Why**: DRA is the substrate under both talks above, and this is its status
@@ -72,6 +78,8 @@ numbers without stating them, that is called out rather than guessed at.*
   relevant if you are building multi-node accelerator or NIC pools.
 
 ### Bridging Islands: EVPN Overlays for Multi-Cluster KubeVirt
+
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2EG0n/cloud-native-theater-kubevirt-summit-bridging-islands-evpn-overlays-for-multi-cluster-kubevirt-miguel-duarte-red-hat) · [Recording](https://www.youtube.com/watch?v=P0V_IiI3Qh4)
 
 *Miguel Duarte, Red Hat* — Cloud Native Theater | KubeVirt Summit
 
@@ -90,6 +98,8 @@ numbers without stating them, that is called out rather than guessed at.*
   so this is for operators who control the underlay — not a public-cloud pattern.
 
 ### Making Topology-Aware Scheduling Practical for AI Workloads: From Discovery to Simulation at Scale
+
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CW7K/making-topology-aware-scheduling-practical-for-ai-workloads-from-discovery-to-simulation-at-scale-weizhou-lan-daocloud) · [Recording](https://www.youtube.com/watch?v=Jj8DNLA5hYc)
 
 *Weizhou Lan, Daocloud*
 
@@ -110,6 +120,8 @@ numbers without stating them, that is called out rather than guessed at.*
 
 ### Gateway API: Bridging the Gap from Ingress to the Future
 
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2EsAI/gateway-api-bridging-the-gap-from-ingress-to-the-future-nick-young-james-strong-isovalent-at-cisco-katarzyna-lach-rostislav-bobrovsky-google-norwin-schnyder-airlock) · [Recording](https://www.youtube.com/watch?v=bHSsd6dojPc)
+
 *Nick Young & James Strong, Isovalent at Cisco; Katarzyna Łach & Rostislav Bobrovsky, Google; Norwin Schnyder, Airlock*
 
 - **Why**: ingress-nginx is being archived, and that is pushing a large population
@@ -126,6 +138,8 @@ numbers without stating them, that is called out rather than guessed at.*
   you land on — see the next pick.
 
 ### Navigating the Gateway API Maze: 40+ Implementations, 55+ Features, and a Path to Portability
+
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CW6b/navigating-the-gateway-api-maze-40+-implementations-55+-features-and-a-path-to-portability-beka-modebadze-google-christine-kim-isovalent-at-cisco) · [Recording](https://www.youtube.com/watch?v=aBoqH0wf4Yk)
 
 *Beka Modebadze, Google & Christine Kim, Isovalent at Cisco*
 
@@ -144,6 +158,8 @@ numbers without stating them, that is called out rather than guessed at.*
 
 ### When DNS Blinks: Scaling and Hardening CoreDNS in Critical Cloud Infrastructure
 
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2EF5D/when-dns-blinks-scaling-and-hardening-coredns-in-critical-cloud-infrastructure-yong-tang-ivanti-john-belamaric-google) · [Recording](https://www.youtube.com/watch?v=9UIPskZ07dY)
+
 *Yong Tang, Ivanti & John Belamaric, Google*
 
 - **Why**: Framed against the recent DNS disruptions at major cloud providers. The
@@ -161,6 +177,8 @@ numbers without stating them, that is called out rather than guessed at.*
   them. The contention work matters most on high-core-count nodes.
 
 ### Smart Routing at Scale: How Spotify's xDS Control Plane Cut 75% of Cross-Zone Traffic
+
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CVzg/smart-routing-at-scale-how-spotifys-xds-control-plane-cut-75-of-cross-zone-traffic-yannick-epstein-anya-hristova-spotify) · [Recording](https://www.youtube.com/watch?v=oFdW1yAoaHc)
 
 *Yannick Epstein & Anya Hristova, Spotify*
 
@@ -184,6 +202,8 @@ numbers without stating them, that is called out rather than guessed at.*
 
 ### From NLB Sprawl to Mesh Efficiency: How Skyscanner Handles 60M Requests Per Minute With Istio
 
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CVxS/from-nlb-sprawl-to-mesh-efficiency-how-skyscanner-handles-60m-requests-per-minute-with-istio-john-clark-skyscanner-steven-thwaites-soloio) · [Recording](https://www.youtube.com/watch?v=2ZvvGdHfknM)
+
 *John Clark, Skyscanner & Steven Thwaites, Solo.io*
 
 - **Why**: The other cost-with-numbers talk, from the opposite direction: removing
@@ -204,6 +224,8 @@ numbers without stating them, that is called out rather than guessed at.*
 
 ### WIT Happens: Exploring the Latest Evolution of the SPIFFE and WIMSE Workload Identity Standards
 
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2EF5G/wit-happens-exploring-the-latest-evolution-of-the-spiffe-and-wimse-workload-identity-standards-noah-stride-teleport-arndt-schwenkschuster-defakto-security) · [Recording](https://www.youtube.com/watch?v=bwCYG6NWh44)
+
 *Noah Stride, Teleport & Arndt Schwenkschuster, Defakto Security*
 
 - **Why**: A concrete standards milestone rather than a survey: the IETF WIMSE
@@ -220,6 +242,8 @@ numbers without stating them, that is called out rather than guessed at.*
   Standards-track work, so vendor-neutral, but adoption timing is the open question.
 
 ### From Static Tokens to Attestation: The Evolution of Secure Node Joining
+
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2EoKz/from-static-tokens-to-attestation-the-evolution-of-secure-node-joining-ciprian-hacman-jack-francis-microsoft-michael-mccune-josephine-pfeiffer-red-hat-justin-santa-barbara-google) · [Recording](https://www.youtube.com/watch?v=MIO3tDk0GnI)
 
 *Ciprian Hacman & Jack Francis, Microsoft; Michael McCune & Josephine Pfeiffer, Red Hat; Justin Santa Barbara, Google*
 
@@ -243,6 +267,8 @@ numbers without stating them, that is called out rather than guessed at.*
 
 ### SIG Network: The State of Networking for AI on Kubernetes
 
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2EF4d/sig-network-the-state-of-networking-for-ai-on-kubernetes-david-martin-red-hat-haiyan-meng-bowei-du-kellen-swain-google-nadia-pinaeva-nvidia) · [Recording](https://www.youtube.com/watch?v=DO1PVnly9cU)
+
 *David Martin, Red Hat; Haiyan Meng, Bowei Du & Kellen Swain, Google; Nadia Pinaeva, NVIDIA*
 
 - **Why**: The best single session for mapping where upstream networking effort is
@@ -259,6 +285,8 @@ numbers without stating them, that is called out rather than guessed at.*
 
 ### SPIFFE Meets OAuth: Federated Identity for Cloud Native Workloads
 
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CW5g/spiffe-meets-oauth-federated-identity-for-cloud-native-workloads-yoshiyuki-tabata-hitachi-ltd) · [Recording](https://www.youtube.com/watch?v=_qVWLU2sLnw)
+
 *Yoshiyuki Tabata, Hitachi, Ltd.*
 
 - **Why**: Addresses the multi-hop authorization problem across trust domains, which
@@ -274,6 +302,8 @@ numbers without stating them, that is called out rather than guessed at.*
   technique built on public standards; the demo stack is one instantiation.
 
 ### When an Agent Acts on Your Behalf, Who Holds the Keys?
+
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CVxt/when-an-agent-acts-on-your-behalf-who-holds-the-keys-mariusz-sabath-maia-iyer-ibm-research) · [Recording](https://www.youtube.com/watch?v=kc2NuTUt5Os)
 
 *Mariusz Sabath & Maia Iyer, IBM Research*
 
@@ -295,6 +325,8 @@ numbers without stating them, that is called out rather than guessed at.*
 
 ### Let Your Network Speak!
 
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CW23/let-your-network-speak-nadia-pinaeva-nvidia-joel-takvorian-red-hat) · [Recording](https://www.youtube.com/watch?v=PHLfqvgaYq4)
+
 *Nadia Pinaeva, NVIDIA & Joel Takvorian, Red Hat*
 
 - **Why**: Targets a specific and familiar failure: with a non-trivial number of
@@ -309,6 +341,8 @@ numbers without stating them, that is called out rather than guessed at.*
   that is your datapath.
 
 ### Evolving Baremetal-as-a-Service: Secure Multi-Cluster Networking and Service Identity Automation
+
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CW2I/evolving-baremetal-as-a-service-secure-multi-cluster-networking-and-service-identity-automation-yushiro-furukawa-mitsuhiro-tanino-ly-corporation) · [Recording](https://www.youtube.com/watch?v=MgerB2Tl0MQ)
 
 *Yushiro Furukawa & Mitsuhiro Tanino, LY Corporation*
 
@@ -327,6 +361,8 @@ numbers without stating them, that is called out rather than guessed at.*
   to provisioning generalizes; the stack does not.
 
 ### KubeVirt on GB200: Virtualizing a Rack-Scale Supercomputer
+
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2EG0e/cloud-native-theater-kubevirt-summit-kubevirt-on-gb200-virtualizing-a-rack-scale-supercomputer-fan-zhang-kevin-klues-and-alay-patel-nvidia) · [Recording](https://www.youtube.com/watch?v=jtnRFgu4tdI)
 
 *Fan Zhang, Kevin Klues & Alay Patel, NVIDIA* — Cloud Native Theater | KubeVirt Summit
 
@@ -349,6 +385,8 @@ numbers without stating them, that is called out rather than guessed at.*
 
 ### Virtualizing Large Scale GPU Cluster for Sovereign AI: Petasus AI Cloud Journey with Kubernetes
 
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CW7f/virtualizing-large-scale-gpu-cluster-for-sovereign-ai-petasus-ai-cloud-journey-with-kubernetes-jian-li-sk-telecom) · [Recording](https://www.youtube.com/watch?v=m1buNUEmXTg)
+
 *Jian Li, SK Telecom*
 
 - **Why**: Carries the number that matters for the virtualize-or-not argument on
@@ -366,6 +404,8 @@ numbers without stating them, that is called out rather than guessed at.*
   PCIe/TCP. Multi-tenancy approach is broadly instructive.
 
 ### Why Is It So Hard to Run a 5G Core on Kubernetes — And What Needs to Change for 6G
+
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CW0G/why-is-it-so-hard-to-run-a-5g-core-on-kubernetesand-what-needs-to-change-for-6g-joel-studler-swisscom-ashan-senevirathne-telstra) · [Recording](https://www.youtube.com/watch?v=duYk-FjcKAg)
 
 *Joel Studler, Swisscom & Ashan Senevirathne, Telstra*
 
@@ -388,6 +428,8 @@ numbers without stating them, that is called out rather than guessed at.*
 
 ### Beyond the Edge: Cloud Native Application Management Under Extreme Network Conditions
 
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CW6e/beyond-the-edge-cloud-native-application-management-under-extreme-network-conditions-tobias-nothlich-maximilian-nitsch-d3tn-gmbh) · [Recording](https://www.youtube.com/watch?v=9YjpYZVz6_4)
+
 *Tobias Nöthlich & Maximilian Nitsch, D3TN GmbH*
 
 - **Why**: Kubernetes assumes a network that mostly works. This asks what remains
@@ -406,6 +448,8 @@ numbers without stating them, that is called out rather than guessed at.*
 
 ### Keeping the Cloud Afloat with Deterministic Simulation Testing
 
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CW6k/keeping-the-cloud-afloat-with-deterministic-simulation-testing-marcus-hodgson-antithesis-marek-siarkowicz-google) · [Recording](https://www.youtube.com/watch?v=qgCpdb2sbh8)
+
 *Marcus Hodgson, Antithesis & Marek Siarkowicz, Google*
 
 - **Why**: etcd's v3.5 consistency errors are a known scar in the ecosystem, and the
@@ -422,6 +466,8 @@ numbers without stating them, that is called out rather than guessed at.*
   default expectation for critical CNCF infrastructure.
 
 ### The Hyperscale Uncertainty Principle: Debugging Tail Latency in a Trillion-Object System
+
+**Links:** [Abstract](https://kccnceu2026.sched.com/event/2CW3k/the-hyperscale-uncertainty-principle-debugging-tail-latency-in-a-trillion-object-system-yashraj-kakkad-google) · [Recording](https://www.youtube.com/watch?v=hpFqElHNLaY)
 
 *Yashraj Kakkad, Google*
 

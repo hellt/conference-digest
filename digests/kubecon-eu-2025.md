@@ -14,6 +14,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### IAM, Agent: Identity for Autonomous AI
 
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1tx8O/iam-agent-identity-for-autonomous-ai-matthew-bates-cofide) · [Recording](https://www.youtube.com/watch?v=CvGbwn5ZrFg)
+
 *Matthew Bates, Cofide* — **Core**
 
 - **Why**: This is the session that most directly hits the PM's agentic-identity interest: applying zero-trust and workload identity principles to multi-agent AI systems, explicitly citing SPIFFE/SPIRE and the IETF's WIMSE standard.
@@ -22,6 +24,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: General; aimed at anyone building multi-agent AI architectures who needs standards-based identity rather than bespoke API keys per agent.
 
 ### Beyond Classical Cryptography: Building Quantum-Resistant Cloud Native Infrastructure With SPIFFE
+
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1td1H/beyond-classical-cryptography-building-quantum-resistant-cloud-native-infrastructure-with-spiffe-andres-vega-m42-hugo-landau-messier42) · [Recording](https://www.youtube.com/watch?v=LEiFzJnqU-E)
 
 *Andrés Vega, M42 & Hugo Landau, Messier42* — **Core**
 
@@ -32,6 +36,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Zero Trust at Shopify Scale: Automating MTLS Across Thousands of Services
 
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1txHC/zero-trust-at-shopify-scale-automating-mtls-across-thousands-of-services-dani-santos-michelle-mali-shopify) · [Recording](https://www.youtube.com/watch?v=T-nN86wTebM)
+
 *Dani Santos & Michelle Mali, Shopify* — **Core**
 
 - **Why**: A real production account — with failure modes, not just success framing — of the operational problem every SPIFFE/SPIRE or cert-manager deployment eventually hits: rotating certificates across thousands of services without an outage.
@@ -40,6 +46,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: General mTLS-at-scale problem; the specific CronJob-renewal pattern is one implementation choice among several, useful as a reference for anyone hitting cert-rotation pain at scale.
 
 ### SPIFFE in Practice: Universal Identity for WebAssembly Workloads
+
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1tx8U/spiffe-in-practice-universal-identity-for-webassembly-workloads-joonas-bergius-cosmonic-colin-murphy-adobe) · [Recording](https://www.youtube.com/watch?v=c0dEL_bBRVU)
 
 *Joonas Bergius, Cosmonic & Colin Murphy, Adobe* — **Core**
 
@@ -50,6 +58,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Workload Identity for Humans: A Twelve-Factor Approach
 
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1txEa/workload-identity-for-humans-a-twelve-factor-approach-vish-abrams-heroku) · [Recording](https://www.youtube.com/watch?v=dNb1m84Bp4c)
+
 *Vish Abrams, Heroku* — **Core**
 
 - **Why**: A useful counterpoint to the platform-level SPIFFE/SPIRE talks above: an argument that workload identity primitives are powerful but leave application developers reinventing bespoke integration per platform, and a proposal for a more opinionated developer-facing layer.
@@ -58,6 +68,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: General; relevant to anyone whose application teams treat workload identity as ops-only plumbing rather than a first-class app concern.
 
 ### Simplifying the Networking and Security Stack With Cilium, Hubble, and Tetragon
+
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1tcxw/simplifying-the-networking-and-security-stack-with-cilium-hubble-and-tetragon-bill-mulligan-anna-kapuscinska-isovalent-at-cisco-bowei-du-google-amir-kheirkhahan-dbschenker) · [Recording](https://www.youtube.com/watch?v=kYT7KV_Cijs)
 
 *Bill Mulligan & Anna Kapuścińska, Isovalent at Cisco; Bowei Du, Google; Amir Kheirkhahan, DBSchenker* — **Core**
 
@@ -68,6 +80,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Making the Leap: What Gateway API Needs To Support Ingress-NGINX Users
 
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1txAl/making-the-leap-what-gateway-api-needs-to-support-ingress-nginx-users-rob-scott-google-james-strong-isovalent-at-cisco) · [Recording](https://www.youtube.com/watch?v=EeegJKZ_4g0)
+
 *Rob Scott, Google & James Strong, Isovalent at Cisco* — **Core**
 
 - **Why**: Ingress-NGINX has been the de facto standard for years; its maintainers moving to a Gateway API-focused implementation is a significant ecosystem signal, and this talk is literally about the compatibility gaps blocking that migration — directly relevant to anyone planning an ingress-to-Gateway-API transition.
@@ -76,6 +90,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: General; anyone currently on Ingress-NGINX evaluating or planning a Gateway API migration should treat this as a pre-migration checklist source.
 
 ### Uncharted Waters: Dynamic Resource Allocation for Networking
+
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1txAx/uncharted-waters-dynamic-resource-allocation-for-networking-miguel-duarte-barroso-red-hat-lionel-jouin-ericsson-software-technology) · [Recording](https://www.youtube.com/watch?v=PgCaIyeRn6Y)
 
 *Miguel Duarte Barroso, Red Hat & Lionel Jouin, Ericsson Software Technology* — **Core**
 
@@ -86,6 +102,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Encryption, Identities, and Everything in Between; Building Secure Kubernetes Networks
 
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1txER/encryption-identities-and-everything-in-between-building-secure-kubernetes-networks-lior-lieberman-google-igor-velichkovich-stealth-startup) · [Recording](https://www.youtube.com/watch?v=Q15XbASxHM0)
+
 *Lior Lieberman, Google & Igor Velichkovich, Stealth Startup* — **Core**
 
 - **Why**: A rare talk that explicitly frames encryption and identity/AuthN/AuthZ as one problem for Kubernetes networking rather than separate concerns, and calls for the community to standardize and simplify it — a useful survey of where the ecosystem actually stands.
@@ -94,6 +112,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: General; most useful as an orientation talk for evaluating the fragmented landscape of Kubernetes network encryption/identity tooling rather than a specific implementation guide.
 
 ### The Great Sidecar Debate
+
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1txAu/the-great-sidecar-debate-william-morgan-buoyant) · [Recording](https://www.youtube.com/watch?v=lVWUCUt6ZM8)
 
 *William Morgan, Buoyant* — **Core**
 
@@ -113,6 +133,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Identity-based Trust — Till Death Do We Part?
 
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1tx8L/identity-based-trust-till-death-do-we-part-john-kjell-controlplane-kairo-de-araujo-independent) · [Recording](https://www.youtube.com/watch?v=26p_qvuCy-s)
+
 *John Kjell, ControlPlane & Kairo De Araujo, Independent* — **Core**
 
 - **Why**: A threat-model-first look at OIDC-based "trusted publishing" (PyPI, npm, RubyGems, Homebrew, all built on Sigstore's Fulcio/Rekor) — directly relevant to identity infrastructure design, specifically the hard problem of what happens when the identity backing a signature is compromised in an append-only trust log.
@@ -124,6 +146,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### CNCF Project Demos | BGP Beyond Loadbalancers with MetalLB and FRR-K8s
 
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1zfs7/cncf-project-demos-bgp-beyond-loadbalancers-with-metallb-and-frr-k8s)
+
 *(Project Pavilion demo)* — **Adjacent**
 
 - **Why**: MetalLB's BGP engine (backed by FRR-K8s) moving beyond simple LoadBalancer-service advertisement into general BGP features on bare-metal clusters is a small but concrete signal of cloud-native networking absorbing more real routing-protocol capability.
@@ -132,6 +156,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: Bare-metal/on-prem Kubernetes needing BGP-based LoadBalancer integration; general for that deployment shape.
 
 ### SIG Network Intro and Updates
+
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1tczU/sig-network-intro-and-updates-dan-winship-nadia-pinaeva-red-hat-bowei-du-google-daman-arora-broadcom) · [Recording](https://www.youtube.com/watch?v=lBOdQHNNgEU)
 
 *Dan Winship & Nadia Pinaeva, Red Hat; Bowei Du, Google; Daman Arora, Broadcom* — **Adjacent**
 
@@ -142,6 +168,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### CNCF TAG Network and Cloud Native Network Landscape
 
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1td0t/cncf-tag-network-and-cloud-native-network-landscape-zhonghu-xu-huawei-nic-jackson-hashicorp) · [Recording](https://www.youtube.com/watch?v=gMDC1zzHabk)
+
 *Zhonghu Xu, Huawei & Nic Jackson, Hashicorp* — **Adjacent**
 
 - **Why**: A map of the CNCF's own networking-project taxonomy and governance — useful context for understanding how the various networking projects (Cilium, Kmesh, Istio, MetalLB, etc.) relate to each other institutionally.
@@ -150,6 +178,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: General orientation for anyone tracking the CNCF networking-project ecosystem as a whole.
 
 ### Tutorial: Mind Your Pod's Business: Network Isolation Workshop
+
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1tx6n/tutorial-mind-your-pods-business-network-isolation-workshop-surya-seetharaman-miguel-duarte-barroso-red-hat-keith-burdis-goldman-sachs)
 
 *Surya Seetharaman & Miguel Duarte Barroso, Red Hat; Keith Burdis, Goldman Sachs* — **Adjacent**
 
@@ -160,6 +190,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Debugging Envoy Tunnels: A Deep Dive
 
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1txEO/debugging-envoy-tunnels-a-deep-dive-carlos-sanchez-alexandra-stoica-adobe) · [Recording](https://www.youtube.com/watch?v=vrG5tBDsdd0)
+
 *Carlos Sanchez & Alexandra Stoica, Adobe* — **Adjacent**
 
 - **Why**: A practitioner's account of a specific, painful operational pattern — Envoy tunnels with mTLS connecting Kubernetes pods to on-prem/customer infrastructure — with real troubleshooting scenarios rather than a theoretical overview.
@@ -169,6 +201,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### TUF-en up Your Software Supply Chain
 
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1tczI/tuf-en-up-your-software-supply-chain-marina-moore-edera-kairo-de-araujo-independent) · [Recording](https://www.youtube.com/watch?v=lIYXVIPsk_U)
+
 *Marina Moore, Edera & Kairo De Araujo, Independent* — **Adjacent**
 
 - **Why**: Complements the identity-trust talk above from the artifact-integrity side — how The Update Framework (TUF) and in-toto tie signed images to supply-chain metadata for end-to-end verifiable distribution.
@@ -177,6 +211,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: General software supply-chain security for container image distribution; relevant to anyone building or evaluating SBOM/attestation pipelines.
 
 ### Istio: The Past, Present and Future of the Project and Community
+
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1tczp/istio-the-past-present-and-future-of-the-project-and-community-lin-sun-louis-ryan-soloio-raymond-wong-forbes) · [Recording](https://www.youtube.com/watch?v=poBOYc_EkpA)
 
 *Lin Sun & Louis Ryan, Solo.io; Raymond Wong, Forbes* — **Adjacent**
 
@@ -189,6 +225,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### Using eBPF for Non-invasive, Performant, Instant Network Monitoring
 
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1txDK/using-ebpf-for-non-invasive-performant-instant-network-monitoring-mario-macias-marc-tuduri-grafana) · [Recording](https://www.youtube.com/watch?v=HV3Nb_wUro4)
+
 *Mario Macías & Marc Tudurí, Grafana* — **Wildcard**
 
 - **Why**: Not a design talk, but a genuinely different operational capability: getting L3–L7 network observability without redeploying network infrastructure or instrumenting applications, purely by attaching eBPF at different stack layers — worth seeing even outside core networking-design interest.
@@ -198,6 +236,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 
 ### A Cloud Native Workflow for Hardware-in-the-Loop Software Development
 
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1txFD/a-cloud-native-workflow-for-hardware-in-the-loop-software-development-miguel-angel-ajo-red-hat) · [Recording](https://www.youtube.com/watch?v=40OmDwTgl1A)
+
 *Miguel Angel Ajo, Red Hat* — **Wildcard**
 
 - **Why**: A genuine crossover between cloud-native tooling and physical hardware testing — using Kubernetes-native CI (Tekton) to drive real firmware flashing, booting, and hardware interfaces (CAN bus, serial, video) rather than simulating them. Not a fit for the PM's networking/identity focus directly, but a "cloud-native reaches into physical hardware" pattern worth having on the radar.
@@ -206,6 +246,8 @@ A triaged set of sessions for a PM working across physical DC/WAN networking, cl
 - **Where applicable**: Embedded/firmware development for hardware devices (developed with an automotive manufacturer); the pattern of "Kubernetes-native CI orchestrating physical device labs" generalizes beyond automotive to any hardware-in-the-loop testing need.
 
 ### Stateful Connections in Kubernetes: The Scaling Secrets Nobody Talks About
+
+**Links:** [Abstract](https://kccnceu2025.sched.com/event/1txHO/stateful-connections-in-kubernetes-the-scaling-secrets-nobody-talks-about-andre-mocke-rodrigo-fior-kuntzer-miro) · [Recording](https://www.youtube.com/watch?v=h1AyaAIf3HA)
 
 *André Mocke & Rodrigo Fior Kuntzer, Miro* — **Wildcard**
 

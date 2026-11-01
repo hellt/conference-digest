@@ -19,6 +19,8 @@ A note on maturity, since it's the whole game in a standards venue: `draft-ietf-
 
 ### Workload Identity in a Multi System Environment (WIMSE) Architecture — `draft-ietf-wimse-arch`
 
+**Links:** [Slides](https://datatracker.ietf.org/meeting/123/materials/slides-123-wimse-wimse-architecture-draft-00) · [Session recording](https://www.youtube.com/watch?v=Mv4lgHLxOH4) · [Materials](https://datatracker.ietf.org/meeting/123/session/wimse)
+
 - **Tier**: Core
 - **Why**: This is the architectural anchor for standardizing how workloads get and use identity across multi-cloud, multi-tenant, multi-service deployments — the exact problem SPIFFE/SPIRE solved proprietarily. An IETF-stream architecture means the surrounding protocol drafts (below) have a shared frame, and implementations stop being per-vendor.
 - **What**: An architecture document defining how to convey workload identity and security-context information, where a workload is software running for a specific purpose, possibly across many instances. (from abstract only)
@@ -43,6 +45,8 @@ A note on maturity, since it's the whole game in a standards venue: `draft-ietf-
 
 ### Workload Identifier — `draft-ietf-wimse-identifier`
 
+**Links:** [Slides](https://datatracker.ietf.org/meeting/123/materials/slides-123-wimse-workload-identifier-00) · [Session recording](https://www.youtube.com/watch?v=Mv4lgHLxOH4) · [Materials](https://datatracker.ietf.org/meeting/123/session/wimse)
+
 - **Tier**: Core
 - **Why**: A canonical URI for naming a workload within a trust domain, embeddable in X.509 certs and security tokens. This is the SPIFFE-ID-shaped piece, and getting it standardized is what makes cross-system authorization and federation consistent.
 - **What**: Defines a Workload Identifier as a URI that uniquely identifies a workload inside a specific trust domain, intended for embedding in credentials to drive authn, authz, and policy. (from abstract only)
@@ -51,6 +55,8 @@ A note on maturity, since it's the whole game in a standards venue: `draft-ietf-
 
 ### OAuth Identity and Authorization Chaining Across Domains + Transaction Tokens — `draft-ietf-oauth-identity-chaining`, `draft-ietf-oauth-transaction-tokens`
 
+**Links:** [Draft](https://datatracker.ietf.org/doc/draft-ietf-oauth-identity-chaining/) · [Slides](https://datatracker.ietf.org/meeting/123/materials/slides-123-oauth-sessb-oauth-identity-and-authorization-chaining-across-domains-00) · [Session recording](https://www.youtube.com/watch?v=2XQVPrNdDtc) · [Materials](https://datatracker.ietf.org/meeting/123/session/oauth)
+
 - **Tier**: Core
 - **Why**: These two are the agentic/multi-hop authorization story. As calls fan out across services and trust-domain boundaries, you need to carry *who originated this* and *what they're allowed to do* without re-minting broad bearer tokens at every hop. This is directly the workload-and-agentic-identity space you track.
 - **What**: `identity-chaining` preserves identity and authorization across OAuth trust domains by chaining context through JWT authorization grants obtained via Token Exchange (RFC 8693) and JWT Bearer (RFC 7523). `transaction-tokens` (Txn-Tokens) carry user identity, workload identity, and authorization context through an entire internal call chain within a trust domain for a given external request. (from abstract only)
@@ -58,6 +64,8 @@ A note on maturity, since it's the whole game in a standards venue: `draft-ietf-
 - **Where applicable**: General OAuth deployments with microservice call chains; especially relevant where requests cross organizational/trust boundaries (B2B, federated enterprise SSO).
 
 ### OAuth 2.0 Attestation-Based Client Authentication — `draft-ietf-oauth-attestation-based-client-auth`
+
+**Links:** [Draft](https://datatracker.ietf.org/doc/draft-ietf-oauth-attestation-based-client-auth/) · [Slides](https://datatracker.ietf.org/meeting/123/materials/slides-123-oauth-sessa-ietf-123-attestation-based-client-authentication-01) · [Session recording](https://www.youtube.com/watch?v=rsPrpr-5MPI) · [Materials](https://datatracker.ietf.org/meeting/123/session/oauth)
 
 - **Tier**: Core
 - **Why**: Lets a client instance present a key-bound attestation to an AS/RS without revealing its target audience to the attester. That audience-blinding property matters for privacy-preserving workload and device auth, and it's a cleaner client-authentication primitive than shared secrets.
@@ -98,6 +106,8 @@ A note on maturity, since it's the whole game in a standards venue: `draft-ietf-
 - **Where applicable**: General TLS 1.3 deployments. Hybrid KEX is the low-risk piece to adopt first; ML-DSA auth and cert-size mitigations (see also `draft-ietf-tls-cert-abridge`, below in Adjacent) are where the operational pain concentrates.
 
 ### MASQUE: Proxying IP and Ethernet in HTTP — `draft-ietf-masque-connect-ip`, `draft-ietf-masque-connect-ethernet`
+
+**Links:** [Slides](https://datatracker.ietf.org/meeting/123/materials/slides-123-masque-connect-ethernet-00) · [Session recording](https://www.youtube.com/watch?v=N4yhFyITbJo) · [Materials](https://datatracker.ietf.org/meeting/123/session/masque)
 
 - **Tier**: Core
 - **Why**: CONNECT-IP (and now CONNECT-Ethernet) turns HTTP/3 into a general-purpose tunneling substrate — VPN-like IP transport and even L2 transport over QUIC. This is increasingly relevant to cloud-native datapath and edge connectivity, and it overlaps your software-networking and WAN-interconnect interests.
@@ -186,6 +196,8 @@ A note on maturity, since it's the whole game in a standards venue: `draft-ietf-
 - **Where applicable**: General software supply-chain and artifact provenance; relevant to anyone consuming signed build/attestation metadata.
 
 ### JOSE JSON Web Proof (JWP) — `draft-ietf-jose-json-web-proof`
+
+**Links:** [Draft](https://datatracker.ietf.org/doc/draft-ietf-jose-json-web-proof/) · [Slides](https://datatracker.ietf.org/meeting/123/materials/slides-123-jose-json-web-proof-00) · [Session recording](https://www.youtube.com/watch?v=2o7rRgUJjKc) · [Materials](https://datatracker.ietf.org/meeting/123/session/jose)
 
 - **Tier**: Wildcard
 - **Why**: A new container format alongside JWS/JWE built specifically for multi-message, zero-knowledge-style proofs (e.g. BBS) — i.e. selective disclosure and unlinkable presentations as a first-class primitive rather than a bolt-on. If privacy-preserving credentials go mainstream, this is plumbing you'll encounter.

@@ -89,10 +89,10 @@ jobs:
         key: ${{ fromJSON(needs.queue.outputs.keys) }}
     permissions:
       contents: read
-    uses: hellt/tofarev/.github/workflows/digest.yml@899343d8513fe8f58f33e6efb2c4f7e2bd4e74ef
+    uses: hellt/tofarev/.github/workflows/digest.yml@ca96ef91456e98df7dc67f67260c6703755cb211
     with:
       bot_repository: hellt/tofarev
-      bot_ref: '899343d8513fe8f58f33e6efb2c4f7e2bd4e74ef'
+      bot_ref: 'ca96ef91456e98df7dc67f67260c6703755cb211'
       key: ${{ matrix.key }}
       source_ref: ${{ needs.queue.outputs.source_ref }}
       # GLM-5.3 (not the default GLM-5.3-Flash) won the digest model trial.
@@ -141,6 +141,8 @@ jobs:
       - name: Open one pull request per digest
         env:
           GH_TOKEN: ${{ github.token }}
+          # Optional: links rows search fallback and reader for pages that block runners.
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           KEYS: ${{ needs.queue.outputs.keys }}
           SOURCE_REF: ${{ needs.queue.outputs.source_ref }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

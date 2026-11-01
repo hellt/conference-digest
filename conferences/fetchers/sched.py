@@ -16,6 +16,8 @@ content -> NOT_PUBLISHED (or MANUAL_FALLBACK on an outright block).
 
 from __future__ import annotations
 
+from urllib.parse import urljoin
+
 from bs4 import BeautifulSoup
 
 from .base import Fetcher, FetchResult, http_get, looks_blocked, OK, NOT_PUBLISHED
@@ -40,7 +42,7 @@ class SchedFetcher(Fetcher):
         if resp.status_code != 200:
             return self.manual(entry, f"unexpected status {resp.status_code}")
 
-        text, count = self._parse(resp.text)
+        text, count = self._parse(resp.text, url)
         if count == 0:
             return FetchResult(
                 status=NOT_PUBLISHED,
@@ -56,7 +58,7 @@ class SchedFetcher(Fetcher):
             detail=f"parsed {count} sessions",
         )
 
-    def _parse(self, html: str) -> tuple[str, int]:
+    def _parse(self, html: str, base: str = "") -> tuple[str, int]:
         soup = BeautifulSoup(html, "html.parser")
         lines: list[str] = []
         count = 0
@@ -84,10 +86,17 @@ class SchedFetcher(Fetcher):
             if not (speakers or desc):
                 continue
 
+            # The session's own page gains uploaded slides and the recording
+            # after the event; the digest's links row reads it then.
+            link = row.select_one("a[href*='event/']")
+            page = urljoin(urljoin(base, "/"), link["href"].lstrip("/")) if link and base else ""
+
             count += 1
             lines.append(f"### {title}")
             if speakers:
                 lines.append(f"Speakers: {speakers}")
+            if page.startswith("https://"):
+                lines.append(f"page: {page}")
             if desc:
                 lines.append(desc)
             lines.append("")

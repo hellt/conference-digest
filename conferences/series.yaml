@@ -315,3 +315,20 @@ series:
     program_url_template: "https://conferences.sigcomm.org/co-next/{year}/partials/program.html"
     manual_fallback_url_template: "https://conferences.sigcomm.org/co-next/{year}/partials/program.html"
     notes: "Emerging networking research: datacenter, transport (QUIC), edge and wireless, measurement, network security. Papers link their ACM DL page and PDF."
+
+  # APRICOT: APNIC's open conference API serves the schedule app behind every
+  # {year}.apricot.net site. The events listing names each edition with its id,
+  # dates and city (the probe reads it directly), and the event document lists
+  # every agenda item with speaker, affiliation, abstract and slides. Sessions
+  # with a YouTube live link attach it only when they hold a single talk.
+  - series: apricot
+    enumerate: year
+    key_template: "apricot-{year}"
+    name_template: "APRICOT {year}"
+    type: operator
+    fetcher: apricot
+    start: 2025
+    lookahead: 3
+    program_url_template: "https://api.apnic.net/web/v1/events"
+    manual_fallback_url_template: "https://{year}.apricot.net/programme/"
+    notes: "The Asia-Pacific operators summit (with APNIC): routing, peering, datacenter and backbone operations, DNS, security, automation."

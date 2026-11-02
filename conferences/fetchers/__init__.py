@@ -14,8 +14,10 @@ from .gtc import GtcFetcher
 from .ccs import CcsFetcher
 from .imc import ImcFetcher
 from .conext import ConextFetcher
+from .apricot import ApricotFetcher
 from .imc import ImcFetcher
 from .conext import ConextFetcher
+from .apricot import ApricotFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -34,6 +36,7 @@ FETCHERS = {
     "ccs": CcsFetcher(),
     "imc": ImcFetcher(),
     "conext": ConextFetcher(),
+    "apricot": ApricotFetcher(),
 }
 
 

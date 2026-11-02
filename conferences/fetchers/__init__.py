@@ -29,6 +29,7 @@ from .capacity import CapacityFetcher
 from .janog import JanogFetcher
 from .indico import IndicoFetcher
 from .itnog import ItnogFetcher
+from .netnod import NetnodFetcher
 from .imc import ImcFetcher
 from .conext import ConextFetcher
 from .apricot import ApricotFetcher
@@ -46,6 +47,7 @@ from .capacity import CapacityFetcher
 from .janog import JanogFetcher
 from .indico import IndicoFetcher
 from .itnog import ItnogFetcher
+from .netnod import NetnodFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -79,6 +81,7 @@ FETCHERS = {
     "janog": JanogFetcher(),
     "indico": IndicoFetcher(),
     "itnog": ItnogFetcher(),
+    "netnod": NetnodFetcher(),
 }
 
 

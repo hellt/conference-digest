@@ -13,6 +13,9 @@
         <loc>https://tldr.netdevops.me/archive/2026/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/archive/2026/page/2/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/arin-58/</loc>
       </url>
       <url>
@@ -1417,6 +1420,63 @@
         <loc>https://tldr.netdevops.me/ietf-126/workload-identifier-origin-hint-for-tls-clienthello/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/imc-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/a-first-look-at-certificate-revocation-latency/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/a-system-for-fast-accurate-and-intuitive-querying-of-large-scale-bgp-dat/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/calypsos-voyage-charting-traceroute-paths-to-submarine-cables/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/characterizing-the-deployment-of-the-stirshaken-telephone-network-pki/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/eadem-sed-aliter-investigating-the-instability-of-browser-fingerprinting/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/eu-digital-sovereignty-in-practice-a-technical-assessment-of-digital-inf/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/honey-configs-measuring-the-emerging-exploitation-of-cloud-ip-address-re/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/lightscope-turning-production-machines-into-telescopes-and-honeypots/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/mind-the-gap-policy-vs-reality-in-post-quantum-tls-deployment/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/namefill-synthesizing-dns-naming-conventions/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/replicability-challenging-the-myth-of-randomness-patterns-in-encrypted-t/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/rscope-unveiling-global-rov-deployments-and-dependencies-in-the-post-rov/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/securing-the-missing-link-encrypted-recursive-to-authoritative-dns-in-th/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/split-alignment-diffusing-spf-vulnerabilities-with-dmarc/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/taming-dns-responses-a-measurement-study-of-response-size-and-its-impact/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/the-disputed-internet-quantifying-fragmentation-in-the-ipv6-internet/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/waiting-at-the-front-door-continuous-monitoring-of-latency-in-the-host-n/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/imc-2026/when-bgp-goes-mad-multi-scale-anomaly-detection-in-internet-routing/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/kubecon-eu-2025/</loc>
       </url>
       <url>
@@ -1628,6 +1688,66 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/kubecon-na-2025/tiktoks-ipv6-journey-to-cilium-pitfalls-and-lessons-learned/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/a-network-tomography-approach-to-imputing-od-traffic-in-an-ipmpls-networ/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/between-the-law-and-the-protocol-an-overview-of-blocking-orders-on-the-b/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/beyond-rpki-origin-validation-how-to-close-the-route-leak-gap-with-aspa/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/beyond-the-radio-link-routing-dynamics-in-leo-satellite-networks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/bgp-in-2026-threats-incidents-and-solutions/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/bypassing-cgnat-you-dont-need-pbr-and-i-can-prove-it/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/from-classic-l3vpn-to-evpn-mastering-type-5-routes-on-the-backbone/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/from-cli-to-autonomous-networks-how-the-evolution-of-protocols-made-oper/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/going-ipv6-only-from-myths-to-modern-network-realities/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/ipv6-mostly-on-campus/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/keynote-presentation-lessons-in-digital-resilience-multistakeholder-resp/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/latency-based-bgp-route-selection-an-intelligent-failover-engine-optimiz/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/lightning-talks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/mission-accomplished-the-2026-ksk-rollover-story/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/monitoring-to-mitigate-micro-outages-in-mikrotik-based-isp-topologies-us/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/ntpv5-and-updated-time-security-what-changes-for-network-operators/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/rpki-in-action-updates-and-routing-security/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/the-bgp-analysts-notebook-17-years-in/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-46/the-mystery-of-the-routes-that-refused-to-die/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/nanog-96/</loc>
@@ -2306,6 +2426,51 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/srecon-2025-americas/taming-the-beast-understanding-and-harnessing-the-power-of-http-proxies/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/automating-target-discovery-in-the-gnmic-operator/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/beyond-rpki-origin-validation-what-do-we-gain-with-rfc9234-bgp-roles-and/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/from-connectivity-to-cyber-resilience-defense-in-depth-for-the-connected/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/from-lab-to-production-the-hard-parts-of-agentic-netops/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/frrouting-open-discussion/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/internet-domain-blocking-current-legal-situation-and-outlook-on-the-curr/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/managing-ip-allocation-with-an-open-source-ddi/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/networking-for-ai/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/on-prem-llm-cluster-for-network-and-security-analyses/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/reality-rewritten-ai-as-forger-and-investigator/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/retro-networks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/small-bngs/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/the-accidental-platform-team-kubernetes-operators-at-swisscom/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-42/the-cloud-native-advantage-intent-based-network-automation/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/usenix-security-2025/</loc>

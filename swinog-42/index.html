@@ -1,0 +1,1771 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="SwiNOG 42">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/swinog-42/">
+      
+      
+      
+        <link rel="prev" href="../imc-2026/">
+      
+      
+        <link rel="next" href="../nanog-98/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>SwiNOG #42 — Operator - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="SwiNOG #42 — Operator · Conference Digest" />
+<meta property="og:description" content="SwiNOG 42" />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/swinog-42.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/swinog-42/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="SwiNOG #42 — Operator · Conference Digest" />
+<meta property="twitter:description" content="SwiNOG 42" />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/swinog-42.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SwiNOG #42 — Operator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../category/academic/" class="md-tabs__link">
+          
+  
+  Conference type
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-tabs__powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-tabs__powered-text">Powered by</span>
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#networking-for-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Networking for AI
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beyond-rpki-origin-validation-what-do-we-gain-with-rfc9234-bgp-roles-and-aspa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Beyond RPKI Origin Validation, what do we gain with RFC9234 (BGP roles) and ASPA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cloud-native-advantage-intent-based-network-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Cloud-Native Advantage: Intent-based Network Automation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-ip-allocation-with-an-open-source-ddi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Managing IP Allocation with an Open-Source DDI
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automating-target-discovery-in-the-gnmic-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automating Target Discovery in the gNMIc Operator
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-lab-to-production-the-hard-parts-of-agentic-netops" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Lab to Production: The Hard Parts of Agentic NetOps
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-prem-llm-cluster-for-network-and-security-analyses" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        On-prem LLM cluster for network and security analyses
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-connectivity-to-cyber-resilience-defense-in-depth-for-the-connected-enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Connectivity to Cyber Resilience : Defense in Depth for the connected Enterprise
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#small-bngs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Small BNGs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-accidental-platform-team-kubernetes-operators-at-swisscom" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Accidental Platform Team: Kubernetes Operators at Swisscom
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet-domain-blocking-current-legal-situation-and-outlook-on-the-current-revision-of-the-telecommunications-act" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Internet Domain Blocking: Current Legal Situation and Outlook on the Current Revision of the Telecommunications Act
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frrouting-open-discussion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        FRRouting Open Discussion
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retro-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Retro Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reality-rewritten-ai-as-forger-and-investigator" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reality, Rewritten: AI as Forger and Investigator
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conference type
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Conference type
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Academic
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operator
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Security
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standards
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendor
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#networking-for-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Networking for AI
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beyond-rpki-origin-validation-what-do-we-gain-with-rfc9234-bgp-roles-and-aspa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Beyond RPKI Origin Validation, what do we gain with RFC9234 (BGP roles) and ASPA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cloud-native-advantage-intent-based-network-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Cloud-Native Advantage: Intent-based Network Automation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-ip-allocation-with-an-open-source-ddi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Managing IP Allocation with an Open-Source DDI
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automating-target-discovery-in-the-gnmic-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automating Target Discovery in the gNMIc Operator
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-lab-to-production-the-hard-parts-of-agentic-netops" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Lab to Production: The Hard Parts of Agentic NetOps
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-prem-llm-cluster-for-network-and-security-analyses" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        On-prem LLM cluster for network and security analyses
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-connectivity-to-cyber-resilience-defense-in-depth-for-the-connected-enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Connectivity to Cyber Resilience : Defense in Depth for the connected Enterprise
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#small-bngs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Small BNGs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-accidental-platform-team-kubernetes-operators-at-swisscom" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Accidental Platform Team: Kubernetes Operators at Swisscom
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet-domain-blocking-current-legal-situation-and-outlook-on-the-current-revision-of-the-telecommunications-act" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Internet Domain Blocking: Current Legal Situation and Outlook on the Current Revision of the Telecommunications Act
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frrouting-open-discussion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        FRRouting Open Discussion
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retro-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Retro Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reality-rewritten-ai-as-forger-and-investigator" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reality, Rewritten: AI as Forger and Investigator
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>18 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="swinog-42-operator">SwiNOG #42 — Operator<a class="headerlink" href="#swinog-42-operator" title="Permanent link">#</a></h1>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>Operator</span>
+<span class="digest-fact" markdown>October 21, 2026</span>
+<span class="digest-fact" markdown><a href="https://www.swinog.ch/meetings/swinog42/">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="networking-for-ai"><a href="networking-for-ai/">Networking for AI</a><a class="headerlink" href="#networking-for-ai" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/20261020_SwiNOG-Networking-for-AI_v2.pdf">Slides</a></p>
+</div>
+<p>Remi Locherer - <a href="../companies/arista-networks/">Arista Networks</a></p>
+<ul>
+<li><strong>Why</strong>: AI training/inference clusters are the hardest physical datacenter networking problem of the moment, and this is a dense technical walkthrough of the fabric design decisions: lossless Ethernet, load balancing, topology, optics, and power. Directly in the PM's physical-DC wheelhouse (RoCE/lossless fabrics, optics, topology).</li>
+<li><strong>What</strong>: A structured treatment of why AI traffic breaks traditional DC design — few, large, long-lived, highly synchronized flows; bursts at 100% of link rate with no stat-muxing; a single loss or XPU failure halts the whole job — followed by concrete scale-out designs, congestion control, load balancing evolution, and the Ultra Ethernet / MRC trends, plus the optics and cooling consequences.</li>
+<li><strong>How</strong>: Covers RoCEv2 framing and why "converged Ethernet" means lossless Ethernet (PFC hop-by-hop on ingress, ECN end-to-end, DCQCN). Explains why ECMP fails on low-entropy XPU-to-XPU flows (collisions, out-of-order delivery on link flap) and the progression from RDMA-aware hashing to dynamic and cluster-aware load balancing. Compares fat-tree vs planar/rail topologies (flexibility vs fiber cost and 1:1 bandwidth), gives per-tier XPU-count design tables up to ~660k hosts on multi-planar 7060XE7 fabrics, and covers UET packet spraying, packet trimming (64B trimmed frames as fast congestion signals), and the OpenAI-led Multipath Reliable Connection (MRC) OCP transport spec. Finishes with the physical layer: LPO transceivers (≤8W vs 14-16W, ~50% power reduction, 9x lower latency), liquid cooling, and XPO extra-dense pluggable optics for 204.8T in 1OU.</li>
+<li><strong>Where applicable</strong>: AI backend/scale-out fabric design generally; the concepts (lossless forwarding, entropy, oversubscription, power-as-constraint) transfer to any DC operator. Note it is an Arista session and the design tables are Arista-platform-specific (7060X6/7800R4/7060XE7), but the vast majority of the content is protocol- and silicon-generic, not a disguised pitch.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="beyond-rpki-origin-validation-what-do-we-gain-with-rfc9234-bgp-roles-and-aspa"><a href="beyond-rpki-origin-validation-what-do-we-gain-with-rfc9234-bgp-roles-and/">Beyond RPKI Origin Validation, what do we gain with RFC9234 (BGP roles) and ASPA</a><a class="headerlink" href="#beyond-rpki-origin-validation-what-do-we-gain-with-rfc9234-bgp-roles-and-aspa" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/OpenBGPD-SWINOG-42-2026.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/ECjCo7pNnyg">Recording</a></p>
+</div>
+<p>Claudio Jeker - RSSF (OpenBGPD lead developer, rpki-client co-maintainer)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="ECjCo7pNnyg" data-start="0" href="https://www.youtube.com/watch?v=ECjCo7pNnyg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/ECjCo7pNnyg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/ECjCo7pNnyg/maxresdefault.jpg" alt="Play the recording: Beyond RPKI Origin Validation, what do we gain with RFC9234 (BGP roles) and ASPA" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: BGP security is a core interest, and this is the rare talk that grounds the RFCs in real 2025–2026 incidents and gives a concrete, ordered deployment checklist. The Hetzner forged-origin hijack case alone is worth the read: it shows exactly where ROV stops protecting you.</li>
+<li><strong>What</strong>: An argument that ROV is necessary but insufficient — it does nothing against path leaks (Voxility/Lumen April 2025, Cloudflare January 2026, both with intact origins) and nothing against forged-origin hijacks — and that RFC 9234 (BGP roles + OTC) plus ASPA close those gaps. Includes a sharp section on ROA <code>maxLength</code> as an attack surface: a /16 with maxLength /24 authorizes an attacker to forge your origin for any unannounced more-specific.</li>
+<li><strong>How</strong>: RFC 9234 exchanges role information (provider/peer/customer/RS/RS-client) in the BGP OPEN, rejects role-mismatched sessions, and adds the transitive Only-To-Customer attribute so routes learned from providers/peers/RS are marked and rejected when re-exported upward — catching type 1–4 leaks at the source even with a broken export filter. ASPA publishes a signed provider list in the RPKI; routers check AS_PATHs for valley-free propagation, so even partial deployment rejects provably Invalid paths while leaving Unknown paths usable. The Hetzner case (162.55.80.0/24, forged AS_PATH <code>... 6204 62390 24940</code>, ROV result "Valid") was later invalidated by AS24940's post-attack ASPA record, which doesn't authorize AS62390. Call to action: reject ROV invalids, publish minimal ROAs, configure roles/OTC, publish complete ASPA provider lists (including backup and DDoS-mitigation transit).</li>
+<li><strong>Where applicable</strong>: Any ISP, transit provider, or IXP route server; vendor support is the practical constraint — OpenBGPD/BIRD/FRR and (recently) JunOS 25.2R1 and MikroTik RouterOS 7.21 support RFC 9234; ASPA is available in OpenBGPD and BIRD now, with FRR/JunOS/XR planned or in field trial. Broadly applicable; publishing ROAs/ASPA works even before your routers validate.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="the-cloud-native-advantage-intent-based-network-automation"><a href="the-cloud-native-advantage-intent-based-network-automation/">The Cloud-Native Advantage: Intent-based Network Automation</a><a class="headerlink" href="#the-cloud-native-advantage-intent-based-network-automation" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/SwiNOG-42-%E2%80%93-The-Cloud-Native-Advantage.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/WmebR1Lf5lE">Recording</a></p>
+</div>
+<p>Alexander North - <a href="../companies/swisscom/">Swisscom</a> (with Markus Vahlenkamp - <a href="../companies/nokia/">Nokia</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="WmebR1Lf5lE" data-start="0" href="https://www.youtube.com/watch?v=WmebR1Lf5lE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/WmebR1Lf5lE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/WmebR1Lf5lE/maxresdefault.jpg" alt="Play the recording: The Cloud-Native Advantage: Intent-based Network Automation" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Bridges the PM's two worlds in one talk — Kubernetes resource-model tooling applied to YANG/NETCONF/gNMI device configuration. The core problem is one anyone running CNFs or telco functions has hit: Helm deploys the pod, but the running config is still set with imperative per-instance NETCONF RPCs, outside any reconcile loop.</li>
+<li><strong>What</strong>: Schema Driven Configuration (SDC), an open-source (initiated by Nokia, CNCF Sandbox since 2026) Kubernetes Operator that models device configuration as Config custom resources with priorities, and reconciles them against the device via NETCONF or gNMI. In production at Swisscom for the 5G mobile core — roughly 2000 pods, 5000 interdependent parameters, 14 network functions.</li>
+<li><strong>How</strong>: Config CRs declare only their slice of the YANG tree, tagged with a target and a priority. SDC merges all Configs (priority resolves overlaps — a temporary ops override at prio 50 beats the platform baseline at prio 100, and deleting the override restores the baseline), validates the merged tree against YANG, diffs against the device's running config, and translates only the delta to NETCONF/gNMI with per-NOS rules. Drift is surfaced as Deviation CRs with typed reasons (<code>NOT_APPLIED</code>, <code>OVERRULED</code>, <code>UNHANDLED</code> brownfield config); <code>revertive: true</code> re-applies automatically. A <code>kubectl sdc blame</code> command shows, for every leaf, whether it came from which Config or from brownfield running config — "Config Blame is to Config apply what Git Blame is to commit."</li>
+<li><strong>Where applicable</strong>: Anything with a YANG model — physical routers, VMs, containers. Note the abstract oversells "self-healing": default behavior reports drift rather than fixing it (revertive is opt-in), and RESTCONF is not yet supported. The Swisscom deployment is a large-scale telco core, but the mechanism itself is general and adoptable at docs.sdcio.dev.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="managing-ip-allocation-with-an-open-source-ddi"><a href="managing-ip-allocation-with-an-open-source-ddi/">Managing IP Allocation with an Open-Source DDI</a><a class="headerlink" href="#managing-ip-allocation-with-an-open-source-ddi" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/Managing-IP-Allocation-with-an-Open-Source-DDI-2.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/70M_GdX4QBA">Recording</a></p>
+</div>
+<p>Marco Martinez - <a href="../companies/swisscom/">Swisscom</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="70M_GdX4QBA" data-start="0" href="https://www.youtube.com/watch?v=70M_GdX4QBA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/70M_GdX4QBA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/70M_GdX4QBA/maxresdefault.jpg" alt="Play the recording: Managing IP Allocation with an Open-Source DDI" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: IPAM is an explicit core interest, and this is a practitioner's build report: no open-source DDI exists today, so the speaker assembled one from three proven components rather than building DNS/DHCP/IPAM from scratch.</li>
+<li><strong>What</strong>: A composable DDI built on Infrahub (IPAM/source of truth), Kea (DHCP), and PowerDNS (DNS), orchestrated by Event-Driven Ansible into a single event-driven configuration plane. The IPAM layer is authoritative: DNS entries and DHCP reservation pools are generated dynamically from the modeled dependencies in Infrahub.</li>
+<li><strong>How</strong>: An earlier attempt (a "configuration plane" over the three products with separate automation tooling) failed on consistency; the working design makes Infrahub the source of truth, and events from it drive Ansible workflows that apply only the defined properties to Kea and PowerDNS — which keep their production-grade secure configuration for everything else. Reconciliation is built in. The result and code are published (github.com/marcom4rtinez/ddi).</li>
+<li><strong>Where applicable</strong>: Environments priced out of commercial DDI (the stated motivation: cost, transparency, source of truth, moving out of silos). Honest limitations: HA and the "one vendor supports the whole stack" property of commercial DDI are what you give up; everything runs on containers/Linux and the integration complexity is higher than a monolithic product. Operator-specific in architecture choices, but the pattern (SoT generates DNS/DHCP, event-driven push, reconcile) is broadly reusable.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="automating-target-discovery-in-the-gnmic-operator"><a href="automating-target-discovery-in-the-gnmic-operator/">Automating Target Discovery in the gNMIc Operator</a><a class="headerlink" href="#automating-target-discovery-in-the-gnmic-operator" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/BA-gNMIc-operator-swinog42.pdf">Slides</a></p>
+</div>
+<p>Daniel Schatzmann</p>
+<ul>
+<li><strong>Why</strong>: Streaming telemetry (gNMI) moving into Kubernetes, plus automatic synchronization with a source of truth — squarely in the PM's cloud-native networking and network-automation space. It's also a nice example of upstream-able operator work from a bachelor thesis at OST.</li>
+<li><strong>What</strong>: An extension to the gNMIc Operator (open-source, started 2026) that removes the last manual step in gNMI telemetry: keeping the monitored-target list current. Targets are synchronized from an external source of truth (NetBox in the demo), closing the gap where the monitoring stack and the inventory drift apart.</li>
+<li><strong>How</strong>: Two complementary mechanisms: periodic pull from NetBox via an export template, and event-driven push from NetBox via webhook — so inventory changes propagate to the collectors without human edits. The demo runs targets in Containerlab with a Prometheus/Grafana monitoring stack; the export template and webhook receiver have both been contributed as examples in the gNMIc Operator docs, and the mechanism is extensible to other sources of truth. (The work is a BSc thesis by Valentino Diller and Roman Weber at OST, supervised by Daniel Schatzmann.)</li>
+<li><strong>Where applicable</strong>: Any team running gNMI/gNMIc — the operator itself is upstream and open, and the NetBox integration patterns ship in its documentation. General technique, not org-specific.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="from-lab-to-production-the-hard-parts-of-agentic-netops"><a href="from-lab-to-production-the-hard-parts-of-agentic-netops/">From Lab to Production: The Hard Parts of Agentic NetOps</a><a class="headerlink" href="#from-lab-to-production-the-hard-parts-of-agentic-netops" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/SwiNOG_42_NetFabric_v3.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/MTVdgd6WK_8">Recording</a></p>
+</div>
+<p>Tobias Bühler - NetFabric</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="MTVdgd6WK_8" data-start="0" href="https://www.youtube.com/watch?v=MTVdgd6WK_8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/MTVdgd6WK_8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/MTVdgd6WK_8/maxresdefault.jpg" alt="Play the recording: From Lab to Production: The Hard Parts of Agentic NetOps" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: The follow-up to SwiNOG #41's agentic-AI-in-network-ops talk, now with real production deployment scars. For a PM thinking about agentic identity and AI safely operating production networks, this is the most concrete failure-mode catalog available — all drawn from Swiss ISP/MSP deployments on 1000+ devices.</li>
+<li><strong>What</strong>: The three hard problems of production agentic NetOps — correctness, security, and model/paradigm churn — with real failure cases and code-level fixes. The core thesis: rely on code wherever it matters, and run continuous evaluation, because prompt and skill changes alone do not reliably change agent behavior.</li>
+<li><strong>How</strong>: Correctness: agents analyzing firewall policies checked only the PREROUTING chain or the first 50 of 950 rules, ignored default-drop policies, and mis-evaluated subnet membership — fixed with a dedicated, multi-vendor firewall logic module in code (given rules and a flow, does it pass: yes/no). Security: agent-written SQL against a multi-tenant metrics DB is wrapped in guardrails that rewrite queries at the AST level to enforce tenant isolation, cap analyzed rows, block modifications, and reject oversized results before they blow the context window; CLI access is mediated by a grammar of available commands scraped from lab devices, categorized with operator approval, so production lookups only pass approved commands (a DMVPN troubleshooting example drops from ~25 blind failed commands to one-shot success). Evaluation: pitfalls include a TODO-list prompt change that tripled run time (3→10 min), synthetic test traces without production noise, and unit-style tests that don't predict long agentic investigations. Reported results: ticket root cause and proposed fix in 2–3 minutes in multiple deployments, early hardware-degradation detection, config-vs-source-of-truth drift detection.</li>
+<li><strong>Where applicable</strong>: Any operator considering AI agents on production networks. The patterns (guardrails in code, approved command grammars, eval harnesses fed by production incidents) are general; the specifics reflect NetFabric's own deployments and products.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="on-prem-llm-cluster-for-network-and-security-analyses"><a href="on-prem-llm-cluster-for-network-and-security-analyses/">On-prem LLM cluster for network and security analyses</a><a class="headerlink" href="#on-prem-llm-cluster-for-network-and-security-analyses" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/swinog42-on-prem-llm-network-security.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/KHmfNnx535U">Recording</a></p>
+</div>
+<p>Mischa Diehm - narrowin</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="KHmfNnx535U" data-start="0" href="https://www.youtube.com/watch?v=KHmfNnx535U" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/KHmfNnx535U/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/KHmfNnx535U/maxresdefault.jpg" alt="Play the recording: On-prem LLM cluster for network and security analyses" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: A reference architecture for running AI over network data entirely on-prem — and, unusually, it takes the identity and security model seriously (scoped agent credentials, RBAC, MCP authorization, audit trails linking user → tool call → device change), which maps directly onto the PM's workload and agentic identity interests. It also includes real small-cluster physical networking detail.</li>
+<li><strong>What</strong>: A four-layer sovereign stack: interaction (chat/web/API + a planning agent), AI (open-weight models — GLM, Qwen, Nemotron, DeepSeek — on a local GPU cluster served by vLLM behind an OpenAI-compatible API), integration (MCP servers exposing purpose-built tools plus skills, not raw data), and context (topology, configs, syslog, CMDB/IPAM, ticketing, or a single device via SSH/REST/SNMP). Evaluated on a multi-vendor IT/OT Containerlab lab network and agent-driven assessments of production data from real networks.</li>
+<li><strong>How</strong>: Hardware is 4× NVIDIA DGX Spark (512 GB pooled memory for weights/KV cache when sharded across nodes) behind a MikroTik CRS804-4DDQ 400G switch — about 25K CHF. Notable networking finding: internal PCIe limits mean each Spark gets 2×200G, not 400G, so one 200G link carries data plane and management moves to a separate interface; the nodes are memory-rich but bandwidth-poor (~273 GB/s), so MoE models run best. The interesting operational lessons are in data fusion: combine state, signals, inventory, and intent (from a system of record like Infrahub), pair tools with skills instead of exposing raw data, and make every finding verifiable by linking it to source evidence. Security model covers RBAC per role/device/action, MCP Enterprise-Managed Authorization via the identity provider, scoped SSH/API identities for the agent, prompt injection (a malicious ticket can steer tool calls even with a local model), model-trust limits of open weights, audit trails, and human approval gates with rollback.</li>
+<li><strong>Where applicable</strong>: Operators with privacy, sovereignty (CLOUD Act / AI Act), or cost constraints on shipping network data to cloud LLMs — particularly IT/OT and critical infrastructure. The honest trade-offs are stated: you need staff who can run it, the model market moves monthly, and without clear goals it becomes a time sink. Reproducible as a reference architecture; scale is deliberately small (desk-sized), not hyperscaler.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="from-connectivity-to-cyber-resilience-defense-in-depth-for-the-connected-enterprise"><a href="from-connectivity-to-cyber-resilience-defense-in-depth-for-the-connected/">From Connectivity to Cyber Resilience : Defense in Depth for the connected Enterprise</a><a class="headerlink" href="#from-connectivity-to-cyber-resilience-defense-in-depth-for-the-connected-enterprise" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/Defense-in-depth-for-connected-enterprises-Gautier_Nokia_Swinog_42_Oct20ed1f.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/xQJpbnAkCK0">Recording</a></p>
+</div>
+<p>Yannick Gautier - NI ION <a href="../companies/nokia/">NOKIA</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="xQJpbnAkCK0" data-start="0" href="https://www.youtube.com/watch?v=xQJpbnAkCK0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/xQJpbnAkCK0/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/xQJpbnAkCK0/maxresdefault.jpg" alt="Play the recording: From Connectivity to Cyber Resilience : Defense in Depth for the connected Enterprise" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: PQC migration is a real, dated obligation for network security programs (harvest-now-decrypt-later), and the slides contain useful framing — cryptographic debt, discovery→assess→prioritize, migration timelines of 5–15+ years by organization size, and the argument that symmetric crypto survives quantum with larger keys while asymmetric is broken (Shor vs Grover).</li>
+<li><strong>What</strong>: Nokia's Quantum-Safe Networks pitch: layered, multi-technology key establishment (PQC ML-KEM/ML-DSA per FIPS 203–205, symmetric key infrastructure, optional QKD per ETSI GS 014) with centralized key management (1830 SMS), line-rate encryption at multiple layers, crypto-agility, and sovereignty over entropy. Interesting data point: the estimated qubits needed to break RSA-2048 dropped from ~1 billion (2012) to under 100,000 (2026) across three papers in twelve months.</li>
+<li><strong>How</strong>: Defense in depth across application/IP/MPLS/L2/physical layers with different key-establishment architectures (PQC-only via PKI, QKD+symmetric, hybrid PKI+PSK), coordinated key rotation, and certified entropy; ends with four telco monetization models for quantum-safe connectivity.</li>
+<li><strong>Where applicable</strong>: Enterprises and carriers with long-lived confidential data and regulated critical-infrastructure obligations. Caveat: the second half is a Nokia portfolio and services pitch (1830 optical line, SMS key management, QSN service models) — take the threat framing and migration methodology, discount the product push.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="small-bngs"><a href="small-bngs/">Small BNGs</a><a class="headerlink" href="#small-bngs" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/202610xx_FW_Small-BNGs.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/hnC82wCm0mY">Recording</a></p>
+</div>
+<p>Fiona Weber - WDZ GmbH // Wobcom GmbH</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="hnC82wCm0mY" data-start="0" href="https://www.youtube.com/watch?v=hnC82wCm0mY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/hnC82wCm0mY/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/hnC82wCm0mY/maxresdefault.jpg" alt="Play the recording: Small BNGs" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: A contrarian architecture decision with a completed migration to show for it: instead of the industry trend of terminating subscribers on a few huge central routers, AS9136 pushed small white-box BNGs to the edge. A genuine postmortem-flavored operator story — exactly the kind of hard-won, transferable lesson the PM's field values.</li>
+<li><strong>What</strong>: Migration from 2 central to 25 distributed BNGs on RtBrick software on UfiSpace and EdgeCore hardware (MPLS/IS-IS + SR, BGP, PPPoE/IPoE, QinQ, RADIUS, CGNAT, L2/L3VPN), plus the migration experience: the topology change turned into a major fiber and infrastructure cleanup, strange CPEs in the field, "bugs, bugs, bugs," and subscriber migration pain.</li>
+<li><strong>How</strong>: Distributed termination removes centralized failure points, simplifies backbone/fiber planning, enables direct routing and service flexibility, and avoids "major vendor tax" with pay-as-you-grow boxes. The costs: IP pool management and config automation get harder, and you're running more complex hardware deep in the field with a new software vendor. The speaker's guidance on fit: it depends on physical footprint and org structure, and is especially attractive for medium-sized networks — but even if decentralization isn't right for you, shrink your failure domains ("huge chassis routers need to die").</li>
+<li><strong>Where applicable</strong>: The migration specifics are AS9136/WDZ-specific; the failure-domain reasoning and the honest challenge list are broadly applicable to any access-network operator.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="the-accidental-platform-team-kubernetes-operators-at-swisscom"><a href="the-accidental-platform-team-kubernetes-operators-at-swisscom/">The Accidental Platform Team: Kubernetes Operators at Swisscom</a><a class="headerlink" href="#the-accidental-platform-team-kubernetes-operators-at-swisscom" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/2026-10-21-swinog-accidental-platform-team.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/7kWNTz5mPek">Recording</a></p>
+</div>
+<p>Fabian Schulz - <a href="../companies/swisscom/">Swisscom</a> (with Lea Brühwiler)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="7kWNTz5mPek" data-start="0" href="https://www.youtube.com/watch?v=7kWNTz5mPek" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/7kWNTz5mPek/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/7kWNTz5mPek/maxresdefault.jpg" alt="Play the recording: The Accidental Platform Team: Kubernetes Operators at Swisscom" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: The organizational counterpart to the SDC and gNMIc talks: what happens when Kubernetes operators for network automation (IPAM, inventory, NETCONF router config — the same Swisscom stack) get adopted beyond their original 5G-core scope and become "Operators as a Service" for a platform team running Kubernetes-as-a-Service.</li>
+<li><strong>What</strong>: An adoption story, not an architecture story. The honest middle section is the value: a wall of real user objections ("I don't understand Kubernetes", "we were faster the old way", "there will always be manual changes on the box", "I just did it myself with a Gitlab pipeline, it's easier") and the incremental answers that overcame them.</li>
+<li><strong>How</strong>: Gradual adoption (pick one easy use case, ship a prototype early, iterate on feedback), then four countermeasures: a graphical UI for people who won't use kubectl; observability and traceability (commit history, provenance of every change) to answer "how do I know where this change came from"; knowledge-sharing initiatives and regular check-ins to build trust. The before/after numbers are striking: 5G-core network provisioning dropped from multi-week sequences (change requests 5–10 days, IP tables 2 days, integration 5–10 days) to minutes-to-hours of intent creation with continuous automated testing. Reference architecture published at architecture.cncf.io.</li>
+<li><strong>Where applicable</strong>: Teams building internal platform/operator tooling — the human-side lessons are the transferable part and generalize well beyond telco. Scale numbers are Swisscom-specific.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="internet-domain-blocking-current-legal-situation-and-outlook-on-the-current-revision-of-the-telecommunications-act"><a href="internet-domain-blocking-current-legal-situation-and-outlook-on-the-curr/">Internet Domain Blocking: Current Legal Situation and Outlook on the Current Revision of the Telecommunications Act</a><a class="headerlink" href="#internet-domain-blocking-current-legal-situation-and-outlook-on-the-current-revision-of-the-telecommunications-act" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/20261020-Schlauri-Netzsperren-Swinog42.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/bsemYuiTfz4">Recording</a></p>
+</div>
+<p>Simon Schlauri - Ronzani Schlauri Attorneys</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="bsemYuiTfz4" data-start="0" href="https://www.youtube.com/watch?v=bsemYuiTfz4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/bsemYuiTfz4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/bsemYuiTfz4/maxresdefault.jpg" alt="Play the recording: Internet Domain Blocking: Current Legal Situation and Outlook on the Current Revision of the Telecommunications Act" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Not technical, but directly operationally relevant to any Swiss ISP: prosecutors are ordering access providers to block domains, and the talk documents the actual cases, the technical-refutation expert opinion, and the draft legislation. For a PM whose products sit on Swiss networks, this is where content-blocking obligations are heading.</li>
+<li><strong>What</strong>: A case history from 2025–2026: Vaud and Valais prosecutors ordered providers to "seize" domains (reinterpreted as blocking after the fact), imposed a CHF 6,000 fine on a non-compliant provider, and ordered blocking of a climate-activist group's URLs — even though the site was hosted in Switzerland and the prosecutor never asked the host to take it down. The Vaud Cantonal Court lifted that block in May 2026 but dodged the core legality question; a Federal Supreme Court appeal is pending.</li>
+<li><strong>How</strong>: Legal analysis plus a decisive technical contribution: a Switch expert opinion establishing that individual URLs cannot be blocked via DNS at all, and that the only practicable ISP measure is blocking an entire domain on their resolver — which over-blocks (all services under the domain, including email) and violates net neutrality. The proposed new Art. 6a Telecoms Act would mandate blocking of fraud-related second-level domains on fedpol notification — narrow, but still without judicial review or a hearing for site operators. The speaker's position: "delete, don't block" — go after the hosting source, and if blocking exists at all, only by statute with a court weighing interests.</li>
+<li><strong>Where applicable</strong>: Swiss access providers and anyone operating DNS resolvers there. Jurisdiction-specific, but the pattern — courts accepting "the other providers comply" as proof of feasibility — is a caution for operators everywhere.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="frrouting-open-discussion"><a href="frrouting-open-discussion/">FRRouting Open Discussion</a><a class="headerlink" href="#frrouting-open-discussion" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/FRRouting-%E2%80%93-Open-Discussion-%C2%B7-SwiNOG-42.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/ivgjZ7B6Xo8">Recording</a></p>
+</div>
+<p>Martin Winter - NetDEF / FRRouting</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="ivgjZ7B6Xo8" data-start="0" href="https://www.youtube.com/watch?v=ivgjZ7B6Xo8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/ivgjZ7B6Xo8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/ivgjZ7B6Xo8/maxresdefault.jpg" alt="Play the recording: FRRouting Open Discussion" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Light on content by design (it was an interactive feedback session), but worth a note for a PM with BGP/datapath interests: it's a deliberately vendor-free channel to the maintainers of the open-source routing suite that underpins SONiC, white-box NOSes, and much of the leaf-spine world.</li>
+<li><strong>What</strong>: An experiment in format — no product pitch, just community Q&amp;A on FRR's state (forked from Quagga 2017, ~30 maintainers, BGP/OSPF/IS-IS/LDP/BFD and more, 10.7.1 current) and what's missing for operator use cases.</li>
+<li><strong>How</strong>: Structured prompts (who uses it, who tried and stopped and why, what's missing), with NetDEF — which runs FRR's community CI and has three employees in Switzerland — explicitly inviting feature requests, bug reports, and contributions.</li>
+<li><strong>Where applicable</strong>: Relevant to anyone evaluating open-source control planes for routers, route servers, or container-networking BGP; the session itself is a one-off, but the contact channel is durable. Skippable if you weren't in the room.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="retro-networks"><a href="retro-networks/">Retro Networks</a><a class="headerlink" href="#retro-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/SwiNOG-Oct.-2026-V3.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/L4rc3l15crM">Recording</a></p>
+</div>
+<p>Gianpaolo Del Matto - THE PHINTAGE COLLECTOR</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="L4rc3l15crM" data-start="0" href="https://www.youtube.com/watch?v=L4rc3l15crM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/L4rc3l15crM/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/L4rc3l15crM/maxresdefault.jpg" alt="Play the recording: Retro Networks" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Looks like a nostalgia talk and is, for two-thirds of it (10BASE5 vampire taps, PhoneNet, Token Ring developed in Zurich, DOS memory limits) — but it pivots into one of the most honest available case studies of LLM-assisted development in a deeply constrained environment, and the lessons are unusually sharp.</li>
+<li><strong>What</strong>: The speaker reimplemented the 3Com 3C509B configuration utility (3CCFGCLI) in 16-bit real-mode 8086 assembly, because the original needs a 286+ and 232 KB on disk. The result: 0.8.3 is feature-complete and runs on a real 8086 in ≤256 KB RAM, with the binary refactored from 40 KB down to 26 KB.</li>
+<li><strong>How</strong>: Used an LLM as "a very fast, sometimes hallucinating developer" — not an oracle. Concrete episodes: the LLM correctly suggested a full hardware mock early, the speaker refused, and paid for it with an entire 0.6 refactoring branch; separately, the LLM burned three hours chasing a "mysterious" 1-byte offset down into disassembling Turbo Assembler itself when the root cause was that 8086 short jumps can only reach ±127 bytes and the routine had simply outgrown them. Discipline: the ~180-case test harness was human-built, all output reviewed, and continuous refactoring kept the bloat down.</li>
+<li><strong>Where applicable</strong>: As engineering-method takeaways, broadly — "AI can help you build it, but you still need to understand it, review it, and prove that it works." Published at github.com/gpdm/TPC-3CCFGCLI. Only the LLM-methods half generalizes; the vintage-hardware half is for fun (and the ENTER Technikwelt exhibit).</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="reality-rewritten-ai-as-forger-and-investigator"><a href="reality-rewritten-ai-as-forger-and-investigator/">Reality, Rewritten: AI as Forger and Investigator</a><a class="headerlink" href="#reality-rewritten-ai-as-forger-and-investigator" title="Permanent link">#</a></h3>
+<p>Dominik Haenni - Zurich Forensic Science Institute</p>
+<ul>
+<li><strong>Why</strong>: The opening keynote frames the question the three agentic-AI talks later dance around: when the same technology fabricates evidence and analyzes it, what happens to expert judgment and trust in organizations — which is, in the end, the same question as trusting an agent's root-cause analysis on a production network.</li>
+<li><strong>What</strong>: An exploration of generative AI's dual role — producing convincing fake images, cloned voices, and plausible documents, while also accelerating forensic analysis, research, and software development — with current examples from the Institute's casework, and a look beyond the tool at responsibility and how organizations work when AI compresses timelines.</li>
+<li><strong>How</strong>: Case-example driven (the abstract does not describe a method); the argument is that when AI "changes the rules," business as usual in evidence handling — and by extension, any function that certifies truth — is not affordable.</li>
+<li><strong>Where applicable</strong>: Not a networking talk, but its trust-in-automated-findings framing transfers directly to anyone shipping AI-generated analysis into operational workflows. (from abstract only)</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Agentic AI meets production networks — with a converging answer.</strong> Three talks (Agentic NetOps, on-prem LLM, Retro Networks) independently land on the same discipline: correctness and security belong in code (AST-level query guardrails, approved command grammars, dedicated logic modules), not in prompts; findings must be verifiable against evidence; and continuous evaluation against production data, not synthetic unit tests, is what keeps agents working long-term.</li>
+<li><strong>The Kubernetes resource model is reaching into network devices.</strong> SDC (Config CRs reconciled to YANG/NETCONF/gNMI), the gNMIc Operator (telemetry targets as reconciled state), and Swisscom's platform-team story are the same pattern at three layers: watch → compare → act, with sources of truth (NetBox, Infrahub) feeding declarative intent.</li>
+<li><strong>BGP security is moving past ROV, pushed by fresh incidents.</strong> The Cloudflare leak (origin intact, ROV useless) and the Hetzner forged-origin hijack (ROV said Valid) are this cycle's motivating cases; RFC 9234 roles/OTC and ASPA are the deployable response, and minimal ROA maxLength is the cheap hygiene fix available today.</li>
+<li><strong>AI fabrics made power and optics the binding constraint.</strong> Lossless Ethernet, entropy-aware load balancing, and topology (planar vs fat-tree) were all framed as consequences of XPU economics; LPO, XPO, and liquid cooling are the physical-layer response — optics and power, not switching capacity, dominate AI-cluster CapEx/OpEx.</li>
+<li><strong>Sovereignty and self-hosting as a Swiss operator theme.</strong> On-prem AI (data never leaves the building), CommunityRack's "knowledge stays in the community" positioning, open-source DDI replacing priced-out commercial products, and the domain-blocking legal fight all argue the same case from different directions: control over stack, data, and know-how.</li>
+<li><strong>Composable open-source stacks displacing monolithic vendor products.</strong> Infrahub+Kea+PowerDNS as a DDI, RtBrick on white-box UfiSpace/EdgeCore hardware as distributed BNGs, open-weight models on vLLM with MCP, and FRR's quiet ubiquity — the pattern across talks is assembling proven components around a source of truth, and the recurring cost is integration complexity and self-managed HA.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/swinog-42.md"><code>digests/swinog-42.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/swinog-42.md"><code>prompts/swinog-42.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../imc-2026/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ACM IMC 2026 — for a Networking, Security, and Identity PM">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                ACM IMC 2026 — for a Networking, Security, and Identity PM
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../nanog-98/" class="md-footer__link md-footer__link--next" aria-label="Next: NANOG 98">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                NANOG 98
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+    
+  </body>
+</html>

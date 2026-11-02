@@ -388,5 +388,17 @@
     "attempts": 0,
     "last_attempt": "2026-11-02T18:09:13.000893+00:00",
     "last_error": ""
+  },
+  "ocp-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-02T22:52:56.816755+00:00",
+    "last_error": ""
+  },
+  "ocp-2025": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-02T22:51:47.375733+00:00",
+    "last_error": ""
   }
 }

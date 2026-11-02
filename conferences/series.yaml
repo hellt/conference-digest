@@ -637,3 +637,24 @@ series:
     program_url_template: "https://cfp.cfgmgmtcamp.be/ghent{year}/schedule/export/schedule.json"
     manual_fallback_url_template: "https://cfp.cfgmgmtcamp.be/ghent{year}/schedule/"
     notes: "The open automation conference next to FOSDEM: Ansible/Puppet/Salt/CFEngine communities, infrastructure automation, GitOps, network automation, immutable infrastructure. Full abstracts from the Pretalx export."
+
+  # OCP Global Summit: every edition is its own host on the FN TECH event
+  # platform ({year}ocpglobal.fnvirtual.app), and the whole schedule — titles,
+  # speakers, full abstracts, tracks, YouTube recordings, material links — is
+  # baked into the Gatsby app bundle the schedule page embeds. No public API;
+  # the fetcher parses the JSON out of the bundle (see conferences/fetchers/ocp.py).
+  # A future year's host does not resolve until OCP builds the site, which is
+  # discovery's "not up yet" signal; past hosts stay up. The 2025-2026 series
+  # scope is the Global Summit only (San Jose, each October) — EMEA and APAC
+  # editions live on their own hosts and can be added by hand if wanted.
+  - series: ocp
+    enumerate: year
+    key_template: "ocp-{year}"
+    name_template: "OCP Global Summit {year}"
+    type: vendor
+    fetcher: ocp
+    start: 2025
+    lookahead: 2
+    program_url_template: "https://{year}ocpglobal.fnvirtual.app/a/schedule/"
+    manual_fallback_url_template: "https://{year}ocpglobal.fnvirtual.app/a/schedule/"
+    notes: "Open Compute Project's flagship summit (~4,000 attendees, San Jose): open datacenter hardware — AI cluster networking and photonics, rack and power, cooling, server and storage, hardware security and manageability. Full abstracts from the event app's data bundle; YouTube recordings on OCP's channel; specs and white papers linked as materials."

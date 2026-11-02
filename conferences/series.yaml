@@ -452,3 +452,20 @@ series:
     program_url_template: "https://www.ausnog.net/events/ausnog-{year}/program"
     manual_fallback_url_template: "https://www.ausnog.net/events/ausnog-{year}/program"
     notes: "Australian network operators: backbone and DC operations, IPv6, peering, optics, automation, network security. Titles, speakers, slide PDFs and YouTube recordings; no abstracts published."
+
+  # Peering Days: each edition gets its own site (<year>.peeringdays.eu) with
+  # a static programme page — day headings, one block per slot, bold titles,
+  # an "(Speaker: IXP - Name)" line and Download links for the decks. Only
+  # workshops publish abstracts. The 2027 site was already announced but its
+  # TLS was broken at add time; discovery simply retries until it works.
+  - series: peeringdays
+    enumerate: year
+    key_template: "peeringdays-{year}"
+    name_template: "Peering Days {year}"
+    type: operator
+    fetcher: peeringdays
+    start: 2026
+    end_date_hint: "03-31"
+    program_url_template: "https://{year}.peeringdays.eu/programme/"
+    manual_fallback_url_template: "https://{year}.peeringdays.eu/programme/"
+    notes: "The largest peering conference in Central and Eastern Europe (NIX.CZ, BIX, VIX): peering, interconnection, RPKI, optics, datacenter interconnect. Titles, speakers (IXP - speaker), slide PDFs; abstracts only for workshops."

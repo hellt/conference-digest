@@ -22,6 +22,7 @@ from .arin import ArinFetcher
 from .lacnic import LacnicFetcher
 from .pets import PetsFetcher
 from .ausnog import AusnogFetcher
+from .peeringdays import PeeringDaysFetcher
 from .imc import ImcFetcher
 from .conext import ConextFetcher
 from .apricot import ApricotFetcher
@@ -32,6 +33,7 @@ from .arin import ArinFetcher
 from .lacnic import LacnicFetcher
 from .pets import PetsFetcher
 from .ausnog import AusnogFetcher
+from .peeringdays import PeeringDaysFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -58,6 +60,7 @@ FETCHERS = {
     "lacnic": LacnicFetcher(),
     "pets": PetsFetcher(),
     "ausnog": AusnogFetcher(),
+    "peeringdays": PeeringDaysFetcher(),
 }
 
 

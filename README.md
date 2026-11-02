@@ -193,6 +193,7 @@ conferences/
     lacnic.py        # LACNIC via the WP REST API behind the event sites
     pets.py          # PETS accepted papers: titles, authors, issues
     ausnog.py        # AusNOG day tables: titles, speakers, PDFs, YouTube
+    peeringdays.py   # Peering Days per-year sites: talks, speakers, decks
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -394,6 +395,10 @@ run.
   links its PDF deck and YouTube recording through icon links, with the
   speaker and affiliation in the title cell. No abstracts are published, and
   the day captions carry no year — hence the `end_date_hint`.
+- **Peering Days**: one static site per edition. The programme page gives each
+  slot's title, an "(Speaker: IXP - Name)" line and Download deck links; only
+  workshops publish abstracts, which prompts state. The 2027 site was
+  announced with broken TLS at add time; discovery retries until it serves.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

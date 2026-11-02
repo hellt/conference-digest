@@ -187,6 +187,7 @@ conferences/
     conext.py        # ACM CoNEXT program partial: papers, abstracts, ACM DL links
     apricot.py       # APRICOT via the open APNIC conference API
     fosdem.py        # FOSDEM Pentabarf XML, curated track filter
+    pretalx.py       # any Pretalx schedule export (hack.lu, CfgMgmtCamp)
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -359,6 +360,11 @@ run.
   DNS, security, IAM, confidential computing, containers, virtualization,
   kernel, main) and drops workshops and lightning talks; `RELEVANT_TRACKS` in
   `fosdem.py` is the lever. The XML states the conference dates exactly.
+- **Pretalx (generic)**: conferences whose CfP runs on Pretalx expose the
+  schedule as JSON; the fetcher reads it directly (hack.lu, CfgMgmtCamp).
+  Every talk comes with speakers, abstract, attachments and its public page.
+  `looks_blocked()` is skipped on this path on purpose — a security-conference
+  abstract that mentions "captcha" is not a bot challenge.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

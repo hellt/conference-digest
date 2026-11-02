@@ -350,3 +350,19 @@ series:
     program_url_template: "https://fosdem.org/{year}/schedule/xml"
     manual_fallback_url_template: "https://fosdem.org/{year}/schedule/"
     notes: "Europe's largest FOSS event: open-source networking (Linux, OVS, eBPF/XDP), DNS, security and identity devrooms. Curated track filter in the fetcher; per-talk pages, slides and video.fosdem.org recordings."
+
+  # hack.lu runs its CfP on pretalx.com, whose public schedule export gives
+  # every talk with speakers, full abstract and its Pretalx page. The fetcher
+  # is the generic Pretalx one (also used by CfgMgmtCamp); the series points
+  # program_url straight at the JSON export.
+  - series: hacklu
+    enumerate: year
+    key_template: "hacklu-{year}"
+    name_template: "hack.lu {year}"
+    type: security
+    fetcher: pretalx
+    start: 2025
+    lookahead: 3
+    program_url_template: "https://pretalx.com/hack-lu-{year}/schedule/export/schedule.json"
+    manual_fallback_url_template: "https://pretalx.com/hack-lu-{year}/schedule/"
+    notes: "Open security conference run by CIRCL (Luxembourg CERT): offensive and defensive security, privacy, identity. Full abstracts from the Pretalx export; trainings/workshops included as talks."

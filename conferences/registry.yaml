@@ -459,3 +459,382 @@ conferences:
     manual_fallback_url: "https://ripe93.ripe.net/programme/meeting-plan/"
     discovered: 2026-11-01
     notes: "European network operators: routing security, IPv6, peering, DNS, measurement and network automation. Auto-discovered 2026-11-01 from series 'ripe'. end_date taken from the source."
+
+  - key: tnc-2026
+    name: "TNC26 (GÉANT research networking conference)"
+    type: operator
+    end_date: 2026-06-12
+    fetcher: tnc
+    program_url: "https://tnc26.geant.org/"
+    manual_fallback_url: "https://tnc26.geant.org/programme/"
+    notes: "Helsinki, 8-12 June 2026, hosted by CSC/Funet. The programme is a JS app (no public data endpoint) and GÉANT's Indico is bot-walled, so the program text must be pasted by hand from the programme page. Recordings are on the GÉANT YouTube channel."
+
+  - key: nogfi-2026-06
+    name: "nog.fi meeting 2026.06"
+    type: operator
+    start_date: 2026-06-16
+    end_date: 2026-06-17
+    fetcher: indico
+    program_url: "https://nog.fi/event/59/"
+    manual_fallback_url: "https://nog.fi/event/59/"
+    notes: "Finnish network operators (Tampere): talks via nog.fi's Indico export. Hand-added: nog.fi meets twice a year and numbers editions by year.month, which series discovery cannot enumerate."
+
+  - key: nogfi-2026-11
+    name: "nog.fi meeting 2026.11"
+    type: operator
+    start_date: 2026-11-24
+    end_date: 2026-11-24
+    fetcher: indico
+    program_url: "https://nog.fi/event/73/"
+    manual_fallback_url: "https://nog.fi/event/73/"
+    notes: "Finnish network operators (Oulu): talks via nog.fi's Indico export. Hand-added: nog.fi meets twice a year and numbers editions by year.month, which series discovery cannot enumerate."
+
+  - key: grnog-20
+    name: "GRNOG 20"
+    type: operator
+    start_date: 2026-06-30
+    end_date: 2026-06-30
+    fetcher: indico
+    program_url: "https://grnog.indico.nogalliance.org/event/13/"
+    manual_fallback_url: "https://grnog.indico.nogalliance.org/event/13/"
+    notes: "Greek network operators, Serafio City of Athens. Hand-added: the Indico category listing shows only upcoming events, so past meetings need their event URL."
+
+  - key: ciscolive-us-2026
+    name: "Cisco Live US 2026 (Las Vegas)"
+    type: vendor
+    end_date: 2026-06-30
+    fetcher: ciscolive
+    program_url: "https://www.ciscolive.com/on-demand/on-demand-library.html"
+    manual_fallback_url: "https://www.ciscolive.com/on-demand/on-demand-library.html"
+    discovered: 2026-11-01
+    notes: "Public on-demand abstracts and speakers; slides/recordings require login. Discovery dates are estimates: confirm against the event site. Auto-discovered 2026-11-01 from series 'ciscolive-us'. end_date is an ESTIMATE from the series hint — confirm it against the event page."
+
+  - key: ciscolive-eu-2026
+    name: "Cisco Live Europe 2026 (Amsterdam)"
+    type: vendor
+    end_date: 2026-03-31
+    fetcher: ciscolive
+    program_url: "https://www.ciscolive.com/on-demand/on-demand-library.html"
+    manual_fallback_url: "https://www.ciscolive.com/on-demand/on-demand-library.html"
+    discovered: 2026-11-01
+    notes: "Public on-demand abstracts and speakers; slides/recordings require login. Discovery dates are estimates: confirm against the event site. Auto-discovered 2026-11-01 from series 'ciscolive-eu'. end_date is an ESTIMATE from the series hint — confirm it against the event page."
+
+  - key: autocon-6
+    name: "AutoCon 6"
+    type: operator
+    end_date: 2026-11-20
+    fetcher: autocon
+    program_url: "https://networkautomation.forum/autocon6"
+    manual_fallback_url: "https://networkautomation.forum/autocon6"
+    discovered: 2026-11-01
+    notes: "Network automation practitioners: source of truth, orchestration, observability, testing, AI for NetOps, adoption stories. Auto-discovered 2026-11-01 from series 'autocon'. end_date taken from the source."
+
+  - key: ccs-2026
+    name: "ACM CCS 2026"
+    type: academic
+    end_date: 2026-11-18
+    fetcher: ccs
+    program_url: "https://www.sigsac.org/ccs/CCS2026/program/schedule.html"
+    manual_fallback_url: "https://www.sigsac.org/ccs/CCS2026/program/schedule.html"
+    discovered: 2026-11-01
+    notes: "Top-tier security research: applied crypto, authentication and identity, network security, systems security, measurement. Papers and abstracts are ACM DL-only; the schedule carries titles, authors and sessions. Auto-discovered 2026-11-01 from series 'ccs'. end_date taken from the source."
+
+  - key: imc-2026
+    name: "ACM IMC 2026"
+    type: academic
+    end_date: 2026-10-16
+    fetcher: imc
+    program_url: "https://conferences.sigcomm.org/imc/2026/program/"
+    manual_fallback_url: "https://conferences.sigcomm.org/imc/2026/program/"
+    discovered: 2026-11-01
+    notes: "Premier Internet measurement research: datacenter and CDN measurement, topology and interdomain, transport, DNS, security and censorship measurement. Papers link doi.org ACM DL pages. Auto-discovered 2026-11-01 from series 'imc'. end_date taken from the source."
+
+  - key: conext-2025
+    name: "ACM CoNEXT 2025"
+    type: academic
+    end_date: 2025-12-02
+    fetcher: conext
+    program_url: "https://conferences.sigcomm.org/co-next/2025/partials/program.html"
+    manual_fallback_url: "https://conferences.sigcomm.org/co-next/2025/partials/program.html"
+    discovered: 2026-11-01
+    notes: "Emerging networking research: datacenter, transport (QUIC), edge and wireless, measurement, network security. Papers link their ACM DL page and PDF. Auto-discovered 2026-11-01 from series 'conext'. end_date taken from the source."
+
+  - key: apricot-2026
+    name: "APRICOT 2026 (Jakarta)"
+    type: operator
+    end_date: 2026-02-12
+    fetcher: apricot
+    program_url: "https://api.apnic.net/web/v1/events"
+    manual_fallback_url: "https://2026.apricot.net/programme/"
+    discovered: 2026-11-01
+    notes: "The Asia-Pacific operators summit (with APNIC): routing, peering, datacenter and backbone operations, DNS, security, automation. Auto-discovered 2026-11-01 from series 'apricot'. end_date taken from the source."
+
+  - key: fosdem-2026
+    name: "FOSDEM 2026"
+    type: vendor
+    end_date: 2026-02-01
+    fetcher: fosdem
+    program_url: "https://fosdem.org/2026/schedule/xml"
+    manual_fallback_url: "https://fosdem.org/2026/schedule/"
+    discovered: 2026-11-01
+    notes: "Europe's largest FOSS event: open-source networking (Linux, OVS, eBPF/XDP), DNS, security and identity devrooms. Curated track filter in the fetcher; per-talk pages, slides and video.fosdem.org recordings. Auto-discovered 2026-11-01 from series 'fosdem'. end_date taken from the source."
+
+  - key: hacklu-2025
+    name: "hack.lu 2025"
+    type: security
+    end_date: 2025-10-24
+    fetcher: pretalx
+    program_url: "https://pretalx.com/hack-lu-2025/schedule/export/schedule.json"
+    manual_fallback_url: "https://pretalx.com/hack-lu-2025/schedule/"
+    discovered: 2026-11-01
+    notes: "Open security conference run by CIRCL (Luxembourg CERT): offensive and defensive security, privacy, identity. Full abstracts from the Pretalx export; trainings/workshops included as talks. Auto-discovered 2026-11-01 from series 'hacklu'. end_date taken from the source."
+
+  - key: hacklu-2026
+    name: "hack.lu 2026"
+    type: security
+    end_date: 2026-10-23
+    fetcher: pretalx
+    program_url: "https://pretalx.com/hack-lu-2026/schedule/export/schedule.json"
+    manual_fallback_url: "https://pretalx.com/hack-lu-2026/schedule/"
+    discovered: 2026-11-01
+    notes: "Open security conference run by CIRCL (Luxembourg CERT): offensive and defensive security, privacy, identity. Full abstracts from the Pretalx export; trainings/workshops included as talks. Auto-discovered 2026-11-01 from series 'hacklu'. end_date taken from the source."
+
+  - key: arin-56
+    name: "ARIN 56 Public Policy and Members Meeting"
+    type: operator
+    end_date: 2025-10-31
+    fetcher: arin
+    program_url: "https://www.arin.net/participate/meetings/ARIN56"
+    manual_fallback_url: "https://www.arin.net/participate/meetings/ARIN56"
+    discovered: 2026-11-01
+    notes: "North American RIR meeting: IPv6, routing security/RPKI, Internet number resource policy, DNS and ARIN services. Agenda items with speakers, slide PDFs and timestamped YouTube webcasts. Auto-discovered 2026-11-01 from series 'arin'. end_date taken from the source."
+
+  - key: arin-57
+    name: "ARIN 57 Public Policy and Members Meeting"
+    type: operator
+    end_date: 2026-04-22
+    fetcher: arin
+    program_url: "https://www.arin.net/participate/meetings/ARIN57"
+    manual_fallback_url: "https://www.arin.net/participate/meetings/ARIN57"
+    discovered: 2026-11-01
+    notes: "North American RIR meeting: IPv6, routing security/RPKI, Internet number resource policy, DNS and ARIN services. Agenda items with speakers, slide PDFs and timestamped YouTube webcasts. Auto-discovered 2026-11-01 from series 'arin'. end_date taken from the source."
+
+  - key: arin-58
+    name: "ARIN 58 Public Policy and Members Meeting"
+    type: operator
+    end_date: 2026-10-23
+    fetcher: arin
+    program_url: "https://www.arin.net/participate/meetings/ARIN58"
+    manual_fallback_url: "https://www.arin.net/participate/meetings/ARIN58"
+    discovered: 2026-11-01
+    notes: "North American RIR meeting: IPv6, routing security/RPKI, Internet number resource policy, DNS and ARIN services. Agenda items with speakers, slide PDFs and timestamped YouTube webcasts. Auto-discovered 2026-11-01 from series 'arin'. end_date taken from the source."
+
+  - key: lacnic-45
+    name: "LACNIC 45"
+    type: operator
+    end_date: 2026-05-28
+    fetcher: lacnic
+    program_url: "https://apievt.lacnic.net/wp-json/wp/v2"
+    manual_fallback_url: "https://lacnic45.lacnic.net/"
+    discovered: 2026-11-01
+    notes: "Latin American RIR meeting with LACNOG: routing, IPv6, DNS, peering and IX, network security, CSIRTs. Titles are English when the source has them, Spanish otherwise. Auto-discovered 2026-11-01 from series 'lacnic'. end_date taken from the source."
+
+  - key: lacnic-46
+    name: "LACNIC 46"
+    type: operator
+    end_date: 2026-10-22
+    fetcher: lacnic
+    program_url: "https://apievt.lacnic.net/wp-json/wp/v2"
+    manual_fallback_url: "https://lacnic46.lacnic.net/"
+    discovered: 2026-11-01
+    notes: "Latin American RIR meeting with LACNOG: routing, IPv6, DNS, peering and IX, network security, CSIRTs. Titles are English when the source has them, Spanish otherwise. Auto-discovered 2026-11-01 from series 'lacnic'. end_date taken from the source."
+
+  - key: pets-2026
+    name: "PETS 2026 (Privacy Enhancing Technologies Symposium)"
+    type: academic
+    end_date: 2026-07-25
+    fetcher: pets
+    program_url: "https://petsymposium.org/2026/paperlist.php"
+    manual_fallback_url: "https://petsymposium.org/2026/paperlist.php"
+    discovered: 2026-11-01
+    notes: "Privacy research symposium: privacy tech and identity, anonymity networks, traffic analysis, measurement, usable privacy. Papers are in the PoPETs journal; the list carries titles, authors and issues. Auto-discovered 2026-11-01 from series 'pets'. end_date is an ESTIMATE from the series hint — confirm it against the event page."
+
+  - key: ausnog-2025
+    name: "AusNOG 2025"
+    type: operator
+    end_date: 2025-01-10
+    fetcher: ausnog
+    program_url: "https://www.ausnog.net/events/ausnog-2025/program"
+    manual_fallback_url: "https://www.ausnog.net/events/ausnog-2025/program"
+    discovered: 2026-11-01
+    notes: "Australian network operators: backbone and DC operations, IPv6, peering, optics, automation, network security. Titles, speakers, slide PDFs and YouTube recordings; no abstracts published. Auto-discovered 2026-11-01 from series 'ausnog'. end_date taken from the source."
+
+  - key: ausnog-2026
+    name: "AusNOG 2026"
+    type: operator
+    end_date: 2026-09-05
+    fetcher: ausnog
+    program_url: "https://www.ausnog.net/events/ausnog-2026/program"
+    manual_fallback_url: "https://www.ausnog.net/events/ausnog-2026/program"
+    discovered: 2026-11-01
+    notes: "Australian network operators: backbone and DC operations, IPv6, peering, optics, automation, network security. Titles, speakers, slide PDFs and YouTube recordings; no abstracts published. Auto-discovered 2026-11-01 from series 'ausnog'. end_date is an ESTIMATE from the series hint — confirm it against the event page."
+
+  - key: peeringdays-2026
+    name: "Peering Days 2026"
+    type: operator
+    end_date: 2026-03-25
+    fetcher: peeringdays
+    program_url: "https://2026.peeringdays.eu/programme/"
+    manual_fallback_url: "https://2026.peeringdays.eu/programme/"
+    discovered: 2026-11-01
+    notes: "The largest peering conference in Central and Eastern Europe (NIX.CZ, BIX, VIX): peering, interconnection, RPKI, optics, datacenter interconnect. Titles, speakers (IXP - speaker), slide PDFs; abstracts only for workshops. Auto-discovered 2026-11-01 from series 'peeringdays'. end_date taken from the source."
+
+  - key: moreip-2025
+    name: "MORE-IP 2025"
+    type: operator
+    end_date: 2025-05-29
+    fetcher: moreip
+    program_url: "https://more-ip-event.net/more-ip-2025/agenda/"
+    manual_fallback_url: "https://more-ip-event.net/more-ip-2025/agenda/"
+    discovered: 2026-11-01
+    notes: "AMS-IX interconnection event (~300 participants): IX and DC interconnect, peering, European connectivity policy, DNS and internet resilience. Titles, speakers, blurbs and YouTube recordings. Auto-discovered 2026-11-01 from series 'moreip'. end_date is an ESTIMATE from the series hint — confirm it against the event page."
+
+  - key: moreip-2026
+    name: "MORE-IP 2026"
+    type: operator
+    end_date: 2026-05-29
+    fetcher: moreip
+    program_url: "https://more-ip-event.net/more-ip-2026/agenda/"
+    manual_fallback_url: "https://more-ip-event.net/more-ip-2026/agenda/"
+    discovered: 2026-11-01
+    notes: "AMS-IX interconnection event (~300 participants): IX and DC interconnect, peering, European connectivity policy, DNS and internet resilience. Titles, speakers, blurbs and YouTube recordings. Auto-discovered 2026-11-01 from series 'moreip'. end_date is an ESTIMATE from the series hint — confirm it against the event page."
+
+  - key: moreip-2027
+    name: "MORE-IP 2027"
+    type: operator
+    end_date: 2027-05-29
+    fetcher: moreip
+    program_url: "https://more-ip-event.net/more-ip-2027/agenda/"
+    manual_fallback_url: "https://more-ip-event.net/more-ip-2027/agenda/"
+    discovered: 2026-11-01
+    notes: "AMS-IX interconnection event (~300 participants): IX and DC interconnect, peering, European connectivity policy, DNS and internet resilience. Titles, speakers, blurbs and YouTube recordings. Auto-discovered 2026-11-01 from series 'moreip'. end_date is an ESTIMATE from the series hint — confirm it against the event page."
+
+  - key: swinog-41
+    name: "SwiNOG #41"
+    type: operator
+    end_date: 2026-04-28
+    fetcher: swinog
+    program_url: "https://www.swinog.ch/meetings/swinog41/"
+    manual_fallback_url: "https://www.swinog.ch/meetings/swinog41/"
+    discovered: 2026-11-01
+    notes: "Swiss network operators (~150-300 per meeting, 25+ years): routing, peering, datacenter networking, optics, automation, security. Talks with full abstracts; slides and recordings when published. Auto-discovered 2026-11-01 from series 'swinog'. end_date taken from the source."
+
+  - key: swinog-42
+    name: "SwiNOG #42"
+    type: operator
+    end_date: 2026-10-21
+    fetcher: swinog
+    program_url: "https://www.swinog.ch/meetings/swinog42/"
+    manual_fallback_url: "https://www.swinog.ch/meetings/swinog42/"
+    discovered: 2026-11-01
+    notes: "Swiss network operators (~150-300 per meeting, 25+ years): routing, peering, datacenter networking, optics, automation, security. Talks with full abstracts; slides and recordings when published. Auto-discovered 2026-11-01 from series 'swinog'. end_date taken from the source."
+
+  - key: capacity-2026
+    name: "Capacity Europe 2026"
+    type: vendor
+    end_date: 2026-10-15
+    fetcher: capacity
+    program_url: "https://www.capacityeurope.com/agenda/"
+    manual_fallback_url: "https://www.capacityeurope.com/agenda/"
+    discovered: 2026-11-01
+    notes: "Europe's largest carrier and digital-infrastructure marketplace (~4,000 attendees): fibre, data centres, subsea, AI infrastructure build, energy. Panels and keynotes with company affiliations; no recordings or slides. Auto-discovered 2026-11-01 from series 'capacity-europe'. end_date taken from the source."
+
+  - key: janog-58
+    name: "JANOG 58 Meeting"
+    type: operator
+    end_date: 2026-06-29
+    fetcher: janog
+    program_url: "https://www.janog.gr.jp/meeting/janog58/program-timetable/"
+    manual_fallback_url: "https://www.janog.gr.jp/meeting/janog58/program-timetable/"
+    discovered: 2026-11-01
+    notes: "Japan's network operators group (~1,000 attendees, Japanese-language program): backbone and DC operations, IX and peering, optical transport, automation, network security. Auto-discovered 2026-11-01 from series 'janog'. end_date taken from the source."
+
+  - key: netuk-2
+    name: "NetUK2 (The Brewery)"
+    type: operator
+    end_date: 2025-07-08
+    fetcher: indico
+    program_url: "https://indico.netuk.org/event/2/"
+    manual_fallback_url: "https://indico.netuk.org/event/2/"
+    discovered: 2026-11-01
+    notes: "UK network infrastructure community (The Brewery, London): backbone and DC networking, IX and peering, automation, security. Full abstracts from the Indico export. Auto-discovered 2026-11-01 from series 'netuk'. end_date taken from the source."
+
+  - key: netuk-3
+    name: "NetUK3 (The Brewery)"
+    type: operator
+    end_date: 2026-07-07
+    fetcher: indico
+    program_url: "https://indico.netuk.org/event/3/"
+    manual_fallback_url: "https://indico.netuk.org/event/3/"
+    discovered: 2026-11-01
+    notes: "UK network infrastructure community (The Brewery, London): backbone and DC networking, IX and peering, automation, security. Full abstracts from the Indico export. Auto-discovered 2026-11-01 from series 'netuk'. end_date taken from the source."
+
+  - key: dknog-16
+    name: "DKNOG16 (Scandic Copenhagen)"
+    type: operator
+    end_date: 2026-03-06
+    fetcher: indico
+    program_url: "https://dknog16.dknog.dk/"
+    manual_fallback_url: "https://dknog16.dknog.dk/"
+    discovered: 2026-11-01
+    notes: "Danish network operators (Copenhagen): DC and backbone networking, BGP/EVPN, automation, security and operator workshops. Contributions carry abstracts, speakers and material via the Indico export. Auto-discovered 2026-11-01 from series 'dknog'. end_date taken from the source."
+
+  - key: itnog-9
+    name: "ITNOG9"
+    type: operator
+    end_date: 2025-05-20
+    fetcher: itnog
+    program_url: "https://www.itnog.it/itnog9"
+    manual_fallback_url: "https://www.itnog.it/itnog9"
+    discovered: 2026-11-01
+    notes: "Italian network operators: backbone and DC networking (SR-MPLS, EVPN/VXLAN), peering, IPv6, security. Italian titles, slides as PDFs; no abstracts published. Auto-discovered 2026-11-01 from series 'itnog'. end_date taken from the source."
+
+  - key: itnog-10
+    name: "ITNOG10"
+    type: operator
+    end_date: 2026-04-21
+    fetcher: itnog
+    program_url: "https://www.itnog.it/itnog10"
+    manual_fallback_url: "https://www.itnog.it/itnog10"
+    discovered: 2026-11-01
+    notes: "Italian network operators: backbone and DC networking (SR-MPLS, EVPN/VXLAN), peering, IPv6, security. Italian titles, slides as PDFs; no abstracts published. Auto-discovered 2026-11-01 from series 'itnog'. end_date taken from the source."
+
+  - key: netnod-2025
+    name: "Netnod Tech Meeting 2025"
+    type: operator
+    end_date: 2025-10-09
+    fetcher: netnod
+    program_url: "https://www.netnod.se/netnod-tech-meeting-2025"
+    manual_fallback_url: "https://www.netnod.se/netnod-tech-meeting-2025"
+    discovered: 2026-11-01
+    notes: "Swedish IXP and NOG (200+ attendees, Stockholm): IX and interconnection, routing security (RPKI/ASPA), optics, DNS and NTP infrastructure, DC networking. Titles, speakers and slides; no abstracts. Auto-discovered 2026-11-01 from series 'netnod'. end_date taken from the source."
+
+  - key: netnod-2026
+    name: "Netnod Tech Meeting 2026"
+    type: operator
+    end_date: 2026-10-06
+    fetcher: netnod
+    program_url: "https://www.netnod.se/netnod-tech-meeting-2026"
+    manual_fallback_url: "https://www.netnod.se/netnod-tech-meeting-2026"
+    discovered: 2026-11-01
+    notes: "Swedish IXP and NOG (200+ attendees, Stockholm): IX and interconnection, routing security (RPKI/ASPA), optics, DNS and NTP infrastructure, DC networking. Titles, speakers and slides; no abstracts. Auto-discovered 2026-11-01 from series 'netnod'. end_date taken from the source."
+
+  - key: cfgmgmtcamp-2026
+    name: "CfgMgmtCamp Ghent 2026"
+    type: vendor
+    end_date: 2026-02-04
+    fetcher: pretalx
+    program_url: "https://cfp.cfgmgmtcamp.be/ghent2026/schedule/export/schedule.json"
+    manual_fallback_url: "https://cfp.cfgmgmtcamp.be/ghent2026/schedule/"
+    discovered: 2026-11-01
+    notes: "The open automation conference next to FOSDEM: Ansible/Puppet/Salt/CFEngine communities, infrastructure automation, GitOps, network automation, immutable infrastructure. Full abstracts from the Pretalx export. Auto-discovered 2026-11-01 from series 'cfgmgmtcamp'. end_date taken from the source."

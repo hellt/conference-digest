@@ -60,9 +60,9 @@
     "last_error": ""
   },
   "nsdi-2026": {
-    "status": "local_required",
+    "status": "published",
     "attempts": 0,
-    "last_attempt": "2026-11-01T13:24:19.095814+00:00",
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
     "last_error": ""
   },
   "ietf-124": {
@@ -134,7 +134,259 @@
   "gtc-2026": {
     "status": "published",
     "attempts": 0,
-    "last_attempt": "2026-11-01T21:11:51.209000+00:00",
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "tnc-2026": {
+    "status": "manual",
+    "attempts": 3,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": "programme is a client-side app with no public data endpoint (programme page reachable; event ended 2026-06-12); open manual_fallback_url and paste the programme into the prompt"
+  },
+  "nogfi-2026-06": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "ciscolive-us-2025": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "ciscolive-eu-2025": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "ripe-91": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "ripe-92": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "nlnog-2025": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "nlnog-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "denog-17": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "ripe-93": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "grnog-20": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "ciscolive-us-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "ciscolive-eu-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "imc-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "conext-2025": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "apricot-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "fosdem-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "hacklu-2025": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "hacklu-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "arin-56": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "arin-57": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "arin-58": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "lacnic-45": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "lacnic-46": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "pets-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "ausnog-2025": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "ausnog-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "peeringdays-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "moreip-2025": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "moreip-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "swinog-41": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "swinog-42": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "capacity-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "janog-58": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "netuk-2": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "netuk-3": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "dknog-16": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "itnog-9": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "itnog-10": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "netnod-2025": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "netnod-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
+    "last_error": ""
+  },
+  "cfgmgmtcamp-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-01T23:21:40.304675+00:00",
     "last_error": ""
   }
 }

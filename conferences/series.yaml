@@ -283,3 +283,357 @@ series:
     program_url_template: "https://www.sigsac.org/ccs/CCS{year}/program/schedule.html"
     manual_fallback_url_template: "https://www.sigsac.org/ccs/CCS{year}/program/schedule.html"
     notes: "Top-tier security research: applied crypto, authentication and identity, network security, systems security, measurement. Papers and abstracts are ACM DL-only; the schedule carries titles, authors and sessions."
+
+  # ACM IMC: the program page lists every paper with authors, a full abstract
+  # and the doi.org Paper link, grouped by session. Older editions (2025 and
+  # back) are not kept on this program layout, so the series starts at 2026.
+  - series: imc
+    enumerate: year
+    key_template: "imc-{year}"
+    name_template: "ACM IMC {year}"
+    type: academic
+    fetcher: imc
+    start: 2026
+    end_date_hint: "10-31"
+    program_url_template: "https://conferences.sigcomm.org/imc/{year}/program/"
+    manual_fallback_url_template: "https://conferences.sigcomm.org/imc/{year}/program/"
+    notes: "Premier Internet measurement research: datacenter and CDN measurement, topology and interdomain, transport, DNS, security and censorship measurement. Papers link doi.org ACM DL pages."
+
+  # ACM CoNEXT: the conference site is an Angular app whose pages are all
+  # server-rendered partials; the program partial lists every paper with
+  # authors, a full abstract and its ACM DL links, grouped by session. The
+  # preliminary program (few months out) holds no papers yet, so discovery
+  # adds an edition only once the full program is up.
+  - series: conext
+    enumerate: year
+    key_template: "conext-{year}"
+    name_template: "ACM CoNEXT {year}"
+    type: academic
+    fetcher: conext
+    start: 2025
+    end_date_hint: "12-05"
+    program_url_template: "https://conferences.sigcomm.org/co-next/{year}/partials/program.html"
+    manual_fallback_url_template: "https://conferences.sigcomm.org/co-next/{year}/partials/program.html"
+    notes: "Emerging networking research: datacenter, transport (QUIC), edge and wireless, measurement, network security. Papers link their ACM DL page and PDF."
+
+  # APRICOT: APNIC's open conference API serves the schedule app behind every
+  # {year}.apricot.net site. The events listing names each edition with its id,
+  # dates and city (the probe reads it directly), and the event document lists
+  # every agenda item with speaker, affiliation, abstract and slides. Sessions
+  # with a YouTube live link attach it only when they hold a single talk.
+  - series: apricot
+    enumerate: year
+    key_template: "apricot-{year}"
+    name_template: "APRICOT {year}"
+    type: operator
+    fetcher: apricot
+    start: 2025
+    lookahead: 3
+    program_url_template: "https://api.apnic.net/web/v1/events"
+    manual_fallback_url_template: "https://{year}.apricot.net/programme/"
+    notes: "The Asia-Pacific operators summit (with APNIC): routing, peering, datacenter and backbone operations, DNS, security, automation."
+
+  # FOSDEM publishes the whole edition as one Pentabarf schedule XML — the
+  # same feed the mobile apps use — with per-event pages, abstracts, speakers,
+  # slide attachments and video.fosdem.org recordings. The event is far wider
+  # than this digest's reader, so the fetcher keeps a curated track set
+  # (network, eBPF, DNS, security, identity, confidential computing,
+  # containers, virtualization, kernel, main) and drops workshops and
+  # lightning talks; edit RELEVANT_TRACKS in fosdem.py as interests shift.
+  - series: fosdem
+    enumerate: year
+    key_template: "fosdem-{year}"
+    name_template: "FOSDEM {year}"
+    type: vendor
+    fetcher: fosdem
+    start: 2026
+    program_url_template: "https://fosdem.org/{year}/schedule/xml"
+    manual_fallback_url_template: "https://fosdem.org/{year}/schedule/"
+    notes: "Europe's largest FOSS event: open-source networking (Linux, OVS, eBPF/XDP), DNS, security and identity devrooms. Curated track filter in the fetcher; per-talk pages, slides and video.fosdem.org recordings."
+
+  # hack.lu runs its CfP on pretalx.com, whose public schedule export gives
+  # every talk with speakers, full abstract and its Pretalx page. The fetcher
+  # is the generic Pretalx one (also used by CfgMgmtCamp); the series points
+  # program_url straight at the JSON export.
+  - series: hacklu
+    enumerate: year
+    key_template: "hacklu-{year}"
+    name_template: "hack.lu {year}"
+    type: security
+    fetcher: pretalx
+    start: 2025
+    lookahead: 3
+    program_url_template: "https://pretalx.com/hack-lu-{year}/schedule/export/schedule.json"
+    manual_fallback_url_template: "https://pretalx.com/hack-lu-{year}/schedule/"
+    notes: "Open security conference run by CIRCL (Luxembourg CERT): offensive and defensive security, privacy, identity. Full abstracts from the Pretalx export; trainings/workshops included as talks."
+
+  # TNC (GÉANT's research and education networking conference). The per-year
+  # WordPress site 403s datacenter clients, so the probe reads it through
+  # Tavily Extract (owner-approved, 2026-11-01) for the dates. The programme
+  # itself is a client-side app with no public data endpoint, and the GÉANT
+  # Indico behind it is bot-walled too — so fetch() returns manual_fallback and
+  # TNC digests are written from the manual-paste path. Recordings land on the
+  # GÉANT YouTube channel for the links step.
+  - series: tnc
+    enumerate: year
+    key_template: "tnc-{year}"
+    name_template: "TNC{yy} (GÉANT research networking conference)"
+    type: operator
+    fetcher: tnc
+    start: 2026
+    end_date_hint: "06-12"
+    program_url_template: "https://tnc{yy}.geant.org/"
+    manual_fallback_url_template: "https://tnc{yy}.geant.org/programme/"
+    notes: "European NREN conference: campus and DC networking for research, R&E infrastructure, identity federation, security. Program is pasted by hand (JS-only source); see FINDINGS-2026-11-new-conferences.md."
+
+  # ARIN's Public Policy and Members Meetings: the per-meeting agenda page is
+  # plain HTML tables — Agenda Item | Speaker | Presentation | Webcast. Policy
+  # rows link their draft page, presentations are PDFs, and every agenda item
+  # carries a timestamped YouTube webcast link. The North-American RIR
+  # counterpart to the RIPE series.
+  - series: arin
+    enumerate: ordinal
+    key_template: "arin-{n}"
+    name_template: "ARIN {n} Public Policy and Members Meeting"
+    type: operator
+    fetcher: arin
+    start: 56
+    lookahead: 3
+    program_url_template: "https://www.arin.net/participate/meetings/ARIN{n}"
+    manual_fallback_url_template: "https://www.arin.net/participate/meetings/ARIN{n}"
+    notes: "North American RIR meeting: IPv6, routing security/RPKI, Internet number resource policy, DNS and ARIN services. Agenda items with speakers, slide PDFs and timestamped YouTube webcasts."
+
+  # LACNIC: every lacnic<n>.lacnic.net site is a React app that loads from one
+  # open WP REST API (apievt.lacnic.net). The our_events taxonomy maps edition
+  # numbers to term ids; the agenda posts then give each item an English and
+  # Spanish title, description, speakers, session group, YouTube recordings
+  # (per language) and presentation media ids resolved to slide URLs. The
+  # agenda timestamps are also the probe's date source.
+  - series: lacnic
+    enumerate: ordinal
+    key_template: "lacnic-{n}"
+    name_template: "LACNIC {n}"
+    type: operator
+    fetcher: lacnic
+    start: 45
+    lookahead: 3
+    program_url_template: "https://apievt.lacnic.net/wp-json/wp/v2"
+    manual_fallback_url_template: "https://lacnic{n}.lacnic.net/"
+    notes: "Latin American RIR meeting with LACNOG: routing, IPv6, DNS, peering and IX, network security, CSIRTs. Titles are English when the source has them, Spanish otherwise."
+
+  # PETS: the accepted-papers list is one static page per edition — every paper
+  # with its exact title and authors, grouped by PoPETs issue. Abstracts and
+  # papers live in the PoPETs journal, so picks are written from title and
+  # authors. The page carries no dates; end_date_hint covers discovery.
+  - series: pets
+    enumerate: year
+    key_template: "pets-{year}"
+    name_template: "PETS {year} (Privacy Enhancing Technologies Symposium)"
+    type: academic
+    fetcher: pets
+    start: 2026
+    end_date_hint: "07-25"
+    program_url_template: "https://petsymposium.org/{year}/paperlist.php"
+    manual_fallback_url_template: "https://petsymposium.org/{year}/paperlist.php"
+    notes: "Privacy research symposium: privacy tech and identity, anonymity networks, traffic analysis, measurement, usable privacy. Papers are in the PoPETs journal; the list carries titles, authors and issues."
+
+  # AusNOG: one program page per year with a table per conference day —
+  # time, slide icon, video icon, bold title with speaker and affiliation.
+  # The icon links are the real materials (PDF decks, YouTube recordings);
+  # the day captions carry no year, so the series uses an end_date_hint.
+  - series: ausnog
+    enumerate: year
+    key_template: "ausnog-{year}"
+    name_template: "AusNOG {year}"
+    type: operator
+    fetcher: ausnog
+    start: 2025
+    end_date_hint: "09-05"
+    program_url_template: "https://www.ausnog.net/events/ausnog-{year}/program"
+    manual_fallback_url_template: "https://www.ausnog.net/events/ausnog-{year}/program"
+    notes: "Australian network operators: backbone and DC operations, IPv6, peering, optics, automation, network security. Titles, speakers, slide PDFs and YouTube recordings; no abstracts published."
+
+  # Peering Days: each edition gets its own site (<year>.peeringdays.eu) with
+  # a static programme page — day headings, one block per slot, bold titles,
+  # an "(Speaker: IXP - Name)" line and Download links for the decks. Only
+  # workshops publish abstracts. The 2027 site was already announced but its
+  # TLS was broken at add time; discovery simply retries until it works.
+  - series: peeringdays
+    enumerate: year
+    key_template: "peeringdays-{year}"
+    name_template: "Peering Days {year}"
+    type: operator
+    fetcher: peeringdays
+    start: 2026
+    end_date_hint: "03-31"
+    program_url_template: "https://{year}.peeringdays.eu/programme/"
+    manual_fallback_url_template: "https://{year}.peeringdays.eu/programme/"
+    notes: "The largest peering conference in Central and Eastern Europe (NIX.CZ, BIX, VIX): peering, interconnection, RPKI, optics, datacenter interconnect. Titles, speakers (IXP - speaker), slide PDFs; abstracts only for workshops."
+
+  # MORE-IP, AMS-IX's interconnection event. The agenda page is plain
+  # WordPress HTML — day sections, one article per slot with title, speaker
+  # ("Name - Company"), a short blurb and, for some items, the YouTube
+  # recording. Breaks are grey articles. Attendance is AMS-IX member- and
+  # partner-facing but the agenda and recordings are public.
+  - series: moreip
+    enumerate: year
+    key_template: "moreip-{year}"
+    name_template: "MORE-IP {year}"
+    type: operator
+    fetcher: moreip
+    start: 2025
+    end_date_hint: "05-29"
+    program_url_template: "https://more-ip-event.net/more-ip-{year}/agenda/"
+    manual_fallback_url_template: "https://more-ip-event.net/more-ip-{year}/agenda/"
+    notes: "AMS-IX interconnection event (~300 participants): IX and DC interconnect, peering, European connectivity policy, DNS and internet resilience. Titles, speakers, blurbs and YouTube recordings."
+
+  # SwiNOG: each meeting gets one page under /meetings/swinog<n>/ with the
+  # program plugin — one article per talk (title, "Name · Company", abstract,
+  # Slides/Video link spans) and a Quick facts box with the dates. Recordings
+  # exist since 2014; decks can appear days after the meeting, which is why
+  # Links Refresh and prompt regeneration matter for recent editions.
+  - series: swinog
+    enumerate: ordinal
+    key_template: "swinog-{n}"
+    name_template: "SwiNOG #{n}"
+    type: operator
+    fetcher: swinog
+    start: 41
+    lookahead: 2
+    program_url_template: "https://www.swinog.ch/meetings/swinog{n}/"
+    manual_fallback_url_template: "https://www.swinog.ch/meetings/swinog{n}/"
+    notes: "Swiss network operators (~150-300 per meeting, 25+ years): routing, peering, datacenter networking, optics, automation, security. Talks with full abstracts; slides and recordings when published."
+
+  # Capacity Europe: the agenda looks like a JS app, but the whole session
+  # library is server-rendered — one day wrapper per day (id="13-oct-2026"),
+  # one li per session with its page link, description, speakers with
+  # "Name, Role - COMPANY", stream tags and times. A commercial event: no
+  # recordings or slides, so items carry the session page only. Social-agenda
+  # items are dropped. The year moves into the event's own domain; discovery
+  # keeps probing capacityeurope.com/agenda/ and reads the year from the day
+  # wrapper ids.
+  - series: capacity-europe
+    enumerate: year
+    key_template: "capacity-{year}"
+    name_template: "Capacity Europe {year}"
+    type: vendor
+    fetcher: capacity
+    start: 2026
+    end_date_hint: "10-16"
+    program_url_template: "https://www.capacityeurope.com/agenda/"
+    manual_fallback_url_template: "https://www.capacityeurope.com/agenda/"
+    notes: "Europe's largest carrier and digital-infrastructure marketplace (~4,000 attendees): fibre, data centres, subsea, AI infrastructure build, energy. Panels and keynotes with company affiliations; no recordings or slides."
+
+  # JANOG: the timetable page links every session (WG meetings, LTs,
+  # tutorials) to its own page, which carries the overview text, slide PDFs
+  # and the YouTube live link that doubles as the archived recording. The
+  # program is Japanese; the digest presents it as-is. Interim ".5" meetings
+  # are skipped by the integer enumeration. Japanese dates need the probe's
+  # own 年月日 parser.
+  - series: janog
+    enumerate: ordinal
+    key_template: "janog-{n}"
+    name_template: "JANOG {n} Meeting"
+    type: operator
+    fetcher: janog
+    start: 58
+    lookahead: 3
+    program_url_template: "https://www.janog.gr.jp/meeting/janog{n}/program-timetable/"
+    manual_fallback_url_template: "https://www.janog.gr.jp/meeting/janog{n}/program-timetable/"
+    notes: "Japan's network operators group (~1,000 attendees, Japanese-language program): backbone and DC operations, IX and peering, optical transport, automation, network security."
+
+  # NetUK: the UK's new network infrastructure community. Its Indico event
+  # ids match the edition numbers (indico.netuk.org/event/3 = NetUK3), so the
+  # series template points straight at the event page and the generic Indico
+  # fetcher reads the open export. Contributions carry full abstracts.
+  - series: netuk
+    enumerate: ordinal
+    key_template: "netuk-{n}"
+    name_template: "NetUK{n}"
+    type: operator
+    fetcher: indico
+    start: 2
+    lookahead: 2
+    program_url_template: "https://indico.netuk.org/event/{n}/"
+    manual_fallback_url_template: "https://indico.netuk.org/event/{n}/"
+    notes: "UK network infrastructure community (The Brewery, London): backbone and DC networking, IX and peering, automation, security. Full abstracts from the Indico export."
+
+  # GRNOG runs on the NOG Alliance Indico. The category listing shows only
+  # upcoming events, so discovery resolves future editions by name; past ones
+  # (like GRNOG 20, event 13) are hand-added below with their event URL.
+  - series: grnog
+    enumerate: ordinal
+    key_template: "grnog-{n}"
+    name_template: "GRNOG {n}"
+    type: operator
+    fetcher: indico
+    start: 21
+    lookahead: 2
+    program_url_template: "https://grnog.indico.nogalliance.org/category/0/"
+    manual_fallback_url_template: "https://grnog.indico.nogalliance.org/"
+    notes: "Greek network operators (Athens): peering and IX, routing and RPKI, optical transport, DC networking, automation. Contributions carry abstracts, speakers and material via the Indico export."
+
+  # DKNOG: each edition gets its own subdomain (dknog16.dknog.dk, ...), whose
+  # root redirects straight to the event on the shared events.dknog.dk
+  # backend — and the redirect target's host is also where the export API
+  # lives, which is how the generic Indico fetcher resolves both. Contributions
+  # carry abstracts and material.
+  - series: dknog
+    enumerate: ordinal
+    key_template: "dknog-{n}"
+    name_template: "DKNOG{n}"
+    type: operator
+    fetcher: indico
+    start: 16
+    lookahead: 2
+    program_url_template: "https://dknog{n}.dknog.dk/"
+    manual_fallback_url_template: "https://dknog{n}.dknog.dk/"
+    notes: "Danish network operators (Copenhagen): DC and backbone networking, BGP/EVPN, automation, security and operator workshops. Contributions carry abstracts, speakers and material via the Indico export."
+
+  # ITNOG: one static page per meeting (itnog.it/itnog<n>) with program
+  # tables — Start | End | Title | Speakers | Slides — linking PDF decks
+  # under files/. Titles are Italian and presented as-is; day-1 vendor
+  # workshops use a Title | Sponsor shape that the same parser reads.
+  - series: itnog
+    enumerate: ordinal
+    key_template: "itnog-{n}"
+    name_template: "ITNOG{n}"
+    type: operator
+    fetcher: itnog
+    start: 9
+    lookahead: 2
+    program_url_template: "https://www.itnog.it/itnog{n}"
+    manual_fallback_url_template: "https://www.itnog.it/itnog{n}"
+    notes: "Italian network operators: backbone and DC networking (SR-MPLS, EVPN/VXLAN), peering, IPv6, security. Italian titles, slides as PDFs; no abstracts published."
+
+  # Netnod Tech Meeting: the autumn meeting (the spring Netnod Meeting is a
+  # separate page pattern; add it by hand if wanted). The agenda renders as
+  # nn-agenda paragraphs — date label, time, title, speaker with company and
+  # presentation links under /sites/default/files/NetnodMeetingPresentations/.
+  # The URL carries the year; the page scan finds the exact date.
+  - series: netnod
+    enumerate: year
+    key_template: "netnod-{year}"
+    name_template: "Netnod Tech Meeting {year}"
+    type: operator
+    fetcher: netnod
+    start: 2025
+    end_date_hint: "10-06"
+    program_url_template: "https://www.netnod.se/netnod-tech-meeting-{year}"
+    manual_fallback_url_template: "https://www.netnod.se/netnod-tech-meeting-{year}"
+    notes: "Swedish IXP and NOG (200+ attendees, Stockholm): IX and interconnection, routing security (RPKI/ASPA), optics, DNS and NTP infrastructure, DC networking. Titles, speakers and slides; no abstracts."
+
+  # CfgMgmtCamp runs its CfP on Pretalx (cfp.cfgmgmtcamp.be, also served as
+  # cfp.cfgmgmtcamp.org) and exposes the schedule export JSON directly; the
+  # generic Pretalx fetcher reads it. Held in Ghent the days after FOSDEM.
+  - series: cfgmgmtcamp
+    enumerate: year
+    key_template: "cfgmgmtcamp-{year}"
+    name_template: "CfgMgmtCamp Ghent {year}"
+    type: vendor
+    fetcher: pretalx
+    start: 2026
+    lookahead: 2
+    program_url_template: "https://cfp.cfgmgmtcamp.be/ghent{year}/schedule/export/schedule.json"
+    manual_fallback_url_template: "https://cfp.cfgmgmtcamp.be/ghent{year}/schedule/"
+    notes: "The open automation conference next to FOSDEM: Ansible/Puppet/Salt/CFEngine communities, infrastructure automation, GitOps, network automation, immutable infrastructure. Full abstracts from the Pretalx export."

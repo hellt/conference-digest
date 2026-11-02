@@ -70,11 +70,33 @@ CHANNELS = {
     "denog": ("denog",),
     "gtc": ("nvidia",),
     "ccs": ("acm ccs", "acm ccs 2026", "computer and communications security"),
+    "imc": ("acm imc", "internet measurement conference", "imc"),
+    "conext": ("conext", "acm conext"),
+    "apricot": ("apricot", "apnic", "apnog"),
+    "fosdem": ("fosdem",),
+    "hacklu": ("hack.lu", "hacklu", "circl"),
+    "tnc": ("geant", "géant", "tnc"),
+    "arin": ("arin", "american registry for internet numbers"),
+    "lacnic": ("lacnic", "lacnog"),
+    "pets": ("pets", "popets", "privacy enhancing technologies"),
+    "ausnog": ("ausnog",),
+    "peeringdays": ("peering days", "peeringdays", "nix.cz"),
+    "moreip": ("more-ip", "ams-ix"),
+    "swinog": ("swinog",),
+    "capacity": ("capacity europe", "capacity media"),
+    "janog": ("janog",),
+    "nogfi": ("nog.fi", "nogfi"),
+    "netuk": ("netuk",),
+    "grnog": ("grnog",),
+    "dknog": ("dknog",),
+    "itnog": ("itnog",),
+    "netnod": ("netnod",),
+    "cfgmgmtcamp": ("cfgmgmtcamp", "config management camp"),
 }
 DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon": "SREcon",
            "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF", "nanog": "NANOG",
            "autocon": "AutoCon", "ovscon": "OVS OVN conference", "ciscolive": "Cisco Live",
-           "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG", "gtc": "GTC", "ccs": "CCS"}
+           "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG", "gtc": "GTC", "ccs": "CCS", "imc": "IMC", "conext": "CoNEXT", "apricot": "APRICOT", "fosdem": "FOSDEM", "hacklu": "hack.lu", "tnc": "TNC GÉANT", "arin": "ARIN", "lacnic": "LACNIC", "pets": "PETS", "ausnog": "AusNOG", "peeringdays": "Peering Days", "moreip": "MORE-IP", "swinog": "SwiNOG", "capacity": "Capacity Europe", "janog": "JANOG", "nogfi": "nog.fi", "netuk": "NetUK", "grnog": "GRNOG", "dknog": "DKNOG", "itnog": "ITNOG", "netnod": "Netnod", "cfgmgmtcamp": "CfgMgmtCamp"}
 # URLs that only ever hold presentation decks, whatever the link text says.
 DECK_URLS = re.compile(
     r"static\.sched\.com/hosted_files/|storage\.googleapis\.com/site-media-prod/meetings/"

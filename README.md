@@ -183,6 +183,25 @@ conferences/
     nlnog.py         # NLNOG Day program tables, slides and recordings (no abstracts)
     denog.py         # official DENOG agenda -> Pretalx JSON export
     ccs.py           # ACM CCS schedule: sessions, paper titles, authors
+    imc.py           # ACM IMC program: papers, abstracts, doi.org links
+    conext.py        # ACM CoNEXT program partial: papers, abstracts, ACM DL links
+    apricot.py       # APRICOT via the open APNIC conference API
+    fosdem.py        # FOSDEM Pentabarf XML, curated track filter
+    pretalx.py       # any Pretalx schedule export (hack.lu, CfgMgmtCamp)
+    tnc.py           # TNC dates via Tavily; programme pasted by hand
+    arin.py          # ARIN meetings: agenda tables, PDFs, timestamped webcasts
+    lacnic.py        # LACNIC via the WP REST API behind the event sites
+    pets.py          # PETS accepted papers: titles, authors, issues
+    ausnog.py        # AusNOG day tables: titles, speakers, PDFs, YouTube
+    peeringdays.py   # Peering Days per-year sites: talks, speakers, decks
+    moreip.py         # MORE-IP (AMS-IX): agenda articles with speakers, blurbs
+    swinog.py         # SwiNOG meeting pages: talks, abstracts, slides, videos
+    capacity.py       # Capacity Europe: server-rendered session library
+    janog.py          # JANOG timetable + per-session pages (Japanese)
+    indico.py         # generic Indico export API (nog.fi, NetUK, GRNOG, DKNOG)
+    itnog.py          # ITNOG program tables with PDF slides (Italian)
+    netnod.py        # Netnod Tech Meeting agenda paragraphs
+                    #   (cfgmgmtcamp reuses pretalx.py)
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -333,6 +352,106 @@ run.
   times. Abstracts and papers are ACM DL-only, so prompts say picks are written
   from title, authors and session. The schedule appears about two weeks before
   the event; `start: 2026` because older editions keep no schedule page.
+- **IMC**: the program page is server-rendered with every paper's title,
+  authors, full abstract and doi.org Paper link, grouped by session. The
+  page anchors double as each item's `page:` link. Same static site family as
+  SIGCOMM; no bot blocking observed.
+- **CoNEXT**: the site is an Angular app, but every page is a server-rendered
+  partial — the fetcher reads `partials/program.html` directly: sessions,
+  papers, authors, full abstracts and ACM DL page+PDF links. The day headers
+  ("Monday, 1st, Dec 2025") carry a comma plain date scanning misses, so the
+  probe has its own day-header parser. A preliminary program parses zero
+  papers and stays `not_published` until the real one is up.
+- **APRICOT**: every `{year}.apricot.net` schedule is served by one open API
+  (`api.apnic.net`). The events listing gives the edition id, dates and city —
+  the probe reads it directly — and the event document lists each agenda item
+  with speaker, affiliation, abstract and slides. A session's YouTube live
+  link is attached only when it holds a single talk. Week-long workshops,
+  breaks and sponsor invites are dropped.
+- **FOSDEM**: one schedule XML per edition gives every event's page, abstract,
+  speakers, slide attachments and video.fosdem.org recording. With ~1000
+  events over 71 tracks the fetcher keeps a curated track set (network, eBPF,
+  DNS, security, IAM, confidential computing, containers, virtualization,
+  kernel, main) and drops workshops and lightning talks; `RELEVANT_TRACKS` in
+  `fosdem.py` is the lever. The XML states the conference dates exactly.
+- **Pretalx (generic)**: conferences whose CfP runs on Pretalx expose the
+  schedule as JSON; the fetcher reads it directly (hack.lu, CfgMgmtCamp).
+  Every talk comes with speakers, abstract, attachments and its public page.
+  `looks_blocked()` is skipped on this path on purpose — a security-conference
+  abstract that mentions "captcha" is not a bot challenge.
+- **TNC**: tnc<yy>.geant.org blocks datacenter IPs, so the probe reads the
+  site through Tavily Extract for the dates (owner-approved 2026-11-01, same
+  as NANOG). The programme is a client-side app with no public data endpoint
+  and GÉANT's Indico is bot-walled, so the fetcher returns `manual` and the
+  digest is written from the manual-paste path; recordings for the links step
+  land on the GÉANT YouTube channel.
+- **ARIN**: one plain-HTML agenda page per meeting, one table per day. Every
+  row carries the agenda item, speaker, slide PDF and a timestamped YouTube
+  webcast link; policy rows link their draft pages. Same URL shape since
+  ARIN 56 (earlier meetings used different paths).
+- **LACNIC**: the event sites are React apps over one open WP REST API
+  (`apievt.lacnic.net`). The `our_events` taxonomy maps an edition number to
+  its term id; the `agenda` posts give titles (English preferred), speakers,
+  session groups, per-language YouTube recordings and slide media ids, which
+  the media endpoint resolves to URLs. The agenda timestamps give the exact
+  dates for discovery.
+- **PETS**: the accepted-papers page lists every paper with exact title and
+  authors per PoPETs issue. Abstracts are in the journal (not fetched), so
+  prompts say picks are written from title and authors. The page carries no
+  dates, so the series uses an `end_date_hint`.
+- **AusNOG**: the program page has one table per conference day; each talk row
+  links its PDF deck and YouTube recording through icon links, with the
+  speaker and affiliation in the title cell. No abstracts are published, and
+  the day captions carry no year — hence the `end_date_hint`.
+- **Peering Days**: one static site per edition. The programme page gives each
+  slot's title, an "(Speaker: IXP - Name)" line and Download deck links; only
+  workshops publish abstracts, which prompts state. The 2027 site was
+  announced with broken TLS at add time; discovery retries until it serves.
+- **MORE-IP**: AMS-IX's agenda is plain WordPress HTML: title, "Name - Company"
+  speaker lines, short blurbs and YouTube recordings on some items. The
+  theme's CSS mentions captcha classes, so `looks_blocked()` markers are
+  skipped there — status codes alone decide.
+- **SwiNOG**: one page per meeting with the program plugin: title, "Name ·
+  Company", full abstract and Slides/Video link spans per talk; the Quick
+  facts box has the dates. Form-validation strings mentioning recaptcha make
+  this a status-only source too. Decks can land days after the meeting, so
+  recent editions may want a prompt regeneration.
+- **Capacity Europe**: the agenda looks like a JS app, but every session is
+  server-rendered — title, description, "Name, Role - COMPANY" speakers, stream
+  tags and a session page link, grouped by day wrapper ids. A commercial
+  event, so no recordings or slides; social-agenda items are dropped.
+- **JANOG**: the timetable links every session to its own page, which carries
+  the overview, slide PDFs and the YouTube live link that doubles as the
+  archived recording. The program is Japanese and presented as-is; the
+  probe has its own 年月日 date parser because plain scanning misses Japanese
+  dates. One page per session makes the fetch chatty (~60 requests).
+- **Indico (generic)**: one open export endpoint (`/export/event/<id>.json?
+  detail=contributions`) serves every contribution with title, description,
+  speakers and material. Used by nog.fi, NetUK, GRNOG and DKNOG. The series
+  or registry entry points `program_url` at an event page, a category page or
+  a site root; a root that redirects straight to the event page resolves
+  itself (and the redirect's host serves the export — DKNOG's subdomains
+  point at the shared events.dknog.dk), and a plain listing resolves by the
+  edition's name (upcoming events only — past ones are hand-added with their
+  event URL).
+- **NetUK** uses the generic Indico fetcher: its event ids match the edition
+  numbers (event 3 = NetUK3), so the series template points straight at the
+  event page and the export gives titles, abstracts, speakers and material.
+- **GRNOG** also uses the Indico fetcher, through the NOG Alliance instance.
+  Its category listing shows only upcoming events, so discovery resolves
+  future editions by name and past ones (GRNOG 20) are hand-added with their
+  event URL.
+- **DKNOG** also uses the Indico fetcher. Each edition's subdomain root
+  redirects to the event on the shared events.dknog.dk backend, and that
+  redirect both resolves the event and names the export host.
+- **ITNOG**: a static page per meeting with program tables linking PDF
+  decks. Italian titles are presented as-is; no abstracts are published.
+- **Netnod**: the Tech Meeting page renders its agenda as Drupal paragraphs
+  — time, title, speaker with company, presentation links. Titles and
+  speakers only; the URL carries the year and the page scan finds the date.
+- **CfgMgmtCamp**: the Ghent automation camp next to FOSDEM runs on Pretalx,
+  so the generic Pretalx fetcher reads its schedule export (hosted at
+  cfp.cfgmgmtcamp.be, also cfp.cfgmgmtcamp.org).
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

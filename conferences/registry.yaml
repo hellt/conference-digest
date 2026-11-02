@@ -468,3 +468,23 @@ conferences:
     program_url: "https://tnc26.geant.org/"
     manual_fallback_url: "https://tnc26.geant.org/programme/"
     notes: "Helsinki, 8-12 June 2026, hosted by CSC/Funet. The programme is a JS app (no public data endpoint) and GÉANT's Indico is bot-walled, so the program text must be pasted by hand from the programme page. Recordings are on the GÉANT YouTube channel."
+
+  - key: nogfi-2026-06
+    name: "nog.fi meeting 2026.06"
+    type: operator
+    start_date: 2026-06-16
+    end_date: 2026-06-17
+    fetcher: indico
+    program_url: "https://nog.fi/event/59/"
+    manual_fallback_url: "https://nog.fi/event/59/"
+    notes: "Finnish network operators (Tampere): talks via nog.fi's Indico export. Hand-added: nog.fi meets twice a year and numbers editions by year.month, which series discovery cannot enumerate."
+
+  - key: nogfi-2026-11
+    name: "nog.fi meeting 2026.11"
+    type: operator
+    start_date: 2026-11-24
+    end_date: 2026-11-24
+    fetcher: indico
+    program_url: "https://nog.fi/event/73/"
+    manual_fallback_url: "https://nog.fi/event/73/"
+    notes: "Finnish network operators (Oulu): talks via nog.fi's Indico export. Hand-added: nog.fi meets twice a year and numbers editions by year.month, which series discovery cannot enumerate."

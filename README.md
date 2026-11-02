@@ -198,6 +198,7 @@ conferences/
     swinog.py         # SwiNOG meeting pages: talks, abstracts, slides, videos
     capacity.py       # Capacity Europe: server-rendered session library
     janog.py          # JANOG timetable + per-session pages (Japanese)
+    indico.py         # generic Indico export API (nog.fi, NetUK, GRNOG, DKNOG)
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -421,6 +422,15 @@ run.
   archived recording. The program is Japanese and presented as-is; the
   probe has its own 年月日 date parser because plain scanning misses Japanese
   dates. One page per session makes the fetch chatty (~60 requests).
+- **Indico (generic)**: one open export endpoint (`/export/event/<id>.json?
+  detail=contributions`) serves every contribution with title, description,
+  speakers and material. Used by nog.fi, NetUK, GRNOG and DKNOG. The series
+  or registry entry points `program_url` at an event page, a category page or
+  a site root; a root that redirects straight to the event page resolves
+  itself, and a listing resolves by the edition's name (upcoming events only —
+  past ones are hand-added with their event URL). DKNOG's per-edition
+  subdomains redirect `/export/` to the main host, so its series sets
+  `indico_export_url`.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

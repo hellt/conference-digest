@@ -24,7 +24,10 @@ The digest text itself is not rewritten: headings and wording pass through
 unchanged. Each pick's `**Links:**` row (written by conferences/links.py)
 becomes a row of plain source links, a talk recording on YouTube also gets a
 click-to-play thumbnail (docs/javascripts/video.js swaps in the player), direct
-video files get a native HTML player, and employer names in the speaker line
+video files get a native HTML player. Per-talk pages also embed slide viewers
+alongside recordings in Video / PPTX / PDF tabs. PDFs use the browser's native
+viewer; GitHub-hosted downloads are loaded as PDF blobs by slides.js.
+Employer names in the speaker line
 link to that employer's companies/ page.
 Run it before every build (`make site` does).
 
@@ -41,6 +44,7 @@ import unicodedata
 from datetime import date, datetime
 from html import escape
 from pathlib import Path
+from urllib.parse import quote, urlsplit
 
 import yaml
 
@@ -87,7 +91,7 @@ def youtube_id(url: str) -> str | None:
 
 
 # The first write-up label of a pick ("**Why:**", or "- **Why:**" in list
-# style); the recording goes just before it.
+# style); the media viewers go just before it.
 WRITEUP_RE = re.compile(r"^\s*(?:[-*+]\s+)?\*\*(?:Why|What|How)\b")
 
 # A pick's attribution line ("Lucas Immanuel Nickel · Network Operations
@@ -423,6 +427,42 @@ def links_block(row: str, title: str) -> tuple[list[str], list[str]]:
     return out, player
 
 
+def media_block(row: str, title: str) -> list[str]:
+    """Talk-only media tabs: recording first, then PPTX, then PDF."""
+    _, video = links_block(row, title)
+    # A block-level div inside a Markdown tab splits it from the following tabs.
+    video_html = "\n".join(video).strip().removeprefix('<div class="pick-video">').removesuffix("</div>")
+    tabs = [("Video", [video_html])] if video else []
+    decks = []
+    for text, url in MD_LINK.findall(row):
+        if not re.fullmatch(r"Slides(?: \([^)]*\)| 2)?", text.strip(), re.I):
+            continue
+        extension = Path(urlsplit(url).path).suffix.lower()
+        if extension in (".pptx", ".pdf"):
+            decks.append((extension[1:].upper(), url))
+    decks.sort(key=lambda deck: deck[0] != "PPTX")
+    for i, (fmt, url) in enumerate(decks):
+        src = "https://view.officeapps.live.com/op/embed.aspx?src=" + quote(url, safe="") if fmt == "PPTX" else url
+        # GitHub serves PDFs as downloads with X-Frame-Options: deny, but permits CORS.
+        download = fmt == "PDF" and urlsplit(url).hostname in ("media.githubusercontent.com", "raw.githubusercontent.com")
+        source = f'data-pdf-src="{escape(url, quote=True)}"' if download else f'src="{escape(src, quote=True)}"'
+        label = escape(f"{fmt} slides: {title}", quote=True)
+        frame = (
+            f'<iframe class="pick-slides__frame" {source} '
+            f'title="{label}" loading="lazy" allowfullscreen></iframe>'
+        )
+        number = sum(1 for kind, _ in decks[:i + 1] if kind == fmt)
+        tab = f"{fmt} {number}" if sum(1 for kind, _ in decks if kind == fmt) > 1 else fmt
+        tabs.append((tab, [frame]))
+    if not tabs:
+        return []
+    out = ['<div class="pick-media" markdown>', ""]
+    for tab, content in tabs:
+        out.extend([f'=== "{tab}"', "", *(f"    {line}" for line in "\n".join(content).strip().splitlines()), ""])
+    out.extend(["</div>", ""])
+    return out
+
+
 def load_registry() -> dict[str, dict]:
     entries = yaml.safe_load(REGISTRY.read_text(encoding="utf-8"))["conferences"]
     return {e["key"]: e for e in entries}
@@ -505,21 +545,21 @@ def link_heading(heading: str, href: str) -> str:
     return f"[{title}]({href}){sep}{tail}"
 
 
-def decorate(rest: str, talk_links: list[str] | None = None) -> str:
+def decorate(rest: str, talk_links: list[str] | None = None, *, media_tabs: bool = False) -> str:
     """Mark tier sections and wrap each pick in a card, leaving text as is.
     `talk_links` (one href per pick, in order) links each pick heading to the
-    pick's own page."""
+    pick's own page. Media tabs are enabled only on per-talk pages."""
     out: list[str] = []
     tier = None
     in_card = in_fence = False
     pick_title = ""
-    player: list[str] = []   # the pick's recording, waiting for its "Why"
+    player: list[str] = []   # the pick's media, waiting for its "Why"
     after_links = 0          # fallback spot: right after the links row
     hrefs = list(talk_links or [])
 
     def close() -> None:
         nonlocal in_card, player
-        if player:   # a pick without Why/What/How: recording after the links
+        if player:   # a pick without Why/What/How: media after the links
             out[after_links:after_links] = player
             player = []
         if in_card:
@@ -550,6 +590,8 @@ def decorate(rest: str, talk_links: list[str] | None = None) -> str:
         row = LINKS_ROW.match(line) if in_card else None
         if row:
             source_links, player = links_block(row.group(1), pick_title)
+            if media_tabs:
+                player = media_block(row.group(1), pick_title)
             out.extend(source_links)
             after_links = len(out)
             continue
@@ -772,7 +814,7 @@ def render_talks(key: str, name: str, digest_title: str, started: date | None, e
         used.add(slug)
 
         annotated, _ = annotate_employers(f"## {tier}\n\n### {title}\n" + "\n".join(lines), base="..")
-        body = decorate(annotated).split("\n")
+        body = decorate(annotated, media_tabs=True).split("\n")
         body = [l for l in body if not l.startswith("## ")]
         body.pop(next(k for k, l in enumerate(body) if l.startswith("### ")))
 

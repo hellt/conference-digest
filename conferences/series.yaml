@@ -486,3 +486,20 @@ series:
     program_url_template: "https://more-ip-event.net/more-ip-{year}/agenda/"
     manual_fallback_url_template: "https://more-ip-event.net/more-ip-{year}/agenda/"
     notes: "AMS-IX interconnection event (~300 participants): IX and DC interconnect, peering, European connectivity policy, DNS and internet resilience. Titles, speakers, blurbs and YouTube recordings."
+
+  # SwiNOG: each meeting gets one page under /meetings/swinog<n>/ with the
+  # program plugin — one article per talk (title, "Name · Company", abstract,
+  # Slides/Video link spans) and a Quick facts box with the dates. Recordings
+  # exist since 2014; decks can appear days after the meeting, which is why
+  # Links Refresh and prompt regeneration matter for recent editions.
+  - series: swinog
+    enumerate: ordinal
+    key_template: "swinog-{n}"
+    name_template: "SwiNOG #{n}"
+    type: operator
+    fetcher: swinog
+    start: 41
+    lookahead: 2
+    program_url_template: "https://www.swinog.ch/meetings/swinog{n}/"
+    manual_fallback_url_template: "https://www.swinog.ch/meetings/swinog{n}/"
+    notes: "Swiss network operators (~150-300 per meeting, 25+ years): routing, peering, datacenter networking, optics, automation, security. Talks with full abstracts; slides and recordings when published."

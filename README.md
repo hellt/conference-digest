@@ -195,6 +195,7 @@ conferences/
     ausnog.py        # AusNOG day tables: titles, speakers, PDFs, YouTube
     peeringdays.py   # Peering Days per-year sites: talks, speakers, decks
     moreip.py         # MORE-IP (AMS-IX): agenda articles with speakers, blurbs
+    swinog.py         # SwiNOG meeting pages: talks, abstracts, slides, videos
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -404,6 +405,11 @@ run.
   speaker lines, short blurbs and YouTube recordings on some items. The
   theme's CSS mentions captcha classes, so `looks_blocked()` markers are
   skipped there — status codes alone decide.
+- **SwiNOG**: one page per meeting with the program plugin: title, "Name ·
+  Company", full abstract and Slides/Video link spans per talk; the Quick
+  facts box has the dates. Form-validation strings mentioning recaptcha make
+  this a status-only source too. Decks can land days after the meeting, so
+  recent editions may want a prompt regeneration.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

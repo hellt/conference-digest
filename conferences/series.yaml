@@ -420,3 +420,19 @@ series:
     program_url_template: "https://apievt.lacnic.net/wp-json/wp/v2"
     manual_fallback_url_template: "https://lacnic{n}.lacnic.net/"
     notes: "Latin American RIR meeting with LACNOG: routing, IPv6, DNS, peering and IX, network security, CSIRTs. Titles are English when the source has them, Spanish otherwise."
+
+  # PETS: the accepted-papers list is one static page per edition — every paper
+  # with its exact title and authors, grouped by PoPETs issue. Abstracts and
+  # papers live in the PoPETs journal, so picks are written from title and
+  # authors. The page carries no dates; end_date_hint covers discovery.
+  - series: pets
+    enumerate: year
+    key_template: "pets-{year}"
+    name_template: "PETS {year} (Privacy Enhancing Technologies Symposium)"
+    type: academic
+    fetcher: pets
+    start: 2026
+    end_date_hint: "07-25"
+    program_url_template: "https://petsymposium.org/{year}/paperlist.php"
+    manual_fallback_url_template: "https://petsymposium.org/{year}/paperlist.php"
+    notes: "Privacy research symposium: privacy tech and identity, anonymity networks, traffic analysis, measurement, usable privacy. Papers are in the PoPETs journal; the list carries titles, authors and issues."

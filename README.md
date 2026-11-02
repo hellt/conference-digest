@@ -191,6 +191,7 @@ conferences/
     tnc.py           # TNC dates via Tavily; programme pasted by hand
     arin.py          # ARIN meetings: agenda tables, PDFs, timestamped webcasts
     lacnic.py        # LACNIC via the WP REST API behind the event sites
+    pets.py          # PETS accepted papers: titles, authors, issues
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -384,6 +385,10 @@ run.
   session groups, per-language YouTube recordings and slide media ids, which
   the media endpoint resolves to URLs. The agenda timestamps give the exact
   dates for discovery.
+- **PETS**: the accepted-papers page lists every paper with exact title and
+  authors per PoPETs issue. Abstracts are in the journal (not fetched), so
+  prompts say picks are written from title and authors. The page carries no
+  dates, so the series uses an `end_date_hint`.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

@@ -78,11 +78,12 @@ CHANNELS = {
     "tnc": ("geant", "géant", "tnc"),
     "arin": ("arin", "american registry for internet numbers"),
     "lacnic": ("lacnic", "lacnog"),
+    "pets": ("pets", "popets", "privacy enhancing technologies"),
 }
 DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon": "SREcon",
            "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF", "nanog": "NANOG",
            "autocon": "AutoCon", "ovscon": "OVS OVN conference", "ciscolive": "Cisco Live",
-           "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG", "gtc": "GTC", "ccs": "CCS", "imc": "IMC", "conext": "CoNEXT", "apricot": "APRICOT", "fosdem": "FOSDEM", "hacklu": "hack.lu", "tnc": "TNC GÉANT", "arin": "ARIN", "lacnic": "LACNIC"}
+           "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG", "gtc": "GTC", "ccs": "CCS", "imc": "IMC", "conext": "CoNEXT", "apricot": "APRICOT", "fosdem": "FOSDEM", "hacklu": "hack.lu", "tnc": "TNC GÉANT", "arin": "ARIN", "lacnic": "LACNIC", "pets": "PETS"}
 # URLs that only ever hold presentation decks, whatever the link text says.
 DECK_URLS = re.compile(
     r"static\.sched\.com/hosted_files/|storage\.googleapis\.com/site-media-prod/meetings/"

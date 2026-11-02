@@ -192,6 +192,7 @@ conferences/
     arin.py          # ARIN meetings: agenda tables, PDFs, timestamped webcasts
     lacnic.py        # LACNIC via the WP REST API behind the event sites
     pets.py          # PETS accepted papers: titles, authors, issues
+    ausnog.py        # AusNOG day tables: titles, speakers, PDFs, YouTube
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -389,6 +390,10 @@ run.
   authors per PoPETs issue. Abstracts are in the journal (not fetched), so
   prompts say picks are written from title and authors. The page carries no
   dates, so the series uses an `end_date_hint`.
+- **AusNOG**: the program page has one table per conference day; each talk row
+  links its PDF deck and YouTube recording through icon links, with the
+  speaker and affiliation in the title cell. No abstracts are published, and
+  the day captions carry no year — hence the `end_date_hint`.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

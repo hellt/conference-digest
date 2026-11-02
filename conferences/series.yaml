@@ -436,3 +436,19 @@ series:
     program_url_template: "https://petsymposium.org/{year}/paperlist.php"
     manual_fallback_url_template: "https://petsymposium.org/{year}/paperlist.php"
     notes: "Privacy research symposium: privacy tech and identity, anonymity networks, traffic analysis, measurement, usable privacy. Papers are in the PoPETs journal; the list carries titles, authors and issues."
+
+  # AusNOG: one program page per year with a table per conference day —
+  # time, slide icon, video icon, bold title with speaker and affiliation.
+  # The icon links are the real materials (PDF decks, YouTube recordings);
+  # the day captions carry no year, so the series uses an end_date_hint.
+  - series: ausnog
+    enumerate: year
+    key_template: "ausnog-{year}"
+    name_template: "AusNOG {year}"
+    type: operator
+    fetcher: ausnog
+    start: 2025
+    end_date_hint: "09-05"
+    program_url_template: "https://www.ausnog.net/events/ausnog-{year}/program"
+    manual_fallback_url_template: "https://www.ausnog.net/events/ausnog-{year}/program"
+    notes: "Australian network operators: backbone and DC operations, IPv6, peering, optics, automation, network security. Titles, speakers, slide PDFs and YouTube recordings; no abstracts published."

@@ -13,6 +13,48 @@
         <loc>https://tldr.netdevops.me/archive/2026/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/arin-58/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-58/address-supporting-organization-address-council-aso-ac-update/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-58/arin-directory-services-roadmap/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-58/data-accuracy-update/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-58/ipv6-task-force/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-58/policy-block-1-recommended-draft-policy-arin-2025-1/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-58/policy-block-1-recommended-draft-policy-arin-2025-3/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-58/policy-block-1-recommended-draft-policy-arin-2025-7/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-58/policy-block-1-recommended-draft-policy-arin-2025-8/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-58/policy-block-2-draft-policy-arin-2026-1/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-58/policy-block-2-draft-policy-arin-2026-2/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-58/policy-block-2-draft-policy-arin-2026-5/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-58/policy-implementation-and-experience-report/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-58/routing-security-update/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/autocon-3/</loc>
       </url>
       <url>
@@ -179,6 +221,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/category/operator/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/category/security/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/category/standards/</loc>
@@ -944,6 +989,66 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/gtc-2026/transforming-bottlenecks-into-breakthroughs-scaling-secure-ai-networks-f/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/4-byte-hell-your-emoji-is-talking-to-my-llm/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/a-container-in-a-pod-is-not-a-security-boundary-lateral-movement-into-en/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/a-generalized-fingerprinting-framework-for-deriving-searchable-features/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/automating-the-reverse-engineering-of-can-bus-protocols-with-physics-dri/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/btr-reforged-weaponizing-defenders-remediation-driver-as-a-kernel-operat/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/detecting-linux-rootkits-know-where-to-look-in-user-space/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/esc17-using-adcs-to-attack-https-enabled-wsus-clients/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/hhammerring-the-noise-ai-agentic-threat-hunting-with-suricata-and-the-po/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/inside-the-stalkerware-factory-reversing-c2-protocols-and-building-mock/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/internet-background-radiation-exploiting-the-void/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/magic-tricks-for-microsoft-365-incident-response-hands-on-aitm-phishing/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/masso-a-malicious-auth-sso-utility/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/operation-ixim-preventing-a-botnet-of-millions-of-popcorn-time-users/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/plum-anno-1/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/polling-is-the-vulnerability-a-case-for-event-driven-cloud-detection/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/signal-processing-and-math-for-malware-rnd-for-fun-and-profit/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/six-degrees-of-racf-special-mainframe-attack-paths/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/tricking-the-thieves-turning-session-tokens-into-canarytokens/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2026/unintended-computations/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/how-it-works/</loc>
@@ -1985,6 +2090,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/page/2/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/page/3/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/ripe-93/</loc>

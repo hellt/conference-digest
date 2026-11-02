@@ -26,6 +26,7 @@ from .peeringdays import PeeringDaysFetcher
 from .moreip import MoreIpFetcher
 from .swinog import SwinogFetcher
 from .capacity import CapacityFetcher
+from .janog import JanogFetcher
 from .imc import ImcFetcher
 from .conext import ConextFetcher
 from .apricot import ApricotFetcher
@@ -40,6 +41,7 @@ from .peeringdays import PeeringDaysFetcher
 from .moreip import MoreIpFetcher
 from .swinog import SwinogFetcher
 from .capacity import CapacityFetcher
+from .janog import JanogFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -70,6 +72,7 @@ FETCHERS = {
     "moreip": MoreIpFetcher(),
     "swinog": SwinogFetcher(),
     "capacity": CapacityFetcher(),
+    "janog": JanogFetcher(),
 }
 
 

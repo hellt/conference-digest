@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: Cisco Live Europe 2025 (Amsterdam)
 type: vendor
 source_url: https://www.ciscolive.com/on-demand/on-demand-library.html?search.event=1737762187215001jsy4
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: ciscolive-eu-2025
 -->
 

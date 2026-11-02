@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: CfgMgmtCamp Ghent 2026
 type: vendor
 source_url: https://cfp.cfgmgmtcamp.be/ghent2026/schedule/export/schedule.json
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: cfgmgmtcamp-2026
 -->
 

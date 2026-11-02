@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: GRNOG 20
 type: operator
 source_url: https://grnog.indico.nogalliance.org/event/13/
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: grnog-20
 -->
 

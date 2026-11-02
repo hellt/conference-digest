@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: FOSDEM 2026
 type: vendor
 source_url: https://fosdem.org/2026/schedule/xml
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: fosdem-2026
 -->
 

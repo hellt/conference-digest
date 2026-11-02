@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: NLNOG Day 2025 (Amsterdam)
 type: operator
 source_url: https://nlnog.net/events/nlnog-day-2025/
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: nlnog-2025
 -->
 

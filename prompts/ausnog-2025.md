@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: AusNOG 2025
 type: operator
 source_url: https://www.ausnog.net/events/ausnog-2025/program
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: ausnog-2025
 -->
 

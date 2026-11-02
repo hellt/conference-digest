@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: MORE-IP 2025
 type: operator
 source_url: https://more-ip-event.net/more-ip-2025/agenda/
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: moreip-2025
 -->
 

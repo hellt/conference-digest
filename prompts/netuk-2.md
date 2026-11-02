@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: NetUK2 (The Brewery)
 type: operator
 source_url: https://indico.netuk.org/event/2/
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: netuk-2
 -->
 

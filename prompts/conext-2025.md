@@ -133,7 +133,7 @@ show in the rendered view but stays in the source:
 conference: ACM CoNEXT 2025
 type: academic
 source_url: https://conferences.sigcomm.org/co-next/2025/partials/program.html
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: conext-2025
 -->
 

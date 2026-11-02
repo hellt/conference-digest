@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: RIPE 91 (Bucharest)
 type: operator
 source_url: https://ripe91.ripe.net/programme/meeting-plan/
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: ripe-91
 -->
 

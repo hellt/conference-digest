@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: ITNOG9
 type: operator
 source_url: https://www.itnog.it/itnog9
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: itnog-9
 -->
 

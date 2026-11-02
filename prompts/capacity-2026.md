@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: Capacity Europe 2026
 type: vendor
 source_url: https://www.capacityeurope.com/agenda/
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: capacity-2026
 -->
 

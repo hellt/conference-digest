@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: APRICOT 2026 (Jakarta)
 type: operator
 source_url: https://2026.apricot.net/
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: apricot-2026
 -->
 

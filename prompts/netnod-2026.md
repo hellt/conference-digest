@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: Netnod Tech Meeting 2026
 type: operator
 source_url: https://www.netnod.se/netnod-tech-meeting-2026
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: netnod-2026
 -->
 

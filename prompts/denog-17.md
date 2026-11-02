@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: DENOG 17 (Essen)
 type: operator
 source_url: https://www.denog.de/de/meetings/denog17/agenda.html
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: denog-17
 -->
 

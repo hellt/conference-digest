@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: Peering Days 2026
 type: operator
 source_url: https://2026.peeringdays.eu/programme/
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: peeringdays-2026
 -->
 

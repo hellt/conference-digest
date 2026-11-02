@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: LACNIC 46
 type: operator
 source_url: https://lacnic46.lacnic.net/
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: lacnic-46
 -->
 

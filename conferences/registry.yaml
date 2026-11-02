@@ -838,3 +838,13 @@ conferences:
     manual_fallback_url: "https://cfp.cfgmgmtcamp.be/ghent2026/schedule/"
     discovered: 2026-11-01
     notes: "The open automation conference next to FOSDEM: Ansible/Puppet/Salt/CFEngine communities, infrastructure automation, GitOps, network automation, immutable infrastructure. Full abstracts from the Pretalx export. Auto-discovered 2026-11-01 from series 'cfgmgmtcamp'. end_date taken from the source."
+
+  - key: moreip-2028
+    name: "MORE-IP 2028"
+    type: operator
+    end_date: 2028-05-29
+    fetcher: moreip
+    program_url: "https://more-ip-event.net/more-ip-2028/agenda/"
+    manual_fallback_url: "https://more-ip-event.net/more-ip-2028/agenda/"
+    discovered: 2026-11-02
+    notes: "AMS-IX interconnection event (~300 participants): IX and DC interconnect, peering, European connectivity policy, DNS and internet resilience. Titles, speakers, blurbs and YouTube recordings. Auto-discovered 2026-11-02 from series 'moreip'. end_date is an ESTIMATE from the series hint — confirm it against the event page."

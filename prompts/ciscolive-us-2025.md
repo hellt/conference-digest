@@ -134,7 +134,7 @@ show in the rendered view but stays in the source:
 conference: Cisco Live US 2025 (San Diego)
 type: vendor
 source_url: https://www.ciscolive.com/on-demand/on-demand-library.html?search.event=1748366287882001oJzH
-generated: 2026-11-01
+generated: 2026-11-02
 registry_key: ciscolive-us-2025
 -->
 

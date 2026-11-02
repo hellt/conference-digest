@@ -23,8 +23,9 @@ reads it and writes derived, gitignored files that `zensical build` publishes:
 The digest text itself is not rewritten: headings and wording pass through
 unchanged. Each pick's `**Links:**` row (written by conferences/links.py)
 becomes a row of plain source links, a talk recording on YouTube also gets a
-click-to-play thumbnail (docs/javascripts/video.js swaps in the player), and
-employer names in the speaker line link to that employer's companies/ page.
+click-to-play thumbnail (docs/javascripts/video.js swaps in the player), direct
+video files get a native HTML player, and employer names in the speaker line
+link to that employer's companies/ page.
 Run it before every build (`make site` does).
 
 Every generated page also carries a `card:` mapping in its front matter, which
@@ -38,6 +39,7 @@ import re
 import shutil
 import unicodedata
 from datetime import date, datetime
+from html import escape
 from pathlib import Path
 
 import yaml
@@ -385,8 +387,8 @@ def file_slug(name: str) -> str:
 
 
 def links_block(row: str, title: str) -> tuple[list[str], list[str]]:
-    """A pick's plain source links, and its click-to-play recording (which
-    decorate() puts after the title and speakers, just before "Why")."""
+    """A pick's plain source links and recording player (which decorate()
+    puts after the title and speakers, just before "Why")."""
     links = MD_LINK.findall(row)
     if not links:
         return [f"**Links:** {row}"], []
@@ -396,7 +398,7 @@ def links_block(row: str, title: str) -> tuple[list[str], list[str]]:
     )
     out = ['<div class="pick-links" markdown>', "", source_links, "", "</div>", ""]
     player: list[str] = []
-    recording = next((url for text, url in links if text.lower() == "recording" and youtube_id(url)), None)
+    recording = next((url for text, url in links if text.lower() == "recording"), None)
     video = youtube_id(recording) if recording else None
     if video:
         start = youtube_start(recording)
@@ -407,6 +409,15 @@ def links_block(row: str, title: str) -> tuple[list[str], list[str]]:
             f'<img src="https://i.ytimg.com/vi/{video}/hqdefault.jpg" '
             f'data-hd="https://i.ytimg.com/vi/{video}/maxresdefault.jpg" alt="{alt}" loading="lazy">'
             f'<span class="pick-video__play" aria-hidden="true"></span></a></div>',
+            "",
+        ]
+    elif recording and re.search(r"\.(?:mp4|m4v|webm|ogv|ogg)(?:[?#]|$)", recording, re.I):
+        src = escape(recording, quote=True)
+        label = escape(f"Recording: {title}", quote=True)
+        player = [
+            f'<div class="pick-video"><video class="pick-video__frame" controls playsinline preload="none" '
+            f'src="{src}" aria-label="{label}">'
+            f'<a href="{src}">Watch the recording</a></video></div>',
             "",
         ]
     return out, player

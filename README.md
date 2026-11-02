@@ -189,6 +189,7 @@ conferences/
     fosdem.py        # FOSDEM Pentabarf XML, curated track filter
     pretalx.py       # any Pretalx schedule export (hack.lu, CfgMgmtCamp)
     tnc.py           # TNC dates via Tavily; programme pasted by hand
+    arin.py          # ARIN meetings: agenda tables, PDFs, timestamped webcasts
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -372,6 +373,10 @@ run.
   and GÉANT's Indico is bot-walled, so the fetcher returns `manual` and the
   digest is written from the manual-paste path; recordings for the links step
   land on the GÉANT YouTube channel.
+- **ARIN**: one plain-HTML agenda page per meeting, one table per day. Every
+  row carries the agenda item, speaker, slide PDF and a timestamped YouTube
+  webcast link; policy rows link their draft pages. Same URL shape since
+  ARIN 56 (earlier meetings used different paths).
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

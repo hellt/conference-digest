@@ -385,3 +385,20 @@ series:
     program_url_template: "https://tnc{yy}.geant.org/"
     manual_fallback_url_template: "https://tnc{yy}.geant.org/programme/"
     notes: "European NREN conference: campus and DC networking for research, R&E infrastructure, identity federation, security. Program is pasted by hand (JS-only source); see FINDINGS-2026-11-new-conferences.md."
+
+  # ARIN's Public Policy and Members Meetings: the per-meeting agenda page is
+  # plain HTML tables — Agenda Item | Speaker | Presentation | Webcast. Policy
+  # rows link their draft page, presentations are PDFs, and every agenda item
+  # carries a timestamped YouTube webcast link. The North-American RIR
+  # counterpart to the RIPE series.
+  - series: arin
+    enumerate: ordinal
+    key_template: "arin-{n}"
+    name_template: "ARIN {n} Public Policy and Members Meeting"
+    type: operator
+    fetcher: arin
+    start: 56
+    lookahead: 3
+    program_url_template: "https://www.arin.net/participate/meetings/ARIN{n}"
+    manual_fallback_url_template: "https://www.arin.net/participate/meetings/ARIN{n}"
+    notes: "North American RIR meeting: IPv6, routing security/RPKI, Internet number resource policy, DNS and ARIN services. Agenda items with speakers, slide PDFs and timestamped YouTube webcasts."

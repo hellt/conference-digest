@@ -452,6 +452,18 @@ run.
 - **CfgMgmtCamp**: the Ghent automation camp next to FOSDEM runs on Pretalx,
   so the generic Pretalx fetcher reads its schedule export (hosted at
   cfp.cfgmgmtcamp.be, also cfp.cfgmgmtcamp.org).
+- **OCP Global Summit**: every edition is its own host on the FN TECH event
+  platform (`{year}ocpglobal.fnvirtual.app`) and its schedule page is a
+  Gatsby app with no public API — but the whole program (titles, speakers,
+  full abstracts, tracks, YouTube recordings, material links, exact dates) is
+  baked into the `app-*.js` bundle the page embeds, which the fetcher parses
+  the JSON out of. Posters, staff-internal events and items without abstracts
+  are dropped (~550 talks stay). A future year's host does not resolve until
+  its site is built ("not up yet"), and past hosts stay up, so past editions
+  re-fetch fine. Recordings are on OCP's YouTube channel, many already
+  linked in the program; specs/white papers/repos are filed as materials.
+  The series covers the San Jose Global Summit only — EMEA and APAC editions
+  sit on their own fnVirtual hosts and can be hand-added if wanted.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

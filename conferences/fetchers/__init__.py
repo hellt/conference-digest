@@ -48,6 +48,7 @@ from .janog import JanogFetcher
 from .indico import IndicoFetcher
 from .itnog import ItnogFetcher
 from .netnod import NetnodFetcher
+from .ocp import OcpFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -82,6 +83,7 @@ FETCHERS = {
     "indico": IndicoFetcher(),
     "itnog": ItnogFetcher(),
     "netnod": NetnodFetcher(),
+    "ocp": OcpFetcher(),
 }
 
 

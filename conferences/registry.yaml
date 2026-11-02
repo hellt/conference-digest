@@ -848,3 +848,23 @@ conferences:
     manual_fallback_url: "https://more-ip-event.net/more-ip-2028/agenda/"
     discovered: 2026-11-02
     notes: "AMS-IX interconnection event (~300 participants): IX and DC interconnect, peering, European connectivity policy, DNS and internet resilience. Titles, speakers, blurbs and YouTube recordings. Auto-discovered 2026-11-02 from series 'moreip'. end_date is an ESTIMATE from the series hint — confirm it against the event page."
+
+  - key: ocp-2025
+    name: "OCP Global Summit 2025"
+    type: vendor
+    end_date: 2025-10-16
+    fetcher: ocp
+    program_url: "https://2025ocpglobal.fnvirtual.app/a/schedule/"
+    manual_fallback_url: "https://2025ocpglobal.fnvirtual.app/a/schedule/"
+    discovered: 2026-11-02
+    notes: "Open Compute Project's flagship summit (~4,000 attendees, San Jose): open datacenter hardware — AI cluster networking and photonics, rack and power, cooling, server and storage, hardware security and manageability. Full abstracts from the event app's data bundle; YouTube recordings on OCP's channel; specs and white papers linked as materials. Auto-discovered 2026-11-02 from series 'ocp'. end_date taken from the source."
+
+  - key: ocp-2026
+    name: "OCP Global Summit 2026"
+    type: vendor
+    end_date: 2026-10-15
+    fetcher: ocp
+    program_url: "https://2026ocpglobal.fnvirtual.app/a/schedule/"
+    manual_fallback_url: "https://2026ocpglobal.fnvirtual.app/a/schedule/"
+    discovered: 2026-11-02
+    notes: "Open Compute Project's flagship summit (~4,000 attendees, San Jose): open datacenter hardware — AI cluster networking and photonics, rack and power, cooling, server and storage, hardware security and manageability. Full abstracts from the event app's data bundle; YouTube recordings on OCP's channel; specs and white papers linked as materials. Auto-discovered 2026-11-02 from series 'ocp'. end_date taken from the source."

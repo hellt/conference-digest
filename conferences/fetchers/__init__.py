@@ -25,6 +25,7 @@ from .ausnog import AusnogFetcher
 from .peeringdays import PeeringDaysFetcher
 from .moreip import MoreIpFetcher
 from .swinog import SwinogFetcher
+from .capacity import CapacityFetcher
 from .imc import ImcFetcher
 from .conext import ConextFetcher
 from .apricot import ApricotFetcher
@@ -38,6 +39,7 @@ from .ausnog import AusnogFetcher
 from .peeringdays import PeeringDaysFetcher
 from .moreip import MoreIpFetcher
 from .swinog import SwinogFetcher
+from .capacity import CapacityFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -67,6 +69,7 @@ FETCHERS = {
     "peeringdays": PeeringDaysFetcher(),
     "moreip": MoreIpFetcher(),
     "swinog": SwinogFetcher(),
+    "capacity": CapacityFetcher(),
 }
 
 

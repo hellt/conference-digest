@@ -503,3 +503,23 @@ series:
     program_url_template: "https://www.swinog.ch/meetings/swinog{n}/"
     manual_fallback_url_template: "https://www.swinog.ch/meetings/swinog{n}/"
     notes: "Swiss network operators (~150-300 per meeting, 25+ years): routing, peering, datacenter networking, optics, automation, security. Talks with full abstracts; slides and recordings when published."
+
+  # Capacity Europe: the agenda looks like a JS app, but the whole session
+  # library is server-rendered — one day wrapper per day (id="13-oct-2026"),
+  # one li per session with its page link, description, speakers with
+  # "Name, Role - COMPANY", stream tags and times. A commercial event: no
+  # recordings or slides, so items carry the session page only. Social-agenda
+  # items are dropped. The year moves into the event's own domain; discovery
+  # keeps probing capacityeurope.com/agenda/ and reads the year from the day
+  # wrapper ids.
+  - series: capacity-europe
+    enumerate: year
+    key_template: "capacity-{year}"
+    name_template: "Capacity Europe {year}"
+    type: vendor
+    fetcher: capacity
+    start: 2026
+    end_date_hint: "10-16"
+    program_url_template: "https://www.capacityeurope.com/agenda/"
+    manual_fallback_url_template: "https://www.capacityeurope.com/agenda/"
+    notes: "Europe's largest carrier and digital-infrastructure marketplace (~4,000 attendees): fibre, data centres, subsea, AI infrastructure build, energy. Panels and keynotes with company affiliations; no recordings or slides."

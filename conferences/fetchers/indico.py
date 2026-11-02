@@ -2,13 +2,12 @@
 
 Indico exposes the whole event as JSON at /export/event/<id>.json?detail=
 contributions — every contribution with its title, description, speakers,
-page URL and material. Several conferences in this digest run on Indico:
+page URL and material. several conferences in this digest run on Indico:
 nog.fi, NetUK (indico.netuk.org), GRNOG (nogalliance) and DKNOG (whose
-per-edition subdomains share one events.dknog.dk backend). The series template
-points `program_url` either at an event page (/event/<id>/), or at a listing
-page (site root or category) whose event links the fetcher resolves by the
-edition's name; `indico_export_url` overrides where the export is read from
-(DKNOG needs it — its subdomains redirect /export/ to the main host).
+per-edition subdomains redirect to a shared events.dknog.dk backend, which
+also serves the exports). The series template points `program_url` either at
+an event page (/event/<id>/), or at a listing page (site root or category)
+whose event links the fetcher resolves by the edition's name.
 """
 
 from __future__ import annotations
@@ -42,23 +41,26 @@ class IndicoFetcher(Fetcher):
     def _resolve(self, entry: dict) -> tuple[str, str, str] | None:
         """(export_base, event_id, source_url); None when not found."""
         url = entry["program_url"]
-        export_base = entry.get("indico_export_url", "").rstrip("/") or f"{urlparse(url).scheme}://{urlparse(url).netloc}"
         match = _EVENT.search(url)
         if match:
-            return export_base, match.group(1), url
+            return f"{urlparse(url).scheme}://{urlparse(url).netloc}", match.group(1), url
         # listing page: pick the event whose title matches the edition name
         try:
             resp = http_get(url, timeout=60)
             if resp.status_code != 200:
                 return None
             resp.encoding = "utf-8"
-            # a listing that redirects straight to an event page resolves itself
+            # A listing that redirects straight to an event page resolves
+            # itself, and the redirect's host is the export host — DKNOG's
+            # per-edition subdomains point at the shared events.dknog.dk.
             match = _EVENT.search(resp.url)
             if match:
-                return export_base, match.group(1), resp.url
+                base = f"{urlparse(resp.url).scheme}://{urlparse(resp.url).netloc}"
+                return base, match.group(1), resp.url
             soup = BeautifulSoup(resp.text, "html.parser")
         except Exception:
             return None
+        base = f"{urlparse(resp.url).scheme}://{urlparse(resp.url).netloc}"
         events = {}
         for a in soup.select('a[href*="/event/"]'):
             href = a.get("href", "")
@@ -74,10 +76,10 @@ class IndicoFetcher(Fetcher):
         if wanted:
             for event_id, title in events.items():
                 if _norm(title) == wanted:
-                    return export_base, event_id, url
+                    return base, event_id, url
         if len(events) == 1:
             event_id, _ = next(iter(events.items()))
-            return export_base, event_id, url
+            return base, event_id, url
         return None
 
     def _load(self, export_base: str, event_id: str) -> dict | None:

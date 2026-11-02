@@ -427,10 +427,10 @@ run.
   speakers and material. Used by nog.fi, NetUK, GRNOG and DKNOG. The series
   or registry entry points `program_url` at an event page, a category page or
   a site root; a root that redirects straight to the event page resolves
-  itself, and a listing resolves by the edition's name (upcoming events only —
-  past ones are hand-added with their event URL). DKNOG's per-edition
-  subdomains redirect `/export/` to the main host, so its series sets
-  `indico_export_url`.
+  itself (and the redirect's host serves the export — DKNOG's subdomains
+  point at the shared events.dknog.dk), and a plain listing resolves by the
+  edition's name (upcoming events only — past ones are hand-added with their
+  event URL).
 - **NetUK** uses the generic Indico fetcher: its event ids match the edition
   numbers (event 3 = NetUK3), so the series template points straight at the
   event page and the export gives titles, abstracts, speakers and material.
@@ -438,6 +438,9 @@ run.
   Its category listing shows only upcoming events, so discovery resolves
   future editions by name and past ones (GRNOG 20) are hand-added with their
   event URL.
+- **DKNOG** also uses the Indico fetcher. Each edition's subdomain root
+  redirects to the event on the shared events.dknog.dk backend, and that
+  redirect both resolves the event and names the export host.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

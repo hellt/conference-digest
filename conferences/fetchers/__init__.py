@@ -11,6 +11,7 @@ from .ripe import RipeFetcher
 from .nlnog import NlnogFetcher
 from .denog import DenogFetcher
 from .gtc import GtcFetcher
+from .ccs import CcsFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -26,6 +27,7 @@ FETCHERS = {
     "nlnog": NlnogFetcher(),
     "denog": DenogFetcher(),
     "gtc": GtcFetcher(),
+    "ccs": CcsFetcher(),
 }
 
 

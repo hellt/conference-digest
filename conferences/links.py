@@ -69,11 +69,12 @@ CHANNELS = {
     "nlnog": ("nlnog",),
     "denog": ("denog",),
     "gtc": ("nvidia",),
+    "ccs": ("acm ccs", "acm ccs 2026", "computer and communications security"),
 }
 DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon": "SREcon",
            "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF", "nanog": "NANOG",
            "autocon": "AutoCon", "ovscon": "OVS OVN conference", "ciscolive": "Cisco Live",
-           "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG", "gtc": "GTC"}
+           "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG", "gtc": "GTC", "ccs": "CCS"}
 # URLs that only ever hold presentation decks, whatever the link text says.
 DECK_URLS = re.compile(
     r"static\.sched\.com/hosted_files/|storage\.googleapis\.com/site-media-prod/meetings/"

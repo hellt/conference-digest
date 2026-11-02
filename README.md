@@ -188,6 +188,7 @@ conferences/
     apricot.py       # APRICOT via the open APNIC conference API
     fosdem.py        # FOSDEM Pentabarf XML, curated track filter
     pretalx.py       # any Pretalx schedule export (hack.lu, CfgMgmtCamp)
+    tnc.py           # TNC dates via Tavily; programme pasted by hand
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -365,6 +366,12 @@ run.
   Every talk comes with speakers, abstract, attachments and its public page.
   `looks_blocked()` is skipped on this path on purpose — a security-conference
   abstract that mentions "captcha" is not a bot challenge.
+- **TNC**: tnc<yy>.geant.org blocks datacenter IPs, so the probe reads the
+  site through Tavily Extract for the dates (owner-approved 2026-11-01, same
+  as NANOG). The programme is a client-side app with no public data endpoint
+  and GÉANT's Indico is bot-walled, so the fetcher returns `manual` and the
+  digest is written from the manual-paste path; recordings for the links step
+  land on the GÉANT YouTube channel.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

@@ -23,6 +23,7 @@ theme:
   static_templates:
     - 404.html
   features:
+    - header.autohide
     - navigation.top
     - navigation.instant
     - navigation.instant.prefetch
@@ -105,6 +106,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/video.js
+  - javascripts/slides.js
 
 markdown_extensions:
   - abbr

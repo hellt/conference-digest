@@ -557,3 +557,18 @@ series:
     program_url_template: "https://indico.netuk.org/event/{n}/"
     manual_fallback_url_template: "https://indico.netuk.org/event/{n}/"
     notes: "UK network infrastructure community (The Brewery, London): backbone and DC networking, IX and peering, automation, security. Full abstracts from the Indico export."
+
+  # GRNOG runs on the NOG Alliance Indico. The category listing shows only
+  # upcoming events, so discovery resolves future editions by name; past ones
+  # (like GRNOG 20, event 13) are hand-added below with their event URL.
+  - series: grnog
+    enumerate: ordinal
+    key_template: "grnog-{n}"
+    name_template: "GRNOG {n}"
+    type: operator
+    fetcher: indico
+    start: 21
+    lookahead: 2
+    program_url_template: "https://grnog.indico.nogalliance.org/category/0/"
+    manual_fallback_url_template: "https://grnog.indico.nogalliance.org/"
+    notes: "Greek network operators (Athens): peering and IX, routing and RPKI, optical transport, DC networking, automation. Contributions carry abstracts, speakers and material via the Indico export."

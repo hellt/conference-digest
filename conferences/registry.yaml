@@ -488,3 +488,13 @@ conferences:
     program_url: "https://nog.fi/event/73/"
     manual_fallback_url: "https://nog.fi/event/73/"
     notes: "Finnish network operators (Oulu): talks via nog.fi's Indico export. Hand-added: nog.fi meets twice a year and numbers editions by year.month, which series discovery cannot enumerate."
+
+  - key: grnog-20
+    name: "GRNOG 20"
+    type: operator
+    start_date: 2026-06-30
+    end_date: 2026-06-30
+    fetcher: indico
+    program_url: "https://grnog.indico.nogalliance.org/event/13/"
+    manual_fallback_url: "https://grnog.indico.nogalliance.org/event/13/"
+    notes: "Greek network operators, Serafio City of Athens. Hand-added: the Indico category listing shows only upcoming events, so past meetings need their event URL."

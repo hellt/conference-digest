@@ -913,6 +913,9 @@
 <p><a class="pick-link" href="https://ripe93.ripe.net/programme/meeting-plan/sessions/143/WQNNDD/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-93/submissions/WQNNDD/resources/RIPE93-Banelli-BIRDT_8guDtE1.pdf">Slides</a> <a class="pick-link" href="https://ripe93.ripe.net/media/videos/bruno-banelli_bird-on-an-open-linux-switch-mainline-linux-switchdev-and-hardware-l3-offload_side_20261028-093516.mp4">Recording</a></p>
 </div>
 <p>Bruno Banelli, Novarq d.o.o.</p>
+<div class="pick-video">
+<video aria-label="Recording: BIRD on an Open Linux Switch: Mainline Linux, switchdev and Hardware L3 Offload" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe93.ripe.net/media/videos/bruno-banelli_bird-on-an-open-linux-switch-mainline-linux-switchdev-and-hardware-l3-offload_side_20261028-093516.mp4"><a href="https://ripe93.ripe.net/media/videos/bruno-banelli_bird-on-an-open-linux-switch-mainline-linux-switchdev-and-hardware-l3-offload_side_20261028-093516.mp4">Watch the recording</a></video>
+</div>
 <ul>
 <li><strong>Why</strong>: This is a real engineering report on the question every open-networking skeptic asks: can a fully Linux-native stack — no SAI, no FPM, no vendor NOS — route at line rate on commodity switching silicon?</li>
 <li><strong>What</strong>: BIRD 3.1.7 running on the Novarq Tactical 1000 (LAN969x/Sparx5 silicon, Debian arm64), establishing dual-stack eBGP sessions and installing routes through the standard kernel path. Results: four eBGP sessions up, IPv4 hardware offload at 9.41 Gbit/s of TCP and IPv6 at 9.28 Gbit/s with the switch CPU never seeing transit packets; route changes propagate from peer withdrawal to the Linux FIB in 0.40–0.45 s; a 256-route add/withdraw batch works cleanly (a functional test, not a capacity test).</li>

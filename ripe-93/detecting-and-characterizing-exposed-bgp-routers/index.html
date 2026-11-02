@@ -913,6 +913,9 @@
 <p><a class="pick-link" href="https://ripe93.ripe.net/programme/meeting-plan/sessions/130/RGPF9L/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-93/submissions/RGPF9L/resources/Exposed_BGP_routers__z76THOA.pdf">Slides</a> <a class="pick-link" href="https://ripe93.ripe.net/media/videos/shyam-krishna-khadka_detecting-and-characterizing-exposed-bgp-routers_main_20261027-100325.mp4">Recording</a></p>
 </div>
 <p>Shyam Krishna Khadka, University of Twente</p>
+<div class="pick-video">
+<video aria-label="Recording: Detecting and Characterizing Exposed BGP Routers​" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe93.ripe.net/media/videos/shyam-krishna-khadka_detecting-and-characterizing-exposed-bgp-routers_main_20261027-100325.mp4"><a href="https://ripe93.ripe.net/media/videos/shyam-krishna-khadka_detecting-and-characterizing-exposed-bgp-routers_main_20261027-100325.mp4">Watch the recording</a></video>
+</div>
 <ul>
 <li><strong>Why</strong>: RFC 7454 told operators to restrict TCP 179 to configured peers twenty years ago; this measurement shows 20,432 routers across 4,194 ASes still accept unsolicited BGP OPENs — a concrete, checkable exposure for any network.</li>
 <li><strong>What</strong>: An Internet-wide IPv4 scan (February 2026): 6.25M IPs respond on TCP/179, 277k speak BGP, and 141k (51%) complete an OPEN exchange. Using the BGP Identifier (unique per router per ASN per RFC 6286) plus OPEN ASN and interface ASN mapping, these resolve to 20,432 unique routers — 16,124 internal, 1,127 border, 3,181 unclassified — across 4,194 ASes. Around 75% of border routers face one AS; ~90% have fewer than 10 IPs, while 10% of internal routers expose up to 1,208 IPs. A partial vendor view via Shodan's SNMPv3 data identifies 8,871 routers (43.4%), dominated by Juniper (5,448) and Teldat (2,956).</li>

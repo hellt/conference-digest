@@ -913,6 +913,9 @@
 <p><a class="pick-link" href="https://ripe93.ripe.net/programme/meeting-plan/sessions/142/9BLCQT/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-93/submissions/9BLCQT/resources/slides-short_oFD7MzQ.pdf">Slides</a> <a class="pick-link" href="https://ripe93.ripe.net/media/videos/evann-dreumont_rs-api-accept-announcments-as-legit-as-possible_main_20261028-090549.mp4">Recording</a></p>
 </div>
 <p>Evann Dreumont and Alarig Le Lay, Breizh-IX</p>
+<div class="pick-video">
+<video aria-label="Recording: RS-API - Accept announcments as legit as possible" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe93.ripe.net/media/videos/evann-dreumont_rs-api-accept-announcments-as-legit-as-possible_main_20261028-090549.mp4"><a href="https://ripe93.ripe.net/media/videos/evann-dreumont_rs-api-accept-announcments-as-legit-as-possible_main_20261028-090549.mp4">Watch the recording</a></video>
+</div>
 <ul>
 <li><strong>Why</strong>: Route-server filter generation is a solved-looking problem that isn't: PeeringDB max-pref values are self-reported and unreliable, and an AS-SET can quietly pull in hundreds of thousands of prefixes (one shown bgpq4 expansion: 202,416). This is adoptable open-source tooling that confronts registry data with observed reality.</li>
 <li><strong>What</strong>: RS-API, a caching proxy around bgpq4, bgp.tools and bgproutes.io that generates route-server configuration: RPKI (ROA + ASPA), OTC checks (RFC 9234), bogon and specificity filters, IRR prefix-lists, and a recomputed max-pref derived from the peer's actual AS cone rather than their PeeringDB claim, with AMS-IX-style scaling applied.</li>

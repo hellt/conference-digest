@@ -913,6 +913,9 @@
 <p><a class="pick-link" href="https://ripe93.ripe.net/programme/meeting-plan/sessions/153/AJMFLA/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-93/submissions/AJMFLA/resources/RIPE93_-_PSA_-_Remov_n5yDfQd.pdf">Slides</a> <a class="pick-link" href="https://ripe93.ripe.net/media/videos/james-bensley_psa-removing-as-set-ambiguity_side_20261029-093300.mp4">Recording</a></p>
 </div>
 <p>James Bensley, Inter.link</p>
+<div class="pick-video">
+<video aria-label="Recording: PSA: Removing AS-SET Ambiguity" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe93.ripe.net/media/videos/james-bensley_psa-removing-as-set-ambiguity_side_20261029-093300.mp4"><a href="https://ripe93.ripe.net/media/videos/james-bensley_psa-removing-as-set-ambiguity_side_20261029-093300.mp4">Watch the recording</a></video>
+</div>
 <ul>
 <li><strong>Why</strong>: AS-SET names are not globally unique, and the same name can resolve differently per database (AS-APPLE in RIPE: 2 ASNs, 0 prefixes; in RADB: 2 ASNs, 244 prefixes) — producing silently empty or silently wrong prefix filters. The ecosystem has just changed a lot at once, and this rounds it up.</li>
 <li><strong>What</strong>: A public service announcement consolidating independent fixes: RIR enforcement of hierarchical AS-SET names (RIPE, APNIC and LACNIC done; AFRINIC and ARIN coming); PeeringDB requiring registry-scoped AS-SETs (with auto-suggested scope) and limiting networks to a single AS-SET (of 37,130 networks, 19,942 declare an AS-SET and 304 declared more than one); MANRS considering making both mandatory; and IETF drafts for registry-scoped members (<code>src-members: RIPE::AS-BAR</code>) and member exclusion (<code>excl-members:</code>, motivated by an AS-SET expanding to 76,337 ASNs and 1.32M prefixes).</li>

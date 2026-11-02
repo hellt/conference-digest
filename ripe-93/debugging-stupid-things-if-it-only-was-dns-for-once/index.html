@@ -913,6 +913,9 @@
 <p><a class="pick-link" href="https://ripe93.ripe.net/programme/meeting-plan/sessions/170/JLVACT/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-93/submissions/JLVACT/resources/presentation_AVV6CdU.pdf">Slides</a> <a class="pick-link" href="https://ripe93.ripe.net/media/videos/tobias-fiebig_debugging-stupid-things-if-it-only-was-dns-for-once_main_20261030-112621.mp4">Recording</a></p>
 </div>
 <p>Tobias Fiebig, TU Wien</p>
+<div class="pick-video">
+<video aria-label="Recording: Debugging Stupid Things: If it only was DNS for once..." class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe93.ripe.net/media/videos/tobias-fiebig_debugging-stupid-things-if-it-only-was-dns-for-once_main_20261030-112621.mp4"><a href="https://ripe93.ripe.net/media/videos/tobias-fiebig_debugging-stupid-things-if-it-only-was-dns-for-once_main_20261030-112621.mp4">Watch the recording</a></video>
+</div>
 <ul>
 <li><strong>Why</strong>: The program's purest "hard-won lessons" talk: weird corner-case bugs, the debugging process used to find them, and the belief systems that got in the way — exactly the kind of content that transfers across environments.</li>
 <li><strong>What</strong>: A tour of production corner cases, including a PMTUD failure where downloads for users on one transit path crawled because ICMP "need to frag (mtu 1420)" messages were being lost or ignored while other paths were fine; Microsoft treating ED25519 DKIM signatures as a syntax error while RSA validated; FRR treating 'extended-nexthop' as 'unnumbered' and emitting rogue Router Advertisements onto the AMS-IX exchange LAN; and solar-panel power monitoring causing random shutdowns whose reconnect pattern triggered a null-pointer crash in OpenBGPD. No DNS packets were the root cause in any case.</li>

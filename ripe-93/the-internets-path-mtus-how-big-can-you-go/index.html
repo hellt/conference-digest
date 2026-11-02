@@ -913,6 +913,9 @@
 <p><a class="pick-link" href="https://ripe93.ripe.net/programme/meeting-plan/sessions/136/9W9JWP/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-93/submissions/9W9JWP/resources/RIPE93-4_hPMXiyh.pdf">Slides</a> <a class="pick-link" href="https://ripe93.ripe.net/media/videos/tobias-fiebig_the-internets-path-mtus-how-big-can-you-go_main_20261027-160734.mp4">Recording</a></p>
 </div>
 <p>Tobias Fiebig, TU Wien, and Vaishnavi Raghavajosyula, <a href="../../companies/max-planck-institute-for-informatics/">Max Planck Institute for Informatics</a></p>
+<div class="pick-video">
+<video aria-label="Recording: The Internet's Path MTUs: How Big Can You Go?" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe93.ripe.net/media/videos/tobias-fiebig_the-internets-path-mtus-how-big-can-you-go_main_20261027-160734.mp4"><a href="https://ripe93.ripe.net/media/videos/tobias-fiebig_the-internets-path-mtus-how-big-can-you-go_main_20261027-160734.mp4">Watch the recording</a></video>
+</div>
 <ul>
 <li><strong>Why</strong>: PMTUD is unreliable, so protocols fall back to conservative sizes; knowing where the real MTU bottlenecks are — and that they're at the edges, not the core — is directly useful for interconnect and MSS-clamp decisions.</li>
 <li><strong>What</strong>: A measurement of 76,700 paths (access, core, and web-serving) using a PMTUD-independent traceroute-based method: 97 distinct PMTUs, but three dominate — 1500 B (80.5%), 1492 B (11.7%), 1480 B (1.5%). 99% of IPv4 paths support at least 1420 B; IPv6 paths commonly operate at 1280 B. Sub-1500 breaks concentrate near network edges (1492 B maps cleanly to PPPoE overhead in fiber/DSL ASes) while core paths are rarely constrained. PMTU is asymmetric: reverse-direction PMTUs are larger in &gt;92% of sub-1500 pairs (~64% of those are 1500 B). 18.5% of paths show PMTU-vs-MSS-inferred mismatches.</li>

@@ -913,6 +913,9 @@
 <p><a class="pick-link" href="https://ripe93.ripe.net/programme/meeting-plan/sessions/137/GJXMGP/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-93/submissions/GJXMGP/resources/20261027_RIPE_93_Sec_e4tTL66.pdf">Slides</a> <a class="pick-link" href="https://ripe93.ripe.net/media/videos/muhammad-usama-sardar_early-attestation-is-very-harmful-why-is-it-required_side_20261027-162413.mp4">Recording</a></p>
 </div>
 <p>Muhammad Usama Sardar, GA4GH</p>
+<div class="pick-video">
+<video aria-label="Recording: Early Attestation is Very Harmful. Why is it Required?" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe93.ripe.net/media/videos/muhammad-usama-sardar_early-attestation-is-very-harmful-why-is-it-required_side_20261027-162413.mp4"><a href="https://ripe93.ripe.net/media/videos/muhammad-usama-sardar_early-attestation-is-very-harmful-why-is-it-required_side_20261027-162413.mp4">Watch the recording</a></video>
+</div>
 <ul>
 <li><strong>Why</strong>: Attested TLS — binding remote attestation into the TLS handshake — is being standardized and deployed for confidential computing and workload identity; this talk shows the early-attestation variant carries critical-severity CVEs, directly relevant to workload/TEE identity design.</li>
 <li><strong>What</strong>: Formal verification (ProVerif) surfaced a family of critical and high CVEs in early (intra-handshake) attestation: relay attacks from missing connection binding (CVE-2026-33697, CVSS 7.5), diversion attacks from missing hardware/machine-ID binding, and the EarlyAttestationBleed/EAT series at CVSS 9.1–9.6 — in deployments handling the health data of more than 40 million Germans. Still-vulnerable implementations include Cocos AI ≤ v0.8.2, Privasys rustls/Go, and code following the withdrawn early-attestation draft.</li>

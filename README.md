@@ -184,6 +184,7 @@ conferences/
     denog.py         # official DENOG agenda -> Pretalx JSON export
     ccs.py           # ACM CCS schedule: sessions, paper titles, authors
     imc.py           # ACM IMC program: papers, abstracts, doi.org links
+    conext.py        # ACM CoNEXT program partial: papers, abstracts, ACM DL links
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -338,6 +339,12 @@ run.
   authors, full abstract and doi.org Paper link, grouped by session. The
   page anchors double as each item's `page:` link. Same static site family as
   SIGCOMM; no bot blocking observed.
+- **CoNEXT**: the site is an Angular app, but every page is a server-rendered
+  partial — the fetcher reads `partials/program.html` directly: sessions,
+  papers, authors, full abstracts and ACM DL page+PDF links. The day headers
+  ("Monday, 1st, Dec 2025") carry a comma plain date scanning misses, so the
+  probe has its own day-header parser. A preliminary program parses zero
+  papers and stays `not_published` until the real one is up.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

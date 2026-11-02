@@ -190,6 +190,7 @@ conferences/
     pretalx.py       # any Pretalx schedule export (hack.lu, CfgMgmtCamp)
     tnc.py           # TNC dates via Tavily; programme pasted by hand
     arin.py          # ARIN meetings: agenda tables, PDFs, timestamped webcasts
+    lacnic.py        # LACNIC via the WP REST API behind the event sites
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
   build_issue.py              # renders run_summary.json -> issue body
@@ -377,6 +378,12 @@ run.
   row carries the agenda item, speaker, slide PDF and a timestamped YouTube
   webcast link; policy rows link their draft pages. Same URL shape since
   ARIN 56 (earlier meetings used different paths).
+- **LACNIC**: the event sites are React apps over one open WP REST API
+  (`apievt.lacnic.net`). The `our_events` taxonomy maps an edition number to
+  its term id; the `agenda` posts give titles (English preferred), speakers,
+  session groups, per-language YouTube recordings and slide media ids, which
+  the media endpoint resolves to URLs. The agenda timestamps give the exact
+  dates for discovery.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

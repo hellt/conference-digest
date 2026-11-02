@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t27">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/Multi-NIC%20OVSCON%202025.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/fis9WHQ6IiY">Recording</a></p>
 </div>
 <p>Girish Moodalbail (<a href="../../companies/nvidia/">NVIDIA</a>), Han Zhou (NVIDIA)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="fis9WHQ6IiY" data-start="0" href="https://www.youtube.com/watch?v=fis9WHQ6IiY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/fis9WHQ6IiY/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/fis9WHQ6IiY/maxresdefault.jpg" alt="Play the recording: Multiple NICs as Encapsulation Endpoints for Large Scale GPU Cloud" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="fis9WHQ6IiY" data-start="0" href="https://www.youtube.com/watch?v=fis9WHQ6IiY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/fis9WHQ6IiY/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/fis9WHQ6IiY/maxresdefault.jpg" alt="Play the recording: Multiple NICs as Encapsulation Endpoints for Large Scale GPU Cloud" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2025/slides/Multi-NIC%20OVSCON%202025.pdf" title="PDF slides: Multiple NICs as Encapsulation Endpoints for Large Scale GPU Cloud" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: In GPU servers each GPU typically has a dedicated NIC (4 GPUs = 4 NICs), so inter-node AI training traffic is multi-homed and each NIC's IP becomes an encapsulation endpoint — while vanilla OVN assumes one encap IP per chassis. This is the scaling problem AI clouds are hitting right now, and it lands squarely in physical DC / scale territory.</li>
 <li><strong>What</strong>: Multi-NIC encap endpoint support in OVN/OVN-Kubernetes: per-VIF selection of source/destination encapsulation IPs, full-mesh tunnels (all local × all remote encap IPs), new flow programming using an Encap-ID in <code>REG13[16..31]</code>, and host-side routing fixes for both the kernel and OVS-DPDK paths. Special cases are handled: distributed gateway ports (skip pinning or fall back to default encap) and ovn-ic transit-switch ports (proposal: multiple TS-LR ports plus <code>/32</code> routes and a new <code>request-encap-ip</code>).</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

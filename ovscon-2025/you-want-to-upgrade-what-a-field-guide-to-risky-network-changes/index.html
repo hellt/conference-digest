@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t21">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/You%20Want%20to%20Upgrade%20WHAT_%20A%20Field%20Guide%20to%20Risky%20Network%20Changes.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/Xwkwelz9ZBY">Recording</a></p>
 </div>
 <p>Nadia Pinaeva (<a href="../../companies/nvidia/">NVIDIA</a>), Dumitru Ceara (<a href="../../companies/red-hat/">Red Hat</a>), Patryk Diak (Red Hat)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="Xwkwelz9ZBY" data-start="0" href="https://www.youtube.com/watch?v=Xwkwelz9ZBY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Xwkwelz9ZBY/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Xwkwelz9ZBY/maxresdefault.jpg" alt="Play the recording: You Want to Upgrade WHAT? A Field Guide to Risky Network Changes" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="Xwkwelz9ZBY" data-start="0" href="https://www.youtube.com/watch?v=Xwkwelz9ZBY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Xwkwelz9ZBY/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Xwkwelz9ZBY/maxresdefault.jpg" alt="Play the recording: You Want to Upgrade WHAT? A Field Guide to Risky Network Changes" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2025/slides/You%20Want%20to%20Upgrade%20WHAT_%20A%20Field%20Guide%20to%20Risky%20Network%20Changes.pdf" title="PDF slides: You Want to Upgrade WHAT? A Field Guide to Risky Network Changes" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: A rare, detailed production migration narrative: OVN-Kubernetes' legacy Layer2 UDN topology was redesigned around the OVN Transit Router while customers ran on it, with real failure modes and fixes documented — exactly the incident-detail-rich content worth a PM's time.</li>
 <li><strong>What</strong>: The legacy L2 topology (node-specific gateway routers) broke VM live migration (stale ARP for the migrated gateway MAC; IPv6 RAs from multiple node gateways creating broken multipath defaults, worked around by iptables-blocking external RAs in every L2 pod), doubled maintenance for each new feature, and forced EgressIP hacks. The new topology makes a transit router the network's default gateway with the same IP and MAC on every node. The bulk of the talk walks the rolling upgrade through a half-old/half-new cluster, including hand-crafted routes and dummy IPs to bridge old and new gateway routers during the mixed state, and hand-crafted route advertisements to flush stale routes.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

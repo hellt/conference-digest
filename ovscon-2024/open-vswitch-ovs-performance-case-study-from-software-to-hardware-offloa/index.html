@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t6">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/ovscon24-CT-offloads.pptx">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=_7YEmJrqJJE">Recording</a></p>
 </div>
 <p>Speakers: Salem Sol, Gaetan Rivet, <a href="../../companies/nvidia/">NVIDIA</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="_7YEmJrqJJE" data-start="0" href="https://www.youtube.com/watch?v=_7YEmJrqJJE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/_7YEmJrqJJE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/_7YEmJrqJJE/maxresdefault.jpg" alt="Play the recording: Open vSwitch (OVS) performance case study - From software to hardware offloading, from kernel to userspace" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PPTX</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="_7YEmJrqJJE" data-start="0" href="https://www.youtube.com/watch?v=_7YEmJrqJJE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/_7YEmJrqJJE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/_7YEmJrqJJE/maxresdefault.jpg" alt="Play the recording: Open vSwitch (OVS) performance case study - From software to hardware offloading, from kernel to userspace" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fwww.openvswitch.org%2Fsupport%2Fovscon2024%2Fslides%2Fovscon24-CT-offloads.pptx" title="PPTX slides: Open vSwitch (OVS) performance case study - From software to hardware offloading, from kernel to userspace" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why</strong>: The most substantive engineering talk on connection-tracking offload — the feature OVS-DPDK lacks relative to the kernel datapath, and the reason many DPDK-shops still can't fully move off kernel OVS.</p>
 <p><strong>What</strong>: The implementation history of CT offloads in userspace OVS. A first attempt via rte_flow reused the flow-offload infrastructure but exposed real problems: thousands of offload updates against millions of connections, asynchronous TCP deletion creating a Last-ACK race (a segment acking a FIN could be fully hardware-processed if the offload isn't deleted immediately on FIN), and very short connections actually being <em>slowed</em> by offloading. The rework uses DOCA with a synchronous design: template-based API, pre-allocated pools of match/action/offload resources, static cooperative threads with minimal locking, a mempool of pre-allocated CT offloads with user-configured size, batched offloading, and a dedicated minimal CT table type.</p>
 <p><strong>How</strong>: Evaluated with CyPerf-generated HTTP traffic comparing OVS-DPDK vs OVS-DOCA: long-connection CPS (30K rate, 850 KB sessions — the favorable case) and short-connection CPS (40K/30K rates, 2 KB sessions — the worst case with ~3 offloaded packets per connection). Claimed outcomes: negligible overhead for short connections, significant improvement for long ones, better scaling/stability under concurrency. (The result charts are images; no specific figures are quotable from the extracted slides.)</p>
@@ -1013,12 +1024,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

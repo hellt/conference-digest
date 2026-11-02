@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/talk/one-layer-deeper-the-10-layer-cake-under-a-linux-network-interface.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper17-talk-slides/10%20layer%20cake%20of%20networking%20%281%29.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/Bd7ct9pPWTg">Recording</a></p>
 </div>
 <p><em>Jesse Brandeburg (<a href="../../companies/cloudflare/">Cloudflare</a>)</em></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="Bd7ct9pPWTg" data-start="0" href="https://www.youtube.com/watch?v=Bd7ct9pPWTg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Bd7ct9pPWTg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Bd7ct9pPWTg/maxresdefault.jpg" alt="Play the recording: One Layer Deeper: The 10-Layer Cake Under a Linux Network Interface" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="Bd7ct9pPWTg" data-start="0" href="https://www.youtube.com/watch?v=Bd7ct9pPWTg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Bd7ct9pPWTg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Bd7ct9pPWTg/maxresdefault.jpg" alt="Play the recording: One Layer Deeper: The 10-Layer Cake Under a Linux Network Interface" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper17-talk-slides/10%20layer%20cake%20of%20networking%20%281%29.pdf" title="PDF slides: One Layer Deeper: The 10-Layer Cake Under a Linux Network Interface" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why:</strong> The most useful non-feature talk of the program: a production-performance mental model from someone who wrote Intel Ethernet drivers and now runs performance at Cloudflare, framed around the observability gap rather than a knob list.</p>
 <p><strong>What:</strong> A tour of the ten layers hidden under the "interface, socket, queue" abstraction — NIC hardware, drivers, CPU placement, packet hooks, traffic control, firewalls, socket buffers, application runtimes, microarchitecture, observability — and how to reason about which one is spending your budget.</p>
 <p><strong>How:</strong> The framing is that the old playbook ("turn everything off and go fast") no longer applies, because firewalls, observability and multi-tenant isolation are production requirements. Packets can vanish at the NIC, XDP, tc, conntrack, qdisc, softnet backlog, socket receive queue or the application runtime queue — and a service can honestly report it processed everything it received while the kernel drops packets it never saw. Concrete examples: why <code>sendmmsg()</code>/<code>recvmmsg()</code> still matter, why treating the socket receive queue as a warehouse causes loss and latency, where UDP loses segmentation offload behaviour, where VLAN acceleration hides metadata userspace needs, and the real cost of stacked XDP/tc/netfilter/conntrack/BPF hooks. Ends below the packet path at cache efficiency, code size and TLB misses. (From abstract only.)</p>
@@ -1013,12 +1024,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

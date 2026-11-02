@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t22">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/2025_ovn_con_space.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/joVVeEklhZA">Recording</a></p>
 </div>
 <p>Felix Huettner (StackIt)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="joVVeEklhZA" data-start="0" href="https://www.youtube.com/watch?v=joVVeEklhZA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/joVVeEklhZA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/joVVeEklhZA/maxresdefault.jpg" alt="Play the recording: Space - building a CMS with OVN Concepts" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="joVVeEklhZA" data-start="0" href="https://www.youtube.com/watch?v=joVVeEklhZA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/joVVeEklhZA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/joVVeEklhZA/maxresdefault.jpg" alt="Play the recording: Space - building a CMS with OVN Concepts" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2025/slides/2025_ovn_con_space.pdf" title="PDF slides: Space - building a CMS with OVN Concepts" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: An end-user case study of a cloud provider whose requirements (policy-based routing combined with dynamic routing, deny ACLs, per-ACL logging) outgrew Neutron — and who, rather than replacing OVN, built a custom CMS layer on OVN design concepts.</li>
 <li><strong>What</strong>: "spaced", a Go daemon using ovn-kubernetes' libovsdb, translating a custom "spacebound" OVSDB schema into the standard OVN northbound DB — effectively a custom northd. It coexists with Neutron through per-table resource ownership (either Neutron or spaced writes a given NB table), with a full migration off Neutron as the long-term goal.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

@@ -913,7 +913,21 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t7">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/pluggable-dpif-1.pptx">Slides (PPTX)</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/pluggable-dpif-2.pptx">Slides (PPTX)</a> <a class="pick-link" href="https://www.youtube.com/watch?v=LukzSDekjx4">Recording</a></p>
 </div>
 <p>Speakers: Roi Dayan, Roni Bar Yanai, Eli Britstein, <a href="../../companies/nvidia/">NVIDIA</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="LukzSDekjx4" data-start="0" href="https://www.youtube.com/watch?v=LukzSDekjx4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/LukzSDekjx4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/LukzSDekjx4/maxresdefault.jpg" alt="Play the recording: Pluggable DPIF - Unlocking accelerated OVS full potential" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PPTX 1</label><label for="__tabbed_1_3">PPTX 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="LukzSDekjx4" data-start="0" href="https://www.youtube.com/watch?v=LukzSDekjx4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/LukzSDekjx4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/LukzSDekjx4/maxresdefault.jpg" alt="Play the recording: Pluggable DPIF - Unlocking accelerated OVS full potential" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fwww.openvswitch.org%2Fsupport%2Fovscon2024%2Fslides%2Fpluggable-dpif-1.pptx" title="PPTX slides: Pluggable DPIF - Unlocking accelerated OVS full potential" loading="lazy" allowfullscreen></iframe></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fwww.openvswitch.org%2Fsupport%2Fovscon2024%2Fslides%2Fpluggable-dpif-2.pptx" title="PPTX slides: Pluggable DPIF - Unlocking accelerated OVS full potential" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why</strong>: This is the architectural argument for where OVS hardware acceleration is heading — a runtime-pluggable datapath interface — and it comes with the most honest enumeration of why today's "acceleration below the datapath" model is broken.</p>
 <p><strong>What</strong>: A proposal to make DPIF a loadable, vendor-implemented API (shared object loaded at runtime), so each vendor ships a datapath that co-designs fast path, slow path, and offload — instead of squeezing hardware through TC flower or rte_flow, both of which are too low-level and constrained (no <code>dp_hash</code>, no CT offload in DPDK, vendor match/action mismatches).</p>
 <p><strong>How</strong>: The slides walk through concrete failure modes of the current model: a <code>ct()</code> action placed mid-pipeline after packet modifications means a HW miss lands in SW with broken context; <code>dp_hash</code> uses Jenkins in SW while HW hashes differ, causing consistency failures and TCP disconnects; meter state split between HW and SW; megaflow aging relying on per-HW-type counters; EMC/SMC cache context invisible to the offload layer. In the proposed model, packets can be bounced back to hardware (with next recirc-id and metadata) to complete the pipeline, and vendors handle their own DPIF maintenance — formalizing what customers already do by forking dpif-netdev.</p>
@@ -1013,12 +1027,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

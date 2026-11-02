@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-96/content/5650/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5650/20260202_Wallace_Improving_Routing_Security_v1.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/fYwv5X4eCZw">Recording</a></p>
 </div>
 <p>steven wallace — <a href="../../companies/internet2/">Internet2.edu</a> (with <a href="../../companies/caida/">CAIDA</a>, per ROOTBEER/NSF CICI)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="fYwv5X4eCZw" data-start="0" href="https://www.youtube.com/watch?v=fYwv5X4eCZw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/fYwv5X4eCZw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/fYwv5X4eCZw/maxresdefault.jpg" alt="Play the recording: Improving Routing Security for Global Research and Education" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="fYwv5X4eCZw" data-start="0" href="https://www.youtube.com/watch?v=fYwv5X4eCZw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/fYwv5X4eCZw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/fYwv5X4eCZw/maxresdefault.jpg" alt="Play the recording: Improving Routing Security for Global Research and Education" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5650/20260202_Wallace_Improving_Routing_Security_v1.pdf" title="PDF slides: Improving Routing Security for Global Research and Education" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: R&amp;E networks deterministically prefer R&amp;E routes over commodity, which makes their route leaks high-impact (US scientific traffic transiting unintended international paths). Beyond the R&amp;E story, this is a template for measuring local-pref policies you cannot see in public BGP views.</li>
 <li><strong>What</strong>: A measurement system that announces the <em>same</em> prefix from two origins — one via an R&amp;E path (Internet2), one via commodity transit — with varying AS-path prepends, then pings responsive hosts to infer which route each of ~2,600 R&amp;E ASes actually chose. June 2025 results: 80.8% of prefixes/75.3% of ASes always used the R&amp;E route regardless of prepending; 7% always commodity; ~9% switch by AS-path length (implying equal local-pref). Real 2024 incidents documented: a South American R&amp;E network leaking commercial routes (traffic rerouted through South America) and a Middle East member leaking R&amp;E routes to a commercial provider (cloud return traffic transiting the Middle East, some members withdrawing specifics defensively).</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

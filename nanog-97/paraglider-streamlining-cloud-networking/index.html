@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-97/content/5770/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5770/20260531_Mcclure_Paraglider_Streamlining_Cloud_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=WCwhY4D3eKA">Recording</a></p>
 </div>
 <p>Sarah McClure – <a href="../../companies/uc-berkeley/">UC Berkeley</a> (LF Networking project with <a href="../../companies/google/">Google</a>, <a href="../../companies/microsoft/">Microsoft</a>, <a href="../../companies/ibm/">IBM</a>)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="WCwhY4D3eKA" data-start="0" href="https://www.youtube.com/watch?v=WCwhY4D3eKA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/WCwhY4D3eKA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/WCwhY4D3eKA/maxresdefault.jpg" alt="Play the recording: Paraglider: Streamlining Cloud Networking" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="WCwhY4D3eKA" data-start="0" href="https://www.youtube.com/watch?v=WCwhY4D3eKA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/WCwhY4D3eKA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/WCwhY4D3eKA/maxresdefault.jpg" alt="Play the recording: Paraglider: Streamlining Cloud Networking" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5770/20260531_Mcclure_Paraglider_Streamlining_Cloud_v1.pdf" title="PDF slides: Paraglider: Streamlining Cloud Networking" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: A research-to-production attempt to fix the core pain of cloud networking — low-level, vendor-specific primitives — with a high-level connectivity abstraction; relevant context for anyone working on cloud-native networking intent models.</li>
 <li><strong>What</strong>: Evolved from Berkeley's NSDI'22 "Invisinets" into an LF project with cloud-provider contributors. The model: basic reachability is provisioned for you; connectivity is expressed as permit lists on resources (default-off), with tags naming/grouping resources across clouds. The demo makes the value concrete: connecting three VMs across Azure and GCP auto-generated 3 NSGs, 4 subnets, 3 VNets + 1 VPC, 3 peerings, 2 VPN gateways, a cloud router, and a VPN tunnel.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

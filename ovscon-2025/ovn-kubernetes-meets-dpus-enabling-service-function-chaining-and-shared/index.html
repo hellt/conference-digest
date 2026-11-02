@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t13">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/SFC,%20DPU,%20Shared%20OVN.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/Ssm4DqJ8awc">Recording</a></p>
 </div>
 <p>Tim Rozet (<a href="../../companies/nvidia/">NVIDIA</a>)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="Ssm4DqJ8awc" data-start="0" href="https://www.youtube.com/watch?v=Ssm4DqJ8awc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Ssm4DqJ8awc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Ssm4DqJ8awc/maxresdefault.jpg" alt="Play the recording: OVN-Kubernetes Meets DPUs: Enabling Service Function Chaining and Shared OVN" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="Ssm4DqJ8awc" data-start="0" href="https://www.youtube.com/watch?v=Ssm4DqJ8awc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Ssm4DqJ8awc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Ssm4DqJ8awc/maxresdefault.jpg" alt="Play the recording: OVN-Kubernetes Meets DPUs: Enabling Service Function Chaining and Shared OVN" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2025/slides/SFC,%20DPU,%20Shared%20OVN.pdf" title="PDF slides: OVN-Kubernetes Meets DPUs: Enabling Service Function Chaining and Shared OVN" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: Shows concretely how DPU adoption is driving new OVN features — SFC and "Shared OVN" — i.e., where the OVN architecture is heading for offloaded security/auditing pipelines, with an explicit call for contributors.</li>
 <li><strong>What</strong>: An SFC design for OVN (RFC 7665 semantics): initially SFC-unaware service functions (no NSH), using Geneve to carry chain metadata between nodes; a new <code>Service_Function_Chain</code> NB table with two modes — <code>local</code> (no conntrack, allows packet modification, all SFs on one chassis, symmetry requires an explicit reverse chain) and <code>immutable-global</code> (conntrack-implied symmetry, chain can cross nodes, no packet modification); <code>Network_Function_Group</code> gains a <code>load-balance</code> mode for multiple SF instances. Shared OVN: one OVN instance serving multiple CMSs — one per DPU plus one for the host cluster — with RBAC separation.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

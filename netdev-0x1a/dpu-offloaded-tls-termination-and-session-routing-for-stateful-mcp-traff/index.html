@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/talk/dpu-offloaded-tls-termination-and-session-routing-for-stateful-mcp-traffic.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper39-talk-slides/netdev-39.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/peHxKX72H7U">Recording</a></p>
 </div>
 <p><em>Balakrishna Bhamidipati and Vijay Ram Inavolu</em></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="peHxKX72H7U" data-start="0" href="https://www.youtube.com/watch?v=peHxKX72H7U" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/peHxKX72H7U/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/peHxKX72H7U/maxresdefault.jpg" alt="Play the recording: DPU-Offloaded TLS Termination and Session Routing for Stateful MCP Traffic" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="peHxKX72H7U" data-start="0" href="https://www.youtube.com/watch?v=peHxKX72H7U" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/peHxKX72H7U/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/peHxKX72H7U/maxresdefault.jpg" alt="Play the recording: DPU-Offloaded TLS Termination and Session Routing for Stateful MCP Traffic" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper39-talk-slides/netdev-39.pdf" title="PDF slides: DPU-Offloaded TLS Termination and Session Routing for Stateful MCP Traffic" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why:</strong> Agentic traffic is starting to generate its own infrastructure requirements, and this one is squarely identity-shaped: OAuth2/JWT validation moved onto the DPU, which relocates the authentication trust boundary off the inference host.</p>
 <p><strong>What:</strong> A DPU-resident reverse proxy, built only from stock Linux mechanisms, that does TLS termination, OAuth2/JWT validation and MCP session-aware L7 routing.</p>
 <p><strong>How:</strong> MCP sessions are pinned to a backend by an application-layer <code>Mcp-Session-Id</code> that the backend assigns in the initialization response — so affinity is invisible at connection time and only readable after TLS termination. On the DPU, the proxy does the OpenSSL handshake in userspace then enables kernel TLS via <code>SSL_OP_ENABLE_KTLS</code>, handing record processing to the kernel <code>tls</code> subsystem where cipher and kernel support allow. It extracts the session id from decrypted headers into an in-process affinity table (round-robin for new sessions), and a single-process epoll state machine multiplexes handshakes, forwarding, long-lived SSE relay and teardown. JWT validation on the DPU rejects unauthorized requests before they reach inference hosts. Evaluation covers session affinity correctness, backend balance, stale-session handling and kTLS stability over long-lived streams. (From abstract only.)</p>
@@ -1013,12 +1024,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

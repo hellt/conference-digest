@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/talk/scripting-netfilter-with-lua-a-cooperative-kernel-userspace-pipeline.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper34-talk-slides/netdev-0x1a.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/TRETKtPAWck">Recording</a></p>
 </div>
 <p><em>Lourival Vieira Neto, Md. Shehar Yaar Tausif, Firas Shaari, Marcel S. A. de Moura, Arif Alam</em></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="TRETKtPAWck" data-start="0" href="https://www.youtube.com/watch?v=TRETKtPAWck" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/TRETKtPAWck/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/TRETKtPAWck/maxresdefault.jpg" alt="Play the recording: Scripting Netfilter with Lua: A Cooperative Kernel-Userspace Pipeline" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="TRETKtPAWck" data-start="0" href="https://www.youtube.com/watch?v=TRETKtPAWck" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/TRETKtPAWck/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/TRETKtPAWck/maxresdefault.jpg" alt="Play the recording: Scripting Netfilter with Lua: A Cooperative Kernel-Userspace Pipeline" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper34-talk-slides/netdev-0x1a.pdf" title="PDF slides: Scripting Netfilter with Lua: A Cooperative Kernel-Userspace Pipeline" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why:</strong> An L7 filtering design that deliberately does <em>not</em> intercept TLS — no CA on every client, no per-connection termination — and still ships in production on Wi-Fi access-point hardware. That trade-off is worth understanding even if you never write kernel Lua.</p>
 <p><strong>What:</strong> A kernel/userspace pipeline that classifies flows from DNS queries, HTTP requests and TLS handshake metadata instead of decrypting them, built on the Lunatik kernel-scripting framework.</p>
 <p><strong>How:</strong> A userspace Lua agent generates an nftables bridge ruleset that dispatches each new flow to a Netfilter hook for classification; nftables then caches the verdict in a set so subsequent packets bypass Lua entirely. Three new bindings: <code>luanetfilter</code> (Netfilter hooks), <code>luaskb</code> (socket-buffer access and reply synthesis), <code>luanftables</code> (libnftables wrapper). Sustains 1.4 Gbps at parity with a plain Linux bridge on a Wi-Fi 6 AP under mixed Ethernet/Wi-Fi HTTPS load; shipping as the in-kernel engine of a commercial secure wireless gateway on OpenWiFi APs. (From abstract only.)</p>
@@ -1013,12 +1024,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

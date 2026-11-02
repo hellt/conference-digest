@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-96/content/5660/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5660/20260202_S_Shaping_The_Future_v1.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/jH_vtDDX9sQ">Recording</a></p>
 </div>
 <p>Narasimha Prasad S — <a href="../../companies/cisco/">Cisco</a> (with Paolo Lucente, <a href="../../companies/ntt/">NTT DATA</a>; Thomas Graf, <a href="../../companies/swisscom/">Swisscom</a>)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="jH_vtDDX9sQ" data-start="0" href="https://www.youtube.com/watch?v=jH_vtDDX9sQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/jH_vtDDX9sQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/jH_vtDDX9sQ/maxresdefault.jpg" alt="Play the recording: Shaping the Future of BGP Observability: BMP Evolution at IETF" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="jH_vtDDX9sQ" data-start="0" href="https://www.youtube.com/watch?v=jH_vtDDX9sQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/jH_vtDDX9sQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/jH_vtDDX9sQ/maxresdefault.jpg" alt="Play the recording: Shaping the Future of BGP Observability: BMP Evolution at IETF" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5660/20260202_S_Shaping_The_Future_v1.pdf" title="PDF slides: Shaping the Future of BGP Observability: BMP Evolution at IETF" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: BMP is quietly becoming the vendor-neutral BGP telemetry substrate, and its IETF evolution this cycle is substantial. If the PM's world includes BGP monitoring pipelines (and the Netflix talk explicitly names BMP activation as next), this is the standards map.</li>
 <li><strong>What</strong>: A structured tour of the foundational RFCs (7854 Adj-RIB-In, 9069 Loc-RIB, 8671 Adj-RIB-Out — including the useful correction that pre-policy Adj-RIB-Out is <em>not</em> the Loc-RIB) and then the active drafts: BMPv4 TLV-ization making all message types extensible; Path Marking, which exports the best-path decision outcome per path with reason codes (finally answering "why wasn't this path installed" without memorizing the 13-step selection process); structured timestamps separating trigger time from export time; Generic Event Notification for non-route events; Route Event Logging for alerting on policy discards and validation failures; Snapshots for mid-stream collector sync and time-binned archives; ~20 new statistics types; and a YANG model for managing what gets exported.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

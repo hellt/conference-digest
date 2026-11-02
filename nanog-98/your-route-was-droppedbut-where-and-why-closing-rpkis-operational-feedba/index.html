@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-98/content/5874/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5874/20261018_Kang_Your_Route_Was_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=LVeD2_QLZCk">Recording</a></p>
 </div>
 <p>Min Suk Kang – <a href="../../companies/kaist/">KAIST</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="LVeD2_QLZCk" data-start="0" href="https://www.youtube.com/watch?v=LVeD2_QLZCk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/LVeD2_QLZCk/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/LVeD2_QLZCk/maxresdefault.jpg" alt="Play the recording: Your Route Was Dropped—But Where and Why? Closing RPKI's Operational Feedback Gap" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="LVeD2_QLZCk" data-start="0" href="https://www.youtube.com/watch?v=LVeD2_QLZCk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/LVeD2_QLZCk/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/LVeD2_QLZCk/maxresdefault.jpg" alt="Play the recording: Your Route Was Dropped—But Where and Why? Closing RPKI's Operational Feedback Gap" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5874/20261018_Kang_Your_Route_Was_v1.pdf" title="PDF slides: Your Route Was Dropped—But Where and Why? Closing RPKI&#x27;s Operational Feedback Gap" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: ROV's silent-drop model gives prefix owners no visibility into errors, attacks, or their own urgent operational actions — a research contribution (USENIX Security 2026) brought explicitly to operators for feedback.</li>
 <li><strong>What</strong>: Three characterized gaps: no error visibility (typos silently filtered), no attack visibility (owners unaware of hijacks), and defense incompatibility — DDoS-scrubber traffic redirection gets ROV-filtered for tens of minutes (with Lumen's own FAQ and RFC 9319 §5.1 quoted on the timing problem). iROV adds interactivity: a validating AS queries the owner just-in-time and notifies it of the invalid announcement and observed impact; owners can approve urgent changes. Evaluation: urgent route-change reachability rises from 23% baseline to ~90% at full adoption — and even Tier-1-only early adoption reaches 49% (&gt;2×) — with query load bounded to ~1,000 queries per invalid announcement via validity stapling (transitive BGP attribute using RPKI Signed Checklists, RFC 9323), probabilistic querying, and per-owner rate limiting. Prototype on modified BIRD + FORT validator shows negligible overhead under five days of Route-Views traces.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

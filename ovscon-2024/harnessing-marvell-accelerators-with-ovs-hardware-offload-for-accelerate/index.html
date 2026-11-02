@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t11">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/Harman-Jerin%20-%20Harnessing%20Marvell%20Accelerators%20with%20Open%20vSwitch%28OVS%29%20Hardware%20Offload%20for%20Accelerated%20Network%20Performance.pptx">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=80biE5L7jqw">Recording</a></p>
 </div>
 <p>Speakers: Harman Kalra, Jerin Jacob Kollanukkaran, Marvell</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="80biE5L7jqw" data-start="0" href="https://www.youtube.com/watch?v=80biE5L7jqw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/80biE5L7jqw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/80biE5L7jqw/maxresdefault.jpg" alt="Play the recording: Harnessing Marvell Accelerators with OVS Hardware Offload for Accelerated Network Performance" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PPTX</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="80biE5L7jqw" data-start="0" href="https://www.youtube.com/watch?v=80biE5L7jqw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/80biE5L7jqw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/80biE5L7jqw/maxresdefault.jpg" alt="Play the recording: Harnessing Marvell Accelerators with OVS Hardware Offload for Accelerated Network Performance" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fwww.openvswitch.org%2Fsupport%2Fovscon2024%2Fslides%2FHarman-Jerin%2520-%2520Harnessing%2520Marvell%2520Accelerators%2520with%2520Open%2520vSwitch%2528OVS%2529%2520Hardware%2520Offload%2520for%2520Accelerated%2520Network%2520Performance.pptx" title="PPTX slides: Harnessing Marvell Accelerators with OVS Hardware Offload for Accelerated Network Performance" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why</strong>: Concrete DPU silicon detail (Octeon CN10K) from a vendor other than NVIDIA — useful for anyone comparing offload platforms.</p>
 <p><strong>What</strong>: An "ovs-offload-engine" alongside OVS that offloads OVS-classified flows into the CN10K's parser/CAM hardware: NIX (controller/DMA), NPC (parser forming MCAM keys, 16K entries), NPA (packet memory pointers), CPT (inline IPsec by intercepting strongSwan SA/SP policies via DPDK rte_security), conntrack-offload compensation, virtio integration up to 100 Gbps, and flow actions (RSS, VLAN strip/insert, mirroring, multicast).</p>
 <p><strong>How</strong>: Initial/exception packets processed by OVS, then installed into CAM so subsequent packets are matched in hardware; future work includes hierarchical scheduling/shaping up to five levels, LSO, and checksum generation.</p>
@@ -1013,12 +1024,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

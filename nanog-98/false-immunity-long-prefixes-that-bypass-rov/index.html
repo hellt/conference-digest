@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-98/content/5843/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5843/20261018_Herdes_False_Immunity_Long_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=iLgvebGwlpw">Recording</a></p>
 </div>
 <p>Bryton Herdes – <a href="../../companies/cloudflare/">Cloudflare</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="iLgvebGwlpw" data-start="0" href="https://www.youtube.com/watch?v=iLgvebGwlpw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/iLgvebGwlpw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/iLgvebGwlpw/maxresdefault.jpg" alt="Play the recording: False Immunity: long prefixes that bypass ROV" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="iLgvebGwlpw" data-start="0" href="https://www.youtube.com/watch?v=iLgvebGwlpw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/iLgvebGwlpw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/iLgvebGwlpw/maxresdefault.jpg" alt="Play the recording: False Immunity: long prefixes that bypass ROV" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5843/20261018_Herdes_False_Immunity_Long_v1.pdf" title="PDF slides: False Immunity: long prefixes that bypass ROV" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: ROV deployment creates false confidence — this talk demonstrates two concrete bypass classes with live tests against tier-1 networks. Routing security at its most operational.</li>
 <li><strong>What</strong>: (1) Long-prefix "TE" announcements: at least two tier-1s (Lumen AS3356 for IPv4, Zayo AS6461) accept RPKI-invalid &gt;/24 and &gt;/48 prefixes, apparently filtering on IRR only — enabling the demonstrated 1.1.1.1/32 hijack accepted via AS8452/AS3356. Tested by advertising purposely invalid /32 and /128s to peers one-by-one and checking reachability from looking glasses. (2) RTBH: blackhole routes are generally exempt from RPKI filtering (IRR-based, long by nature, RFC 7999 community), creating a hijack vector that took a Tier-1. Proposed fixes: loose ROV restricted strictly to RFC 7999 BLACKHOLE routes, or a dedicated RPKI Discard Origin Authorization object (draft-spaghetti-grow-rpki-doa); vendor feature requests (Cisco IOSXR-I-1742, Juniper ROUTSP-I-71, Arista RFE 1964539) are pending.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

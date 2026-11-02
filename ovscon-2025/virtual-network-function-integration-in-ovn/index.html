@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t12">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/OVN%20Conference%20-%20Network%20Function%20Insertion.pptx">Slides</a> <a class="pick-link" href="https://youtu.be/-dxVEMlJlLE">Recording</a></p>
 </div>
 <p>Sragdhara Datta Chaudhuri (Nutanix), Naveen Yerramneni (Nutanix)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="-dxVEMlJlLE" data-start="0" href="https://www.youtube.com/watch?v=-dxVEMlJlLE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/-dxVEMlJlLE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/-dxVEMlJlLE/maxresdefault.jpg" alt="Play the recording: Virtual Network Function integration in OVN" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PPTX</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="-dxVEMlJlLE" data-start="0" href="https://www.youtube.com/watch?v=-dxVEMlJlLE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/-dxVEMlJlLE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/-dxVEMlJlLE/maxresdefault.jpg" alt="Play the recording: Virtual Network Function integration in OVN" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fwww.openvswitch.org%2Fsupport%2Fovscon2025%2Fslides%2FOVN%2520Conference%2520-%2520Network%2520Function%2520Insertion.pptx" title="PPTX slides: Virtual Network Function integration in OVN" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: Inserting third-party firewalls / network functions into the OVN traffic path has been a long-standing gap; this is a concrete, code-in-review design for bump-in-the-wire service insertion — network security chaining at the OVN layer.</li>
 <li><strong>What</strong>: ACL-matched traffic is steered through a VNF's port pair (inline mode) or cloned to the VNF (tap mode); stateful symmetry via conntrack labels; VNF groups with datapath-probe health monitoring; member selection or load balancing across healthy members; configurable fail-close vs fail-open when all members are unhealthy; enforced tunneling for cross-host traffic to and from the VNF's node. Supports active/standby now, active/active planned.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

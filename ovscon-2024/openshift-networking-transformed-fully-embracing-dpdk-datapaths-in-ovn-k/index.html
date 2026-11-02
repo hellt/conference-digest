@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t8">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/OpenShift%20Networking%20Transformed.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=KwznQq8f7LM">Recording</a></p>
 </div>
 <p>Speakers: Jakob Meng, Maxime Coquelin, <a href="../../companies/red-hat/">Red Hat</a>, Inc.</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="KwznQq8f7LM" data-start="0" href="https://www.youtube.com/watch?v=KwznQq8f7LM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/KwznQq8f7LM/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/KwznQq8f7LM/maxresdefault.jpg" alt="Play the recording: OpenShift Networking Transformed: Fully Embracing DPDK Datapaths in OVN-K8s!" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="KwznQq8f7LM" data-start="0" href="https://www.youtube.com/watch?v=KwznQq8f7LM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/KwznQq8f7LM/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/KwznQq8f7LM/maxresdefault.jpg" alt="Play the recording: OpenShift Networking Transformed: Fully Embracing DPDK Datapaths in OVN-K8s!" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2024/slides/OpenShift%20Networking%20Transformed.pdf" title="PDF slides: OpenShift Networking Transformed: Fully Embracing DPDK Datapaths in OVN-K8s!" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why</strong>: A complete userspace datapath from NIC to pod in OVN-Kubernetes — kernel bypass inside a managed Kubernetes distribution, with refreshingly honest benchmark results including where it loses.</p>
 <p><strong>What</strong>: Replaced veth-based pod connectivity with VDUSE (a purely software vDPA device: a kernel driver on the vDPA bus plus a userspace device implemented via the DPDK Vhost library). OVS reuses its <code>dpdkvhostuserclient</code> port type, so the datapath is the well-optimized Vhost-user one; OVN-K8s creates VDUSE devices instead of veth pairs when userspace bridges are detected. Motivations: partitioning (network infra isolated on dedicated CPUs), determinism, and uniformity across primary/secondary networks including KubeVirt.</p>
 <p><strong>How</strong>: Measured on Intel Xeon Gold 6438N, RHEL 9.6, isolated CPUs, 1 GB hugepages, OVS 3.4+: veth performs slightly better on small block sizes, VDUSE outperforms veth on medium sizes, and VDUSE plateaus on large blocks where ~40% of cycles on the Rx virtqueue IRQ CPU are spent in the bounce-buffer copy (100% busy). Stated cons: memory bandwidth cost from bounce buffers, operational complexity (kernel args, hugepages, NUMA tuning), higher CPU from PMDs (partially mitigated by PMD load-based sleeping at the cost of wakeup latency), and SELinux currently unsupported.</p>
@@ -1013,12 +1024,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

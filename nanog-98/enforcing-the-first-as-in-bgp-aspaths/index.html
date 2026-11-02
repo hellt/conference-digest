@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-98/content/5956/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5956/20261020_Herdes_Enforcing_The_First_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=cqA3_-aEdZ8">Recording</a></p>
 </div>
 <p>Bryton Herdes – <a href="../../companies/cloudflare/">Cloudflare</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="cqA3_-aEdZ8" data-start="0" href="https://www.youtube.com/watch?v=cqA3_-aEdZ8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/cqA3_-aEdZ8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/cqA3_-aEdZ8/maxresdefault.jpg" alt="Play the recording: Enforcing the First AS in BGP AS_PATHs" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="cqA3_-aEdZ8" data-start="0" href="https://www.youtube.com/watch?v=cqA3_-aEdZ8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/cqA3_-aEdZ8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/cqA3_-aEdZ8/maxresdefault.jpg" alt="Play the recording: Enforcing the First AS in BGP AS_PATHs" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5956/20261020_Herdes_Enforcing_The_First_v1.pdf" title="PDF slides: Enforcing the First AS in BGP AS_PATHs" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: The hijack class neither ROV nor ASPA catches — stripping/padding enough of the path that the origin and provider attestations look fine — and the fix is a single, existing config knob. Ten minutes, immediately actionable.</li>
 <li><strong>What</strong>: Forged AS_PATHs where the adjacent peer's AS doesn't match the first AS in the path defeat both ROV and ASPA. An active test (advertised a prefix with a forged first AS, e.g. <code>as-path-prepend 402542</code> ahead of localAS 13335) found half of Tier-1 networks not enforcing First AS. Vendor defaults are the culprit: JunOS/JunOS EVO, Nokia SR OS, Extreme SLX-OS, RouterOS, and BIRD ship with enforcement OFF by default; Cisco IOS XE/XR, Arista EOS, Huawei, OpenBGPD, and FRR ship ON.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/talk/resilient-ai-supercomputer-networking-using-mrc-and-srv6.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper45-talk-slides/2026_MRC_netdevconf.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/qlVweM7rLx4">Recording</a></p>
 </div>
 <p><em>Christoph Paasch (<a href="../../companies/openai/">OpenAI</a>) and others</em></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="qlVweM7rLx4" data-start="0" href="https://www.youtube.com/watch?v=qlVweM7rLx4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/qlVweM7rLx4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/qlVweM7rLx4/maxresdefault.jpg" alt="Play the recording: Resilient AI Supercomputer Networking using MRC and SRv6" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="qlVweM7rLx4" data-start="0" href="https://www.youtube.com/watch?v=qlVweM7rLx4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/qlVweM7rLx4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/qlVweM7rLx4/maxresdefault.jpg" alt="Play the recording: Resilient AI Supercomputer Networking using MRC and SRv6" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper45-talk-slides/2026_MRC_netdevconf.pdf" title="PDF slides: Resilient AI Supercomputer Networking using MRC and SRv6" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why:</strong> This is the single most load-bearing talk of the program: production experience of running RDMA over a 75K-GPU fabric at OpenAI and Microsoft, and the clearest public statement yet of how frontier training clusters actually do path selection and failure recovery.</p>
 <p><strong>What:</strong> Three coupled pieces — MRC, an RDMA transport that sprays a single QP's packets across all fabric paths and actively load-balances; two-tier multi-plane Clos topologies (4 x 200G or 8 x 100G planes) that let &gt;100K-GPU clusters stay two-tier; and static SRv6 source routing so the endpoint, not the fabric, decides the path.</p>
 <p><strong>How:</strong> Regular RoCE pins a QP to one hash-selected path, so flow collisions leave links idle while collided flows drive tail latency — and tail latency directly sets step time in synchronous training. MRC keeps one logical QP for the application but sprays across path selectors, each PS resolving to a complete SRv6 destination address that names plane/NIC port and T0 uplink. Loss is treated as path feedback: bad PSs are swapped from a backup set, converging to &lt;1 loss/s/NIC within minutes with no pre-populated denylist. Switches stay dumb — static config, no resilient ECMP hashing, no BGP convergence — and a <code>clustermapper</code> loopback SRv6 probe feeds a denylist without needing a peer. Production incidents shown: a T1 that stopped forwarding hit ~25% of QPs and ~580K dropped packets before MRC routed around it; four flapping 200G links cost ~25% throughput for about a minute, with QPs staying alive.</p>
@@ -1014,12 +1025,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

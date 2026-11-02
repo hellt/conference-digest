@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-96/content/5635/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5635/20260202_Madory_Exodus_Of_Ipv4_v1.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/7P_ybLSEQlw">Recording</a></p>
 </div>
 <p>Doug Madory — <a href="../../companies/kentik/">Kentik</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="7P_ybLSEQlw" data-start="0" href="https://www.youtube.com/watch?v=7P_ybLSEQlw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/7P_ybLSEQlw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/7P_ybLSEQlw/maxresdefault.jpg" alt="Play the recording: Exodus of IPv4 from War-torn Ukraine" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="7P_ybLSEQlw" data-start="0" href="https://www.youtube.com/watch?v=7P_ybLSEQlw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/7P_ybLSEQlw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/7P_ybLSEQlw/maxresdefault.jpg" alt="Play the recording: Exodus of IPv4 from War-torn Ukraine" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5635/20260202_Madory_Exodus_Of_Ipv4_v1.pdf" title="PDF slides: Exodus of IPv4 from War-torn Ukraine" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: A striking data story about IPv4 as a war-driven national commodity, with direct consequences for anyone reasoning about IP address markets, proxy abuse, and routing-table hygiene — it also explains several of the movers in this year's BGP table.</li>
 <li><strong>What</strong>: Four years of war produced a ~20% reduction in Ukraine's footprint in the global routing table. Ukrtelecom's AS6849 dropped from 4,728 to 1,377 /24s (−71%), with the space leased via brokers (IPXO) and re-originated by Amazon, Windstream, NTT, Lumen, Orange; sister ASN AS6877 vanished from the table entirely. Mariupol's Trinity (AS43554) space popped up under as many as 54 foreign ASes and was confirmed in use as residential-proxy infrastructure. The second act is AT&amp;T's 2025 BGP housekeeping: AS7018 collapsed from 3,200+ IPv4 routes to 641 via super-aggregation and a new policy requiring customers to originate from their own ASN — which chased out the proxy services; the displaced prefixes scattered across ~150 new origins. Also covers AWS's Dec 2024 move to originating 1,000+ super-aggregates (IPv4 footprint 49M → 157M addresses, absorbing space from Volia and legacy ranges) and similar patterns in Iran (Hetzner as recipient).</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

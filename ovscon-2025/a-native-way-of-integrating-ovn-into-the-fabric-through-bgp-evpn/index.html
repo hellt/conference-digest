@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t11">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/A%20native%20way%20of%20integrating%20OVN%20into%20the%20fabric%20through%20BGP-EVPN.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/KE-CF8bD1CU">Recording</a></p>
 </div>
 <p>Ales Musil (<a href="../../companies/red-hat/">Red Hat</a>), Dumitru Ceara (Red Hat)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="KE-CF8bD1CU" data-start="0" href="https://www.youtube.com/watch?v=KE-CF8bD1CU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/KE-CF8bD1CU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/KE-CF8bD1CU/maxresdefault.jpg" alt="Play the recording: A native way of integrating OVN into the fabric through BGP-EVPN." loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="KE-CF8bD1CU" data-start="0" href="https://www.youtube.com/watch?v=KE-CF8bD1CU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/KE-CF8bD1CU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/KE-CF8bD1CU/maxresdefault.jpg" alt="Play the recording: A native way of integrating OVN into the fabric through BGP-EVPN." loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2025/slides/A%20native%20way%20of%20integrating%20OVN%20into%20the%20fabric%20through%20BGP-EVPN.pdf" title="PDF slides: A native way of integrating OVN into the fabric through BGP-EVPN." loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: OVN deployments have historically been islands attached to the physical fabric through gateways or external controllers. With native BGP in 25.03 and experimental BGP-EVPN in 25.09, OVN logical L2 domains now stretch directly into and across the DC fabric — the concrete mechanism by which the overlay joins the EVPN fabric.</li>
 <li><strong>What</strong>: OVN-native EVPN support: a provider logical switch's L2 domain is extended across an IP fabric via VXLAN, with the BGP-EVPN control plane (run by FRR) distributing MAC/IP (type-2) and, planned for 26.03, type-5 routes. OVN learns remote VTEPs, remote FDBs, remote IPs (with ARP suppression) and remote routes; it advertises local workload MACs/IPs, connected networks and NAT IPs back into the fabric. L2 EVPN is implemented and experimental in 25.09; L3 EVPN per-VRF is the 26.03 plan.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

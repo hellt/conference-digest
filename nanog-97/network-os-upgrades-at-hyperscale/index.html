@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-97/content/5754/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5754/20260531_Sekar_Rajan_Network_Os_Upgrades_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=3LuwTsGvx8I">Recording</a></p>
 </div>
 <p>Sujitha Sekar Rajan – <a href="../../companies/meta/">Meta Platforms Inc</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="3LuwTsGvx8I" data-start="0" href="https://www.youtube.com/watch?v=3LuwTsGvx8I" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/3LuwTsGvx8I/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/3LuwTsGvx8I/maxresdefault.jpg" alt="Play the recording: Network OS Upgrades at Hyperscale" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="3LuwTsGvx8I" data-start="0" href="https://www.youtube.com/watch?v=3LuwTsGvx8I" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/3LuwTsGvx8I/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/3LuwTsGvx8I/maxresdefault.jpg" alt="Play the recording: Network OS Upgrades at Hyperscale" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5754/20260531_Sekar_Rajan_Network_Os_Upgrades_v1.pdf" title="PDF slides: Network OS Upgrades at Hyperscale" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: Upgrading NOS across tens of thousands of multi-vendor devices without either security exposure or production incidents is a recurring dilemma, and this talk ships the pipeline <em>and</em> two rare, detailed war stories.</li>
 <li><strong>What</strong>: Meta's vendor-agnostic 5-step upgrade process (vendor testing → planning → internal testing → canary → cardinality-gated rollout) with a Testbed-as-a-Service framework: tag-driven test selection on real lab hardware across all vendors and roles (50+ test cases for backbone edge alone), automated gating so no image reaches production without a full pass, progressive canary (lab metros → low-traffic → high-traffic), and cardinality rules (per-site/per-metro/global limits, freeze periods, independent role pipelines). War story 1: a vendor code refactor truncated version numbers from 64-bit to 32-bit, desyncing RIB and FIB silently under route churn (~9 days to failure at 5k updates/sec) after ~⅓ of the fleet was upgraded — only a reboot clears corrupted forwarding state, drain does not. War story 2: a re-timer DFE re-tuning bug on one vendor's odd-numbered 100GE ports produced persistent framing errors after link flaps while the interface showed up, requiring three-vendor coordination to isolate.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

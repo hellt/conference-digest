@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/talk/accelerating-software-rdma-rxe-with-netkit-and-devmem.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper1-talk-slides/rxe_netkit_devmem_ebpf.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/kYTYzvWC-wc">Recording</a></p>
 </div>
 <p><em>Yanjun Zhu</em></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="kYTYzvWC-wc" data-start="0" href="https://www.youtube.com/watch?v=kYTYzvWC-wc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/kYTYzvWC-wc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/kYTYzvWC-wc/maxresdefault.jpg" alt="Play the recording: Accelerating Software RDMA (RXE) with Netkit and Devmem" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="kYTYzvWC-wc" data-start="0" href="https://www.youtube.com/watch?v=kYTYzvWC-wc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/kYTYzvWC-wc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/kYTYzvWC-wc/maxresdefault.jpg" alt="Play the recording: Accelerating Software RDMA (RXE) with Netkit and Devmem" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper1-talk-slides/rxe_netkit_devmem_ebpf.pdf" title="PDF slides: Accelerating Software RDMA (RXE) with Netkit and Devmem" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why:</strong> It wires together three things this PM tracks separately — netkit (the Cilium-era container device), devmem TCP/dma-buf, and software RDMA — into one datapath, and it targets the container/namespace case rather than bare metal.</p>
 <p><strong>What:</strong> A shortened RXE (Soft-RoCE) datapath that uses netkit as a fast-path transport hook, plus devmem TCP integration for true end-to-end zero copy and an eBPF-based visibility layer.</p>
 <p><strong>How:</strong> Today RXE encapsulates RoCEv2 in UDP/IP, so same-host inter-namespace traffic traverses routing lookups, Netfilter and redundant copies. Hooking netkit's native TX/RX bypasses the IP layer entirely, giving a claimed 10-20% same-host latency reduction in namespace environments (proportional to how much routing/firewall complexity is skipped). Layering devmem TCP and dma-buf on top — with hardware queue leasing/splitting from the physical NIC (e.g. ConnectX-6) — lands payloads directly in device (GPU) memory. For observability, instead of kprobes or driver patches, an eBPF program on netkit's tcx hook parses RDMA headers (BTH etc.) into a ring buffer for PCAP dumping. Presented with a live demo across namespaces based on kernel selftests. (From abstract only.)</p>
@@ -1013,12 +1024,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

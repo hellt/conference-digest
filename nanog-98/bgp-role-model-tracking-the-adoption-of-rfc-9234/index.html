@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-98/content/5899/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5899/20261018_Herdes_Bgp_Role_Model__v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=MCjUYIF2Axo">Recording</a></p>
 </div>
 <p>Bryton Herdes – <a href="../../companies/cloudflare/">Cloudflare</a>, Iliana Xygkou – <a href="../../companies/georgia-institute-of-technology/">Georgia Institute of Technology</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="MCjUYIF2Axo" data-start="0" href="https://www.youtube.com/watch?v=MCjUYIF2Axo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/MCjUYIF2Axo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/MCjUYIF2Axo/maxresdefault.jpg" alt="Play the recording: BGP Role model: tracking the adoption of RFC 9234" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="MCjUYIF2Axo" data-start="0" href="https://www.youtube.com/watch?v=MCjUYIF2Axo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/MCjUYIF2Axo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/MCjUYIF2Axo/maxresdefault.jpg" alt="Play the recording: BGP Role model: tracking the adoption of RFC 9234" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5899/20261018_Herdes_Bgp_Role_Model__v1.pdf" title="PDF slides: BGP Role model: tracking the adoption of RFC 9234" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: RFC 9234 (BGP Roles + OTC) is the session-level route-leak defense that complements ASPA's AS-level attestations — and this is a measurement of who's actually setting OTC, and who is actively stripping it.</li>
 <li><strong>What</strong>: Roles encode business relationships per BGP session; OTC is attached automatically on sideways/downward propagation and leaks get rejected. The measurement (using Cloudflare's direct peering to attribute OTC setters with certainty) shows adoption growing but limited, with IX route servers setting the good example. The experiment — announcing OTC to all peers — found 15 OTC-stripping ASes including two Tier-1s; 33.1% of unique IPv4 and 17% of IPv6 AS_PATHs lacked OTC where expected. Arelion (AS1299) promptly fixed after outreach; GTT (AS3257) continues stripping. Plus a proposed RFC 9234 improvement (draft-herdes-idr-otc-rs-verification: RS as apex setting OTC) and an implementation support matrix (Junos/FRR/BIRD/OpenBGPD yes today; IOS XR 26.4.1 and EOS 4.37 coming; SR OS, Huawei, GoBGP no).</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

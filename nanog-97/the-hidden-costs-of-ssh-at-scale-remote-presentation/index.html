@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-97/content/5776/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5776/20260530_Lykins_The_Hidden_Costs_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=0-SJYlzcMjI">Recording</a></p>
 </div>
 <p>Brett Lykins – <a href="../../companies/amazon/">Amazon</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="0-SJYlzcMjI" data-start="0" href="https://www.youtube.com/watch?v=0-SJYlzcMjI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/0-SJYlzcMjI/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/0-SJYlzcMjI/maxresdefault.jpg" alt="Play the recording: The Hidden Costs of SSH at Scale (Remote Presentation)" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="0-SJYlzcMjI" data-start="0" href="https://www.youtube.com/watch?v=0-SJYlzcMjI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/0-SJYlzcMjI/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/0-SJYlzcMjI/maxresdefault.jpg" alt="Play the recording: The Hidden Costs of SSH at Scale (Remote Presentation)" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5776/20260530_Lykins_The_Hidden_Costs_v1.pdf" title="PDF slides: The Hidden Costs of SSH at Scale (Remote Presentation)" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: SSH is the default automation transport, and this talk quantifies — with open-source benchmarks — what its 10–15 round-trip handshake actually costs across a WAN, then gives an adoptable fix that requires no device changes.</li>
 <li><strong>What</strong>: Measured with <code>tc netem</code> at 150ms RTT: SSH PTY (Netmiko-style) takes 2,565ms before/around 5 commands vs 151ms for batched HTTPS — 17x. An edge proxy (SSH local at 1–2ms, HTTPS over the WAN) reaches 5.3x on new connections and 14.7x with reuse; a transparent tunnel (SSH on both ends, HTTPS only on the WAN segment) gets 12.7x with <em>zero</em> code changes to existing Ansible/Nornir. At 100k devices with 100 parallel lanes: 42.8 minutes down to 8.1.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

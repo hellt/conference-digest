@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/talk/rakaia-scalable-in-kernel-scheduling-for-tcp-based-rpcs.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper27-talk-slides/rakaia-netdev-talk.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/buZifwSNREM">Recording</a></p>
 </div>
 <p><em>Rui Yang, Konstantinos Prasopoulos, Edouard Bugnion</em></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="buZifwSNREM" data-start="0" href="https://www.youtube.com/watch?v=buZifwSNREM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/buZifwSNREM/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/buZifwSNREM/maxresdefault.jpg" alt="Play the recording: Rakaia: Scalable In-Kernel Scheduling for TCP-Based RPCs" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="buZifwSNREM" data-start="0" href="https://www.youtube.com/watch?v=buZifwSNREM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/buZifwSNREM/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/buZifwSNREM/maxresdefault.jpg" alt="Play the recording: Rakaia: Scalable In-Kernel Scheduling for TCP-Based RPCs" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper27-talk-slides/rakaia-netdev-talk.pdf" title="PDF slides: Rakaia: Scalable In-Kernel Scheduling for TCP-Based RPCs" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why:</strong> Every service-mesh and RPC stack pays for the same thing: POSIX exposes byte streams, so userspace rebuilds message semantics with I/O threads, work queues and thread pools. This attacks that at the source.</p>
 <p><strong>What:</strong> A kernel module exposing a purely message-oriented API that hides TCP from userspace, with gRPC adapted to use it.</p>
 <p><strong>How:</strong> Message parsing and work-conserving scheduling happen directly in the kernel's TCP receive path, at the earliest possible point, eliminating head-of-line blocking within and across connections. Compatible with existing RPC protocols, TLS (via kTLS) and the normal TCP stack. Reported: HOL blocking eliminated across connection counts, up to 5x higher throughput-under-SLO than KCM, and 1.56x for gRPC with 23% less userspace CPU for 2% more kernel time. (From abstract only.)</p>
@@ -1013,12 +1024,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

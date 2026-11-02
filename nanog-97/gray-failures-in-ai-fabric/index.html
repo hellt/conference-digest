@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-97/content/5774/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5774/20260531_Singh_Fabric_Is_Sexy_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=qR_Bvs3AXX0">Recording</a></p>
 </div>
 <p>Navtej Singh – <a href="../../companies/clockwork/">Clockwork</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="qR_Bvs3AXX0" data-start="0" href="https://www.youtube.com/watch?v=qR_Bvs3AXX0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/qR_Bvs3AXX0/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/qR_Bvs3AXX0/maxresdefault.jpg" alt="Play the recording: Gray failures in AI Fabric" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="qR_Bvs3AXX0" data-start="0" href="https://www.youtube.com/watch?v=qR_Bvs3AXX0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/qR_Bvs3AXX0/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/qR_Bvs3AXX0/maxresdefault.jpg" alt="Play the recording: Gray failures in AI Fabric" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5774/20260531_Singh_Fabric_Is_Sexy_v1.pdf" title="PDF slides: Gray failures in AI Fabric" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: AI training turned the DC fabric from boring plumbing into the throughput ceiling, and the failures operators now burn hours on are invisible to standard tooling — the motivating example is a GPU cloud that spent 19 hours hunting a slow training job caused by a hot transceiver whose FEC corrections had been climbing for days while the link stayed up.</li>
 <li><strong>What</strong>: A working taxonomy of gray failures in AI fabrics — optic degradation via rising FEC corrections, intermittent CRC below thresholds, asymmetric paths, ECMP hash polarization landing collectives on hot links, PFC headroom exhaustion, sub-poll-interval microbursts — plus three fully worked scenarios (ECMP polarization, optic degradation, PFC cascade) showing what each telemetry layer sees and what it misses.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

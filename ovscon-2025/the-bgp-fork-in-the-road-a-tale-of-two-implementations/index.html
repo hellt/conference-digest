@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t7">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/The%20BGP%20Fork%20in%20the%20Road.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/2kYhodVu6bM">Recording</a></p>
 </div>
 <p>Jaime Caamaño Ruiz (<a href="../../companies/red-hat/">Red Hat</a>), Patryk Diak (Red Hat), Surya Seetharaman (Red Hat)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="2kYhodVu6bM" data-start="0" href="https://www.youtube.com/watch?v=2kYhodVu6bM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/2kYhodVu6bM/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/2kYhodVu6bM/maxresdefault.jpg" alt="Play the recording: The BGP Fork in the Road: A Tale of Two Implementations" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="2kYhodVu6bM" data-start="0" href="https://www.youtube.com/watch?v=2kYhodVu6bM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/2kYhodVu6bM/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/2kYhodVu6bM/maxresdefault.jpg" alt="Play the recording: The BGP Fork in the Road: A Tale of Two Implementations" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2025/slides/The%20BGP%20Fork%20in%20the%20Road.pdf" title="PDF slides: The BGP Fork in the Road: A Tale of Two Implementations" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: Two BGP implementations were built in parallel — OVN's native dynamic routing and OVN-Kubernetes' FRR-k8s integration — and whether they converge determines how K8s clusters exchange routes with the provider network. BGP internals are squarely in the PM's interest set.</li>
 <li><strong>What</strong>: A side-by-side anatomy. OVN: BGP-daemon-agnostic ("bring your own FRR"), routes exchanged through kernel VRFs over NetLink, with <code>Advertised_Route</code> / <code>Learned_Route</code> tables in the OVN DB; by default the VRF carries control-plane traffic only and the host routing table is untouched; <code>dynamic-routing-vrf-id</code> frees the VRF table ID from the datapath tunnel key. OVN-Kubernetes: a <code>RouteAdvertisements</code> CR generates <code>FRRConfiguration</code> for FRR-k8s; in Local Gateway mode a VRF is in the data plane, in Shared Gateway mode BGP-learned routes are copied into OVN gateway routers. Then the gap list for adopting OVN's native BGP: table-ID collisions, distinct vs shared VRFs, default VRF support, filtered learning, real next hops instead of blackhole routes, and per-LSP/per-LB <code>/32</code> advertisement.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

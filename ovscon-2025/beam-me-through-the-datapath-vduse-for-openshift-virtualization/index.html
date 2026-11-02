@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t24">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/OVSOVNCON25%20-%20Beam%20Me%20Through%20the%20Datapath_%20VDUSE%20for%20OpenShift%20Virtualization.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/Tuqz3m4oH4Q">Recording</a></p>
 </div>
 <p>Jakob Meng (<a href="../../companies/red-hat/">Red Hat</a>), Maxime Coquelin (Red Hat)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="Tuqz3m4oH4Q" data-start="0" href="https://www.youtube.com/watch?v=Tuqz3m4oH4Q" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Tuqz3m4oH4Q/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Tuqz3m4oH4Q/maxresdefault.jpg" alt="Play the recording: Beam Me Through the Datapath: VDUSE for OpenShift Virtualization" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="Tuqz3m4oH4Q" data-start="0" href="https://www.youtube.com/watch?v=Tuqz3m4oH4Q" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Tuqz3m4oH4Q/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Tuqz3m4oH4Q/maxresdefault.jpg" alt="Play the recording: Beam Me Through the Datapath: VDUSE for OpenShift Virtualization" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2025/slides/OVSOVNCON25%20-%20Beam%20Me%20Through%20the%20Datapath_%20VDUSE%20for%20OpenShift%20Virtualization.pdf" title="PDF slides: Beam Me Through the Datapath: VDUSE for OpenShift Virtualization" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: Completes a fully-userspace datapath (OVS-DPDK + VDUSE) for KubeVirt VMs, with unusually transparent benchmarking that includes cases where DPDK loses to the kernel datapath.</li>
 <li><strong>What</strong>: Extends last year's container userspace work to VMs via VDUSE/vhost-vDPA (primary and secondary networks), plus new workload-partitioning knobs in OpenShift (<code>strict-cpu-reservation</code>, dedicated <code>CPUSet</code>, <code>irqbalanceBanned</code>, static PMD masks). Benchmarks (Xeon Silver 4310, CX-6 Dx, OVS 3.5+): OVS-kernel outperforms OVS-DPDK on large TCP buffers; small-buffer throughput improves with <code>pmd-sleep-max</code> (~90,000 → ~3,000 IRQs/s, QEMU 200% → 115% CPU at 128B buffers) at the cost of large-buffer performance; a virtio-net IRQ-coalescing prototype in the DPDK vhost library fixes that without sleeps. Also documents CX-6 Dx lacking outer-UDP checksum offload (which forced software segmentation — tying into the checksum-offload revamp) and KubeVirt's fixed 256-descriptor virtio rings.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

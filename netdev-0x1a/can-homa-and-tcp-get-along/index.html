@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/talk/can-homa-and-tcp-get-along.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper23-talk-slides/TCPHoma.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/K9NZL_2qm4g">Recording</a></p>
 </div>
 <p><em>John Ousterhout</em></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="K9NZL_2qm4g" data-start="0" href="https://www.youtube.com/watch?v=K9NZL_2qm4g" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/K9NZL_2qm4g/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/K9NZL_2qm4g/maxresdefault.jpg" alt="Play the recording: Can Homa and TCP Get Along?" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="K9NZL_2qm4g" data-start="0" href="https://www.youtube.com/watch?v=K9NZL_2qm4g" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/K9NZL_2qm4g/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/K9NZL_2qm4g/maxresdefault.jpg" alt="Play the recording: Can Homa and TCP Get Along?" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper23-talk-slides/TCPHoma.pdf" title="PDF slides: Can Homa and TCP Get Along?" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why:</strong> Coexistence is the actual adoption blocker for any new datacenter transport. Nobody gets a greenfield fabric, so "what happens when it shares a NIC with TCP" decides whether Homa is deployable at all.</p>
 <p><strong>What:</strong> Measurements of TCP and Homa running concurrently, plus <code>homa_qdisc</code>, a new queuing discipline that fixes the resulting unfairness — and, notably, improves plain TCP too.</p>
 <p><strong>How:</strong> Baseline finding: running together, TCP gets slightly <em>better</em> (Homa reduces buffer utilization) while Homa degrades badly (TCP still overloads buffers). <code>homa_qdisc</code> paces output for both protocols to prevent NIC queue buildup, implements Homa's SRPT policy plus a limited SRPT for TCP, and balances output between the two under congestion. With it, Homa suffers only slight degradation alongside TCP, TCP latency improves over the no-qdisc case, and TCP-only short-message tail latency improves by nearly 2x versus <code>fq_codel</code>. (From abstract only.)</p>
@@ -1013,12 +1024,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

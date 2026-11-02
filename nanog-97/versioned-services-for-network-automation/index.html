@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-97/content/5673/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5673/20260601_Henderson_Versioned_Services_For_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=uai6k0JcUdk">Recording</a></p>
 </div>
 <p>James Henderson – <a href="../../companies/ductus/">Ductus</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="uai6k0JcUdk" data-start="0" href="https://www.youtube.com/watch?v=uai6k0JcUdk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/uai6k0JcUdk/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/uai6k0JcUdk/maxresdefault.jpg" alt="Play the recording: Versioned Services for Network Automation" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="uai6k0JcUdk" data-start="0" href="https://www.youtube.com/watch?v=uai6k0JcUdk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/uai6k0JcUdk/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/uai6k0JcUdk/maxresdefault.jpg" alt="Play the recording: Versioned Services for Network Automation" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5673/20260601_Henderson_Versioned_Services_For_v1.pdf" title="PDF slides: Versioned Services for Network Automation" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: Automation systems are usually written as if the standards they implement never change; this offers a clean, adoptable pattern for managing service intent across time — with EVPN as the running example.</li>
 <li><strong>What</strong>: A pattern combining named service <em>types</em>, semantic <em>versions</em>, and <em>managed features</em> — where a feature is a flag with metadata (introduced-in, standard-in, when-disabled fallback behavior, conflicts-with) rather than a bare code switch — plus cascading (hierarchical) types that control which features a service may use. Versioned packages pin each service version to an exact code commit, so rollbacks know which implementation to return to, and individual features can migrate independently across services (the talk shows a mid-migration state where one customer's RT is migrated and another's RD is not).</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

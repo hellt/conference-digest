@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-96/content/5628/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5628/20260203_Bhatti_End-System_Controlled_Dynamic_v1.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/4Va3xvNleWE">Recording</a></p>
 </div>
 <p>Saleem Bhatti — <a href="../../companies/university-of-st-andrews/">University of St Andrews</a>, Scotland, UK.</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="4Va3xvNleWE" data-start="0" href="https://www.youtube.com/watch?v=4Va3xvNleWE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/4Va3xvNleWE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/4Va3xvNleWE/maxresdefault.jpg" alt="Play the recording: End-system controlled, dynamic multihoming and multipath transport" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="4Va3xvNleWE" data-start="0" href="https://www.youtube.com/watch?v=4Va3xvNleWE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/4Va3xvNleWE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/4Va3xvNleWE/maxresdefault.jpg" alt="Play the recording: End-system controlled, dynamic multihoming and multipath transport" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5628/20260203_Bhatti_End-System_Controlled_Dynamic_v1.pdf" title="PDF slides: End-system controlled, dynamic multihoming and multipath transport" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: Multipath today means MPTCP or waiting on QUIC multipath. This demonstrates generic, end-system-controlled multipath for <em>any</em> transport — with working code, real transatlantic tests, and no changes to routers, applications, DNS infrastructure beyond what exists, or routing. It is a genuinely different architectural bet worth knowing about even if you never deploy it.</li>
 <li><strong>What</strong>: ILNP (Identifier-Locator Network Protocol, RFCs 6740-6748) reuses IPv6 address syntax but splits semantics: the routing prefix acts as a mutable <em>Locator</em> while the remaining bits become a stable end-system <em>Identifier</em> — only end systems examine the Identifier bits, so IPv6 routers forward unchanged. Transport state is keyed on the Identifier (not the address), so a connection survives locator changes; dynamic multihoming and multipath are signaled end-to-end via ICMPv6 Locator Updates, no NAT, tunnels, or proxies.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

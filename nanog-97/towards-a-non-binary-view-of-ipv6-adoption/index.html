@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-97/content/5748/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5748/20260530_Thottungal_Valapu_Towards_A_Non-Binary_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=zyPZ9mOl2tQ">Recording</a></p>
 </div>
 <p>Sulyab Thottungal Valapu – <a href="../../companies/university-of-southern-california/">University of Southern California</a> / <a href="../../companies/information-sciences-institute/">Information Sciences Institute</a> (with John Heidemann)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="zyPZ9mOl2tQ" data-start="0" href="https://www.youtube.com/watch?v=zyPZ9mOl2tQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/zyPZ9mOl2tQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/zyPZ9mOl2tQ/maxresdefault.jpg" alt="Play the recording: Towards a Non-Binary View of IPv6 Adoption" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="zyPZ9mOl2tQ" data-start="0" href="https://www.youtube.com/watch?v=zyPZ9mOl2tQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/zyPZ9mOl2tQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/zyPZ9mOl2tQ/maxresdefault.jpg" alt="Play the recording: Towards a Non-Binary View of IPv6 Adoption" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5748/20260530_Thottungal_Valapu_Towards_A_Non-Binary_v1.pdf" title="PDF slides: Towards a Non-Binary View of IPv6 Adoption" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: Not about any of the PM's core areas, but the results reframe a long-running debate with measurement: IPv6 adoption isn't binary, and the "how much" numbers are surprising.</li>
 <li><strong>What</strong>: Client-side: 9 months of flow data from 5 dual-stacked LA residences shows daily IPv6 fraction varies enormously (a single application can swing a site between an 11% day and a 91% day), with per-site medians diverging widely. Server-side: a browser-based crawl (dependencies resolved to arbitrary depth) of the Tranco top 100k finds only 12% fully IPv6-loadable — 42% have v6 enabled but 30% of the total still require IPv4 to fully load; fixing the top 5% of popular v4-only resources would fix over 25% of partial sites. Cloud-side: same-tenant paired comparisons (Wilcoxon) show deployment <em>mechanics</em> dominate — CloudFront's automatic v6 hit 71% while S3's opt-in dualstack-URL requirement yields 0.4%; Azure Front Door shows 100% is possible with no opt-out.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

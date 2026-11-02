@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-96/content/5544/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5544/20260204_Chung_Rovista_Mapping_Real_v1.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/dvB_Nt8z2yg">Recording</a></p>
 </div>
 <p>Tijay Chung — <a href="../../companies/virginia-tech/">Virginia Tech</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="dvB_Nt8z2yg" data-start="0" href="https://www.youtube.com/watch?v=dvB_Nt8z2yg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/dvB_Nt8z2yg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/dvB_Nt8z2yg/maxresdefault.jpg" alt="Play the recording: RoVista+: Mapping Real ROV Deployments, Dependencies, and Delays" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="dvB_Nt8z2yg" data-start="0" href="https://www.youtube.com/watch?v=dvB_Nt8z2yg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/dvB_Nt8z2yg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/dvB_Nt8z2yg/maxresdefault.jpg" alt="Play the recording: RoVista+: Mapping Real ROV Deployments, Dependencies, and Delays" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5544/20260204_Chung_Rovista_Mapping_Real_v1.pdf" title="PDF slides: RoVista+: Mapping Real ROV Deployments, Dependencies, and Delays" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: "Do you filter RPKI-invalids?" has always been hard to answer honestly — prior methods couldn't tell local enforcement from an upstream doing it for you. This work separates the two, and the findings about RP (relying-party) concentration are a systemic-risk result every operator should see.</li>
 <li><strong>What</strong>: A measurement framework that runs its own ASN and its own RPKI publication points, serving different test ROAs to specific relying parties, then probing the Internet to see who drops the route. Results across 21,827 measured ASes: 1,127 self-deploy ROV while 1,815 ASes rely entirely on upstream filtering — and 69.6% of those "protected" ASes remain vulnerable to local hijacks. 52% of ROV-deploying ASes depend on exactly one RP server (only 14% use multiple RPs in different ASNs, contra RFC 7115). Router enforcement lags ROA updates by ~37 minutes (60-120 minutes end-to-end). Simulation: ROV in the top 100 ASes protects 27.6% of networks; disabling it in Tier-1s exposes 23.8% to hijacks. ~74% of top-5,000 ASes self-deploy; smaller networks overwhelmingly depend on upstreams.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t17">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/OVS-DOCA%20upstream%20roadmap.pptx">Slides</a> <a class="pick-link" href="https://youtu.be/3QGWH54xdfE">Recording</a></p>
 </div>
 <p>Maor Dickman (<a href="../../companies/nvidia/">NVIDIA</a>)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="3QGWH54xdfE" data-start="0" href="https://www.youtube.com/watch?v=3QGWH54xdfE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/3QGWH54xdfE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/3QGWH54xdfE/maxresdefault.jpg" alt="Play the recording: OVS-DOCA upstream roadmap" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PPTX</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="3QGWH54xdfE" data-start="0" href="https://www.youtube.com/watch?v=3QGWH54xdfE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/3QGWH54xdfE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/3QGWH54xdfE/maxresdefault.jpg" alt="Play the recording: OVS-DOCA upstream roadmap" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fwww.openvswitch.org%2Fsupport%2Fovscon2025%2Fslides%2FOVS-DOCA%2520upstream%2520roadmap.pptx" title="PPTX slides: OVS-DOCA upstream roadmap" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: Signals where hardware offload in upstream OVS is heading: NVIDIA is moving DOCA acceleration from a downstream fork into upstream via the dpif-netdev framework, which means new upstream OVS APIs (dpif-offload-provider, userspace CT offload).</li>
 <li><strong>What</strong>: The plan: a new <code>netdev_doca</code> netdev class (port initialization and software slow path under dpif-netdev), a new <code>dpif-offload-doca</code> provider (offloading megaflows, based on a new dpif-offload-provider API), and a new connection-tracking offload API for the userspace datapath. Gaps are acknowledged: eswitch hierarchy (one port handling all device ports), port-init ordering, partial offload (HW-to-SW miss path), and advanced offloads (sFLOW, tunnel entropy, meters, DP_HASH). This replaces the earlier dpif-netlink-based DPIF-DOCA direction.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

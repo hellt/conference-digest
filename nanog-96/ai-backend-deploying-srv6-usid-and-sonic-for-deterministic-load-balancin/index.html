@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-96/content/5611/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5611/20260202_Camarillo_Ai_Backend_Deploying_v1.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/yB-_4lkSsEs">Recording</a></p>
 </div>
 <p>Pablo Camarillo — <a href="../../companies/cisco/">Cisco Systems</a>; Rita Hui — <a href="../../companies/microsoft/">Microsoft</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="yB-_4lkSsEs" data-start="0" href="https://www.youtube.com/watch?v=yB-_4lkSsEs" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/yB-_4lkSsEs/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/yB-_4lkSsEs/maxresdefault.jpg" alt="Play the recording: AI Backend: Deploying SRv6 uSID and SONiC for Deterministic Load Balancing" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="yB-_4lkSsEs" data-start="0" href="https://www.youtube.com/watch?v=yB-_4lkSsEs" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/yB-_4lkSsEs/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/yB-_4lkSsEs/maxresdefault.jpg" alt="Play the recording: AI Backend: Deploying SRv6 uSID and SONiC for Deterministic Load Balancing" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5611/20260202_Camarillo_Ai_Backend_Deploying_v1.pdf" title="PDF slides: AI Backend: Deploying SRv6 uSID and SONiC for Deterministic Load Balancing" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: The AI backend load-balancing problem is the defining fabric issue of this cycle: synchronized, bursty, low-entropy training flows destroy ECMP hash assumptions, and congestion/loss stalls GPU collectives. This is a production answer from one of the world's largest AI infrastructures, not a whitepaper.</li>
 <li><strong>What</strong>: Microsoft's deployment of SRv6 uSID strict source routing in the AI backend for deterministic, conflict-free traffic placement, implemented in SONiC. The deck grounds it in real cost data (Llama3 406B: 6k GPUs, 54 days, 419 unplanned interruptions; a single job crash loses 15-30 minutes of compute since the last checkpoint) and includes a taxonomy of every LB approach attempted — switch-based (flowlet, adaptive routing, packet spray) and NIC-based (oblivious spray, entropy recycling) — and why probabilistic entropy-value switching can't guarantee a new path.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

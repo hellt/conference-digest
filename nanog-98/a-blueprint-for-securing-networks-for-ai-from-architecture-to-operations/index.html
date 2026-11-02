@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-98/content/5869/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5869/20261018_Salahudeen_A_Blueprint_For_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=MqnHA9hBX5M">Recording</a></p>
 </div>
 <p>Saju Salahudeen – <a href="../../companies/nokia/">NOKIA</a>, Reda Laichi – NOKIA</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="MqnHA9hBX5M" data-start="0" href="https://www.youtube.com/watch?v=MqnHA9hBX5M" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/MqnHA9hBX5M/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/MqnHA9hBX5M/maxresdefault.jpg" alt="Play the recording: A Blueprint for Securing Networks for AI : From Architecture to Operations" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="MqnHA9hBX5M" data-start="0" href="https://www.youtube.com/watch?v=MqnHA9hBX5M" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/MqnHA9hBX5M/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/MqnHA9hBX5M/maxresdefault.jpg" alt="Play the recording: A Blueprint for Securing Networks for AI : From Architecture to Operations" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5869/20261018_Salahudeen_A_Blueprint_For_v1.pdf" title="PDF slides: A Blueprint for Securing Networks for AI : From Architecture to Operations" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: The only talk focused specifically on securing AI backend fabrics, where RDMA bypasses the host stack — forcing enforcement down to the switch and DPU. Core to the PM's network-security + AI-fabric overlap.</li>
 <li><strong>What</strong>: A Day 0/&frac12; framework. Day 0: SZTP (RFC 8572, ownership vouchers, IDevID on TPM) over insecure ZTP, secure/measured boot chains. Day 1: TLS for syslog/gRPC/RADIUS/NTP, gRPC RPC restriction via gNSI Authz (allow gNMI Subscribe, deny gNMI Set), AAA hardening, per-tenant VRFs on switches plus per-flow DPU policy pushed per job, backend default-deny ACLs (RoCEv2 UDP 4791 within same job/tenant only), DDoS tiers (edge scrubbing/Flowspec/RTBH, API-key rate limits for inference, PFC watchdog and per-tenant QoS against pause storms, CoPP). Day 2: monitoring shifts from packet inspection to streaming telemetry (sFlow, INT) plus behavioral baselining, because DPI/host IDS don't scale to 400G/800G and RDMA traffic is invisible to host-based tools.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

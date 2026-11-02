@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t1">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/Running%20OVS%20on%20a%20large%20CPU%20system.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=jX5dVJVSUoc">Recording</a></p>
 </div>
 <p>Speakers: Eelco Chaudron, <a href="../../companies/red-hat/">Red Hat</a>, Inc.</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="jX5dVJVSUoc" data-start="0" href="https://www.youtube.com/watch?v=jX5dVJVSUoc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/jX5dVJVSUoc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/jX5dVJVSUoc/maxresdefault.jpg" alt="Play the recording: Running Open vSwitch on a large CPU System" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="jX5dVJVSUoc" data-start="0" href="https://www.youtube.com/watch?v=jX5dVJVSUoc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/jX5dVJVSUoc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/jX5dVJVSUoc/maxresdefault.jpg" alt="Play the recording: Running Open vSwitch on a large CPU System" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2024/slides/Running%20OVS%20on%20a%20large%20CPU%20system.pdf" title="PDF slides: Running Open vSwitch on a large CPU System" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why</strong>: Modern DC hosts are 128–256 CPUs, and this is a rare measured study of what actually breaks in ovs-vswitchd and the kernel datapath at that scale — including an OOM-killer incident reproduced during testing. Directly relevant to anyone running OVS on current-generation EPYC-class compute.</p>
 <p><strong>What</strong>: On a 128-CPU EPYC 7702P (OVS 3.3, RHEL 9.5), the revalidator process stops scaling past a handful of threads: with 200k datapath flows, mean flow-dump duration goes 169.7 ms → 180.7 ms → 183.4 ms for 4/32/128 revalidator threads, due to lock contention in <code>nl_dump_next()</code> (the mutex serializes netlink dump recvs to avoid an in-kernel EINVAL race on pooled sockets). With traffic landing on many CPUs, per-CPU <code>sw_flow_stat</code> structures (32 bytes each, allocated on demand) consume 782 MB for 200k flows at 128 CPUs and 1.5 GB at 256 CPUs — the real problem is not the memory but the latency of accumulating non-linearly-stored stats, which grows dump duration until a ~1.3 s threshold forces the flow limit down. Interface-statistics sweeps (~every 5 s) take 63 ms at 64 CPUs vs 104 ms at 128, with kernel exception counters adding ~451 ns per interface at 128 CPUs.</p>
 <p><strong>How</strong>: USDT probes and bpftrace-based scripts (<code>reval_monitor.py</code>, <code>kernel_delay.py</code>), veth/netns test topologies, Scapy traffic pinned with taskset, and 1024-veth-pair configurations to isolate the statistics path. A simulated pod-churn test (128 OVN ports, continuous add/delete) shows ~50% more <code>recvmsg()</code> time at 128 cores, traced toward <code>netdev_get_addrs()</code>/<code>getifaddrs()</code> but left for further investigation.</p>
@@ -1013,12 +1024,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

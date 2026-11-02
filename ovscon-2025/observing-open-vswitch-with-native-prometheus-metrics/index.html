@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t1">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/OVScon25%20-%20Observing%20OVS%20with%20native%20prometheus%20metrics.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/awHSbUbCNoo">Recording</a></p>
 </div>
 <p>Gaetan Rivet (<a href="../../companies/nvidia/">NVIDIA</a>)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="awHSbUbCNoo" data-start="0" href="https://www.youtube.com/watch?v=awHSbUbCNoo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/awHSbUbCNoo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/awHSbUbCNoo/maxresdefault.jpg" alt="Play the recording: Observing Open vSwitch with native prometheus metrics" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="awHSbUbCNoo" data-start="0" href="https://www.youtube.com/watch?v=awHSbUbCNoo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/awHSbUbCNoo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/awHSbUbCNoo/maxresdefault.jpg" alt="Play the recording: Observing Open vSwitch with native prometheus metrics" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2025/slides/OVScon25%20-%20Observing%20OVS%20with%20native%20prometheus%20metrics.pdf" title="PDF slides: Observing Open vSwitch with native prometheus metrics" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: OVS observability today depends on external exporters that assume the kernel datapath and scrape CLIs; a native exporter unifies kernel and userspace observability with lower footprint — practical for anyone running OVS at scale.</li>
 <li><strong>What</strong>: A Prometheus-compatible metrics framework inside the OVS library: counter/gauge/histogram types, and a per-process metrics tree whose internal nodes mirror module structure (datapath cache/conntrack/offloads, interfaces, memory, ofproto). Node types cover subsystems, labeled collections (FOREACH), bounded collections for label generation, and conditionals (e.g., offload metrics only when <code>hw-offload</code> is on). Exposed via an <code>ovs-exporter</code> systemd service (default port 6103), <code>ovs-appctl metrics/show</code>, and Python bindings; new metrics appear automatically without new CLI plumbing.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

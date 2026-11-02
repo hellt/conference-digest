@@ -913,7 +913,15 @@
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/talk/networking-headless-cxl-devices-for-ai-memory-services.html">Abstract</a> <a class="pick-link" href="https://youtu.be/JaqEdCahElA">Recording</a></p>
 </div>
 <p><em>Vijay Inavolu, Gaurav Agarwal</em></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="JaqEdCahElA" data-start="0" href="https://www.youtube.com/watch?v=JaqEdCahElA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/JaqEdCahElA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/JaqEdCahElA/maxresdefault.jpg" alt="Play the recording: Networking Headless CXL Devices for AI Memory Services" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="JaqEdCahElA" data-start="0" href="https://www.youtube.com/watch?v=JaqEdCahElA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/JaqEdCahElA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/JaqEdCahElA/maxresdefault.jpg" alt="Play the recording: Networking Headless CXL Devices for AI Memory Services" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why:</strong> A genuinely surprising construction: giving a CXL memory device — which exposes a memory window, not a NIC — a cluster-facing service identity, using nothing but stock kernel pieces.</p>
 <p><strong>What:</strong> A virtual L3 interface that carries IP over a shared CXL memory window, so services running on a CXL Type-2 device (Redis, KV-cache managers, Milvus query nodes) get IP-reachable endpoints and Kubernetes service identity.</p>
 <p><strong>How:</strong> Host and device daemons each open <code>/dev/net/tun</code>, configure a virtual L3 interface and <code>mmap</code> the same CXL HDM-H window as a shared packet ring, with ordering rules to carry packets reliably over memory; a host-pod bridge pattern gives the device-side Linux a service IP so clients never see the memory window. ping, ssh, Redis and TCP services work end to end with no new module. Reported: 60x less host-link traffic than a host-side compute path, and 2.56x FAISS vector-search throughput scaling across four cards. (From abstract only.)</p>
@@ -1013,12 +1021,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

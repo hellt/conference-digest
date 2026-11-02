@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-98/content/5846/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5846/20261018_Styszynski_Srv6_And_Mrc_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=ze3ORk9sGrI">Recording</a></p>
 </div>
 <p>Michal Styszynski – <a href="../../companies/juniper/">Juniper Networks</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="ze3ORk9sGrI" data-start="0" href="https://www.youtube.com/watch?v=ze3ORk9sGrI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/ze3ORk9sGrI/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/ze3ORk9sGrI/maxresdefault.jpg" alt="Play the recording: SRv6 and MRC for AI Data Centers" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="ze3ORk9sGrI" data-start="0" href="https://www.youtube.com/watch?v=ze3ORk9sGrI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/ze3ORk9sGrI/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/ze3ORk9sGrI/maxresdefault.jpg" alt="Play the recording: SRv6 and MRC for AI Data Centers" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5846/20261018_Styszynski_Srv6_And_Mrc_v1.pdf" title="PDF slides: SRv6 and MRC for AI Data Centers" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: The backend AI fabric problem this program circles repeatedly — making RoCEv2 survive at 100k+ GPU scale without PFC — approached via an emerging OCP spec (MRC). Core to the PM's RDMA/lossless-fabric interest. Vendor session, but grounded in a specification rather than a product pitch.</li>
 <li><strong>What</strong>: MRC (Multipath Reliable Connection) is modified RoCEv2 with reliability (SACK/NACK), packet trimming on congestion, packet spraying, and multiplanar fabric design — explicitly "no more PFC." Two transport flavors: IP-ECMP MRC (works with EVPN-VXLAN multitenancy, switch hashing) and SRv6 MRC (source-routed paths computed by a path orchestrator/fabric manager). Scale worked through an 8-plane design: ~131K GPUs, ~8K GPUs per pod, with optical shufflers breaking 2×800G into 8×200G plane links.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

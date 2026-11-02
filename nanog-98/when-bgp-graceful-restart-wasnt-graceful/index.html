@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-98/content/5897/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5897/20261018_Rychtecky_When_Bgp_Graceful_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=eQM-un3K_yA">Recording</a></p>
 </div>
 <p>Marian Rychtecky – <a href="../../companies/nix-cz/">NIX.CZ</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="eQM-un3K_yA" data-start="0" href="https://www.youtube.com/watch?v=eQM-un3K_yA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/eQM-un3K_yA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/eQM-un3K_yA/maxresdefault.jpg" alt="Play the recording: When BGP Graceful Restart Wasn't Graceful" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="eQM-un3K_yA" data-start="0" href="https://www.youtube.com/watch?v=eQM-un3K_yA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/eQM-un3K_yA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/eQM-un3K_yA/maxresdefault.jpg" alt="Play the recording: When BGP Graceful Restart Wasn't Graceful" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5897/20261018_Rychtecky_When_Bgp_Graceful_v1.pdf" title="PDF slides: When BGP Graceful Restart Wasn&#x27;t Graceful" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: The kind of hard-won postmortem NANOG exists for: a GR feature that lengthened an outage from "hidden" to two minutes, with packet captures, lab reproduction, and multiple vendor bugs unpacked.</li>
 <li><strong>What</strong>: During a firewall HA upgrade, BGP sessions re-established but carried zero prefixes for ~121s. Root causes found: (1) the router sent TCP RST on the new connection because the old session wasn't cleanly torn down — violating RFC 4724's "treat old session as terminated"; (2) the firewall's GR coupled IPv4 and IPv6, so IPv4 routes waited on a stuck IPv6 session's End-of-RIB (the suspicious ~120s was the default reconnect timer); (3) a parsing bug stored the IPv6 peer as <code>2001:db8:1:</code> (missing <code>::2</code>), so the OS couldn't find the VRF context and RST'd. Vendor fix lands in 8.0.1 (Aug 2026), not backported to supported 7.4/7.6 branches; workaround: <code>set connect-timer 1</code>.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

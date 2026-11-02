@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-96/content/5731/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5731/20260204_Hardaker_You_Don_T_Need_v1.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/xog1Uerjq8g">Recording</a></p>
 </div>
 <p>Wes Hardaker — <a href="../../companies/google/">Google</a> (with Geoff Huston, Warren Kumari, Jim Reed)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="xog1Uerjq8g" data-start="0" href="https://www.youtube.com/watch?v=xog1Uerjq8g" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/xog1Uerjq8g/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/xog1Uerjq8g/maxresdefault.jpg" alt="Play the recording: Lightning Talk: You Don't Need The DNS Root Server System" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="xog1Uerjq8g" data-start="0" href="https://www.youtube.com/watch?v=xog1Uerjq8g" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/xog1Uerjq8g/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/xog1Uerjq8g/maxresdefault.jpg" alt="Play the recording: Lightning Talk: You Don't Need The DNS Root Server System" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5731/20260204_Hardaker_You_Don_T_Need_v1.pdf" title="PDF slides: Lightning Talk: You Don&#x27;t Need The DNS Root Server System" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: A DNS root server operator standing up at NANOG to ask you to <em>stop sending him traffic</em> is the most memorable pitch on the program, and it's technically sound: your resolver can hold the entire signed root zone locally (RFC 7706/8806). Root query load grew ~40% in two years to 130B queries/day — for data resolvers could already have.</li>
 <li><strong>What</strong>: The case for LocalRoot: fetch the ~1.5MB signed root zone 2-3x/day from IANA/CDN sources, serve it locally. Security improves (DNSSEC validation of unmodified data, ZONEMD integrity), robustness improves (multiple sources and protocols; survives a 24h+ DDoS of the root system), privacy improves (no queries to root at all), and performance improves (root RTT = 0, ~1.5-2.4MB/day of bandwidth).</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

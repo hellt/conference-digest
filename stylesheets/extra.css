@@ -192,6 +192,11 @@ a:focus-visible, button:focus-visible, label:focus-visible {
 .md-typeset .pick-video__play::after { content: ''; position: absolute; inset: 50% auto auto 54%; transform: translate(-50%,-50%); border-style: solid; border-width: .6rem 0 .6rem 1rem; border-color: transparent transparent transparent #fff; }
 .md-typeset .pick-video__thumb:hover .pick-video__play { background: #b52424; }
 
+/* Media tabs appear only on talk pages, using Zensical's native controls. */
+.md-typeset .pick-media { margin: 1.2rem 0; }
+.md-typeset .pick-slides__frame { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; border: 1px solid var(--signal-rule); background: #fff; }
+.md-typeset .pick-media .tabbed-content { padding-top: .6rem; }
+
 /* The generated TOC is also Zensical's scrollspy, including instant navigation. */
 .md-nav--secondary .md-nav__title { font-size: .5rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--signal-muted); box-shadow: none; background: var(--signal-paper); padding-block: .4rem .6rem; }
 .md-nav--secondary .md-nav__link { font-size: .57rem; line-height: 1.6; color: var(--signal-muted); }

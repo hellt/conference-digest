@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-96/content/5718/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5718/20260204_Phaal_Seeing_Through_The_v1.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/vM-M0vtvxLI">Recording</a></p>
 </div>
 <p>Peter Phaal — <a href="../../companies/inmon/">InMon Corp.</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="vM-M0vtvxLI" data-start="0" href="https://www.youtube.com/watch?v=vM-M0vtvxLI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/vM-M0vtvxLI/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/vM-M0vtvxLI/maxresdefault.jpg" alt="Play the recording: Lightning Talk: Seeing Through the RDMA Fog: Monitoring RoCEv2 with sFlow" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="vM-M0vtvxLI" data-start="0" href="https://www.youtube.com/watch?v=vM-M0vtvxLI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/vM-M0vtvxLI/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/vM-M0vtvxLI/maxresdefault.jpg" alt="Play the recording: Lightning Talk: Seeing Through the RDMA Fog: Monitoring RoCEv2 with sFlow" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5718/20260204_Phaal_Seeing_Through_The_v1.pdf" title="PDF slides: Lightning Talk: Seeing Through the RDMA Fog: Monitoring RoCEv2 with sFlow" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: AI/RDMA clusters create a genuine blind spot: kernel bypass means tcpdump, wireshark, and even eBPF-based host agents see nothing. For a PM who tracks both lossless fabrics and host-based observability (eBPF), this is the counterpoint — some visibility has to come from the switch ASIC.</li>
 <li><strong>What</strong>: A demonstration, on SDSC's Expanse production cluster (93k cores, 208 GPUs, 100G hybrid fat-tree), of sFlow-based RoCEv2 monitoring: RDMA I/O operations decoded from sampled packet headers (opcode, queue pair, PSN, DMA length, virtual address), ECN/CNP congestion-message rates, RoCE ack-credit tracking, per-link queue depth and transit delay, and — critically — immediate notification of every dropped packet with where/why/who.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

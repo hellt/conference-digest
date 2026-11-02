@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t20">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/Revisiting%20checksum%20offloads%20in%20OVS.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/q5Q8v4wY3Vw">Recording</a></p>
 </div>
 <p>David Marchand (<a href="../../companies/red-hat/">Red Hat</a>)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="q5Q8v4wY3Vw" data-start="0" href="https://www.youtube.com/watch?v=q5Q8v4wY3Vw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/q5Q8v4wY3Vw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/q5Q8v4wY3Vw/maxresdefault.jpg" alt="Play the recording: Revisiting checksum offloads in OVS" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="q5Q8v4wY3Vw" data-start="0" href="https://www.youtube.com/watch?v=q5Q8v4wY3Vw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/q5Q8v4wY3Vw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/q5Q8v4wY3Vw/maxresdefault.jpg" alt="Play the recording: Revisiting checksum offloads in OVS" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2025/slides/Revisiting%20checksum%20offloads%20in%20OVS.pdf" title="PDF slides: Revisiting checksum offloads in OVS" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: The userspace (DPDK) datapath's checksum/TSO API had grown buggy and tightly coupled to DPDK; this is a full revamp with per-NIC performance numbers — directly relevant to high-throughput OVS on real hardware.</li>
 <li><strong>What</strong>: The OVS 3.6 redesign: a new <code>dp_packet::offloads</code> field with four-state (unknown/bad/good/partial) Rx statuses for IP and L4, tunnel encapsulation expressed as status metadata, and TSO reduced to a <code>tso_segsz</code> value. Massively expanded unit tests caught real bugs (simple-match checksums, IPv6 UDP, conntrack ICMP-embedded checksums, IP fragmentation handling). OVS 3.7 adds an outer-UDP-checksum optimization: for valid inner IPv4/TCP, the outer UDP checksum equals the inner checksum sum, so it can be derived rather than computed — plus "partial segmentation" so HW TSO packets can use it.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

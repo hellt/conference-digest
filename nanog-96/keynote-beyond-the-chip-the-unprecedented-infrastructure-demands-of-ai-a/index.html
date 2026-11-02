@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-96/content/5612/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5612/20260202_Conrades_Keynote_Beyond_The_v1.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/4LAzF7f81ws">Recording</a></p>
 </div>
 <p>Bill Conrades, Chris Stewart, Michael Balasko — <a href="../../companies/ahead/">AHEAD</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="4LAzF7f81ws" data-start="0" href="https://www.youtube.com/watch?v=4LAzF7f81ws" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/4LAzF7f81ws/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/4LAzF7f81ws/maxresdefault.jpg" alt="Play the recording: Keynote: Beyond the Chip: The Unprecedented Infrastructure Demands of AI and HPC" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="4LAzF7f81ws" data-start="0" href="https://www.youtube.com/watch?v=4LAzF7f81ws" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/4LAzF7f81ws/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/4LAzF7f81ws/maxresdefault.jpg" alt="Play the recording: Keynote: Beyond the Chip: The Unprecedented Infrastructure Demands of AI and HPC" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5612/20260202_Conrades_Keynote_Beyond_The_v1.pdf" title="PDF slides: Keynote: Beyond the Chip: The Unprecedented Infrastructure Demands of AI and HPC" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: The most concrete "facility-to-fabric" framing of AI datacenter buildouts at this meeting. For anyone whose remit includes physical DC design, this maps how power and cooling constraints now dictate network architecture choices — the limiting factors are no longer transistors but power delivery, cooling, and system-level architecture.</li>
 <li><strong>What</strong>: A structured survey of AI/HPC infrastructure: rack density evolution from air-cooled (&lt;10-15kW) through hybrid/liquid (30-80kW+) to liquid-everything (100-150kW+); a cooling technology ladder (perimeter CRAC → containment → rear-door heat exchange → direct-to-chip → immersion) with capacity bands per technology; and the networking backbone — AI backend (East/West, 1:1 oversubscription) vs frontend (North/South) reference architecture, rail-optimized topology for AllReduce collectives, and a useful comparative table of Ethernet variants (standard ECMP → enhanced ECMP+advanced LB → scheduled packet-spraying/VOQ → Ultra Ethernet) with honest cluster-size and losslessness trade-offs.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

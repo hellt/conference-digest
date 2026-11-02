@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/bof/new-age-tooling-bof.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper28-talk-slides/Yuan%20Tan.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/w-fGQuNK3pU">Recording</a></p>
 </div>
 <p><em>Chair: Jamal Hadi Salim</em></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="w-fGQuNK3pU" data-start="0" href="https://www.youtube.com/watch?v=w-fGQuNK3pU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/w-fGQuNK3pU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/w-fGQuNK3pU/maxresdefault.jpg" alt="Play the recording: New Age Tooling BoF" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="w-fGQuNK3pU" data-start="0" href="https://www.youtube.com/watch?v=w-fGQuNK3pU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/w-fGQuNK3pU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/w-fGQuNK3pU/maxresdefault.jpg" alt="Play the recording: New Age Tooling BoF" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper28-talk-slides/Yuan%20Tan.pdf" title="PDF slides: New Age Tooling BoF" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why:</strong> The most concrete public accounting so far of what AI-assisted kernel work actually produces — bugs found, patches rejected, and the review machinery being built in response. Read alongside the Greg KH keynote.</p>
 <p><strong>What:</strong> Six short segments: fuzzing past transport-security crypto gates; a proposed gate framework for filtering AI-generated security submissions; a postmortem of an AI-generated SRv6 patchset; an LLM bug-finding agent; and the Sashiko AI code-review tool's adoption story.</p>
 <p><strong>How:</strong> The fuzzing work extends BRF (a Syzkaller fork) for MPTCP because stateless fuzzers can't get past the kernel's token-lookup-then-HMAC chain — it reports two upstream-mergeable bugs in <code>net/mptcp/</code> (a userspace-PM alloc-during-teardown race, and a kernel-PM-reachable divide-by-zero in <code>tcp_tso_segs</code> that re-emerges a 2021 bug class), with honest limits stated (N=2, no controlled baseline). The submission-filter proposal is four gates, three fully automatable in CI, aimed at the ~80% of submissions where the bug doesn't exist, the root-cause analysis is hallucinated, or the patch was never tested. Sashiko, introduced mid-March 2026, is reported as adopted by most major subsystems. (From abstract only.)</p>
@@ -1013,12 +1024,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

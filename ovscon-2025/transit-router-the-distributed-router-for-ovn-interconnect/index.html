@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t14">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/Transit%20router%20-%20The%20distributed%20router%20for%20OVN%20interconnect.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/Sf-I7kgc6zo">Recording</a></p>
 </div>
 <p>Ales Musil (<a href="../../companies/red-hat/">Red Hat</a>), Mairtin O'Loingsigh (Red Hat)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="Sf-I7kgc6zo" data-start="0" href="https://www.youtube.com/watch?v=Sf-I7kgc6zo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Sf-I7kgc6zo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Sf-I7kgc6zo/maxresdefault.jpg" alt="Play the recording: Transit router - The distributed router for OVN interconnect." loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="Sf-I7kgc6zo" data-start="0" href="https://www.youtube.com/watch?v=Sf-I7kgc6zo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Sf-I7kgc6zo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Sf-I7kgc6zo/maxresdefault.jpg" alt="Play the recording: Transit router - The distributed router for OVN interconnect." loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2025/slides/Transit%20router%20-%20The%20distributed%20router%20for%20OVN%20interconnect.pdf" title="PDF slides: Transit router - The distributed router for OVN interconnect." loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: OVN interconnect (ovn-ic) previously offered only a Transit Switch; there was no simple way to route between Availability Zones. The Transit Router fills that gap as a distributed logical router spanning AZs — and it already underpins the OVN-Kubernetes Layer2 re-architecture (see the upgrade talk below).</li>
 <li><strong>What</strong>: A logical router instantiated across AZs in an ovn-ic deployment, behaving like OVN's distributed routers; new <code>ovn-ic-nbctl</code> verbs (<code>tr-add</code>, <code>trp-add</code>, <code>trp-del</code>, <code>tr-list</code>); per-AZ ARP learning with ARP responses flooded between AZs via specially added flows. The deck includes a full packet-level walkthrough (SNAT on the gateway router, Geneve tunnels between chassis, <code>lr_in_ip_routing</code> flow selection).</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

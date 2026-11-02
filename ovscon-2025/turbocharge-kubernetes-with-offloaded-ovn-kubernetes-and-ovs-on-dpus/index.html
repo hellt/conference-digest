@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t28">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/OVS%20CONFERENCE%20-%20Turbocharge%20Kubernetes.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/t-BPwTzb_1I">Recording</a></p>
 </div>
 <p>Alin Serdean (<a href="../../companies/nvidia/">NVIDIA</a>), Amit Zala (NVIDIA), Mael Kimmerlin (NVIDIA), Igal Tsoiref (<a href="../../companies/red-hat/">Red Hat</a>)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="t-BPwTzb_1I" data-start="0" href="https://www.youtube.com/watch?v=t-BPwTzb_1I" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/t-BPwTzb_1I/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/t-BPwTzb_1I/maxresdefault.jpg" alt="Play the recording: Turbocharge Kubernetes with offloaded OVN-Kubernetes and OVS on DPUs" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="t-BPwTzb_1I" data-start="0" href="https://www.youtube.com/watch?v=t-BPwTzb_1I" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/t-BPwTzb_1I/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/t-BPwTzb_1I/maxresdefault.jpg" alt="Play the recording: Turbocharge Kubernetes with offloaded OVN-Kubernetes and OVS on DPUs" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2025/slides/OVS%20CONFERENCE%20-%20Turbocharge%20Kubernetes.pdf" title="PDF slides: Turbocharge Kubernetes with offloaded OVN-Kubernetes and OVS on DPUs" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: A production-oriented, DPU-offloaded Kubernetes platform (DPF) with benchmark numbers — and a notable strategic shift: OVN-Kubernetes is moving upstream-first, reviving DPU-host mode after roughly two years dormant.</li>
 <li><strong>What</strong>: DPF (DOCA Platform Framework) manages DPU fleets declaratively: DPUSet provisioning (BFB images), DPUService/DPUServiceChain lifecycle via ArgoCD, version-compatibility gating, and rollout-velocity budgets; service chaining runs an OpenFlow controller patch-paneling OVS ports on the DPU; OVN-Kubernetes runs in DPU mode with hardware acceleration for workload pods alongside HBN. Measured 354.92 Gbit/s iperf3 between pods across two BF3 nodes through HBN plus the service chain. Future work: OVN-K as the DPU cluster's primary CNI (dropping Flannel), 2+ OVN-K instances per host, RDMA-accelerated traffic in OpenShift, and selective pod offloading instead of "offload everything".</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

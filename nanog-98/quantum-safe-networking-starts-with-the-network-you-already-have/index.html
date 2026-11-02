@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-98/content/5880/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5880/20261018_Celindro_Quantum-Safe_Networking_Starts_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=mYa-SCp2O0g">Recording</a></p>
 </div>
 <p>Vincent Paul Celindro – <a href="../../companies/quantum-foundry/">Quantum Foundry</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="mYa-SCp2O0g" data-start="0" href="https://www.youtube.com/watch?v=mYa-SCp2O0g" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/mYa-SCp2O0g/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/mYa-SCp2O0g/maxresdefault.jpg" alt="Play the recording: Quantum-Safe Networking Starts With the Network You Already Have" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="mYa-SCp2O0g" data-start="0" href="https://www.youtube.com/watch?v=mYa-SCp2O0g" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/mYa-SCp2O0g/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/mYa-SCp2O0g/maxresdefault.jpg" alt="Play the recording: Quantum-Safe Networking Starts With the Network You Already Have" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5880/20261018_Celindro_Quantum-Safe_Networking_Starts_v1.pdf" title="PDF slides: Quantum-Safe Networking Starts With the Network You Already Have" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: PQC migration framed for network operators, not cryptographers: keep the network, replace only the quantum-vulnerable public-key functions. Sits at the intersection of the PM's network-security and key-establishment/identity interests.</li>
 <li><strong>What</strong>: A migration model with three jobs: authentication (RSA/ECDSA → ML-DSA/SLH-DSA, FIPS 204/205), key establishment (DH/ECDH → ML-KEM, FIPS 203, typically hybrid ECDH+ML-KEM), and bulk protection (AES-256-GCM retained — Grover only trims margin and is hard to parallelize). Positioning: deploy PQC broadly, add QKD only where physics/topology/risk justify it. Roadmap: inventory crypto, prioritize by confidentiality lifetime (Harvest-Now-Decrypt-Later makes long-lived tunnels urgent), build crypto-agility, test vendor interop, in the context of EO 14412.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

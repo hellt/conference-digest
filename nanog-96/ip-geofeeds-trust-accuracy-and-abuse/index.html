@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-96/content/5678/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5678/20260202_Ardi_Ip_Geofeeds_Trust__v1.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/fip6Y2SLdvU">Recording</a></p>
 </div>
 <p>Calvin Ardi — <a href="../../companies/ipinfo/">IPinfo</a> (with Oliver Gasser, William Leung)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="fip6Y2SLdvU" data-start="0" href="https://www.youtube.com/watch?v=fip6Y2SLdvU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/fip6Y2SLdvU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/fip6Y2SLdvU/maxresdefault.jpg" alt="Play the recording: IP Geofeeds: Trust, Accuracy, and Abuse" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="fip6Y2SLdvU" data-start="0" href="https://www.youtube.com/watch?v=fip6Y2SLdvU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/fip6Y2SLdvU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/fip6Y2SLdvU/maxresdefault.jpg" alt="Play the recording: IP Geofeeds: Trust, Accuracy, and Abuse" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5678/20260202_Ardi_Ip_Geofeeds_Trust__v1.pdf" title="PDF slides: IP Geofeeds: Trust, Accuracy, and Abuse" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: Self-published IP geolocation (RFC 8805) is now consumed by every major geolocation provider and feeds compliance decisions (gambling law, content geo-blocking) — and this is the first large-scale measurement of whether geofeeds are <em>true</em>, plus documentation of active adversarial abuse of the format. Not a typical PM search topic, but the findings are broadly useful.</li>
 <li><strong>What</strong>: Validation via two methods: RTT multilateration from a ~1,300-probe global network (27.7M RTTs covering 205k IPv4 / 74.5k IPv6 prefixes) and GPS ground truth from mobile devices. Results: country-level consistency 92% (96.6% IPv4, 79.6% IPv6), but city-level only 79.6% for infrastructure measurements (median error a startling 759 km) and just 29.9% on mobile networks — the gap between infrastructure location and actual user location. Top mismatch sources: CDNs, tier-1s, VPNs, cellular, IP leasing. Adversarial geofeeds are real and quantified: one maps ~101k IPv6 prefixes to 249 countries and ~80k cities (including Antarctica and North Korea); 17 of 20 popular VPN providers had exit traffic in a different country than claimed; public guides exist for crafting metadata to manipulate geolocation databases.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

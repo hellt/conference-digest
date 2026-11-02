@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t18">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/Bare%20Metal%20network%20isolation%20for%20cloud%20providers%20with%20OVN%20on%20DPUs.pptx">Slides</a> <a class="pick-link" href="https://youtu.be/wDhPPEG16bQ">Recording</a></p>
 </div>
 <p>Adrian Chiris (<a href="../../companies/nvidia/">NVIDIA</a>), Mael Kimmerlin (NVIDIA), Tarek Abu-Hariri (NVIDIA)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="wDhPPEG16bQ" data-start="0" href="https://www.youtube.com/watch?v=wDhPPEG16bQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/wDhPPEG16bQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/wDhPPEG16bQ/maxresdefault.jpg" alt="Play the recording: Baremetal network isolation for cloud providers with OVN on DPUs" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PPTX</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="wDhPPEG16bQ" data-start="0" href="https://www.youtube.com/watch?v=wDhPPEG16bQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/wDhPPEG16bQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/wDhPPEG16bQ/maxresdefault.jpg" alt="Play the recording: Baremetal network isolation for cloud providers with OVN on DPUs" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fwww.openvswitch.org%2Fsupport%2Fovscon2025%2Fslides%2FBare%2520Metal%2520network%2520isolation%2520for%2520cloud%2520providers%2520with%2520OVN%2520on%2520DPUs.pptx" title="PPTX slides: Baremetal network isolation for cloud providers with OVN on DPUs" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: Secure multi-tenancy for bare-metal cloud nodes without per-tenant switch configuration — the DPU is the enforcement point a tenant cannot reach even with privileged host processes. Combines the PM's physical DC and network security interests, and it ships real throughput numbers.</li>
 <li><strong>What</strong>: OVN/OVS offloaded to BlueField-3 and run in a separate trust domain under cloud-admin control; tenant VPCs (bridged L2 networks with DHCP, masquerade, external routing, floating-IP-class features) enforced transparently to the host, with declarative Kubernetes CRDs (<code>DPUVPC</code>, <code>DPUVirtualNetwork</code>, <code>DPUServiceInterface</code>) mapping bare-metal machines to tenants dynamically. Test results: node-to-node RoCE with Geneve encapsulation on BF3 with 2×200Gb/s links — 191.9 Gb/s without ECMP, 383 Gb/s with ECMP (BGP to an L3 ToR, single hop, OVS-based HBN router).</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

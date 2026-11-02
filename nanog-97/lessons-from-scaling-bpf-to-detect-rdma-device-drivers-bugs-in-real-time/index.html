@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-97/content/5659/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5659/20260530_Gupta_Lessons_From_Scaling_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=MbPCKIDUhmo">Recording</a></p>
 </div>
 <p>Prankur Gupta – <a href="../../companies/meta/">Meta Platforms, Inc</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="MbPCKIDUhmo" data-start="0" href="https://www.youtube.com/watch?v=MbPCKIDUhmo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/MbPCKIDUhmo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/MbPCKIDUhmo/maxresdefault.jpg" alt="Play the recording: Lessons From Scaling BPF To Detect RDMA Device Drivers Bugs In Real Time" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="MbPCKIDUhmo" data-start="0" href="https://www.youtube.com/watch?v=MbPCKIDUhmo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/MbPCKIDUhmo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/MbPCKIDUhmo/maxresdefault.jpg" alt="Play the recording: Lessons From Scaling BPF To Detect RDMA Device Drivers Bugs In Real Time" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG97/5659/20260530_Gupta_Lessons_From_Scaling_v1.pdf" title="PDF slides: Lessons From Scaling BPF To Detect RDMA Device Drivers Bugs In Real Time" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: RDMA driver bugs are a top cause of AI training failures at Meta — 10–20% of daily AI job crashes are RDMA-associated (not network-related), wasting 32k+ GPU hours over six months — and the RDMA control path is famously opaque to existing observability. This sits squarely at the intersection of eBPF and lossless-fabric operations.</li>
 <li><strong>What</strong>: RDMATracer, an eBPF-based tool that detects RDMA device driver bugs in real time by tracing kernel state mismatches across the ibverbs control path. In production it cuts diagnosis from 10+ minutes to seconds, auto-classifies issues, and was used to triage a black-box vendor driver bug (a <code>dma_resv_wait_timeout</code> overflow in <code>ib_umem_dmabuf_map_pages</code> on a newly deployed NIC driver).</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

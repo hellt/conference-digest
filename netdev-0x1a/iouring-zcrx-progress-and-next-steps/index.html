@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/talk/io_uring-zcrx-progress-and-next-steps.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper41-talk-slides/zcrx.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/oXyAF_xfdUw">Recording</a></p>
 </div>
 <p><em>Pavel Begunkov</em></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="oXyAF_xfdUw" data-start="0" href="https://www.youtube.com/watch?v=oXyAF_xfdUw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/oXyAF_xfdUw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/oXyAF_xfdUw/maxresdefault.jpg" alt="Play the recording: io_uring ZCRX: Progress and Next Steps" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="oXyAF_xfdUw" data-start="0" href="https://www.youtube.com/watch?v=oXyAF_xfdUw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/oXyAF_xfdUw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/oXyAF_xfdUw/maxresdefault.jpg" alt="Play the recording: io_uring ZCRX: Progress and Next Steps" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper41-talk-slides/zcrx.pdf" title="PDF slides: io_uring ZCRX: Progress and Next Steps" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why:</strong> Zero-copy receive that keeps the normal stack (and its tooling and observability) is the pragmatic alternative to kernel bypass; since 6.15 it has been real, and this is the honest status report.</p>
 <p><strong>What:</strong> Recent ZCRX developments, API additions, and the open questions blocking broader adoption. <strong>How:</strong> The named problems are refill-queue exhaustion when buffers can't be recycled, sharing a NIC queue between multiple processes, and letting applications detect memory pressure before allocation failures bite. (From abstract only.)</p>
 <p><strong>Where applicable:</strong> Linux 6.15+ hosts with supported NICs; general-purpose high-throughput services rather than specialist bypass workloads.</p>
@@ -1012,12 +1023,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

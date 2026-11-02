@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-96/content/5574/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5574/20260202_Cuiller_Redefining_Netflix_Bgp_v1.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/LOZDX7BlO74">Recording</a></p>
 </div>
 <p>Fred Cuiller — <a href="../../companies/cisco/">Cisco</a>; Elise Vennegues — <a href="../../companies/netflix/">Netflix</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="LOZDX7BlO74" data-start="0" href="https://www.youtube.com/watch?v=LOZDX7BlO74" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/LOZDX7BlO74/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/LOZDX7BlO74/maxresdefault.jpg" alt="Play the recording: Redefining Netflix BGP architecture" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="LOZDX7BlO74" data-start="0" href="https://www.youtube.com/watch?v=LOZDX7BlO74" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/LOZDX7BlO74/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/LOZDX7BlO74/maxresdefault.jpg" alt="Play the recording: Redefining Netflix BGP architecture" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5574/20260202_Cuiller_Redefining_Netflix_Bgp_v1.pdf" title="PDF slides: Redefining Netflix BGP architecture" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: A large, real BGP architecture migration with the validation methodology, defect discovery, and phased cutover shown — the parts that usually get omitted. Netflix's edge is 400+ PoPs, 19,000+ OCAs, ~175 countries, 20,000+ eBGP sessions to 2,800+ ASNs; moving that off iBGP full-mesh is a serious operational story.</li>
 <li><strong>What</strong>: Replacement of iBGP full mesh between Edge Switches and Provider Edge routers with a route-reflector hierarchy built on Cisco IOS XRv9000 UCS M7 appliances (chosen over traditional routers and VNFs on integrated TPM, CoPP, operational simplicity). RRs placed in six global sites; production scale runs to 37M IPv4 paths / 300+ clients in North America, 20M paths / 250+ clients in EMEA. Interesting appliance-selection comparison table (router vs VNF vs appliance across scale, CoPP, security, cost).</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

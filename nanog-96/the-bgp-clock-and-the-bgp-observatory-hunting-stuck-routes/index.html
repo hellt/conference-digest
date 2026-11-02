@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-96/content/5599/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5599/20260204_Sanjta_The_Bgp_Clock_v1.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/nrQppEUZJO4">Recording</a></p>
 </div>
 <p>Kemal Sanjta — <a href="../../companies/cisco/">Cisco ThousandEyes</a></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="nrQppEUZJO4" data-start="0" href="https://www.youtube.com/watch?v=nrQppEUZJO4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/nrQppEUZJO4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/nrQppEUZJO4/maxresdefault.jpg" alt="Play the recording: The BGP Clock and the BGP Observatory: Hunting Stuck Routes​" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="nrQppEUZJO4" data-start="0" href="https://www.youtube.com/watch?v=nrQppEUZJO4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/nrQppEUZJO4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/nrQppEUZJO4/maxresdefault.jpg" alt="Play the recording: The BGP Clock and the BGP Observatory: Hunting Stuck Routes​" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG96/5599/20260204_Sanjta_The_Bgp_Clock_v1.pdf" title="PDF slides: The BGP Clock and the BGP Observatory: Hunting Stuck Routes​" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: BGP zombies — routes that persist in RIBs long after withdrawal because a router lost the UPDATE — happen hundreds of times a day on the public Internet and quietly direct traffic onto dead or congested links. Prior work showed withdrawn-and-RPKI-invalid prefixes persisting for <em>months</em>; this is the follow-up operational tool, and it's free.</li>
 <li><strong>What</strong>: The BGP Clock: a continuously running beacon that advertises a fresh prefix every 10 minutes and withdraws it, encoding time in the prefix itself (IPv6 <code>2a0d:3dc1:NNNN::/48</code>, N = 10-minute index since Jan 1, recycled yearly; IPv4 <code>147.189.(216+N).0/24</code>, N = hour mod 8, recycled every 8 hours — details retrievable via <code>whois</code>). Anyone can check their own RIBs for stale entries. On top of it, the Stuck Route Observatory: a free, no-login web tool where you search by AS and see whether stuck routes are present in your paths, plus a heuristic guess at whether the failure to propagate a withdrawal is yours or an upstream's. RFC 9687 is the new standards attempt at reducing impact — the presenters explicitly ask operators to request vendor support for it.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

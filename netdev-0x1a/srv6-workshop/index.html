@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/workshop/srv6-workshop.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper48-talk-slides/netdev-0x1A-srv6-l2-services.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/VWlH9D7FSCU">Recording</a></p>
 </div>
 <p><em>Chair: Stefano Salsano (<a href="../../companies/university-of-rome-tor-vergata/">Univ. of Rome Tor Vergata</a>), with <a href="../../companies/cisco/">Cisco</a>, <a href="../../companies/ericsson/">Ericsson</a> contributors</em></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="VWlH9D7FSCU" data-start="0" href="https://www.youtube.com/watch?v=VWlH9D7FSCU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/VWlH9D7FSCU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/VWlH9D7FSCU/maxresdefault.jpg" alt="Play the recording: SRv6 Workshop" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="VWlH9D7FSCU" data-start="0" href="https://www.youtube.com/watch?v=VWlH9D7FSCU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/VWlH9D7FSCU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/VWlH9D7FSCU/maxresdefault.jpg" alt="Play the recording: SRv6 Workshop" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper48-talk-slides/netdev-0x1A-srv6-l2-services.pdf" title="PDF slides: SRv6 Workshop" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why:</strong> The counterpart to the MRC talk, and the more actionable one: SRv6 is the mechanism by which host-decided pathing and VXLAN replacement both become possible in mainline Linux, and this session covers exactly the gaps that still block that.</p>
 <p><strong>What:</strong> Three threads — source-routed AI backends (deterministic, congestion-aware path placement decided at host/NIC rather than by ECMP hashing); SRv6 L2 services beyond the current <code>End.DX2</code> cross-connect; and a provider-grade end-to-end design on Linux + FRR with a new observability tool.</p>
 <p><strong>How:</strong> On L2: RFC 8986 defines <code>End.DX2</code>/<code>DT2U</code>/<code>DT2M</code> and RFC 9252 the EVPN-over-SRv6 overlay, but the kernel only implements the <code>End.DX2</code> cross-connect with no native L2 endpoint netdevice; a recent netdev RFC series adds <code>End.DT2U</code> plus an <code>sr6</code> Ethernet pseudowire device, which is what would make a VXLAN-like deployment model (and therefore replacing VXLAN in Kubernetes CNIs, OVN, Neutron) viable. The provider thread adds <code>tablesnoop</code>, a lookup-level tracer sitting between tcpdump and pwru/retis that traces PBR, v4/v6 route lookups, SRv6 head-end/endpoint behaviors and MPLS label ops, plus SRv6 Redundancy Protection (a new R-SID format from <code>draft-ietf-spring-sr-redundancy-protection</code>) with 802.1CB FRER extended to SRv6 encapsulation via XDP. (From abstract and agenda.)</p>
@@ -1013,12 +1024,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

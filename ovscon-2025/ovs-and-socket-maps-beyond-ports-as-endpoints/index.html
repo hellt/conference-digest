@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/#t25">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2025/slides/OvS%20and%20Socket%20Maps.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/ONVxHA9chJU">Recording</a></p>
 </div>
 <p>Aaron Conole (<a href="../../companies/red-hat/">Red Hat</a>)</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="ONVxHA9chJU" data-start="0" href="https://www.youtube.com/watch?v=ONVxHA9chJU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/ONVxHA9chJU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/ONVxHA9chJU/maxresdefault.jpg" alt="Play the recording: OvS and Socket Maps - Beyond ports as endpoints" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="ONVxHA9chJU" data-start="0" href="https://www.youtube.com/watch?v=ONVxHA9chJU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/ONVxHA9chJU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/ONVxHA9chJU/maxresdefault.jpg" alt="Play the recording: OvS and Socket Maps - Beyond ports as endpoints" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://www.openvswitch.org/support/ovscon2025/slides/OvS%20and%20Socket%20Maps.pdf" title="PDF slides: OvS and Socket Maps - Beyond ports as endpoints" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: A genuinely surprising datapath idea: treat application sockets as packet endpoints and skip the IP stack entirely. Measured ~1000ns of 7395ns per-packet protocol overhead in netns-to-netns forwarding — relevant to anyone watching eBPF/XDP-style bypass techniques reach general SDN tooling.</li>
 <li><strong>What</strong>: An exploration with four prototype approaches (in-datapath table, userspace-centric, eBPF-based, plus a socket-map variant), with numbers: 7395 → 6190ns per packet (and ~23k more 65k-packets/s) using a <code>sock(try)</code> action to skip conntrack; the socket-map-style approach measured 8254ns — essentially identical to plain output, reported without spin. Difficulty is candidly labeled "very much a nightmare": tracking sockets across netns boundaries and rewriting recirc state. Preliminary patches are posted; the direction is undecided.</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

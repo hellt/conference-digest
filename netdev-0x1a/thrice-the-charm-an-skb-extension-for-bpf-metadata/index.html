@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://netdevconf.info/0x1A/sessions/talk/thrice-the-charm-an-skb-extension-for-bpf-metadata.html">Abstract</a> <a class="pick-link" href="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper31-talk-slides/Netdev%200x1A%20-%20Thrice%20the%20charm%20-%20an%20skb%20extension%20for%20BPF%20metadata.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/ot2K4-PFQDc">Recording</a></p>
 </div>
 <p><em>Jakub Sitnicki and Andrej Stender</em></p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="ot2K4-PFQDc" data-start="0" href="https://www.youtube.com/watch?v=ot2K4-PFQDc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/ot2K4-PFQDc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/ot2K4-PFQDc/maxresdefault.jpg" alt="Play the recording: Thrice the charm: an skb extension for BPF metadata" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="ot2K4-PFQDc" data-start="0" href="https://www.youtube.com/watch?v=ot2K4-PFQDc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/ot2K4-PFQDc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/ot2K4-PFQDc/maxresdefault.jpg" alt="Play the recording: Thrice the charm: an skb extension for BPF metadata" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://netdevconf.info/0x1A/docs/netdev-0x1a-paper31-talk-slides/Netdev%200x1A%20-%20Thrice%20the%20charm%20-%20an%20skb%20extension%20for%20BPF%20metadata.pdf" title="PDF slides: Thrice the charm: an skb extension for BPF metadata" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Why:</strong> Carrying custom per-packet metadata between BPF hooks is a recurring blocker for anything building policy or identity into the datapath (service mesh, per-connection labels, tenant tags). This is the third attempt at solving it and the write-up includes why the previous designs failed.</p>
 <p><strong>What:</strong> A proposal to give BPF programs a place to store data whose lifetime is the skb's, outside the narrow scope where XDP/skb metadata works today.</p>
 <p><strong>How:</strong> Two candidate mechanisms are compared — one available today, one still on the drawing board — from the point of view of the BPF networking hooks and their overhead, along with the rejected alternatives (extending skb metadata lifetime guarantees, BPF local storage) and why they didn't work. The skb-extension mechanics get the most attention: compiling out unused extensions, and the extra hot-path allocation that skb extensions currently imply. Ends on open user-API questions. (From abstract only.)</p>
@@ -1013,12 +1024,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

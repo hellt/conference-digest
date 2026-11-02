@@ -915,7 +915,15 @@
 <ul>
 <li><strong>Authors / tier</strong>: Wei Liu (<a href="../../companies/tsinghua-university/">Tsinghua</a> and <a href="../../companies/alibaba/">Alibaba Cloud</a>); Kun Qian (Alibaba Cloud); Zhenhua Li (Tsinghua); Feng Qian (<a href="../../companies/university-of-southern-california/">USC</a>); Tianyin Xu (<a href="../../companies/university-of-illinois-urbana-champaign/">UIUC</a>); Yunhao Liu (Tsinghua); Yu Guan, Shuhong Zhu, Hongfei Xu, Lanlan Xi, Chao Qin, Ennan Zhai (Alibaba Cloud). <em>Core.</em></li>
 </ul>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="s_zQhJuQL7Y" data-start="0" href="https://www.youtube.com/watch?v=s_zQhJuQL7Y" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/s_zQhJuQL7Y/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/s_zQhJuQL7Y/maxresdefault.jpg" alt="Play the recording: Mitigating Scalability Walls of RDMA-based Container Networks" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="s_zQhJuQL7Y" data-start="0" href="https://www.youtube.com/watch?v=s_zQhJuQL7Y" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/s_zQhJuQL7Y/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/s_zQhJuQL7Y/maxresdefault.jpg" alt="Play the recording: Mitigating Scalability Walls of RDMA-based Container Networks" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: RDMA-offloaded container networks deliver big wins (the paper shows ~21 Gbps TCP rising to ~180 Gbps once forwarding and VXLAN move to the RNIC and RDMA carries packets), but performance collapses unexpectedly at the scale of millions of containers. Anyone betting on RNIC offload for container fabric needs to understand this ceiling.</li>
 <li><strong>What</strong>: The "scalability wall" is traced to the RNICs themselves — design/implementation defects that are invisible because RNIC internals are closed. They build ScalaCN, which infers the most likely causes despite that opacity and proactively reschedules NF offload.</li>
@@ -1017,12 +1025,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

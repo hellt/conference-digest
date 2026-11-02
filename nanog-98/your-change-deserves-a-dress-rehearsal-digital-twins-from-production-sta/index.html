@@ -913,7 +913,18 @@
 <p><a class="pick-link" href="https://nanog.org/events/nanog-98/content/5865/">Abstract</a> <a class="pick-link" href="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5865/20261018_Tarno_Your_Change_Deserves_v1.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=633Z0dxvMzg">Recording</a></p>
 </div>
 <p>Brad Tarno – The Walt <a href="../../companies/disney/">Disney</a> Company</p>
-<div class="pick-video"><a class="pick-video__thumb" data-yt="633Z0dxvMzg" data-start="0" href="https://www.youtube.com/watch?v=633Z0dxvMzg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/633Z0dxvMzg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/633Z0dxvMzg/maxresdefault.jpg" alt="Play the recording: Your Change Deserves a Dress Rehearsal: Digital Twins from Production State with Containerlab and OTG" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label><label for="__tabbed_1_2">PDF</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="633Z0dxvMzg" data-start="0" href="https://www.youtube.com/watch?v=633Z0dxvMzg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/633Z0dxvMzg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/633Z0dxvMzg/maxresdefault.jpg" alt="Play the recording: Your Change Deserves a Dress Rehearsal: Digital Twins from Production State with Containerlab and OTG" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+<div class="tabbed-block">
+<p><iframe class="pick-slides__frame" src="https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5865/20261018_Tarno_Your_Change_Deserves_v1.pdf" title="PDF slides: Your Change Deserves a Dress Rehearsal: Digital Twins from Production State with Containerlab and OTG" loading="lazy" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: The most directly adoptable tooling talk of the program: a self-service lab-as-a-service that builds disposable twins from what production actually runs, closing the "valid config is not a safe config" gap (their motivating change: one peer-reviewed line silently suppressed 36→1 routes). Every load-bearing component is open source.</li>
 <li><strong>What</strong>: A platform that harvests real device configs, transforms them per-platform to boot on virtual NOS images (cEOS, XRd, vJunos, N9Kv, FRR/gobgp), deploys via containerlab, and validates with Open Traffic Generator traffic (snappi), emulated BGP peer twins replaying real routes with full attributes, and Batfish+hier_config differential analysis of the predicted post-change config. Verdicts are graded per-axis (syntax by the real NOS parser, static, control plane, traffic, propagation) with convergence-aware traffic grading (PASS / PASS* transient loss quantified / FAIL permanent loss) and explicit INCONCLUSIVE outcomes with declared fidelity limits (MACsec stripped, multicast data plane, QoS queuing not graded).</li>
@@ -1015,12 +1026,14 @@
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
       
         <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
       
     
   </body>

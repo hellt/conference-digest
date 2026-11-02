@@ -332,3 +332,21 @@ series:
     program_url_template: "https://api.apnic.net/web/v1/events"
     manual_fallback_url_template: "https://{year}.apricot.net/programme/"
     notes: "The Asia-Pacific operators summit (with APNIC): routing, peering, datacenter and backbone operations, DNS, security, automation."
+
+  # FOSDEM publishes the whole edition as one Pentabarf schedule XML — the
+  # same feed the mobile apps use — with per-event pages, abstracts, speakers,
+  # slide attachments and video.fosdem.org recordings. The event is far wider
+  # than this digest's reader, so the fetcher keeps a curated track set
+  # (network, eBPF, DNS, security, identity, confidential computing,
+  # containers, virtualization, kernel, main) and drops workshops and
+  # lightning talks; edit RELEVANT_TRACKS in fosdem.py as interests shift.
+  - series: fosdem
+    enumerate: year
+    key_template: "fosdem-{year}"
+    name_template: "FOSDEM {year}"
+    type: vendor
+    fetcher: fosdem
+    start: 2026
+    program_url_template: "https://fosdem.org/{year}/schedule/xml"
+    manual_fallback_url_template: "https://fosdem.org/{year}/schedule/"
+    notes: "Europe's largest FOSS event: open-source networking (Linux, OVS, eBPF/XDP), DNS, security and identity devrooms. Curated track filter in the fetcher; per-talk pages, slides and video.fosdem.org recordings."

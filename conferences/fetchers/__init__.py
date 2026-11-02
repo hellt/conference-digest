@@ -15,9 +15,11 @@ from .ccs import CcsFetcher
 from .imc import ImcFetcher
 from .conext import ConextFetcher
 from .apricot import ApricotFetcher
+from .fosdem import FosdemFetcher
 from .imc import ImcFetcher
 from .conext import ConextFetcher
 from .apricot import ApricotFetcher
+from .fosdem import FosdemFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -37,6 +39,7 @@ FETCHERS = {
     "imc": ImcFetcher(),
     "conext": ConextFetcher(),
     "apricot": ApricotFetcher(),
+    "fosdem": FosdemFetcher(),
 }
 
 

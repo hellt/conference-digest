@@ -16,6 +16,9 @@
         <loc>https://tldr.netdevops.me/archive/2026/page/2/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/archive/2026/page/3/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/arin-58/</loc>
       </url>
       <url>
@@ -2363,6 +2366,48 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/nlnog-2026/vpp-evpn-controlplane/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/a-deep-dive-into-nlnogs-tools/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/about-localroot/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/aspa-rpki-bgp-path-verification/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/digital-networks-act-and-fair-share-update/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/knowledge-is-the-power-network-automation-beyond-the-vendor/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/managing-cryptographic-transitions-cryptoagility-as-an-enabler-and-a-cha/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/naf-framework/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/rfc8950-for-a-v4less-as-world-diving-into-the-magic-of-ipv4-with-ipv6-ne/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/root-ksk-rollover-2026-an-operators-readiness-checklist/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/the-irr-landscape-and-its-implications-on-global-internet-traffic/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/the-no-nonsense-approach-to-build-infrastructure-that-lasts/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/veeam-mcp-server/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nogfi-2026-06/why-gpus-are-awful-to-virtualize/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/nsdi-2025/</loc>

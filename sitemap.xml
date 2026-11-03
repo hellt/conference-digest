@@ -58,6 +58,60 @@
         <loc>https://tldr.netdevops.me/arin-58/routing-security-update/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/architecture-and-troubleshooting-a-guide-to-aws-peering/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/assurance-on-a-budget/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/because-copypaste-isnt-a-network-configuration-strategy-automation-for-a/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/bgp-evpn-a-view-from-the-field/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-fl/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/keynote-presentation-will-australia-be-all-at-sea-on-national-sovereign/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/lessons-from-the-state-sponsored-siege-on-core-telecom-infrastructure/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/migrating-a-large-telco-networks-igp-from-ospfospfv3-to-isis/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/mission-possible-disabling-ipv4-on-google-enterprise-network/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/optimizing-traffic-flow-with-akamai/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/our-journey-on-how-we-are-modernising-our-network/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/rethinking-address-reality-ipv4-utilisation-and-proxy-network-exposure-i/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/return-loss-problems-associated-with-faster-optical-networks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/revocation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/rural-fibre-co/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/securing-modern-telco-networks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2026/the-cdn-landscape-revisited-static-live-and-ai/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/autocon-3/</loc>
       </url>
       <url>
@@ -275,6 +329,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/category/operator/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/category/operator/page/2/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/category/security/</loc>
@@ -2080,6 +2137,72 @@
         <loc>https://tldr.netdevops.me/netdev-0x1a/whats-next-for-the-psp-security-protocol-workshop/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/netnod-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2026/ai-clusters-scale-data-center-networks-are-being-pushed-to-their-absolut/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2026/as112-deployment-characteristics-and-security/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2026/evolution-and-trends-of-optical-networks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2026/internet-resilience-in-ukraine/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2026/keynote-speech-high-volume-ai-vulnerability-reports/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2026/panel-discussion-beyond-the-looking-glass-the-future-of-bgp-visibility/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2026/prevent-route-leaking-with-aspa-and-bgp-roles/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2026/stratoweave-a-new-architecture-for-network-automation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2026/surviving-in-the-new-geopolitical-landscape/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2026/telstra-outage-the-night-a-network-decided-the-year-was-2006/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2026/the-internet-change-clock/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2026/understanding-and-optimising-transceiver-efficiency-using-internal-metri/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2026/how-to-change-the-internet-itself/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2026/internet-exchanges-in-space/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2026/kubernetes-for-network-engineers/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2026/lessons-from-10-months-of-aspa/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2026/networking-without-the-internet/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2026/the-art-of-making-vendors-agree-lessons-from-interoperability-testing/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2026/the-hitchhikers-guide-to-ipv6-dont-panic-weve-only-got-30-minutes/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2026/vpp-evpn-controlplane/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/nsdi-2025/</loc>
       </url>
       <url>
@@ -2342,6 +2465,66 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/page/3/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/a-risk-assessment-framework-for-digital-identification-systems/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/censorless-cost-efficient-censorship-circumvention-through-serverless-cl/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/codoh-privacy-preserving-caching-for-oblivious-dns-over-https/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/cryptographically-secured-domain-validation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/di5guise-5g-privacy-with-vsim/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/ephemeral-network-layer-fingerprinting-defenses/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/evaluating-connection-migration-based-quic-censorship-circumvention/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/more-space-less-privacy-measuring-the-effectiveness-of-ip-based-website/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/oauthhub-mitigating-oauth-data-overaccess-through-a-local-data-hub/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/obscura-enabling-ephemeral-proxies-for-traffic-encapsulation-in-webrtc-m/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/personalizing-agent-privacy-decisions-via-logical-entailment/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/pirouette-query-efficient-single-server-pir/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/privacy-pass-is-anamorphic-practical-consequences-and-attacks-in-the-bla/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/redefining-website-fingerprinting-attacks-with-multi-agent-llms/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/sok-can-fully-homomorphic-encryption-support-general-ai-computation-a-fu/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/sok-offline-finding-protocols-for-lightweight-location-tracking/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/understanding-privacy-and-quality-tradeoffs-in-synthetic-network-data/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/what-app-app-usage-detection-using-encrypted-lte5g-traffic/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pets-2026/zkrevoke-configurable-untraceability-for-verifiable-credentials-using-zk/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/ripe-93/</loc>

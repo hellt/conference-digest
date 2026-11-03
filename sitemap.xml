@@ -343,6 +343,84 @@
         <loc>https://tldr.netdevops.me/category/vendor/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/400g-800g-and-terabit-pluggable-optics-what-you-need-to-know-brkopt-2699/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/a-quantum-leap-in-networking-ciscos-blueprint-for-tomorrows-infrastructu/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/ai-gave-every-attacker-a-kubernetes-playbook-isovalent-takes-it-away-pso/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/beyond-the-switch-port-exploring-the-world-of-host-networking-brknwt-262/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/building-aiml-fabrics-at-hyperscale-architecture-evolutions-challenges-o/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/cisco-nexus-9000-architecture-brkdcn-3939/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/control-your-destiny-in-the-token-based-ai-economy-with-pluggable-optics/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/designing-rocev2-networks-for-distributed-ai-training-with-cisco-nexus-9/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/failure-patterns-in-modern-distributed-systems-lessons-from-major-intern/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/hijacking-trust-weaponizing-stolen-cookies-and-tokens-brksec-2132/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/hunting-the-invisible-army-visibility-for-ai-agents-non-human-identities/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/life-of-a-packet-in-kubernetes-a-network-engineers-guide-brkcld-3734/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/modern-multi-homing-in-vxlan-evpn-enabling-vpc-and-esi-in-todays-data-ce/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/pig-in-the-middle-tls-decryption-and-encrypted-visibility-engine-deep-di/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/real-world-deployments-architectural-lessons-learnt-from-a-100-node-ai-f/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/reclaiming-your-agency-mcp-oauth-21-and-the-power-to-automate-anything-b/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/safeguarding-the-internets-backbone-unleashing-the-power-of-rpki-for-unb/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/silicon-one-unveiled-diving-into-the-power-of-cisco-silicon-brknwt-2624/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/the-network-capability-ai-has-been-waiting-for-brkpar-1026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/the-new-quic-based-encrypted-protocol-stack-taking-over-the-internet-and/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/troubleshooting-sonic-on-cisco-8000-learn-how-to-troubleshoot-bgp-acl-vx/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/unifying-kubernetes-and-the-data-center-isovalent-private-networks-over/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/your-ai-agents-dont-talk-to-my-ai-agents-lets-fix-that-brketi-1009/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2026/zero-trust-for-agents-psosec-2344/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/</loc>
       </url>
       <url>
@@ -1028,6 +1106,39 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/conferences/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/grnog-20/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/grnog-20/a-comprehensive-analysis-of-the-irr-landscape/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/grnog-20/agentic-ai-in-networking/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/grnog-20/aspa-and-roles-whats-up-with-that/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/grnog-20/balkan-digital-gateway-enhancing-greeces-regional-connectivity/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/grnog-20/dns4eu-public-dns-resolver-infrastructure/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/grnog-20/evpn-one-control-plane-to-rule-them-all/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/grnog-20/infrahub-next-gen-data-management-platform-for-design-driven-automation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/grnog-20/mpte-update/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/grnog-20/the-future-of-network-visibility-llm-and-intelligent-monitoring/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/grnog-20/webpki-automation-and-the-push-for-more-agility/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/gtc-2026/</loc>
@@ -2516,6 +2627,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/page/3/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/page/4/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/pets-2026/</loc>

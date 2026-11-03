@@ -1,0 +1,2149 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A note on sources: the Cisco Live on-demand library is a login-gated SPA — page fetches return only a shell with no session content, and the program carries no paper or slide links. Every write-up below is therefore grounded in the session abstract only. Cisco Live is a vendor conference:…">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/ciscolive-us-2026/">
+      
+      
+      
+        <link rel="prev" href="../grnog-20/">
+      
+      
+        <link rel="next" href="../netuk-3/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>Cisco Live US 2026 (Las Vegas) — for Networking / Security / Identity PM - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="Cisco Live US 2026 (Las Vegas) — for Networking / Security / Identity PM · Conference Digest" />
+<meta property="og:description" content="A note on sources: the Cisco Live on-demand library is a login-gated SPA — page fetches return only a shell with no session content, and the program carries no paper or slide links. Every write-up below is therefore grounded in the session abstract only. Cisco Live is a vendor conference:…" />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/ciscolive-us-2026.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/ciscolive-us-2026/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Cisco Live US 2026 (Las Vegas) — for Networking / Security / Identity PM · Conference Digest" />
+<meta property="twitter:description" content="A note on sources: the Cisco Live on-demand library is a login-gated SPA — page fetches return only a shell with no session content, and the program carries no paper or slide links. Every write-up below is therefore grounded in the session abstract only. Cisco Live is a vendor conference:…" />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/ciscolive-us-2026.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cisco Live US 2026 (Las Vegas) — for Networking / Security / Identity PM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../category/academic/" class="md-tabs__link">
+          
+  
+  Conference type
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-tabs__powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-tabs__powered-text">Powered by</span>
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-aiml-fabrics-at-hyperscale-architecture-evolutions-challenges-open-standards-performance-characterization-and-validation-on-cisco-siliconone-based-platforms-brkmsi-2014" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Building AI/ML Fabrics at Hyperscale: Architecture Evolutions, Challenges, Open Standards, Performance Characterization and Validation on Cisco SiliconOne-based Platforms. - BRKMSI-2014
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designing-rocev2-networks-for-distributed-ai-training-with-cisco-nexus-9000-brkdcn-2688" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Designing RoCEv2 Networks for Distributed AI Training with Cisco Nexus 9000 - BRKDCN-2688
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-deployments-architectural-lessons-learnt-from-a-100-node-ai-factory-deployment-brkxar-2039" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Real World Deployments: Architectural lessons learnt from a 100+ Node AI Factory Deployment - BRKXAR-2039
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cisco-nexus-9000-architecture-brkdcn-3939" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cisco Nexus 9000 Architecture - BRKDCN-3939
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#silicon-one-unveiled-diving-into-the-power-of-cisco-silicon-brknwt-2624" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Silicon One Unveiled: Diving into the power of Cisco silicon - BRKNWT-2624
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#400g-800g-and-terabit-pluggable-optics-what-you-need-to-know-brkopt-2699" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        400G, 800G, and Terabit Pluggable Optics: What You Need to Know - BRKOPT-2699
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        VXLAN EVPN: A Deep Dive into Packet Forwarding - BRKDCN-3966
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modern-multi-homing-in-vxlan-evpn-enabling-vpc-and-esi-in-todays-data-centers-brkdcn-2940" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modern Multi-Homing in VXLAN EVPN: Enabling vPC and ESI+ in Today's Data Centers - BRKDCN-2940
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-sonic-on-cisco-8000-learn-how-to-troubleshoot-bgp-acl-vxlan-on-sonic-tacmsi-2001" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Troubleshooting SONIC on Cisco 8000: Learn how to Troubleshoot BGP, ACL, VxLAN on SONIC - TACMSI-2001
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beyond-the-switch-port-exploring-the-world-of-host-networking-brknwt-2620" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Beyond the (Switch)-Port: Exploring the World of Host Networking - BRKNWT-2620
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#life-of-a-packet-in-kubernetes-a-network-engineers-guide-brkcld-3734" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Life of a Packet in Kubernetes: A Network Engineer's Guide - BRKCLD-3734
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unifying-kubernetes-and-the-data-center-isovalent-private-networks-over-evpnvxlan-brkdcn-3668" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Unifying Kubernetes and the Data Center: Isovalent Private Networks over EVPN/VXLAN - BRKDCN-3668
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hijacking-trust-weaponizing-stolen-cookies-and-tokens-brksec-2132" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Hijacking Trust: Weaponizing Stolen Cookies and Tokens - BRKSEC-2132
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reclaiming-your-agency-mcp-oauth-21-and-the-power-to-automate-anything-brksec-2065" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reclaiming Your Agency: MCP, OAuth 2.1 and the Power to Automate Anything - BRKSEC-2065
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hunting-the-invisible-army-visibility-for-ai-agents-non-human-identities-brksec-2067" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Hunting the Invisible Army: Visibility for AI Agents &amp; Non-human Identities - BRKSEC-2067
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-ai-agents-dont-talk-to-my-ai-agents-lets-fix-that-brketi-1009" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Your AI Agents Don't Talk to My AI Agents - Let's Fix That! - BRKETI-1009
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pig-in-the-middle-tls-decryption-and-encrypted-visibility-engine-deep-dive-on-cisco-secure-firewall-brksec-3320" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Pig-in-the-Middle - TLS Decryption and Encrypted Visibility Engine Deep Dive on Cisco Secure Firewall - BRKSEC-3320
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safeguarding-the-internets-backbone-unleashing-the-power-of-rpki-for-unbreakable-ipv4-and-ipv6-bgp-security-brkent-2179" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Safeguarding the Internet's Backbone: Unleashing the Power of RPKI for Unbreakable IPv4 and IPv6 BGP Security - BRKENT-2179
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control-your-destiny-in-the-token-based-ai-economy-with-pluggable-optics-innovations-psomsi-1005" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Control your destiny in the token-based AI economy with pluggable optics innovations - PSOMSI-1005
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-gave-every-attacker-a-kubernetes-playbook-isovalent-takes-it-away-psosec-2345" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AI Gave Every Attacker a Kubernetes Playbook. Isovalent Takes It Away - PSOSEC-2345
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-trust-for-agents-psosec-2344" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Zero Trust for Agents - PSOSEC-2344
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-new-quic-based-encrypted-protocol-stack-taking-over-the-internet-and-how-to-deal-with-it-brkspm-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The New, QUIC Based Encrypted Protocol Stack Taking over the Internet and How to Deal with It - BRKSPM-2024
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-quantum-leap-in-networking-ciscos-blueprint-for-tomorrows-infrastructure-ceneti-1281" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Quantum Leap in Networking: Cisco's Blueprint for Tomorrow's Infrastructure - CENETI-1281
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-network-capability-ai-has-been-waiting-for-brkpar-1026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Network Capability AI Has Been Waiting For - BRKPAR-1026
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure-patterns-in-modern-distributed-systems-lessons-from-major-internet-outages-brkops-2000" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Failure Patterns in Modern Distributed Systems: Lessons from Major Internet Outages - BRKOPS-2000
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conference type
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Conference type
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Academic
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operator
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Security
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standards
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendor
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-aiml-fabrics-at-hyperscale-architecture-evolutions-challenges-open-standards-performance-characterization-and-validation-on-cisco-siliconone-based-platforms-brkmsi-2014" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Building AI/ML Fabrics at Hyperscale: Architecture Evolutions, Challenges, Open Standards, Performance Characterization and Validation on Cisco SiliconOne-based Platforms. - BRKMSI-2014
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designing-rocev2-networks-for-distributed-ai-training-with-cisco-nexus-9000-brkdcn-2688" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Designing RoCEv2 Networks for Distributed AI Training with Cisco Nexus 9000 - BRKDCN-2688
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-deployments-architectural-lessons-learnt-from-a-100-node-ai-factory-deployment-brkxar-2039" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Real World Deployments: Architectural lessons learnt from a 100+ Node AI Factory Deployment - BRKXAR-2039
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cisco-nexus-9000-architecture-brkdcn-3939" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cisco Nexus 9000 Architecture - BRKDCN-3939
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#silicon-one-unveiled-diving-into-the-power-of-cisco-silicon-brknwt-2624" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Silicon One Unveiled: Diving into the power of Cisco silicon - BRKNWT-2624
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#400g-800g-and-terabit-pluggable-optics-what-you-need-to-know-brkopt-2699" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        400G, 800G, and Terabit Pluggable Optics: What You Need to Know - BRKOPT-2699
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        VXLAN EVPN: A Deep Dive into Packet Forwarding - BRKDCN-3966
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modern-multi-homing-in-vxlan-evpn-enabling-vpc-and-esi-in-todays-data-centers-brkdcn-2940" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Modern Multi-Homing in VXLAN EVPN: Enabling vPC and ESI+ in Today's Data Centers - BRKDCN-2940
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-sonic-on-cisco-8000-learn-how-to-troubleshoot-bgp-acl-vxlan-on-sonic-tacmsi-2001" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Troubleshooting SONIC on Cisco 8000: Learn how to Troubleshoot BGP, ACL, VxLAN on SONIC - TACMSI-2001
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beyond-the-switch-port-exploring-the-world-of-host-networking-brknwt-2620" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Beyond the (Switch)-Port: Exploring the World of Host Networking - BRKNWT-2620
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#life-of-a-packet-in-kubernetes-a-network-engineers-guide-brkcld-3734" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Life of a Packet in Kubernetes: A Network Engineer's Guide - BRKCLD-3734
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unifying-kubernetes-and-the-data-center-isovalent-private-networks-over-evpnvxlan-brkdcn-3668" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Unifying Kubernetes and the Data Center: Isovalent Private Networks over EVPN/VXLAN - BRKDCN-3668
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hijacking-trust-weaponizing-stolen-cookies-and-tokens-brksec-2132" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Hijacking Trust: Weaponizing Stolen Cookies and Tokens - BRKSEC-2132
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reclaiming-your-agency-mcp-oauth-21-and-the-power-to-automate-anything-brksec-2065" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reclaiming Your Agency: MCP, OAuth 2.1 and the Power to Automate Anything - BRKSEC-2065
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hunting-the-invisible-army-visibility-for-ai-agents-non-human-identities-brksec-2067" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Hunting the Invisible Army: Visibility for AI Agents &amp; Non-human Identities - BRKSEC-2067
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-ai-agents-dont-talk-to-my-ai-agents-lets-fix-that-brketi-1009" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Your AI Agents Don't Talk to My AI Agents - Let's Fix That! - BRKETI-1009
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pig-in-the-middle-tls-decryption-and-encrypted-visibility-engine-deep-dive-on-cisco-secure-firewall-brksec-3320" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Pig-in-the-Middle - TLS Decryption and Encrypted Visibility Engine Deep Dive on Cisco Secure Firewall - BRKSEC-3320
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safeguarding-the-internets-backbone-unleashing-the-power-of-rpki-for-unbreakable-ipv4-and-ipv6-bgp-security-brkent-2179" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Safeguarding the Internet's Backbone: Unleashing the Power of RPKI for Unbreakable IPv4 and IPv6 BGP Security - BRKENT-2179
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control-your-destiny-in-the-token-based-ai-economy-with-pluggable-optics-innovations-psomsi-1005" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Control your destiny in the token-based AI economy with pluggable optics innovations - PSOMSI-1005
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-gave-every-attacker-a-kubernetes-playbook-isovalent-takes-it-away-psosec-2345" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AI Gave Every Attacker a Kubernetes Playbook. Isovalent Takes It Away - PSOSEC-2345
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-trust-for-agents-psosec-2344" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Zero Trust for Agents - PSOSEC-2344
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-new-quic-based-encrypted-protocol-stack-taking-over-the-internet-and-how-to-deal-with-it-brkspm-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The New, QUIC Based Encrypted Protocol Stack Taking over the Internet and How to Deal with It - BRKSPM-2024
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-quantum-leap-in-networking-ciscos-blueprint-for-tomorrows-infrastructure-ceneti-1281" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Quantum Leap in Networking: Cisco's Blueprint for Tomorrow's Infrastructure - CENETI-1281
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-network-capability-ai-has-been-waiting-for-brkpar-1026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Network Capability AI Has Been Waiting For - BRKPAR-1026
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure-patterns-in-modern-distributed-systems-lessons-from-major-internet-outages-brkops-2000" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Failure Patterns in Modern Distributed Systems: Lessons from Major Internet Outages - BRKOPS-2000
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>15 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="cisco-live-us-2026-las-vegas-for-networking-security-identity-pm">Cisco Live US 2026 (Las Vegas) — for Networking / Security / Identity PM<a class="headerlink" href="#cisco-live-us-2026-las-vegas-for-networking-security-identity-pm" title="Permanent link">#</a></h1>
+<p>A note on sources: the Cisco Live on-demand library is a login-gated SPA — page fetches return only a shell with no session content, and the program carries no paper or slide links. Every write-up below is therefore grounded in the session abstract only. Cisco Live is a vendor conference: <code>BRK</code>/<code>TAC</code>/<code>CENETI</code> breakouts usually carry real technical depth, while <code>PSO</code> (Product Session Overview) sessions are product marketing and are down-ranked accordingly — though several signal genuine technology shifts worth tracking.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>Vendor</span>
+<span class="digest-fact" markdown>June 30, 2026</span>
+<span class="digest-fact" markdown><a href="https://www.ciscolive.com/on-demand/on-demand-library.html">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="building-aiml-fabrics-at-hyperscale-architecture-evolutions-challenges-open-standards-performance-characterization-and-validation-on-cisco-siliconone-based-platforms-brkmsi-2014"><a href="building-aiml-fabrics-at-hyperscale-architecture-evolutions-challenges-o/">Building AI/ML Fabrics at Hyperscale: Architecture Evolutions, Challenges, Open Standards, Performance Characterization and Validation on Cisco SiliconOne-based Platforms. - BRKMSI-2014</a><a class="headerlink" href="#building-aiml-fabrics-at-hyperscale-architecture-evolutions-challenges-open-standards-performance-characterization-and-validation-on-cisco-siliconone-based-platforms-brkmsi-2014" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362746189001qPdj">Abstract</a></p>
+</div>
+<p>Masiuddin Mohammed (<a href="../companies/cisco/">Cisco</a>), Evan Knipp (Cisco)</p>
+<ul>
+<li><strong>Why</strong>: The single densest architectural map of where AI-scale DC fabrics are going — cluster size, topology generations, and DCI constraints are exactly the design questions a physical-networking PM needs answered.</li>
+<li><strong>What</strong>: A trace of AI fabric evolution from 4K/16K-GPU leaf-spine, to 64K-GPU Disaggregated Scheduled Fabric (DSF) two-tier with super-spines, to &gt;200K-GPU three-tier scale-out, plus multi-DC DCI interconnect; paired with a benchmarking methodology for validating these fabrics (from abstract only).</li>
+<li><strong>How</strong>: Addresses scale-out concerns (fat flows, ECMP polarization, asymmetric failures, fault resilience) separately from scale-up concerns (~8x per-accelerator bandwidth for tensor-parallel, e.g. NVL72), and DCI demands of high-speed buffering and encryption over ~100 km / 1 ms RTT. Validation is done in production-like environments using open, standards-aligned test practices to minimize test drift.</li>
+<li><strong>Where applicable</strong>: Cisco-specific (Silicon One platforms) and hyperscaler-derived, but the topology taxonomy, failure-mode catalog, and benchmark methodology generalize to any large AI fabric build.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="designing-rocev2-networks-for-distributed-ai-training-with-cisco-nexus-9000-brkdcn-2688"><a href="designing-rocev2-networks-for-distributed-ai-training-with-cisco-nexus-9/">Designing RoCEv2 Networks for Distributed AI Training with Cisco Nexus 9000 - BRKDCN-2688</a><a class="headerlink" href="#designing-rocev2-networks-for-distributed-ai-training-with-cisco-nexus-9000-brkdcn-2688" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362706030001qxos">Abstract</a></p>
+</div>
+<p>Praveen Poojary (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Lossless/low-loss RDMA fabric tuning is the hardest operational problem in AI clusters today; this is the session that actually walks the PFC/ECN/congestion-control knobs.</li>
+<li><strong>What</strong>: A design-and-operate guide for RoCE fabrics purpose-built for training jobs of thousands to tens of thousands of GPUs running days-to-weeks, targeting near-lossless behavior and predictable AllReduce/AllGather throughput (from abstract only).</li>
+<li><strong>How</strong>: Covers the frontend/backend network separation common at hyperscalers and its implications for leaf-spine topology, routing, and failure domains; then congestion control, PFC/ECN, and QoS tuning for bursty, low-entropy AI flows.</li>
+<li><strong>Where applicable</strong>: Nexus 9000-specific in tooling, but the lossless-fabric design principles (entropy, incast, ECN thresholds) apply to any RoCEv2 backend fabric.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="real-world-deployments-architectural-lessons-learnt-from-a-100-node-ai-factory-deployment-brkxar-2039"><a href="real-world-deployments-architectural-lessons-learnt-from-a-100-node-ai-f/">Real World Deployments: Architectural lessons learnt from a 100+ Node AI Factory Deployment - BRKXAR-2039</a><a class="headerlink" href="#real-world-deployments-architectural-lessons-learnt-from-a-100-node-ai-factory-deployment-brkxar-2039" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362792577001qwKT">Abstract</a></p>
+</div>
+<p>Dave Lucas (<a href="../companies/cisco/">Cisco</a>), Nandu Shankar (Cisco)</p>
+<ul>
+<li><strong>Why</strong>: The closest thing in this program to an end-user case study with failure discussion — a real integration bring-up, not a clean-room reference architecture.</li>
+<li><strong>What</strong>: Lessons from standing up a 100+ node "AI factory" spanning compute, network, and storage, with dual GPU vendors, virtual and containerized workloads, RDMA-accelerated storage with GPUDirect, multi-tenant security, and a scalable RoCE front and back-end fabric (from abstract only).</li>
+<li><strong>How</strong>: Explicitly covers the failure modes that don't appear in config guides: multi-OS GPU driver inconsistencies, RoCE fabric optimization, cross-vendor GPU networking quirks, shared-services dependencies, cabling/topology missteps, and typical bottlenecks.</li>
+<li><strong>Where applicable</strong>: Deployment-specific (one environment, Cisco-built), but the cross-vendor integration pitfalls are broadly instructive for anyone running mixed-GPU AI infrastructure.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="cisco-nexus-9000-architecture-brkdcn-3939"><a href="cisco-nexus-9000-architecture-brkdcn-3939/">Cisco Nexus 9000 Architecture - BRKDCN-3939</a><a class="headerlink" href="#cisco-nexus-9000-architecture-brkdcn-3939" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362712723001qA8P">Abstract</a></p>
+</div>
+<p>Faraz Taifehesmatian (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Switching silicon and forwarding mechanics are core to this PM; this is the internals session for Cisco's workhorse DC switch line.</li>
+<li><strong>What</strong>: An in-depth architecture study of the latest-generation Nexus 9000 modular and top-of-rack switches — ASIC architecture, forwarding mechanics, and physical design (from abstract only).</li>
+<li><strong>How</strong>: Walks the packet path through the ASIC and the hardware-enabled features that produce high-performance DC network services.</li>
+<li><strong>Where applicable</strong>: Nexus 9000-specific; useful as a concrete datapoint on merchant/custom silicon trade-offs and what a modern DC ASIC feature set looks like.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="silicon-one-unveiled-diving-into-the-power-of-cisco-silicon-brknwt-2624"><a href="silicon-one-unveiled-diving-into-the-power-of-cisco-silicon-brknwt-2624/">Silicon One Unveiled: Diving into the power of Cisco silicon - BRKNWT-2624</a><a class="headerlink" href="#silicon-one-unveiled-diving-into-the-power-of-cisco-silicon-brknwt-2624" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362749382001qqAi">Abstract</a></p>
+</div>
+<p>Ramesh Sivakolundu (<a href="../companies/cisco/">Cisco</a>), Dave Zacks (Cisco)</p>
+<ul>
+<li><strong>Why</strong>: Silicon One is the unifying silicon across Cisco's enterprise, SP, and AI portfolios; understanding its design rationale is directly relevant to physical DC networking decisions.</li>
+<li><strong>What</strong>: A deep-dive into how Silicon One is architected and why — the design choices, distinguishing features, and how its capabilities map to different network roles. Caveat: the abstract is noticeably hype-toned ("fast-paced... you will be glad you did!") and carries no specific technical claims, so depth must be verified in the room or on the recording (from abstract only).</li>
+<li><strong>How</strong>: Presented as silicon design-and-engineering rationale — not just feature lists but the why behind implementation choices, and how those translate into deployable designs.</li>
+<li><strong>Where applicable</strong>: Cisco silicon-specific; valuable mainly as the architectural underpinning for the AI-fabric and routing sessions above.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="400g-800g-and-terabit-pluggable-optics-what-you-need-to-know-brkopt-2699"><a href="400g-800g-and-terabit-pluggable-optics-what-you-need-to-know-brkopt-2699/">400G, 800G, and Terabit Pluggable Optics: What You Need to Know - BRKOPT-2699</a><a class="headerlink" href="#400g-800g-and-terabit-pluggable-optics-what-you-need-to-know-brkopt-2699" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362762541001qNLj">Abstract</a></p>
+</div>
+<p>Mark Nowell (<a href="../companies/cisco/">Cisco</a>), Errol Roberts (Cisco)</p>
+<ul>
+<li><strong>Why</strong>: Optics is a listed core interest, and this is the standards-and-roadmap session covering the full 400G→1.6T transition.</li>
+<li><strong>What</strong>: Current 400G pluggable technologies and applications, next-gen form factors for 800G and 1.6T (including breakout use cases), the new 800Gb/s and 1.6Tb/s Ethernet standardization work, and optical co-packaging developments for integrating optics into ASICs (from abstract only).</li>
+<li><strong>How</strong>: Covers both coherent and non-coherent optics, what's driving each development, and the system/network implications of adopting them.</li>
+<li><strong>Where applicable</strong>: Broadly applicable industry roadmap rather than a Cisco product pitch (Mark Nowell is a long-time IEEE 802.3 participant); co-packaging and LPO/LRO implications matter to any high-density DC design.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966"><a href="vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966/">VXLAN EVPN: A Deep Dive into Packet Forwarding - BRKDCN-3966</a><a class="headerlink" href="#vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362712951001q1X6">Abstract</a></p>
+</div>
+<p>Lukas Krattiger (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: EVPN/VXLAN datapath internals are a core interest — this is the "follow the packet" internals session, not a feature overview.</li>
+<li><strong>What</strong>: A day-in-the-life walkthrough of a VXLAN EVPN packet: routing and bridging behavior, and multi-destination (BUM) traffic handling, from ingress VTEP to egress VTEP and beyond (from abstract only).</li>
+<li><strong>How</strong>: Step-by-step datapath trace of encap/decap, ARP suppression, and multicast replication mechanics on the fabric.</li>
+<li><strong>Where applicable</strong>: Any VXLAN EVPN fabric; mechanism-focused rather than product-specific.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="modern-multi-homing-in-vxlan-evpn-enabling-vpc-and-esi-in-todays-data-centers-brkdcn-2940"><a href="modern-multi-homing-in-vxlan-evpn-enabling-vpc-and-esi-in-todays-data-ce/">Modern Multi-Homing in VXLAN EVPN: Enabling vPC and ESI+ in Today's Data Centers - BRKDCN-2940</a><a class="headerlink" href="#modern-multi-homing-in-vxlan-evpn-enabling-vpc-and-esi-in-todays-data-centers-brkdcn-2940" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362708226001qwAw">Abstract</a></p>
+</div>
+<p>Parth Patel (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: EVPN ESI multihoming landing in NX-OS 10.6.1 is a real control-plane shift for Cisco fabrics; the vPC-vs-ESI trade-off is a live design decision.</li>
+<li><strong>What</strong>: A comparison of classic vPC and the new EVPN ESI multihoming (ESI+), covering how each works, what changes with ESI+, and when to choose one over the other (from abstract only).</li>
+<li><strong>How</strong>: Real design examples and packet-flow comparisons, framed around fabric scale, resiliency requirements, and operational model. Assumes prior vPC-VTEP knowledge.</li>
+<li><strong>Where applicable</strong>: NX-OS fabrics specifically; the ESI-MH model itself is the IETF standard mechanism also used by other vendors and SONiC, so the concepts travel well.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="troubleshooting-sonic-on-cisco-8000-learn-how-to-troubleshoot-bgp-acl-vxlan-on-sonic-tacmsi-2001"><a href="troubleshooting-sonic-on-cisco-8000-learn-how-to-troubleshoot-bgp-acl-vx/">Troubleshooting SONIC on Cisco 8000: Learn how to Troubleshoot BGP, ACL, VxLAN on SONIC - TACMSI-2001</a><a class="headerlink" href="#troubleshooting-sonic-on-cisco-8000-learn-how-to-troubleshoot-bgp-acl-vxlan-on-sonic-tacmsi-2001" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780412385626001HBEq">Abstract</a></p>
+</div>
+<p>VASU Thatipalli (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: SONiC is where open-source NOS development is actually happening; a TAC-lead troubleshooting session is a good signal of how production-mature SONiC on Cisco silicon has become.</li>
+<li><strong>What</strong>: Operational and control-plane debugging of BGP, ACLs, and VXLAN in SONiC environments, plus a structured troubleshooting framework covering data plane, control plane, and root-cause analysis (from abstract only).</li>
+<li><strong>How</strong>: SONiC CLI techniques and log analysis to isolate faults in production-scale deployments.</li>
+<li><strong>Where applicable</strong>: Cisco 8000 + SONiC deployments; the framework and CLI methods apply to SONiC generally, and the session doubles as a maturity readout for disaggregated switching.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="beyond-the-switch-port-exploring-the-world-of-host-networking-brknwt-2620"><a href="beyond-the-switch-port-exploring-the-world-of-host-networking-brknwt-262/">Beyond the (Switch)-Port: Exploring the World of Host Networking - BRKNWT-2620</a><a class="headerlink" href="#beyond-the-switch-port-exploring-the-world-of-host-networking-brknwt-2620" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362748487001q3zR">Abstract</a></p>
+</div>
+<p>Bruce McDougall (<a href="../companies/cisco/">Cisco</a>), Chris Lapp (Cisco)</p>
+<ul>
+<li><strong>Why</strong>: Host-side networking is where this PM's physical and cloud-native interests converge — kernel bypass, eBPF datapaths, CNI performance, and SmartNICs in one arc.</li>
+<li><strong>What</strong>: A tour from the ToR switch port down into the host: native OS packet paths, hypervisor networking, the Kubernetes CNI ecosystem, and emerging sub-100µs host-networking techniques (from abstract only).</li>
+<li><strong>How</strong>: Compares virtio/SR-IOV and vSwitch options (OVS, VPP), benchmarks CNI choices — Calico "just routes," Cilium's eBPF policy datapaths, VPP-backed CNIs for terabit throughput — and looks ahead at XDP/AF_XDP kernel bypass, eBPF congestion control, and SmartNICs fusing packet processing with AI inference.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to Linux host networking and K8s; the real-world benchmark claims (terabit VPP CNIs, sub-100µs paths) should be probed for environment specifics.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="life-of-a-packet-in-kubernetes-a-network-engineers-guide-brkcld-3734"><a href="life-of-a-packet-in-kubernetes-a-network-engineers-guide-brkcld-3734/">Life of a Packet in Kubernetes: A Network Engineer's Guide - BRKCLD-3734</a><a class="headerlink" href="#life-of-a-packet-in-kubernetes-a-network-engineers-guide-brkcld-3734" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362683763001qJVv">Abstract</a></p>
+</div>
+<p>Nico Vibert (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: A datapath-internals walkthrough of Kubernetes networking using Isovalent Cilium — squarely on this PM's core cloud-native interests (eBPF, Gateway API, overlays, BGP).</li>
+<li><strong>What</strong>: A full trace of a packet through a Kubernetes cluster — across nodes, overlays, policy, and egress — using Cilium as the dataplane, with live demos (from abstract only).</li>
+<li><strong>How</strong>: Unpacks VXLAN/Geneve overlays, Gateway API, Egress Gateway, BGP routing, IPsec encryption, Direct Server Return, multi-cluster Cluster Mesh, plus performance features BIG TCP and topology-aware traffic engineering; observability via Hubble, Cilium CLI, and Wireshark.</li>
+<li><strong>Where applicable</strong>: Cilium/Isovalent-centric but the K8s networking constructs (Gateway API, CNI, multicluster) are vendor-neutral; advanced session, assumes routing/overlay/LB fluency.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="unifying-kubernetes-and-the-data-center-isovalent-private-networks-over-evpnvxlan-brkdcn-3668"><a href="unifying-kubernetes-and-the-data-center-isovalent-private-networks-over/">Unifying Kubernetes and the Data Center: Isovalent Private Networks over EVPN/VXLAN - BRKDCN-3668</a><a class="headerlink" href="#unifying-kubernetes-and-the-data-center-isovalent-private-networks-over-evpnvxlan-brkdcn-3668" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362712043001qDWG">Abstract</a></p>
+</div>
+<p>Marcos Hernández (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Bridges this PM's two worlds — K8s networking and DC EVPN fabric — with concrete control-plane and datapath mechanisms rather than hand-waving about "integration."</li>
+<li><strong>What</strong>: A blueprint for integrating Isovalent Private Networks (Cilium-based K8s) with external EVPN/VXLAN fabrics, including underlay/overlay connectivity, BGP control-plane setup, EVPN route-type advertisements, VRF instantiation, and VTEP configuration on both sides (from abstract only).</li>
+<li><strong>How</strong>: Details the specific route advertisements and datapath programming needed to stretch logical L2/L3 networks between Kubernetes and the Cisco fabric, and how the result supports distributed AI/ML application designs.</li>
+<li><strong>Where applicable</strong>: Isovalent + Cisco NX-OS/ACI-style fabrics specifically; the EVPN-into-K8s pattern is generalizable to any CNI that can speak BGP/EVPN.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="hijacking-trust-weaponizing-stolen-cookies-and-tokens-brksec-2132"><a href="hijacking-trust-weaponizing-stolen-cookies-and-tokens-brksec-2132/">Hijacking Trust: Weaponizing Stolen Cookies and Tokens - BRKSEC-2132</a><a class="headerlink" href="#hijacking-trust-weaponizing-stolen-cookies-and-tokens-brksec-2132" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362774923001qPab">Abstract</a></p>
+</div>
+<p>Stefan Duernberger (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Session/token theft is the dominant real-world auth attack vector, and this session covers the modern defensive stack — passkeys, token binding, shared signals — directly on this PM's identity interests.</li>
+<li><strong>What</strong>: How stolen cookies and tokens are weaponized, and the countermeasures: passkeys (FIDO/WebAuthn), OAuth 2.0 and OIDC flows, Google's Device-Bound Session Credentials (DBSC), Cisco Duo Passport, and the Shared Signals and Events (SSE) framework (from abstract only).</li>
+<li><strong>How</strong>: Walks implementation of each mechanism and how they combine in a Zero Trust architecture to kill replayable bearer credentials.</li>
+<li><strong>Where applicable</strong>: Standards-based and broadly applicable (DBSC is a browser standard-in-progress, SSE is OpenID Foundation work); the Duo Passport portion is product-specific.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="reclaiming-your-agency-mcp-oauth-21-and-the-power-to-automate-anything-brksec-2065"><a href="reclaiming-your-agency-mcp-oauth-21-and-the-power-to-automate-anything-b/">Reclaiming Your Agency: MCP, OAuth 2.1 and the Power to Automate Anything - BRKSEC-2065</a><a class="headerlink" href="#reclaiming-your-agency-mcp-oauth-21-and-the-power-to-automate-anything-brksec-2065" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362772709001qwMt">Abstract</a></p>
+</div>
+<p>Jeremiah Williams (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Agentic identity is an emerging core interest, and this is the standards-level session — MCP authorization, OAuth 2.1, fine-grained authorization — rather than a product pitch.</li>
+<li><strong>What</strong>: How the emerging agentic-AI security stack works: Model Context Protocol (MCP), OAuth 2.1, fine-grained authorization, and related mechanisms for controlling what autonomous agents can access and do (from abstract only).</li>
+<li><strong>How</strong>: Explores how these standards combine to give agents delegated, scoped, auditable access to business applications — and notes the same machinery applies to human identity.</li>
+<li><strong>Where applicable</strong>: Standards-track and vendor-neutral (MCP, OAuth 2.1, fine-grained authz are IETF/OpenAI-ecosystem work); product agnosticism should be verified in the deck.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="hunting-the-invisible-army-visibility-for-ai-agents-non-human-identities-brksec-2067"><a href="hunting-the-invisible-army-visibility-for-ai-agents-non-human-identities/">Hunting the Invisible Army: Visibility for AI Agents &amp; Non-human Identities - BRKSEC-2067</a><a class="headerlink" href="#hunting-the-invisible-army-visibility-for-ai-agents-non-human-identities-brksec-2067" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362773161001qnZd">Abstract</a></p>
+</div>
+<p>Tal Kronrod (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: NHI explosion is the identity story of the cycle; traditional ITDR built for humans misses machine-speed, broad-permission identities.</li>
+<li><strong>What</strong>: A framework and product demonstration (Cisco Identity Intelligence) for unified visibility and threat detection/response across service accounts, workloads, and autonomous AI agents in cloud, on-prem, and SaaS (from abstract only).</li>
+<li><strong>How</strong>: Applies identity intelligence — correlating inherited permissions, credential usage, and behavior — to detect threats from NHIs that never trip human-focused anomaly detection.</li>
+<li><strong>Where applicable</strong>: The NHI problem is universal, but the demo is Cisco's Identity Intelligence product; the framework's portability to other ITDR tooling should be probed.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="your-ai-agents-dont-talk-to-my-ai-agents-lets-fix-that-brketi-1009"><a href="your-ai-agents-dont-talk-to-my-ai-agents-lets-fix-that-brketi-1009/">Your AI Agents Don't Talk to My AI Agents - Let's Fix That! - BRKETI-1009</a><a class="headerlink" href="#your-ai-agents-dont-talk-to-my-ai-agents-lets-fix-that-brketi-1009" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362727697001qJqy">Abstract</a></p>
+</div>
+<p>Sabitha Krishnamurthy (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: AGNTCY is a Linux Foundation open-source project defining agent interoperability infrastructure including <em>agent identity</em> — the federation/identity layer this PM tracks (analogous to SPIFFE's role for workloads).</li>
+<li><strong>What</strong>: An introduction to the Internet of Agents and AGNTCY.org's four core technologies: agent directory, agent identity, SLIM messaging, and observability — the shared substrate for cross-environment agent discovery, trust, and communication (from abstract only).</li>
+<li><strong>How</strong>: Technical overview plus practical multi-agent use cases demonstrated with shared code.</li>
+<li><strong>Where applicable</strong>: Open-source (Linux Foundation) and cross-vendor by design; early-stage, so expect evolving specs rather than settled interfaces.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="pig-in-the-middle-tls-decryption-and-encrypted-visibility-engine-deep-dive-on-cisco-secure-firewall-brksec-3320"><a href="pig-in-the-middle-tls-decryption-and-encrypted-visibility-engine-deep-di/">Pig-in-the-Middle - TLS Decryption and Encrypted Visibility Engine Deep Dive on Cisco Secure Firewall - BRKSEC-3320</a><a class="headerlink" href="#pig-in-the-middle-tls-decryption-and-encrypted-visibility-engine-deep-dive-on-cisco-secure-firewall-brksec-3320" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362784581001qETL">Abstract</a></p>
+</div>
+<p>Carol Trincia Dsouza (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Encrypted Client Hello plus post-quantum crypto is about to break passive TLS interception — a network-security sea change this PM needs to plan for.</li>
+<li><strong>What</strong>: A deep dive on the modern encryption stack as seen from the firewall: ECH, domain fronting, evasive VPNs, fake TLS, QUIC decryption, and how the Encrypted Visibility Engine fingerprints the source process of an encrypted connection without decrypting anything (from abstract only).</li>
+<li><strong>How</strong>: Live demos of decryption configuration (TLS and QUIC) and of encrypted-traffic analysis, including how a free CDN account can stack QUIC + ECH + encrypted DNS + post-quantum crypto into an opaque connection, and what that means for decryption policy.</li>
+<li><strong>Where applicable</strong>: Cisco Secure Firewall product context, but the threat/visibility analysis (ECH, PQ, QUIC obfuscation) is broadly relevant to any TLS-inspecting security stack.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="safeguarding-the-internets-backbone-unleashing-the-power-of-rpki-for-unbreakable-ipv4-and-ipv6-bgp-security-brkent-2179"><a href="safeguarding-the-internets-backbone-unleashing-the-power-of-rpki-for-unb/">Safeguarding the Internet's Backbone: Unleashing the Power of RPKI for Unbreakable IPv4 and IPv6 BGP Security - BRKENT-2179</a><a class="headerlink" href="#safeguarding-the-internets-backbone-unleashing-the-power-of-rpki-for-unbreakable-ipv4-and-ipv6-bgp-security-brkent-2179" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362724287001qciQ">Abstract</a></p>
+</div>
+<p>Jeffry Handal (<a href="../companies/cisco/">Cisco</a>), John Shea (Cisco)</p>
+<ul>
+<li><strong>Why</strong>: RPKI deployment is the practical, deployable answer to BGP hijacking — core internet-routing security with direct DC/WAN interconnect relevance.</li>
+<li><strong>What</strong>: Real-world BGP hijack incidents (criminal and nation-state) analyzed against what RPKI and related BGP capabilities would have prevented, plus deployment strategies and working configuration examples to start an RPKI rollout (from abstract only).</li>
+<li><strong>How</strong>: Route Origin Validation mechanics, deployment patterns (full vs partial ROV), and complementary BGP security capabilities.</li>
+<li><strong>Where applicable</strong>: Any organization operating BGP and announcing prefixes — vendor tooling is Cisco IOS-XR/IOS-XE but RPKI/RFC 6811 is standards-based and cross-vendor.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="control-your-destiny-in-the-token-based-ai-economy-with-pluggable-optics-innovations-psomsi-1005"><a href="control-your-destiny-in-the-token-based-ai-economy-with-pluggable-optics/">Control your destiny in the token-based AI economy with pluggable optics innovations - PSOMSI-1005</a><a class="headerlink" href="#control-your-destiny-in-the-token-based-ai-economy-with-pluggable-optics-innovations-psomsi-1005" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362837016001q73e">Abstract</a></p>
+</div>
+<p>Ray Nering (<a href="../companies/cisco/">Cisco</a>), Yoav Schreiber (Cisco)</p>
+<ul>
+<li><strong>Why</strong>: Down-ranked as a <code>PSO</code> product session, but it carries the substantive technology story behind Cisco's optics roadmap: silicon photonics, 1.6T pluggables, and Linear Pluggable Optics.</li>
+<li><strong>What</strong>: How Cisco's 1.6T pluggable optics and Silicon Photonics serve AI back-end/front-end networks, and how LPO moves the DSP power draw from the module into the switch silicon (from abstract only).</li>
+<li><strong>How</strong>: Details the power-efficiency mechanics of LPO on Silicon One G300 platforms (liquid- and air-cooled) and Cisco's field-reliability approach: qualification, test, and over-the-wire firmware updates across deployed optics fleets.</li>
+<li><strong>Where applicable</strong>: Cisco-optics-specific; the LPO power trade-off (and its reach/reliability constraints) is an industry-wide decision point for anyone building 1.6T back-ends.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="ai-gave-every-attacker-a-kubernetes-playbook-isovalent-takes-it-away-psosec-2345"><a href="ai-gave-every-attacker-a-kubernetes-playbook-isovalent-takes-it-away-pso/">AI Gave Every Attacker a Kubernetes Playbook. Isovalent Takes It Away - PSOSEC-2345</a><a class="headerlink" href="#ai-gave-every-attacker-a-kubernetes-playbook-isovalent-takes-it-away-psosec-2345" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362841100001qyhe">Abstract</a></p>
+</div>
+<p>Duffie Cooley (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: A <code>PSO</code> product pitch, but the underlying pattern — identity-aware (not IP-aware) network policy in K8s — is core to where this PM's cloud-native-security interests are heading.</li>
+<li><strong>What</strong>: Demonstration of replacing IP-based K8s network policy with identity-aware enforcement via Cilium, plus process-level visibility and nano-segmentation via Isovalent Runtime Security, integrated with Splunk ES for ATT&amp;CK-mapped detections (from abstract only).</li>
+<li><strong>How</strong>: eBPF-based enforcement keyed to workload identity rather than IP/pod-label matching, catching east-west traffic that IP policies miss in ephemeral environments.</li>
+<li><strong>Where applicable</strong>: Cilium/Isovalent-specific; the identity-based-policy concept generalizes, but the specific enforcement is tied to this stack.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="zero-trust-for-agents-psosec-2344"><a href="zero-trust-for-agents-psosec-2344/">Zero Trust for Agents - PSOSEC-2344</a><a class="headerlink" href="#zero-trust-for-agents-psosec-2344" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362840881001q8vP">Abstract</a></p>
+</div>
+<p>Tsailing Merrem (<a href="../companies/cisco/">Cisco</a>), Prabhu Barathi (Cisco)</p>
+<ul>
+<li><strong>Why</strong>: Down-ranked from core: this is product-positioning for Cisco's Zero Trust portfolio applied to agents, and the more substantive agentic-identity coverage is in BRKSEC-2065 and BRKSEC-2067.</li>
+<li><strong>What</strong>: The argument that autonomous agents become the "ultimate insider" without fine-grained authorization, and how Cisco is extending its Zero Trust access architecture to enforce scope, access control, and data security for an agentic workforce (from abstract only).</li>
+<li><strong>How</strong>: Extends existing Zero Trust enforcement points (identity-aware proxy/access) to agent identities and their permitted actions rather than just access.</li>
+<li><strong>Where applicable</strong>: Cisco Zero Trust portfolio-specific; useful mainly as a readout of how a major vendor plans to operationalize agent authorization.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="the-new-quic-based-encrypted-protocol-stack-taking-over-the-internet-and-how-to-deal-with-it-brkspm-2024"><a href="the-new-quic-based-encrypted-protocol-stack-taking-over-the-internet-and/">The New, QUIC Based Encrypted Protocol Stack Taking over the Internet and How to Deal with It - BRKSPM-2024</a><a class="headerlink" href="#the-new-quic-based-encrypted-protocol-stack-taking-over-the-internet-and-how-to-deal-with-it-brkspm-2024" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362786699001qfwe">Abstract</a></p>
+</div>
+<p>Andreas Enotiadis (<a href="../companies/cisco/">Cisco</a>), Bart Van de Velde (Cisco)</p>
+<ul>
+<li><strong>Why</strong>: Adjacent rather than core because of its service-provider framing, but the QUIC/HTTP-3/DoH/ECH stack it describes is the same visibility threat covered in BRKSEC-3320, with protocol-internals depth.</li>
+<li><strong>What</strong>: How the QUIC-based stack (QUIC + HTTP/3 + DoH + eSNI/ECH) is constructed and evolving — already claimed at ~50% of traffic and doubling every 18 months — and why it obsoletes the assumptions SP networks are built on: encryption kills application visibility, and congestion management moves into the application (from abstract only).</li>
+<li><strong>How</strong>: Analysis of the stack's visibility and flow-control behavior plus SP-side countermeasures for traffic visibility, QoE monitoring, and efficient use of scarce resources like 5G spectrum.</li>
+<li><strong>Where applicable</strong>: SP networks primarily; the protocol analysis applies to any operator of middleboxes and QoS infrastructure facing QUIC traffic.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="a-quantum-leap-in-networking-ciscos-blueprint-for-tomorrows-infrastructure-ceneti-1281"><a href="a-quantum-leap-in-networking-ciscos-blueprint-for-tomorrows-infrastructu/">A Quantum Leap in Networking: Cisco's Blueprint for Tomorrow's Infrastructure - CENETI-1281</a><a class="headerlink" href="#a-quantum-leap-in-networking-ciscos-blueprint-for-tomorrows-infrastructure-ceneti-1281" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780412374240001Hi1c">Abstract</a></p>
+</div>
+<p>Ramana Kompella (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Not a fit for daily work, but a credible roadmap signal: Cisco is committing to quantum networking on a ~5-year horizon, with named artifacts and partners.</li>
+<li><strong>What</strong>: Cisco's quantum networking vision and concrete pieces: the Quantum Network Entanglement Chip and a Network-Aware Quantum Compiler, plus how quantum capabilities augment classical systems today and the IBM partnership (from abstract only).</li>
+<li><strong>How</strong>: Entanglement distribution hardware plus a compiler that maps quantum programs onto network topology — the beginning of a distributed-quantum-systems networking stack.</li>
+<li><strong>Where applicable</strong>: Early research/vendor-vision stage; treat as strategic sensing, not deployable technology.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="the-network-capability-ai-has-been-waiting-for-brkpar-1026"><a href="the-network-capability-ai-has-been-waiting-for-brkpar-1026/">The Network Capability AI Has Been Waiting For - BRKPAR-1026</a><a class="headerlink" href="#the-network-capability-ai-has-been-waiting-for-brkpar-1026" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362764339001q4nI">Abstract</a></p>
+</div>
+<p>Nikhil Handigol (Forward)</p>
+<ul>
+<li><strong>Why</strong>: A partner session, but it points at a genuinely novel operational pattern: a mathematically accurate network digital twin as the <em>reasoning layer</em> for both human changes and autonomous AI agents.</li>
+<li><strong>What</strong>: Demonstration of pre-deployment verification of routing and firewall changes on a formal network model, catching regressions before production, and automated end-to-end impact assessment replacing manual approval cycles (from abstract only).</li>
+<li><strong>How</strong>: Formal verification of network state and behavior (the Forward Networks model-checking lineage) applied as the guardrail that lets AI agents act on production networks with verified-before-risk confidence.</li>
+<li><strong>Where applicable</strong>: Formal-model based, vendor- and device-neutral in principle (Forward ingests multi-vendor configs); the AI-agent-trust framing is early but directly relevant to where network automation is heading.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="failure-patterns-in-modern-distributed-systems-lessons-from-major-internet-outages-brkops-2000"><a href="failure-patterns-in-modern-distributed-systems-lessons-from-major-intern/">Failure Patterns in Modern Distributed Systems: Lessons from Major Internet Outages - BRKOPS-2000</a><a class="headerlink" href="#failure-patterns-in-modern-distributed-systems-lessons-from-major-internet-outages-brkops-2000" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1780362756585001qYP0">Abstract</a></p>
+</div>
+<p>Mike Hicks (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Outside the core interests, but a 90-minute analysis of real major outages (cloud providers, collaboration platforms, CDNs) with repeatable forensic patterns is high-value for anyone designing resilient distributed infrastructure.</li>
+<li><strong>What</strong>: Three failure patterns distilled from major incidents: coordination features becoming failure-distribution mechanisms, systems that look healthy while core functions silently break, and config changes cascading across interconnected systems (from abstract only).</li>
+<li><strong>How</strong>: Case-study walkthroughs using the ThousandEyes MCP server and its analytical framework to surface, interrogate, and codify patterns from real incident data — turning raw telemetry into repeatable forensic methodology. Led by the Principal Analyst behind The Internet Report.</li>
+<li><strong>Where applicable</strong>: Pattern-level and broadly applicable; the MCP-server-driven analysis is itself an early example of AI-tooling-assisted incident forensics.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>AI fabrics dominate the physical-networking agenda</strong>: Nearly every DC session is now framed around AI training/inference — RoCEv2 lossless back-ends, 64K–200K+ GPU topologies (leaf-spine → DSF → three-tier), scale-up vs. scale-out split, and DCI at 1 ms RTT. "Regular" DC fabric sessions (VXLAN EVPN internals, multihoming) persist but are the legacy track.</li>
+<li><strong>Optics is the next capacity battleground</strong>: 800G/1.6T pluggables, new Ethernet speeds standardization, LPO moving DSPs into switch silicon, and co-packaged optics all appear — power per bit is the binding constraint on AI cluster economics.</li>
+<li><strong>eBPF/Cilium is now Cisco's cloud-native wedge</strong>: Isovalent-derived sessions span datapath internals, EVPN fabric integration, and security, signaling that host-networking and the DC fabric are being re-converged at the K8s layer.</li>
+<li><strong>Agentic identity is the breakout topic of the cycle</strong>: Four sessions cover it from different angles — standards (MCP/OAuth 2.1), NHI visibility/ITDR, zero-trust enforcement, and open-source federation (AGNTCY agent identity). The workload-identity problem is being re-litigated for agents.</li>
+<li><strong>Encryption is winning against the middlebox</strong>: ECH, QUIC, encrypted DNS, and post-quantum crypto are forcing a shift from bulk decryption toward metadata fingerprinting and identity-based controls — two sessions confront this directly.</li>
+<li><strong>SONiC and open standards are the credibility markers</strong>: Even at a vendor conference, sessions foreground SONiC troubleshooting, AGNTCY/Linux Foundation work, and "open, standards-aligned" AI fabric benchmarking — open-ecosystem positioning is now expected, not exceptional.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/ciscolive-us-2026.md"><code>digests/ciscolive-us-2026.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/ciscolive-us-2026.md"><code>prompts/ciscolive-us-2026.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../grnog-20/" class="md-footer__link md-footer__link--prev" aria-label="Previous: GRNOG 20">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                GRNOG 20
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../netuk-3/" class="md-footer__link md-footer__link--next" aria-label="Next: NetUK3 (The Brewery) — for a networking&#x2f;identity PM">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                NetUK3 (The Brewery) — for a networking/identity PM
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+    
+  </body>
+</html>

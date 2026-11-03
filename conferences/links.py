@@ -11,12 +11,15 @@ Where each link comes from, in order:
    `materials:`), written by the fetcher from the conference's own pages.
 2. The item's `page:` (the talk or paper page), fetched again now: USENIX,
    Sched and netdev pages gain slides and an embedded recording after the event.
-3. For a pick still without a recording: a YouTube search, falling back to
-   Tavily search when YouTube cannot be reached (TAVILY_API_KEY). A candidate
-   is linked only after `verify()` accepts it: the talk's title is in the
-   video's title or description, the conference or its channel is named, and
-   the upload date falls in the window after the event. Otherwise no link —
-   the same "zero rather than wrong" rule the fetchers follow.
+3. For a pick still without a recording: the conference's own YouTube
+   channel when one is known (UPLOAD_CHANNELS), then a general YouTube
+   search, falling back to Tavily search when YouTube cannot be reached
+   (TAVILY_API_KEY). A candidate is linked only after `verify()` accepts it:
+   the talk's title is in the video's title or description, the conference or
+   its channel is named, and the upload date falls in the window after the
+   event — on the conference's own channel a title shortened to its start is
+   enough (`channel_verify`). Otherwise no link — the same "zero rather than
+   wrong" rule the fetchers follow.
 
 Links found earlier are kept when a later run cannot reach a source, so a
 refresh only ever adds. The model never writes these rows; `enrich()` removes
@@ -98,6 +101,13 @@ DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon":
            "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF", "nanog": "NANOG",
            "autocon": "AutoCon", "ovscon": "OVS OVN conference", "ciscolive": "Cisco Live",
            "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG", "gtc": "GTC", "ccs": "CCS", "imc": "IMC", "conext": "CoNEXT", "apricot": "APRICOT", "fosdem": "FOSDEM", "hacklu": "hack.lu", "tnc": "TNC GÉANT", "arin": "ARIN", "lacnic": "LACNIC", "pets": "PETS", "ausnog": "AusNOG", "peeringdays": "Peering Days", "moreip": "MORE-IP", "swinog": "SwiNOG", "capacity": "Capacity Europe", "janog": "JANOG", "nogfi": "nog.fi", "netuk": "NetUK", "grnog": "GRNOG", "dknog": "DKNOG", "itnog": "ITNOG", "netnod": "Netnod", "cfgmgmtcamp": "CfgMgmtCamp", "ocp": "OCP Global Summit"}
+# YouTube channels that hold a conference's own recordings, keyed by the
+# first segment of the registry key. Searched before the general YouTube
+# search: uploads are often retitled or shortened when published, and the
+# global results can bury them behind promo clips.
+UPLOAD_CHANNELS = {
+    "netnod": "@netnodix",
+}
 # URLs that only ever hold presentation decks, whatever the link text says.
 DECK_URLS = re.compile(
     r"static\.sched\.com/hosted_files/|storage\.googleapis\.com/site-media-prod/meetings/"
@@ -304,14 +314,11 @@ class Video:
     seconds: int = 0
 
 
-def youtube_search(query: str) -> list[str]:
-    """Video IDs from YouTube's public search page, in result order."""
-    resp = HTTP.get("https://www.youtube.com/results", params={"search_query": query, "hl": "en"},
-                    headers=YT_HEADERS, timeout=30)
-    resp.raise_for_status()
-    m = re.search(r"var ytInitialData = (\{.*?\});</script>", resp.text)
+def _search_ids(html: str) -> list[str]:
+    """Video IDs in a YouTube search page's results data, in result order."""
+    m = re.search(r"var ytInitialData = (\{.*?\});</script>", html)
     if not m:
-        raise RuntimeError("YouTube search page without results data (consent or bot check)")
+        raise RuntimeError("YouTube page without results data (consent or bot check)")
     ids: list[str] = []
 
     def walk(o) -> None:
@@ -327,6 +334,22 @@ def youtube_search(query: str) -> list[str]:
 
     walk(json.loads(m.group(1)))
     return ids
+
+
+def youtube_search(query: str) -> list[str]:
+    """Video IDs from YouTube's public search page, in result order."""
+    resp = HTTP.get("https://www.youtube.com/results", params={"search_query": query, "hl": "en"},
+                    headers=YT_HEADERS, timeout=30)
+    resp.raise_for_status()
+    return _search_ids(resp.text)
+
+
+def youtube_channel_search(handle: str, query: str) -> list[str]:
+    """Video IDs from a channel's own search box (`/@handle/search`)."""
+    resp = HTTP.get(f"https://www.youtube.com/{handle}/search", params={"query": query, "hl": "en"},
+                    headers=YT_HEADERS, timeout=30)
+    resp.raise_for_status()
+    return _search_ids(resp.text)
 
 
 def _yt_initial_data(html: str):
@@ -495,10 +518,39 @@ def event_matches(video: Video, ctx: Context) -> bool:
     return ctx.end_date - timedelta(days=14) <= video.published <= ctx.end_date + timedelta(days=240)
 
 
+# Session chrome around a title: a leading "Keynote speech: …" or "Panel
+# discussion - …" label in the program, and a "… – Speaker, Company" tail on
+# a channel upload.
+TITLE_LABEL = re.compile(r"^[A-Za-z][A-Za-z &]{2,30}[:–—-]\s+")
+
+
+def title_core(title: str) -> str:
+    """The title without its session label and speaker tail."""
+    return re.split(r"\s+[–—-]\s+", TITLE_LABEL.sub("", title), 1)[0]
+
+
 def verify(talk: str, video: Video, ctx: Context, speakers: tuple[str, ...] = ()) -> bool:
     if video.seconds and video.seconds < 90:
         return False
     return title_matches(talk, video, speakers) and event_matches(video, ctx)
+
+
+def channel_verify(talk: str, video: Video, ctx: Context, speakers: tuple[str, ...] = ()) -> bool:
+    """The gate for a candidate from the conference's own channel.
+
+    The channel and the upload window (`event_matches`) already anchor the
+    event, so beyond the usual title match a title shortened to its start is
+    enough: a channel titles an upload with the start of the talk plus the
+    speaker, not the full program title.
+    """
+    if video.seconds and video.seconds < 90:
+        return False
+    if not event_matches(video, ctx):
+        return False
+    if title_matches(talk, video, speakers):
+        return True
+    core, want = norm(title_core(video.title)), norm(title_core(talk))
+    return len(core) >= 12 and (want.startswith(core) or core.startswith(want))
 
 
 def find_recording(talk: str, ctx: Context, speakers: tuple[str, ...] = ()) -> Optional[str]:
@@ -509,13 +561,43 @@ def find_recording(talk: str, ctx: Context, speakers: tuple[str, ...] = ()) -> O
 def find_video(talk: str, ctx: Context, speakers: tuple[str, ...] = ()) -> Optional[Video]:
     """The verified upload of a talk (title, channel, description, date), or None.
 
-    YouTube's results vary: "title + conference" sometimes surfaces the
-    conference's promo clips instead of the talk, so the bare title is tried
-    next when nothing passed.
+    When the conference has a channel of its own (UPLOAD_CHANNELS), its search
+    box is tried first: the full title, then the title without a leading
+    session label ("Keynote speech: …"), then the title's first words — an
+    upload is often titled with only the start of a long talk. YouTube's
+    general results vary besides: "title + conference" sometimes surfaces
+    the conference's promo clips instead of the talk, so the bare title is
+    tried next when nothing passed.
     """
     accepted: list[Video] = []
     seen: set[str] = set()
+
+    def probe(ids: list[str], gate) -> None:
+        for vid in ids:
+            if vid in seen:
+                continue
+            seen.add(vid)
+            time.sleep(ctx.delay)
+            v = youtube_video(vid)
+            if v and gate(talk, v, ctx, speakers):
+                accepted.append(v)
+
+    handle = UPLOAD_CHANNELS.get(ctx.marker)
+    if handle:
+        queries = [talk]
+        for shorter in (TITLE_LABEL.sub("", talk), " ".join(talk.split()[:6])):
+            if shorter and shorter not in queries:
+                queries.append(shorter)
+        for query in queries:
+            try:
+                probe(youtube_channel_search(handle, query)[:6], channel_verify)
+            except Exception:
+                pass
+            if accepted:
+                break
     for query in (f"{talk} {ctx.query_term}", talk):
+        if accepted:
+            break
         try:
             ids = youtube_search(query)[:6]
         except Exception:
@@ -525,16 +607,7 @@ def find_video(talk: str, ctx: Context, speakers: tuple[str, ...] = ()) -> Optio
                     ids = tavily_search(query, ctx.tavily_key)
                 except Exception:
                     ids = []
-        for vid in ids:
-            if vid in seen:
-                continue
-            seen.add(vid)
-            time.sleep(ctx.delay)
-            v = youtube_video(vid)
-            if v and verify(talk, v, ctx, speakers):
-                accepted.append(v)
-        if accepted:
-            break
+        probe(ids, verify)
     if not accepted:
         return None
     # A talk given at two editions: take the upload closest after this one.

@@ -1,0 +1,1386 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A compact regional operator program (South Africa &#x2f; AFRINIC region). Much of the agenda is policy, licensing, and ISP business-model content, which has been filtered out. What remains is a solid routing-security thread, a rare hands-on trust-infrastructure talk, two optical&#x2f;transport sessions, and…">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/zanog-2026/">
+      
+      
+      
+        <link rel="prev" href="../arin-57/">
+      
+      
+        <link rel="next" href="../swinog-41/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>ZANOG@iWeek 2026 — Operator - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="ZANOG@iWeek 2026 — Operator · Conference Digest" />
+<meta property="og:description" content="A compact regional operator program (South Africa / AFRINIC region). Much of the agenda is policy, licensing, and ISP business-model content, which has been filtered out. What remains is a solid routing-security thread, a rare hands-on trust-infrastructure talk, two optical/transport sessions, and…" />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/zanog-2026.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/zanog-2026/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="ZANOG@iWeek 2026 — Operator · Conference Digest" />
+<meta property="twitter:description" content="A compact regional operator program (South Africa / AFRINIC region). Much of the agenda is policy, licensing, and ISP business-model content, which has been filtered out. What remains is a solid routing-security thread, a rare hands-on trust-infrastructure talk, two optical/transport sessions, and…" />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/zanog-2026.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ZANOG@iWeek 2026 — Operator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-tabs__powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-tabs__powered-text">Powered by</span>
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#securing-internet-routing-the-puzzle-pieces" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Securing Internet Routing - The Puzzle Pieces
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ASPA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certificate-transparency-running-static-ct-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Certificate Transparency: Running Static CT Logs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threat-landscape-in-southern-africa-from-a-shadowserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Threat Landscape in Southern Africa from a Shadowserver
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submarine-overland-cable-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Submarine Overland Cable Technology
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnmic-on-your-marks-get-set-subscribe-collect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        gNMIc — On Your Marks, GET / SET / Subscribe / Collect
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv6-measuring-uptake" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IPv6 - Measuring Uptake
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-light-to-leverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Light to Leverage
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-guide-to-open-pon-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Guide to Open PON Environment
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns-resolution-from-operators-in-south-africa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DNS Resolution from Operators in South Africa
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#securing-internet-routing-the-puzzle-pieces" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Securing Internet Routing - The Puzzle Pieces
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ASPA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certificate-transparency-running-static-ct-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Certificate Transparency: Running Static CT Logs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threat-landscape-in-southern-africa-from-a-shadowserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Threat Landscape in Southern Africa from a Shadowserver
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submarine-overland-cable-technology" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Submarine Overland Cable Technology
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnmic-on-your-marks-get-set-subscribe-collect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        gNMIc — On Your Marks, GET / SET / Subscribe / Collect
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv6-measuring-uptake" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IPv6 - Measuring Uptake
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-light-to-leverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Light to Leverage
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-guide-to-open-pon-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Guide to Open PON Environment
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns-resolution-from-operators-in-south-africa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DNS Resolution from Operators in South Africa
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>9 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="zanogiweek-2026-operator">ZANOG@iWeek 2026 — Operator<a class="headerlink" href="#zanogiweek-2026-operator" title="Permanent link">#</a></h1>
+<p>A compact regional operator program (South Africa / AFRINIC region). Much of the agenda is policy, licensing, and ISP business-model content, which has been filtered out. What remains is a solid routing-security thread, a rare hands-on trust-infrastructure talk, two optical/transport sessions, and adoptable open tooling. All session-page fetches returned only the program abstracts, so most write-ups below are abstract-grounded; the two sessions with no abstract at all are flagged explicitly.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>April 23, 2026</span>
+<span class="digest-fact" markdown><a href="https://www.iweek.org.za/agenda">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="securing-internet-routing-the-puzzle-pieces"><a href="securing-internet-routing-the-puzzle-pieces/">Securing Internet Routing - The Puzzle Pieces</a><a class="headerlink" href="#securing-internet-routing-the-puzzle-pieces" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.iweek.org.za/sessions/securing-internet-routing-puzzle-pieces">Abstract</a></p>
+</div>
+<p>Tashi Phuntsho</p>
+<ul>
+<li><strong>Why</strong>: Route leaks and hijacks are the systemic risk of the interdomain routing system, and this is the program's main survey of the defense stack — squarely in the intersection of network security and BGP internals. Worth the PM's time as a structured view of how the pieces (origin validation, path validation, filtering) do and don't compose.</li>
+<li><strong>What</strong>: A review of the full routing-security toolkit — RPKI, Route Origin Authorisations (ROAs), BGPsec, IRR-based filtering, and emerging proposals — examining how the pieces fit together, where each excels, and the practical and organisational challenges blocking universal adoption (from abstract only).</li>
+<li><strong>How</strong>: Mechanism-by-mechanism comparison: cryptographic origin validation via RPKI/ROAs against misorigination, IRR route objects for prefix filtering at AS boundaries, BGPsec for AS-path integrity, and newer proposals for leak detection — against a frank accounting of why adoption remains partial despite mature tooling.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to any network announcing or accepting BGP routes; vendor-neutral and global in scope despite the regional venue. A 30-minute slot, so expect survey depth rather than new results. Pairs naturally with the ASPA session immediately before it.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="aspa"><a href="aspa/">ASPA</a><a class="headerlink" href="#aspa" title="Permanent link">#</a></h3>
+<p>Massimiliano Stucchi</p>
+<ul>
+<li><strong>Why</strong>: ASPA (Autonomous System Provider Authorization) is the newest piece of the RPKI puzzle and targets exactly the gap left by ROAs and BGPsec: route <em>leaks</em> (invalid AS paths) rather than misorigination. If the PM's organisation runs BGP with upstreams, this is the next deployment decision after ROV.</li>
+<li><strong>What</strong>: No abstract is provided in the program or on the session page — content cannot be confirmed. Judging from title, speaker, and the adjacent routing-security session, expect an introduction to ASPA: what the objects are, what attacks they address, and the current state of implementation and adoption. Treat this write-up's mechanism description as background, not as confirmed talk content.</li>
+<li><strong>How</strong>: (Mechanism background.) An ASPA is an RPKI-signed object in which a customer AS lists its authorized transit providers. Relying parties use these provider sets to verify AS-path plausibility — a route announced to an unauthorized upstream is flagged as a leak — without requiring the full cryptographic path signing of BGPsec, so it is deployable incrementally.</li>
+<li><strong>Where applicable</strong>: Any AS with upstream providers; verification value grows with ecosystem adoption (RPKI relying parties, IXP route servers). Caveat: with no abstract, the talk's actual depth and specifics are unknown — check the recording if it matters.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="certificate-transparency-running-static-ct-logs"><a href="certificate-transparency-running-static-ct-logs/">Certificate Transparency: Running Static CT Logs</a><a class="headerlink" href="#certificate-transparency-running-static-ct-logs" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.iweek.org.za/sessions/certificate-transparency-running-static-ct-logs">Abstract</a></p>
+</div>
+<p>Pim van Pelt - IPng Networks</p>
+<ul>
+<li><strong>Why</strong>: CT is the audit layer that makes misissued TLS certificates detectable — core trust/identity infrastructure, and this is a rare <em>operational</em> talk about running it. The PM gets both an architecture update (the new Static-CT log design) and a production postmortem-style account from a small operator doing ecosystem-critical work.</li>
+<li><strong>What</strong>: The hands-on experience of IPng Networks operating four production CT logs (Rennet, Lipase, Gouda, Halloumi) using Sunlight and TesseraCT — two open-source implementations of the Static CT protocol — covering technical setup, operational lessons learned, and the role of community-run logs in Internet security (from abstract only).</li>
+<li><strong>How</strong>: Static-CT logs replace the classic RFC 6962 continuously-updating Merkle log with a pre-populated, shardable, statically-servable structure; the talk walks deploying the two open-source implementations and the ongoing operational burden of keeping production logs healthy.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to anyone operating or auditing certificate-trust infrastructure; both implementations are open source, and the story proves a small community operator can run production-grade trust infrastructure — not a hyperscaler-only or org-specific result.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="threat-landscape-in-southern-africa-from-a-shadowserver"><a href="threat-landscape-in-southern-africa-from-a-shadowserver/">Threat Landscape in Southern Africa from a Shadowserver</a><a class="headerlink" href="#threat-landscape-in-southern-africa-from-a-shadowserver" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.iweek.org.za/sessions/threat-landscape-southern-africa-shadowserver">Abstract</a></p>
+</div>
+<p>Andy Chadwick - Shadowserver Foundation | Director for Africa</p>
+<ul>
+<li><strong>Why</strong>: Free, immediately adoptable threat intelligence — the highest "tooling others can adopt" value in the security track, with a regional Southern Africa lens the PM won't get from global feeds.</li>
+<li><strong>What</strong>: An introduction to what the Shadowserver Foundation does and why its cyber threat intelligence benefits network operators and all network owners, at no cost (from abstract only). Expect an overview session rather than deep technique — the digest value is knowing the resource and the regional picture, not new methods.</li>
+<li><strong>How</strong>: (Mechanism background.) Shadowserver aggregates internet-wide scanning and sinkhole/honeypot telemetry into free per-network reports — exposed vulnerable services, malware callbacks, etc. — that any network owner can request and act on.</li>
+<li><strong>Where applicable</strong>: Any network, any size, no product purchase (non-profit). The service is global even though this talk's framing is Southern Africa.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="submarine-overland-cable-technology"><a href="submarine-overland-cable-technology/">Submarine Overland Cable Technology</a><a class="headerlink" href="#submarine-overland-cable-technology" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.iweek.org.za/sessions/submarine-overland-cable-technology">Abstract</a></p>
+</div>
+<p>Nic Breytenbach - Seacom (Senior Transmission Architect), Afrim Beka - <a href="../companies/nokia/">Nokia</a> | Director of Subsea Networks Solutions</p>
+<ul>
+<li><strong>Why</strong>: Long-haul optical transport is squarely in the PM's physical-networking core (WAN interconnect, optics). The premise — carrying subsea cable engineering onto terrestrial routes — speaks to two live problems: extending resilient capacity into remote and climate-challenged regions, and meeting AI/ML-driven traffic growth.</li>
+<li><strong>What</strong>: How subsea transmission techniques — spanning thousands of kilometres without regeneration and long distances without amplification — can be applied as powerful solutions for extending resilient, high-performance connectivity into terrestrial networks (from abstract only).</li>
+<li><strong>How</strong>: Mechanism detail is thin in the abstract; expect coherent long-reach optics and cable-system design that minimises regeneration/amplification sites, presented as a new approach for terrestrial builds serving both basic connectivity and AI/ML demand.</li>
+<li><strong>Where applicable</strong>: Long-haul subsea and terrestrial transport builds; most relevant where routes are long and terrain/climate makes frequent regeneration sites costly — an Africa-flavoured problem, but the engineering transfers to any long-haul WAN build. Vendor-anchored session (Nokia subsea solutions), jointly presented with Seacom's transmission architect — expect some product positioning around the technique.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="gnmic-on-your-marks-get-set-subscribe-collect"><a href="gnmic-on-your-marks-get-set-subscribe-collect/">gNMIc — On Your Marks, GET / SET / Subscribe / Collect</a><a class="headerlink" href="#gnmic-on-your-marks-get-set-subscribe-collect" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.iweek.org.za/sessions/gnmic-your-marks-get-set-subscribe-collect">Abstract</a></p>
+</div>
+<p>Nardus le Roux - <a href="../companies/nokia/">Nokia</a> | IP Consulting Systems Engineer</p>
+<ul>
+<li><strong>Why</strong>: The SNMP-polling-to-streaming-telemetry shift is the network-ops equivalent of a transition the cloud-native world already made; this session covers a concrete, open-source tool an operator can deploy this quarter.</li>
+<li><strong>What</strong>: An introduction to gNMIc — a scalable gNMI collector with full protocol support (GET / SET / Subscribe / Collect) — and how it delivers continuous visibility into network state, moving beyond SNMP-based monitoring toward a data-rich operational model (from abstract only).</li>
+<li><strong>How</strong>: Devices expose state via gNMI Subscribe RPCs; gNMIc collects, aggregates, and feeds the stream into downstream operational systems, replacing periodic polling with event-driven telemetry.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to any environment with gNMI-capable devices (most modern router/switch OSes) — multi-vendor and not org-specific. The speaker is Nokia consulting staff, but gNMIc is a community open-source project, so this reads as tool adoption rather than a product pitch.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="ipv6-measuring-uptake"><a href="ipv6-measuring-uptake/">IPv6 - Measuring Uptake</a><a class="headerlink" href="#ipv6-measuring-uptake" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.iweek.org.za/sessions/ipv6-measuring-uptake">Abstract</a></p>
+</div>
+<p>Jaco Kroon</p>
+<ul>
+<li><strong>Why</strong>: The PM already runs IPv6; the value here is measurement methodology and an honest data read on where South Africa and the continent actually stand — useful input for regional capacity/feature planning, and part of this program's most persistent theme (an entire track is named "Please Just Deploy IPv6").</li>
+<li><strong>What</strong>: Why continued IPv6 migration matters, the methodologies available for tracking adoption across networks and regions, and what the data reveals about IPv6 uptake in South Africa and the broader African continent (from abstract only).</li>
+<li><strong>How</strong>: Survey of adoption-measurement approaches — content-side user statistics, routing-table/BGP visibility, per-network enablement metrics — plus a regional read-out; the abstract does not specify which methods are used.</li>
+<li><strong>Where applicable</strong>: Regional focus (South Africa/Africa), but the methodology generalises to any operator or product with a regional footprint; worth skimming for the measurement framework more than the conclusion.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="from-light-to-leverage"><a href="from-light-to-leverage/">From Light to Leverage</a><a class="headerlink" href="#from-light-to-leverage" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.iweek.org.za/sessions/light-leverage">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=eppA1hx_ec4">Recording</a></p>
+</div>
+<p>Byren Meinjes, Brett van Rooyen - NEC XON | Pre-Sales Consultant</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="eppA1hx_ec4" data-start="0" href="https://www.youtube.com/watch?v=eppA1hx_ec4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/eppA1hx_ec4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/eppA1hx_ec4/maxresdefault.jpg" alt="Play the recording: From Light to Leverage" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: For a PM in optical/WAN networking, this is less about new physics and more about packaging: how a provider turns WDM from a bespoke engineering discipline into a productised 100G/400G enterprise service. The product-model framing is directly relevant to product strategy even if the optics is familiar.</li>
+<li><strong>What</strong>: The Managed Optical Fibre Network (MOFN) model — a WDM-based service framework that lets operators productise optical networking, extend fibre asset life, and deliver high-capacity connectivity to enterprise customers who lack in-house optical expertise, illustrated with real-world use cases and deployment models (from abstract only).</li>
+<li><strong>How</strong>: WDM layered as a managed-service framework over fibre already in the ground: the provider absorbs the optical transmission engineering, and enterprises consume native 100G/400G connectivity for cloud and AI platforms without bespoke design per circuit.</li>
+<li><strong>Where applicable</strong>: Aimed at service providers selling high-capacity connectivity to enterprises — the demand signal (enterprises moving past 1G/10G, AI/cloud workloads) is real and broadly applicable, but MOFN itself is a vendor's service model (NEC XON pre-sales presenting), so treat the framework partly as a services pitch.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="a-guide-to-open-pon-environment"><a href="a-guide-to-open-pon-environment/">A Guide to Open PON Environment</a><a class="headerlink" href="#a-guide-to-open-pon-environment" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.iweek.org.za/sessions/guide-open-pon-environment">Abstract</a></p>
+</div>
+<p>Radosław Ziemba, Piotr Golubski</p>
+<ul>
+<li><strong>Why</strong>: Access-network PON is outside the PM's DC/cloud core, but this is a genuinely interesting anti-lock-in technique: an ONT that adapts itself to whichever OLT it faces. Interoperability-vs-vendor-control fights are universal across networking domains, and the access network is currently the most live one.</li>
+<li><strong>What</strong>: How operators escape OLT-vendor lock-in using multi-vendor HALNy Networks terminals with an "Adaptive OMCI Stack" — plug-and-play ONTs that automatically discover and adapt to a range of OLTs (Huawei, ZTE, Nokia) without firmware changes — plus cloud management via OpenOLT.com and Smart WiFi dashboards, with claimed benefits of fewer truck rolls and lower OPEX (from abstract only).</li>
+<li><strong>How</strong>: The ONT detects the OLT's management dialect and adapts its OMCI behaviour — inverting the usual model where the OLT vendor whitelists terminals — with remote troubleshooting and optimisation via cloud dashboards.</li>
+<li><strong>Where applicable</strong>: GPON/XGS-PON access operators. Caveat: the Adaptive OMCI Stack is a specific vendor's (HALNy) feature and the session is effectively vendor-flavoured, so apply pitch-grade skepticism to the interoperability claims; the open-interoperable-access-hardware direction is the signal worth taking away.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="dns-resolution-from-operators-in-south-africa"><a href="dns-resolution-from-operators-in-south-africa/">DNS Resolution from Operators in South Africa</a><a class="headerlink" href="#dns-resolution-from-operators-in-south-africa" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.iweek.org.za/sessions/dns-resolution-operators-south-africa">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=e-2KGZf4kik">Recording</a></p>
+</div>
+<p>Yazid Akanho</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="e-2KGZf4kik" data-start="0" href="https://www.youtube.com/watch?v=e-2KGZf4kik" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/e-2KGZf4kik/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/e-2KGZf4kik/maxresdefault.jpg" alt="Play the recording: DNS Resolution from Operators in South Africa" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Included as a flagged gamble. The only content signal is the track title — "Thirty Years, A Few DNS Queries and Way Too Many Metrics" — which suggests a metrics-heavy, operator-perspective retrospective on DNS resolution. Measurement practice from a regional operator community is the kind of thing worth a skim even when it isn't on the core beat.</li>
+<li><strong>What</strong>: Unknown — no abstract is provided in the program or on the session page. Based on title and track alone, expect an operator-perspective, data/metrics-driven look at DNS resolution in South Africa rather than a technique talk.</li>
+<li><strong>How</strong>: Unknown; nothing in the program or session page describes the approach.</li>
+<li><strong>Where applicable</strong>: South African operator context. Given the missing abstract, this pick stands or falls on the delivered content — check the recording before investing time.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Routing security has moved from "deploy RPKI" to "assemble the full toolkit."</strong> Two dedicated sessions (Puzzle Pieces, ASPA) treat ROAs as baseline and focus on path/leak verification and the organisational friction that now blocks adoption — the bottleneck is deployment practice, not missing technology.</li>
+<li><strong>Small operators are running core trust infrastructure.</strong> A one-of-a-kind talk on community-run Certificate Transparency logs (open-source Sunlight/TesseraCT) plus free non-profit CTI from Shadowserver — a pattern of ecosystem-critical trust roles being filled by community and non-profit actors, matching the "Trust Nobody" track title.</li>
+<li><strong>IPv6 as a measured obligation, not an exhortation.</strong> An entire track named "Please Just Deploy IPv6," a measurement/methodology session on SA and continental uptake, and a 2030 adoption pathway in the keynote — the regional community is moving to data-driven accountability for adoption.</li>
+<li><strong>Optical capacity is being monetised under AI/cloud demand pressure.</strong> Subsea techniques going overland for long unregenerated spans, and WDM productised as managed 100G/400G enterprise services (MOFN) — both about extracting more value from fibre already in the ground, driven by AI/ML and cloud traffic.</li>
+<li><strong>Polling to streaming telemetry.</strong> gNMIc presented as the concrete next step past SNMP — open tooling, not vendor platform lock-in — mirroring the observability shift already standard in cloud-native environments.</li>
+<li><strong>Interoperability as an operator strategy.</strong> Multi-vendor ONTs with adaptive OMCI, open-source CT log implementations, open telemetry protocols — across access, trust, and monitoring layers, this program keeps returning to anti-lock-in via open implementations.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/zanog-2026.md"><code>digests/zanog-2026.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/zanog-2026.md"><code>prompts/zanog-2026.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../arin-57/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ARIN 57 Public Policy and Members Meeting">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                ARIN 57 Public Policy and Members Meeting
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../swinog-41/" class="md-footer__link md-footer__link--next" aria-label="Next: SwiNOG #41">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                SwiNOG #41
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

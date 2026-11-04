@@ -79,6 +79,9 @@
         <loc>https://tldr.netdevops.me/archive/2026/page/3/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/archive/2026/page/4/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/arin-57/</loc>
       </url>
       <url>
@@ -3629,5 +3632,38 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/usenix-security-2025/x509dos-exploiting-and-detecting-denial-of-service-vulnerabilities-in-cr/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/zanog-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/zanog-2026/a-guide-to-open-pon-environment/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/zanog-2026/aspa/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/zanog-2026/certificate-transparency-running-static-ct-logs/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/zanog-2026/dns-resolution-from-operators-in-south-africa/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/zanog-2026/from-light-to-leverage/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/zanog-2026/gnmic-on-your-marks-get-set-subscribe-collect/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/zanog-2026/ipv6-measuring-uptake/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/zanog-2026/securing-internet-routing-the-puzzle-pieces/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/zanog-2026/submarine-overland-cable-technology/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/zanog-2026/threat-landscape-in-southern-africa-from-a-shadowserver/</loc>
       </url>
 </urlset>

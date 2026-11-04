@@ -4329,3 +4329,98 @@ pytorch-2026:
     Precompile for Training:
     - ai-networks
     - testing
+mlsys-2026:
+  post:
+  - rdma
+  - data-center-fabric
+  - ai-networks
+  - network-security
+  - ebpf
+  - ethernet
+  talks:
+    'fabric-lib: RDMA Point-to-Point Communication for LLM Systems':
+    - rdma
+    - ai-networks
+    - interconnection
+    ? 'SAKURAONE: An Open Ethernet–Based AI HPC System and Its Observed Workload Dynamics
+      in a Single-Tenant LLM Development Environment'
+    : - ethernet
+      - data-center-fabric
+      - rdma
+      - open-source
+    'Blueprint, Bootstrap, and Bridge: A Security Look at NVIDIA GPU Confidential Computing':
+    - attestation
+    - network-security
+    - vulnerability-management
+    'ADR: AN AGENTIC DETECTION SYSTEMFORENTERPRISE AGENTIC AI SECURITY':
+    - network-security
+    - offensive-security
+    - identity
+    'NEST: Network- and Memory-Aware Device Placement for Distributed Deep Learning':
+    - ai-networks
+    - data-center-fabric
+    - orchestration
+    'SHIP: SRAM-Based Huge Inference Pipelines for Fast LLM Serving':
+    - ai-networks
+    - silicon
+    - interconnection
+    A Lightweight High-Throughput Collective-Capable NoC for Large-Scale ML Accelerators:
+    - silicon
+    - switching
+    - multicast
+    'ProfInfer: An eBPF-based Fine-Grained LLM Inference Profiler':
+    - ebpf
+    - observability
+    - measurement
+    'DreamDDP: Accelerating Low-Bandwidth Geo-Distributed LLM Training with Layer-wise Partial Synchronization':
+    - ai-networks
+    - interconnection
+    'TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference':
+    - gpu-clusters
+    - ai-networks
+    'GUARD: SCALABLE STRAGGLER DETECTION AND NODE HEALTH MANAGEMENT FOR LARGE-SCALE TRAINING':
+    - anomaly-detection
+    - sre
+    - ai-networks
+    Unleashing Scalable Context Parallelism for Foundation Models Pre-Training via FCP:
+    - ai-networks
+    - gpu-clusters
+    'MLCommons Chakra: Advancing Performance Benchmarking and Co-design using Standardized Execution Traces':
+    - benchmarking
+    - telemetry
+    - ai-networks
+    'CSLE: A Reinforcement Learning Platform for Autonomous Security Management':
+    - ml-for-networking
+    - network-security
+    - orchestration
+    Optimizing Deployment Configurations for LLM Inference:
+    - ai-networks
+    - capacity-planning
+    - benchmarking
+    'Beyond the Buzz: A Pragmatic Take on Inference Disaggregation':
+    - ai-networks
+    - load-balancing
+    - capacity-planning
+    Sparing Strategies to Minimize Reliability Impact On Large Training Jobs:
+    - sre
+    - capacity-planning
+    - ai-networks
+    'Designing Communication-Efficient AI Systems: An Interconnect-Aware HPC Perspective':
+    - ai-networks
+    - interconnection
+    Communication-Efficient Distributed Inference for Transformer Models via Vector Quantized Context:
+    - ai-networks
+    - interconnection
+    'LearnedCache: An eBPF-Integrated Perceptron-Based Eviction Policy for the Linux Page Cache':
+    - ebpf
+    - linux-networking
+    Rethinking Open Source Contribution in the Age of AI Agents:
+    - open-source
+    - automation
+    'REPARO: LOSS-RESILIENT GENERATIVE CODEC FOR VIDEO CONFERENCING':
+    - ml-for-networking
+    - measurement
+    'SONAR: Benchmarking Topology and Collaboration in Decentralized Learning':
+    - benchmarking
+    - measurement
+    - ml-for-networking

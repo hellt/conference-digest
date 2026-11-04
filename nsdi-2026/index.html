@@ -1,0 +1,2102 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="NSDI &#x27;26 (Renton, WA, May 4–6, 2026) is dominated this cycle by AI-era fabric design, hyperscaler operational papers, and a strong run of congestion-control work. Note on depth: the program listing itself contained only titles and authors; every write-up below is grounded in the official paper…">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/nsdi-2026/">
+      
+      
+      
+        <link rel="prev" href="../kubecon-eu-2026/">
+      
+      
+        <link rel="next" href="../ripe-92/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>NSDI '26 — Network Papers Worth Your Time - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="NSDI &#39;26 — Network Papers Worth Your Time · Conference Digest" />
+<meta property="og:description" content="NSDI &#39;26 (Renton, WA, May 4–6, 2026) is dominated this cycle by AI-era fabric design, hyperscaler operational papers, and a strong run of congestion-control work. Note on depth: the program listing itself contained only titles and authors; every write-up below is grounded in the official paper…" />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/nsdi-2026.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/nsdi-2026/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="NSDI &#39;26 — Network Papers Worth Your Time · Conference Digest" />
+<meta property="twitter:description" content="NSDI &#39;26 (Renton, WA, May 4–6, 2026) is dominated this cycle by AI-era fabric design, hyperscaler operational papers, and a strong run of congestion-control work. Note on depth: the program listing itself contained only titles and authors; every write-up below is grounded in the official paper…" />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/nsdi-2026.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NSDI '26 — Network Papers Worth Your Time
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../category/academic/" class="md-tabs__link">
+          
+  
+  Conference type
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-tabs__powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-tabs__powered-text">Powered by</span>
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matryoshka-realizing-hyperscale-data-center-network-design-for-the-ai-era" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Matryoshka: Realizing Hyperscale Data Center Network Design for the AI Era
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openoptics-enabling-open-research-and-implementation-of-optical-data-center-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OpenOptics: Enabling Open Research and Implementation of Optical Data Center Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syncwise-error-aware-time-synchronization-for-reconfigurable-data-center-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SyncWise: Error-Aware Time Synchronization for Reconfigurable Data Center Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starfish-a-topology-routing-co-design-for-small-scale-data-centers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Starfish: A Topology-Routing Co-Design for Small-Scale Data Centers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-to-tune-optical-wans-a-field-deployment-of-noise-models-in-optical-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Learning to Tune Optical WANs: A Field Deployment of Noise Models in Optical Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#burst-seeking-high-performance-interoperability-and-scalability-in-soft-rdma" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BURST: Seeking High-performance, Interoperability and Scalability in Soft-RDMA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccc-re-architecting-delay-based-congestion-control-in-datacenter-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CCC: Re-architecting Delay-based Congestion Control in Datacenter Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oscar-o1-step-convergence-and-readily-deployable-congestion-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OSCAR: O(1)-Step Convergence and Readily-deployable Congestion Control
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bifrost-alibabas-next-generation-vpc-network-with-high-performance-multipath-reliable-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Bifrost: Alibaba's Next-Generation VPC Network with High-Performance Multipath Reliable Transport
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zooroute-enhancing-cloud-scale-network-reliability-via-candidate-path-provisioning-and-overlay-proactive-rerouting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ZooRoute: Enhancing Cloud-Scale Network Reliability via Candidate Path Provisioning and Overlay Proactive Rerouting
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#express-lane-to-efficiency-and-reliability-multi-dimensional-control-in-metas-express-backbone-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Express Lane to Efficiency and Reliability: Multi-Dimensional Control in Meta’s Express Backbone Network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offloading-cloud-network-services-at-production-scale-with-sonic-dash-smartswitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Offloading Cloud Network Services at Production Scale with SONiC DASH SmartSwitch
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#krakenguard-towards-fine-grained-ebpf-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        KRAKENGUARD: Towards Fine-Grained eBPF Isolation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybridmesh-a-hardware-software-hybrid-approach-for-accelerating-service-mesh-ingress" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        HybridMesh: A Hardware-software Hybrid Approach for Accelerating Service Mesh Ingress
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ddos-detection-at-the-scale-of-one-hundred-tbps" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DDoS Detection at the Scale of One Hundred Tbps
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-link-we-trust-bft-at-the-speed-of-cft-using-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        In Link We Trust: BFT at the Speed of CFT using Switches
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crosscheck-input-validation-for-wan-control-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CrossCheck: Input Validation for WAN Control Systems
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defending-against-traffic-analysis-attacks-with-flexible-in-network-obfuscation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Defending against Traffic Analysis Attacks with Flexible In-Network Obfuscation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iris-expressive-traffic-analysis-for-the-modern-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Iris: Expressive Traffic Analysis for the Modern Internet
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-composable-emulation-framework-for-whitebox-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Composable Emulation Framework for Whitebox Switches
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-bits-to-tokens-knowledge-driven-generative-communication-of-multimodal-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Bits to Tokens: Knowledge-Driven Generative Communication of Multimodal Data
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splidt-partitioned-decision-trees-for-scalable-stateful-inference-at-line-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SPLIDT: Partitioned Decision Trees for Scalable Stateful Inference at Line Rate
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eywa-automating-model-based-testing-using-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Eywa: Automating Model-Based Testing using LLMs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conference type
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Conference type
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Academic
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operator
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Security
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standards
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendor
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matryoshka-realizing-hyperscale-data-center-network-design-for-the-ai-era" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Matryoshka: Realizing Hyperscale Data Center Network Design for the AI Era
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openoptics-enabling-open-research-and-implementation-of-optical-data-center-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OpenOptics: Enabling Open Research and Implementation of Optical Data Center Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syncwise-error-aware-time-synchronization-for-reconfigurable-data-center-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SyncWise: Error-Aware Time Synchronization for Reconfigurable Data Center Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starfish-a-topology-routing-co-design-for-small-scale-data-centers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Starfish: A Topology-Routing Co-Design for Small-Scale Data Centers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-to-tune-optical-wans-a-field-deployment-of-noise-models-in-optical-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Learning to Tune Optical WANs: A Field Deployment of Noise Models in Optical Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#burst-seeking-high-performance-interoperability-and-scalability-in-soft-rdma" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BURST: Seeking High-performance, Interoperability and Scalability in Soft-RDMA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccc-re-architecting-delay-based-congestion-control-in-datacenter-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CCC: Re-architecting Delay-based Congestion Control in Datacenter Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oscar-o1-step-convergence-and-readily-deployable-congestion-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OSCAR: O(1)-Step Convergence and Readily-deployable Congestion Control
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bifrost-alibabas-next-generation-vpc-network-with-high-performance-multipath-reliable-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Bifrost: Alibaba's Next-Generation VPC Network with High-Performance Multipath Reliable Transport
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zooroute-enhancing-cloud-scale-network-reliability-via-candidate-path-provisioning-and-overlay-proactive-rerouting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ZooRoute: Enhancing Cloud-Scale Network Reliability via Candidate Path Provisioning and Overlay Proactive Rerouting
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#express-lane-to-efficiency-and-reliability-multi-dimensional-control-in-metas-express-backbone-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Express Lane to Efficiency and Reliability: Multi-Dimensional Control in Meta’s Express Backbone Network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offloading-cloud-network-services-at-production-scale-with-sonic-dash-smartswitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Offloading Cloud Network Services at Production Scale with SONiC DASH SmartSwitch
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#krakenguard-towards-fine-grained-ebpf-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        KRAKENGUARD: Towards Fine-Grained eBPF Isolation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybridmesh-a-hardware-software-hybrid-approach-for-accelerating-service-mesh-ingress" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        HybridMesh: A Hardware-software Hybrid Approach for Accelerating Service Mesh Ingress
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ddos-detection-at-the-scale-of-one-hundred-tbps" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DDoS Detection at the Scale of One Hundred Tbps
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-link-we-trust-bft-at-the-speed-of-cft-using-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        In Link We Trust: BFT at the Speed of CFT using Switches
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crosscheck-input-validation-for-wan-control-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CrossCheck: Input Validation for WAN Control Systems
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defending-against-traffic-analysis-attacks-with-flexible-in-network-obfuscation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Defending against Traffic Analysis Attacks with Flexible In-Network Obfuscation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iris-expressive-traffic-analysis-for-the-modern-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Iris: Expressive Traffic Analysis for the Modern Internet
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-composable-emulation-framework-for-whitebox-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Composable Emulation Framework for Whitebox Switches
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-bits-to-tokens-knowledge-driven-generative-communication-of-multimodal-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Bits to Tokens: Knowledge-Driven Generative Communication of Multimodal Data
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splidt-partitioned-decision-trees-for-scalable-stateful-inference-at-line-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SPLIDT: Partitioned Decision Trees for Scalable Stateful Inference at Line Rate
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eywa-automating-model-based-testing-using-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Eywa: Automating Model-Based Testing using LLMs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>21 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="nsdi-26-network-papers-worth-your-time">NSDI '26 — Network Papers Worth Your Time<a class="headerlink" href="#nsdi-26-network-papers-worth-your-time" title="Permanent link">#</a></h1>
+<p>NSDI '26 (Renton, WA, May 4–6, 2026) is dominated this cycle by AI-era fabric design, hyperscaler operational papers, and a strong run of congestion-control work. Note on depth: the program listing itself contained only titles and authors; every write-up below is grounded in the official paper abstract retrieved from the item's USENIX page, so assessments of methodology depth beyond the abstract (full eval sections, limitations) are not included.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>Academic</span>
+<span class="digest-fact" markdown>April 30, 2026</span>
+<span class="digest-fact" markdown><a href="https://www.usenix.org/conference/nsdi26/technical-sessions">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="matryoshka-realizing-hyperscale-data-center-network-design-for-the-ai-era"><a href="matryoshka-realizing-hyperscale-data-center-network-design-for-the-ai-er/">Matryoshka: Realizing Hyperscale Data Center Network Design for the AI Era</a><a class="headerlink" href="#matryoshka-realizing-hyperscale-data-center-network-design-for-the-ai-era" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/cai">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-cai.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-cai.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=e8St497tql8">Recording</a></p>
+</div>
+<p>Yan Cai, Jialong Li (<a href="../companies/max-planck-institute-for-informatics/">Max Planck Institute for Informatics</a>), Kutalmis Akpinar, Tianxiang Li, Hany Morsy, Jason Wilson, Sunil Khaunte (<a href="../companies/meta/">Meta</a>), Yiting Xia (MPI), Ying Zhang (Meta), et al.</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="e8St497tql8" data-start="0" href="https://www.youtube.com/watch?v=e8St497tql8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/e8St497tql8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/e8St497tql8/maxresdefault.jpg" alt="Play the recording: Matryoshka: Realizing Hyperscale Data Center Network Design for the AI Era" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: The gap this paper names — between logical DCN designs and the concrete switch configurations that realize them — is exactly the "last mile" problem anyone running multi-generation fabric automation knows. It's also the clearest public account yet of how a hyperscaler's DCN tooling strains under AI-cluster growth.</li>
+<li><strong>What</strong>: Meta's production DCN design system, operational for 6+ years, that compiles high-level design intent (physical connectivity, addressing, routing policy) into working switch configurations. It has guided the design of nearly 900 DCs across 18 distinct types, including Meta's latest 100K-GPU training supercluster.</li>
+<li><strong>How</strong>: Intent-based, model-driven compilation: DCN designs are expressed as machine-readable models and systematically compiled down to per-switch configs, so design, addressing, and routing evolve together and heterogeneous cluster types are treated as first-class variants rather than snowflakes.</li>
+<li><strong>Where applicable</strong>: Meta-specific production experience, but the architecture pattern (model-driven intent-to-config compilation for rapidly evolving, heterogeneous AI fabrics) generalizes to any operator building multi-generation DCNs. The 6-year production track record and ~900-DC scale make the claims firmly substantiated.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="openoptics-enabling-open-research-and-implementation-of-optical-data-center-networks"><a href="openoptics-enabling-open-research-and-implementation-of-optical-data-cen/">OpenOptics: Enabling Open Research and Implementation of Optical Data Center Networks</a><a class="headerlink" href="#openoptics-enabling-open-research-and-implementation-of-optical-data-center-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/lei-optical">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-lei-optical.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-lei-optical.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=DJ33HHI8xnw">Recording</a></p>
+</div>
+<p>Yiming Lei, Federico De Marchi (<a href="../companies/max-planck-institute-for-informatics/">Max Planck Institute for Informatics</a>), Jialong Li (Shenzhen University of Advanced Technology), Raj Joshi (<a href="../companies/harvard-university/">Harvard</a>), Shu-Ting Wang (UC San Diego), Xiaoqi Chen (<a href="../companies/purdue-university/">Purdue</a>), Balakrishnan Chandrasekaran (VU Amsterdam), Yiting Xia (MPI)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="DJ33HHI8xnw" data-start="0" href="https://www.youtube.com/watch?v=DJ33HHI8xnw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/DJ33HHI8xnw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/DJ33HHI8xnw/maxresdefault.jpg" alt="Play the recording: OpenOptics: Enabling Open Research and Implementation of Optical Data Center Networks" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Optical DCNs have been stuck as closed, hardware-tied ecosystems — every research prototype is bespoke. This is the first serious open framework, and it lowers the cost of experimenting with circuit-switched fabrics to "Python script" level. If you track OCS-based DC designs, this is the platform to watch.</li>
+<li><strong>What</strong>: An open research/implementation framework that decouples optical DCN software from optical hardware. It implements six optical DCN architectures and seven routing schemes on a real testbed (108 ToRs) and achieves a 2 µs minimum optical circuit duration on commodity devices — a record for circuit-switched DCN granularity.</li>
+<li><strong>How</strong>: Three pieces: a time-flow table abstraction as the common hardware/software interface, a unified workflow + Python API for defining optical DCNs, and a backend that re-architects queue management around time-flow tables so packets are staged for rapidly reconfiguring circuits.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to researchers and builders experimenting with optical/express-loop fabrics; requires programmable (P4-class) switches plus commodity optical hardware. Artifacts were evaluated and reproduced (available/functional/reproduced badges), so it is genuinely usable, not just described.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="syncwise-error-aware-time-synchronization-for-reconfigurable-data-center-networks"><a href="syncwise-error-aware-time-synchronization-for-reconfigurable-data-center/">SyncWise: Error-Aware Time Synchronization for Reconfigurable Data Center Networks</a><a class="headerlink" href="#syncwise-error-aware-time-synchronization-for-reconfigurable-data-center-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/lei-syncwise">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-lei-syncwise.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-lei-syncwise.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=Bah3Thx7Yew">Recording</a></p>
+</div>
+<p>Yiming Lei (MPI for Informatics), Jialong Li (Shenzhen University of Advanced Technology), Zhengqing Liu (Imperial College London), Raj Joshi (<a href="../companies/harvard-university/">Harvard</a>), Yiting Xia (MPI)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="Bah3Thx7Yew" data-start="0" href="https://www.youtube.com/watch?v=Bah3Thx7Yew" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Bah3Thx7Yew/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Bah3Thx7Yew/maxresdefault.jpg" alt="Play the recording: SyncWise: Error-Aware Time Synchronization for Reconfigurable Data Center Networks" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: As reconfigurable DCNs (OCS-based) shrink circuit durations to microseconds/sub-microseconds, accurate time sync becomes the correctness backbone of the whole fabric — and this paper shows the problem was previously unformalized. A foundational gap-fill for the reconfigurable-fabric subfield.</li>
+<li><strong>What</strong>: The first time-synchronization protocol designed specifically for reconfigurable DCNs. It formalizes the RDCN sync problem, builds an RDCN-specific error model, and achieves provably optimal sync — sub-10 ns maximum sync error, well beyond what the most accurate traditional-DC protocols achieve.</li>
+<li><strong>How</strong>: Uses the RDCN error model (sources of error specific to dynamic optical circuits) to guide "wise" selection of sync parents — choosing the peers whose sync exchanges will be least corrupted by circuit reconfiguration dynamics.</li>
+<li><strong>Where applicable</strong>: Specific to OCS-based reconfigurable DCNs; prototyped on an Intel Tofino2 + OCS testbed with large-scale simulations backing the testbed numbers. Not relevant to static packet fabrics, but core reading for anyone evaluating express-loop/circuit-switched designs.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="starfish-a-topology-routing-co-design-for-small-scale-data-centers"><a href="starfish-a-topology-routing-co-design-for-small-scale-data-centers/">Starfish: A Topology-Routing Co-Design for Small-Scale Data Centers</a><a class="headerlink" href="#starfish-a-topology-routing-co-design-for-small-scale-data-centers" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/zhou-starfish">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-zhou-starfish.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-zhou-starfish.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=iOh9B2k6rNU">Recording</a></p>
+</div>
+<p>Anchengcheng Zhou (Princeton), Vipul Harsh (Conviva), Sangeetha Abdu Jyothi (UC Irvine), Maria Apostolaki (Princeton), Brighten Godfrey (<a href="../companies/university-of-illinois-urbana-champaign/">UIUC</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="iOh9B2k6rNU" data-start="0" href="https://www.youtube.com/watch?v=iOh9B2k6rNU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/iOh9B2k6rNU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/iOh9B2k6rNU/maxresdefault.jpg" alt="Play the recording: Starfish: A Topology-Routing Co-Design for Small-Scale Data Centers" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Almost all DC topology research targets hyperscalers, yet most real data centers run hundreds to a few thousand servers on leaf-spine with painful cost/oversubscription tradeoffs. This is a rare, rigorous design for that population — directly useful if your fleet is enterprise/colo-scale rather than 100K-GPU.</li>
+<li><strong>What</strong>: A topology-routing co-design (DRing topology + adaptive routing) that supports 56% more traffic than an equal-cost leaf-spine on real traces with the same equipment. The routing scheme also generalizes to expander topologies, where it yields 52% more traffic than leaf-spine — fixing expander designs' biggest deployment hurdle (no practical routing).</li>
+<li><strong>How</strong>: DRing spreads servers across all switches to raise per-server egress capacity and expose diverse near-shortest paths; routing exploits DRing's structural properties and adapts to traffic using standard hardware and protocols — no exotic switching required.</li>
+<li><strong>Where applicable</strong>: Small-to-mid data centers (hundreds–thousands of servers); uses standard equipment and protocols, making it unusually deployable for a topology paper. Artifact evaluated (available/functional/reproduced).</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="learning-to-tune-optical-wans-a-field-deployment-of-noise-models-in-optical-networks"><a href="learning-to-tune-optical-wans-a-field-deployment-of-noise-models-in-opti/">Learning to Tune Optical WANs: A Field Deployment of Noise Models in Optical Networks</a><a class="headerlink" href="#learning-to-tune-optical-wans-a-field-deployment-of-noise-models-in-optical-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/kataria">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-kataria.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-kataria.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=VAdVq9cBPjw">Recording</a></p>
+</div>
+<p>Bhaskar Kataria, Howard Hua (<a href="../companies/cornell-university/">Cornell</a>), Andrea D'Amico (NEC Labs), Bill Owens (NYSERNet), Rachee Singh (Cornell)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="VAdVq9cBPjw" data-start="0" href="https://www.youtube.com/watch?v=VAdVq9cBPjw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/VAdVq9cBPjw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/VAdVq9cBPjw/maxresdefault.jpg" alt="Play the recording: Learning to Tune Optical WANs: A Field Deployment of Noise Models in Optical Networks" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Rare example of physical-layer optimization (amplifier gain tuning) actually deployed in a live ISP backbone with measured results — the kind of ground-truth that usually stays inside vendor tooling.</li>
+<li><strong>What</strong>: A Gaussian Noise model of a New York state ISP's optical backbone covering amplifiers, fiber spans, ROADM s, and transceivers; hyperparameter search over this model identifies amplifier gain settings that improve end-to-end SNR. In a live field deployment, the tuned settings achieved a 2 dB SNR improvement on a single wavelength.</li>
+<li><strong>How</strong>: Model the full optical chain to predict end-to-end SNR accurately, then treat the model as an opaque box and run ML-style hyperparameter search over amplifier configurations under practical network constraints.</li>
+<li><strong>Where applicable</strong>: Small/mid ISP optical backbones (NYSERNet-scale); the 2 dB single-wavelength result is modest but real. Techniques are broadly reusable for any operator that wants model-driven optical tuning instead of vendor-blessed defaults; not a hyperscale DWDM result.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="burst-seeking-high-performance-interoperability-and-scalability-in-soft-rdma"><a href="burst-seeking-high-performance-interoperability-and-scalability-in-soft/">BURST: Seeking High-performance, Interoperability and Scalability in Soft-RDMA</a><a class="headerlink" href="#burst-seeking-high-performance-interoperability-and-scalability-in-soft-rdma" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/shen">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-shen.pdf">Paper</a> <a class="pick-link" href="https://www.youtube.com/watch?v=tPrNjcC67QE">Recording</a></p>
+</div>
+<p>Huijun Shen (Hunan University), Zelong Yue, Jian Yang, et al. (<a href="../companies/bytedance/">ByteDance</a>), Xijin Yin, et al. (Hunan University)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="tPrNjcC67QE" data-start="0" href="https://www.youtube.com/watch?v=tPrNjcC67QE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/tPrNjcC67QE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/tPrNjcC67QE/maxresdefault.jpg" alt="Play the recording: BURST: Seeking High-performance, Interoperability and Scalability in Soft-RDMA" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Heterogeneous pods — commercial RNICs, plain Ethernet NICs, in-house hardware — are now the norm, and non-RNIC↔RNIC traffic keeps falling back to TCP. ByteDance attacks exactly the interoperability wall that limits RDMA estate scaling during LLM-infra buildouts.</li>
+<li><strong>What</strong>: A user-space software RDMA stack that runs unmodified Verbs applications on ordinary Ethernet NICs at 400G: 98.7% line-rate bandwidth, 3.2–6.3x kernel RXE throughput, LLM inference latency at 25.2% of TCP, and 12x faster connection setup than native RDMA CM.</li>
+<li><strong>How</strong>: Runs as an independent user-space process with full Verbs API compatibility; lock-free DPDK data plane for line-rate packet processing; Intel DSA offload to cut CPU cost; kernel-bypass connection manager.</li>
+<li><strong>Where applicable</strong>: Data centers with mixed NIC estates, especially where RNIC hardware can't be everywhere (storage-attached hosts, upgraded clusters). x86-specific today (DPDK + Intel DSA); ByteDance production-workload validation, academic authors.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="ccc-re-architecting-delay-based-congestion-control-in-datacenter-networks"><a href="ccc-re-architecting-delay-based-congestion-control-in-datacenter-network/">CCC: Re-architecting Delay-based Congestion Control in Datacenter Networks</a><a class="headerlink" href="#ccc-re-architecting-delay-based-congestion-control-in-datacenter-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/jiang">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-jiang.pdf">Paper</a> <a class="pick-link" href="https://www.youtube.com/watch?v=9NWJ8MiRq30">Recording</a></p>
+</div>
+<p>Wanchun Jiang, et al. (Central South University), Danfeng Shan (Xi'an Jiaotong), Fengyuan Ren (<a href="../companies/tsinghua-university/">Tsinghua</a>), Jiawei Huang, Jianxin Wang (Central South)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="9NWJ8MiRq30" data-start="0" href="https://www.youtube.com/watch?v=9NWJ8MiRq30" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/9NWJ8MiRq30/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/9NWJ8MiRq30/maxresdefault.jpg" alt="Play the recording: CCC: Re-architecting Delay-based Congestion Control in Datacenter Networks" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: TIMELY/SWIFT-style delay CC runs in production, but the paper's key insight — that even perfectly measured delay can yield <em>incorrect congestion-information deduction</em> under certain conditions — explains instability modes practitioners see and haven't had a framework for.</li>
+<li><strong>What</strong>: A re-architecture of delay-based CC that makes rate adjustments depend not just on congestion state but on <em>trustworthiness of the deduction from delay signals</em>. The resulting CCC matches INT-based CCs (HPCC, PowerTCP) using only delay — no INT headers, no special switch support — and beats DCQCN, TIMELY, and SWIFT.</li>
+<li><strong>How</strong>: Demarcates operating regions where delay-derived congestion info is untrustworthy (using congestion criteria plus system inertia), applies probing-style rate adjustment there, and applies analytical adjustment elsewhere to reach the target state while keeping the deduction trustworthy.</li>
+<li><strong>Where applicable</strong>: Standard datacenter fabrics — the whole point is needing nothing beyond RTT signals. Validated with DPDK testbeds and large-scale simulation. General technique, no hardware prerequisites; a serious competitor to deployable delay-based schemes like SWIFT.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="oscar-o1-step-convergence-and-readily-deployable-congestion-control"><a href="oscar-o1-step-convergence-and-readily-deployable-congestion-control/">OSCAR: O(1)-Step Convergence and Readily-deployable Congestion Control</a><a class="headerlink" href="#oscar-o1-step-convergence-and-readily-deployable-congestion-control" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/zhang-zhaochen">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-zhang-zhaochen.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-zhang-zhaochen.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=8voPBT2xIRY">Recording</a></p>
+</div>
+<p>Zhaochen Zhang, Feiyang Xue, Rui Ning (Nanjing University), Keqiang He (<a href="../companies/shanghai-jiao-tong-university/">SJTU</a>), Gianni Antichi (Politecnico di Milano &amp; QMUL), et al. — <strong>Awarded Outstanding Paper</strong></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="8voPBT2xIRY" data-start="0" href="https://www.youtube.com/watch?v=8voPBT2xIRY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/8voPBT2xIRY/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/8voPBT2xIRY/maxresdefault.jpg" alt="Play the recording: OSCAR: O(1)-Step Convergence and Readily-deployable Congestion Control" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: The outstanding-paper pick of the congestion-control cluster. It removes the main barrier to fast-converging CC (precise INT headers that commodity high-speed hardware can't parse) while keeping constant-time convergence.</li>
+<li><strong>What</strong>: The first CC achieving O(1)-step convergence — reaching fair share in constant time regardless of network conditions — <em>without</em> specialized network features. In large-scale simulations with realistic workloads it beats precise-INT-based CCs by 12–48% on average FCT and 40–74% on tail FCT.</li>
+<li><strong>How</strong>: Insight that delay and delay gradient carry precision comparable to INT; then three techniques: accurate low-overhead delay-gradient estimation, eliminating overreaction in MIMD updates, and coordinating independent control loops toward a single target.</li>
+<li><strong>Where applicable</strong>: Commodity datacenter hardware (no INT support needed); testbed evaluation under real-world noise plus large-scale simulation. Pairs naturally with CCC above — the two papers collectively argue delay signals can replace INT for the next generation of deployable DC CC.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="bifrost-alibabas-next-generation-vpc-network-with-high-performance-multipath-reliable-transport"><a href="bifrost-alibabas-next-generation-vpc-network-with-high-performance-multi/">Bifrost: Alibaba's Next-Generation VPC Network with High-Performance Multipath Reliable Transport</a><a class="headerlink" href="#bifrost-alibabas-next-generation-vpc-network-with-high-performance-multipath-reliable-transport" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/fan">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-fan.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-fan.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=L5GYcMK18mI">Recording</a></p>
+</div>
+<p>Zihao Fan (<a href="../companies/shanghai-jiao-tong-university/">SJTU</a> and <a href="../companies/alibaba/">Alibaba Cloud</a>), Xing Li (Zhejiang University and Alibaba Cloud), Ye Yang, et al. (Alibaba Cloud), Rong Wen (Fudan and Alibaba Cloud), Shunmin Zhu (Alibaba Cloud), et al.</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="L5GYcMK18mI" data-start="0" href="https://www.youtube.com/watch?v=L5GYcMK18mI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/L5GYcMK18mI/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/L5GYcMK18mI/maxresdefault.jpg" alt="Play the recording: Bifrost: Alibaba's Next-Generation VPC Network with High-Performance Multipath Reliable Transport" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: This is the logical endpoint of the "TCP in the guest can't survive cloud-network instability" argument: Alibaba moved reliable, multipath transport <em>into the VPC overlay infrastructure itself</em>, tail-latency problem included. An operational-systems paper with 26x-scale production evidence.</li>
+<li><strong>What</strong>: Next-gen VPC networking delivering reliable transport as an infrastructure service: up to 307x tail-latency reduction for Redis and 66x for Nginx, millisecond-level failure recovery, and O(100k) concurrent connections per SmartNIC.</li>
+<li><strong>How</strong>: RTT-aware multipath packet spraying across the underlay (bypasses failures, spreads elephant flows), in-place reordering in the guest for in-order delivery, delayed bitmap ACKs for end-to-end reliability, and reliability-state management engineered for SmartNIC deployment at scale.</li>
+<li><strong>Where applicable</strong>: Alibaba Cloud production (operational systems paper); requires SmartNIC-capable tunnel endpoints, so it presumes a cloud provider's level of control over the hypervisor/SmartNIC layer. The architecture — reliable multipath overlay as a tenant-transparent service — is the transferable idea.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="zooroute-enhancing-cloud-scale-network-reliability-via-candidate-path-provisioning-and-overlay-proactive-rerouting"><a href="zooroute-enhancing-cloud-scale-network-reliability-via-candidate-path-pr/">ZooRoute: Enhancing Cloud-Scale Network Reliability via Candidate Path Provisioning and Overlay Proactive Rerouting</a><a class="headerlink" href="#zooroute-enhancing-cloud-scale-network-reliability-via-candidate-path-provisioning-and-overlay-proactive-rerouting" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/sun">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-sun.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-sun.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=NKXrwJ854cc">Recording</a></p>
+</div>
+<p>Xiaoqing Sun (<a href="../companies/alibaba/">Alibaba Cloud</a>), Xing Li (Zhejiang University and Alibaba Cloud), Xionglie Wei, et al. (Alibaba Cloud), Yang Xu (Fudan), Shunmin Zhu (Alibaba Cloud), et al.</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="NKXrwJ854cc" data-start="0" href="https://www.youtube.com/watch?v=NKXrwJ854cc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/NKXrwJ854cc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/NKXrwJ854cc/maxresdefault.jpg" alt="Play the recording: ZooRoute: Enhancing Cloud-Scale Network Reliability via Candidate Path Provisioning and Overlay Proactive Rerouting" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Fast, deterministic failure recovery offered <em>by the cloud provider</em> instead of pushing HA plumbing onto tenants — an explicit product decision worth understanding. The mechanism is a clever use of an oft-ignored header field.</li>
+<li><strong>What</strong>: A tenant-transparent, underlay-agnostic failure-recovery service, deployed 26 months in Alibaba Cloud: cumulative outage time reduced 93.19%, and 98.21% of failures masked from tenant awareness.</li>
+<li><strong>How</strong>: Reroutes traffic by varying the outer source port on VXLAN encapsulation — different source ports hash to different underlay paths. Tunnel endpoints proactively probe a set of healthy source-port candidates per destination IP, guaranteeing one-shot deterministic reroute onto a known-good path. Engineering challenges addressed: hypervisor probing overhead, Tofino-gateway memory limits, and stateful middlebox disruption.</li>
+<li><strong>Where applicable</strong>: Planet-scale cloud overlays (Alibaba production, Tofino gateways). The source-port-as-path-selector trick is broadly reusable in any ECMP-overlay network; the full proactive-probing service assumes provider control of both tunnel endpoints.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="express-lane-to-efficiency-and-reliability-multi-dimensional-control-in-metas-express-backbone-network"><a href="express-lane-to-efficiency-and-reliability-multi-dimensional-control-in/">Express Lane to Efficiency and Reliability: Multi-Dimensional Control in Meta’s Express Backbone Network</a><a class="headerlink" href="#express-lane-to-efficiency-and-reliability-multi-dimensional-control-in-metas-express-backbone-network" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/iqbal">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-iqbal.pdf">Paper</a> <a class="pick-link" href="https://www.youtube.com/watch?v=IiU7_EtXKVk">Recording</a></p>
+</div>
+<p>Faisal Iqbal, Vitaly Neganov, et al. (<a href="../companies/meta/">Meta</a>), Aditya Akella (UT Austin), Ying Zhang (Meta)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="IiU7_EtXKVk" data-start="0" href="https://www.youtube.com/watch?v=IiU7_EtXKVk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/IiU7_EtXKVk/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/IiU7_EtXKVk/maxresdefault.jpg" alt="Play the recording: Express Lane to Efficiency and Reliability: Multi-Dimensional Control in Meta’s Express Backbone Network" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Meta's EBB is one of the largest WANs on earth, and this is the follow-up evolution under AI-era traffic pressure — useful as a reference point for how far you can push a mature multi-plane SDN WAN design before adding new control dimensions.</li>
+<li><strong>What</strong>: An operational account of evolving EBB's control plane along two new dimensions beyond per-plane TE: Unequal Cost Multi-Path (UCMP) for cross-plane load balancing and Fast Re-Route (FRR) for rapid local failure detection/recovery — meeting AI-era efficiency and resiliency demands without fundamental architectural change.</li>
+<li><strong>How</strong>: UCMP extends control across planes so traffic can be split unevenly across parallel planes for utilization; FRR adds per-device, time-slice control for sub-second failure handling. Both are described with design, implementation, and production results.</li>
+<li><strong>Where applicable</strong>: Meta-specific production WAN, but the multi-dimensional control framing (global-across-planes + local-per-device + existing per-plane TE) is a clean conceptual model for any large multi-plane backbone. Real deployment experience, not simulation.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="offloading-cloud-network-services-at-production-scale-with-sonic-dash-smartswitch"><a href="offloading-cloud-network-services-at-production-scale-with-sonic-dash-sm/">Offloading Cloud Network Services at Production Scale with SONiC DASH SmartSwitch</a><a class="headerlink" href="#offloading-cloud-network-services-at-production-scale-with-sonic-dash-smartswitch" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/wu-shaofeng">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-wu-shaofeng.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-wu-shaofeng.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=QWYJG4D6dL8">Recording</a></p>
+</div>
+<p>Shaofeng Wu (<a href="../companies/the-chinese-university-of-hong-kong/">CUHK</a> and <a href="../companies/microsoft/">Microsoft Research</a> Asia), Zhixiong Niu (MSRA), Riff Jiang, et al. (Microsoft), Hong Xu (CUHK) — <strong>Community Award Winner</strong></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="QWYJG4D6dL8" data-start="0" href="https://www.youtube.com/watch?v=QWYJG4D6dL8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/QWYJG4D6dL8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/QWYJG4D6dL8/maxresdefault.jpg" alt="Play the recording: Offloading Cloud Network Services at Production Scale with SONiC DASH SmartSwitch" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: A decade of Azure offload lessons distilled into an open, community-governed architecture — and a concrete datapoint that the DPU pool is collapsing back into the T1 switch itself. Directly relevant to where cloud-network offload roadmaps are heading.</li>
+<li><strong>What</strong>: SONiC DASH SmartSwitch, deployed at Azure production scale for stateful network services: 1.53 Tbps throughput, 19.2M CPS, 256M concurrent connections, ~1.8x power efficiency and ~2.7x space efficiency over the prior generation.</li>
+<li><strong>How</strong>: Three design lessons encoded: an immutable, hardware-friendly DASH pipeline programming model (vs. overly flexible models that block acceleration); a "uni-box" SmartSwitch converging NPU and DPU resources inside a single T1 switch (vs. appliance-style DPU pools); and community-driven P4 behavior specifications (vs. vendor SDKs).</li>
+<li><strong>Where applicable</strong>: Built on the open SONiC/DASH ecosystem rather than a proprietary fork, so this is the rare Microsoft-scale result a non-hyperscaler can actually build on. Requires SmartSwitch-class hardware (integrated NPU+DPU in the T1).</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="krakenguard-towards-fine-grained-ebpf-isolation"><a href="krakenguard-towards-fine-grained-ebpf-isolation/">KRAKENGUARD: Towards Fine-Grained eBPF Isolation</a><a class="headerlink" href="#krakenguard-towards-fine-grained-ebpf-isolation" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/patel">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-patel.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-patel.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=dMDetmCEmJc">Recording</a></p>
+</div>
+<p>Jainil Patel (IIT Roorkee), Lucas Graeff Buhl-Nielsen (Quantco), Adrien Ghosn (<a href="../companies/microsoft/">Microsoft</a>), Marios Kogias (Imperial College London)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="dMDetmCEmJc" data-start="0" href="https://www.youtube.com/watch?v=dMDetmCEmJc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/dMDetmCEmJc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/dMDetmCEmJc/maxresdefault.jpg" alt="Play the recording: KRAKENGUARD: Towards Fine-Grained eBPF Isolation" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: eBPF's security model is the dirty secret of the ecosystem — <code>CAP_BPF</code> is all-or-nothing, which is untenable as multi-tenant eBPF/XDP programs from different parties land on the same host. This is a serious attack on exactly that gap.</li>
+<li><strong>What</strong>: A trusted user-space manager enforcing fine-grained, policy-driven constraints on eBPF bytecode at load time: restricting helper usage, memory/map access, and return values. It demonstrably blocks misuse in real-world programs, detects existing CVEs, and enables an XDP-as-a-Service use case where tenants' XDP programs run directly on the host interface without mutual interference.</li>
+<li><strong>How</strong>: Symbolic execution of program paths at load time to check compliance with policy; cross-program interference detection to make co-location on the same hook safe.</li>
+<li><strong>Where applicable</strong>: General Linux/eBPF environments — any platform running third-party or tenant-supplied eBPF. Load-time analysis (not runtime) so the cost is per-load; the trusted-manager design makes assumptions about who controls the host. Highly relevant to Cilium-style deployments where programs multiply across hooks.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="hybridmesh-a-hardware-software-hybrid-approach-for-accelerating-service-mesh-ingress"><a href="hybridmesh-a-hardware-software-hybrid-approach-for-accelerating-service/">HybridMesh: A Hardware-software Hybrid Approach for Accelerating Service Mesh Ingress</a><a class="headerlink" href="#hybridmesh-a-hardware-software-hybrid-approach-for-accelerating-service-mesh-ingress" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/you">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-you.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-you.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=yri05pdgdMw">Recording</a></p>
+</div>
+<p>Myoungsung You (University of Seoul), Jaehyun Nam (Dankook University), Minjae Seo (ETRI), Taejune Park (Chonnam National University), Seungwon Shin (<a href="../companies/kaist/">KAIST</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="yri05pdgdMw" data-start="0" href="https://www.youtube.com/watch?v=yri05pdgdMw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/yri05pdgdMw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/yri05pdgdMw/maxresdefault.jpg" alt="Play the recording: HybridMesh: A Hardware-software Hybrid Approach for Accelerating Service Mesh Ingress" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: The ingress gateway is the spot where service-mesh overhead is worst, and the paper quantifies it: up to 4x throughput loss from CPU-intensive traffic analysis plus a convoluted forwarding path. A clean answer to the "sidecar or no sidecar" debate's ingress half.</li>
+<li><strong>What</strong>: A hybrid ingress gateway that puts traffic analysis and routing on a SmartNIC, augmented by a lightweight CPU-side proxy for features that don't fit the hardware. 4.4x HTTP throughput over existing gateways; 2.3x cost-effectiveness and 2.8x power-efficiency versus software-only or hardware-only designs.</li>
+<li><strong>How</strong>: Split the gateway data path — SmartNIC handles per-packet analysis and forwarding; the CPU proxy retains flexible traffic-management features — so neither the fully-software nor fully-hardware extreme is forced.</li>
+<li><strong>Where applicable</strong>: Any Istio/Envoy-style service mesh with hardware offload available; research prototype (testbed evaluation, not production), so treat numbers as best-case. The hybrid split principle is the transferable part.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="ddos-detection-at-the-scale-of-one-hundred-tbps"><a href="ddos-detection-at-the-scale-of-one-hundred-tbps/">DDoS Detection at the Scale of One Hundred Tbps</a><a class="headerlink" href="#ddos-detection-at-the-scale-of-one-hundred-tbps" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/xiao">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-xiao.pdf">Paper</a> <a class="pick-link" href="https://www.youtube.com/watch?v=MvWM_fLA6Lo">Recording</a></p>
+</div>
+<p>Yunming Xiao (<a href="../companies/the-chinese-university-of-hong-kong/">CUHK</a> Shenzhen and <a href="../companies/tencent/">Tencent</a>), Xijun Luo, et al. (Tencent), Heng Yu, Jiahao Cao (<a href="../companies/tsinghua-university/">Tsinghua</a>), Yan Chen (<a href="../companies/northwestern-university/">Northwestern</a>), Congcong Miao (Tencent)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="MvWM_fLA6Lo" data-start="0" href="https://www.youtube.com/watch?v=MvWM_fLA6Lo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/MvWM_fLA6Lo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/MvWM_fLA6Lo/maxresdefault.jpg" alt="Play the recording: DDoS Detection at the Scale of One Hundred Tbps" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Existing programmable-device DDoS detectors top out around Tbps per box; cloud incumbents see ~100 Tbps aggregate. This is the production answer to two orders of magnitude more traffic — with the scaling lessons made explicit.</li>
+<li><strong>What</strong>: "Canopy," a DDoS detection system deployed in Tencent production that scales past 100 Tbps via distributed detection across many servers — dynamic load balancing that adapts to mice/elephant mixes, plus traffic compression at the programmable switch to shrink per-server workload.</li>
+<li><strong>How</strong>: Instead of naive flow-level load balancing across detection servers (which skews badly), Canopy dynamically rebalances under fluctuating traffic patterns, and pre-aggregates/compresses traffic in the switch offload stage before it reaches the servers.</li>
+<li><strong>Where applicable</strong>: Tencent-specific production deployment, but the architecture (switch-side compression + adaptive distribution over a detection-server fleet) generalizes to any large scrubbing/detection pipeline. Real-world attack mitigation in production validates it.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="in-link-we-trust-bft-at-the-speed-of-cft-using-switches"><a href="in-link-we-trust-bft-at-the-speed-of-cft-using-switches/">In Link We Trust: BFT at the Speed of CFT using Switches</a><a class="headerlink" href="#in-link-we-trust-bft-at-the-speed-of-cft-using-switches" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/zeno">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-zeno.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-zeno.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=LWnWS-fRmU0">Recording</a></p>
+</div>
+<p>Lior Zeno, Naama Ben-David, Mark Silberstein (Technion)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="LWnWS-fRmU0" data-start="0" href="https://www.youtube.com/watch?v=LWnWS-fRmU0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/LWnWS-fRmU0/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/LWnWS-fRmU0/maxresdefault.jpg" alt="Play the recording: In Link We Trust: BFT at the Speed of CFT using Switches" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Byzantine fault tolerance has always cost a large multiple of CFT performance; this paper erases that penalty using properties of the modern DC network itself. A genuinely novel trust model — trusting the network fabric, not cryptography — that reframes what "trusted network" means in a DC.</li>
+<li><strong>What</strong>: SwitchBFT, a datacenter BFT consensus protocol matching the performance and fault tolerance of the fastest CFT protocols — attaining the speed of NOPaxos (an in-switch CFT) while tolerating Byzantine replicas.</li>
+<li><strong>How</strong>: Exploits packet source authentication to eliminate cryptographic-signature overhead in the fault-free path, and switch programmability to enforce agreement decisions and verify safety, all within tight switch resource budgets. Handles packet loss and switch-crash faults as design cases.</li>
+<li><strong>Where applicable</strong>: Data centers with programmable (Tofino-class) switches and source-authenticated links — the "trusted network" assumption is the constraint. For the identity-minded: this is an alternative to per-message cryptographic attestation, complementing rather than competing with workload-identity approaches like SPIFFE for different threat models.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="crosscheck-input-validation-for-wan-control-systems"><a href="crosscheck-input-validation-for-wan-control-systems/">CrossCheck: Input Validation for WAN Control Systems</a><a class="headerlink" href="#crosscheck-input-validation-for-wan-control-systems" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/krentsel">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-krentsel.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-krentsel.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=UFaw66muKOo">Recording</a></p>
+</div>
+<p>Alexander Krentsel (<a href="../companies/uc-berkeley/">UC Berkeley</a> and <a href="../companies/google/">Google</a>), Rishabh Iyer (UC Berkeley), Isaac Keslassy (Technion and UC Berkeley), Bharath Modhipalli (Google), Sylvia Ratnasamy (UC Berkeley and Google), Anees Shaikh, Rob Shakir (Google)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="UFaw66muKOo" data-start="0" href="https://www.youtube.com/watch?v=UFaw66muKOo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/UFaw66muKOo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/UFaw66muKOo/maxresdefault.jpg" alt="Play the recording: CrossCheck: Input Validation for WAN Control Systems" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: WAN outages increasingly trace to <em>bad inputs</em> to the SDN controller (telemetry bugs, corrupted state) rather than bad control logic. CrossCheck guards that interface — a class of failure most validation work ignores.</li>
+<li><strong>What</strong>: A shadow validation system for SDN-WAN controller inputs. Four weeks in a production WAN: it caught the single invalid-input incident that occurred with 0% false positives; simulation shows detection of demand perturbations as small as 5% at 100% accuracy, and zero false positives with up to 30% corrupted telemetry.</li>
+<li><strong>How</strong>: Cross-validates controller inputs (demands, topology, telemetry) against consistency constraints before they drive TE decisions, alerting operators pre-outage rather than post-mortem.</li>
+<li><strong>Where applicable</strong>: Google-scale WAN operator deployment; the pre-deployment shadow-mode evaluation pattern is what makes the 0%-FP claim credible. Concept transfers to any SDN-controlled WAN (or even large DCN controller) with telemetry-driven inputs.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="defending-against-traffic-analysis-attacks-with-flexible-in-network-obfuscation"><a href="defending-against-traffic-analysis-attacks-with-flexible-in-network-obfu/">Defending against Traffic Analysis Attacks with Flexible In-Network Obfuscation</a><a class="headerlink" href="#defending-against-traffic-analysis-attacks-with-flexible-in-network-obfuscation" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/xie-guorui">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-xie-guorui.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-xie-guorui.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=bXGpPqtsv-I">Recording</a></p>
+</div>
+<p>Guorui Xie, Qing Li (Pengcheng Laboratory), Zhenning Shi (<a href="../companies/tsinghua-university/">Tsinghua</a> Shenzhen), Gianni Antichi (Politecnico di Milano), et al.</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="bXGpPqtsv-I" data-start="0" href="https://www.youtube.com/watch?v=bXGpPqtsv-I" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/bXGpPqtsv-I/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/bXGpPqtsv-I/maxresdefault.jpg" alt="Play the recording: Defending against Traffic Analysis Attacks with Flexible In-Network Obfuscation" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Encrypted-traffic side channels (packet sizes, timing) keep working through TLS 1.3 and QUIC; existing defenses trade too much bandwidth or need unrealistic coordination. This makes in-network defense cheap enough to consider.</li>
+<li><strong>What</strong>: "Securitas," an obfuscation framework that cuts traffic-analysis attack accuracy by up to 95.89% while consuming 42.69x less bandwidth than prior defenses; real-Internet tests show ~0.15s added web page load.</li>
+<li><strong>How</strong>: A learning-guided mix of packet fragmentation and insertion, chosen adaptively rather than via fixed padding rules; implemented across four data planes — Tofino switch, FPGA, eBPF, and BMv2 — which is unusual deployability evidence.</li>
+<li><strong>Where applicable</strong>: Any operator that can insert obfuscation on-path (switch, NIC, or eBPF host). The multi-dataplane implementation means the defense isn't tied to one vendor's silicon; evaluation includes real-world Internet paths, not just lab topologies.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="iris-expressive-traffic-analysis-for-the-modern-internet"><a href="iris-expressive-traffic-analysis-for-the-modern-internet/">Iris: Expressive Traffic Analysis for the Modern Internet</a><a class="headerlink" href="#iris-expressive-traffic-analysis-for-the-modern-internet" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/rossman">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-rossman.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-rossman.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=NqssEbw7N50">Recording</a></p>
+</div>
+<p>Thea Rossman, Diana Qing, Gerry Wan, Zakir Durumeric (<a href="../companies/stanford-university/">Stanford University</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="NqssEbw7N50" data-start="0" href="https://www.youtube.com/watch?v=NqssEbw7N50" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/NqssEbw7N50/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/NqssEbw7N50/maxresdefault.jpg" alt="Play the recording: Iris: Expressive Traffic Analysis for the Modern Internet" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Security/ops teams keep bolting one-off sniffers and Zeek scripts onto high-speed links; Iris asks what a <em>framework</em> for high-performance traffic analysis should look like and delivers one that composes hundreds of tasks on one box.</li>
+<li><strong>What</strong>: A compiler-based framework that turns user-defined filters, stream transformations, and computations written in Rust into an optimized pipeline — executing hundreds of concurrent analysis tasks at 100 Gbps+ on a single commodity server.</li>
+<li><strong>How</strong>: The compiler eliminates redundant logic across concurrent analysis tasks to produce one unified runtime minimizing aggregate work; users get connection- and application-layer semantics exposed as Rust types rather than a constrained DSL.</li>
+<li><strong>Where applicable</strong>: General monitoring/security-analysis infrastructure, not tied to specific hardware. Artifact evaluated (available/functional/reproduced), so teams could realistically pilot it against existing Zeek/Graylog-style pipelines.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="a-composable-emulation-framework-for-whitebox-switches"><a href="a-composable-emulation-framework-for-whitebox-switches/">A Composable Emulation Framework for Whitebox Switches</a><a class="headerlink" href="#a-composable-emulation-framework-for-whitebox-switches" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/miao-whitebox">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-miao-whitebox.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-miao-whitebox.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=cJYeK_msai8">Recording</a></p>
+</div>
+<p>Congcong Miao (<a href="../companies/tencent/">Tencent</a>), Xianneng Zou (Tencent and <a href="../companies/tsinghua-university/">Tsinghua</a> Shenzhen), Chuwen Zhang (Tsinghua), et al., with Ang Chen (<a href="../companies/university-of-michigan/">University of Michigan</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="cJYeK_msai8" data-start="0" href="https://www.youtube.com/watch?v=cJYeK_msai8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/cJYeK_msai8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/cJYeK_msai8/maxresdefault.jpg" alt="Play the recording: A Composable Emulation Framework for Whitebox Switches" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: As switches disaggregate into vendor-mixed modules (data plane, control plane, optics), monolithic firmware emulators stop matching reality — and config errors slip through to production. This is the first emulation framework built for that composed world.</li>
+<li><strong>What</strong>: "MirSwitch," a composable whitebox-switch emulation framework deployed in Tencent's production network; operators used it to troubleshoot 97.5% of 203 issues in a recent year, with 2.2x better forwarding-emulation performance.</li>
+<li><strong>How</strong>: An adaptor-centric design that stitches together diverse emulator modules for data plane, control plane, and peripherals (including optical components), reconciling differing interface contracts across modules so mixed-vendor compositions can be emulated faithfully before deployment.</li>
+<li><strong>Where applicable</strong>: Operators building disaggregated/whitebox switches from multiple vendors; the 97.5%-of-issues production statistic is unusually strong validation for an emulation paper.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="from-bits-to-tokens-knowledge-driven-generative-communication-of-multimodal-data"><a href="from-bits-to-tokens-knowledge-driven-generative-communication-of-multimo/">From Bits to Tokens: Knowledge-Driven Generative Communication of Multimodal Data</a><a class="headerlink" href="#from-bits-to-tokens-knowledge-driven-generative-communication-of-multimodal-data" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/chen-xingyu">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-chen-xingyu.pdf">Paper</a> <a class="pick-link" href="https://www.youtube.com/watch?v=7MA8veJWNNk">Recording</a></p>
+</div>
+<p>Xingyu Chen (UC San Diego), Zihao Feng (<a href="../companies/university-of-southern-california/">USC</a>), Wuqiong Zhao (UCSD), Jianrong Ding (<a href="../companies/the-chinese-university-of-hong-kong/">CUHK</a>), Ke Sun (<a href="../companies/university-of-michigan/">Michigan</a>), Xinyu Zhang (UCSD)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="7MA8veJWNNk" data-start="0" href="https://www.youtube.com/watch?v=7MA8veJWNNk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/7MA8veJWNNk/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/7MA8veJWNNk/maxresdefault.jpg" alt="Play the recording: From Bits to Tokens: Knowledge-Driven Generative Communication of Multimodal Data" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Not your domain — and that's the point. This is the most complete systems argument yet that "the network should transmit task-relevant knowledge, not bits," backed by a working prototype rather than a position paper. It signals where edge/IoT/real-time communication research is going as foundation models meet the network stack.</li>
+<li><strong>What</strong>: Knowledge-Driven Communication (KDC): a framework transmitting semantic tokens rather than raw bitstreams. A full prototype achieves high downstream task accuracy with a fraction of the transmitted data and degrades gracefully under wireless loss, beating state-of-the-art codecs and learned baselines.</li>
+<li><strong>How</strong>: A task-aware transmitter uses multimodal foundation models to abstract source data into tokenized embeddings and prioritize semantically critical content (zero-shot, no task-specific retraining); the receiver reconstructs task-relevant information from pretrained knowledge bases plus incrementally updated context.</li>
+<li><strong>Where applicable</strong>: Wireless, lossy, bandwidth-constrained multimodal settings today (sensors, video analytics at the edge). Long-horizon relevance rather than near-term deployability for DC networking — but the tokens-not-bits framing will increasingly show up in adaptive video and agentic-traffic contexts.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="splidt-partitioned-decision-trees-for-scalable-stateful-inference-at-line-rate"><a href="splidt-partitioned-decision-trees-for-scalable-stateful-inference-at-lin/">SPLIDT: Partitioned Decision Trees for Scalable Stateful Inference at Line Rate</a><a class="headerlink" href="#splidt-partitioned-decision-trees-for-scalable-stateful-inference-at-line-rate" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/parvez">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-parvez.pdf">Paper</a> <a class="pick-link" href="https://www.youtube.com/watch?v=cFieTAipDco">Recording</a></p>
+</div>
+<p>Murayyiam Parvez (<a href="../companies/purdue-university/">Purdue</a>), Annus Zulfiqar (<a href="../companies/university-of-michigan/">Michigan</a>), Roman Beltiukov (UCSB), Shir Landau Feibish (University of Haifa), Walter Willinger (<a href="../companies/northwestern-university/">Northwestern</a>), Arpit Gupta (UCSB), Muhammad Shahbaz (Michigan)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="cFieTAipDco" data-start="0" href="https://www.youtube.com/watch?v=cFieTAipDco" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/cFieTAipDco/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/cFieTAipDco/maxresdefault.jpg" alt="Play the recording: SPLIDT: Partitioned Decision Trees for Scalable Stateful Inference at Line Rate" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: In-network ML keeps stalling on the same wall — hardware limits force tiny fixed feature sets per flow. SPLIDT's partitioning trick is a real mechanism (not an ML benchmark bump) for getting past that wall, and it generalizes to any stateful line-rate inference problem on switches and SmartNICs.</li>
+<li><strong>What</strong>: A system for deploying decision trees in the data plane that supports up to 5x more stateful features than prior approaches (NetBeacon, Leo) at the same low time-to-detection, scaling to millions of flows with ≤0.05% recirculation overhead.</li>
+<li><strong>How</strong>: Two ideas: group DT subtrees into partitions where each subtree gets its own feature set (instead of computing all features upfront for the whole tree), and use in-band recirculation as a control channel to reuse register/match-key resources across partitions at line rate. A training + design-space-exploration framework jointly optimizes feature allocation, partitioning, and depth.</li>
+<li><strong>Where applicable</strong>: Programmable switches and SmartNICs doing traffic classification, security monitoring, or in-network decisions. Artifact evaluated (available/functional/reproduced), so the partitioning approach is reproducible, not vendor-locked.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="eywa-automating-model-based-testing-using-llms"><a href="eywa-automating-model-based-testing-using-llms/">Eywa: Automating Model-Based Testing using LLMs</a><a class="headerlink" href="#eywa-automating-model-based-testing-using-llms" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.usenix.org/conference/nsdi26/presentation/mondal">Abstract</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26-mondal.pdf">Paper</a> <a class="pick-link" href="https://www.usenix.org/system/files/nsdi26_slides-mondal.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=ddYbCjDXntg">Recording</a></p>
+</div>
+<p>Rajdeep Mondal, Rathin Singha, Todd Millstein, George Varghese (UCLA), Ryan Beckett, Siva Kesava Reddy Kakarla (<a href="../companies/microsoft/">Microsoft Research</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="ddYbCjDXntg" data-start="0" href="https://www.youtube.com/watch?v=ddYbCjDXntg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/ddYbCjDXntg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/ddYbCjDXntg/maxresdefault.jpg" alt="Play the recording: Eywa: Automating Model-Based Testing using LLMs" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Model-based testing finds real protocol bugs but has always been gated on humans hand-writing RFC-conformant models — months of expert effort. Eywa removes that gate and immediately found 16 previously-undiscovered bugs in DNS/BGP/SMTP implementations. This is the clearest signal yet of LLMs changing core network-engineering practice (spec → model → tests), with results that survived review.</li>
+<li><strong>What</strong>: A protocol-testing framework that uses LLMs to automatically build models of intended protocol behavior from RFCs, blogs, and natural-language sources; case studies across DNS, BGP, and SMTP found 33 unique bugs, 16 novel despite extensive prior manual testing.</li>
+<li><strong>How</strong>: LLM-synthesized models are combined with mitigation for hallucinations and the inability to monolithically generate complex models (decomposition, validation against spec behavior), then fed into standard model-based test generation to drive high-coverage conformance testing of real implementations.</li>
+<li><strong>Where applicable</strong>: Protocol conformance testing broadly — DNS, BGP, and SMTP demonstrated; the approach is protocol-agnostic in principle where written specs exist. Artifact evaluated (available/functional/reproduced). If you own protocol conformance or interop testing, this is the paper to read this cycle.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>AI-era fabric design is the gravitational center</strong>: Matryoshka's 100K-GPU superclusters, Express Backbone's AI-driven TE evolution, BURST's LLM-inference-driven RDMA interop, and the many GPU-cluster training papers (FLARE, EROICA, Arcadia, Checkmate) all reflect the network being redesigned around AI traffic — congestion control, topology, and even DCN tooling are being re-derived from AI workload assumptions.</li>
+<li><strong>Chinese hyperscalers dominate operational-systems content</strong>: Alibaba (Bifrost, ZooRoute, CStar Gateway), Tencent (Canopy, MirSwitch, MirrorNet, Harp), ByteDance (BURST, Net-P4ct, Skyline), and Microsoft/Meta deliver production-validated systems with hard numbers (93% outage reduction, 26-month deployments, 100 Tbps) — unusually strong empirical grounding for NSDI, and a useful reality-check on academic claims.</li>
+<li><strong>Delay signals are displacing INT in congestion control</strong>: Both OSCAR (outstanding paper) and CCC demonstrate that delay/delay-gradient can achieve precision comparable to INT-based schemes without special hardware support — a collective shift from "richer telemetry" to "deployability first" in DC transport.</li>
+<li><strong>The DPU is collapsing into the switch</strong>: SONiC DASH SmartSwitch (NPU+DPU in one T1 box), Bifrost's SmartNIC-based VPC transport, and HybridMesh's SmartNIC ingress all push offload toward (or into) top-of-rack silicon — the "uni-box" consolidation is an architectural trend, not a one-off.</li>
+<li><strong>Optical and reconfigurable DCNs got their tooling layer</strong>: OpenOptics (open framework, 2µs circuits), SyncWise (sub-10ns sync), and the NYSERNet field deployment suggest the OCS-based fabric subfield is maturing from bespoke demos toward a researchable, instrumentable ecosystem.</li>
+<li><strong>LLMs entered the network-engineering loop — with evidence</strong>: Eywa's RFC-to-model synthesis finding novel bugs, alongside MoCE and the generative-traffic work, marks the shift from "ML for networking" (inference at line rate, e.g., SPLIDT) to "LLMs doing the engineering itself" (models, tests, diagnosis). Expect this thread to expand sharply next cycle.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/nsdi-2026.md"><code>digests/nsdi-2026.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/nsdi-2026.md"><code>prompts/nsdi-2026.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../kubecon-eu-2026/" class="md-footer__link md-footer__link--prev" aria-label="Previous: KubeCon + CloudNativeCon Europe 2026">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                KubeCon + CloudNativeCon Europe 2026
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ripe-92/" class="md-footer__link md-footer__link--next" aria-label="Next: RIPE 92 (Edinburgh) — for the PM">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                RIPE 92 (Edinburgh) — for the PM
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+    
+  </body>
+</html>

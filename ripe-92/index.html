@@ -1,0 +1,2034 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An operator conference: the highest-value material here is postmortems, at-scale tooling, and the IP&#x2f;optical integration wave now hitting DC and WAN fabrics.">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/ripe-92/">
+      
+      
+      
+        <link rel="prev" href="../nsdi-2026/">
+      
+      
+        <link rel="next" href="../lacnic-45/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>RIPE 92 (Edinburgh) — for the PM - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="RIPE 92 (Edinburgh) — for the PM · Conference Digest" />
+<meta property="og:description" content="An operator conference: the highest-value material here is postmortems, at-scale tooling, and the IP/optical integration wave now hitting DC and WAN fabrics." />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/ripe-92.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/ripe-92/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="RIPE 92 (Edinburgh) — for the PM · Conference Digest" />
+<meta property="twitter:description" content="An operator conference: the highest-value material here is postmortems, at-scale tooling, and the IP/optical integration wave now hitting DC and WAN fabrics." />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/ripe-92.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RIPE 92 (Edinburgh) — for the PM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../category/academic/" class="md-tabs__link">
+          
+  
+  Conference type
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-tabs__powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-tabs__powered-text">Powered by</span>
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evolution-of-metas-edge-and-backbone-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Evolution of Meta's Edge and Backbone Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexible-for-16t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Channelmania! – future proof your DWDM network topology while keeping it flexible for 1.6T
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-and-optimising-transceiver-efficiency-using-internal-metrics-for-improved-power-savings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Understanding and optimising transceiver efficiency using internal metrics for improved power savings
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vxlan-and-evpn-on-linux-with-bird" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        VXLAN and EVPN on Linux (with BIRD)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulating-rpki-and-more-with-marquees-in-tls-certificates-and-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Manipulating RPKI (and more) with marquees in TLS certificates (and more)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openpenny-identifying-legitimate-traffic-to-reduce-monitoring-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OpenPenny: Identifying Legitimate Traﬃc to Reduce Monitoring Noise
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measuring-the-impact-of-post-quantum-cryptography-on-complex-applications-a-case-study-on-federated-identity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Measuring The Impact of Post-Quantum Cryptography on Complex Applications: A Case Study on Federated Identity Management
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistent-unknown-unicast-a-peering-lan-case-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Persistent unknown unicast - A peering-LAN case study
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#route-filtering-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Route Filtering at Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redefining-netflix-bgp-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Redefining Netflix BGP architecture
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpki-do-we-need-garbage-collection-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        RPKI: Do we need Garbage Collection now?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-aspa-still-a-draft" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Why is ASPA still a draft
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns-transitive-trust-and-how-many-is-many" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DNS, Transitive Trust and How Many is Many
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overdoing-nsec3-hurts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Overdoing NSEC3 Hurts
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-30-attack-box-inside-the-android-tv-botnet-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The €30 attack box: inside the Android TV botnet ecosystem
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detecting-and-characterizing-ddos-scrubbing-from-global-bgp-routing-insights-from-five-leading-scrubbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Detecting and Characterizing DDoS Scrubbing from Global BGP Routing: Insights from Five Leading Scrubbers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-year-of-ipv6-only-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The year of IPv6-only desktop
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-much-of-bird-is-vibecoded" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How much of BIRD is vibecoded
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitsquatting-or-the-infinite-monkeys-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BitSquatting... ...or the infinite monkeys theorem...
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-address-space-for-outer-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IP Address space for Outer Space
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conference type
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Conference type
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Academic
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operator
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Security
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standards
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendor
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evolution-of-metas-edge-and-backbone-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Evolution of Meta's Edge and Backbone Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexible-for-16t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Channelmania! – future proof your DWDM network topology while keeping it flexible for 1.6T
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-and-optimising-transceiver-efficiency-using-internal-metrics-for-improved-power-savings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Understanding and optimising transceiver efficiency using internal metrics for improved power savings
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vxlan-and-evpn-on-linux-with-bird" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        VXLAN and EVPN on Linux (with BIRD)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulating-rpki-and-more-with-marquees-in-tls-certificates-and-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Manipulating RPKI (and more) with marquees in TLS certificates (and more)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openpenny-identifying-legitimate-traffic-to-reduce-monitoring-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OpenPenny: Identifying Legitimate Traﬃc to Reduce Monitoring Noise
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measuring-the-impact-of-post-quantum-cryptography-on-complex-applications-a-case-study-on-federated-identity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Measuring The Impact of Post-Quantum Cryptography on Complex Applications: A Case Study on Federated Identity Management
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#persistent-unknown-unicast-a-peering-lan-case-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Persistent unknown unicast - A peering-LAN case study
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#route-filtering-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Route Filtering at Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redefining-netflix-bgp-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Redefining Netflix BGP architecture
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpki-do-we-need-garbage-collection-now" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        RPKI: Do we need Garbage Collection now?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-aspa-still-a-draft" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Why is ASPA still a draft
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns-transitive-trust-and-how-many-is-many" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DNS, Transitive Trust and How Many is Many
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overdoing-nsec3-hurts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Overdoing NSEC3 Hurts
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-30-attack-box-inside-the-android-tv-botnet-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The €30 attack box: inside the Android TV botnet ecosystem
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detecting-and-characterizing-ddos-scrubbing-from-global-bgp-routing-insights-from-five-leading-scrubbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Detecting and Characterizing DDoS Scrubbing from Global BGP Routing: Insights from Five Leading Scrubbers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-year-of-ipv6-only-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The year of IPv6-only desktop
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-much-of-bird-is-vibecoded" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How much of BIRD is vibecoded
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitsquatting-or-the-infinite-monkeys-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BitSquatting... ...or the infinite monkeys theorem...
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-address-space-for-outer-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IP Address space for Outer Space
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>18 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="ripe-92-edinburgh-for-the-pm">RIPE 92 (Edinburgh) — for the PM<a class="headerlink" href="#ripe-92-edinburgh-for-the-pm" title="Permanent link">#</a></h1>
+<p>An operator conference: the highest-value material here is postmortems, at-scale tooling, and the IP/optical integration wave now hitting DC and WAN fabrics.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>Operator</span>
+<span class="digest-fact" markdown>May 18, 2026 – May 22, 2026</span>
+<span class="digest-fact" markdown><a href="https://ripe92.ripe.net/programme/meeting-plan/">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="evolution-of-metas-edge-and-backbone-networks"><a href="evolution-of-metas-edge-and-backbone-networks/">Evolution of Meta's Edge and Backbone Networks</a><a class="headerlink" href="#evolution-of-metas-edge-and-backbone-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/72/TBKG3W/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/TBKG3W/resources/Meta_RIPE_Z6Steot.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/fredrik-korsback_evolution-of-metas-edge-and-backbone-networks_main_20260519-100207.mp4">Recording</a></p>
+</div>
+<p>Fredrik Korsbäck, <a href="../companies/meta/">Meta Platforms, Inc</a></p>
+<div class="pick-video">
+<video aria-label="Recording: Evolution of Meta's Edge and Backbone Networks" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/fredrik-korsback_evolution-of-metas-edge-and-backbone-networks_main_20260519-100207.mp4"><a href="https://ripe92.ripe.net/media/videos/fredrik-korsback_evolution-of-metas-edge-and-backbone-networks_main_20260519-100207.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: The most direct window at this conference into hyperscaler physical backbone and DC fabric design — scaling strategy, ZR optics economics, and how AI traffic is reshaping both DC metro fabric and edge compute placement.</li>
+<li><strong>What</strong>: How Meta grew the backbone &gt;10X via two levers: scaling up (8-slot/288-port to 12-slot/432-port chassis; 288×400G to 288×800G interfaces) and scaling out (4→8 planes, multiple devices per plane). One site more than doubled platform capacity every year for 7 years (~192x cumulative). The Edge side is shifting toward an "Elastic Edge" with a global GPU footprint closer to users for uncacheable AI-generated content, plus a move away from route-server peering toward an automated bilateral peering portal.</li>
+<li><strong>How</strong>: Two distinct backbones: EBB (DC-to-DC, IPv6-only, multi-plane, with Meta's own TE/routing software, deployed in DCs and midpoints) and CBB (DC-to-PoP, traditional IP/MPLS, single-plane). DC-metro architecture keeps paired DCs within 10km connected with 100,000s of 400G on single fiber pairs via frontend/backend switches; &gt;10km AI backbone links run 10,000s of 800G ZR (ILA-free to 120–150km, 500km+ with ILAs) with optical protection switches. ZR pluggables (10–15W/plug) replace ~2kW transponders: a 1Pb midpoint scenario shrinks from 58 racks to 21 (400G-ZR) or 14 (800G-ZR).</li>
+<li><strong>Where applicable</strong>: The scale numbers are Meta-specific, but the ZR rack/power math, DC-metro fiber strategy, and plane-scaling approach transfer to anyone building DC interconnect or long-haul fabric.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexible-for-16t"><a href="channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-fl/">Channelmania! – future proof your DWDM network topology while keeping it flexible for 1.6T</a><a class="headerlink" href="#channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexible-for-16t" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/72/Q9YPAZ/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/Q9YPAZ/resources/Flexoptix_-_Channelm_4BcipnC.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/thomas-weible_channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexibl_main_20260519-090025.mp4">Recording</a></p>
+</div>
+<p>Thomas Weible, <a href="../companies/flexoptix/">FLEXOPTIX</a></p>
+<div class="pick-video">
+<video aria-label="Recording: Channelmania! – future proof your DWDM network topology while keeping it flexible for 1.6T" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/thomas-weible_channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexibl_main_20260519-090025.mp4"><a href="https://ripe92.ripe.net/media/videos/thomas-weible_channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexibl_main_20260519-090025.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: As IPoDWDM collapses the IP/transport split, IP network people now need coherent-DWDM literacy — grid planning, superchannels, and what 400GHz COTS filters mean for upgrade paths to 1.6T.</li>
+<li><strong>What</strong>: A technical primer-plus-argument: higher-order coherent modulation (16-constellation, dual-polarization, ~425Gbps at 53.125GBd) replaces OOK; 800G/1.6T superchannels need ~400GHz grids rather than shrinking 50/25GHz grids; and coherent detection being "blind" to other wavelengths enables filterless/colorless topologies at the cost of flexibility. The practical pitch: 12×400GHz COTS channels in the C-band future-proof the plant while staying backward-compatible with legacy 50GHz services.</li>
+<li><strong>How</strong>: Walks through coherent receiver architecture (phase- and polarization-diversity, homodyne/heterodyne/intradyne), and even a DIY superchannel approach using cheap PLC 1x4 splitters to combine TX/split RX and run subbands through regular 50GHz muxes (with a nod to Blake Willis finding 100GHz spacing optimal in practice). Closing advice: plan in THz/GHz, not nm or channel numbers; 800G coherent ZR+ in DD/OSFP is here, and ~12.8T liquid-cooled XPO is approaching.</li>
+<li><strong>Where applicable</strong>: Anyone planning or buying DWDM capacity. Vendor-authored (FLEXOPTIX sells optics tooling), so the COTS-400GHz-filter framing is partly self-serving, but the physics and frequency-planning methodology are sound and generally applicable.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="understanding-and-optimising-transceiver-efficiency-using-internal-metrics-for-improved-power-savings"><a href="understanding-and-optimising-transceiver-efficiency-using-internal-metri/">Understanding and optimising transceiver efficiency using internal metrics for improved power savings</a><a class="headerlink" href="#understanding-and-optimising-transceiver-efficiency-using-internal-metrics-for-improved-power-savings" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/76/EAF87P/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/EAF87P/resources/Flexoptix_-_RIPE92_3WzSdf9.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/gerhard-stein_understanding-and-optimising-transceiver-efficiency-using-internal-metrics-for-i_main_20260519-143142.mp4">Recording</a></p>
+</div>
+<p>Gerhard Stein, <a href="../companies/flexoptix/">Flexoptix GmbH</a></p>
+<div class="pick-video">
+<video aria-label="Recording: Understanding and optimising transceiver efficiency using internal metrics for improved power savings" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/gerhard-stein_understanding-and-optimising-transceiver-efficiency-using-internal-metrics-for-i_main_20260519-143142.mp4"><a href="https://ripe92.ripe.net/media/videos/gerhard-stein_understanding-and-optimising-transceiver-efficiency-using-internal-metrics-for-i_main_20260519-143142.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: Transceiver power is becoming a first-order DC design constraint; this is one of the few talks showing how to actually measure and optimize it from data already readable off modern optics.</li>
+<li><strong>What</strong>: How to use Versatile Diagnostics Monitoring (VDM, available on &gt;100G optics) — especially Thermoelectric Cooler (TEC) current — alongside temperature and cable length to find the efficient operating point per transceiver, in Watts, on real hardware.</li>
+<li><strong>How</strong>: TEC power is computed as V_trc × I_TEC from VDM (vs DDM which only exposes laser current); tested across 100G QSFP28, 400G coherent ZR, and 800G QSFP-DD transceivers on Cisco Nexus 93600CD-GX, Catalyst 9500, and Juniper QFX5120. Support is patchy: QFX5120 and IOS XE expose DDM only; NX-OS reads CMIS VDM but assumes a 50°C laser target. Includes power-trend data (400G FR4: 12W→9W; 800G OSFP: 16.5→15.5W; 1.6T: 30→26W as DSP nodes shrink) and an entertaining frozen-transceiver experiment showing the laser re-warms within seconds.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to optics power budgeting; requires CMIS/VDM-capable transceivers and switch support, so check your NOS before counting on it. Vendor talk, but methodology is transferable.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="vxlan-and-evpn-on-linux-with-bird"><a href="vxlan-and-evpn-on-linux-with-bird/">VXLAN and EVPN on Linux (with BIRD)</a><a class="headerlink" href="#vxlan-and-evpn-on-linux-with-bird" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/59/7JB8K9/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/7JB8K9/resources/evpn-vxlan-tutorial_WTl2IbG.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/maria-matejka_vxlan-and-evpn-on-linux-with-bird_main_20260518-090103.mp4">Recording</a></p>
+</div>
+<p>Maria Matejka, BIRD | CZ.NIC</p>
+<div class="pick-video">
+<video aria-label="Recording: VXLAN and EVPN on Linux (with BIRD)" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/maria-matejka_vxlan-and-evpn-on-linux-with-bird_main_20260518-090103.mp4"><a href="https://ripe92.ripe.net/media/videos/maria-matejka_vxlan-and-evpn-on-linux-with-bird_main_20260518-090103.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: DC fabric fundamentals — VXLAN and EVPN — taught from raw Linux primitives upward, using the open-source daemon the speaker's team actually implements EVPN in, rather than a commercial stack.</li>
+<li><strong>What</strong>: A hands-on tutorial building VXLAN tunnels manually (<code>ip link add ... type vxlan</code>, VNI, UDP 4789), VLAN-filtering bridges, and hypervisor L2 domains, then layering EVPN control-plane on top with BIRD, so attendees understand what actually happens under the hood before the abstractions arrive.</li>
+<li><strong>How</strong>: Labs run in EduHawk (CZ.NIC's container-based network simulator, user namespaces, no root needed), starting with veths and bridges, moving to manual VXLAN links for VM mobility and traffic isolation, and progressively adding scalability layers. The setup is keepable for future fiddling.</li>
+<li><strong>Where applicable</strong>: Anyone building or operating DC overlay fabrics on Linux/commodity hardware, or anyone who wants to debug EVPN/VXLAN rather than just configure it. Tutorial format — worth the recording if you missed it live.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="manipulating-rpki-and-more-with-marquees-in-tls-certificates-and-more"><a href="manipulating-rpki-and-more-with-marquees-in-tls-certificates-and-more/">Manipulating RPKI (and more) with marquees in TLS certificates (and more)</a><a class="headerlink" href="#manipulating-rpki-and-more-with-marquees-in-tls-certificates-and-more" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/65/YHQY7N/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/YHQY7N/resources/Manipulating_RPKI___1zypS0J.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/sasha-romijn_manipulating-rpki-and-more-with-marquees-in-tls-certificates-and-more_main_20260518-143021.mp4">Recording</a></p>
+</div>
+<p>Sasha Romijn, Reliably Coded (IRRD, IRRexplorer, internet.nl)</p>
+<div class="pick-video">
+<video aria-label="Recording: Manipulating RPKI (and more) with marquees in TLS certificates (and more)" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/sasha-romijn_manipulating-rpki-and-more-with-marquees-in-tls-certificates-and-more_main_20260518-143021.mp4"><a href="https://ripe92.ripe.net/media/videos/sasha-romijn_manipulating-rpki-and-more-with-marquees-in-tls-certificates-and-more_main_20260518-143021.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: A year-long, systematic XSS campaign against the tooling layer around routing infrastructure — culminating in a chain that modifies RPKI ROAs from a single clicked link. Directly relevant to network security and to anyone building tools that render protocol-derived strings.</li>
+<li><strong>What</strong>: The author injected marquee/XSS payloads into every protocol field he controls — TLS certificate SANs, DNS version.bind/NSID/TXT, RIPE Database objects, HTTP Server headers, DHCP hostnames, wifi SSIDs, LoRa node names — and catalogued where downstream tools execute them. Findings span two RIRs, hosting providers (WHMCS on the main domain → one click adds an admin to a customer account), router firmware, and wirelessly rootable OpenWRT boxes. Most seriously: multiple paths through the RIPE NCC single sign-on session mean one click on a real ripe.net link can silently change your ROAs and take over your Database objects — you'd only notice when packets start dropping.</li>
+<li><strong>How</strong>: The recurring pattern: tools treat protocol fields as safe data, and some of those tools share a trust boundary with critical systems. The punchline: "RPKI has HSMs and key ceremonies, but the thing that actually changes your ROAs is a web app authenticated by a cookie."</li>
+<li><strong>Where applicable</strong>: Universal for anyone operating RPKI/IRR portals or writing tooling that displays untrusted fields; concrete guidance on what to watch for in your own tools.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="openpenny-identifying-legitimate-traffic-to-reduce-monitoring-noise"><a href="openpenny-identifying-legitimate-traffic-to-reduce-monitoring-noise/">OpenPenny: Identifying Legitimate Traﬃc to Reduce Monitoring Noise</a><a class="headerlink" href="#openpenny-identifying-legitimate-traffic-to-reduce-monitoring-noise" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/74/UWTWQR/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/UWTWQR/resources/openpenny-slides-rip_N1gyaTN.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/petros-gigis_openpenny-identifying-legitimate-traffic-to-reduce-monitoring-noise_main_20260519-113501.mp4">Recording</a></p>
+</div>
+<p>Petros Gigis, UCL</p>
+<div class="pick-video">
+<video aria-label="Recording: OpenPenny: Identifying Legitimate Traﬃc to Reduce Monitoring Noise" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/petros-gigis_openpenny-identifying-legitimate-traffic-to-reduce-monitoring-noise_main_20260519-113501.mp4"><a href="https://ripe92.ripe.net/media/videos/petros-gigis_openpenny-identifying-legitimate-traffic-to-reduce-monitoring-noise_main_20260519-113501.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: Fills a real gap in ISP observability: packet counters and control-plane data can't tell you whether observed traffic is genuine or spoofed — which makes routing-change alerts noisy and stealthy hijacks hard to confirm.</li>
+<li><strong>What</strong>: An open-source data-plane primitive that validates whether traffic aggregates are non-spoofed, enabling trustworthy ingress maps, fewer false routing alerts, and detection of data-plane path anomalies invisible to BGP monitoring alone (including ROV-bypassing "stealthy hijacks" where the only visible signal is an unexpected ingress point).</li>
+<li><strong>How</strong>: Exploits a structural difference between real and spoofed TCP: legitimate connections are closed-loop (loss triggers retransmission), spoofed traffic is open-loop and cannot react. Active mode carefully drops a few packets and watches for retransmission; passive mode collects signals (e.g., per-packet load-balancing behavior) without touching traffic. Runs on commodity x86 using XDP/AF_XDP and DPDK; demonstrated on a real UCL testbed.</li>
+<li><strong>Where applicable</strong>: ISPs and large network operators with sFlow/NetFlow telemetry; the active mode injects small, deliberate loss, so it suits telemetry/monitoring paths rather than every production link. Solidly in the eBPF/XDP space the PM tracks.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="measuring-the-impact-of-post-quantum-cryptography-on-complex-applications-a-case-study-on-federated-identity-management"><a href="measuring-the-impact-of-post-quantum-cryptography-on-complex-application/">Measuring The Impact of Post-Quantum Cryptography on Complex Applications: A Case Study on Federated Identity Management</a><a class="headerlink" href="#measuring-the-impact-of-post-quantum-cryptography-on-complex-applications-a-case-study-on-federated-identity-management" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/112/3XVHEJ/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/3XVHEJ/resources/RIPE_92_-_FIdM_PQC-2_q0fHRKb.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/ginevra-fabrizio_measuring-the-impact-of-post-quantum-cryptography-on-complex-applications-a-cas_main_20260522-110043.mp4">Recording</a></p>
+</div>
+<p>Ginevra Fabrizio, University of Twente</p>
+<div class="pick-video">
+<video aria-label="Recording: Measuring The Impact of Post-Quantum Cryptography on Complex Applications: A Case Study on Federated Identity Management" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/ginevra-fabrizio_measuring-the-impact-of-post-quantum-cryptography-on-complex-applications-a-cas_main_20260522-110043.mp4"><a href="https://ripe92.ripe.net/media/videos/ginevra-fabrizio_measuring-the-impact-of-post-quantum-cryptography-on-complex-applications-a-cas_main_20260522-110043.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: One of the few PQC-migration studies grounded in a real, complex identity stack (SAML + OIDC hub-and-spoke federation) rather than isolated TLS benchmarks — directly relevant to the identity side of the PM's portfolio.</li>
+<li><strong>What</strong>: Benchmarks of the five NIST-finalized PQC algorithms against real-world load from SURF's SURFconext federation (25 days of data: authentication counts, HAProxy logs, TLS connection info, SAML request/response volumes), quantifying the computational and hardware-capacity toll of switching a production federated identity hub to PQC.</li>
+<li><strong>How</strong>: The Hub'n'Spoke model is the worst case: the central hub (SURF.Engine) performs most cryptographic operations — each SAML flow involves validating the home IdP's response signature and signing a new response for the SP, and equivalents exist in the OIDC flow. Real authentication flows run from one second to several minutes, so added per-operation cost compounds visibly.</li>
+<li><strong>Where applicable</strong>: Identity federation operators and anyone planning PQC migration of OAuth/OIDC/SAML infrastructure. Findings: the transition is fragmented, with many ecosystem components still unaccounted for. Specific to hub-and-spoke scale but the methodology transfers.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="persistent-unknown-unicast-a-peering-lan-case-study"><a href="persistent-unknown-unicast-a-peering-lan-case-study/">Persistent unknown unicast - A peering-LAN case study</a><a class="headerlink" href="#persistent-unknown-unicast-a-peering-lan-case-study" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/84/YZVWHG/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/YZVWHG/resources/ripe92-persistent-un_bP27w0R.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/james-rice_persistent-unknown-unicast-a-peering-lan-case-study_main_20260520-093506.mp4">Recording</a></p>
+</div>
+<p>James Rice, Jump Networks Ltd</p>
+<div class="pick-video">
+<video aria-label="Recording: Persistent unknown unicast - A peering-LAN case study" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/james-rice_persistent-unknown-unicast-a-peering-lan-case-study_main_20260520-093506.mp4"><a href="https://ripe92.ripe.net/media/videos/james-rice_persistent-unknown-unicast-a-peering-lan-case-study_main_20260520-093506.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: A textbook-quality L2 postmortem: a single MAC change can flood member traffic (including HTTPS SNI and emergency-call signalling) to hundreds of ports <em>indefinitely</em>, via a kernel-level neighbor-discovery quirk. This is the kind of hard-won operational lesson that transfers to any shared L2.</li>
+<li><strong>What</strong>: Shows that unknown unicast on peering LANs is not always transient. RFC 4861 §7.3.1 "forward-progress confirmation" lets a stale ND entry stay REACHABLE indefinitely: when member B changes MAC, A keeps sending to the old MAC; the exchange floods those frames to all member ports; some members' devices (skipping the L2 my-station check) forward the packet onward to B; B's reply via that third-party path counts as forward progress, so no Neighbor Solicitation is ever sent. A unicast NS to the stale MAC gets flooded too, and the NA arriving from the <em>new</em> MAC without a TLLA option confirms reachability without updating the cached MAC (RFC 4861 §7.2.5) — the entry stays stale and REACHABLE.</li>
+<li><strong>How</strong>: Kernel-level trace through <code>neigh_confirm()</code>/<code>neigh_timer_handler()</code> and <code>ndisc_recv_na()</code>/<code>neigh_update()</code>; a reproducible demo (published Nov 2024) using <code>ip neigh replace</code> with a dead MAC produces duplicate ping replies — each duplicate being a different member's device routing a packet it had no business handling. Includes a five-year timeline of reports and partial remediations at one IXP, plus a frank operator self-examination about disclosure.</li>
+<li><strong>Where applicable</strong>: The five-year timeline is one-IXP-specific, but the mechanism is general to any Linux/BSD host on a shared L2 segment — DC fabrics, exchange LANs, any environment where MAC changes meet ND caches. Valuable for L2 design and failure-mode reasoning.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="route-filtering-at-scale"><a href="route-filtering-at-scale/">Route Filtering at Scale</a><a class="headerlink" href="#route-filtering-at-scale" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/67/EDRJ39/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/EDRJ39/resources/RIPE_92_Route_Filter_Jl2GqKT.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/fedor-vompe_route-filtering-at-scale_main_20260518-163214.mp4">Recording</a></p>
+</div>
+<p>Fedor Vompe, <a href="../companies/deutsche-telekom/">Deutsche Telekom</a>; Sebastian Becker, Deutsche Telekom</p>
+<div class="pick-video">
+<video aria-label="Recording: Route Filtering at Scale" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/fedor-vompe_route-filtering-at-scale_main_20260518-163214.mp4"><a href="https://ripe92.ripe.net/media/videos/fedor-vompe_route-filtering-at-scale_main_20260518-163214.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: Concrete, adoptable tooling for one of the hardest operational BGP problems — generating correct filters for thousands of sessions when the underlying IRR data is rotten. Up-ranks well on the "tooling others can adopt" criterion.</li>
+<li><strong>What</strong>: A tier-1's (AS3320) account of why AS-Set documentation in RIR databases remains foundational and systematically overlooked: missing documentation, explosive AS-Set expansion, and cyclic dependencies all break filter generation, and RPKI ROV alone does not replace this layer — bogon filters, community policy, Peerlock, IRR filters, ROV, ASPA, and OTC all work together.</li>
+<li><strong>How</strong>: Presents their toolchain, including the Route Query Specification (RQSpec) language and RIPEDiff, which compensate for poor AS-Set quality. Key framing: AS-Sets are fail-closed, so their contents and changes should be monitored — adding/removing a member set silently changes every parent set. Includes a worked route-leak prevention example (AS3320 requiring a customer's <code>AS-DOWNSTREAM</code> set before accepting prefixes).</li>
+<li><strong>Where applicable</strong>: Large operators generating customer/peer filters from IRR; the AS-Set hygiene findings apply to anyone consuming IRR data at any scale. Deutsche Telekom's toolchain specifics are theirs, but RQSpec is worth a look.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="redefining-netflix-bgp-architecture"><a href="redefining-netflix-bgp-architecture/">Redefining Netflix BGP architecture</a><a class="headerlink" href="#redefining-netflix-bgp-architecture" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/74/RKCTUA/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/RKCTUA/resources/Redefining_Netflix_B_2YNNG4M.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/elise-vennegues_redefining-netflix-bgp-architecture_main_20260519-115725.mp4">Recording</a></p>
+</div>
+<p>Elise Vennegues, <a href="../companies/netflix/">Netflix</a>; Frederic Cuiller, <a href="../companies/cisco/">Cisco</a></p>
+<div class="pick-video">
+<video aria-label="Recording: Redefining Netflix BGP architecture" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/elise-vennegues_redefining-netflix-bgp-architecture_main_20260519-115725.mp4"><a href="https://ripe92.ripe.net/media/videos/elise-vennegues_redefining-netflix-bgp-architecture_main_20260519-115725.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: Real BGP architecture evolution at serious scale (20,000+ eBGP sessions, 2800+ peer ASNs, 400+ PoPs, ~175 countries) — the RR design questions and migration choreography are transferable even if the chosen platform is not.</li>
+<li><strong>What</strong>: Netflix's replacement of a full iBGP mesh across edge switches, aggregation routers, and PEs with a route-reflector architecture, including the option analysis (traditional router vs VNF appliance vs integrated UCS M7 appliance), production scale figures (e.g., NA region: 38M IPv4 / 9M IPv6 paths, 300+ clients), a phased migration (staging → pilot prefixes → per-device deprefer/raise → remove the mesh), and OpenConfig YANG-based BGP telemetry with BMP activation planned.</li>
+<li><strong>How</strong>: Validation via an early-field-trial process with Cisco; lessons include: cross-functional projects take longer than planned, and the lab is necessary but production churn/scale is unique.</li>
+<li><strong>Where applicable</strong>: Any large edge network with full-mesh iBGP pain. Caveat: this is an openly joint Netflix–Cisco presentation and the IOS XRv9000 UCS M7 appliance gets prominent placement — treat the product comparison table as vendor-tinged and extract the architecture methodology.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="rpki-do-we-need-garbage-collection-now"><a href="rpki-do-we-need-garbage-collection-now/">RPKI: Do we need Garbage Collection now?</a><a class="headerlink" href="#rpki-do-we-need-garbage-collection-now" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/74/HD3MND/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/HD3MND/resources/rpki-gc-merge-emoji_FTR8fda.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/antonios-chariton_rpki-do-we-need-garbage-collection-now_main_20260519-110128.mp4">Recording</a></p>
+</div>
+<p>Antonis Chariton, AS4601 | <a href="../companies/cisco/">Cisco</a></p>
+<div class="pick-video">
+<video aria-label="Recording: RPKI: Do we need Garbage Collection now?" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/antonios-chariton_rpki-do-we-need-garbage-collection-now_main_20260519-110128.mp4"><a href="https://ripe92.ripe.net/media/videos/antonios-chariton_rpki-do-we-need-garbage-collection-now_main_20260519-110128.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: Quantifies a genuine routing-security hygiene problem: newly assigned ASNs arriving with pre-existing ROAs that make their holders' hijacks look RPKI-valid.</li>
+<li><strong>What</strong>: Methodology-driven measurement: cross-referenced all RIPE ASN assignment dates against RPKI archives (RPKIviews) for ROAs pointing at each ASN the day before assignment — any such ROA is definitionally unintentional. Result: ~21% of new assignments in 2025 (18% in 2026) came with pre-existing ROAs, including double-digit-percentage chances of IPv4-covering ROAs; examples found in every RIR except AFRINIC. The RIPE NCC's re-assignment cleanup covers IRR but not RPKI.</li>
+<li><strong>How</strong>: A personal anecdote (a fresh ASN with ROAs authorizing other people's IPv4) turned into a systematic study; the follow-up Address Policy WG session ("Discussion on AS Reallocation") explores fixes: longer quarantine periods, alerting on RPKI objects pointing at unassigned ASes, expanding cleanup policy.</li>
+<li><strong>Where applicable</strong>: Anyone relying on RPKI ROV for security decisions; the data is RIPE-region-centric but the problem class exists in all RIRs.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="why-is-aspa-still-a-draft"><a href="why-is-aspa-still-a-draft/">Why is ASPA still a draft</a><a class="headerlink" href="#why-is-aspa-still-a-draft" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/65/TDYAZY/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/TDYAZY/resources/why-is-aspa-still-a-_7WvkFjh.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/maria-matejka_why-is-aspa-still-a-draft_main_20260518-150332.mp4">Recording</a></p>
+</div>
+<p>Maria Matejka, BIRD | CZ.NIC</p>
+<div class="pick-video">
+<video aria-label="Recording: Why is ASPA still a draft" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/maria-matejka_why-is-aspa-still-a-draft_main_20260518-150332.mp4"><a href="https://ripe92.ripe.net/media/videos/maria-matejka_why-is-aspa-still-a-draft_main_20260518-150332.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: An implementer's-eye view of why ASPA (AS Provider Authorization) keeps stalling — useful both for BGP protocol understanding and as a case study in how draft specs mislead even careful implementers.</li>
+<li><strong>What</strong>: Clarifies what ASPA is and isn't ("ROA for the rest of the AS path": each AS signs its provider list — not whole-path authorization, not neighbor-pair authorization, not a BGPsec replacement), then walks through BIRD's implementation history: their first validation algorithm was <em>wrong</em> (assuming neighbor-pair authorization), and the wrongness survived review because the draft text suggested that reading on first pass.</li>
+<li><strong>How</strong>: Details the RTR ASPA PDU design confusion (a redundant AS Count field questioned after the document had passed last call) and a 2024 clarification exchange that exposed deeper ambiguity in the validation algorithm.</li>
+<li><strong>Where applicable</strong>: Anyone implementing or planning to deploy ASPA; also a good cautionary tale for anyone writing specs that will be implemented by third parties.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="dns-transitive-trust-and-how-many-is-many"><a href="dns-transitive-trust-and-how-many-is-many/">DNS, Transitive Trust and How Many is Many</a><a class="headerlink" href="#dns-transitive-trust-and-how-many-is-many" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/98/ATVK7Z/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/ATVK7Z/resources/DNS_Transitive_Trus_2ntoCpt.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/ondrej-sury_dns-transitive-trust-and-how-many-is-many_side_20260521-110213.mp4">Recording</a></p>
+</div>
+<p>Ondřej Surý, ISC</p>
+<div class="pick-video">
+<video aria-label="Recording: DNS, Transitive Trust and How Many is Many" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/ondrej-sury_dns-transitive-trust-and-how-many-is-many_side_20260521-110213.mp4"><a href="https://ripe92.ripe.net/media/videos/ondrej-sury_dns-transitive-trust-and-how-many-is-many_side_20260521-110213.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: A genuinely surprising measurement: resolving <code>teams.microsoft.com</code> on a cold cache triggers <strong>247</strong> outgoing queries from a single recursive resolver — with real implications for latency, load, and the transitive trust surface CDNs are building.</li>
+<li><strong>What</strong>: A cold-cache tour through delegation types: in-domain delegations are cheap (glue mandatory, no extra cost), in-bailiwick adds 0–N×2 queries, and out-of-bailiwick delegations force the resolver to resolve each NS name from scratch — 3 + 3×N queries per name. CNAME chains make this multiplicative, not additive: each target zone may be out-of-bailiwick and each NS-set spans TLDs.</li>
+<li><strong>How</strong>: All numbers from BIND 9, adding one complexity source at a time; notably, resolver software matters enormously — the same name cost 168 queries on BIND 9.11 but only 16 on 9.21. DNSSEC and the often-forgotten PTR case add more.</li>
+<li><strong>Where applicable</strong>: Resolver operators, CDN/zone architects thinking about delegation hygiene, and anyone debugging cold-cache latency spikes.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="overdoing-nsec3-hurts"><a href="overdoing-nsec3-hurts/">Overdoing NSEC3 Hurts</a><a class="headerlink" href="#overdoing-nsec3-hurts" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/98/HW3LJG/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/HW3LJG/resources/presentation_dzewVOT.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/petr-spacek_overdoing-nsec3-hurts_side_20260521-120328.mp4">Recording</a></p>
+</div>
+<p>Petr Špaček, Internet Systems Consortium</p>
+<div class="pick-video">
+<video aria-label="Recording: Overdoing NSEC3 Hurts" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/petr-spacek_overdoing-nsec3-hurts_side_20260521-120328.mp4"><a href="https://ripe92.ripe.net/media/videos/petr-spacek_overdoing-nsec3-hurts_side_20260521-120328.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: A crisp security nugget: NSEC3 iteration counts that operators set for "extra security" are actually a DoS amplifier and enable a poorly documented downgrade attack.</li>
+<li><strong>What</strong>: Measured cost of extra iterations under random-subdomain attacks: ~&#8531; performance loss at 5 iterations, ~&#8532; at 25, across NSD, Unbound, and BIND. Worse, when iterations exceed a resolver's limit, the answer <em>may</em> be treated as insecure — and an attacker who controls any over-limit NSEC3 zone can craft a fake delegation that makes a delegation validate as insecure.</li>
+<li><strong>How</strong>: Walks through the iteration-limit collapse over time (2500 in RFC 5155 → 150 in implementations → 0 per RFC 9276 → 50 in BIND 9.19.18 → ~20 next), then the downgrade mechanics using real records.</li>
+<li><strong>Where applicable</strong>: Every DNSSEC-signed zone operator. Advice: use NSEC if you can, otherwise follow RFC 9276 exactly (0 iterations, no salt, no opt-out).</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="the-30-attack-box-inside-the-android-tv-botnet-ecosystem"><a href="the-30-attack-box-inside-the-android-tv-botnet-ecosystem/">The €30 attack box: inside the Android TV botnet ecosystem</a><a class="headerlink" href="#the-30-attack-box-inside-the-android-tv-botnet-ecosystem" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/79/7AETZG/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/7AETZG/resources/RIPE_92_-_Nokia_Deep_T2jCpjR.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/jerome-meyer_the-30-attack-box-inside-the-android-tv-botnet-ecosystem_side_20260519-164530.mp4">Recording</a></p>
+</div>
+<p>Jérôme Meyer, <a href="../companies/nokia/">Nokia</a></p>
+<div class="pick-video">
+<video aria-label="Recording: The €30 attack box: inside the Android TV botnet ecosystem" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/jerome-meyer_the-30-attack-box-inside-the-android-tv-botnet-ecosystem_side_20260519-164530.mp4"><a href="https://ripe92.ripe.net/media/videos/jerome-meyer_the-30-attack-box-inside-the-android-tv-botnet-ecosystem_side_20260519-164530.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: Documents a step-change in the DDoS and abuse landscape — botnets no longer scan for exposed IoT; they recruit via residential proxy SDKs pre-installed on consumer hardware, behind CGNAT, invisible to conventional scanning.</li>
+<li><strong>What</strong>: Nokia Deepfield's analysis of the Oct 2025 33 Tbps attack and the ecosystem behind it: budget Android TV boxes ship with proxy software that routes requests to 0.0.0.0 — which resolves to the device's own loopback, where an unauthenticated ADB shell listens. No scanning, no CVE; the proxy SDK delivers the victim. Kimwolf alone runs ~3M active bots with ENS-based C2; the exploitable surface is estimated at 100–200M endpoints.</li>
+<li><strong>How</strong>: Linking six botnet families via shared code, a common cryptographic fingerprint (RC4+LCG, fixed seed), and co-located infrastructure; notable capabilities include Katana compiling its rootkit on-device via a bundled C compiler and CECbot abusing HDMI-CEC to survive factory resets. Operator-facing impact: outbound attack traffic from your own subscribers causes CGNAT failures and peering congestion; C2 signals to monitor are provided.</li>
+<li><strong>Where applicable</strong>: Any access network operator (CGNAT/peering impact), and security teams tracking proxy/botnet infrastructure. Nokia-authored but built on original lab analysis and reverse engineering.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="detecting-and-characterizing-ddos-scrubbing-from-global-bgp-routing-insights-from-five-leading-scrubbers"><a href="detecting-and-characterizing-ddos-scrubbing-from-global-bgp-routing-insi/">Detecting and Characterizing DDoS Scrubbing from Global BGP Routing: Insights from Five Leading Scrubbers</a><a class="headerlink" href="#detecting-and-characterizing-ddos-scrubbing-from-global-bgp-routing-insights-from-five-leading-scrubbers" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/78/QKVKRR/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/QKVKRR/resources/Detecting-scrubbing-_x1a5m3Q.pdf">Slides (PDF)</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/QKVKRR/resources/Detecting-scrubbing_PF3bIfl.pptx">Slides (PPTX)</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/shyam-krishna-khadka_detecting-and-characterizing-ddos-scrubbing-from-global-bgp-routing-insights_main_20260519-170727.mp4">Recording</a></p>
+</div>
+<p>Shyam Krishna Khadka, University of Twente</p>
+<div class="pick-video">
+<video aria-label="Recording: Detecting and Characterizing DDoS Scrubbing from Global BGP Routing: Insights from Five Leading Scrubbers" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/shyam-krishna-khadka_detecting-and-characterizing-ddos-scrubbing-from-global-bgp-routing-insights_main_20260519-170727.mp4"><a href="https://ripe92.ripe.net/media/videos/shyam-krishna-khadka_detecting-and-characterizing-ddos-scrubbing-from-global-bgp-routing-insights_main_20260519-170727.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: Helps solve a practical monitoring problem: BGP path changes caused by DDoS scrubbing look like hijacks or leaks in your alerting, and 48% of scrubber-originated prefixes aren't properly covered by ROAs.</li>
+<li><strong>What</strong>: A PAM 2026 paper detecting scrubbing activations/deactivations purely from public RIS BGP data (30 days, five scrubbers: Cloudflare, Akamai Prolexic, Vercara, Imperva, Radware). Always-on protection dominates (11k prefixes vs 5.6k on-demand); on-demand scrubbing splits into upstream-change (dominant) and origin-change modes.</li>
+<li><strong>How</strong>: Inference requires at least two route-collector peers observing the AS-path change; characterization covers protection modes, session durations (median ~10h45m; 25% under 1h45m), and RPKI/IRR practice — finding 12.5% Invalid and 35.5% NotFound among temporarily-originated prefixes.</li>
+<li><strong>Where applicable</strong>: BGP monitoring/anomaly-detection toolbuilders, and scrubbing customers who should fix their ROA coverage before an attack makes their scrubber originate their prefixes.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="the-year-of-ipv6-only-desktop"><a href="the-year-of-ipv6-only-desktop/">The year of IPv6-only desktop</a><a class="headerlink" href="#the-year-of-ipv6-only-desktop" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/94/PBHCLK/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/PBHCLK/resources/RIPE_92_-_The_year_o_djkzlI7.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/ondrej-caletka_the-year-of-ipv6-only-desktop_main_20260521-090610.mp4">Recording</a></p>
+</div>
+<p>Ondřej Caletka, <a href="../companies/ripe-ncc/">RIPE NCC</a></p>
+<div class="pick-video">
+<video aria-label="Recording: The year of IPv6-only desktop" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/ondrej-caletka_the-year-of-ipv6-only-desktop_main_20260521-090610.mp4"><a href="https://ripe92.ripe.net/media/videos/ondrej-caletka_the-year-of-ipv6-only-desktop_main_20260521-090610.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: Marks the moment IPv6-only operation crosses from mobile networks to desktops — macOS already opts out of IPv4 on IPv6-mostly networks, Windows 11 has it in preview, and NetworkManager on Linux supports it.</li>
+<li><strong>What</strong>: The "IPv6-mostly" model: the network signals NAT64 support via DHCPv4 option 108, and devices with CLAT (or enforced IPv6 compatibility) autonomously opt out of IPv4. Framed by the RIPE meeting network's own decade-long journey (failed experiment in 2013 → working IPv6-mostly main network today), and the argument that dual stack failed as a transition mechanism: double the work, with IPv6 problems masked by the IPv4 safety net.</li>
+<li><strong>How</strong>: NAT64 won because it's the one-box solution the industry actually chose; CLAT handles IPv4-only applications on the client. Practical pitfalls called out: IPv4-only VPNs with IPv6 killswitch features, and devices opting out even when they shouldn't.</li>
+<li><strong>Where applicable</strong>: Enterprise/access network design; the WinCLAT arrival makes IPv6-only enterprise LANs genuinely deployable, which will change DC and edge design assumptions.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="how-much-of-bird-is-vibecoded"><a href="how-much-of-bird-is-vibecoded/">How much of BIRD is vibecoded</a><a class="headerlink" href="#how-much-of-bird-is-vibecoded" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/85/ANS3JF/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/ANS3JF/resources/vibecoding-bird_zChFz02.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/maria-matejka_how-much-of-bird-is-vibecoded_side_20260520-100918.mp4">Recording</a></p>
+</div>
+<p>Maria Matejka, BIRD | CZ.NIC</p>
+<div class="pick-video">
+<video aria-label="Recording: How much of BIRD is vibecoded" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/maria-matejka_how-much-of-bird-is-vibecoded_side_20260520-100918.mp4"><a href="https://ripe92.ripe.net/media/videos/maria-matejka_how-much-of-bird-is-vibecoded_side_20260520-100918.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: Not a talk the PM would search for, but one of the more honest datasets available on what LLMs can and cannot do in core network software — from the maintainers of a production routing daemon.</li>
+<li><strong>What</strong>: The answer to "how much of BIRD is vibecoded" is essentially: none of the hard parts. LLM-generated lockless multithreaded C was "pathetic." Attempts to use AI for bug fixing failed ("most of our bugs need complex thinking"), as did texts about BIRD, release notes, slide generation, and RFC review.</li>
+<li><strong>How</strong>: Beyond the failures, it catalogs the social pressures arriving via LLM: survivor bias (nobody posts their failures), confirmation bias ("the code should do what the commit declares"), "it works, just merge it" pressure, and the emerging phenomenon of LLM-fortified forks of real projects. The uncomfortable conclusion: BIRD's problem isn't AI — it's that their documentation "sucks or is outright wrong," their future intents aren't written anywhere, and background is scattered; that's bad for humans and LLMs alike.</li>
+<li><strong>Where applicable</strong>: Anyone maintaining open-source network infrastructure, or thinking about where AI-assisted development can safely enter their toolchain. Read alongside "Brace for Upgrades" (same conference) for the flip side — LLM-equipped security researchers flooding projects with CVE reports (~5–8% validity rates).</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="bitsquatting-or-the-infinite-monkeys-theorem"><a href="bitsquatting-or-the-infinite-monkeys-theorem/">BitSquatting... ...or the infinite monkeys theorem...</a><a class="headerlink" href="#bitsquatting-or-the-infinite-monkeys-theorem" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/112/MFPHZ7/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/MFPHZ7/resources/bitsquatting-2026-ri_HV5VAoi.pdf">Slides</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/warren-kumari_bitsquatting-or-the-infinite-monkeys-theorem_main_20260522-113721.mp4">Recording</a></p>
+</div>
+<p>Warren Kumari, <a href="../companies/google/">Google</a> LLC</p>
+<div class="pick-video">
+<video aria-label="Recording: BitSquatting... ...or the infinite monkeys theorem..." class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/warren-kumari_bitsquatting-or-the-infinite-monkeys-theorem_main_20260522-113721.mp4"><a href="https://ripe92.ripe.net/media/videos/warren-kumari_bitsquatting-or-the-infinite-monkeys-theorem_main_20260522-113721.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: A weird, memorable, and real attack class: hardware bit-flips during DNS resolution silently redirect traffic to attacker domains one binary bit away — with live capture data showing what actually leaks.</li>
+<li><strong>What</strong>: An update on 2011-era bitsquatting research: register domains one bit-flip away from popular names (microsont.com, googneapis.com, cxase.com...) and collect the traffic that hardware errors (cosmic rays, contaminated ceramics — the talk traces this back to 1970s DRAM and cites Qantas Flight 72) accidentally send you.</li>
+<li><strong>How</strong>: A ~1-month capture across registered variants gathered ~54,000 requests, including expanded hostnames (msdn.microsont.com), SNI of legitimate domains, cookies, OAuth-style login URLs, executables, and JavaScript — each request proving a memory error happened somewhere and leaking what the affected host was doing.</li>
+<li><strong>Where applicable</strong>: Mostly relevant as threat-model awareness for security teams and a reminder that DNS is a hardware-reliability observation channel; the "register typos-at-the-bit-level" strategy is trivially cheap for attackers and nearly impossible to fully defend.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="ip-address-space-for-outer-space"><a href="ip-address-space-for-outer-space/">IP Address space for Outer Space</a><a class="headerlink" href="#ip-address-space-for-outer-space" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://ripe92.ripe.net/programme/meeting-plan/sessions/97/RHW7DB/">Abstract</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/RHW7DB/resources/RIPE_address_space.k_740WWva.pdf">Slides (PDF)</a> <a class="pick-link" href="https://pretalx.ripe.net/media/ripe-92/submissions/RHW7DB/resources/RIPE_address_space_FWRbbyo.key">Slides (Keynote)</a> <a class="pick-link" href="https://ripe92.ripe.net/media/videos/tony-li_ip-address-space-for-outer-space_main_20260521-120023.mp4">Recording</a></p>
+</div>
+<p>Tony Li</p>
+<div class="pick-video">
+<video aria-label="Recording: IP Address space for Outer Space" class="pick-video__frame" controls="controls" playsinline="playsinline" preload="none" src="https://ripe92.ripe.net/media/videos/tony-li_ip-address-space-for-outer-space_main_20260521-120023.mp4"><a href="https://ripe92.ripe.net/media/videos/tony-li_ip-address-space-for-outer-space_main_20260521-120023.mp4">Watch the recording</a></video>
+</div>
+<ul>
+<li><strong>Why</strong>: A genuinely novel addressing-policy question: there is no RIR for outer space, and the current ad-hoc practice (space agencies getting resources from their local, geography-based RIR) precludes aggregation on extremely bandwidth-constrained links.</li>
+<li><strong>What</strong>: The IETF TIPTOP working group's proposal (draft-li-tiptop-address-space) for one RIR and one address block covering all of outer space, with one prefix each for the Moon, each planet, Lagrange points, and possibly the asteroid belt.</li>
+<li><strong>How</strong>: The argument is aggregation economics: space links are modem-class and mission-critical, so per-planet prefixes minimize precious routing overhead; space agencies are generally cooperative (ISS precedent) and expected to interconnect in space. Notably IPv4-first pragmatism — IPv6 header overhead is a serious concern on these links, and a reclaimed /16 might suffice alongside the IPv6 block.</li>
+<li><strong>Where applicable</strong>: Niche today, but it's a real IETF work item with ARIN in discussion for the custodian role, and an early signal of how Internet architecture extends into non-terrestrial networks.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>IP/optical integration is now an operator skill requirement</strong>: Meta's ZR rack-count math, Channelmania's coherent DWDM primer for IP folks, and transceiver VDM/TEC power telemetry all point the same direction — the transponder layer is collapsing into pluggables, and DC/WAN network engineers need coherent-optics literacy to plan capacity, power, and fiber.</li>
+<li><strong>AI traffic is reshaping both fabrics and threat models</strong>: Meta is building an AI backbone with 10,000s of 800G ZR links and pushing GPU compute to the edge, while on the security side AI companies have become the largest funders of residential proxy networks that feed 100M+ endpoint botnets — the same technology trend shows up as both a capacity driver and an attack-surface driver.</li>
+<li><strong>Routing security is operationalizing, and finding its rough edges</strong>: ASPA deployment friction (wrong implementations, draft ambiguities), RPKI "garbage" from AS recycling, stale-ROA hijack risk, IRR/AS-Set hygiene, and — strikingly — the discovery that the security of the routing control plane ultimately rests on web apps and SSO cookies vulnerable to XSS.</li>
+<li><strong>Data-plane validation as a new observability primitive</strong>: OpenPenny's closed-loop TCP test, BGP-inferred DDoS scrubbing detection, and SRA-based IPv6 scanning all attack the same problem — distinguishing genuine traffic and legitimate topology changes from noise, spoofing, and misconfiguration.</li>
+<li><strong>IPv6-only is finally crossing to the desktop/enterprise</strong>: IPv6-mostly with DHCPv4 option 108 and CLAT (now including Windows) plus the 3901bis BCP for IPv6 in the DNS mark real movement after a decade of dual-stack stagnation.</li>
+<li><strong>LLMs are arriving on both sides of network software</strong>: AI-assisted development in core routing daemons (with documented failures in hard systems code), LLM-driven CVE discovery forcing unsustainable upgrade cadences on open-source projects, and the first Practical AI BoF for ISP operations — worth tracking even at this early, mostly-hype-adjacent stage.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/ripe-92.md"><code>digests/ripe-92.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/ripe-92.md"><code>prompts/ripe-92.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../nsdi-2026/" class="md-footer__link md-footer__link--prev" aria-label="Previous: NSDI &#x27;26 — Network Papers Worth Your Time">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                NSDI '26 — Network Papers Worth Your Time
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../lacnic-45/" class="md-footer__link md-footer__link--next" aria-label="Next: LACNIC 45 — for the Networking PM">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                LACNIC 45 — for the Networking PM
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+    
+  </body>
+</html>

@@ -9,12 +9,18 @@ OAuth, OIDC, SPIFFE/SPIRE, workload and agentic identity). Physical DC and WAN
 systems work is CORE to this PM, not adjacent — do not down-rank a paper for
 being about hardware, optics, or datacenter fabric.
 
-Below is the program for {CONFERENCE} ({TYPE}). Read it and produce a digest
+Below is the program for {CONFERENCE}. Read it and produce a digest
 of the talks/papers/sessions most worth their attention.
 
 ## How to read this program
 
-{TYPE_GUIDANCE}
+Judge each item by what it changes for a practitioner: novel techniques and
+firmly substantiated results over incremental benchmark improvements, and
+operational lessons, tooling, automation and postmortems that transfer across
+environments over org-specific anecdotes or vendor pitches in disguise.
+Treat strong empirical evaluation and real deployment experience as signals of
+weight; treat unvalidated claims with caution. Note when a technique depends
+on a specific operator's scale, topology or silicon.
 
 ## Enriching from the source material (best effort)
 
@@ -114,7 +120,6 @@ show in the rendered view but stays in the source:
 
 <!--
 conference: {CONFERENCE}
-type: {TYPE}
 source_url: {SOURCE_URL}
 generated: {DATE}
 registry_key: {KEY}

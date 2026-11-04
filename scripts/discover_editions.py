@@ -148,7 +148,6 @@ def render_entry(entry: dict) -> str:
     lines = [
         f"  - key: {entry['key']}",
         f"    name: {yaml_str(entry['name'])}",
-        f"    type: {entry['type']}",
         f"    end_date: {entry['end_date']}",
         f"    fetcher: {entry['fetcher']}",
     ]
@@ -278,7 +277,6 @@ def main() -> int:
             candidate = {
                 "key": key,
                 "name": fill(spec["name_template"], ident, mode),
-                "type": spec["type"],
                 "fetcher": spec["fetcher"],
                 "program_url": fill(spec["program_url_template"], ident, mode),
                 "manual_fallback_url": fill(spec["manual_fallback_url_template"], ident, mode),

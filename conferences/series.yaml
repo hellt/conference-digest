@@ -32,7 +32,7 @@
 #   end_date_hint
 #               "MM-DD" fallback, used ONLY when the source doesn't state its
 #               dates. Discovery prefers the real dates it scans off the page.
-#   type / fetcher / run_location / notes
+#   fetcher / run_location / notes
 #               Copied onto every discovered edition, exactly as registry.yaml
 #               defines them.
 
@@ -46,7 +46,6 @@ series:
     enumerate: year
     key_template: "ciscolive-us-{year}"
     name_template: "Cisco Live US {year}"
-    type: vendor
     fetcher: ciscolive
     end_date_hint: "06-30"
     program_url_template: "https://www.ciscolive.com/on-demand/on-demand-library.html"
@@ -57,7 +56,6 @@ series:
     enumerate: year
     key_template: "ciscolive-eu-{year}"
     name_template: "Cisco Live Europe {year}"
-    type: vendor
     fetcher: ciscolive
     end_date_hint: "03-31"
     program_url_template: "https://www.ciscolive.com/on-demand/on-demand-library.html"
@@ -71,7 +69,6 @@ series:
     enumerate: year
     key_template: "kubecon-eu-{year}"
     name_template: "KubeCon + CloudNativeCon Europe {year}"
-    type: vendor
     fetcher: sched
     end_date_hint: "04-04"
     program_url_template: "https://kccnceu{year}.sched.com/list/descriptions/"
@@ -82,7 +79,6 @@ series:
     enumerate: year
     key_template: "kubecon-na-{year}"
     name_template: "KubeCon + CloudNativeCon North America {year}"
-    type: vendor
     fetcher: sched
     end_date_hint: "11-14"
     program_url_template: "https://kccncna{year}.sched.com/list/descriptions/"
@@ -93,7 +89,6 @@ series:
     enumerate: year
     key_template: "sigcomm-{year}"
     name_template: "ACM SIGCOMM {year}"
-    type: academic
     fetcher: sigcomm
     end_date_hint: "09-11"
     program_url_template: "https://conferences.sigcomm.org/sigcomm/{year}/program/papers-info/"
@@ -107,7 +102,6 @@ series:
     enumerate: year
     key_template: "nsdi-{year}"
     name_template: "NSDI '{yy} (USENIX Symposium on Networked Systems Design and Implementation)"
-    type: academic
     fetcher: usenix
     run_location: local
     end_date_hint: "04-30"
@@ -119,7 +113,6 @@ series:
     enumerate: year
     key_template: "usenix-security-{year}"
     name_template: "USENIX Security '{yy}"
-    type: academic
     fetcher: usenix
     run_location: local
     end_date_hint: "08-15"
@@ -131,7 +124,6 @@ series:
     enumerate: year
     key_template: "srecon-{year}-americas"
     name_template: "SREcon{yy} Americas"
-    type: operator
     fetcher: usenix
     run_location: local
     end_date_hint: "03-27"
@@ -147,7 +139,6 @@ series:
     lookahead: 4
     key_template: "ietf-{n}"
     name_template: "IETF {n}"
-    type: standards
     fetcher: ietf
     program_url_template: "https://datatracker.ietf.org/meeting/{n}/agenda.json"
     manual_fallback_url_template: "https://datatracker.ietf.org/meeting/{n}/agenda"
@@ -160,7 +151,6 @@ series:
     ordinal_format: hex
     key_template: "netdev-0x{hex}"
     name_template: "Netdev 0x{HEX}"
-    type: vendor
     fetcher: netdev
     end_date_hint: "07-16"
     program_url_template: "https://netdevconf.info/0x{HEX}/pages/sessions.html"
@@ -175,7 +165,6 @@ series:
     enumerate: ordinal
     key_template: "nanog-{n}"
     name_template: "NANOG {n}"
-    type: operator
     fetcher: nanog
     lookahead: 2
     program_url_template: "https://nanog.org/events/nanog-{n}/agenda/"
@@ -191,7 +180,6 @@ series:
     enumerate: ordinal
     key_template: "autocon-{n}"
     name_template: "AutoCon {n}"
-    type: operator
     fetcher: autocon
     lookahead: 2
     program_url_template: "https://networkautomation.forum/autocon{n}"
@@ -204,7 +192,6 @@ series:
     enumerate: year
     key_template: "ovscon-{year}"
     name_template: "Open vSwitch and OVN {year} Fall Conference"
-    type: vendor
     fetcher: ovscon
     program_url_template: "https://www.openvswitch.org/support/ovscon{year}/"
     manual_fallback_url_template: "https://www.openvswitch.org/support/ovscon{year}/"
@@ -216,7 +203,6 @@ series:
     start: 91
     key_template: "ripe-{n}"
     name_template: "RIPE {n}"
-    type: operator
     fetcher: ripe
     lookahead: 2
     program_url_template: "https://ripe{n}.ripe.net/programme/meeting-plan/"
@@ -228,7 +214,6 @@ series:
     start: 2025
     key_template: "nlnog-{year}"
     name_template: "NLNOG Day {year}"
-    type: operator
     fetcher: nlnog
     program_url_template: "https://nlnog.net/events/nlnog-day-{year}/"
     manual_fallback_url_template: "https://nlnog.net/events/nlnog-day-{year}/"
@@ -240,7 +225,6 @@ series:
     start: 17
     key_template: "denog-{n}"
     name_template: "DENOG {n}"
-    type: operator
     fetcher: denog
     lookahead: 2
     program_url_template: "https://www.denog.de/de/meetings/denog{n}/agenda.html"
@@ -258,7 +242,6 @@ series:
     enumerate: year
     key_template: "gtc-{year}"
     name_template: "NVIDIA GTC {year} (San Jose)"
-    type: vendor
     fetcher: gtc
     end_date_hint: "03-21"
     program_url_template: "https://www.nvidia.com/gtc/session-catalog/"
@@ -276,7 +259,6 @@ series:
     enumerate: year
     key_template: "ccs-{year}"
     name_template: "ACM CCS {year}"
-    type: academic
     fetcher: ccs
     start: 2026
     end_date_hint: "11-21"
@@ -291,7 +273,6 @@ series:
     enumerate: year
     key_template: "imc-{year}"
     name_template: "ACM IMC {year}"
-    type: academic
     fetcher: imc
     start: 2026
     end_date_hint: "10-31"
@@ -308,7 +289,6 @@ series:
     enumerate: year
     key_template: "conext-{year}"
     name_template: "ACM CoNEXT {year}"
-    type: academic
     fetcher: conext
     start: 2025
     end_date_hint: "12-05"
@@ -325,7 +305,6 @@ series:
     enumerate: year
     key_template: "apricot-{year}"
     name_template: "APRICOT {year}"
-    type: operator
     fetcher: apricot
     start: 2025
     lookahead: 3
@@ -344,7 +323,6 @@ series:
     enumerate: year
     key_template: "fosdem-{year}"
     name_template: "FOSDEM {year}"
-    type: vendor
     fetcher: fosdem
     start: 2026
     program_url_template: "https://fosdem.org/{year}/schedule/xml"
@@ -359,7 +337,6 @@ series:
     enumerate: year
     key_template: "hacklu-{year}"
     name_template: "hack.lu {year}"
-    type: security
     fetcher: pretalx
     start: 2025
     lookahead: 3
@@ -378,7 +355,6 @@ series:
     enumerate: year
     key_template: "tnc-{year}"
     name_template: "TNC{yy} (GÉANT research networking conference)"
-    type: operator
     fetcher: tnc
     start: 2026
     end_date_hint: "06-12"
@@ -395,7 +371,6 @@ series:
     enumerate: ordinal
     key_template: "arin-{n}"
     name_template: "ARIN {n} Public Policy and Members Meeting"
-    type: operator
     fetcher: arin
     start: 56
     lookahead: 3
@@ -413,7 +388,6 @@ series:
     enumerate: ordinal
     key_template: "lacnic-{n}"
     name_template: "LACNIC {n}"
-    type: operator
     fetcher: lacnic
     start: 45
     lookahead: 3
@@ -429,7 +403,6 @@ series:
     enumerate: year
     key_template: "pets-{year}"
     name_template: "PETS {year} (Privacy Enhancing Technologies Symposium)"
-    type: academic
     fetcher: pets
     start: 2026
     end_date_hint: "07-25"
@@ -445,7 +418,6 @@ series:
     enumerate: year
     key_template: "ausnog-{year}"
     name_template: "AusNOG {year}"
-    type: operator
     fetcher: ausnog
     start: 2025
     end_date_hint: "09-05"
@@ -462,7 +434,6 @@ series:
     enumerate: year
     key_template: "peeringdays-{year}"
     name_template: "Peering Days {year}"
-    type: operator
     fetcher: peeringdays
     start: 2026
     end_date_hint: "03-31"
@@ -479,7 +450,6 @@ series:
     enumerate: year
     key_template: "moreip-{year}"
     name_template: "MORE-IP {year}"
-    type: operator
     fetcher: moreip
     start: 2025
     end_date_hint: "05-29"
@@ -496,7 +466,6 @@ series:
     enumerate: ordinal
     key_template: "swinog-{n}"
     name_template: "SwiNOG #{n}"
-    type: operator
     fetcher: swinog
     start: 41
     lookahead: 2
@@ -516,7 +485,6 @@ series:
     enumerate: year
     key_template: "capacity-{year}"
     name_template: "Capacity Europe {year}"
-    type: vendor
     fetcher: capacity
     start: 2026
     end_date_hint: "10-16"
@@ -532,7 +500,6 @@ series:
     enumerate: ordinal
     key_template: "netuk-{n}"
     name_template: "NetUK{n}"
-    type: operator
     fetcher: indico
     start: 2
     lookahead: 2
@@ -547,7 +514,6 @@ series:
     enumerate: ordinal
     key_template: "grnog-{n}"
     name_template: "GRNOG {n}"
-    type: operator
     fetcher: indico
     start: 21
     lookahead: 2
@@ -564,7 +530,6 @@ series:
     enumerate: ordinal
     key_template: "dknog-{n}"
     name_template: "DKNOG{n}"
-    type: operator
     fetcher: indico
     start: 16
     lookahead: 2
@@ -580,7 +545,6 @@ series:
     enumerate: ordinal
     key_template: "itnog-{n}"
     name_template: "ITNOG{n}"
-    type: operator
     fetcher: itnog
     start: 9
     lookahead: 2
@@ -597,7 +561,6 @@ series:
     enumerate: year
     key_template: "netnod-{year}"
     name_template: "Netnod Tech Meeting {year}"
-    type: operator
     fetcher: netnod
     start: 2025
     end_date_hint: "10-06"
@@ -612,7 +575,6 @@ series:
     enumerate: year
     key_template: "cfgmgmtcamp-{year}"
     name_template: "CfgMgmtCamp Ghent {year}"
-    type: vendor
     fetcher: pretalx
     start: 2026
     lookahead: 2
@@ -633,7 +595,6 @@ series:
     enumerate: year
     key_template: "ocp-{year}"
     name_template: "OCP Global Summit {year}"
-    type: vendor
     fetcher: ocp
     start: 2025
     lookahead: 2

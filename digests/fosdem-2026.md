@@ -7,7 +7,7 @@ registry_key: fosdem-2026
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# FOSDEM 2026 Digest — Network, Security, Identity
+# FOSDEM 2026
 
 FOSDEM 2026's Network, eBPF, Security, Identity, and Confidential Computing devrooms carry an unusually high density of contributor-led internals talks this year, several with hard production numbers (Cisco's 50K-tunnel IPsec deployment, Meta's RDMA failure telemetry, IIT Bombay's FLASH benchmarks). Identity content is similarly strong, with passkeys-on-Linux and attested-TLS standardization both moving from ideas to shipping code. Picks below are grouped by relevance; note that the OpenPERouter and EVPN/KubeVirt talks are companion sessions from the same Red Hat team.
 

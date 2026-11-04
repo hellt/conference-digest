@@ -7,7 +7,7 @@ registry_key: nanog-97
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# NANOG 97 Digest
+# NANOG 97
 
 ## Core
 

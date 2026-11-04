@@ -7,7 +7,7 @@ registry_key: grnog-20
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# GRNOG 20 Digest
+# GRNOG 20
 
 GRNOG 20 (June 30, 2026, Athens) published **no abstracts for any session** — the program gives titles and speakers only. I fetched each selected item's event page; those confirmed speakers, durations, and slide attachments but added no descriptions. Every write-up below is therefore **(program text and speaker/slide metadata only)** — grounded in what the titles, affiliations, and attached deck names indicate, not in a substantive abstract. Depths are correspondingly shallow; treat this as a watch-list, not a summary of findings.
 

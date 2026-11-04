@@ -7,6 +7,8 @@ registry_key: lacnic-46
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
+# LACNIC 46
+
 ## Core
 
 ### BGP in 2026: Threats, Incidents, and Solutions

@@ -7,6 +7,8 @@ registry_key: netnod-2026
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
+# Netnod Tech Meeting 2026
+
 ## Core
 
 ### Telstra outage: The night a network decided the year was 2006

@@ -7,7 +7,7 @@ registry_key: ausnog-2026
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# AusNOG 2026 — Digest
+# AusNOG 2026
 
 A note on sources: no abstracts were published for this program — titles and speakers only. The write-ups below are grounded in the slide decks ToFaRev extracted from each session. Two sessions (the Unit 42 security talk and the opening keynote) have no published materials at all; they are flagged inline.
 

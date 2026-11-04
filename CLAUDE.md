@@ -31,7 +31,8 @@ registry.yaml (an edition)
   -> GitHub issue "Digest: <name>"       labeled conf:<key>
   -> digest-bot.yml                      ToFaRev drafts the digest
        (or a Claude session reads prompts/<key>.md and follows it)
-  -> scripts/propose_digest.py           validate, add each pick's links row
+  -> scripts/propose_digest.py           validate, add links rows, extract the
+                                         writer's keywords into tags.yaml
   -> PR "digest: <key>" on tofarev/digest-<key>  -> a person merges it
   -> digests/<key>.md                    on main only via that merge (or a human/Claude commit)
   -> close-digest-issue.yml closes the issue
@@ -89,8 +90,9 @@ pipeline.
 3. **The scan commits only `prompts/`, `conferences/state.json` and
    `conferences/registry.yaml`.** registry.yaml is in that list *only* because
    discovery appends to it; nothing else in CI may write it. The Digest Bot
-   pushes only `digests/<key>.md` to its own PR branches (`tofarev/digest-<key>`,
-   and `tofarev/links-<key>` for Links Refresh), and `site.yml` pushes only the
+   pushes only `digests/<key>.md` and its `conferences/tags.yaml` entry to its
+   own PR branches (`tofarev/digest-<key>`, and `tofarev/links-<key>` for
+   Links Refresh), and `site.yml` pushes only the
    `gh-pages` branch. The site sources `docs/posts/`, `docs/<key>/` (talk
    pages; each holds its own `.gitignore`), `docs/companies/` and
    `docs/conferences.md` are generated at build time and gitignored.
@@ -118,7 +120,8 @@ pipeline.
    overrides this, so a local forced run does fetch.
 9. **The prompt is composed, not stored.** `prompts/<key>.md` =
     run-note header + `prompt/base.md` with the
-    `{CONFERENCE} {SOURCE_URL} {KEY} {DATE} {PROGRAM_TEXT}` slots filled.
+    `{CONFERENCE} {SOURCE_URL} {KEY} {DATE} {TAG_VOCAB} {PROGRAM_TEXT}` slots
+    filled (`{TAG_VOCAB}` comes from `conferences/tag-vocabulary.yaml`).
     Edit `base.md`, never a generated `prompts/*.md` — except in
     the manual-paste path (below).
 10. **Digests start with the HTML-comment metadata block** (`conference`,
@@ -127,7 +130,13 @@ pipeline.
     (Core / Adjacent / Wildcard) and a final `## Themes`. GitHub-flavored
     markdown only. Each `###` pick heading is the program item's title, and the
     line under it is the code-built `**Links:**` row (see Links rows above);
-    the writer adds no links of its own beyond exact program URLs.
+    the writer adds no links of its own beyond exact program URLs. The prompt
+    also has the writer emit a fenced-JSON **keywords block** at the very end
+    (`{"post": [...], "talks": {<pick heading>: [...]}}` from the tag
+    vocabulary); it never reaches a published digest — `propose_digest.py`
+    strips it into `conferences/tags.yaml` (bot path), `generate_tags.py
+    --from-digest` converts it (hand path), and `build_site.read_digest` drops
+    any survivor so it is never rendered.
 11. **Discovery only ever appends, and only what it confirmed.**
     `discover_editions.py` writes new blocks at the end of `registry.yaml` and
     re-parses the file afterwards; if the result doesn't contain exactly the
@@ -169,12 +178,24 @@ python3 scripts/generate_digest_prompt.py --conference <key>   # force one
 merge. To redo one, close its PR and run Digest Bot with `conference: <key>`. By
 hand: read `prompts/<key>.md`, follow it, write `digests/<key>.md`. Best-effort
 fetch the per-item `pdf:`/`page:` links to ground the What/How sections, then run
-`python3 scripts/enrich_links.py <key>` to add the links rows.
+`python3 scripts/enrich_links.py <key>` to add the links rows, and if the digest
+carries the writer's keywords block, `python3 scripts/generate_tags.py
+--from-digest <key>` to turn it into tags.yaml.
 
 **Refresh a digest's links** (new recordings or slides): `python3
 scripts/enrich_links.py <key>` locally (USENIX pages need a non-datacenter IP or
 `TAVILY_API_KEY`), or run Links Refresh with `conference: <key>`. It only adds
 links and rewrites nothing else.
+
+**Tag digests for search** (when one has no `conferences/tags.yaml` entry —
+new bot digests get theirs from the writer's keywords block automatically):
+`python3 scripts/generate_tags.py --model <model>` with a local LLM endpoint
+(Ollama default; `--base-url`/`$TAGS_MODEL` for anything OpenAI-compatible),
+which only tags digests missing from tags.yaml, reports tags outside the
+vocabulary (add good ones to `conferences/tag-vocabulary.yaml`), and keeps
+hand edits unless `--force`. A hand-written digest that still carries the
+writer's keywords block: `--from-digest <key>`. Without any model:
+`--print-prompt <key>`, run the prompt anywhere, `--apply <key> <json-file>`.
 
 **Build or preview the site:** `make site` (strict build into `site/`) or
 `make serve-site` (live on :8001). Both run `scripts/build_site.py` first, which
@@ -205,7 +226,17 @@ its heading carries the attribute). A result's second line is the index's
 were rendered from). `path` is an indexed field, so this also makes talks
 findable by conference name or year. `make serve-site` skips this step (the
 index is rebuilt live by Zensical's compiled search plugin, which can't be
-hooked).
+hooked). Pages can also carry `tags` in their front matter: Zensical's search
+plugin indexes them as their own weighted field (with tag suggestions in the
+UI). The digest writer picks them from the controlled vocabulary in
+`conferences/tag-vocabulary.yaml` (the `{TAG_VOCAB}` prompt slot) as a fenced
+JSON block at the end of its draft; `propose_digest.py` converts that into
+committed `conferences/tags.yaml` and `build_site.py` merges the tags into the
+post and talk front matter (a hand edit of tags.yaml survives until the digest
+is redone). `scripts/generate_tags.py` is the backfill/manual tool: a local LLM
+(Ollama default, any OpenAI-compatible `--base-url`) over a digest's text, or
+`--from-digest <key>` for a hand-written digest that carries the writer's
+keywords block.
 
 **Social cards:** Zensical's `social` plugin draws a 1200×630 card per page
 from `layouts/night.yml` (with `layouts/assets/night.svg` behind it) and writes

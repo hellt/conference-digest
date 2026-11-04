@@ -25,6 +25,10 @@ flowchart LR
 7. **Review and publish.** ToFaRev opens a pull request with the digest. When it is merged, the digest appears here and the tracking issue closes.
 8. **Refresh.** Recordings and slides often appear weeks after an event. Every week, for four months after each conference, the links are checked again. New ones arrive in a small pull request; the write-ups do not change.
 
+## Search
+
+Every page carries topic keywords, shown as suggestions while you type. The digest's writer picks them for the digest and each of its talks from a small controlled vocabulary of the reader's areas (BGP, AI clusters, optics, Kubernetes, identity, and so on). The pipeline reads them out of the draft, stores them in the repository like any other hand-editable metadata, and the site's search indexes them like it indexes a page's title — so searching for a topic such as `ebpf` or `zero trust` finds the talks about it even when neither word appears in the title.
+
 ## Reading a digest
 
 | Tier | Meaning |

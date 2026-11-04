@@ -17,3 +17,6 @@ zensical-build.log
 
 # cf (Cloudflare CLI) per-checkout cache: selected account id and name.
 .cloudflare/
+
+# Local Claude session state.
+.claude/

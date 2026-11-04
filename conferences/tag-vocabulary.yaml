@@ -1,0 +1,99 @@
+# The controlled vocabulary for search keywords (tags).
+#
+# Zensical's search index has a `tags` field per page, drawn from the page's
+# front matter, and the search UI weights it like `title`/`path` and offers
+# matching tags as suggestions. scripts/generate_tags.py has a local LLM pick
+# tags from this list for every digest and every pick (stored in
+# conferences/tags.yaml), and scripts/build_site.py writes them into the front
+# matter of the digest post and each talk page.
+#
+# Tags are lowercase, hyphenated nouns (the search tokenizer splits on `-` and
+# `_`, so each word is a search token on its own). Keep one concept per tag and
+# prefer a broader tag over inventing a narrower one. The LLM may propose a tag
+# that is missing here; generate_tags.py prints every such proposal so a good
+# one can be added to this file and a bad spelling drift kept out.
+#
+# A hand edit of this list is safe: nothing derives from it at build time.
+
+vocabulary:
+  ai-networks: networking for AI/ML training and inference clusters (job-level load balancing, collectives, topology-aware scheduling)
+  gpu-clusters: GPU accelerator interconnects and cluster fabrics (NVLink, scale-up vs scale-out)
+  ml-for-networking: machine learning applied to network operation (anomaly detection, traffic prediction, AIOps)
+  data-center-fabric: physical data-center fabric design (topologies, CLOS, buffer management, congestion)
+  optics: optical transport, transceivers, pluggables, DWDM, LPO/CPO
+  ethernet: Ethernet as a technology standard (P802.3 work, speeds, PHYs)
+  cabling: structured cabling, fiber plants, MPO/MTP, copper
+  power: power delivery and efficiency in DCs (PUE, 48V, power sourcing equipment)
+  dpu: data processing units, SmartNICs, offload and hardware offload in general
+  rdma: RDMA, RoCE, InfiniBand, remote memory semantics
+  load-balancing: traffic load balancing, ECMP/adaptive hashing, LB algorithms and architectures
+  packet-scheduling: packet scheduling and queueing disciplines (PIFO, QoS schedulers, traffic management)
+  congestion-control: congestion control and notification (ECN, PFC, DCQCN, L4S)
+  switching: switch hardware and forwarding architecture (ASICs, buffers, pipelines)
+  silicon: switch/NPU ASIC design, chip roadmaps, co-packaging
+  bgp: BGP the protocol and its operation
+  routing-protocols: routing protocol design and operation in general (ISIS, OSPF, BGP convergence)
+  segment-routing: SR, SRv6, SR-MPLS and network programming with them
+  ipv6: IPv6, its deployment and transition
+  mpls: MPLS, labels, and LDP/RSVP heritage
+  peering: peering business and practice, IXPs, interconnection agreements
+  interconnection: data center interconnect and carrier interconnection
+  cdn: content delivery networks
+  address-policy: IP address and ASN allocation policy (RIR policy processes)
+  internet-governance: regulation, standards bodies, and geopolitics of the internet
+  kubernetes: Kubernetes and its networking
+  cni: container network interfaces and container networking plugins
+  containers: containerization, images, runtimes
+  service-mesh: service mesh (sidecars, eBPF meshes, mTLS between services)
+  cloud-native: cloud-native patterns in general (CNCF ecosystem)
+  orchestration: workflow and device orchestration, intent-based systems, network controllers
+  automation: network automation (tooling, pipelines, source of truth, CI/CD for networks)
+  configuration-management: managing device configuration at scale (config generation, drift, validation)
+  gitops: GitOps workflows and version control practices
+  p4: the P4 language and P4-programmable targets
+  linux-networking: the Linux kernel networking stack (TC, netlink, drivers, offloads)
+  programmable-dataplane: programmable data planes in general (PNA, portable switch OSes, pipes)
+  ebpf: eBPF, XDP, and kernel bypass dataplanes
+  http: HTTP and web protocols, QUIC
+  ipam: IP address management and allocation
+  sdn: software-defined networking, controllers, separation of control and data plane
+  network-security: network security topics not covered by a finer tag
+  email-security: email security and phishing (DMARC, spam, brand abuse)
+  malware-analysis: malware, reverse engineering, botnet takedowns
+  threat-intelligence: threat intel, IoCs, attack tracking
+  vulnerability-management: vulnerability disclosure, patching, CVE economy
+  offensive-security: offensive security, red teaming, exploit development
+  privacy: privacy engineering, tracking, anonymity, privacy-preserving systems
+  censorship: censorship, filtering, and measurement of Internet shutdowns
+  ddos: DDoS attack and defense
+  anomaly-detection: detecting anomalies and attacks in traffic
+  firewall: firewalling and network policy enforcement
+  tls: TLS, certificates, and protocol encryption
+  encryption: encryption of traffic and data in general (MACsec, IPsec, E2E)
+  quantum-safe: post-quantum cryptography and migration
+  quantum-networking: quantum networking and entanglement distribution as infrastructure
+  pki: public key infrastructure, certificate lifecycle
+  attestation: remote attestation, measured boot, hardware roots of trust
+  zero-trust: zero-trust architecture and microsegmentation
+  identity: digital identity, identity ecosystems, ID standardization
+  authentication: authentication methods and protocols (MFA, passkeys, WebAuthn)
+  authorization: authorization, OAuth/OIDC, access control, policy engines
+  observability: network observability tooling, telemetry pipelines, flow data
+  telemetry: telemetry protocols (gNMI, streaming, INT)
+  measurement: measurement methodology, probing, active/passive measurement studies
+  benchmarking: benchmarks, testbeds, performance evaluation of systems
+  testing: testing and verification of networks and configs (formal verification belongs here)
+  sre: site reliability engineering practice, incident response, operations culture
+  capacity-planning: capacity planning and forecasting
+  troubleshooting: troubleshooting and root-cause analysis, outages and postmortems
+  dns: DNS, resolvers, authoritative infrastructure
+  multicast: multicast and broadcast replication
+  wifi: wireless and mobility
+  mobile: mobile and cellular networks (5G, roaming, RAN)
+  iot: Internet of Things scale problems, LPWAN
+  cxl: CXL and memory-fabric interconnects for pooled memory
+  time-sync: time and clock distribution (NTP/PTP, GNSS timing)
+  spectrum: radio spectrum policy and management
+  open-source: open-source project practice and sustainability
+  standardization: standards processes (IETF/IEEE) and documents
+  api: APIs for network control (REST/gRPC, schemas, contract design)

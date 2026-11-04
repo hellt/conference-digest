@@ -45,6 +45,7 @@ REGISTRY = ROOT / "conferences" / "registry.yaml"
 STATE = ROOT / "conferences" / "state.json"
 PROMPT_DIR = ROOT / "conferences" / "prompt"
 PROMPT_BASE = PROMPT_DIR / "base.md"
+VOCABULARY = ROOT / "conferences" / "tag-vocabulary.yaml"
 PROMPTS_DIR = ROOT / "prompts"
 DIGESTS_DIR = ROOT / "digests"
 RUN_SUMMARY = ROOT / "run_summary.json"
@@ -79,6 +80,15 @@ def parse_date(s) -> date:
     return s if isinstance(s, date) else datetime.strptime(str(s), "%Y-%m-%d").date()
 
 
+def tag_vocabulary() -> str:
+    """The search-tag vocabulary for the prompt's keywords block, one line per
+    tag. Single-sourced in conferences/tag-vocabulary.yaml, which also feeds
+    scripts/generate_tags.py and the tag validation in propose_digest.py."""
+    data = yaml.safe_load(VOCABULARY.read_text(encoding="utf-8")) or {}
+    vocab = data.get("vocabulary") or {}
+    return "\n".join(f"- `{t}` - {d}" for t, d in vocab.items()) or "- none defined yet"
+
+
 def build_prompt(entry: dict, program_text: str, source_url: str) -> str:
     template = PROMPT_BASE.read_text(encoding="utf-8")
     body = (
@@ -86,6 +96,7 @@ def build_prompt(entry: dict, program_text: str, source_url: str) -> str:
         .replace("{SOURCE_URL}", source_url)
         .replace("{KEY}", entry["key"])
         .replace("{DATE}", date.today().isoformat())
+        .replace("{TAG_VOCAB}", tag_vocabulary())
         .replace("{PROGRAM_TEXT}", program_text)
     )
     # Run-note prepended for whoever executes this prompt. Kept separate from

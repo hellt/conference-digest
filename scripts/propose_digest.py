@@ -8,7 +8,11 @@ ARTIFACT_DIR is the downloaded `tofarev-digest-<key>` artifact: digest.md plus
 result.json (stats and check notes). The digest is validated and written to
 digests/<key>.md, and every pick gets its links row (conferences/links.py:
 abstract, paper, slides, recording; TAVILY_API_KEY is the search fallback).
-The commit message follows the repo convention (`digest: <key>`, where the
+If the writer emitted the trailing fenced-JSON keywords block (prompt/base.md),
+it is stripped from the digest and converted into this digest's entry in
+conferences/tags.yaml (the search keywords build_site.py puts into page front
+matter), so the PR carries both files. The
+commit message follows the repo convention (`digest: <key>`, where the
 program came from, the core signal) and the PR body lists the automatic checks
 and link counts for the human who merges it. Exits non-zero, writing nothing,
 if the artifact does not belong to KEY or has no `###` picks.
@@ -26,10 +30,14 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "scripts"))
+from build_site import extract_tags_block  # noqa: E402
 from conferences.links import context_for, enrich  # noqa: E402
+from generate_tags import load_tags, parse_reply, save_tags, validate, load_vocabulary  # noqa: E402
 
 REGISTRY = ROOT / "conferences" / "registry.yaml"
 STATE = ROOT / "conferences" / "state.json"
+TAGS = ROOT / "conferences" / "tags.yaml"
 MAX_BYTES = 400_000
 
 
@@ -74,6 +82,9 @@ def main() -> int:
         return fail("digest.md is too large")
     result = json.loads(result_file.read_text(encoding="utf-8"))
     markdown = digest_file.read_text(encoding="utf-8")
+    # The writer's keywords block (prompt/base.md) never reaches digests/<key>.md;
+    # it is converted into conferences/tags.yaml further below.
+    markdown, tags_block = extract_tags_block(markdown)
     if result.get("failed") or result.get("key") not in (None, key):
         return fail(f"result.json is failed or belongs to {result.get('key')!r}")
     meta = re.match(r"<!--\n(.*?)\n-->", markdown, re.S)
@@ -91,6 +102,23 @@ def main() -> int:
         markdown, links = enrich(markdown, prompt.read_text(encoding="utf-8") if prompt.is_file() else "",
                                  context_for(entry))
     (ROOT / "digests" / f"{key}.md").write_text(markdown, encoding="utf-8")
+
+    # The writer's keywords block becomes this digest's entry in
+    # conferences/tags.yaml - the search keywords build_site.py puts into the
+    # front matter. Converted here, stripped from the digest above, so the
+    # published file keeps its plain structure; a missing block just means no
+    # tags for this digest until one is run by hand (generate_tags --from-digest).
+    if tags_block:
+        try:
+            post, talks = validate(key, parse_reply(tags_block), load_vocabulary(), set(), body=markdown)
+            if post or any(talks.values()):
+                tagged = load_tags()
+                tagged[key] = {"post": post, "talks": talks}
+                save_tags(tagged)
+                print(f"tagged {key} for search: {len(post)} post tag(s), "
+                      f"{sum(1 for t in talks.values() if t)} pick(s)")
+        except (ValueError, json.JSONDecodeError) as e:
+            print(f"::warning::{key}: keywords block unusable ({e}); digest stays untagged")
 
     state = json.loads(STATE.read_text(encoding="utf-8")).get(key, {}) if STATE.exists() else {}
     if state.get("status") == "manual":

@@ -26,25 +26,6 @@ from .peeringdays import PeeringDaysFetcher
 from .moreip import MoreIpFetcher
 from .swinog import SwinogFetcher
 from .capacity import CapacityFetcher
-from .janog import JanogFetcher
-from .indico import IndicoFetcher
-from .itnog import ItnogFetcher
-from .netnod import NetnodFetcher
-from .imc import ImcFetcher
-from .conext import ConextFetcher
-from .apricot import ApricotFetcher
-from .fosdem import FosdemFetcher
-from .pretalx import PretalxFetcher
-from .tnc import TncFetcher
-from .arin import ArinFetcher
-from .lacnic import LacnicFetcher
-from .pets import PetsFetcher
-from .ausnog import AusnogFetcher
-from .peeringdays import PeeringDaysFetcher
-from .moreip import MoreIpFetcher
-from .swinog import SwinogFetcher
-from .capacity import CapacityFetcher
-from .janog import JanogFetcher
 from .indico import IndicoFetcher
 from .itnog import ItnogFetcher
 from .netnod import NetnodFetcher
@@ -79,7 +60,6 @@ FETCHERS = {
     "moreip": MoreIpFetcher(),
     "swinog": SwinogFetcher(),
     "capacity": CapacityFetcher(),
-    "janog": JanogFetcher(),
     "indico": IndicoFetcher(),
     "itnog": ItnogFetcher(),
     "netnod": NetnodFetcher(),

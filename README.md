@@ -197,7 +197,6 @@ conferences/
     moreip.py         # MORE-IP (AMS-IX): agenda articles with speakers, blurbs
     swinog.py         # SwiNOG meeting pages: talks, abstracts, slides, videos
     capacity.py       # Capacity Europe: server-rendered session library
-    janog.py          # JANOG timetable + per-session pages (Japanese)
     indico.py         # generic Indico export API (nog.fi, NetUK, GRNOG, DKNOG)
     itnog.py          # ITNOG program tables with PDF slides (Italian)
     netnod.py        # Netnod Tech Meeting agenda paragraphs

@@ -170,7 +170,9 @@ jobs:
               cat "$RUNNER_TEMP/site-$key.log"
               printf '\n> [!WARNING]\n> The site build failed with this digest. See the [workflow run](%s).\n' "$RUN_URL" >> "$RUNNER_TEMP/body-$key.md"
             fi
-            git add "digests/$key.md"
+            # The digest and its search-keywords entry (conferences/tags.yaml,
+            # written from the writer's keywords block by propose_digest.py).
+            git add "digests/$key.md" "conferences/tags.yaml"
             git commit --quiet -F "$RUNNER_TEMP/message-$key.txt"
             git push --quiet --force origin "$branch"
             pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')

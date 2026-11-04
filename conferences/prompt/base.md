@@ -87,6 +87,26 @@ For each selected item provide, in this structure:
 Then a short "Themes" section (3-6 bullets) naming patterns across the
 program: what the field is collectively paying attention to this cycle.
 
+## Search keywords
+
+The site's search indexes topic keywords per page. After the Themes section,
+append ONE fenced `json` code block - the pipeline reads it machine-side and
+removes it before publishing, so it is never rendered - of exactly this shape:
+
+```json
+{"post": ["bgp", "optics"], "talks": {"<pick heading>": ["bgp", "network-security"], "<pick heading>": ["kubernetes", "cni"]}}
+```
+
+- "post": 3-6 topics this digest as a whole covers.
+- "talks": one entry for EVERY pick you selected, keyed by its exact `###`
+  heading string (copy it character for character, including any presenter
+  part), with 2-4 tags naming what the talk is about - the technology or
+  practice, not its tier or the conference.
+- Tags are lowercase, hyphenated, single concepts. Use ONLY tags from this
+  vocabulary:
+
+{TAG_VOCAB}
+
 ## Rules
 
 - Prioritize ruthlessly. 15 sharp picks beat 60 hedged ones. A large program
@@ -126,8 +146,8 @@ registry_key: {KEY}
 -->
 
 Then the digest as markdown: it starts with a single `#` heading that is the
-digest's title, followed by the tiers as `##` sections and Themes as a final
-`##` section.
+digest's title, followed by the tiers as `##` sections, Themes as a final `##`
+section, and then the keywords block.
 
 - The `#` heading is the conference name and nothing else — e.g. `# IETF 123
   (Madrid)`. Never add anything after the name: no audience or type qualifier

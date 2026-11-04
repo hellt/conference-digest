@@ -53,6 +53,7 @@ DIGESTS = ROOT / "digests"
 PROMPTS = ROOT / "prompts"
 REGISTRY = ROOT / "conferences" / "registry.yaml"
 STATE = ROOT / "conferences" / "state.json"
+TAGS_FILE = ROOT / "conferences" / "tags.yaml"
 DOCS = ROOT / "docs"
 POSTS = DOCS / "posts"
 TRACKER = DOCS / "conferences.md"
@@ -65,6 +66,18 @@ TIERS = ("core", "adjacent", "wildcard")
 LABEL = re.compile(r"^\*\*[A-Z][\w /-]{0,40}(?::\*\*|\*\*:)")
 LINKS_ROW = re.compile(r"^\s*(?:[-*]\s+)?\*\*Links?:?\*\*:?\s*(.+)$")
 MD_LINK = re.compile(r"\[([^\]\n]+)\]\((https?://[^)\s]+)\)")
+
+
+def load_tags() -> dict[str, dict]:
+    """Per digest key, `post` tags and `talks` (pick heading -> tags) from
+    conferences/tags.yaml - written by scripts/generate_tags.py out of a local
+    LLM run, and freely hand-editable. Zensical's search plugin indexes the
+    page front matter's `tags` as its own weighted search field, which is what
+    makes the keywords findable. A missing file or entry just means no tags."""
+    if not TAGS_FILE.is_file():
+        return {}
+    data = yaml.safe_load(TAGS_FILE.read_text(encoding="utf-8")) or {}
+    return {k: v for k, v in data.items() if isinstance(v, dict)}
 
 
 def youtube_start(url: str) -> int:
@@ -456,6 +469,23 @@ def media_block(row: str, title: str) -> list[str]:
     return out
 
 
+# The keywords block a digest writer emits at its very end (conferences/prompt/
+# base.md): a fenced json object with `post` and `talks` keys. The pipeline
+# strips it before the digest is published and turns it into tags.yaml
+# (propose_digest.py for bot digests, generate_tags.py --from-digest by hand).
+TAGS_BLOCK = re.compile(r"(?:\A|\n)```(?:json)?[ \t]*\n(\{\s*\"post\".*?)\n```[ \t]*(?=\n|$)", re.S)
+
+
+def extract_tags_block(markdown: str) -> tuple[str, str | None]:
+    """(the digest without its keywords block, the block's JSON body), or
+    (the digest, None) when it carries none."""
+    m = TAGS_BLOCK.search(markdown)
+    if not m:
+        return markdown, None
+    text = (markdown[: m.start()] + markdown[m.end() :]).rstrip() + "\n"
+    return text, m.group(1).strip()
+
+
 def load_registry() -> dict[str, dict]:
     entries = yaml.safe_load(REGISTRY.read_text(encoding="utf-8"))["conferences"]
     return {e["key"]: e for e in entries}
@@ -477,6 +507,10 @@ def read_digest(path: Path) -> tuple[dict, str]:
 
     New digests start with an HTML-comment block (invariant 11); two older
     ones use YAML front matter or a non-standard field set. Accept all three.
+    A keywords block the writer left in (normally converted into
+    conferences/tags.yaml by propose_digest.py, or by generate_tags.py
+    --from-digest, before publishing) is dropped here as a last resort, so
+    it never reaches the site.
     """
     text = path.read_text(encoding="utf-8").replace("\r\n", "\n")
     meta: dict = {}
@@ -492,6 +526,9 @@ def read_digest(path: Path) -> tuple[dict, str]:
         if m:
             meta = yaml.safe_load(m.group(1)) or {}
             text = text[m.end():]
+    text, tags_block = extract_tags_block(text)
+    if tags_block:   # not converted yet - it belongs in tags.yaml, not here
+        print(f"warning: {path.name} still carries its keywords block; tags.yaml entry missing? ")
     return meta, text.strip() + "\n"
 
 
@@ -780,7 +817,7 @@ def first_writeup(lines: list[str]) -> str:
 
 
 def render_talks(key: str, name: str, digest_title: str, started: date | None, ended: date | None,
-                 sections: list[dict]) -> tuple[list[tuple[str, str]], list[str]]:
+                 sections: list[dict], talk_tags: dict[str, list[str]] | None = None) -> tuple[list[tuple[str, str]], list[str]]:
     """One page per pick, as (path under docs/, page text), and each
     page's href from docs/posts/, in pick order. The pick's text is rendered
     as on the digest; the page adds a facts strip and the card front matter."""
@@ -820,13 +857,16 @@ def render_talks(key: str, name: str, digest_title: str, started: date | None, e
         front = {
             "title": plain(title, 1000),
             "description": summary(first_writeup(lines)) or f"A {tier} pick from the {digest_title} digest.",
-            "card": {
-                "kind": "talk",
-                "conference": conference,
-                "when": " · ".join(x for x in (place, dates, f"{tier.title()} pick") if x),
-                "title": plain(title, 1000),
-                "presenter": tidy_presenter(presenter),
-            },
+        }
+        tags = (talk_tags or {}).get(heading)
+        if tags:
+            front["tags"] = tags
+        front["card"] = {
+            "kind": "talk",
+            "conference": conference,
+            "when": " · ".join(x for x in (place, dates, f"{tier.title()} pick") if x),
+            "title": plain(title, 1000),
+            "presenter": tidy_presenter(presenter),
         }
         page = (
             front_matter(front)
@@ -840,7 +880,8 @@ def render_talks(key: str, name: str, digest_title: str, started: date | None, e
     return pages, hrefs
 
 
-def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict, list[dict], list[tuple[str, str]]]:
+def render_post(key: str, entry: dict, meta: dict, body: str,
+                tags: dict | None = None) -> tuple[str, dict, list[dict], list[tuple[str, str]]]:
     h1, intro, rest = split_body(nest_lists(body))
     if re.match(r"^\d+ picks\b", intro):
         intro = intro.partition("\n\n")[2]
@@ -857,7 +898,8 @@ def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict
     # The human-facing page; a fetcher's source_url can be an API endpoint.
     source = entry.get("manual_fallback_url") or meta.get("source_url") or entry.get("program_url") or ""
     sections = pick_sections(rest)
-    talks, talk_links = render_talks(key, name, title, started, ended, sections)
+    tags = tags or {}
+    talks, talk_links = render_talks(key, name, title, started, ended, sections, tags.get("talks"))
     decorated, picks = annotate_employers(rest)
     decorated = decorate(decorated, talk_links)
 
@@ -879,6 +921,9 @@ def render_post(key: str, entry: dict, meta: dict, body: str) -> tuple[str, dict
     }
     if bot:
         front["authors"] = ["tofarev"]
+    post_tags = tags.get("post")
+    if post_tags:
+        front["tags"] = post_tags
     facts = [
         dates,
         f"[Program]({source})" if source.startswith("http") else "",
@@ -1009,6 +1054,7 @@ def render_companies(companies: dict[str, list[dict]], posts: dict[str, dict]) -
 
 def main() -> int:
     registry = load_registry()
+    tag_index = load_tags()
     if POSTS.exists():
         shutil.rmtree(POSTS)
     POSTS.mkdir(parents=True)
@@ -1021,7 +1067,7 @@ def main() -> int:
     for path in sorted(DIGESTS.glob("*.md")):
         key = path.stem
         meta, body = read_digest(path)
-        page, info, picks, talks = render_post(key, registry.get(key, {}), meta, body)
+        page, info, picks, talks = render_post(key, registry.get(key, {}), meta, body, tag_index.get(key))
         (POSTS / f"{key}.md").write_text(page, encoding="utf-8")
         if talks:
             folder = DOCS / key
@@ -1040,7 +1086,9 @@ def main() -> int:
     render_companies(companies, posts)
     TRACKER.write_text(render_tracker(registry, posts), encoding="utf-8")
     print(f"rendered {len(posts)} digest post(s), {talk_count} talk page(s), {len(companies)} employer page(s) "
-          f"and the tracker of {len(registry)} edition(s)")
+          f"and the tracker of {len(registry)} edition(s)"
+          + (f"; {sum(1 for t in tag_index.values() if t.get('post'))} digest(s) carry search tags"
+             if tag_index else ""))
     return 0
 
 

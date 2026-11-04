@@ -3700,6 +3700,9 @@
         <loc>https://tldr.netdevops.me/page/5/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/page/6/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/peeringdays-2026/</loc>
       </url>
       <url>
@@ -3794,6 +3797,66 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/pets-2026/zkrevoke-configurable-untraceability-for-verifiable-credentials-using-zk/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/beyond-collectives-building-fused-compute-communication-kernels-with-pyt/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/compute-latency-and-safety-architecting-stateful-guardrails-for-multi-ag/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/crossing-the-divide-co-evolving-kubernetes-and-ray-for-the-ai-era/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/demo-theater-openclic-open-communication-for-distributed-inference/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/ep-overlap-hiding-expert-parallel-communication-in-moe-training/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/five-bottlenecks-five-fixes-systematic-performance-diagnosis-for-pytorch/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/future-of-distributed-communication-in-pytorch-new-apis-for-fault-tolera/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/guardrails-at-the-infrastructure-layer-sandboxing-and-governing-agentic/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/introducing-nccl-extensions-communication-patterns-for-modern-ai/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/mccl-fault-tolerant-collective-communication-for-large-scale-gpu-trainin/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/monarch-single-machine-devx-at-distributed-scale/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/native-tiered-kv-cache-offloading-in-vllm-from-storage-offloading-to-dis/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/precompile-for-training/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/rocshmem-symmetric-memory-in-pytorch-for-amd-gpus/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/scaling-foundation-models-from-broken-to-near-linear-multi-node-training/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/self-healing-pytorch-training-through-live-gpu-migration/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/state-of-the-art-kv-transfer-for-disaggregated-llm-serving-in-vllm/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/who-owns-production-when-the-agent-does-the-fixing-governance-in-ai-assi/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/pytorch-2026/xccl-scaling-pytorch-collectives-to-exascale-on-intel-gpus-with-torchcom/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/ripe-91/</loc>

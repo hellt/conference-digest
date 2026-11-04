@@ -1,0 +1,1702 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="PyTorch Conference is an ML-frameworks conference, not a networking one — but this cycle its systems track is dominated by exactly the problems a networking PM owns: RDMA transports, all-to-all traffic patterns, fabric failure handling, and the infrastructure governance of autonomous agents. The…">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/pytorch-2026/">
+      
+      
+      
+        <link rel="prev" href="../swinog-42/">
+      
+      
+        <link rel="next" href="../nanog-98/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>PyTorch Conference 2026 - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="PyTorch Conference 2026 · Conference Digest" />
+<meta property="og:description" content="PyTorch Conference is an ML-frameworks conference, not a networking one — but this cycle its systems track is dominated by exactly the problems a networking PM owns: RDMA transports, all-to-all traffic patterns, fabric failure handling, and the infrastructure governance of autonomous agents. The…" />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/pytorch-2026.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/pytorch-2026/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="PyTorch Conference 2026 · Conference Digest" />
+<meta property="twitter:description" content="PyTorch Conference is an ML-frameworks conference, not a networking one — but this cycle its systems track is dominated by exactly the problems a networking PM owns: RDMA transports, all-to-all traffic patterns, fabric failure handling, and the infrastructure governance of autonomous agents. The…" />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/pytorch-2026.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PyTorch Conference 2026
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-tabs__powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-tabs__powered-text">Powered by</span>
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#future-of-distributed-communication-in-pytorch-new-apis-for-fault-tolerance-rdma-and-extensibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Future of Distributed Communication in PyTorch: New APIs for Fault Tolerance, RDMA and Extensibility
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-theater-openclic-open-communication-for-distributed-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Demo Theater: OpenCLIC: Open Communication for Distributed Inference
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introducing-nccl-extensions-communication-patterns-for-modern-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Introducing NCCL Extensions: Communication Patterns for Modern AI
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-healing-pytorch-training-through-live-gpu-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Self-Healing PyTorch Training Through Live GPU Migration
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling-foundation-models-from-broken-to-near-linear-multi-node-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Scaling Foundation Models: From Broken to Near-Linear Multi-Node Training
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-of-the-art-kv-transfer-for-disaggregated-llm-serving-in-vllm" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        State-of-the-Art KV Transfer for Disaggregated LLM Serving in vLLM
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crossing-the-divide-co-evolving-kubernetes-and-ray-for-the-ai-era" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Crossing the Divide: Co-Evolving Kubernetes and Ray for the AI Era
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guardrails-at-the-infrastructure-layer-sandboxing-and-governing-agentic-ai-in-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Guardrails at the Infrastructure Layer: Sandboxing and governing Agentic AI in production
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compute-latency-and-safety-architecting-stateful-guardrails-for-multi-agent-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Compute, Latency, and Safety: Architecting Stateful Guardrails for Multi-Agent Workflows
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beyond-collectives-building-fused-compute-communication-kernels-with-pytorch-symmetric-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Beyond Collectives: Building Fused Compute-Communication Kernels with PyTorch Symmetric Memory
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rocshmem-symmetric-memory-in-pytorch-for-amd-gpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        rocSHMEM Symmetric Memory in PyTorch for AMD GPUs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mccl-fault-tolerant-collective-communication-for-large-scale-gpu-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MCCL: Fault-Tolerant Collective Communication for Large-Scale GPU Training
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ep-overlap-hiding-expert-parallel-communication-in-moe-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        EP-Overlap: Hiding Expert-Parallel Communication in MoE Training
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#native-tiered-kv-cache-offloading-in-vllm-from-storage-offloading-to-disaggregated-serving" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Native Tiered KV Cache Offloading in vLLM: From Storage Offloading to Disaggregated Serving
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#five-bottlenecks-five-fixes-systematic-performance-diagnosis-for-pytorch-distributed-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Five Bottlenecks, Five Fixes: Systematic Performance Diagnosis for PyTorch Distributed Training
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xccl-scaling-pytorch-collectives-to-exascale-on-intel-gpus-with-torchcomms" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        XCCL: Scaling PyTorch Collectives to Exascale on Intel GPUs with TorchComms
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monarch-single-machine-devx-at-distributed-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Monarch - Single-Machine DevX at Distributed Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-owns-production-when-the-agent-does-the-fixing-governance-in-ai-assisted-sre" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Who Owns Production When the Agent Does the Fixing? Governance in AI-Assisted SRE
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precompile-for-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Precompile for Training
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#future-of-distributed-communication-in-pytorch-new-apis-for-fault-tolerance-rdma-and-extensibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Future of Distributed Communication in PyTorch: New APIs for Fault Tolerance, RDMA and Extensibility
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-theater-openclic-open-communication-for-distributed-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Demo Theater: OpenCLIC: Open Communication for Distributed Inference
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introducing-nccl-extensions-communication-patterns-for-modern-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Introducing NCCL Extensions: Communication Patterns for Modern AI
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-healing-pytorch-training-through-live-gpu-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Self-Healing PyTorch Training Through Live GPU Migration
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling-foundation-models-from-broken-to-near-linear-multi-node-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Scaling Foundation Models: From Broken to Near-Linear Multi-Node Training
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-of-the-art-kv-transfer-for-disaggregated-llm-serving-in-vllm" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        State-of-the-Art KV Transfer for Disaggregated LLM Serving in vLLM
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crossing-the-divide-co-evolving-kubernetes-and-ray-for-the-ai-era" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Crossing the Divide: Co-Evolving Kubernetes and Ray for the AI Era
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guardrails-at-the-infrastructure-layer-sandboxing-and-governing-agentic-ai-in-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Guardrails at the Infrastructure Layer: Sandboxing and governing Agentic AI in production
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compute-latency-and-safety-architecting-stateful-guardrails-for-multi-agent-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Compute, Latency, and Safety: Architecting Stateful Guardrails for Multi-Agent Workflows
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beyond-collectives-building-fused-compute-communication-kernels-with-pytorch-symmetric-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Beyond Collectives: Building Fused Compute-Communication Kernels with PyTorch Symmetric Memory
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rocshmem-symmetric-memory-in-pytorch-for-amd-gpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        rocSHMEM Symmetric Memory in PyTorch for AMD GPUs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mccl-fault-tolerant-collective-communication-for-large-scale-gpu-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MCCL: Fault-Tolerant Collective Communication for Large-Scale GPU Training
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ep-overlap-hiding-expert-parallel-communication-in-moe-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        EP-Overlap: Hiding Expert-Parallel Communication in MoE Training
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#native-tiered-kv-cache-offloading-in-vllm-from-storage-offloading-to-disaggregated-serving" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Native Tiered KV Cache Offloading in vLLM: From Storage Offloading to Disaggregated Serving
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#five-bottlenecks-five-fixes-systematic-performance-diagnosis-for-pytorch-distributed-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Five Bottlenecks, Five Fixes: Systematic Performance Diagnosis for PyTorch Distributed Training
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xccl-scaling-pytorch-collectives-to-exascale-on-intel-gpus-with-torchcomms" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        XCCL: Scaling PyTorch Collectives to Exascale on Intel GPUs with TorchComms
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monarch-single-machine-devx-at-distributed-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Monarch - Single-Machine DevX at Distributed Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-owns-production-when-the-agent-does-the-fixing-governance-in-ai-assisted-sre" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Who Owns Production When the Agent Does the Fixing? Governance in AI-Assisted SRE
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precompile-for-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Precompile for Training
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>15 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="pytorch-conference-2026">PyTorch Conference 2026<a class="headerlink" href="#pytorch-conference-2026" title="Permanent link">#</a></h1>
+<p>PyTorch Conference is an ML-frameworks conference, not a networking one — but this cycle its systems track is dominated by exactly the problems a networking PM owns: RDMA transports, all-to-all traffic patterns, fabric failure handling, and the infrastructure governance of autonomous agents. The picks below are filtered through that lens. All write-ups are based on the session descriptions (the program pages carry no fuller papers or slides); speaker affiliations were confirmed from the session pages.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>October 21, 2026</span>
+<span class="digest-fact" markdown><a href="https://events.linuxfoundation.org/pytorch-conference-north-america/program/schedule/">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="future-of-distributed-communication-in-pytorch-new-apis-for-fault-tolerance-rdma-and-extensibility"><a href="future-of-distributed-communication-in-pytorch-new-apis-for-fault-tolera/">Future of Distributed Communication in PyTorch: New APIs for Fault Tolerance, RDMA and Extensibility</a><a class="headerlink" href="#future-of-distributed-communication-in-pytorch-new-apis-for-fault-tolerance-rdma-and-extensibility" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256220">Abstract</a></p>
+</div>
+<p>Tristan Rice, Kapil Sharma — <a href="../companies/meta/">Meta</a> (PyTorch Distributed)</p>
+<ul>
+<li><strong>Why</strong>: <code>torch.distributed</code> is the layer where every training collective maps onto your RDMA/Ethernet fabric. These API changes define how large jobs interact with the network — fault recovery, one-sided RDMA, and observability — and they are landing upstream for everyone.</li>
+<li><strong>What</strong>: Five new capabilities being upstreamed from TorchComms into <code>torch.distributed</code>: <code>torch.distributed.reconfigure()</code> for live process-group reconfiguration after rank failures (no job restart); window APIs for one-sided RDMA put/get (zero-copy, aimed at RL workloads); composable hooks for tracing, logging, and NaN detection on all collectives across all backends; backends shipped as pip-installable wheels via entry_points; and cleaned-up backend interfaces for vendors. (from abstract only)</li>
+<li><strong>How</strong>: Reconfiguration treats rank failure as a recoverable event rather than a job abort; window APIs expose peer memory directly; hooks make collective traffic observable in transit — the collective-layer analogue of flow telemetry.</li>
+<li><strong>Where applicable</strong>: Broadly applicable — hardware-agnostic by design, with backend registration as the extension point. Zero claimed migration cost for existing users.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="demo-theater-openclic-open-communication-for-distributed-inference"><a href="demo-theater-openclic-open-communication-for-distributed-inference/">Demo Theater: OpenCLIC: Open Communication for Distributed Inference</a><a class="headerlink" href="#demo-theater-openclic-open-communication-for-distributed-inference" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1329720">Abstract</a></p>
+</div>
+<p>Jesse Treger</p>
+<ul>
+<li><strong>Why</strong>: This is the Ultra Ethernet / connectionless-RDMA story arriving at the framework layer — squarely in physical-fabric territory. Its core argument is that MoE inference traffic (dynamic, many-destination all-to-all) is a structural mismatch for the connection-oriented RDMA transports most AI clusters run today.</li>
+<li><strong>What</strong>: OpenCLIC, an open communication framework for connectionless networks, being integrated with vLLM. First use case is expert-parallel dispatch/combine; planned support for one-sided operations — KV-cache transfer, cache reuse/offload, and model-state movement. It separates framework interfaces, GPU kernels, and transport implementations so inference code isn't tied to one accelerator or network stack. (from abstract only)</li>
+<li><strong>How</strong>: Built on Ultra Ethernet Transport, modeled on HPE Slingshot: no per-peer connections, improving multipathing, loss recovery, and scalability. The initial Slingshot implementation uses kernel-initiated OpenSHMEM so GPU code drives the network directly and the CPU stays out of the critical path.</li>
+<li><strong>Where applicable</strong>: Initial implementation is HPE Slingshot-specific (HPC heritage), with the architecture positioned to extend across accelerators and fabrics. Demo-theater short format, and the program attaches a sponsored-content notice — expect a direction statement and early integration, not a full evaluation.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="introducing-nccl-extensions-communication-patterns-for-modern-ai"><a href="introducing-nccl-extensions-communication-patterns-for-modern-ai/">Introducing NCCL Extensions: Communication Patterns for Modern AI</a><a class="headerlink" href="#introducing-nccl-extensions-communication-patterns-for-modern-ai" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257023">Abstract</a></p>
+</div>
+<p>Sreeram Potluri, Artem Polyakov — <a href="../companies/nvidia/">NVIDIA</a></p>
+<ul>
+<li><strong>Why</strong>: NCCL is the dominant collective library on GPU fabrics; these domain extensions change what traffic patterns the library can express — MoE dispatch/combine and cross-mesh resharding — which is precisely the traffic your inference and RL-rollout fabrics will carry.</li>
+<li><strong>What</strong>: Two NCCL domain extensions built on NCCL's Device APIs. NCCL-EP brings MoE dispatch and combine natively into NCCL — one automatically tuned API spanning latency-optimized decode and throughput-optimized training, with GPU-initiated RDMA and NVLink out of the box. NCCL-M2N does zero-copy resharding between disjoint device meshes, moving weight snapshots from trainers to inference replicas with no CPU staging. Performance results promised in the talk. (from abstract only)</li>
+<li><strong>How</strong>: Specialized libraries inheriting NCCL's topology awareness and transport stack, but designed for customization, kernel fusion, and rapid prototyping of emerging patterns rather than classic collectives.</li>
+<li><strong>Where applicable</strong>: NVIDIA-centric (NCCL ecosystem), and a vendor talk by NVIDIA architects — but it defines the de-facto API surface that open alternatives (OpenCLIC, TorchComms backends) will be measured against.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="self-healing-pytorch-training-through-live-gpu-migration"><a href="self-healing-pytorch-training-through-live-gpu-migration/">Self-Healing PyTorch Training Through Live GPU Migration</a><a class="headerlink" href="#self-healing-pytorch-training-through-live-gpu-migration" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1322707">Abstract</a></p>
+</div>
+<p>Pavneet Ahluwalia, Gavin Cohen — <a href="../companies/microsoft/">Microsoft Azure</a> (product) and <a href="../companies/clockwork/">Clockwork</a> Systems</p>
+<ul>
+<li><strong>Why</strong>: Link flaps and node failures are the physical-fabric failure modes you live with; this talk is about the job layer's counter-move — live migration instead of checkpoint-restart. The structural diagnosis (every step ends in a collective needing all ranks; a communicator can't be rebuilt around a missing peer) is the clearest statement of why training jobs are so brittle to fabric events.</li>
+<li><strong>What</strong>: TorchPass, a training-failover system presented jointly by Together AI and Clockwork Systems: on link degradation it reroutes traffic; on GPU/memory/component failure it live-migrates the affected rank's device and communicator state to a spare and resumes from the same step. Their claim: a single checkpoint-restart failure burns 45–90 minutes of wall-clock across every GPU in the job. Live demo with injected link flaps and GPU failures; a decision framework for when live migration beats checkpoint-restart, plus a TCO framing for recovered goodput. (from abstract only)</li>
+<li><strong>How</strong>: End-to-end system — monitoring, health checks, failover, rank-state migration — keeping a multi-node job in continuous forward progress.</li>
+<li><strong>Where applicable</strong>: Vendor joint presentation with a product and TCO calculator attached; the companion demo talk reports a published TorchPass benchmark at Llama 4 Scout scale on 64 H200 GPUs, independently validated by SemiAnalysis. The mechanism assumes spare capacity and their product; the accountability/verification framing (does a failure resume from the same step, does throughput ever hit zero, can the claim be verified?) transfers to any fabric.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="scaling-foundation-models-from-broken-to-near-linear-multi-node-training"><a href="scaling-foundation-models-from-broken-to-near-linear-multi-node-training/">Scaling Foundation Models: From Broken to Near-Linear Multi-Node Training</a><a class="headerlink" href="#scaling-foundation-models-from-broken-to-near-linear-multi-node-training" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256382">Abstract</a></p>
+</div>
+<p>Sheng Huang — Pinterest</p>
+<ul>
+<li><strong>Why</strong>: A measured production case of "the network is the bottleneck" — GPUs busy waiting on cross-node traffic — with a diagnosis-first playbook that any operator of multi-node training can copy. The numbers are unusually honest (they show the broken starting point).</li>
+<li><strong>What</strong>: Pinterest's TorchRec foundation-model training went from 5x <em>slower</em> at 2 nodes and 1.21x scaling at 4 nodes to 3.9x at 4 nodes (97.5% of ideal) and 7.5x at 8 nodes (93.75%) — by attacking cross-node All-to-All from distributed embedding lookups, identified via PyTorch Profiler and NCCL traces. (from abstract only)</li>
+<li><strong>How</strong>: Reduce bytes on the wire (FP8 communication with FBGEMM), balanced TorchRec embedding sharding and reshaping, Distributed Checkpoint for load-time resharding, and a 2D parallel topology that keeps expensive All-to-All local and syncs replicas with AllReduce — i.e., topology designed around the slowest link.</li>
+<li><strong>Where applicable</strong>: Pinterest production on AWS (EFA networking) — org- and cloud-specific in its specifics, but the playbook (measure, cut wire bytes, checkpoint portably, design around the slowest link) is broadly transferable.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="state-of-the-art-kv-transfer-for-disaggregated-llm-serving-in-vllm"><a href="state-of-the-art-kv-transfer-for-disaggregated-llm-serving-in-vllm/">State-of-the-Art KV Transfer for Disaggregated LLM Serving in vLLM</a><a class="headerlink" href="#state-of-the-art-kv-transfer-for-disaggregated-llm-serving-in-vllm" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1255023">Abstract</a></p>
+</div>
+<p>Nicolò Lucchesi (Mistral AI, vLLM maintainer), Sunita Nadampalli (<a href="../companies/amazon/">Amazon</a>), Zhanqiu Hu (<a href="../companies/red-hat/">Red Hat</a>)</p>
+<ul>
+<li><strong>Why</strong>: P/D disaggregation turns KV-cache transfer into a first-class network workload — bidirectional, latency-sensitive, stateful — that inference fabrics must now be designed for. This is the talk defining that transfer layer's requirements.</li>
+<li><strong>What</strong>: Developments in vLLM's disaggregated serving stack: hybrid-model transfer with heterogeneous TP (Nemotron, Qwen3.5, DeepSeek-V4 with interleaved attention, KV compression, sliding windows), bidirectional KV transfer for agentic multi-turn sessions, a KV Push connector that reduces TTFT, and KV cache leases for reliability under failures and traffic spikes. On Nemotron, disaggregated P/D Pareto-dominates co-located serving across concurrency levels. (from abstract only)</li>
+<li><strong>How</strong>: A flexible transfer interface generalizing across diverse cache layouts/sharding semantics and heterogeneous hardware (NVIDIA GPUs, AWS Trainium), composing with prefix caching and CPU offloading.</li>
+<li><strong>Where applicable</strong>: vLLM-specific implementation but explicitly hardware-agnostic; the cross-vendor maintainer group suggests this becomes the reference interface. The hard constraint is cache-layout diversity across hybrid model architectures.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="crossing-the-divide-co-evolving-kubernetes-and-ray-for-the-ai-era"><a href="crossing-the-divide-co-evolving-kubernetes-and-ray-for-the-ai-era/">Crossing the Divide: Co-Evolving Kubernetes and Ray for the AI Era</a><a class="headerlink" href="#crossing-the-divide-co-evolving-kubernetes-and-ray-for-the-ai-era" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256376">Abstract</a></p>
+</div>
+<p>Jago Macleod (<a href="../companies/google/">Google</a>, Kubernetes &amp; GKE), Ion Stoica (Anyscale / <a href="../companies/uc-berkeley/">UC Berkeley</a>)</p>
+<ul>
+<li><strong>Why</strong>: Kubernetes is where your cloud-native world has to absorb AI workloads; this session is the strategic map of how K8s and Ray are converging rather than fragmenting — directly relevant to K8s networking, scheduling, and resource-management roadmaps.</li>
+<li><strong>What</strong>: A discussion of the co-evolution of Kubernetes and Ray into a unified open-source AI stack, spanning the PyTorch Foundation side (PyTorch, vLLM, Ray) and the CNCF side (Kubernetes, Envoy, OpenTelemetry, llm-d, containerd), with Google and Anyscale actively collaborating to prevent ecosystem fragmentation. (from abstract only)</li>
+<li><strong>How</strong>: A jointly built, open, vertically integrated stack rather than parallel universes users must bridge themselves.</li>
+<li><strong>Where applicable</strong>: Vision/direction session by engineering leadership — expect roadmap-level framing, not implementation detail. Useful for planning where AI workload requirements will pull K8s networking and scheduling next.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="guardrails-at-the-infrastructure-layer-sandboxing-and-governing-agentic-ai-in-production"><a href="guardrails-at-the-infrastructure-layer-sandboxing-and-governing-agentic/">Guardrails at the Infrastructure Layer: Sandboxing and governing Agentic AI in production</a><a class="headerlink" href="#guardrails-at-the-infrastructure-layer-sandboxing-and-governing-agentic-ai-in-production" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1244699">Abstract</a></p>
+</div>
+<p>Sai Charan Teja Gopaluni, Aaresh Sharma — <a href="../companies/amazon/">AWS</a></p>
+<ul>
+<li><strong>Why</strong>: Agent governance is moving down from application-layer filters to infrastructure controls — K8s network policies, seccomp, runtime isolation — which is exactly the cloud-native security surface you work on. This is the zero-trust/microsegmentation conversation applied to agents.</li>
+<li><strong>What</strong>: A BoF on infrastructure-level governance of agentic AI: container sandboxing for agent tool execution (network policies, seccomp profiles, runtime isolation on Kubernetes); GPU-level resource boundaries so one agent's runaway inference can't starve safety-critical workloads; and observability as governance — audit trails, token-level logging, kill switches for agentic chains. (from abstract only)</li>
+<li><strong>How</strong>: Discussion format with a three-part agenda; no finished system or results — this is a community working session.</li>
+<li><strong>Where applicable</strong>: Kubernetes-centric and generalizable across environments; a good venue to contribute a networking/identity practitioner's lens to an emerging practice.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="compute-latency-and-safety-architecting-stateful-guardrails-for-multi-agent-workflows"><a href="compute-latency-and-safety-architecting-stateful-guardrails-for-multi-ag/">Compute, Latency, and Safety: Architecting Stateful Guardrails for Multi-Agent Workflows</a><a class="headerlink" href="#compute-latency-and-safety-architecting-stateful-guardrails-for-multi-agent-workflows" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1251388">Abstract</a></p>
+</div>
+<p>Purva Chiniya — <a href="../companies/amazon/">Amazon</a> Ads</p>
+<ul>
+<li><strong>Why</strong>: Securing inter-agent handoffs is the agentic analogue of service-to-service authentication and authorization — your workload/agentic-identity interest. The threat model here (untrusted data corrupting downstream agent privileges) is a delegation/privilege-escalation problem, not just an ML one.</li>
+<li><strong>What</strong>: MLOps infrastructure for securing multi-agent systems at enterprise scale: continuous, stateful red-teaming pipelines built on the open-source SecRepoBench evaluation framework, and specialized low-latency SLMs deployed as deterministic orchestration guardrails — cross-agent payloads routed through high-speed checks that catch prompt injection ("indirect orchestration exploits") and operational drift without frontier-model cost or throughput collapse. (from abstract only)</li>
+<li><strong>How</strong>: Small, fast validators placed in-line on the agent-to-agent data path, evaluating state changes continuously — architecturally the same shape as a sidecar policy check in a service mesh.</li>
+<li><strong>Where applicable</strong>: Enterprise multi-agent deployments; abstract-level with no scale numbers given, so treat the effectiveness claims with caution. The enforcement pattern is the transferable part.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="beyond-collectives-building-fused-compute-communication-kernels-with-pytorch-symmetric-memory"><a href="beyond-collectives-building-fused-compute-communication-kernels-with-pyt/">Beyond Collectives: Building Fused Compute-Communication Kernels with PyTorch Symmetric Memory</a><a class="headerlink" href="#beyond-collectives-building-fused-compute-communication-kernels-with-pytorch-symmetric-memory" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257030">Abstract</a></p>
+</div>
+<p>Ke Wen (<a href="../companies/nvidia/">NVIDIA</a>), Natalia Gimelshein (<a href="../companies/meta/">Meta</a>), Kapil Sharma (Meta, PyTorch Distributed)</p>
+<ul>
+<li><strong>Why</strong>: One-sided RMA issued from inside GPU kernels is the biggest change in how accelerators use the fabric since collectives; this is the guided tour of the programming model, and it pairs directly with the new <code>torch.distributed</code> window APIs.</li>
+<li><strong>What</strong>: PyTorch Symmetric Memory gives every rank a direct window into its peers' GPU memory, erasing the compute/communication boundary. A practical tour across five themes: compute–communication fusion (pushing partial results to a peer from inside a kernel), one-sided puts/gets plus <code>torch.distributed.TokenSwitch</code> supporting expert-parallel MoE with autograd, binding NCCL device primitives into a CUDA DSL (cute-DSL), device-side profiling plus CUDA Graph capture, and community adoption. (from abstract only)</li>
+<li><strong>How</strong>: Communication becomes something a kernel does inline, hidden behind compute, instead of a black-box collective the compute waits on.</li>
+<li><strong>Where applicable</strong>: NVIDIA-backed (NVSHMEM) today, with the AMD rocSHMEM counterpart covered separately; relevant to anyone reasoning about when fused communication beats a collective — and about what next-gen RDMA APIs need to expose.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="rocshmem-symmetric-memory-in-pytorch-for-amd-gpus"><a href="rocshmem-symmetric-memory-in-pytorch-for-amd-gpus/">rocSHMEM Symmetric Memory in PyTorch for AMD GPUs</a><a class="headerlink" href="#rocshmem-symmetric-memory-in-pytorch-for-amd-gpus" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256215">Abstract</a></p>
+</div>
+<p>Prachi Gupta — AMD</p>
+<ul>
+<li><strong>Why</strong>: Ports of GPU-initiated one-sided RMA to a second vendor are evidence this is becoming a cross-vendor fabric primitive rather than an NVIDIA trick — worth tracking for multi-vendor estate planning.</li>
+<li><strong>What</strong>: rocSHMEM backend for PyTorch symmetric memory, now upstream: the device-side OpenSHMEM API (one-sided put/get, non-blocking get, put-with-signal, wait-until) exposed as Triton-callable primitives so a kernel initiates its own communication. MoE all-to-all dispatch and combine are constructed within the kernel and overlapped with expert compute; comparison against RCCL host-driven all-to-all on representative MoE workloads promised. (from abstract only)</li>
+<li><strong>How</strong>: AMD-specific engineering — per-architecture device-bitcode linking and post-compile HIP-module initialization — organized behind a backend-agnostic layer shared with NVSHMEM so a single Triton kernel runs on both AMD and NVIDIA.</li>
+<li><strong>Where applicable</strong>: AMD GPUs (ROCm); the transferable design is the backend-agnostic layering that keeps one kernel portable across vendors.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="mccl-fault-tolerant-collective-communication-for-large-scale-gpu-training"><a href="mccl-fault-tolerant-collective-communication-for-large-scale-gpu-trainin/">MCCL: Fault-Tolerant Collective Communication for Large-Scale GPU Training</a><a class="headerlink" href="#mccl-fault-tolerant-collective-communication-for-large-scale-gpu-training" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256858">Abstract</a></p>
+</div>
+<p>Ben Carver — <a href="../companies/meta/">Meta</a></p>
+<ul>
+<li><strong>Why</strong>: Dynamic communicator membership — shrinking and growing as ranks fail or recover — is the collective layer learning what routing protocols learned decades ago about membership churn. Pairs directly with <code>torch.distributed.reconfigure()</code> and the TorchPass work.</li>
+<li><strong>What</strong>: MCCL, Meta's open-source fault-tolerant C++ collective library: hardware failure treated as a first-class design principle, with dynamic communicator reconfiguration that doesn't interrupt the training job. Production-grade AllReduce and Send/Recv via TorchComms integration, with claimed performance parity with NCCL. (from abstract only)</li>
+<li><strong>How</strong>: Redefines the communication lifecycle around failure and recovery instead of static membership and full-job restarts.</li>
+<li><strong>Where applicable</strong>: Aimed at tens-of-thousands-of-GPU fleets where failure is routine; open source, so broadly inspectable — but the parity claim is from the abstract, with numbers presumably in the talk.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="ep-overlap-hiding-expert-parallel-communication-in-moe-training"><a href="ep-overlap-hiding-expert-parallel-communication-in-moe-training/">EP-Overlap: Hiding Expert-Parallel Communication in MoE Training</a><a class="headerlink" href="#ep-overlap-hiding-expert-parallel-communication-in-moe-training" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257875">Abstract</a></p>
+</div>
+<p>Sanket Jayant Purandare (PyTorch Distributed and Compilers), Syed Ahmed (<a href="../companies/nvidia/">NVIDIA</a>, PyTorch Core)</p>
+<ul>
+<li><strong>Why</strong>: MoE expert-parallel all-to-all is the dominant new traffic pattern on AI fabrics; knowing how much of it can be hidden by framework-level scheduling tells you how much fabric headroom a MoE fleet actually needs.</li>
+<li><strong>What</strong>: Graph passes that hide EP communication by splitting each MoE layer into independent slices and overlapping token exchange with any available compute (experts, recompute, weight-gradient math), forward-with-forward and backward-with-backward. The same machinery also hides "page stashing," compacting worst-case activation memory from O(worst_case × L) to O(worst_case + actual). On DeepSeek-V3: 76–86% of EP comm hidden, ~1.3x throughput, +4% absolute MFU — and the authors call that a lower bound. (from abstract only)</li>
+<li><strong>How</strong>: Implemented as graph passes in TorchTitan's GraphTrainer, working under FSDP and PP with any schedule (not just DualPipe), no model changes, bitwise-matching eager numerics — overlap rather than wire-byte reduction.</li>
+<li><strong>Where applicable</strong>: DeepSeek-V3-scale MoE training; a framework-level (TorchTitan) technique that generalizes across schedules and parallelism strategies.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="native-tiered-kv-cache-offloading-in-vllm-from-storage-offloading-to-disaggregated-serving"><a href="native-tiered-kv-cache-offloading-in-vllm-from-storage-offloading-to-dis/">Native Tiered KV Cache Offloading in vLLM: From Storage Offloading to Disaggregated Serving</a><a class="headerlink" href="#native-tiered-kv-cache-offloading-in-vllm-from-storage-offloading-to-disaggregated-serving" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1254938">Abstract</a></p>
+</div>
+<p>Or Ozeri — <a href="../companies/ibm/">IBM</a></p>
+<ul>
+<li><strong>Why</strong>: Long-lived agentic sessions turn KV-cache preservation into a storage/I-O tiering problem with idle sessions holding state for hours or days — the memory-side complement to the KV-transfer talk, and a new consumer of fabric bandwidth.</li>
+<li><strong>What</strong>: vLLM's native tiered KV-cache offloading framework, newly integrated upstream with no external dependencies. The key design choice: all transfers route through CPU memory as a universal transport hub. (from abstract only)</li>
+<li><strong>How</strong>: Routing through host memory yields minimal GPU overhead (a simple copy), consolidated I/O from a single CPU buffer, hardware-agnostic operation with no specialized transfer APIs, and independence from KV cache memory layout (which varies across hardware, attention backends, parallelism schemes, and model architectures).</li>
+<li><strong>Where applicable</strong>: vLLM deployments generally — the design is deliberately layout- and hardware-agnostic; deployment and extension guidance promised.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="five-bottlenecks-five-fixes-systematic-performance-diagnosis-for-pytorch-distributed-training"><a href="five-bottlenecks-five-fixes-systematic-performance-diagnosis-for-pytorch/">Five Bottlenecks, Five Fixes: Systematic Performance Diagnosis for PyTorch Distributed Training</a><a class="headerlink" href="#five-bottlenecks-five-fixes-systematic-performance-diagnosis-for-pytorch-distributed-training" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1254803">Abstract</a></p>
+</div>
+<p>Paulo Aragao, Aravind Neelakantan — <a href="../companies/amazon/">AWS</a></p>
+<ul>
+<li><strong>Why</strong>: A repeatable diagnostic methodology for the question you get paged about — "is it the network?" Case 3 in particular (0.4% network utilization with MoE expert parallelism turning out to be a pipeline bubble, not a network problem) is exactly the misattribution pattern that wastes fabric-engineering time.</li>
+<li><strong>What</strong>: Five real case studies mapped onto a decision framework (compute-, memory-, communication-, or I/O-bound), each with specific <code>torch.profiler</code> signatures, NCCL debug patterns, and targeted fixes. Headline results: 83x data-loading gain (1.2% → usable GPU utilization), 28% throughput recovered from pipeline stages, and 6.8x end-to-end improvement on a production autonomous-driving model. (from abstract only)</li>
+<li><strong>How</strong>: Structured profiling → classify the bottleneck → apply the matched fix; delivered as a repeatable checklist for any distributed training workload.</li>
+<li><strong>Where applicable</strong>: Workload-agnostic methodology from AWS architects; the case studies are customer-specific but the framework and profiler signatures transfer cleanly.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="xccl-scaling-pytorch-collectives-to-exascale-on-intel-gpus-with-torchcomms"><a href="xccl-scaling-pytorch-collectives-to-exascale-on-intel-gpus-with-torchcom/">XCCL: Scaling PyTorch Collectives to Exascale on Intel GPUs with TorchComms</a><a class="headerlink" href="#xccl-scaling-pytorch-collectives-to-exascale-on-intel-gpus-with-torchcomms" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1258012">Abstract</a></p>
+</div>
+<p>Panagiotis Kourdis, Tanima Dey — <a href="../companies/intel/">Intel</a></p>
+<ul>
+<li><strong>Why</strong>: A rare, detailed account of building and validating a new accelerator's collective backend at exascale — including the CI and testing strategy — useful as the reference playbook for any multi-vendor comm-stack work.</li>
+<li><strong>What</strong>: XCCL, an in-tree Intel-GPU backend for TorchComms built on oneCCL, validated on Aurora (Argonne's exascale supercomputer): over 90% scaling efficiency across thousands of nodes running TorchTitan and other AI workloads. Covers bridging PyTorch collective semantics to oneCCL, a stream-ordered asynchronous execution model that overlaps compute and communication, CI combining mock-based validation with real Intel hardware, and comparisons against NCCL and RCCL. (from abstract only)</li>
+<li><strong>How</strong>: Backend integration plus semantic bridging between PyTorch's collective API and oneCCL's execution model.</li>
+<li><strong>Where applicable</strong>: Intel GPUs on Aurora — a specific supercomputer deployment; the transferable content is the backend-building and validation methodology, not the silicon.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="monarch-single-machine-devx-at-distributed-scale"><a href="monarch-single-machine-devx-at-distributed-scale/">Monarch - Single-Machine DevX at Distributed Scale</a><a class="headerlink" href="#monarch-single-machine-devx-at-distributed-scale" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1255147">Abstract</a></p>
+</div>
+<p>Thomas Wang, Zach DeVito — <a href="../companies/meta/">Meta</a></p>
+<ul>
+<li><strong>Why</strong>: An RDMA fabric used as a general-purpose actor IPC substrate to make a cluster feel like a laptop — a use of RDMA well beyond collectives, and a credible answer to the ergonomics gap that pushes developers away from clusters.</li>
+<li><strong>What</strong>: Monarch, a library for programming an entire cluster as if it were a single machine: imperative APIs launch processes across the cluster communicating via fast actor-based IPC, with data transfer over RDMA. Services built on the fabric include broadcasting the local filesystem to the whole cluster and surfacing remote logs locally; iteration takes seconds rather than minutes, and distributed processes exit like local ones. (from abstract only)</li>
+<li><strong>How</strong>: The RDMA-backed actor fabric supports local-feeling services; the talk demos the experience and how to build post-training frameworks on the primitives.</li>
+<li><strong>Where applicable</strong>: A Meta project aimed at post-training development loops (including for coding agents); assumes a cluster with RDMA and capacity for interactive use.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="who-owns-production-when-the-agent-does-the-fixing-governance-in-ai-assisted-sre"><a href="who-owns-production-when-the-agent-does-the-fixing-governance-in-ai-assi/">Who Owns Production When the Agent Does the Fixing? Governance in AI-Assisted SRE</a><a class="headerlink" href="#who-owns-production-when-the-agent-does-the-fixing-governance-in-ai-assisted-sre" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1255337">Abstract</a></p>
+</div>
+<p>Aditi Mewada — <a href="../companies/apple/">Apple</a></p>
+<ul>
+<li><strong>Why</strong>: Not a networking topic, but a direct signal of where operations are heading: agents shipping fixes autonomously into production — the same production your change-management, automation guardrails, and identity controls govern. The accountability question ("an agent misconfigures a service at 3am — who is answerable?") will land on security and identity teams first.</li>
+<li><strong>What</strong>: Governance frameworks, guardrails, and human-in-the-loop patterns for AI-assisted SRE: where autonomy genuinely delivers (faster MTTR, less toil, smarter alerting), where unchecked agent authority creates new failure classes, and a practical mental model for what agents should fix vs. flag vs. never touch. (from abstract only)</li>
+<li><strong>How</strong>: A patterns-and-mental-model talk rather than a system; no empirical evaluation claimed.</li>
+<li><strong>Where applicable</strong>: Any operations organization adopting autonomous remediation; conceptual, so weigh it as a framing device rather than validated practice.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="precompile-for-training"><a href="precompile-for-training/">Precompile for Training</a><a class="headerlink" href="#precompile-for-training" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1245005">Abstract</a></p>
+</div>
+<p>Bob Ren; Aaron Orenstein (<a href="../companies/meta/">Meta</a>)</p>
+<ul>
+<li><strong>Why</strong>: A genuinely surprising distributed-systems failure mode: in nominally identical SPMD programs, per-rank compilers and autotuners can diverge — choosing different kernels on different ranks, causing NCCL hangs, numerical inconsistencies, and hard-to-debug job failures. Anyone who has chased a "one rank hung" incident will recognize the shape of this problem.</li>
+<li><strong>What</strong>: Precompile for Training, an abstraction that compiles a distributed SPMD program once and reuses the resulting graph artifact across all ranks — guaranteeing identical execution and kernel selection cluster-wide, moving compilation ahead of GPU allocation, and eliminating redundant compile work across thousands of GPUs. (from abstract only)</li>
+<li><strong>How</strong>: All ranks share one compiled graph artifact; compilation is decoupled from GPU provisioning so idle-GPU-during-compile waste disappears.</li>
+<li><strong>Where applicable</strong>: Large SPMD training fleets, vendor-agnostic in principle; short talk with abstract-level detail — the rank-divergence problem statement is the durable takeaway.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Communication is the workload</strong>: nearly every systems talk is about data movement — hiding it behind compute (EP-Overlap, Symmetric Memory, rocSHMEM), shrinking it on the wire (FP8), or specializing the transport for it (NCCL-EP, OpenCLIC). The field has stopped treating the fabric as a solved substrate.</li>
+<li><strong>Failure is being redesigned as live reconfiguration</strong>: dynamic communicator membership (MCCL, <code>torch.distributed.reconfigure</code>, Elastic EP) and live rank migration (TorchPass) are displacing checkpoint-restart, because at 10k-GPU scale one failure costs 45–90 minutes across the whole fleet. The collective layer is (re)inventing membership protocol semantics.</li>
+<li><strong>Transport diversification is real</strong>: connectionless RDMA (Ultra Ethernet/Slingshot via OpenCLIC) is being positioned against connection-oriented transports, while GPU-initiated one-sided RMA (NVSHMEM/rocSHMEM/OpenSHMEM) moves communication from host-driven collectives into kernels — with a shared abstraction layer spanning vendors.</li>
+<li><strong>Inference traffic diverges from training traffic</strong>: MoE dispatch/combine (dynamic many-destination all-to-all) and P/D-disaggregated KV transfer (bidirectional, stateful, lease-governed) are new fabric workloads that bulk-collective designs fit poorly — with agentic sessions adding long-lived idle state that must be tiered and moved.</li>
+<li><strong>Agent governance is moving down the stack</strong>: from application-layer filters to K8s network policy, seccomp, runtime isolation, audit trails, and kill switches — microsegmentation and zero-trust ideas being re-applied to autonomous agents, with the same old accountability questions resurfacing in SRE.</li>
+<li><strong>CNCF and the AI foundations are converging</strong>: Kubernetes and Ray co-evolving into a unified stack is being driven jointly by Google and Anyscale — AI workload requirements (scheduling at 10k-node scale, GPU-direct transports) are now K8s roadmap items, not adjacent concerns.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/pytorch-2026.md"><code>digests/pytorch-2026.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/pytorch-2026.md"><code>prompts/pytorch-2026.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../swinog-42/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SwiNOG #42">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                SwiNOG #42
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../nanog-98/" class="md-footer__link md-footer__link--next" aria-label="Next: NANOG 98">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                NANOG 98
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

@@ -10,6 +10,8 @@ site:
 	@test -f site/index.html
 	@! sed 's/\x1b\[[0-9;]*m//g' zensical-build.log | grep -qE '^Error:' || (echo "Zensical reported build errors" && exit 1)
 	@rm -f zensical-build.log
+	@# Talk results would repeat their title as the breadcrumb; say the conference instead.
+	$(UV) run --group docs python scripts/search_paths.py site
 
 .PHONY: serve-site
 serve-site:

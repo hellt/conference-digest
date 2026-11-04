@@ -858,3 +858,38 @@ conferences:
     manual_fallback_url: "https://2026ocpglobal.fnvirtual.app/a/schedule/"
     discovered: 2026-11-02
     notes: "Open Compute Project's flagship summit (~4,000 attendees, San Jose): open datacenter hardware — AI cluster networking and photonics, rack and power, cooling, server and storage, hardware security and manageability. Full abstracts from the event app's data bundle; YouTube recordings on OCP's channel; specs and white papers linked as materials. Auto-discovered 2026-11-02 from series 'ocp'. end_date taken from the source."
+
+  # ZANOG has no series: every annual lands on a different site (standalone
+  # plenaries in Umhlanga and Stellenbosch, combined ZANOG@iWeek editions at
+  # iweek.org.za), and the events portal is registration shells only. Each
+  # edition is therefore added by hand, with the program page that year's
+  # site actually serves. 2024's combined edition and ZANOG25's program page
+  # are already gone; 2026 (ZANOG@iWeek, Irene) is the one with a live program.
+  - key: zanog-2026
+    name: "ZANOG@iWeek 2026"
+    type: operator
+    end_date: 2026-04-23
+    fetcher: zanog
+    program_url: "https://www.iweek.org.za/agenda"
+    manual_fallback_url: "https://www.iweek.org.za/agenda"
+    notes: "South African network operators at the combined ZANOG/iWeek event (Irene, Gauteng): routing security (RPKI/ASPA), network automation and observability, PON, DNS and IPv6 operations, submarine and terrestrial transport, plus iWeek's regulatory and business sessions in the same program. Titles, speakers and abstracts from the agenda's session pages; every session is recorded on ZANOG's YouTube channel (@nognetza). Added by hand 2026-11-04 — see the comment above for why there is no series. end_date taken from the agenda."
+
+  - key: nznog-2025
+    name: "NZNOG 2025"
+    type: operator
+    end_date: 2025-04-11
+    fetcher: nznog
+    program_url: "https://www.nznog.org/conferences/nznog-2025/talks.html"
+    manual_fallback_url: "https://www.nznog.org/conferences/nznog-2025/talks.html"
+    discovered: 2026-11-04
+    notes: "New Zealand network operators: IX and peering, DNS, routing security, optics, network automation. Titles, speakers and abstracts from the accepted-talks page; recordings are whole-day streams, so the links step adds no per-talk recording. Auto-discovered 2026-11-04 from series 'nznog'. end_date taken from the source."
+
+  - key: nznog-2026
+    name: "NZNOG 2026"
+    type: operator
+    end_date: 2026-03-27
+    fetcher: nznog
+    program_url: "https://www.nznog.org/conferences/nznog-2026/talks.html"
+    manual_fallback_url: "https://www.nznog.org/conferences/nznog-2026/talks.html"
+    discovered: 2026-11-04
+    notes: "New Zealand network operators: IX and peering, DNS, routing security, optics, network automation. Titles, speakers and abstracts from the accepted-talks page; recordings are whole-day streams, so the links step adds no per-talk recording. Auto-discovered 2026-11-04 from series 'nznog'. end_date taken from the source."

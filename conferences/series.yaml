@@ -453,6 +453,23 @@ series:
     manual_fallback_url_template: "https://www.ausnog.net/events/ausnog-{year}/program"
     notes: "Australian network operators: backbone and DC operations, IPv6, peering, optics, automation, network security. Titles, speakers, slide PDFs and YouTube recordings; no abstracts published."
 
+  # NZNOG: nznog.org hosts one site per conference, and the accepted-talks
+  # page (talks.html) lists every talk with its abstract — but it states no
+  # dates. The conference landing page one level up does (as day-of-week
+  # rows), so the fetcher's probe reads the dates there and discovery needs
+  # no end_date_hint despite the drifting months (March–May so far).
+  - series: nznog
+    enumerate: year
+    key_template: "nznog-{year}"
+    name_template: "NZNOG {year}"
+    type: operator
+    fetcher: nznog
+    start: 2025
+    lookahead: 2
+    program_url_template: "https://www.nznog.org/conferences/nznog-{year}/talks.html"
+    manual_fallback_url_template: "https://www.nznog.org/conferences/nznog-{year}/talks.html"
+    notes: "New Zealand network operators: IX and peering, DNS, routing security, optics, network automation. Titles, speakers and abstracts from the accepted-talks page; recordings are whole-day streams, so the links step adds no per-talk recording."
+
   # Peering Days: each edition gets its own site (<year>.peeringdays.eu) with
   # a static programme page — day headings, one block per slot, bold titles,
   # an "(Speaker: IXP - Name)" line and Download links for the decks. Only

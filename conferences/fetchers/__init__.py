@@ -22,6 +22,8 @@ from .arin import ArinFetcher
 from .lacnic import LacnicFetcher
 from .pets import PetsFetcher
 from .ausnog import AusnogFetcher
+from .nznog import NznogFetcher
+from .zanog import ZanogFetcher
 from .peeringdays import PeeringDaysFetcher
 from .moreip import MoreIpFetcher
 from .swinog import SwinogFetcher
@@ -56,6 +58,8 @@ FETCHERS = {
     "lacnic": LacnicFetcher(),
     "pets": PetsFetcher(),
     "ausnog": AusnogFetcher(),
+    "nznog": NznogFetcher(),
+    "zanog": ZanogFetcher(),
     "peeringdays": PeeringDaysFetcher(),
     "moreip": MoreIpFetcher(),
     "swinog": SwinogFetcher(),

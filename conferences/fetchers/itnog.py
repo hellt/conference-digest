@@ -30,7 +30,11 @@ class ItnogFetcher(Fetcher):
             if resp.status_code != 200 or looks_blocked(resp):
                 return self.manual(entry, f"blocked or unexpected status {resp.status_code}")
             resp.encoding = "utf-8"
-            text, count = self._parse(BeautifulSoup(resp.text, "html.parser"), url)
+            # Join slide hrefs against the final URL: the program page 301s
+            # /itnog<n> -> /itnog<n>/, and joining a relative "files/…" against
+            # the slash-less URL would drop the edition segment (ITNOG10's
+            # slide links came out as www.itnog.it/files/… and 404ed).
+            text, count = self._parse(BeautifulSoup(resp.text, "html.parser"), resp.url)
         except Exception as e:
             return self.manual(entry, f"fetch/parse error: {e}")
         return FetchResult(status=OK if count else NOT_PUBLISHED, program_text=text,

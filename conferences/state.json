@@ -139,8 +139,8 @@
   },
   "tnc-2026": {
     "status": "stalled",
-    "attempts": 4,
-    "last_attempt": "2026-11-02T18:09:13.000893+00:00",
+    "attempts": 6,
+    "last_attempt": "2026-11-04T15:01:30.212048+00:00",
     "last_error": "programme is a client-side app with no public data endpoint (programme page reachable; event ended 2026-06-12); open manual_fallback_url and paste the programme into the prompt"
   },
   "nogfi-2026-06": {
@@ -356,13 +356,13 @@
   "itnog-9": {
     "status": "published",
     "attempts": 0,
-    "last_attempt": "2026-11-02T18:09:13.000893+00:00",
+    "last_attempt": "2026-11-04T21:45:39.703379+00:00",
     "last_error": ""
   },
   "itnog-10": {
     "status": "published",
     "attempts": 0,
-    "last_attempt": "2026-11-02T18:09:13.000893+00:00",
+    "last_attempt": "2026-11-04T21:45:40.299887+00:00",
     "last_error": ""
   },
   "netnod-2025": {

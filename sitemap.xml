@@ -430,6 +430,51 @@
         <loc>https://tldr.netdevops.me/capacity-2026/presentation-the-deployment-gap-whats-holding-fibre-back/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/ai-native-infrastructure-automation-how-i-learned-to-stop-worrying-and-l/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/automating-config-deployment-with-netbox/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/beyond-sha-pinning-security-for-cicd-pipelines/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/crowdsec-and-mikrotik-integration/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/inspecting-your-kubernetes-cluster-with-ebpf-and-inspektor-gadget/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/modern-network-observability/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/opentelemetry-tracing-not-just-for-webapps/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/overengineering-my-personal-infrastructure-with-nixos/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/reactive-nix-enabling-functional-reactive-configuration-with-mgmt/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/reliable-network-backups-restore-with-ansible-idempotent-vendor-neutral/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/static-vs-dynamic-secrets-what-are-we-really-talking-about/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/the-day-two-problem-examining-decades-of-infrastructure-automation-evolu/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/watch-paint-dry-monitoring-what-doesnt-change/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/we-built-for-predictability-the-workloads-didnt-care/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/ciscolive-eu-2026/</loc>
       </url>
       <url>

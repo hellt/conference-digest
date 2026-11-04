@@ -106,7 +106,7 @@ def discovered_note(item: dict) -> str:
 def body_for(item: dict) -> str:
     key = item["key"]
     status = item["status"]
-    header = f"**{item['name']}**  \n`type: {item['type']}` · `status: {status}`\n\n"
+    header = f"**{item['name']}**  \n`status: {status}`\n\n"
     header += discovered_note(item)
 
     if status == "ready":

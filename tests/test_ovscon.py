@@ -163,7 +163,6 @@ class OvsconTests(TestCase):
         for year in (2024, 2025):
             entry = next(e for e in registry if e["key"] == f"ovscon-{year}")
             self.assertEqual(entry["fetcher"], "ovscon")
-            self.assertTrue((root / "conferences/prompt/types" / f"{entry['type']}.md").exists())
         self.assertEqual(fill(spec["program_url_template"], 2027, "year"),
                          "https://www.openvswitch.org/support/ovscon2027/")
         # Excluding already-discovered editions reproduces the initial scan.

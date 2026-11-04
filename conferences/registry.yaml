@@ -13,8 +13,6 @@
 # FIELDS
 #   key        Unique slug. Also the prompt/digest filename stem. No spaces.
 #   name       Human-readable conference + year.
-#   type       One of: academic | standards | vendor | operator | security
-#              Drives how the universal prompt tells Claude to read the program.
 #   start_date Optional ISO date the conference program began, for the site header.
 #   end_date   ISO date (YYYY-MM-DD) the event ended. Selection is based on this.
 #   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog | autocon | ovscon | ciscolive | ripe | nlnog | denog | gtc
@@ -45,7 +43,6 @@ conferences:
 
   - key: ciscolive-us-2025
     name: "Cisco Live US 2025 (San Diego)"
-    type: vendor
     start_date: 2025-06-08
     end_date: 2025-06-12  # https://blogs.cisco.com/customerexperience/cisco-live-2025-back-in-san-diego
     fetcher: ciscolive
@@ -55,7 +52,6 @@ conferences:
 
   - key: ciscolive-eu-2025
     name: "Cisco Live Europe 2025 (Amsterdam)"
-    type: vendor
     start_date: 2025-02-09
     end_date: 2025-02-14  # https://blogs.cisco.com/cisco-devnet/explore-cisco-ios-xe-automation-at-cisco-live-emea-2025
     fetcher: ciscolive
@@ -71,7 +67,6 @@ conferences:
 
   - key: nsdi-2025
     name: "NSDI '25 (22nd USENIX Symposium on Networked Systems Design and Implementation)"
-    type: academic
     start_date: 2025-04-28
     end_date: 2025-04-30
     fetcher: usenix
@@ -82,7 +77,6 @@ conferences:
 
   - key: usenix-security-2025
     name: "USENIX Security '25 (34th USENIX Security Symposium)"
-    type: academic
     start_date: 2025-08-13
     end_date: 2025-08-15
     fetcher: usenix
@@ -93,7 +87,6 @@ conferences:
 
   - key: srecon-2025-americas
     name: "SREcon25 Americas"
-    type: operator
     start_date: 2025-03-25
     end_date: 2025-03-27
     fetcher: usenix
@@ -111,7 +104,6 @@ conferences:
 
   - key: ietf-122
     name: "IETF 122 (Bangkok)"
-    type: standards
     start_date: 2025-03-15
     end_date: 2025-03-21
     fetcher: ietf
@@ -121,7 +113,6 @@ conferences:
 
   - key: ietf-123
     name: "IETF 123 (Madrid)"
-    type: standards
     start_date: 2025-07-19
     end_date: 2025-07-25
     fetcher: ietf
@@ -139,7 +130,6 @@ conferences:
 
   - key: kubecon-eu-2025
     name: "KubeCon + CloudNativeCon Europe 2025 (London)"
-    type: vendor
     start_date: 2025-04-01
     end_date: 2025-04-04
     fetcher: sched
@@ -149,7 +139,6 @@ conferences:
 
   - key: kubecon-na-2025
     name: "KubeCon + CloudNativeCon North America 2025"
-    type: vendor
     start_date: 2025-11-10
     end_date: 2025-11-13  # https://events.linuxfoundation.org/sponsor-cncf-events
     fetcher: sched
@@ -166,7 +155,6 @@ conferences:
 
   - key: sigcomm-2025
     name: "ACM SIGCOMM 2025 (Coimbra)"
-    type: academic
     start_date: 2025-09-08
     end_date: 2025-09-11
     fetcher: sigcomm
@@ -183,7 +171,6 @@ conferences:
 
   - key: netdev-0x1a
     name: "Netdev 0x1A (Rome)"
-    type: vendor
     start_date: 2026-07-13
     end_date: 2026-07-16
     fetcher: netdev
@@ -200,7 +187,6 @@ conferences:
 
   - key: gtc-2026
     name: "NVIDIA GTC 2026 (San Jose)"
-    type: vendor
     start_date: 2026-03-16
     end_date: 2026-03-19
     fetcher: gtc
@@ -217,7 +203,6 @@ conferences:
 
   - key: kubecon-eu-2026
     name: "KubeCon + CloudNativeCon Europe 2026"
-    type: vendor
     start_date: 2026-03-23
     end_date: 2026-03-26  # https://events.linuxfoundation.org/about/calendar/archive/
     fetcher: sched
@@ -228,7 +213,6 @@ conferences:
 
   - key: nsdi-2026
     name: "NSDI '26 (USENIX Symposium on Networked Systems Design and Implementation)"
-    type: academic
     end_date: 2026-04-30
     fetcher: usenix
     run_location: local
@@ -239,7 +223,6 @@ conferences:
 
   - key: ietf-124
     name: "IETF 124 (Montreal)"
-    type: standards
     start_date: 2025-11-01
     end_date: 2025-11-07
     fetcher: ietf
@@ -250,7 +233,6 @@ conferences:
 
   - key: ietf-125
     name: "IETF 125 (Shenzhen)"
-    type: standards
     start_date: 2026-03-14
     end_date: 2026-03-20
     fetcher: ietf
@@ -261,7 +243,6 @@ conferences:
 
   - key: ietf-126
     name: "IETF 126 (Vienna)"
-    type: standards
     start_date: 2026-07-18
     end_date: 2026-07-24
     fetcher: ietf
@@ -272,7 +253,6 @@ conferences:
 
   - key: ietf-127
     name: "IETF 127 (San Francisco)"
-    type: standards
     end_date: 2026-11-20
     fetcher: ietf
     program_url: "https://datatracker.ietf.org/meeting/127/agenda.json"
@@ -282,7 +262,6 @@ conferences:
 
   - key: ietf-128
     name: "IETF 128 (Kuala Lumpur)"
-    type: standards
     end_date: 2027-03-12
     fetcher: ietf
     program_url: "https://datatracker.ietf.org/meeting/128/agenda.json"
@@ -292,7 +271,6 @@ conferences:
 
   - key: ietf-129
     name: "IETF 129 (Berlin)"
-    type: standards
     end_date: 2027-07-23
     fetcher: ietf
     program_url: "https://datatracker.ietf.org/meeting/129/agenda.json"
@@ -302,7 +280,6 @@ conferences:
 
   - key: nanog-96
     name: "NANOG 96"
-    type: operator
     start_date: 2026-02-02
     end_date: 2026-02-04
     fetcher: nanog
@@ -312,7 +289,6 @@ conferences:
 
   - key: nanog-97
     name: "NANOG 97"
-    type: operator
     start_date: 2026-06-01
     end_date: 2026-06-03
     fetcher: nanog
@@ -322,7 +298,6 @@ conferences:
 
   - key: nanog-98
     name: "NANOG 98"
-    type: operator
     start_date: 2026-10-19
     end_date: 2026-10-21
     fetcher: nanog
@@ -332,7 +307,6 @@ conferences:
 
   - key: autocon-3
     name: "AutoCon 3 (Prague)"
-    type: operator
     start_date: 2025-05-28
     end_date: 2025-05-30
     fetcher: autocon
@@ -342,7 +316,6 @@ conferences:
 
   - key: autocon-4
     name: "AutoCon 4 (Austin)"
-    type: operator
     start_date: 2025-11-19
     end_date: 2025-11-21
     fetcher: autocon
@@ -352,7 +325,6 @@ conferences:
 
   - key: autocon-5
     name: "AutoCon 5 (Munich)"
-    type: operator
     start_date: 2026-06-10
     end_date: 2026-06-12
     fetcher: autocon
@@ -362,7 +334,6 @@ conferences:
 
   - key: ovscon-2024
     name: "Open vSwitch and OVN 2024 Fall Conference (Prague)"
-    type: vendor
     start_date: 2024-11-20
     end_date: 2024-11-21
     fetcher: ovscon
@@ -372,7 +343,6 @@ conferences:
 
   - key: ovscon-2025
     name: "Open vSwitch and OVN 2025 Fall Conference (Prague)"
-    type: vendor
     start_date: 2025-11-19
     end_date: 2025-11-20
     fetcher: ovscon
@@ -382,7 +352,6 @@ conferences:
 
   - key: ovscon-2026
     name: "Open vSwitch and OVN 2026 Fall Conference"
-    type: vendor
     end_date: 2026-11-04
     fetcher: ovscon
     program_url: "https://www.openvswitch.org/support/ovscon2026/"
@@ -392,7 +361,6 @@ conferences:
 
   - key: ripe-91
     name: "RIPE 91 (Bucharest)"
-    type: operator
     start_date: 2025-10-20
     end_date: 2025-10-24
     fetcher: ripe
@@ -402,7 +370,6 @@ conferences:
 
   - key: ripe-92
     name: "RIPE 92 (Edinburgh)"
-    type: operator
     start_date: 2026-05-18
     end_date: 2026-05-22
     fetcher: ripe
@@ -412,7 +379,6 @@ conferences:
 
   - key: nlnog-2025
     name: "NLNOG Day 2025 (Amsterdam)"
-    type: operator
     start_date: 2025-09-30
     end_date: 2025-09-30
     fetcher: nlnog
@@ -422,7 +388,6 @@ conferences:
 
   - key: nlnog-2026
     name: "NLNOG Day 2026 (Hilversum)"
-    type: operator
     start_date: 2026-09-04
     end_date: 2026-09-04
     fetcher: nlnog
@@ -432,7 +397,6 @@ conferences:
 
   - key: denog-17
     name: "DENOG 17 (Essen)"
-    type: operator
     start_date: 2025-11-09
     end_date: 2025-11-11
     fetcher: denog
@@ -442,7 +406,6 @@ conferences:
 
   - key: denog-18
     name: "DENOG 18 (Essen)"
-    type: operator
     start_date: 2026-11-15
     end_date: 2026-11-17
     fetcher: denog
@@ -452,7 +415,6 @@ conferences:
 
   - key: ripe-93
     name: "RIPE 93"
-    type: operator
     end_date: 2026-10-30
     fetcher: ripe
     program_url: "https://ripe93.ripe.net/programme/meeting-plan/"
@@ -462,7 +424,6 @@ conferences:
 
   - key: tnc-2026
     name: "TNC26 (GÉANT research networking conference)"
-    type: operator
     end_date: 2026-06-12
     fetcher: tnc
     program_url: "https://tnc26.geant.org/"
@@ -471,7 +432,6 @@ conferences:
 
   - key: nogfi-2026-06
     name: "nog.fi meeting 2026.06"
-    type: operator
     start_date: 2026-06-16
     end_date: 2026-06-17
     fetcher: indico
@@ -481,7 +441,6 @@ conferences:
 
   - key: nogfi-2026-11
     name: "nog.fi meeting 2026.11"
-    type: operator
     start_date: 2026-11-24
     end_date: 2026-11-24
     fetcher: indico
@@ -491,7 +450,6 @@ conferences:
 
   - key: grnog-20
     name: "GRNOG 20"
-    type: operator
     start_date: 2026-06-30
     end_date: 2026-06-30
     fetcher: indico
@@ -501,7 +459,6 @@ conferences:
 
   - key: ciscolive-us-2026
     name: "Cisco Live US 2026 (Las Vegas)"
-    type: vendor
     end_date: 2026-06-30
     fetcher: ciscolive
     program_url: "https://www.ciscolive.com/on-demand/on-demand-library.html"
@@ -511,7 +468,6 @@ conferences:
 
   - key: ciscolive-eu-2026
     name: "Cisco Live Europe 2026 (Amsterdam)"
-    type: vendor
     end_date: 2026-03-31
     fetcher: ciscolive
     program_url: "https://www.ciscolive.com/on-demand/on-demand-library.html"
@@ -521,7 +477,6 @@ conferences:
 
   - key: autocon-6
     name: "AutoCon 6"
-    type: operator
     end_date: 2026-11-20
     fetcher: autocon
     program_url: "https://networkautomation.forum/autocon6"
@@ -531,7 +486,6 @@ conferences:
 
   - key: ccs-2026
     name: "ACM CCS 2026"
-    type: academic
     end_date: 2026-11-18
     fetcher: ccs
     program_url: "https://www.sigsac.org/ccs/CCS2026/program/schedule.html"
@@ -541,7 +495,6 @@ conferences:
 
   - key: imc-2026
     name: "ACM IMC 2026"
-    type: academic
     end_date: 2026-10-16
     fetcher: imc
     program_url: "https://conferences.sigcomm.org/imc/2026/program/"
@@ -551,7 +504,6 @@ conferences:
 
   - key: conext-2025
     name: "ACM CoNEXT 2025"
-    type: academic
     end_date: 2025-12-02
     fetcher: conext
     program_url: "https://conferences.sigcomm.org/co-next/2025/partials/program.html"
@@ -561,7 +513,6 @@ conferences:
 
   - key: apricot-2026
     name: "APRICOT 2026 (Jakarta)"
-    type: operator
     end_date: 2026-02-12
     fetcher: apricot
     program_url: "https://api.apnic.net/web/v1/events"
@@ -571,7 +522,6 @@ conferences:
 
   - key: fosdem-2026
     name: "FOSDEM 2026"
-    type: vendor
     end_date: 2026-02-01
     fetcher: fosdem
     program_url: "https://fosdem.org/2026/schedule/xml"
@@ -581,7 +531,6 @@ conferences:
 
   - key: hacklu-2025
     name: "hack.lu 2025"
-    type: security
     end_date: 2025-10-24
     fetcher: pretalx
     program_url: "https://pretalx.com/hack-lu-2025/schedule/export/schedule.json"
@@ -591,7 +540,6 @@ conferences:
 
   - key: hacklu-2026
     name: "hack.lu 2026"
-    type: security
     end_date: 2026-10-23
     fetcher: pretalx
     program_url: "https://pretalx.com/hack-lu-2026/schedule/export/schedule.json"
@@ -601,7 +549,6 @@ conferences:
 
   - key: arin-56
     name: "ARIN 56 Public Policy and Members Meeting"
-    type: operator
     end_date: 2025-10-31
     fetcher: arin
     program_url: "https://www.arin.net/participate/meetings/ARIN56"
@@ -611,7 +558,6 @@ conferences:
 
   - key: arin-57
     name: "ARIN 57 Public Policy and Members Meeting"
-    type: operator
     end_date: 2026-04-22
     fetcher: arin
     program_url: "https://www.arin.net/participate/meetings/ARIN57"
@@ -621,7 +567,6 @@ conferences:
 
   - key: arin-58
     name: "ARIN 58 Public Policy and Members Meeting"
-    type: operator
     end_date: 2026-10-23
     fetcher: arin
     program_url: "https://www.arin.net/participate/meetings/ARIN58"
@@ -631,7 +576,6 @@ conferences:
 
   - key: lacnic-45
     name: "LACNIC 45"
-    type: operator
     end_date: 2026-05-28
     fetcher: lacnic
     program_url: "https://apievt.lacnic.net/wp-json/wp/v2"
@@ -641,7 +585,6 @@ conferences:
 
   - key: lacnic-46
     name: "LACNIC 46"
-    type: operator
     end_date: 2026-10-22
     fetcher: lacnic
     program_url: "https://apievt.lacnic.net/wp-json/wp/v2"
@@ -651,7 +594,6 @@ conferences:
 
   - key: pets-2026
     name: "PETS 2026 (Privacy Enhancing Technologies Symposium)"
-    type: academic
     end_date: 2026-07-25
     fetcher: pets
     program_url: "https://petsymposium.org/2026/paperlist.php"
@@ -661,7 +603,6 @@ conferences:
 
   - key: ausnog-2025
     name: "AusNOG 2025"
-    type: operator
     end_date: 2025-01-10
     fetcher: ausnog
     program_url: "https://www.ausnog.net/events/ausnog-2025/program"
@@ -671,7 +612,6 @@ conferences:
 
   - key: ausnog-2026
     name: "AusNOG 2026"
-    type: operator
     end_date: 2026-09-05
     fetcher: ausnog
     program_url: "https://www.ausnog.net/events/ausnog-2026/program"
@@ -681,7 +621,6 @@ conferences:
 
   - key: peeringdays-2026
     name: "Peering Days 2026"
-    type: operator
     end_date: 2026-03-25
     fetcher: peeringdays
     program_url: "https://2026.peeringdays.eu/programme/"
@@ -691,7 +630,6 @@ conferences:
 
   - key: moreip-2025
     name: "MORE-IP 2025"
-    type: operator
     end_date: 2025-05-29
     fetcher: moreip
     program_url: "https://more-ip-event.net/more-ip-2025/agenda/"
@@ -701,7 +639,6 @@ conferences:
 
   - key: moreip-2026
     name: "MORE-IP 2026"
-    type: operator
     end_date: 2026-05-29
     fetcher: moreip
     program_url: "https://more-ip-event.net/more-ip-2026/agenda/"
@@ -711,7 +648,6 @@ conferences:
 
   - key: moreip-2027
     name: "MORE-IP 2027"
-    type: operator
     end_date: 2027-05-29
     fetcher: moreip
     program_url: "https://more-ip-event.net/more-ip-2027/agenda/"
@@ -721,7 +657,6 @@ conferences:
 
   - key: swinog-41
     name: "SwiNOG #41"
-    type: operator
     end_date: 2026-04-28
     fetcher: swinog
     program_url: "https://www.swinog.ch/meetings/swinog41/"
@@ -731,7 +666,6 @@ conferences:
 
   - key: swinog-42
     name: "SwiNOG #42"
-    type: operator
     end_date: 2026-10-21
     fetcher: swinog
     program_url: "https://www.swinog.ch/meetings/swinog42/"
@@ -741,7 +675,6 @@ conferences:
 
   - key: capacity-2026
     name: "Capacity Europe 2026"
-    type: vendor
     end_date: 2026-10-15
     fetcher: capacity
     program_url: "https://www.capacityeurope.com/agenda/"
@@ -751,7 +684,6 @@ conferences:
 
   - key: netuk-2
     name: "NetUK2 (The Brewery)"
-    type: operator
     end_date: 2025-07-08
     fetcher: indico
     program_url: "https://indico.netuk.org/event/2/"
@@ -761,7 +693,6 @@ conferences:
 
   - key: netuk-3
     name: "NetUK3 (The Brewery)"
-    type: operator
     end_date: 2026-07-07
     fetcher: indico
     program_url: "https://indico.netuk.org/event/3/"
@@ -771,7 +702,6 @@ conferences:
 
   - key: dknog-16
     name: "DKNOG16 (Scandic Copenhagen)"
-    type: operator
     end_date: 2026-03-06
     fetcher: indico
     program_url: "https://dknog16.dknog.dk/"
@@ -781,7 +711,6 @@ conferences:
 
   - key: itnog-9
     name: "ITNOG9"
-    type: operator
     end_date: 2025-05-20
     fetcher: itnog
     program_url: "https://www.itnog.it/itnog9"
@@ -791,7 +720,6 @@ conferences:
 
   - key: itnog-10
     name: "ITNOG10"
-    type: operator
     end_date: 2026-04-21
     fetcher: itnog
     program_url: "https://www.itnog.it/itnog10"
@@ -801,7 +729,6 @@ conferences:
 
   - key: netnod-2025
     name: "Netnod Tech Meeting 2025"
-    type: operator
     end_date: 2025-10-09
     fetcher: netnod
     program_url: "https://www.netnod.se/netnod-tech-meeting-2025"
@@ -811,7 +738,6 @@ conferences:
 
   - key: netnod-2026
     name: "Netnod Tech Meeting 2026"
-    type: operator
     end_date: 2026-10-06
     fetcher: netnod
     program_url: "https://www.netnod.se/netnod-tech-meeting-2026"
@@ -821,7 +747,6 @@ conferences:
 
   - key: cfgmgmtcamp-2026
     name: "CfgMgmtCamp Ghent 2026"
-    type: vendor
     end_date: 2026-02-04
     fetcher: pretalx
     program_url: "https://cfp.cfgmgmtcamp.be/ghent2026/schedule/export/schedule.json"
@@ -831,7 +756,6 @@ conferences:
 
   - key: moreip-2028
     name: "MORE-IP 2028"
-    type: operator
     end_date: 2028-05-29
     fetcher: moreip
     program_url: "https://more-ip-event.net/more-ip-2028/agenda/"
@@ -841,7 +765,6 @@ conferences:
 
   - key: ocp-2025
     name: "OCP Global Summit 2025"
-    type: vendor
     end_date: 2025-10-16
     fetcher: ocp
     program_url: "https://2025ocpglobal.fnvirtual.app/a/schedule/"
@@ -851,7 +774,6 @@ conferences:
 
   - key: ocp-2026
     name: "OCP Global Summit 2026"
-    type: vendor
     end_date: 2026-10-15
     fetcher: ocp
     program_url: "https://2026ocpglobal.fnvirtual.app/a/schedule/"

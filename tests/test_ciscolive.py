@@ -221,7 +221,6 @@ class CiscoLiveTests(TestCase):
             entry = next(e for e in registry if e["key"] == key)
             spec = next(s for s in specs if s["series"] == f"ciscolive-{region}")
             self.assertEqual(entry["fetcher"], "ciscolive")
-            self.assertTrue((root / f"conferences/prompt/types/{entry['type']}.md").exists())
             self.assertGreaterEqual(latest_ident(keys, spec), 2026)
             self.assertEqual(fill(spec["key_template"], 2027, "year"), f"ciscolive-{region}-2027")
             self.assertTrue(all(c > latest_ident(keys, spec)

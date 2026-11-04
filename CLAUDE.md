@@ -107,31 +107,28 @@ pipeline.
    `MANUAL_FALLBACK` and must prefer returning zero items over returning wrong
    items — `attempts >= STALL_THRESHOLD` (4) then flags `stalled` so a broken
    selector surfaces instead of producing a bad digest.
-7. **Every conference `type` needs `conferences/prompt/types/<type>.md`.**
-   `build_prompt()` raises if it's missing. Types today: `academic`,
-   `standards`, `vendor`, `operator`, `security`.
-8. **Every `fetcher` value must be registered** in
+7. **Every `fetcher` value must be registered** in
    `conferences/fetchers/__init__.py::FETCHERS`. Today: `usenix`, `ietf`,
    `sched`, `sigcomm`, `netdev`, `nanog`, `autocon`, `ovscon`, `ciscolive`,
    `ripe`, `nlnog`, `denog`, `gtc`, `ocp`, plus the generic `pretalx` and
    `indico`.
-9. **`run_location: local`** means the source bot-blocks datacenter IPs. In CI
+8. **`run_location: local`** means the source bot-blocks datacenter IPs. In CI
    that edition is skipped without a fetch attempt (status `local_required`) and
    the issue tells the user to run it from their own machine. `--conference`
    overrides this, so a local forced run does fetch.
-10. **The prompt is composed, not stored.** `prompts/<key>.md` =
-    run-note header + `prompt/base.md` with `{TYPE_GUIDANCE}` and the
-    `{CONFERENCE} {TYPE} {SOURCE_URL} {KEY} {DATE} {PROGRAM_TEXT}` slots filled.
-    Edit `base.md` / `types/*.md`, never a generated `prompts/*.md` — except in
+9. **The prompt is composed, not stored.** `prompts/<key>.md` =
+    run-note header + `prompt/base.md` with the
+    `{CONFERENCE} {SOURCE_URL} {KEY} {DATE} {PROGRAM_TEXT}` slots filled.
+    Edit `base.md`, never a generated `prompts/*.md` — except in
     the manual-paste path (below).
-11. **Digests start with the HTML-comment metadata block** (`conference`,
-    `type`, `source_url`, `generated`, `registry_key`, plus `written_by` on
+10. **Digests start with the HTML-comment metadata block** (`conference`,
+    `source_url`, `generated`, `registry_key`, plus `written_by` on
     bot-written digests, which the site uses for attribution), then `##` tier sections
     (Core / Adjacent / Wildcard) and a final `## Themes`. GitHub-flavored
     markdown only. Each `###` pick heading is the program item's title, and the
     line under it is the code-built `**Links:**` row (see Links rows above);
     the writer adds no links of its own beyond exact program URLs.
-12. **Discovery only ever appends, and only what it confirmed.**
+11. **Discovery only ever appends, and only what it confirmed.**
     `discover_editions.py` writes new blocks at the end of `registry.yaml` and
     re-parses the file afterwards; if the result doesn't contain exactly the
     expected keys it restores the original and fails. It never edits or removes
@@ -139,18 +136,18 @@ pipeline.
     written only after `probe()` confirmed the source has it AND `fetch()`
     returned `OK` — except where a fetcher sets `probe_is_sufficient` (IETF,
     whose probe asks datatracker's meeting API directly).
-13. **A series' `key_template` must match the keys already in the registry.**
+12. **A series' `key_template` must match the keys already in the registry.**
     Discovery reads it backwards to find where the series is up to
     (`ietf-{n}` -> `ietf-123` -> next is 124). A template that stops matching
     makes every edition look missing; `MAX_GAP` (5) bounds the damage, but the
     real fix is keeping template and keys in step. This is invariant 2 again:
     don't rename keys.
-14. **A discovered `end_date` may be an estimate.** Discovery prefers what the
+13. **A discovered `end_date` may be an estimate.** Discovery prefers what the
     source states (IETF's meeting API; dates scanned off the program page) and
     falls back to the series' `end_date_hint`. Entries it wrote carry
     `discovered: <date>`, and the issue body asks for a confirming glance.
     Editing that date by hand afterwards is expected and safe.
-15. **Never invent program content.** If a fetch or enrichment fails, write from
+14. **Never invent program content.** If a fetch or enrichment fails, write from
     the abstract and say so ("from abstract only"). Enrichment deepens a
     write-up; it never changes selection or tier. A link that is not in the
     program text is only added by `conferences/links.py`, from the talk's own
@@ -192,7 +189,9 @@ build), builds `docs/companies/`
 (one page per employer in `build_site.py`'s `EMPLOYER_VARIANTS` map, listing
 every pick with a speaker from that employer — the Employers tab) and writes the
 Conferences tracker. Style lives in `docs/stylesheets/extra.css` and `overrides/`,
-adapted from containerlab.dev. Never edit `docs/posts/`, `docs/<key>/` or
+adapted from containerlab.dev. The tracker carries a client-side name filter
+(`docs/javascripts/conf-filter.js`), styled in `extra.css`. Never edit
+`docs/posts/`, `docs/<key>/` or
 `docs/companies/` — edit the digest.
 
 **Search** indexes each pick once, from its talk page. A digest post is found
@@ -225,7 +224,7 @@ generated one. State stays `manual`; the digest file is what closes the loop.
 **Add a conference edition:** you usually shouldn't have to — if the conference
 recurs, add it to `conferences/series.yaml` once and discovery files every
 future edition itself. Do it by hand (copy a block in
-`conferences/registry.yaml`, setting `key`, `name`, `type`, `end_date`,
+`conferences/registry.yaml`, setting `key`, `name`, `end_date`,
 `fetcher`, `program_url`, `manual_fallback_url`, optional `run_location` and
 `notes`) for a one-off event, or to correct something discovery got wrong.
 Adding a new *source site* also means a new fetcher module plus a `FETCHERS`
@@ -255,9 +254,12 @@ picked out. Bot commits are `digest run: update prompts and state (<date>)`.
   agenda. Their prompts are now real meeting programs, so picks that were never
   on that meeting's agenda match no program item and get no links row.
 - `conferences/prompt.md` is a deprecated stub; the live prompt is
-  `conferences/prompt/base.md` + `types/`.
+  `conferences/prompt/base.md`.
+- Digests and prompts written before the conference `type` was dropped carry a
+  `type:` line in their metadata. Nothing reads it now; new digests don't have
+  it.
 - `digests/sigcomm-2025.md` uses `---` front matter and `digests/ietf-123.md` a
-  non-standard metadata set; both predate invariant 11. New digests follow 11.
+  non-standard metadata set; both predate invariant 10. New digests follow 10.
 - The `generate_digest_prompt.py` module docstring describes only
   pending/published; the code also writes `waiting`, `manual`, `stalled`, and
   `local_required`.

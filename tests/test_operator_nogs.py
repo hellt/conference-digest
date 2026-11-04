@@ -234,6 +234,4 @@ class OperatorIntegrationTests(TestCase):
             self.assertEqual(candidates(spec, keys, date(2026, 11, 1))[0], future)
             self.assertEqual(fill(spec["key_template"], future, mode), f"{name}-{future}")
             for e in (e for e in registry if e["fetcher"] == name):
-                self.assertEqual(e["type"], "operator")
-                self.assertTrue((root / "conferences/prompt/types/operator.md").exists())
                 self.assertLessEqual(e.get("start_date", e["end_date"]), e["end_date"])

@@ -45,7 +45,6 @@ REGISTRY = ROOT / "conferences" / "registry.yaml"
 STATE = ROOT / "conferences" / "state.json"
 PROMPT_DIR = ROOT / "conferences" / "prompt"
 PROMPT_BASE = PROMPT_DIR / "base.md"
-PROMPT_TYPES = PROMPT_DIR / "types"
 PROMPTS_DIR = ROOT / "prompts"
 DIGESTS_DIR = ROOT / "digests"
 RUN_SUMMARY = ROOT / "run_summary.json"
@@ -81,26 +80,9 @@ def parse_date(s) -> date:
 
 
 def build_prompt(entry: dict, program_text: str, source_url: str) -> str:
-    # Compose base.md with the one type-block relevant to this conference.
-    # Each conference type (academic/standards/vendor/operator/security) has its
-    # own reading-guidance file under prompt/types/; only the relevant one is
-    # injected, keeping the prompt focused instead of carrying all five blocks.
-    conf_type = entry["type"]
-    type_file = PROMPT_TYPES / f"{conf_type}.md"
-    if not type_file.exists():
-        available = sorted(p.stem for p in PROMPT_TYPES.glob("*.md"))
-        raise FileNotFoundError(
-            f"no prompt type-block for type '{conf_type}' "
-            f"(entry '{entry['key']}'); expected {type_file}. "
-            f"Available types: {available}"
-        )
-    type_guidance = type_file.read_text(encoding="utf-8").strip()
-
     template = PROMPT_BASE.read_text(encoding="utf-8")
     body = (
-        template.replace("{TYPE_GUIDANCE}", type_guidance)
-        .replace("{CONFERENCE}", entry["name"])
-        .replace("{TYPE}", conf_type)
+        template.replace("{CONFERENCE}", entry["name"])
         .replace("{SOURCE_URL}", source_url)
         .replace("{KEY}", entry["key"])
         .replace("{DATE}", date.today().isoformat())
@@ -183,7 +165,6 @@ def main() -> int:
         base_rec = {
             "key": key,
             "name": entry["name"],
-            "type": entry["type"],
             "run_location": run_location,
             "program_url": entry.get("program_url", ""),
             "manual_url": entry.get("manual_fallback_url", ""),

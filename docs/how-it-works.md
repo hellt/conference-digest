@@ -18,7 +18,7 @@ flowchart LR
 
 1. **Discover.** A weekly job checks each recurring conference for new editions and adds the confirmed ones to the registry.
 2. **Fetch.** After an event ends, a fetcher reads its published program: papers, talks, or drafts, with abstracts and links. Some sites block cloud IP addresses. For these sites, the owner runs the fetch from a laptop.
-3. **Compose.** The program goes into a prompt with the reader profile, guidance for the conference type, and the output rules.
+3. **Compose.** The program goes into a prompt with the reader profile, reading guidance, and the output rules.
 4. **Write.** [ToFaRev](https://github.com/hellt/tofarev) runs the prompt in GitHub Actions with `zai-org/GLM-5.3` on Nebius Token Factory. Large programs go through stages. First, batches of the program are shortlisted in parallel. Then the final picks are selected. Last, the digest is written from the selected items. ToFaRev reads the papers and slides that the picks link to, and gives their text to the writer. The writer can also fetch each pick's talk page.
 5. **Check.** Code, not the model, does the last checks. It removes any link that is not in the program and flags headings that do not match a program item. It also confirms that every tier is present.
 6. **Link.** Code, not the model, adds a row of links to every pick: the abstract page, the paper, the slides and the recording. They come from the program and the talk's own page. A recording found by search is added only when its title, its channel and its upload date all match the talk and the event.

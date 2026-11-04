@@ -131,21 +131,7 @@ Without an entry, a search result must name the key's first segment (for example
 
 If a conference keeps its decks under a URL that holds nothing else, such as NANOG's `storage.googleapis.com/site-media-prod/meetings/`, add it to `DECK_URLS` in the same file. A PDF there is then filed as Slides, whatever its link text says.
 
-## 4. Choose its type
-
-`type` picks the reading guidance that goes into the prompt:
-
-| Type | For |
-| --- | --- |
-| `academic` | Peer-reviewed papers (SIGCOMM, NSDI) |
-| `standards` | Standards work (IETF) |
-| `vendor` | Vendor and community conferences (KubeCon, Netdev) |
-| `operator` | Network operators (NANOG, RIPE, SREcon) |
-| `security` | Security research (USENIX Security) |
-
-A new type needs `conferences/prompt/types/<type>.md`. The prompt build fails without it.
-
-## 5. Add the series, or one edition
+## 4. Add the series, or one edition
 
 **A recurring conference gets a series** in `conferences/series.yaml`. Discovery then adds each new edition by itself:
 
@@ -154,7 +140,6 @@ A new type needs `conferences/prompt/types/<type>.md`. The prompt build fails wi
     enumerate: ordinal            # or: year
     key_template: "example-{n}"   # must match keys already in registry.yaml
     name_template: "Example {n}"
-    type: operator
     fetcher: example
     lookahead: 2
     start: 41                     # first edition, for a brand-new series
@@ -172,7 +157,7 @@ python3 scripts/discover_editions.py --dry-run --series example
 
 **A one-off event, or a past edition you want now**, gets a block in `conferences/registry.yaml`. Use the same fields, but with a concrete `key`, `name`, `end_date`, `program_url` and `manual_fallback_url`. Never rename a key once it has a prompt, an issue or a digest.
 
-## 6. Try it locally
+## 5. Try it locally
 
 ```bash
 pip install -r requirements.txt
@@ -187,7 +172,7 @@ Check that titles, speakers and abstracts look right, and that the links resolve
 python3 scripts/enrich_links.py example-41 --digest /tmp/scratch-digest.md
 ```
 
-## 7. Ship it
+## 6. Ship it
 
 1. Commit the fetcher, its `FETCHERS` entry, the series or registry block, any `CHANNELS`/`DISPLAY` entry, and a line in the README's fetcher notes. Open a PR.
 2. After merging, run **Conference Digest** from the Actions tab with `conference: <key>`. For `run_location: local`, run `generate_digest_prompt.py --conference <key>` on your machine and push `prompts/<key>.md` instead.
@@ -201,10 +186,9 @@ Adding NANOG took these steps:
 1. **Source check.** The agenda (`nanog.org/events/nanog-<n>/agenda/`) has every session, with a talk page, presenters and the full abstract. Up to NANOG 96 it also lists the YouTube recording and the slide files; from NANOG 97 those are only on each talk page. nanog.org blocks all automated clients, so the owner approved reading it through Tavily Extract.
 2. **Fetcher.** `conferences/fetchers/nanog.py` reads the agenda in one Tavily request and keeps sessions with an abstract, recording or slides, dropping meals, registration and socials. It then reads the talk pages that still lack slides or a recording, 20 per request. The day headers give the dates, so `probe()` is enough for discovery (`probe_is_sufficient = True`).
 3. **Links.** NANOG got entries in `CHANNELS`/`DISPLAY` (its YouTube channel is "NANOG"). Its slide bucket went into `DECK_URLS`.
-4. **Type.** `operator`, which already exists.
-5. **Series and editions.** The series `nanog` uses `enumerate: ordinal` and `key_template: "nanog-{n}"`. NANOG 96, 97 and 98 went into the registry by hand. Discovery adds NANOG 99 once its agenda is published.
-6. **Secrets and workflow.** `TAVILY_API_KEY` was added to the scan's discovery and prompt-generation steps.
-7. **Local trial.** `generate_digest_prompt.py --conference nanog-98` read 53 talks, 44 with recordings and 45 with slides. `enrich_links.py` on a scratch digest added Abstract, Slides and Recording links. For a talk with no recording in the program, it found and verified the upload on NANOG's YouTube channel.
+4. **Series and editions.** The series `nanog` uses `enumerate: ordinal` and `key_template: "nanog-{n}"`. NANOG 96, 97 and 98 went into the registry by hand. Discovery adds NANOG 99 once its agenda is published.
+5. **Secrets and workflow.** `TAVILY_API_KEY` was added to the scan's discovery and prompt-generation steps.
+6. **Local trial.** `generate_digest_prompt.py --conference nanog-98` read 53 talks, 44 with recordings and 45 with slides. `enrich_links.py` on a scratch digest added Abstract, Slides and Recording links. For a talk with no recording in the program, it found and verified the upload on NANOG's YouTube channel.
 
 ## Redoing a digest when better material arrives
 

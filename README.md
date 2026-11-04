@@ -138,7 +138,9 @@ right-hand scroll tracking, theme persistence and instant navigation use
 Zensical’s native components.
 `scripts/build_site.py` turns every `digests/<key>.md` into a post (the digest
 text is unchanged; tiers and picks get markup for styling) and writes the
-Conferences tracker. `site.yml` builds it on PRs and publishes it to the
+Conferences tracker — a table of every tracked edition, newest first, with a
+client-side name filter (`docs/javascripts/conf-filter.js`). `site.yml` builds
+it on PRs and publishes it to the
 `gh-pages` branch with `peaceiris/actions-gh-pages` on `main`.
 
 ```bash
@@ -164,8 +166,7 @@ conferences/
   registry.yaml      # the conferences (one entry per edition/year)
   prompt/            # the universal digest prompt, composed at build time
     base.md          #   persona, tiers, item format, rules, output (slots:
-                     #   {CONFERENCE} {TYPE} {TYPE_GUIDANCE} {PROGRAM_TEXT} ...)
-    types/*.md       #   per-type reading guidance, one injected per conference
+                     #   {CONFERENCE} {SOURCE_URL} {KEY} {DATE} {PROGRAM_TEXT})
   state.json         # auto-managed bookkeeping (created on first run)
   links.py           # links rows: program links, talk pages, verified search
   fetchers/

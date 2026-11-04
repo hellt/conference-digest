@@ -70,6 +70,9 @@
         <loc>https://tldr.netdevops.me/archive/2025/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/archive/2025/page/2/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/archive/2026/</loc>
       </url>
       <url>
@@ -1310,6 +1313,66 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/zte/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/an-empirical-analysis-of-the-nostr-social-network/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/araoptical-system-and-testbed-for-long-range-high-capacity-fsoc-in-rural/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/asni-redefining-the-interface-between-smartnics-and-applications/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/demystifying-performance-of-ebpf-network-applications/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/exp-pifo-scalable-and-efficient-programmable-packet-scheduling/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/inside-job-defending-kubernetes-clusters-against-network-misconfiguratio/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/moonem-high-precision-path-property-emulation-using-dpdk/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/morphos-an-extensible-networked-operating-system/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/netfridges-enabling-dynamic-frequency-scaling-on-network-switches-throug/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/scalable-and-interpretable-overlay-network-checking-via-ensemble-verific/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/secure-and-efficient-rdma-nic-cryptography-offloading-for-memory-disaggr/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/sepanet-towards-practical-large-scale-full-system-simulation-for-systems/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/spectracert-a-hierarchical-system-for-dynamic-spectrum-license-enforceme/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/switchnic-tightly-coupled-heterogeneous-platform-to-accelerate-network-f/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/taurus-towards-a-high-performance-and-generic-congestion-control-framewo/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/the-new-pareto-frontier-of-cloud-routing-high-availability-precise-contr/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/transient-forwarding-anomalies-and-how-to-find-them/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/tsn-ray-gauging-tas-and-psfp-delays-of-tsn-switches-for-predictable-dete/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/conext-2025/unveiling-ipv6-scanning-dynamics/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/conferences/</loc>

@@ -6,7 +6,7 @@ generated: 2026-09-14
 registry_key: kubecon-eu-2026
 -->
 
-# KubeCon + CloudNativeCon Europe 2026 — Digest
+# KubeCon + CloudNativeCon Europe 2026
 
 23 picks from a 569-session program (Amsterdam, 22–27 March 2026).
 

@@ -6,7 +6,7 @@ generated: 2026-06-08
 registry_key: kubecon-na-2025
 -->
 
-# KubeCon + CloudNativeCon North America 2025 — Digest
+# KubeCon + CloudNativeCon North America 2025
 
 A triaged set of sessions for a PM working across physical DC/WAN networking, cloud-native networking, network security, and identity. The published program provides titles, speakers, and abstracts only — no per-session paper/slide/recording links — so every write-up below is grounded in the abstract and is marked accordingly. Pure sponsor slots, 101 sessions, and content-free "we adopted X" talks were dropped. Picks are deliberately tight.
 

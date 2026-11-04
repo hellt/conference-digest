@@ -7,7 +7,7 @@ registry_key: conext-2025
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# ACM CoNEXT 2025 — Digest
+# ACM CoNEXT 2025
 
 A note on sources: all ACM Digital Library page links returned HTTP 403 to the fetcher, so every write-up below is grounded in the conference program's abstracts only. Depth flags reflect that.
 

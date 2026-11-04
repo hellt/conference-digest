@@ -7,7 +7,7 @@ registry_key: arin-57
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# ARIN 57 Public Policy and Members Meeting — Digest
+# ARIN 57 Public Policy and Members Meeting
 
 ARIN 57 is a registry policy and governance meeting, not a research conference, so the yield for a networking PM is different in kind than a NANOG or SIGCOMM: the value here is routing-security operations (RPKI/ASPA tooling and adoption data), IPv6-only transition practice from large research networks, registry integrity/fraud operations, and the policy currents that will shape IPv4/IPv6 availability over the next few years. All selected items below had full slide text extracted, so write-ups are grounded in the actual deck content rather than titles alone.
 

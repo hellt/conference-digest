@@ -6,7 +6,7 @@ generated: 2026-08-30
 registry_key: ietf-122
 -->
 
-# IETF 122 (Bangkok) — Digest
+# IETF 122 (Bangkok)
 
 Program source is the datatracker documents API, filtered to a curated set of 26 working groups touching cloud-native networking, network security, and identity. As with any standards meeting, the unit of work is the Internet-Draft, not the session — sessions are thin, drafts carry the substance. All write-ups below are grounded in draft abstracts only; no PDF/page links were available in the program text to enrich from, so treat "What/How" as abstract-level, not full-text analysis. `draft-ietf-*` means a working group has adopted the work (it carries real weight); a bare `draft-<author>-*` is an individual submission that may or may not go anywhere — noted per item where it matters. Datatracker links are added per draft (`https://datatracker.ietf.org/doc/<name>/`) since the program text itself carried no reference links.
 

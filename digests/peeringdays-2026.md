@@ -7,7 +7,7 @@ registry_key: peeringdays-2026
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# Peering Days 2026 — Digest
+# Peering Days 2026
 
 A small operator program (IXP updates, RPKI/routing security, optics, fabric design) with an unusual amount of real technical slide content despite most talks publishing no abstract. Picks below are grounded in the extracted slide text where available; the Krill workshop is the only selected item with nothing but its abstract. No `page:` links existed in the program, so no further enrichment was possible.
 

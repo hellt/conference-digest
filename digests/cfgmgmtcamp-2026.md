@@ -7,7 +7,7 @@ registry_key: cfgmgmtcamp-2026
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# CfgMgmtCamp Ghent 2026 — Digest
+# CfgMgmtCamp Ghent 2026
 
 CfgMgmtCamp is a configuration-management / infrastructure-automation community conference, not a networking conference — so the network content below is the fraction of the program that speaks directly to network automation, cloud-native networking, and network security. Of the 15 pre-selected items, 14 made the cut; the embedded-init talk (crinit) was passed over as too niche for your focus. Note on sourcing: talk pages only repeat the abstract plus speaker bios (several also list slides the pipeline did not extract), so every write-up below is grounded in the abstract and speaker affiliation only — treat the "How" sections as the speakers' stated approach, not verified results.
 

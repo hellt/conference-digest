@@ -6,7 +6,7 @@ generated: 2026-08-30
 registry_key: usenix-security-2025
 -->
 
-# USENIX Security '25 (34th USENIX Security Symposium) — Digest
+# USENIX Security '25 (34th USENIX Security Symposium)
 
 Program source is the expanded technical-sessions schedule (titles, authors, and full abstracts; no PDF/slide/recording links were present in the pasted program text, so no Links field is included below — every write-up is grounded in the abstract only). USENIX Security is enormous (380+ accepted papers plus Enigma industry talks across three days); this is a tight cut toward the PM's stated interests — physical DC/WAN networking, cloud-native networking, network security, and identity/authentication — with most of the program (ML/AI privacy, blockchain internals, mobile-app privacy measurement, hardware fault injection unrelated to networking) left out.
 

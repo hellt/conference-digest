@@ -6,7 +6,7 @@ generated: 2026-08-30
 registry_key: kubecon-eu-2025
 -->
 
-# KubeCon + CloudNativeCon Europe 2025 (London) — Digest
+# KubeCon + CloudNativeCon Europe 2025 (London)
 
 A triaged set of sessions for a PM working across physical DC/WAN networking, cloud-native networking, network security, and identity. The published program provides titles, speakers, and abstracts only — no per-session paper/slide/recording links — so every write-up below is grounded in the abstract and is marked accordingly. Sponsor pitches, cloakroom/logistics entries, DEI/community programming, and content-free "we adopted X" talks were dropped. Picks are deliberately tight given the size of the program (500+ sessions across the main conference and ~15 co-located day events).
 

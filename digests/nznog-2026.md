@@ -7,7 +7,7 @@ registry_key: nznog-2026
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# NZNOG 2026 — Digest for a networking/identity PM
+# NZNOG 2026
 
 A small, operator-heavy program (22 talks). Notable: none of the items carry paper or slide links in the material provided, so every write-up below is based on the program abstracts only. Tiers reflect the PM's core interests (physical DC/optics, cloud-native networking, network security, identity) with an operator-program lens: postmortems and adoptable tooling up-ranked, pitches down-ranked.
 

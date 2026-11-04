@@ -6,7 +6,7 @@ generated: 2026-09-03
 registry_key: netdev-0x1a
 -->
 
-# Netdev 0x1A Digest (Rome, 13-16 July 2026)
+# Netdev 0x1A (Rome, 13-16 July 2026)
 
 Netdev is the Linux kernel networking community's own conference, so the "vendor pitch" problem barely exists here — the filter instead is between mainline-relevant engineering and one-off experiments. This cycle is dominated by the AI backend fabric: RDMA multipathing in production at OpenAI/Microsoft scale, SRv6 as the host-controlled path primitive, pluggable congestion control, and encryption sliding down the stack into hardware (PSP in v6.18, MACsec under RoCE, kTLS on DPUs). The second big thread is the DPU/host split becoming a Linux `netdev` contract problem, including how Kubernetes learns to schedule on it.
 

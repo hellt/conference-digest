@@ -7,6 +7,8 @@ registry_key: nanog-96
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
+# NANOG 96
+
 ## Core
 
 ### Keynote: Beyond the Chip: The Unprecedented Infrastructure Demands of AI and HPC

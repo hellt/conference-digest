@@ -466,6 +466,27 @@ run.
   linked in the program; specs/white papers/repos are filed as materials.
   The series covers the San Jose Global Summit only — EMEA and APAC editions
   sit on their own fnVirtual hosts and can be hand-added if wanted.
+- **MLSys** runs a NeurIPS-style virtual site per edition
+  (`mlsys.org/virtual/<year>/`): the papers index lists every accepted paper
+  (orals included) and each paper page carries authors, the full abstract,
+  an OpenReview link (page+pdf; the virtual-site page is the fallback) and a
+  SlidesLive embed that maps straight to a recording URL. The invited talks
+  are read from their own list first, before the ~170 paper pages, with a
+  polite delay between requests. The conference page's "May 18th - 22nd,
+  2026" dates need the probe's own regex; earlier editions state dates in
+  other formats, so the series carries an `end_date_hint` and a discovered
+  date may need the expected confirming glance.
+- **Sessionize** (PyTorch Conference): the Linux Foundation's event page
+  links its Sessionize schedule, which publishes a clean per-event markdown
+  view that needs no key. The sessionize event id is new each edition and the
+  LF URL stays the same, so the fetcher finds the id on the page and checks
+  the schedule's event year against the registry key before trusting it — a
+  page still showing the previous edition is `not_published` for the next
+  one, which is also what keeps discovery from adding an edition from a
+  stale page. Talks are sessions with a named speaker and a description;
+  registration, meals and breaks are dropped by title and shape. Recordings
+  are not in the schedule — the links step finds them on the PyTorch
+  YouTube channel.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

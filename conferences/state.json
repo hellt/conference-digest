@@ -412,5 +412,23 @@
     "attempts": 0,
     "last_attempt": "2026-11-04T10:19:11.451874+00:00",
     "last_error": ""
+  },
+  "mlsys-2025": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-04T14:16:31.333769+00:00",
+    "last_error": ""
+  },
+  "mlsys-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-04T14:17:52.359261+00:00",
+    "last_error": ""
+  },
+  "pytorch-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-04T14:15:35.075701+00:00",
+    "last_error": ""
   }
 }

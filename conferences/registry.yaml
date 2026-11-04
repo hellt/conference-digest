@@ -815,3 +815,30 @@ conferences:
     manual_fallback_url: "https://www.nznog.org/conferences/nznog-2026/talks.html"
     discovered: 2026-11-04
     notes: "New Zealand network operators: IX and peering, DNS, routing security, optics, network automation. Titles, speakers and abstracts from the accepted-talks page; recordings are whole-day streams, so the links step adds no per-talk recording. Auto-discovered 2026-11-04 from series 'nznog'. end_date taken from the source."
+
+  - key: pytorch-2026
+    name: "PyTorch Conference 2026"
+    end_date: 2026-10-21
+    fetcher: sessionize
+    program_url: "https://events.linuxfoundation.org/pytorch-conference-north-america/"
+    manual_fallback_url: "https://events.linuxfoundation.org/pytorch-conference-north-america/program/schedule/"
+    discovered: 2026-11-04
+    notes: "The PyTorch ecosystem conference (~1,500 attendees): PyTorch core, torch.compile and performance, distributed training and inference, production ML systems, hardware/accelerator integration. Titles, speakers and full abstracts from the Sessionize schedule the event page links; recordings on the PyTorch YouTube channel. Auto-discovered 2026-11-04 from series 'pytorch'. end_date taken from the source."
+
+  - key: mlsys-2025
+    name: "MLSys 2025"
+    end_date: 2025-05-15
+    fetcher: mlsys
+    program_url: "https://mlsys.org/virtual/2025/papers.html?filter=titles"
+    manual_fallback_url: "https://mlsys.org/Conferences/2025"
+    discovered: 2026-11-04
+    notes: "The systems-for-machine-learning conference (peer-reviewed, ~1,000 attendees): training and inference infrastructure, LLM serving, GPU/accelerator systems, distributed ML, compilers and runtime for ML. Papers with full abstracts plus invited talks, from the conference's virtual site; OpenReview pdfs and SlidesLive recordings linked per paper. Auto-discovered 2026-11-04 from series 'mlsys'. end_date is an ESTIMATE from the series hint — confirm it against the event page."
+
+  - key: mlsys-2026
+    name: "MLSys 2026"
+    end_date: 2026-05-22
+    fetcher: mlsys
+    program_url: "https://mlsys.org/virtual/2026/papers.html?filter=titles"
+    manual_fallback_url: "https://mlsys.org/Conferences/2026"
+    discovered: 2026-11-04
+    notes: "The systems-for-machine-learning conference (peer-reviewed, ~1,000 attendees): training and inference infrastructure, LLM serving, GPU/accelerator systems, distributed ML, compilers and runtime for ML. Papers with full abstracts plus invited talks, from the conference's virtual site; OpenReview pdfs and SlidesLive recordings linked per paper. Auto-discovered 2026-11-04 from series 'mlsys'. end_date taken from the source."

@@ -618,3 +618,34 @@ series:
     program_url_template: "https://{year}ocpglobal.fnvirtual.app/a/schedule/"
     manual_fallback_url_template: "https://{year}ocpglobal.fnvirtual.app/a/schedule/"
     notes: "Open Compute Project's flagship summit (~4,000 attendees, San Jose): open datacenter hardware — AI cluster networking and photonics, rack and power, cooling, server and storage, hardware security and manageability. Full abstracts from the event app's data bundle; YouTube recordings on OCP's channel; specs and white papers linked as materials."
+
+  # MLSys — the systems-for-ML conference (papers + invited talks on
+  # mlsys.org's own virtual site). Titles, authors and full abstracts; each
+  # paper links its OpenReview page/pdf and the SlidesLive recording. The
+  # series grew sharply: 61 papers in 2025, 173 in 2026.
+  - series: mlsys
+    enumerate: year
+    key_template: "mlsys-{year}"
+    name_template: "MLSys {year}"
+    fetcher: mlsys
+    start: 2025
+    lookahead: 2
+    end_date_hint: "05-22"
+    program_url_template: "https://mlsys.org/virtual/{year}/papers.html?filter=titles"
+    manual_fallback_url_template: "https://mlsys.org/Conferences/{year}"
+    notes: "The systems-for-machine-learning conference (peer-reviewed, ~1,000 attendees): training and inference infrastructure, LLM serving, GPU/accelerator systems, distributed ML, compilers and runtime for ML. Papers with full abstracts plus invited talks, from the conference's virtual site; OpenReview pdfs and SlidesLive recordings linked per paper."
+
+  # PyTorch Conference, run by the Linux Foundation on a stable event page that
+  # links a Sessionize schedule. The sessionize event id is new each edition,
+  # so the fetcher finds it on the page and checks the schedule's event year
+  # against the key before trusting it.
+  - series: pytorch
+    enumerate: year
+    key_template: "pytorch-{year}"
+    name_template: "PyTorch Conference {year}"
+    fetcher: sessionize
+    start: 2026
+    lookahead: 2
+    program_url_template: "https://events.linuxfoundation.org/pytorch-conference-north-america/"
+    manual_fallback_url_template: "https://events.linuxfoundation.org/pytorch-conference-north-america/program/schedule/"
+    notes: "The PyTorch ecosystem conference (~1,500 attendees): PyTorch core, torch.compile and performance, distributed training and inference, production ML systems, hardware/accelerator integration. Titles, speakers and full abstracts from the Sessionize schedule the event page links; recordings on the PyTorch YouTube channel."

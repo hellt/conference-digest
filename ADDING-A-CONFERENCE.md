@@ -45,6 +45,8 @@ Reuse a fetcher when the conference is hosted on a platform one already reads:
 | `denog` | Official DENOG agenda's linked Pretalx JSON schedule export and attachments |
 | `gtc` | One NVIDIA GTC (San Jose) edition: the JSON session-catalog API behind the catalog app |
 | `ocp` | One OCP Global Summit edition: the schedule JSON baked into the FN TECH event app's bundle |
+| `mlsys` | One MLSys edition: papers (plus invited talks) from the conference's virtual site, with OpenReview pdfs and SlidesLive recordings |
+| `sessionize` | Any event that links a Sessionize schedule from a stable page (PyTorch Conference via its LF event page); titles, speakers and abstracts from the sessionize markdown view |
 | `pretalx` | Any conference whose CfP runs on Pretalx, via the JSON schedule export (hack.lu, CfgMgmtCamp) |
 
 Otherwise add `conferences/fetchers/<name>.py`:

@@ -32,6 +32,8 @@ from .indico import IndicoFetcher
 from .itnog import ItnogFetcher
 from .netnod import NetnodFetcher
 from .ocp import OcpFetcher
+from .mlsys import MlsysFetcher
+from .sessionize import SessionizeFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -68,6 +70,8 @@ FETCHERS = {
     "itnog": ItnogFetcher(),
     "netnod": NetnodFetcher(),
     "ocp": OcpFetcher(),
+    "mlsys": MlsysFetcher(),
+    "sessionize": SessionizeFetcher(),
 }
 
 

@@ -2710,6 +2710,78 @@
         <loc>https://tldr.netdevops.me/lacnic-46/the-mystery-of-the-routes-that-refused-to-die/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/a-lightweight-high-throughput-collective-capable-noc-for-large-scale-ml/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/adr-an-agentic-detection-systemforenterprise-agentic-ai-security/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/beyond-the-buzz-a-pragmatic-take-on-inference-disaggregation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/blueprint-bootstrap-and-bridge-a-security-look-at-nvidia-gpu-confidentia/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/communication-efficient-distributed-inference-for-transformer-models-via/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/csle-a-reinforcement-learning-platform-for-autonomous-security-managemen/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/designing-communication-efficient-ai-systems-an-interconnect-aware-hpc-p/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/dreamddp-accelerating-low-bandwidth-geo-distributed-llm-training-with-la/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/fabric-lib-rdma-point-to-point-communication-for-llm-systems/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/guard-scalable-straggler-detection-and-node-health-management-for-large/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/learnedcache-an-ebpf-integrated-perceptron-based-eviction-policy-for-the/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/mlcommons-chakra-advancing-performance-benchmarking-and-co-design-using/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/nest-network-and-memory-aware-device-placement-for-distributed-deep-lear/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/optimizing-deployment-configurations-for-llm-inference/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/profinfer-an-ebpf-based-fine-grained-llm-inference-profiler/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/reparo-loss-resilient-generative-codec-for-video-conferencing/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/rethinking-open-source-contribution-in-the-age-of-ai-agents/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/sakuraone-an-open-ethernetbased-ai-hpc-system-and-its-observed-workload/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/ship-sram-based-huge-inference-pipelines-for-fast-llm-serving/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/sonar-benchmarking-topology-and-collaboration-in-decentralized-learning/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/sparing-strategies-to-minimize-reliability-impact-on-large-training-jobs/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/tokenweave-efficient-compute-communication-overlap-for-distributed-llm-i/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mlsys-2026/unleashing-scalable-context-parallelism-for-foundation-models-pre-traini/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/moreip-2026/</loc>
       </url>
       <url>
@@ -3152,6 +3224,36 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/netuk-3/workshop-open-source-data-management-platform-infrahub/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2025/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2025/collecting-and-analyzing-routing-information-with-rotonda/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2025/expanding-internet-routing-visibility-with-bmp/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2025/from-isc-dhcp-to-kea-dhcp/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2025/hardwired-for-chaos-the-no-bullsht-way-to-build-infrastructure-that-last/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2025/sntpings-abusing-ipv6-for-art/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2025/the-how-and-why-of-internetnl/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2025/the-living-source-of-truth-network-automation-with-infrahub-and-terrafor/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2025/why-400g-ftth/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nlnog-2025/why-would-anyone-want-to-run-a-personal-asn/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/nlnog-2026/</loc>

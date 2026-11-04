@@ -4,6 +4,66 @@
         <loc>https://tldr.netdevops.me/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/aspa-in-the-rpki-dashboard/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/authenticating-networks-with-rpki-rsc/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/bgp-in-2025/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/bgproutesio-a-next-generation-bgp-data-collection-platform/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/building-an-oob-network/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/can-rpki-help-mitigate-social-engineering-attacks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-fl/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/conference-network-report/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/debugging-routing-forwarding-using-ripe-atlas/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/exploring-the-blind-spot-of-internet-exchange-point-route-servers/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/getting-1-tbps-from-an-x86-server/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/ip-networking-in-deep-space/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/ipodwdm-in-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/ixbr-sao-paulo-migration-to-srv6-evpn/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/keynote-the-agentic-shift-the-internet-industry-reimagined/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/mesec-minimal-exposure-as-path-verification-against-bgp-post-rov-attacks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/sidrops-ietf-update/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/to-space-and-back-integrating-next-generation-terrestrial-and-satellite/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/apricot-2026/whats-new-at-the-ietf/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/archive/2024/</loc>
       </url>
       <url>
@@ -3062,6 +3122,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/page/4/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/page/5/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/peeringdays-2026/</loc>

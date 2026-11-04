@@ -1,0 +1,1937 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A routing- and peering-heavy operator program. For this reader — physical DC&#x2f;WAN systems, cloud-native networking, security, and identity — the strongest material this cycle sits in four clusters: coherent-optics&#x2f;IPoDWDM (finally production-ready), SRv6&#x2f;EVPN fabric migration, a coherent wave of…">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/apricot-2026/">
+      
+      
+      
+        <link rel="prev" href="../nanog-96/">
+      
+      
+        <link rel="next" href="../dknog-16/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>APRICOT 2026 (Jakarta) — Operator - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="APRICOT 2026 (Jakarta) — Operator · Conference Digest" />
+<meta property="og:description" content="A routing- and peering-heavy operator program. For this reader — physical DC/WAN systems, cloud-native networking, security, and identity — the strongest material this cycle sits in four clusters: coherent-optics/IPoDWDM (finally production-ready), SRv6/EVPN fabric migration, a coherent wave of…" />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/apricot-2026.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/apricot-2026/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="APRICOT 2026 (Jakarta) — Operator · Conference Digest" />
+<meta property="twitter:description" content="A routing- and peering-heavy operator program. For this reader — physical DC/WAN systems, cloud-native networking, security, and identity — the strongest material this cycle sits in four clusters: coherent-optics/IPoDWDM (finally production-ready), SRv6/EVPN fabric migration, a coherent wave of…" />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/apricot-2026.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              APRICOT 2026 (Jakarta) — Operator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../category/academic/" class="md-tabs__link">
+          
+  
+  Conference type
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-tabs__powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-tabs__powered-text">Powered by</span>
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ipodwdm-in-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IPoDWDM in 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexible-for-16t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Channelmania! – future proof your DWDM network topology while keeping it flexible for 1.6T
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ixbr-sao-paulo-migration-to-srv6-evpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IX.br São Paulo: Migration to SRv6 EVPN
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-1-tbps-from-an-x86-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Getting 1+ Tbps from an x86 server
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploring-the-blind-spot-of-internet-exchange-point-route-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exploring the Blind Spot of Internet Exchange Point Route Servers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesec-minimal-exposure-as-path-verification-against-bgp-post-rov-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MESec: Minimal-Exposure AS-Path Verification against BGP Post-ROV Attacks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspa-in-the-rpki-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ASPA in the RPKI Dashboard
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-new-at-the-ietf" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        What’s new at the IETF?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bgproutesio-a-next-generation-bgp-data-collection-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        bgproutes.io: A Next-Generation BGP Data Collection Platform
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bgp-in-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BGP in 2025
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-an-oob-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Building an OOB network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-rpki-help-mitigate-social-engineering-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Can RPKI help mitigate social engineering attacks?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sidrops-ietf-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        sidrops IETF UPDATE
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-routing-forwarding-using-ripe-atlas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Debugging Routing &amp; Forwarding Using RIPE Atlas
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conference-network-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Conference Network Report
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticating-networks-with-rpki-rsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Authenticating networks with RPKI RSC
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip-networking-in-deep-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IP Networking in Deep Space
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keynote-the-agentic-shift-the-internet-industry-reimagined" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Keynote: The Agentic Shift: The Internet Industry Reimagined
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-space-and-back-integrating-next-generation-terrestrial-and-satellite-communication-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        To Space and Back: Integrating Next-Generation Terrestrial and Satellite Communication Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conference type
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Conference type
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/academic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Academic
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Operator
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Security
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Standards
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/vendor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vendor
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ipodwdm-in-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IPoDWDM in 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexible-for-16t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Channelmania! – future proof your DWDM network topology while keeping it flexible for 1.6T
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ixbr-sao-paulo-migration-to-srv6-evpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IX.br São Paulo: Migration to SRv6 EVPN
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-1-tbps-from-an-x86-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Getting 1+ Tbps from an x86 server
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploring-the-blind-spot-of-internet-exchange-point-route-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exploring the Blind Spot of Internet Exchange Point Route Servers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesec-minimal-exposure-as-path-verification-against-bgp-post-rov-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MESec: Minimal-Exposure AS-Path Verification against BGP Post-ROV Attacks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspa-in-the-rpki-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ASPA in the RPKI Dashboard
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-new-at-the-ietf" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        What’s new at the IETF?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bgproutesio-a-next-generation-bgp-data-collection-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        bgproutes.io: A Next-Generation BGP Data Collection Platform
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bgp-in-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BGP in 2025
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-an-oob-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Building an OOB network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-rpki-help-mitigate-social-engineering-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Can RPKI help mitigate social engineering attacks?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sidrops-ietf-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        sidrops IETF UPDATE
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-routing-forwarding-using-ripe-atlas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Debugging Routing &amp; Forwarding Using RIPE Atlas
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conference-network-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Conference Network Report
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticating-networks-with-rpki-rsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Authenticating networks with RPKI RSC
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip-networking-in-deep-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IP Networking in Deep Space
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keynote-the-agentic-shift-the-internet-industry-reimagined" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Keynote: The Agentic Shift: The Internet Industry Reimagined
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-space-and-back-integrating-next-generation-terrestrial-and-satellite-communication-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        To Space and Back: Integrating Next-Generation Terrestrial and Satellite Communication Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>18 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="apricot-2026-jakarta-operator">APRICOT 2026 (Jakarta) — Operator<a class="headerlink" href="#apricot-2026-jakarta-operator" title="Permanent link">#</a></h1>
+<p>A routing- and peering-heavy operator program. For this reader — physical DC/WAN systems, cloud-native networking, security, and identity — the strongest material this cycle sits in four clusters: coherent-optics/IPoDWDM (finally production-ready), SRv6/EVPN fabric migration, a coherent wave of "post-ROV" routing-security work (ASPA, MESec, BMP-based visibility), and early standards activity around agentic/attestation identity at the IETF.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>Operator</span>
+<span class="digest-fact" markdown>February 12, 2026</span>
+<span class="digest-fact" markdown><a href="https://2026.apricot.net/programme/">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="ipodwdm-in-2026"><a href="ipodwdm-in-2026/">IPoDWDM in 2026</a><a class="headerlink" href="#ipodwdm-in-2026" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/8fce29f4-7b55-4fe0-8181-e2e2460da097.pdf">Slides</a></p>
+</div>
+<p>Mark Tinka, TransmissionCo</p>
+<ul>
+<li><strong>Why</strong>: IPoDWDM failed once (2000s: proprietary, fixed, power-hungry line cards) and is now succeeding — this talk explains exactly what changed and who is deploying it, which matters for anyone planning DC/WAN interconnect on dark fiber or short DWDM spans.</li>
+<li><strong>What</strong>: A state-of-the-market walkthrough of routed optical networking built on MSA coherent pluggables. Per CignalAI data cited, coherent pluggables outsold proprietary embedded optics 2:1 in 2025, and most 400G-ZR shipments have gone into hyperscaler IPoDWDM deployments; hyperscalers are converging on OSFP for 800G-ZR for thermal reasons. Includes a live reference network: a 130 km span in Cape Town built from a Juniper ACX7300 router with 2x 400G-ZR+ QSFP-DD plugs plus a third-party open line system — no transponder tier.</li>
+<li><strong>How</strong>: Coherent pluggables (100G-ZR QSFP28, 400G/800G-ZR QSFP-DD/OSFP) put DWDM line-side optics directly in standard router/switch ports, on dark fiber or integrated with a line system for reach; line- and client-side mix on the same card; disaggregation removes the optic from the host platform. Pluggable transponders are positioned as the bridge for operators who still want Layer-1 aggregation/demarcation/protection.</li>
+<li><strong>Where applicable</strong>: Broadly applicable technique, not org-specific — driven by hyperscaler economics but now accessible to any operator with dark fiber or short spans. Presented by a vendor-side MD, but the deck is grounded in third-party market data and a real multi-vendor deployment rather than a product pitch.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexible-for-16t"><a href="channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-fl/">Channelmania! – future proof your DWDM network topology while keeping it flexible for 1.6T</a><a class="headerlink" href="#channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexible-for-16t" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/b68d1d9d-d598-4afa-b5c7-d1ba53997e9d.pdf">Slides</a></p>
+</div>
+<p>Thomas Weible, <a href="../companies/flexoptix/">FLEXOPTIX</a></p>
+<ul>
+<li><strong>Why</strong>: Choosing grid spacing and filters today determines whether your DWDM plant can carry 800G/1.6T superchannels tomorrow — a topology/spectrum planning problem IP engineers now own under IPoDWDM.</li>
+<li><strong>What</strong>: An argument that coherent detection changes the rules: because a coherent receiver is "blind" to anything but its own wavelength, you can build filterless/colorless topologies and combine sub-bands through cheap 1x4 splitters and ordinary 50 GHz muxes. The concrete recommendation is 400 GHz COTS muxes (12 channels in C-band vs. the classic 96x50 GHz) to future-proof for 1.6T while remaining backward compatible with legacy 50 GHz services.</li>
+<li><strong>How</strong>: Walks from OOK/direct-detection limits through higher-order modulation (16-constellation, dual-polarization, 425Gbps at 53.125 GBd), balanced receivers, phase- and polarization-diversity coherent detection, homodyne/heterodyne/intradyne tradeoffs, and ends with a "make a frequency plan for your spans" design methodology — think in THz/GHz, not nm or channel numbers.</li>
+<li><strong>Where applicable</strong>: General DWDM design guidance for operators planning or refactoring their own optical plant; vendor-presented (FLEXOPTIX), so the COTS-component framing is self-interested, but the physics and filter-sizing argument are vendor-neutral. Assumes coherent optics end-to-end.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="ixbr-sao-paulo-migration-to-srv6-evpn"><a href="ixbr-sao-paulo-migration-to-srv6-evpn/">IX.br São Paulo: Migration to SRv6 EVPN</a><a class="headerlink" href="#ixbr-sao-paulo-migration-to-srv6-evpn" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/6b3ca07b-f892-483d-b9f7-19dd727054a3.pdf">Slides</a></p>
+</div>
+<p>Julio Sirota, NIC.br</p>
+<ul>
+<li><strong>Why</strong>: A production migration template for anyone running a large L2 fabric (IXP peering LAN or DC) on aging LDP+VPLS: flood-based MAC learning, ARP/ND storms, and unknown-unicast flooding are exactly the failure modes EVPN was built to fix.</li>
+<li><strong>What</strong>: The completed migration of IX.br São Paulo (one of the world's largest IX fabrics) from LDP+VPLS to SRv6 EVPN. Concrete results: 84% of equipment (97% of capacity) now on EVPN CSID SRv6 with proxy ARP/ND, unknown-unicast flood eliminated, and a large measured drop in ARP/Neighbor Solicitation volume — including visible reduction in CPU load on participant routers.</li>
+<li><strong>How</strong>: RFC 8560 "VPLS and EVPN seamless integration" allowed PE-by-PE replacement with the core forwarding both MPLS and IPv6/SRv6 labels during migration, no gateway needed. Proxy ARP/ND uses the RFC 9047 ARP/ND Extended Community with the Immutable flag so static entries prevail over dynamic ones, which both kills broadcast storms and prevents participants answering ARP/ND for IPs that are not theirs (spoofing protection).</li>
+<li><strong>Where applicable</strong>: IX.br-specific production story, but the mechanism is standard-track (RFC 8560, RFC 9047) and broadly applicable to any VPLS estate with SRv6-capable PEs. The seamless-migration trick (dual-plane forwarding, one box at a time) is the transferable part.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="getting-1-tbps-from-an-x86-server"><a href="getting-1-tbps-from-an-x86-server/">Getting 1+ Tbps from an x86 server</a><a class="headerlink" href="#getting-1-tbps-from-an-x86-server" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/c4acd498-1fd0-463a-bf65-16044fb86d99.pdf">Slides</a></p>
+</div>
+<p>Branimir Rajtar, 5x9 Networks</p>
+<ul>
+<li><strong>Why</strong>: The datapath-internals story of the year at this conference — what it actually takes to make commodity x86 forward at terabit rates, relevant to anyone building or evaluating software dataplanes (vBNG, vEPC, NFV).</li>
+<li><strong>What</strong>: The evolution of a virtualized BNG from many small 4-vCPU forwarder VMs to a single "Big VM" forwarder, ending at 200 Mpps per CPU and 1.6 Tbps on one server (~600 W). Includes an honest comparison table: ASIC white-label switching (multi-terabit, low flexibility, ~30k subscribers) vs. x86 (~1 Tbps and improving, ~200k subscribers, high flexibility, C/DPDK/eBPF/P4 development).</li>
+<li><strong>How</strong>: SR-IOV plus Intel DPDK to bypass host kernel and drivers; systematic optimization in waves — newer hardware (+30%), deep DPDK/BIOS/PCIe/NIC tuning (+30%), then vTune-guided code-level redesigns driven by CPU cache behavior and PCIe bottlenecks. The horizontal-scaling small-VM design was abandoned because per-instance overhead dominated. CUPS architecture (dashboard/controller/forwarder) throughout.</li>
+<li><strong>Where applicable</strong>: vBNG/BRAS is the use case and the headline numbers are tied to their specific hardware generations; the methodology (measure, profile, redesign around cache/PCIe) transfers to any DPDK dataplane effort.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="exploring-the-blind-spot-of-internet-exchange-point-route-servers"><a href="exploring-the-blind-spot-of-internet-exchange-point-route-servers/">Exploring the Blind Spot of Internet Exchange Point Route Servers</a><a class="headerlink" href="#exploring-the-blind-spot-of-internet-exchange-point-route-servers" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/a548a2ef-e856-451d-bfe1-fa8a5455f4cc.pdf">Slides</a></p>
+</div>
+<p>Stefano Servillo, University of Rome "La Sapienza" (with Spadaccino, Konstantaras, Luciani, Cuomo)</p>
+<ul>
+<li><strong>Why</strong>: A formally defined, quantified vulnerability in the IRR-based route-server filtering that most of the world's IXPs rely on — directly relevant to routing security practice.</li>
+<li><strong>What</strong>: The blind spot: IRR validation via AS-SET expansion builds a prefix list per peer but never binds prefixes to their legitimate origin AS, so a prefix covered by a route object under any AS that appears in a member's AS-SET is accepted by the route server regardless of who really owns it. Stale AS-SETs make this worse: of ~130k allocated ASes only ~77k are active, so AS-SETs routinely contain unallocated, private, or inactive ASes whose route objects can weaponize the gap. The team demonstrates prefix hijacking through this path, quantifies prevalence across a large set of IXPs, and validates with real route-server data from AMS-IX and NAMEX.</li>
+<li><strong>How</strong>: Feasibility analysis defines the conditions (prefix not ROA-covered, update not filtered by intermediate ASes, origin AS in a member's AS-SET but not required to be there, etc.), followed by control-plane data analysis; practical countermeasures to strengthen RS filtering are proposed.</li>
+<li><strong>Where applicable</strong>: Applies to any IXP or operator doing IRR-based filtering anywhere; RPKI ROAs close the hole for covered prefixes, which sharpens the case for ROA coverage as hijack insurance rather than just leak hygiene. Research-grade but with production validation.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="mesec-minimal-exposure-as-path-verification-against-bgp-post-rov-attacks"><a href="mesec-minimal-exposure-as-path-verification-against-bgp-post-rov-attacks/">MESec: Minimal-Exposure AS-Path Verification against BGP Post-ROV Attacks</a><a class="headerlink" href="#mesec-minimal-exposure-as-path-verification-against-bgp-post-rov-attacks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/d5b88c42-c664-46e1-a671-cf78b453e486.pdf">Slides</a></p>
+</div>
+<p>Jiangou Zhan, <a href="../companies/tsinghua-university/">Tsinghua University</a></p>
+<ul>
+<li><strong>Why</strong>: With ~49% of IPv4 prefixes ROA-protected and ~37% of ASes doing ROV, attackers move to path manipulation and route leaks — but ASPA's requirement to publish customer-provider relationships globally is commercially toxic. This is the sharpest articulation of that adoption dilemma at the conference, with a real alternative.</li>
+<li><strong>What</strong>: MEASPV, a framework that decouples path validation from topology disclosure: relationship attestations are visible only to designated trusted validators, never broadcast. Evaluation shows a security posture comparable to standard ASPA against post-ROV threats, with minimal information exposure and incremental deployability (no BGP-4 message changes).</li>
+<li><strong>How</strong>: Validator-assisted, three phases: trust establishment (ASes share encrypted, authenticated neighbor-relationship data with chosen validators), path verification on each BGP UPDATE (validators return Type-I high-trust direct reports plus Type-II public-data checks from CAIDA/RouteViews; results aggregate into a score from Strong-Valid to Strong-Suspect), and secure route selection using the score as a BGP decision-process tie-breaker. Caching of per-pair scores (1–5 day refresh, path score = minimum) keeps latency and control traffic low. The authors also prove a lower bound: any effective defense must expose relationship data to at least one third-party verifier — the question is how few.</li>
+<li><strong>Where applicable</strong>: Research framework, not deployed; requires a trusted-validator ecosystem. Conceptually important for anyone designing ASPA-adjacent or attestation-based path security, including in private fabrics where a neutral validator is easier to stand up.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="aspa-in-the-rpki-dashboard"><a href="aspa-in-the-rpki-dashboard/">ASPA in the RPKI Dashboard</a><a class="headerlink" href="#aspa-in-the-rpki-dashboard" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/77c06f7d-00f1-4201-a963-b31cbb9be3a6.pdf">Slides</a></p>
+</div>
+<p>Tim Bruijnzeels, RIPE</p>
+<ul>
+<li><strong>Why</strong>: ASPA is the mechanism operators will be asked to deploy after ROV; this is the clearest available explanation of its verification semantics — what it catches, what it deliberately tolerates, and how it fails.</li>
+<li><strong>What</strong>: A worked tutorial of ASPA (AS Provider Authorisations): objects like ROAs, signed by the customer-AS holder, authorizing one or more provider ASes. Routes learned from customers are invalid if a hop is proven "Not Provider"; the system supports partial deployment (no attestation = fail open, as does an RPKI validation problem itself), and it detects valley-free violations by constructing the longest UP ramp (customer→provider from the origin) and DOWN ramp (provider→customer from the receiver) and rejecting paths with a gap — i.e., route leaks — regardless of whether the cause is accident, leak, or spoofing.</li>
+<li><strong>How</strong>: Object structure and path-verification logic presented through concrete examples (spoofed-origin and leaked-path cases), matching what the RIPE RPKI Dashboard now surfaces.</li>
+<li><strong>Where applicable</strong>: Protocol-level and vendor-neutral; broadly applicable. Deployment is early (ARIN brought ASPA online for its own services 20 January 2026, per the ARIN update in the same program), so this is the right time to learn the semantics before it lands in dashboards you use.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="whats-new-at-the-ietf"><a href="whats-new-at-the-ietf/">What’s new at the IETF?</a><a class="headerlink" href="#whats-new-at-the-ietf" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/2ea34790-9ba4-436d-8f0a-8fa643a6c731.pdf">Slides</a></p>
+</div>
+<p>Paresh Khatri, <a href="../companies/nokia/">Nokia</a> (delivered with Warren Kumari, Dhruv Dhody, and Suresh Krishnan, IAB)</p>
+<ul>
+<li><strong>Why</strong>: The standards radar this cycle is unusually relevant: three of the newly chartered working groups touch attestation, bot/agent authentication, and PKI — squarely in identity territory — alongside routing and ops topics.</li>
+<li><strong>What</strong>: New WGs: Secure Evidence and Attestation Transport (SEAT), Domain Connection (DCONN), Open Cloud Mesh (OCM), Web Bot Auth (WEBBOTAUTH), and PKI, Logs, And Tree Signatures (PLANTS); Authenticated Transfer (ATP) in chartering. BoFs at IETF 125: CATALIST (coordinating AI agent-to-agent communications work) and ONSEN (operationalizing service abstractions). Also reports the IAB workshop on IP address geolocation concluding that IP is a weak, overloaded geolocation signal (anycast, satellite, overlays) — a useful data point for anyone building location-dependent policy.</li>
+<li><strong>How</strong>: An operator-oriented survey of IETF structure (areas, ~125 WGs, IRTF, IAB) and where the new work landed, aimed at helping operators track what will hit their networks.</li>
+<li><strong>Where applicable</strong>: Broadly applicable; for this reader, WEBBOTAUTH and CATALIST are the items to watch for agentic/workload identity, and SEAT/PLANTS for attestation-transport plumbing.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="bgproutesio-a-next-generation-bgp-data-collection-platform"><a href="bgproutesio-a-next-generation-bgp-data-collection-platform/">bgproutes.io: A Next-Generation BGP Data Collection Platform</a><a class="headerlink" href="#bgproutesio-a-next-generation-bgp-data-collection-platform" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/444b491c-a5c0-4e42-a6e0-bde2d7020557.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=uktSxm_ZZs0">Recording</a></p>
+</div>
+<p>Thomas Holterbach, University of Strasbourg (with Thomas Alfroy, Cristel Pelsser)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="uktSxm_ZZs0" data-start="0" href="https://www.youtube.com/watch?v=uktSxm_ZZs0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/uktSxm_ZZs0/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/uktSxm_ZZs0/maxresdefault.jpg" alt="Play the recording: bgproutes.io: A Next-Generation BGP Data Collection Platform" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: RIPE RIS and RouteViews only collect best-path announcements; monitoring hijacks, leaks, and policy behavior needs more, and this platform — running for a year — shows how to get it.</li>
+<li><strong>What</strong>: A next-gen BGP collection platform prioritizing accurate real-time/short-term monitoring and perpetual retention (where RIS/RouteViews historically prioritized coverage). After one year it receives data from ~70 contributing networks and, critically, aggregates everything already collected by RIPE RIS, RouteViews, PCH, and CGTF into a single database, then exposes it via API and dashboards.</li>
+<li><strong>How</strong>: Three coverage ingredients: (1) automated peering establishment — operators authenticate via PeeringDB and fill in a form to start a session; (2) aggregation of existing collectors; (3) BGP Monitoring Protocol to collect beyond best-path (routes from multiple peers at multiple decision-process stages) — operationally, a small number of BMP sessions already yields a large number of additional vantage points. Every collected route gets RPKI and ASPA validation, with results exposed to users, which makes the platform a live testbed for assessing whether those mechanisms actually work at scale.</li>
+<li><strong>Where applicable</strong>: Community infrastructure, partially APNIC Foundation funded; usable by any operator or researcher today (contribute a session, or just consume). Complements rather than replaces RIS/RouteViews.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="bgp-in-2025"><a href="bgp-in-2025/">BGP in 2025</a><a class="headerlink" href="#bgp-in-2025" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/4dffcaec-ce12-43bf-b226-202193b34a99.pdf">Slides</a></p>
+</div>
+<p>Geoffrey Huston, <a href="../companies/apnic/">APNIC</a></p>
+<ul>
+<li><strong>Why</strong>: The annual reference for DFZ scale, churn, and the year's notable routing events — baseline data for FIB/TCAM planning and for understanding routing-system fragility.</li>
+<li><strong>What</strong>: The IPv4 DFZ exceeded 1M entries for all BGP peers in 2025; headline events include the July 7 Ramses exchange fire in Cairo (four deaths, visible disruption in BGP), and Amazon's AS16509 swinging from 50M to 158M advertised addresses during the year — including a -15.8M withdrawal on 4 November and a +15.1M re-announcement on 10 December. The advertised IPv4 table actually shrank by 11M /32s over the year while unadvertised space grew by 10M; RIR allocations continue to be outpaced by recovery. Top churn tables (China Mobile +13k prefixes, USDA's odd 3,122-prefix behavior, Cox, Amazon) give a feel for who is re-de-aggregating.</li>
+<li><strong>How</strong>: Longitudinal analysis across every routing peer of RouteViews and RIPE RIS: FIB counts, advertised address span, update/churn dynamics, two decades of comparison.</li>
+<li><strong>Where applicable</strong>: Global and vendor-neutral; the numbers are what they are. Most useful as planning input (FIB growth, prefix-churn tolerance) and as a reminder that single-actor behavior can move the global table by millions of addresses in a day.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="building-an-oob-network"><a href="building-an-oob-network/">Building an OOB network</a><a class="headerlink" href="#building-an-oob-network" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/dd8b382e-43af-4f2b-adc8-57320445ccc2.pdf">Slides</a></p>
+</div>
+<p>Phil Mawson, Vocus</p>
+<ul>
+<li><strong>Why</strong>: The management plane is what saves you when the data plane is down — this is a multi-year, build-it-again carrier case study with real design decisions, prompted by exactly the class of outage (Optus AS7474 national outage, November 2023; Meta, October 2021) that makes OOB non-negotiable.</li>
+<li><strong>What</strong>: Vocus' consolidation of many inherited bespoke OOB solutions into a dedicated national OOB MPLS network, built alongside a new zero-touch-provisioned aggregation network.</li>
+<li><strong>How</strong>: Key rules: OOB must not rely on any founder IP network; per-state regions with route-reflector pairs; OSPF as IGP; own transmission interstate with diverse paths and metro dark-fiber rings. Equipment: Juniper ACX7024/SRX345 routers, EX3400/4100 switches, Opengear console servers. International sites use Megaport Layer-2 VXC back to an Australian headend (cheaper than 10G waves). Extras worth stealing: a third-party transit VPN concentrator as break-glass if AS4826 dies entirely, geographically diverse bastion hosts in three cities, and printed break-glass local credentials locked away for when your auth servers are unreachable.</li>
+<li><strong>Where applicable</strong>: Vocus-specific in its parts list and assumptions (they own Australian transmission), but the design principles — independence from the production network, geographic diversity, break-glass auth — transfer to any operator or large DC operator. Budget math differs if you must buy OOB transport.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="can-rpki-help-mitigate-social-engineering-attacks"><a href="can-rpki-help-mitigate-social-engineering-attacks/">Can RPKI help mitigate social engineering attacks?</a><a class="headerlink" href="#can-rpki-help-mitigate-social-engineering-attacks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/356755e3-72be-43db-844d-98627bf845c9.pdf">Slides</a></p>
+</div>
+<p>Sanjaya, <a href="../companies/apnic/">APNIC</a> (with Carlos Martinez, LACNIC)</p>
+<ul>
+<li><strong>Why</strong>: A rare public postmortem of a hijack executed through humans, not protocol weakness — and a direct answer to whether RPKI would have stopped it.</li>
+<li><strong>What</strong>: LACNIC address space was hijacked intermittently in July 2025 by a rogue AS with a repeat-offender history across multiple RIR regions. The investigation (LACNIC → APNIC → APJII/IDNIC) found the bad actor had hijacked the ASN itself and convinced a multinational transit provider to provision transit using forged company letterhead and a faked domain — short random BGP advertisements followed. The transit provider terminated service on the victim's report; the case was jointly written up as a community case study.</li>
+<li><strong>How</strong>: Incident timeline and escalation-path walkthrough; the stated lessons map the defenses: a ROA with correct maxlength prevents the prefix hijack, and ASPA blocks unauthorized upstream providers — the exact door the attacker walked through.</li>
+<li><strong>Where applicable</strong>: General — any resource holder. Its main value is the honest gap analysis: ROV stops origin forgery but not social engineering at your transit provider; ASPA (or contractual LOA verification) is the missing control.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="sidrops-ietf-update"><a href="sidrops-ietf-update/">sidrops IETF UPDATE</a><a class="headerlink" href="#sidrops-ietf-update" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/5a8f311a-b15d-4ed8-b8ae-e64be6d17a6a.pdf">Slides</a></p>
+</div>
+<p>Tom Harrison, <a href="../companies/apnic/">APNIC</a></p>
+<ul>
+<li><strong>Why</strong>: The plumbing of RPKI distribution is being redesigned; if you operate relying parties or a publication point, this affects you.</li>
+<li><strong>What</strong>: Three sidrops work items: the Erik synchronization protocol (draft-ietf-sidrops-rpki-erik-protocol), NRO Trust Anchor Constraints, and Best Current Practices for RPKI publication servers.</li>
+<li><strong>How</strong>: Erik is the interesting one — today every relying party fetches from every publication point (an M:N problem that worsens over time, where one slow PP holds up an RP's whole validation run). An Erik relay, runnable by anybody, fetches from PPs and serves RPs over the new protocol: PPs go from handling thousands of RPs to ~20 relays in full deployment. It also fixes RRDP's encoding waste (base64 adds 33%, XML another ~10%), serves raw DER objects, and uses Merkle trees to support cheap diffs and individual-file repair — eliminating the "delta failed, re-fetch a 100 MB snapshot" thundering herd (the deck shows a 102 MB snapshot vs. a 68 KB delta).</li>
+<li><strong>Where applicable</strong>: All RPKI operators; deployable incrementally alongside rsync/RRDP. Reference implementations exist (rpkitouch relay, public relay instance).</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="debugging-routing-forwarding-using-ripe-atlas"><a href="debugging-routing-forwarding-using-ripe-atlas/">Debugging Routing &amp; Forwarding Using RIPE Atlas</a><a class="headerlink" href="#debugging-routing-forwarding-using-ripe-atlas" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/457aa45c-b33e-4382-bff1-12e69861bfb2.pdf">Slides</a></p>
+</div>
+<p>Randy Bush, Internet Initiative Japan</p>
+<ul>
+<li><strong>Why</strong>: Two real cases where external vantage points found in minutes what provider NOCs couldn't find in weeks — cheap, adoptable debugging technique.</li>
+<li><strong>What</strong>: Case 1: a serial-console server on a colo LAN became unreachable; the provider's week of debugging failed, one Atlas global/random traceroute found the problem (with hover-text and clickable hop detail as the "smoking gun"), fixed within an hour. Case 2: a friend's IPv6 was unrouted for months while the ISP NOC saw nothing; 15 Atlas probes inside that same ISP exposed the internal routing problem to a senior engineer within hours.</li>
+<li><strong>How</strong>: RIPE Atlas (12,000+ probes) one-off measurements and traceroute visualizations, plus the measurement API for automation. Bush closes with a challenge: build an AI front-end that takes a problem description and drives the Atlas API to diagnose it — a nice framing of where troubleshooting tooling is heading.</li>
+<li><strong>Where applicable</strong>: Anyone; free to use if you host a probe (membership not required). Scale- and vendor-agnostic.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="conference-network-report"><a href="conference-network-report/">Conference Network Report</a><a class="headerlink" href="#conference-network-report" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/c2e37815-ae9e-4a8e-940f-c61ac8672a3c.pdf">Slides</a></p>
+</div>
+<p>Yoshinobu Matsuzaki, IIJ (APRICOT Technical Committee)</p>
+<ul>
+<li><strong>Why</strong>: A compact live postmortem from running a real network under load — including an IPv6-mostly deployment with measured client behavior and a genuinely unusual BGP debugging story.</li>
+<li><strong>What</strong>: The APRICOT 2026 NOC ran dual transit (Lintasarta, Envision) plus Starlink backup, Akvorado NetFlow analysis, and an IPv6-mostly design: 609 unique MACs, 70% of clients (431) operated IPv6-only via NAT64 (DHCPv4 option 108 signaling), 30% dual-stack, 300 Mbps peak. Incidents and fixes: WiFi channel overload at the opening plenary; a BGP "ghost route" — their prefixes showed globally reachable via route-views/RIS but lacked actual reachability, traced to a longer-than-expected AS_PATH left over from an earlier temporary announcement, cleared by contacting ASes on the path (one had a config bug); a rogue AP broadcasting the same SSID/password outside controller management, fixed by a reset; and intermittent public-DNS resolution failures on IPv4 queries with RD=1, fixed by offering local resolvers via RDNSS/DHCP.</li>
+<li><strong>How</strong>: Straightforward ops: PREF64/NAT64 for the v6-only tier, per-incident triage with community help on the ghost route.</li>
+<li><strong>Where applicable</strong>: Conference scale, but the lessons — IPv6-mostly is now viable for 70% of unmanaged clients, stale AS_PATHs can linger as ghost routes after withdrawals, rogue APs happen even with a controller — transfer directly to enterprise and campus networks.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="authenticating-networks-with-rpki-rsc"><a href="authenticating-networks-with-rpki-rsc/">Authenticating networks with RPKI RSC</a><a class="headerlink" href="#authenticating-networks-with-rpki-rsc" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/3cdf15ce-8dae-491a-a93f-cfda8a601638.pdf">Slides</a></p>
+</div>
+<p>Arnold Nipper, <a href="../companies/de-cix/">DE-CIX</a> (with Yolandi Cloete)</p>
+<ul>
+<li><strong>Why</strong>: Machine-verifiable proof that the party you're talking to controls the network resources it claims — network identity, which rhymes with the workload-identity problem in other domains.</li>
+<li><strong>What</strong>: PeeringDB is introducing signup authentication for networks via RPKI RSC (RPKI Signed Checklists) in March 2026, and the talk solicits community input on follow-on features: whether to surface how and when a network authenticated, and whether to support periodic re-authentication.</li>
+<li><strong>How</strong>: RSC objects let a resource holder sign an arbitrary checklist of their holdings; PeeringDB will use them to verify that a PeeringDB record is created by whoever actually holds the ASN/prefixes. (APNIC's annual report in the same program notes RSC objects are now provided in its RPKI services too.)</li>
+<li><strong>Where applicable</strong>: PeeringDB-specific rollout, but the pattern — cryptographic resource-holder authentication replacing manual LOA/email verification — is general, and directly relevant to anyone building inter-org trust flows. Caveat: this is a thin lightning talk and the deck ends with a sponsorship pitch; the signal is the feature, not the depth.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="ip-networking-in-deep-space"><a href="ip-networking-in-deep-space/">IP Networking in Deep Space</a><a class="headerlink" href="#ip-networking-in-deep-space" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/e2575506-e364-46f1-8b4d-cfa746bfacdf.pdf">Slides</a></p>
+</div>
+<p>Marc Blanchet, Viagenie</p>
+<ul>
+<li><strong>Why</strong>: Not operationally relevant, but the most instructive stress test of the IP suite's assumptions you'll read this year — what breaks when RTT is minutes and links vanish for hours.</li>
+<li><strong>What</strong>: An architecture for Moon and Mars networks in which every link carries IP: 3GPP (5G/6G) and 802.11/WiFi on the surface, CCSDS for deep space, spacecraft onboard networks also IP — creating a single Layer-3 network end to end, aligned with NASA's LunaNet interoperability specification. The core problems: Earth-Moon ~2 s one-way delay, Earth-Mars 4–22 minutes, and intermittence (an orbiter passing behind a body turns a 2-second path into a 2-hour gap; until full laser-linked constellations exist, disruptions are the norm).</li>
+<li><strong>How</strong>: Three key adaptations, with simulations confirming suitability: (1) temporary buffering of IP packets on forwarders with intermittent links; (2) configuring QUIC with parameters matching the expected round-trip time; (3) configuring application timeouts. Everything else follows from accepting asynchronous operation as the paradigm — no interactivity, no fast remote management.</li>
+<li><strong>Where applicable</strong>: Space-specific by subject, but the delay/disruption-tolerance findings translate to any store-and-forward or high-latency environment, and the QUIC-parameter work is a concrete example of transport tuning under extreme RTT.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="keynote-the-agentic-shift-the-internet-industry-reimagined"><a href="keynote-the-agentic-shift-the-internet-industry-reimagined/">Keynote: The Agentic Shift: The Internet Industry Reimagined</a><a class="headerlink" href="#keynote-the-agentic-shift-the-internet-industry-reimagined" title="Permanent link">#</a></h3>
+<p>Mukhammad Andri Setiawan, Universitas Islam Indonesia</p>
+<ul>
+<li><strong>Why</strong>: The direction-of-field keynote: autonomous agents as operators of infrastructure — the world the IETF's WEBBOTAUTH and CATALIST efforts (see the IETF update above) are being chartered for.</li>
+<li><strong>What</strong>: An argument that the industry is shifting from manual configuration to networks configured by agents, code generated without SQL, and ops moving from hands-on engineering to high-level coordination — with roles emerging for the next decade: "Agent Shepherds" guiding agent swarms, "Sovereignty Architects" for ethical/policy frameworks, and "Compute Brokers" managing agent-economy compute. Also covers bias and accuracy risks, and "AI sovereignty" as a national capability.</li>
+<li><strong>How</strong>: Futures-style synthesis rather than a technical method; the same speaker's IPv6-renumbering study elsewhere in the program grounds the claim empirically (AI-assisted configuration cut measured cognitive workload ~65–72% and task time dramatically in a small within-subjects experiment, while organizational readiness lagged).</li>
+<li><strong>Where applicable</strong>: Broad and speculative, but the trajectory it names — identity, authorization, and supervision for non-human actors — is exactly where the identity portion of this reader's portfolio is heading. <em>(from abstract only)</em></li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="to-space-and-back-integrating-next-generation-terrestrial-and-satellite-communication-networks"><a href="to-space-and-back-integrating-next-generation-terrestrial-and-satellite/">To Space and Back: Integrating Next-Generation Terrestrial and Satellite Communication Networks</a><a class="headerlink" href="#to-space-and-back-integrating-next-generation-terrestrial-and-satellite-communication-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/09204dc4-859e-4df7-ac9f-24a5e3bfe055.pdf">Slides</a></p>
+</div>
+<p>Katarina Stefanović, Telecom Serbia</p>
+<ul>
+<li><strong>Why</strong>: A surprising measured result: LEO satellite paths, though physically longer, can beat terrestrial mobile networks on long-haul latency and stability — with real data, not vendor claims.</li>
+<li><strong>What</strong>: A 7-day continuous RIPE Atlas measurement campaign comparing Starlink LEO connectivity against 4G/5G mobile networks across multiple European countries, targeting an APNIC-hosted host in Singapore: Starlink consistently showed lower and more stable long-haul RTT (enabled by backbone efficiency and evolving inter-satellite-laser routing), while mobile networks showed higher jitter and EPC-driven processing delays despite shorter physical paths.</li>
+<li><strong>How</strong>: Atlas probes measuring long-haul RTT, hop-count behavior, intercontinental routing paths, and jitter distribution; plus an architecture deep-dive into LEO mesh topology, ground stations, laser inter-satellite link types (intra-plane, inter-plane, crossing-plane), and NTN–TN interoperability per 3GPP TR 38.811 — including how beam handovers, congestion, atmosphere, and PoP presence shape user experience.</li>
+<li><strong>Where applicable</strong>: Results are European-vantage and Starlink-specific; the framework (measurement-based comparison rather than assumptions) is general. Relevant to anyone evaluating LEO as a WAN or resilience path, and to the interconnection-panel question of whether LEO edges change regional peering economics.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Routing security enters the post-ROV era.</strong> With ROV widely deployed, the program's center of gravity moved to path verification: ASPA semantics and tooling (RIPE, ARIN, bgproutes.io validating every collected route), MESec's minimal-disclosure alternative, the IXP route-server IRR blind spot, and a social-engineering hijack that RPKI origin validation alone could not stop. ASPA is the thing to learn this year.</li>
+<li><strong>Coherent pluggables made IPoDWDM real.</strong> After the 2000s failure, hyperscaler-driven disaggregation (coherent pluggables outselling embeddeds 2:1) puts DWDM line-side optics in ordinary router ports — and pushes spectrum/grid planning (400 GHz muxes for 1.6T superchannels) onto IP teams. The two optics talks and Tinka's Cape Town reference network are the evidence.</li>
+<li><strong>Beyond best-path visibility.</strong> bgproutes.io's BMP-based collection, RouteViews' new BMP processor and API, Erik relays fixing RPKI distribution, and RIPE Atlas as a debugging instrument — collectively, the community is instrumenting the routing system at finer granularity than best-path snapshots.</li>
+<li><strong>EVPN/SRv6 is displacing LDP/VPLS in production.</strong> IX.br São Paulo's seamless RFC 8560 migration is the template, showing per-device replacement, flood elimination, and proxy ARP/ND as both a scale and a security win.</li>
+<li><strong>IPv6-mostly crossed from experiment to default.</strong> The conference NOC ran 70% of clients IPv6-only via NAT64/DHCPv4 option 108, a SOHO network hit 90% IPv6 traffic, and Windows CLAT progress was cited — operators are now planning for the IPv4-absent end state rather than dual-stack forever.</li>
+<li><strong>Agents are showing up in the infrastructure stack.</strong> The IETF chartered WEBBOTAUTH, SEAT, and CATALIST; the keynote named the agentic operating model; and the IPv6-renumbering study quantified AI assistance reducing engineer workload while organizational readiness lagged. The identity/authorization problem for non-human actors is now on the standards agenda, not just the vendor one.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/apricot-2026.md"><code>digests/apricot-2026.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/apricot-2026.md"><code>prompts/apricot-2026.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../nanog-96/" class="md-footer__link md-footer__link--prev" aria-label="Previous: NANOG 96">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                NANOG 96
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../dknog-16/" class="md-footer__link md-footer__link--next" aria-label="Next: DKNOG16 — Operator Track (Scandic Copenhagen, Mar 5–6, 2026)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                DKNOG16 — Operator Track (Scandic Copenhagen, Mar 5–6, 2026)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+    
+  </body>
+</html>

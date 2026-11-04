@@ -15,7 +15,7 @@ written_by: ToFaRev (zai-org/GLM-5.3)
 
 ### Integration of Security Functions in EVPN/VXLAN Using Group-Based Policy
 
-**Links:** [Slides](https://www.itnog.it/files/1-4_202604-nmodena-EVPN-VXLAN-Group-Based-Policy-ITNOG10.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/1-4_202604-nmodena-EVPN-VXLAN-Group-Based-Policy-ITNOG10.pdf)
 
 Nicola Modena
 
@@ -26,7 +26,7 @@ Nicola Modena
 
 ### National Layer-2 wholesale FWA leveraging VxLAN
 
-**Links:** [Slides](https://www.itnog.it/files/1-3_202604-cbiasibetti-L2FWA-ITNOG10-Public.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/1-3_202604-cbiasibetti-L2FWA-ITNOG10-Public.pdf)
 
 Christian Biasibetti
 
@@ -37,7 +37,7 @@ Christian Biasibetti
 
 ### BGP nell'underlay multi-cloud: resilienza e simmetria tra on-prem e public cloud
 
-**Links:** [Slides](https://www.itnog.it/files/1-17_ITNOG10-BGPunderlayMultiCloud-CPLC-20260421.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/1-17_ITNOG10-BGPunderlayMultiCloud-CPLC-20260421.pdf)
 
 Carlo Pio Luigi Ciciriello
 
@@ -48,7 +48,7 @@ Carlo Pio Luigi Ciciriello
 
 ### Open Networking and IPoDWDM in Production: Operational Lessons from European Networks
 
-**Links:** [Slides](https://www.itnog.it/files/2-17_IPoDWDM%20400G%20ZR+%20ITNOG10%20v1.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/2-17_IPoDWDM%20400G%20ZR+%20ITNOG10%20v1.pdf)
 
 Alessandro Giudice
 
@@ -59,7 +59,7 @@ Alessandro Giudice
 
 ### Hollow Core Fibre - Nothing is better than glass for guiding light
 
-**Links:** [Slides](https://www.itnog.it/files/1-11_ITNOG_hollowcorefiber.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/1-11_ITNOG_hollowcorefiber.pdf)
 
 Steve Jones
 
@@ -70,7 +70,7 @@ Steve Jones
 
 ### SRv6 uSID: Deterministic AI Backend Networking and Unified DC Frontend Design
 
-**Links:** [Slides](https://www.itnog.it/files/1-13_2026_ITNOG_adonzell_Cisco-final.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/1-13_2026_ITNOG_adonzell_Cisco-final.pdf)
 
 Alberto Donzelli — the slides filename ("Cisco-final") indicates a Cisco-affiliated session; treat as a vendor-informed design pattern, not a neutral case study
 
@@ -90,7 +90,7 @@ Mauro Magrassi — MIX (Milan Internet exchange)
 
 ### Inside Seabone: experiences of a Tier-1 Backbone
 
-**Links:** [Slides](https://www.itnog.it/files/1-9_ITNOG_%20Inside%20Seabone%20-%20Experiences%20of%20a%20Tier-1%20Backbone.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/1-9_ITNOG_%20Inside%20Seabone%20-%20Experiences%20of%20a%20Tier-1%20Backbone.pdf)
 
 Gabriele Laghi, Patrizia Rossi, Antonio Ferretti
 
@@ -101,7 +101,7 @@ Gabriele Laghi, Patrizia Rossi, Antonio Ferretti
 
 ### Migrazione del nostro Backbone a SR-MPLS perdendo pochi ping...
 
-**Links:** [Slides](https://www.itnog.it/files/1-2_Il%20nostro%20Backbone%20-%20ITNOG10.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/1-2_Il%20nostro%20Backbone%20-%20ITNOG10.pdf)
 
 Denis Corradini
 
@@ -112,7 +112,7 @@ Denis Corradini
 
 ### Transforming BGP operations to serve the best prefix out of 26 million
 
-**Links:** [Slides](https://www.itnog.it/files/1-5_Transforming%20BGP%20Operations.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/1-5_Transforming%20BGP%20Operations.pdf)
 
 Alessandro D'Eliseo, Antonio Prado
 
@@ -134,7 +134,7 @@ Mirko Mosca
 
 ### Building the longest SR-TE lsp in the world
 
-**Links:** [Slides](https://www.itnog.it/files/1-12_longesttunnel-itnog_26_um_2.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/1-12_longesttunnel-itnog_26_um_2.pdf)
 
 Umberto M
 
@@ -154,7 +154,7 @@ OPNET — vendor session (OPNET listed as the speaker)
 
 ### Open Lab: A collaborative multi-vendor platform for experimentation and validation of next-generation networking technologies
 
-**Links:** [Slides](https://www.itnog.it/files/1-18_A%20collaborative%20multi-vendor%20platform%20for%20experimentation%20and%20validation%20of%20next-generation%20networking%20technologies.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/1-18_A%20collaborative%20multi-vendor%20platform%20for%20experimentation%20and%20validation%20of%20next-generation%20networking%20technologies.pdf)
 
 Flavio Luciani
 
@@ -165,7 +165,7 @@ Flavio Luciani
 
 ### AS/IXP Traffic Observability / Osservabilità del traffico AS/IXP
 
-**Links:** [Slides](https://www.itnog.it/files/2-13_trafficobservabilityITNOG_0426_FINALE.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/2-13_trafficobservabilityITNOG_0426_FINALE.pdf)
 
 Luca Deri, Federico Santulli
 
@@ -176,7 +176,7 @@ Luca Deri, Federico Santulli
 
 ### Semplificare l'automazione multi-vendor: Client RESTCONF auto-generati dai moduli YANG
 
-**Links:** [Slides](https://www.itnog.it/files/2-14_Matteo%20Colantonio%20semplificare%20automazione%20multivendor%20ITNOG10.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/2-14_Matteo%20Colantonio%20semplificare%20automazione%20multivendor%20ITNOG10.pdf)
 
 Matteo Colantonio
 
@@ -189,7 +189,7 @@ Matteo Colantonio
 
 ### Antares: Multi-Agent AI for Automated Network Analysis and Troubleshooting in GARR Data Centers
 
-**Links:** [Slides](https://www.itnog.it/files/2-12_Antares-ITNOG10.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/2-12_Antares-ITNOG10.pdf)
 
 Francesco Lombardo — GARR (Italian research and education network)
 
@@ -200,7 +200,7 @@ Francesco Lombardo — GARR (Italian research and education network)
 
 ### Measuring the public Internet
 
-**Links:** [Slides](https://www.itnog.it/files/2-15_APNIC%20ITNOG%2010.pdf)
+**Links:** [Slides](https://www.itnog.it/itnog10/files/2-15_APNIC%20ITNOG%2010.pdf)
 
 João Damas — APNIC (per slides filename)
 

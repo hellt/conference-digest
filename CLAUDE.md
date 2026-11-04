@@ -197,7 +197,15 @@ adapted from containerlab.dev. The tracker carries a client-side name filter
 **Search** indexes each pick once, from its talk page. A digest post is found
 by its title, intro and facts line only: `build_site.py` marks its body and
 every heading in it `data-search-exclude` (Zensical drops a section only when
-its heading carries the attribute).
+its heading carries the attribute). A result's second line is the index's
+`path` breadcrumb, which for a one-heading page is just the title again, so
+`make site` runs `scripts/search_paths.py` after the build to rewrite it in
+`site/search.json`: talks get `[conference, date-span]`, digest posts
+`["Conference digest", date-span]` (from the same registry data the pages
+were rendered from). `path` is an indexed field, so this also makes talks
+findable by conference name or year. `make serve-site` skips this step (the
+index is rebuilt live by Zensical's compiled search plugin, which can't be
+hooked).
 
 **Social cards:** Zensical's `social` plugin draws a 1200×630 card per page
 from `layouts/night.yml` (with `layouts/assets/night.svg` behind it) and writes

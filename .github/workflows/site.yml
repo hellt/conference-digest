@@ -17,6 +17,7 @@ on:
       - 'uv.lock'
       - 'Makefile'
       - 'scripts/build_site.py'
+      - 'scripts/search_paths.py'
       - 'conferences/registry.yaml'
       - '.github/workflows/site.yml'
   pull_request:
@@ -29,6 +30,7 @@ on:
       - 'pyproject.toml'
       - 'uv.lock'
       - 'scripts/build_site.py'
+      - 'scripts/search_paths.py'
   # The weekly scan commits state.json/registry.yaml with GITHUB_TOKEN, which
   # does not trigger push workflows; refresh the Conferences page after it.
   workflow_run:

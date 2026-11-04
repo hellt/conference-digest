@@ -4251,3 +4251,81 @@ netnod-2025:
     'The Illusion of Control: Trusting Software in the Age of Compromise':
     - vulnerability-management
     - zero-trust
+pytorch-2026:
+  post:
+  - rdma
+  - ai-networks
+  - gpu-clusters
+  - kubernetes
+  - network-security
+  talks:
+    'Future of Distributed Communication in PyTorch: New APIs for Fault Tolerance, RDMA and Extensibility':
+    - rdma
+    - ai-networks
+    - observability
+    'Demo Theater: OpenCLIC: Open Communication for Distributed Inference':
+    - rdma
+    - ai-networks
+    - ethernet
+    'Introducing NCCL Extensions: Communication Patterns for Modern AI':
+    - rdma
+    - ai-networks
+    - gpu-clusters
+    Self-Healing PyTorch Training Through Live GPU Migration:
+    - ai-networks
+    - sre
+    - troubleshooting
+    'Scaling Foundation Models: From Broken to Near-Linear Multi-Node Training':
+    - ai-networks
+    - rdma
+    - benchmarking
+    State-of-the-Art KV Transfer for Disaggregated LLM Serving in vLLM:
+    - ai-networks
+    - load-balancing
+    - gpu-clusters
+    'Crossing the Divide: Co-Evolving Kubernetes and Ray for the AI Era':
+    - kubernetes
+    - cloud-native
+    - orchestration
+    'Guardrails at the Infrastructure Layer: Sandboxing and governing Agentic AI in production':
+    - kubernetes
+    - network-security
+    - zero-trust
+    'Compute, Latency, and Safety: Architecting Stateful Guardrails for Multi-Agent Workflows':
+    - network-security
+    - offensive-security
+    - authorization
+    'Beyond Collectives: Building Fused Compute-Communication Kernels with PyTorch Symmetric Memory':
+    - rdma
+    - ai-networks
+    rocSHMEM Symmetric Memory in PyTorch for AMD GPUs:
+    - rdma
+    - gpu-clusters
+    - ai-networks
+    'MCCL: Fault-Tolerant Collective Communication for Large-Scale GPU Training':
+    - ai-networks
+    - gpu-clusters
+    - sre
+    'EP-Overlap: Hiding Expert-Parallel Communication in MoE Training':
+    - ai-networks
+    - rdma
+    'Native Tiered KV Cache Offloading in vLLM: From Storage Offloading to Disaggregated Serving':
+    - ai-networks
+    - load-balancing
+    'Five Bottlenecks, Five Fixes: Systematic Performance Diagnosis for PyTorch Distributed Training':
+    - troubleshooting
+    - benchmarking
+    - ai-networks
+    'XCCL: Scaling PyTorch Collectives to Exascale on Intel GPUs with TorchComms':
+    - ai-networks
+    - gpu-clusters
+    - testing
+    Monarch - Single-Machine DevX at Distributed Scale:
+    - rdma
+    - ai-networks
+    Who Owns Production When the Agent Does the Fixing? Governance in AI-Assisted SRE:
+    - sre
+    - automation
+    Precompile for Training:
+    - ai-networks
+    - testing

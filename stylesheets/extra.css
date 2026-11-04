@@ -166,6 +166,26 @@ a:focus-visible, button:focus-visible, label:focus-visible {
 .md-typeset .digest-fact { display: inline; color: var(--signal-muted); font-size: .55rem; line-height: 1.8; }
 .md-typeset .digest-fact + .digest-fact::before { content: '·'; margin: 0 .55rem; }
 .md-typeset .digest-fact a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
+/* Conferences tracker: the name-filter box above the table. */
+.md-typeset .conf-filter { margin: 1rem 0 1.2rem; }
+.md-typeset .conf-filter input {
+  width: 100%;
+  max-width: 22rem;
+  padding: .45rem .75rem;
+  font: inherit;
+  font-size: .7rem;
+  color: var(--signal-ink);
+  background: transparent;
+  border: 1px solid var(--signal-rule);
+  border-radius: 0;
+  appearance: none;
+}
+.md-typeset .conf-filter input::placeholder { color: var(--signal-muted); }
+.md-typeset .conf-filter input:focus {
+  outline: none;
+  border-color: var(--signal-muted);
+}
+.md-typeset .conf-filter input::-webkit-search-cancel-button { display: none; }
 .md-typeset h2.tier { border-top: 1px solid var(--signal-rule); padding-top: 1.3rem; margin-top: 2.4rem; }
 .md-typeset .digest-facts + h2.tier { border-top: 0; padding-top: 0; }
 .md-typeset .pick { margin: 1.5rem 0 2.4rem; padding: 0 0 1.6rem; border-bottom: 1px solid var(--signal-rule); }

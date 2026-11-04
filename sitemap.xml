@@ -1912,6 +1912,63 @@
         <loc>https://tldr.netdevops.me/kubecon-na-2025/tiktoks-ipv6-journey-to-cilium-pitfalls-and-lessons-learned/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/automating-technical-support-at-isps-using-ai-agents-and-tr-369-usp/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/automation-and-telemetry-applied-to-bgp-routing-policies/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/behind-the-routes-measuring-bgp-instability-on-the-internet/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/bgp-optimization-for-medium-sized-isps-technical-and-financial-decisions/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/bgp-origin-in-practice-inconsistencies-observed-in-lacnic-prefixes/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/case-study-route-hijacking-rpki-and-social-engineering/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/channelmania-secure-the-future-of-your-dwdm-network-topology-remaining-f/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/evpn-vxlan-the-new-language-of-modern-peering/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/hands-on-aspa-configuration-and-lessons-learned/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/impacts-of-llm-traffic-on-peering-strategies/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/ip-geolocation-update/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/lightscope-turning-unused-production-ports-into-global-network-telescope/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/routing-under-siege-how-traffic-engineering-decisions-facilitate-prefix/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/the-annoying-noisy-bgp-speakers/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/the-internet-asn-graph/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/towards-detecting-dos-attacks-in-the-servers-nic/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/towards-the-age-of-ipv6-only/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/lacnic-45/what-is-my-rpki-validator-doing-right-now/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/lacnic-46/</loc>
       </url>
       <url>

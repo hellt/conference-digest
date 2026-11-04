@@ -3833,3 +3833,421 @@ zanog-2026:
     DNS Resolution from Operators in South Africa:
     - dns
     - measurement
+denog-17:
+  post:
+  - optics
+  - ai-networks
+  - bgp
+  - ebpf
+  talks:
+    'Ultra Ethernet: Addressing AI/HPC Interconnect Challenges Beyond the InfiniBand Monopoly':
+    - ai-networks
+    - rdma
+    - standardization
+    Forwarding packets at scale - Building a Cloud Data Plane using eBPF/XDP:
+    - ebpf
+    - linux-networking
+    - cloud-native
+    Fun with Optics:
+    - optics
+    - ethernet
+    - silicon
+    Channelmania! – future proof your DWDM network topology while keeping it flexible for 1.6T:
+    - optics
+    - capacity-planning
+    Understanding and optimising transceiver efficiency using internal metrics for improved power savings:
+    - optics
+    - power
+    Sorry we messed up:
+    - bgp
+    - troubleshooting
+    - network-security
+    EVPN for the rest of us – what happens when software people try to use EVPN:
+    - bgp
+    - data-center-fabric
+    - linux-networking
+    EVPN Flex Cross Connect - L2 P2P VPNs can be agile as well!:
+    - bgp
+    - data-center-fabric
+    - standardization
+    'Going Large: Extended Route Targets or Extended Confusion?':
+    - bgp
+    - data-center-fabric
+    - standardization
+    400G ZR+ BiDi does not exist, it can't hurt you. Or can it?:
+    - optics
+    - interconnection
+    Th3 Flock of Bird s:
+    - bgp
+    - open-source
+    - benchmarking
+    The return of EGP or the curious case of the BGP Origin attribute:
+    - bgp
+    - measurement
+    IPv6 multihoming without BGP, quo vadis?:
+    - ipv6
+    - routing-protocols
+    - linux-networking
+    Fiber Testing in Data Centers – Bringing Theory and Practice Workshop:
+    - cabling
+    - optics
+    - testing
+    The basics of maintaining fiber optic connections:
+    - cabling
+    - optics
+    Inventing the wheel - Network Orchestration at scale:
+    - automation
+    - orchestration
+    - peering
+    'Containerlab: A guide to building your own virtual datacenter and monitoring it':
+    - testing
+    - open-source
+    - automation
+    '"What can possibly go wrong?" Stories of peculiarities of modern server hardware':
+    - linux-networking
+    - silicon
+    - benchmarking
+    Merging Service Provider Networks:
+    - mpls
+    - routing-protocols
+    'Uncovering Blackholes: Advanced Detection Techniques for Complex Networks':
+    - troubleshooting
+    - anomaly-detection
+    'You can’t just model a train in Netbox: About Architecting and running modern IT Infrastructure in Trains':
+    - automation
+    - iot
+    Security.txt across the industry:
+    - vulnerability-management
+    - measurement
+    'Slow network, fast money: How Deutsche Telekom breaks the internet':
+    - peering
+    - internet-governance
+    - measurement
+    200 GbE network processing with 100 W - or "can I *make* a chip for that?":
+    - silicon
+    - open-source
+arin-56:
+  post:
+  - address-policy
+  - bgp
+  - internet-governance
+  - dns
+  talks:
+    Routing Security Update:
+    - bgp
+    - network-security
+    - pki
+    ICANN/IANA Update:
+    - dns
+    - pki
+    ARIN Directory Services:
+    - address-policy
+    - standardization
+    Internet Evolution and IPv6:
+    - ipv6
+    - dns
+    Policy Implementation and Experience Report:
+    - address-policy
+    - measurement
+    'Policy Block 1: ARIN-2024-5: Rewrite of NRPM Section 4.4 Micro-Allocation':
+    - address-policy
+    NRO EC Update and State of the RIR System:
+    - internet-governance
+    ASO AC Update/ICP-2 Consultation:
+    - internet-governance
+ripe-91:
+  post:
+  - bgp
+  - measurement
+  - network-security
+  - linux-networking
+  talks:
+    'PON in the Datacenter: Hyperscale for Management and Console':
+    - optics
+    - data-center-fabric
+    - cabling
+    Getting 1+ Tbps from an x86 server:
+    - linux-networking
+    - benchmarking
+    'gNMI and you: The death of SNMP was greatly exagerated':
+    - telemetry
+    - observability
+    Collecting and analyzing routing information with Rotonda:
+    - bgp
+    - open-source
+    - telemetry
+    Querying the DFZ:
+    - bgp
+    - measurement
+    A Farewell to ARPs - IPv6 resolved gateways:
+    - ipv6
+    - data-center-fabric
+    - standardization
+    Rewriting BGP Origin:
+    - bgp
+    - measurement
+    PQC for the RPKI:
+    - quantum-safe
+    - pki
+    - bgp
+    Exploring the Blind Spot of IXP Route Server:
+    - peering
+    - bgp
+    - network-security
+    Assessing the feasibility of routing security compliance tests:
+    - bgp
+    - network-security
+    - testing
+    'Free and open-source network labs with Containerlab: an intro, an update, a workshop':
+    - testing
+    - open-source
+    - automation
+    What happens when you overshare? A Look into the BGP Maximum-Prefix Feature:
+    - bgp
+    - measurement
+    - troubleshooting
+    'The BGP Clock and the BGP Observatory: Hunting Stuck Routes':
+    - bgp
+    - measurement
+    - troubleshooting
+    Are NTP Clients Always Right?:
+    - time-sync
+    - measurement
+    An empirical evaluation of longitudinal anycast catchment stability:
+    - load-balancing
+    - measurement
+    What's new at the IETF?:
+    - standardization
+    - identity
+    - bgp
+    Internet Resiliency Club update:
+    - iot
+    - open-source
+    Cyberattack Observation Using IoT Honeypots at Yokohama National University:
+    - ml-for-networking
+    - anomaly-detection
+    Network Measurement in the Dark:
+    - measurement
+    - encryption
+hacklu-2025:
+  post:
+  - offensive-security
+  - vulnerability-management
+  - identity
+  - network-security
+  talks:
+    'OverLAPS: Overriding LAPS Logic':
+    - identity
+    - vulnerability-management
+    - offensive-security
+    'Nightmare on NTLM street: Legacy’s Revenge':
+    - authentication
+    - identity
+    'Red Team Story: Offline SCCM backup secrets decryption':
+    - offensive-security
+    - vulnerability-management
+    'What''s New in Suricata 8: Enhanced Detection and Performance':
+    - network-security
+    - open-source
+    'Palo Alto GlobalProtect : Remote Full Compromise Exploit Chain':
+    - vulnerability-management
+    - offensive-security
+    No way to enable SSH access to your new router? The vendor might have something to hide:
+    - vulnerability-management
+    - offensive-security
+    'Silent Killers: Unmasking a Large-Scale Legacy Driver Exploitation Campaign':
+    - vulnerability-management
+    - offensive-security
+    'LOLBlue : Living Off the Land with Blue Team tools':
+    - offensive-security
+    - anomaly-detection
+    Integrating Zeek With Third-Party Applications:
+    - anomaly-detection
+    - open-source
+    - api
+    Attacking The Developer Environment Through Drive-by Localhost Attacks:
+    - vulnerability-management
+    - offensive-security
+    RomCom exploits Firefox and Windows zero days in the wild:
+    - threat-intelligence
+    - offensive-security
+    - vulnerability-management
+    'Wyse Management Subversion : Taking over Dell''s Wyse Management Suite':
+    - vulnerability-management
+    - offensive-security
+    'From YAML to Root: CI/CD Pipeline Attacks and Countermeasures':
+    - vulnerability-management
+    - automation
+    'BoD: Bytes Over DNS':
+    - dns
+    - network-security
+    CLI ambush:
+    - tls
+    - vulnerability-management
+    When Netflow meets Pcap - A network forensic approach.:
+    - measurement
+    - observability
+    Building an unmarshelling chain from hydrators:
+    - vulnerability-management
+    - offensive-security
+    Instrumenting software builds to detect stealth backdoors and other curiosities:
+    - vulnerability-management
+    - attestation
+    'Lethal Language Models: From Bit Flip to RCE in Ollama':
+    - ml-for-networking
+    - vulnerability-management
+    - offensive-security
+    'Revisiting RAND’s Lost Monte Carlo Simulations: Sharla Perrine, Paul Baran, and the True Business Case for the Internet':
+    - measurement
+    - internet-governance
+    2038 is gonna be epoch!:
+    - vulnerability-management
+    - time-sync
+ocp-2025:
+  post:
+  - ai-networks
+  - optics
+  - open-source
+  - attestation
+  talks:
+    Technical Aspects of Ultra Ethernet 1.0:
+    - ai-networks
+    - rdma
+    - ethernet
+    - standardization
+    'CSIG: Congestion Signaling in the AI Era':
+    - congestion-control
+    - ai-networks
+    - telemetry
+    'Performance Evaluation of Interconnect Technologies for AI Scale-Up Computing: UAL vs UALoE/SUE vs RoCE':
+    - gpu-clusters
+    - rdma
+    - ethernet
+    Capacity Aware Adaptive Routing:
+    - ai-networks
+    - load-balancing
+    - data-center-fabric
+    Evolution of Ethernet based switch platforms and fabrics to meet Meta's AI training clusters' scale-out AI fabric demands:
+    - ai-networks
+    - data-center-fabric
+    - ethernet
+    SRv6 for AI Backend:
+    - segment-routing
+    - ai-networks
+    - data-center-fabric
+    Enabling Technologies for Next Generation Large Scale AI Backend Networking:
+    - ai-networks
+    - telemetry
+    - open-source
+    'eCore: Architecture and Whitebox Evolution of Alibaba''s Service-oriented DCI network':
+    - interconnection
+    - switching
+    - open-source
+    'The Path to Zero Flap: Reinventing Optical Reliability for Scalable AI Clusters presented by Credo':
+    - optics
+    - ai-networks
+    - troubleshooting
+    OCP Optical Circuit Switching Subproject Update:
+    - optics
+    - open-source
+    - data-center-fabric
+    Evaluation of CPO Performance and Pluggable Optics Health for Reliable AI Infrastructure:
+    - optics
+    - ai-networks
+    - measurement
+    ? Development Challenges and Next-Generation Opportunities for Linear Drive Pluggable
+      Optics (LPO) and Linear Receive Optics (LRO)
+    : - optics
+      - power
+      - ethernet
+    Disaggregated Leaf-Spine Architecture for Next-gen Azure T2 Network:
+    - open-source
+    - switching
+    - data-center-fabric
+    'Driving Innovation in Network Infrastructure: Key Advances from the Sonic Routing Workgroup':
+    - open-source
+    - bgp
+    - standardization
+    Unifying P4 with eBPF and DPDK via XDP2:
+    - ebpf
+    - p4
+    - programmable-dataplane
+    'INSPECT: Data analysis tool for Proactive Link Failure Detection on Meta''s AI Infrastructure':
+    - ml-for-networking
+    - ai-networks
+    - anomaly-detection
+    Accurate Cable Length Measurement for Optimized Data Center Networking:
+    - cabling
+    - data-center-fabric
+    'New Strategic Initiative: Open Cluster Designs for AI':
+    - ai-networks
+    - data-center-fabric
+    - open-source
+    Methodology and Observation of Congestion Control Impact on MoE Training Job Completion Time:
+    - benchmarking
+    - ai-networks
+    SPDM Update:
+    - attestation
+    - identity
+    'Firefly: Scalable, Ultra-Accurate Clock Synchronization for Datacenters':
+    - time-sync
+    - data-center-fabric
+    - measurement
+    'XASM: A Foundation to Program the X2 With P4':
+    - p4
+    - silicon
+    - programmable-dataplane
+    Cryptography in Caliptra:
+    - attestation
+    - identity
+    - encryption
+    'Agile AI Architectures: The Fungible Data Center for the AI Era':
+    - ai-networks
+    - data-center-fabric
+    - orchestration
+netnod-2025:
+  post:
+  - optics
+  - ai-networks
+  - bgp
+  - automation
+  talks:
+    Ultra Ethernet:
+    - ai-networks
+    - rdma
+    - ethernet
+    - standardization
+    ? Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for
+      Coherent (16QAM) and Non-Coherent (PAM4) high speed transceivers under environmental
+      variations
+    : - optics
+      - measurement
+    'SRv6 uSID: fundamental transformation of the IP stack':
+    - segment-routing
+    - ipv6
+    Building Modern and Scalable DC Fabrics:
+    - data-center-fabric
+    - ai-networks
+    Your AS-set is crucial to your routing security. 3 tips on securing your AS-set:
+    - bgp
+    - network-security
+    - peering
+    'Mastering Network Operations: The Power of Abstraction in Automation':
+    - automation
+    - orchestration
+    Encrypted Network Traffic Analysis and Protection:
+    - encryption
+    - anomaly-detection
+    - network-security
+    Meta – Big Trends and how it will change the Network:
+    - ai-networks
+    - capacity-planning
+    Recursive DNS in Telia Company Sweden:
+    - dns
+    - troubleshooting
+    Optics was instrumental in building the Internet—and will be crucial in an AI-driven world:
+    - optics
+    - ai-networks
+    'The Illusion of Control: Trusting Software in the Age of Compromise':
+    - vulnerability-management
+    - zero-trust

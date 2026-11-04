@@ -19,6 +19,45 @@
         <loc>https://tldr.netdevops.me/archive/2026/page/3/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/arin-57/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-57/advisory-council-working-group-updates/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-57/engineering-update/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-57/grant-reports/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-57/keynote-demystifying-rpki-exploring-tools-to-simplify-roa-planning-and-v/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-57/keynote-the-nine-lives-of-an-early-adopter-leading-cats-to-water-in-the/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-57/number-resource-organization-number-council-and-rir-governance-document/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-57/policy-block-draft-policy-arin-2025-3-change-section-9-out-of-region-use/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-57/policy-block-draft-policy-arin-2025-8-reserve-410-space-for-in-region-us/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-57/policy-block-draft-policy-arin-2026-1-taking-ip-to-other-planets-tiptop/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-57/policy-implementation-and-experience-report/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-57/registry-integrity-and-oversight/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/arin-57/routing-security-update/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/arin-58/</loc>
       </url>
       <url>
@@ -337,6 +376,9 @@
         <loc>https://tldr.netdevops.me/category/operator/page/2/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/category/operator/page/3/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/category/security/</loc>
       </url>
       <url>
@@ -344,6 +386,81 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/category/vendor/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/400g-800g-and-terabit-pluggable-optics-what-you-need-to-know-brkopt-2699/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/advancements-and-applications-of-coherent-pluggable-technology-in-high-b/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/agile-services-networking-scaling-across-data-centers-and-workloads-psom/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/are-you-prepared-for-the-next-typhoon-brkgen-2499/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/benchmarking-aiml-infrastructure-at-scale-aiml-architectures-ai-workload/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/cisco-nexus-9000-architecture-brkdcn-3939/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/cisco-nexus-one-an-architecture-for-your-cisco-datacenter-of-tomorrow-br/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/demystifying-ai-infrastructure-for-a-network-engineer-brkdcn-2971/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/designing-next-generation-dc-and-wan-networks-for-the-neo-cloud-era-with/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/designing-zero-trust-data-center-segmentation-architecture-brkdcn-2930/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/enterprise-ready-agentic-workflows-hardening-mcp-with-policy-as-code-dev/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/everything-you-ever-wanted-to-know-about-power-in-routers-and-switches-a/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/hijacking-trust-weaponizing-stolen-cookies-and-tokens-brksec-2132/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/how-the-worlds-largest-backbone-provider-is-leveraging-the-ai-opportunit/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/how-to-network-llms-splitting-large-language-models-running-on-gpus-acro/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/introduction-to-ebpf-brksec-2169/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/lessons-navigating-from-proof-of-concept-to-production-with-ipoptical-co/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/life-of-a-packet-in-kubernetes-a-network-engineers-guide-brkcld-3734/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/preparation-guide-to-emergency-comms-and-networking-using-amateur-radios/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/preparing-for-ai-workloads-options-for-integrated-rack-power-and-cooling/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/redefining-netflix-bgp-architecture-with-ios-xrv-9000-route-reflector-ap/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/rethinking-identity-policy-and-access-control-ipac-for-agentic-ai-brketi/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/the-new-quic-based-encrypted-protocol-stack-taking-over-the-internet-and/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2026/vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/ciscolive-us-2026/</loc>
@@ -1111,6 +1228,51 @@
         <loc>https://tldr.netdevops.me/conferences/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/dknog-16/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/aspa-the-new-protocol-for-improving-bgp-routing-security/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/auto-bandwidth-for-sr-te/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/automate-what-makes-sense-data-principles-and-practice/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-fl/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/command-line-to-codebase-learning-software-to-expand-your-engineering-to/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/geopolitics-and-digital-sovereignty-in-greenland/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/how-far-can-you-get-with-ix-route-servers/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/introduction-to-design-driven-network-automation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/ixp-based-observations-on-peering-and-routing-changes-after-middle-east/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/merging-service-provider-networks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/network-automation-in-the-modern-age/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/sovereignty-for-whom-between-digital-independence-and-big-tech-expansion/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/understanding-and-optimising-transceiver-efficiency-using-internal-metri/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/dknog-16/who-put-the-inter-in-internet/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/grnog-20/</loc>
       </url>
       <url>
@@ -1697,6 +1859,63 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/imc-2026/when-bgp-goes-mad-multi-scale-anomaly-detection-in-internet-routing/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/antares-multi-agent-ai-for-automated-network-analysis-and-troubleshootin/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/asixp-traffic-observability-osservabilita-del-traffico-asixp/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/bgp-nellunderlay-multi-cloud-resilienza-e-simmetria-tra-on-prem-e-public/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/building-the-longest-sr-te-lsp-in-the-world/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/hollow-core-fibre-nothing-is-better-than-glass-for-guiding-light/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/inside-seabone-experiences-of-a-tier-1-backbone/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/integration-of-security-functions-in-evpnvxlan-using-group-based-policy/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/measuring-the-public-internet/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/migrazione-del-nostro-backbone-a-sr-mpls-perdendo-pochi-ping/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/mix-dc3/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/national-layer-2-wholesale-fwa-leveraging-vxlan/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/open-lab-a-collaborative-multi-vendor-platform-for-experimentation-and-v/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/open-networking-and-ipodwdm-in-production-operational-lessons-from-europ/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/otn-oltre-il-trasporto-reti-programmabili-latenze-garantite-e-architettu/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/semplificare-lautomazione-multi-vendor-client-restconf-auto-generati-dai/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/splitting-ottico-passivo-per-ridundanza-link/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/srv6-usid-deterministic-ai-backend-networking-and-unified-dc-frontend-de/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/itnog-10/transforming-bgp-operations-to-serve-the-best-prefix-out-of-26-million/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/kubecon-eu-2025/</loc>
@@ -2845,6 +3064,42 @@
         <loc>https://tldr.netdevops.me/page/4/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/peeringdays-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/peeringdays-2026/30-years-of-interconnection-experience-from-an-italian-ixp/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/peeringdays-2026/agentic-ddos-opsai-powered-operations-layer-for-genieatm/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/peeringdays-2026/demystifying-coherent-optics-for-network-professionals/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/peeringdays-2026/evpn-one-control-plane-to-rule-them-all/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/peeringdays-2026/get-the-benefits-of-a-non-profit-localsub-regional-ix/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/peeringdays-2026/hardwired-for-chaos-the-no-bullsht-way-to-build-infrastructure-that-last/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/peeringdays-2026/peering-market-at-a-glance/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/peeringdays-2026/securing-ixp-fabric/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/peeringdays-2026/technical-workshop-a-focus-on-roas-and-aspas-and-how-to-handle-them-with/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/peeringdays-2026/the-scourge-of-excessive-as-sets/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/peeringdays-2026/understanding-and-optimising-transceiver-efficiency-using-internal-metri/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/pets-2026/</loc>
       </url>
       <url>
@@ -3179,6 +3434,42 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/srecon-2025-americas/taming-the-beast-understanding-and-harnessing-the-power-of-http-proxies/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-41/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-41/25-years-of-swissix-a-quarter-century-of-peering-in-switzerland/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-41/an-introduction-to-aspa-validating-as-paths-with-the-help-of-rpki/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-41/bgproutesio-a-next-gen-bgp-data-collection-platform/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-41/building-a-vendor-agnostic-e2e-testing-ecosystem-with-netlab/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-41/evpn-unleashed-scaling-multi-domain-fabrics-with-evpn-gateways/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-41/rethinking-network-strategy-building-resilience-through-pnis-peering-and/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-41/scion-inter-domain-routing/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-41/shared-spectrum-mofn/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-41/the-network-automation-map-navigate-your-journey-with-the-naf-automation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-41/toward-agentic-network-operations-what-ai-can-and-cant-do/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/swinog-41/understanding-and-optimising-transceiver-power-consumption-using-interna/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/swinog-42/</loc>

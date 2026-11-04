@@ -1,0 +1,1807 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Enrichment note: the Cisco Live on-demand library is a login-gated JavaScript app; page fetches returned only the site shell, so every write-up below is grounded solely in the program abstracts. Vendor-program caveat applies throughout — Cisco speakers presenting Cisco products — and each entry…">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/ciscolive-us-2025/">
+      
+      
+      
+        <link rel="prev" href="../autocon-3/">
+      
+      
+        <link rel="next" href="../netuk-2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>Cisco Live US 2025 (San Diego) - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="Cisco Live US 2025 (San Diego) · Conference Digest" />
+<meta property="og:description" content="Enrichment note: the Cisco Live on-demand library is a login-gated JavaScript app; page fetches returned only the site shell, so every write-up below is grounded solely in the program abstracts. Vendor-program caveat applies throughout — Cisco speakers presenting Cisco products — and each entry…" />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/ciscolive-us-2025.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/ciscolive-us-2025/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Cisco Live US 2025 (San Diego) · Conference Digest" />
+<meta property="twitter:description" content="Enrichment note: the Cisco Live on-demand library is a login-gated JavaScript app; page fetches returned only the site shell, so every write-up below is grounded solely in the program abstracts. Vendor-program caveat applies throughout — Cisco speakers presenting Cisco products — and each entry…" />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/ciscolive-us-2025.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cisco Live US 2025 (San Diego)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-tabs__powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-tabs__powered-text">Powered by</span>
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#400g-800g-and-terabit-pluggable-optics-what-you-need-to-know-brkopt-2699" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        400G, 800G, and Terabit Pluggable Optics: What You Need to Know - BRKOPT-2699
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advancements-and-applications-of-coherent-pluggable-technology-in-high-bandwidth-transport-networks-brkopt-2556" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Advancements and Applications of Coherent Pluggable Technology in High Bandwidth Transport Networks - BRKOPT-2556
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethernet-evolution-and-challenges-in-the-world-of-ai-brknwt-2504" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ethernet Evolution and Challenges in the world of AI - BRKNWT-2504
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-cisco-build-ai-readiness-ip-backbone-with-8000-series-brkmsi-3000" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How Cisco build AI readiness IP Backbone with 8000 Series - BRKMSI-3000
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizing-ai-ready-wan-infrastructure-with-microsoft-and-cisco-cssent-2100" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Optimizing AI-Ready WAN Infrastructure with Microsoft and Cisco - CSSENT-2100
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groq-an-ai-success-story-deploying-high-performance-and-low-latency-ai-networks-using-cisco-nexus-9000-cssdcn-2005" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Groq: An AI Success Story - Deploying High-Performance, and Low-Latency AI Networks Using Cisco Nexus 9000 - CSSDCN-2005
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cisco-nexus-9000-architecture-brkdcn-3939" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cisco Nexus 9000 Architecture - BRKDCN-3939
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        VXLAN EVPN: A Deep Dive into Packet Forwarding - BRKDCN-3966
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sonic-architecture-and-deployment-deep-dive-brkmsi-2004" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SONiC Architecture and Deployment Deep Dive - BRKMSI-2004
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-of-micro-segmentation-in-cisco-nx-os-vxlan-evpn-fabrics-with-vxlan-group-policy-option-gpo-brkdcn-2633" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Deployment of Micro-Segmentation in Cisco NX-OS VXLAN EVPN Fabrics with VXLAN Group Policy Option (GPO) - BRKDCN-2633
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-superpowers-with-ebpf-and-tetragon-brksec-2167" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Security superpowers with eBPF and Tetragon - BRKSEC-2167
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-swiss-army-knife-of-cloud-native-networking-brkcld-1012" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Swiss Army Knife of Cloud Native Networking - BRKCLD-1012
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#are-you-prepared-for-the-next-typhoon-brksec-2499" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Are You Prepared for the Next Typhoon? - BRKSEC-2499
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#innovative-authentication-beyond-passwords-brksec-2584" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Innovative Authentication: Beyond Passwords - BRKSEC-2584
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-into-ciscos-use-of-quic-masque-and-os-native-capabilities-to-deliver-frictionless-zero-trust-access-brksec-3027" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Deep Dive into Cisco's Use of QUIC, MASQUE and OS Native Capabilities to Deliver Frictionless Zero Trust Access - BRKSEC-3027
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#impact-of-ai-traffic-in-transport-networks-brkspg-1180" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Impact of AI Traffic in Transport Networks - BRKSPG-1180
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-tier-fabrics-network-designs-for-the-modern-data-center-brkdcn-2999" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Multi-Tier Fabrics: Network Designs for the Modern Data Center - BRKDCN-2999
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-your-data-to-llms-identity-functions-and-agents-are-all-you-need-brketi-2411" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Connecting Your Data to LLMs: Identity, Functions and Agents are all you Need - BRKETI-2411
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evpn-fabric-in-the-real-world-securing-critical-infrastructure-in-finance-and-aviation-brkens-2655" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        EVPN Fabric in the Real World: Securing Critical Infrastructure in Finance and Aviation - BRKENS-2655
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#packet-buddy-chatting-with-your-pcaps-via-the-cloud-or-locally-on-your-own-machine-aihub-2000" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Packet Buddy - Chatting with your PCAPs, via the Cloud or Locally on Your Own Machine! - AIHUB-2000
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packets-in-space-networking-for-the-final-frontier-ciscou-1057" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Packets in Space: Networking for the Final Frontier - CISCOU-1057
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-introduction-to-quantum-mechanics-computing-and-networking-brketi-1401" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        An Introduction to Quantum Mechanics, Computing, and Networking - BRKETI-1401
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#400g-800g-and-terabit-pluggable-optics-what-you-need-to-know-brkopt-2699" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        400G, 800G, and Terabit Pluggable Optics: What You Need to Know - BRKOPT-2699
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advancements-and-applications-of-coherent-pluggable-technology-in-high-bandwidth-transport-networks-brkopt-2556" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Advancements and Applications of Coherent Pluggable Technology in High Bandwidth Transport Networks - BRKOPT-2556
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethernet-evolution-and-challenges-in-the-world-of-ai-brknwt-2504" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ethernet Evolution and Challenges in the world of AI - BRKNWT-2504
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-cisco-build-ai-readiness-ip-backbone-with-8000-series-brkmsi-3000" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How Cisco build AI readiness IP Backbone with 8000 Series - BRKMSI-3000
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizing-ai-ready-wan-infrastructure-with-microsoft-and-cisco-cssent-2100" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Optimizing AI-Ready WAN Infrastructure with Microsoft and Cisco - CSSENT-2100
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groq-an-ai-success-story-deploying-high-performance-and-low-latency-ai-networks-using-cisco-nexus-9000-cssdcn-2005" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Groq: An AI Success Story - Deploying High-Performance, and Low-Latency AI Networks Using Cisco Nexus 9000 - CSSDCN-2005
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cisco-nexus-9000-architecture-brkdcn-3939" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cisco Nexus 9000 Architecture - BRKDCN-3939
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        VXLAN EVPN: A Deep Dive into Packet Forwarding - BRKDCN-3966
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sonic-architecture-and-deployment-deep-dive-brkmsi-2004" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SONiC Architecture and Deployment Deep Dive - BRKMSI-2004
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-of-micro-segmentation-in-cisco-nx-os-vxlan-evpn-fabrics-with-vxlan-group-policy-option-gpo-brkdcn-2633" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Deployment of Micro-Segmentation in Cisco NX-OS VXLAN EVPN Fabrics with VXLAN Group Policy Option (GPO) - BRKDCN-2633
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-superpowers-with-ebpf-and-tetragon-brksec-2167" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Security superpowers with eBPF and Tetragon - BRKSEC-2167
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-swiss-army-knife-of-cloud-native-networking-brkcld-1012" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Swiss Army Knife of Cloud Native Networking - BRKCLD-1012
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#are-you-prepared-for-the-next-typhoon-brksec-2499" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Are You Prepared for the Next Typhoon? - BRKSEC-2499
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#innovative-authentication-beyond-passwords-brksec-2584" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Innovative Authentication: Beyond Passwords - BRKSEC-2584
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-into-ciscos-use-of-quic-masque-and-os-native-capabilities-to-deliver-frictionless-zero-trust-access-brksec-3027" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Deep Dive into Cisco's Use of QUIC, MASQUE and OS Native Capabilities to Deliver Frictionless Zero Trust Access - BRKSEC-3027
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#impact-of-ai-traffic-in-transport-networks-brkspg-1180" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Impact of AI Traffic in Transport Networks - BRKSPG-1180
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-tier-fabrics-network-designs-for-the-modern-data-center-brkdcn-2999" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Multi-Tier Fabrics: Network Designs for the Modern Data Center - BRKDCN-2999
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-your-data-to-llms-identity-functions-and-agents-are-all-you-need-brketi-2411" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Connecting Your Data to LLMs: Identity, Functions and Agents are all you Need - BRKETI-2411
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evpn-fabric-in-the-real-world-securing-critical-infrastructure-in-finance-and-aviation-brkens-2655" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        EVPN Fabric in the Real World: Securing Critical Infrastructure in Finance and Aviation - BRKENS-2655
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#packet-buddy-chatting-with-your-pcaps-via-the-cloud-or-locally-on-your-own-machine-aihub-2000" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Packet Buddy - Chatting with your PCAPs, via the Cloud or Locally on Your Own Machine! - AIHUB-2000
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packets-in-space-networking-for-the-final-frontier-ciscou-1057" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Packets in Space: Networking for the Final Frontier - CISCOU-1057
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-introduction-to-quantum-mechanics-computing-and-networking-brketi-1401" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        An Introduction to Quantum Mechanics, Computing, and Networking - BRKETI-1401
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>14 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="cisco-live-us-2025-san-diego">Cisco Live US 2025 (San Diego)<a class="headerlink" href="#cisco-live-us-2025-san-diego" title="Permanent link">#</a></h1>
+<p><em>Enrichment note: the Cisco Live on-demand library is a login-gated JavaScript app; page fetches returned only the site shell, so every write-up below is grounded solely in the program abstracts. Vendor-program caveat applies throughout — Cisco speakers presenting Cisco products — and each entry flags where the substance looks general versus product-specific.</em></p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>June 8, 2025 – June 12, 2025</span>
+<span class="digest-fact" markdown><a href="https://www.ciscolive.com/on-demand/on-demand-library.html?search.event=1748366287882001oJzH">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="400g-800g-and-terabit-pluggable-optics-what-you-need-to-know-brkopt-2699"><a href="400g-800g-and-terabit-pluggable-optics-what-you-need-to-know-brkopt-2699/">400G, 800G, and Terabit Pluggable Optics: What You Need to Know - BRKOPT-2699</a><a class="headerlink" href="#400g-800g-and-terabit-pluggable-optics-what-you-need-to-know-brkopt-2699" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271967757001zfoK">Abstract</a></p>
+</div>
+<p>Mark Nowell (<a href="../companies/cisco/">Cisco</a>), Errol Roberts (Cisco)</p>
+<ul>
+<li><strong>Why</strong>: The optics roadmap is now the binding constraint on DC fabric design — power, reach, and breakout options determine what topologies are even buildable. Nowell is a long-standing IEEE 802.3 optics contributor, which makes this a standards-insider survey rather than a datasheet read.</li>
+<li><strong>What</strong>: A survey of current 400G pluggable optics and their applications, next-generation 800G/1.6T form factors including breakout use cases, the status of 800 Gb/s and 1.6 Tb/s Ethernet standardization, and co-packaged optics (integrating optical interfaces into switch ASICs), framed by industry dynamics and AI-driven demand (from abstract only).</li>
+<li><strong>How</strong>: Technology survey across form factors, IEEE standardization tracks, and co-packaging directions, covering both coherent and noncoherent optics.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to anyone specifying optical interconnect for DC or DCI — the standards and form-factor content is vendor-neutral even though the speaker is Cisco. Assumes working deployment knowledge of optical modules.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="advancements-and-applications-of-coherent-pluggable-technology-in-high-bandwidth-transport-networks-brkopt-2556"><a href="advancements-and-applications-of-coherent-pluggable-technology-in-high-b/">Advancements and Applications of Coherent Pluggable Technology in High Bandwidth Transport Networks - BRKOPT-2556</a><a class="headerlink" href="#advancements-and-applications-of-coherent-pluggable-technology-in-high-bandwidth-transport-networks-brkopt-2556" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271963268001zbFi">Abstract</a></p>
+</div>
+<p>Anuj Malik (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Coherent pluggables are collapsing the boundary between the IP and optical layers — directly relevant to DC/WAN interconnect, where the same pluggable now serves router ports and line systems.</li>
+<li><strong>What</strong>: The technical underpinnings of coherent pluggables — tunable lasers, high-speed ADC/DACs, DSP algorithms — plus performance comparisons (data rates, reach, power consumption) against traditional coherent solutions, real-world deployment scenarios, and the trend toward IP/optical convergence (from abstract only).</li>
+<li><strong>How</strong>: Coherent DSP packaged into pluggable transceiver form factors, compared against embedded coherent line systems on rate/reach/power metrics.</li>
+<li><strong>Where applicable</strong>: High-bandwidth transport and DCI. Vendor talk, so expect the case studies to favor Cisco outcomes, but the component physics and metric trade-offs are general.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="ethernet-evolution-and-challenges-in-the-world-of-ai-brknwt-2504"><a href="ethernet-evolution-and-challenges-in-the-world-of-ai-brknwt-2504/">Ethernet Evolution and Challenges in the world of AI - BRKNWT-2504</a><a class="headerlink" href="#ethernet-evolution-and-challenges-in-the-world-of-ai-brknwt-2504" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271973129001zVr1">Abstract</a></p>
+</div>
+<p>Kapil Mehta (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: This is the lossless-fabric problem the PM works on daily — RDMA and elephant flows breaking Ethernet's assumptions in AI back-end networks — plus a read on where Ultra Ethernet Consortium standardization is actually heading.</li>
+<li><strong>What</strong>: Ethernet's evolution history, its current failure modes under AI switching workloads (RDMA, elephant packet flows), Cisco's solutions, and the innovations being standardized by the Ultra Ethernet Consortium (from abstract only).</li>
+<li><strong>How</strong>: Survey of the mechanisms being applied to congestion and losslessness at AI scale, positioned against UEC's standardization work items.</li>
+<li><strong>Where applicable</strong>: AI back-end networks generally; the problem framing is industry-wide, but the "solutions" portion will be Cisco-flavored.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="how-cisco-build-ai-readiness-ip-backbone-with-8000-series-brkmsi-3000"><a href="how-cisco-build-ai-readiness-ip-backbone-with-8000-series-brkmsi-3000/">How Cisco build AI readiness IP Backbone with 8000 Series - BRKMSI-3000</a><a class="headerlink" href="#how-cisco-build-ai-readiness-ip-backbone-with-8000-series-brkmsi-3000" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271963072001z05e">Abstract</a></p>
+</div>
+<p>Rob Piasecki (<a href="../companies/cisco/">Cisco</a>), Ruben Lopes da Fonte (Cisco)</p>
+<ul>
+<li><strong>Why</strong>: Rare config-level treatment of lossless fabric mechanics — RoCEv2, PFC, ECN — including CLI verification, which is exactly the lossless-fabric internals the PM wants, not just architecture slideware.</li>
+<li><strong>What</strong>: How Cisco builds AI infrastructure for webscalers: the requirements, the RoCEv2/PFC/ECN technology, detailed IOS-XR configuration, CLI verification that PFC and ECN are working, and design guidance (from abstract only — note the abstract itself is typo-laden, suggesting a hands-on rather than polished session).</li>
+<li><strong>How</strong>: Step-by-step IOS-XR configuration of PFC and ECN with CLI validation, wrapped in design recommendations for AI-ready IP backbones.</li>
+<li><strong>Where applicable</strong>: Platform-specific to Cisco 8000-series/IOS-XR, but the design principles (ECN threshold tuning, PFC behavior verification, lossless design patterns) transfer to any RoCEv2 fabric.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="optimizing-ai-ready-wan-infrastructure-with-microsoft-and-cisco-cssent-2100"><a href="optimizing-ai-ready-wan-infrastructure-with-microsoft-and-cisco-cssent-2/">Optimizing AI-Ready WAN Infrastructure with Microsoft and Cisco - CSSENT-2100</a><a class="headerlink" href="#optimizing-ai-ready-wan-infrastructure-with-microsoft-and-cisco-cssent-2100" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1758668928353001AbVz">Abstract</a></p>
+</div>
+<p>Sarav Subramanian (<a href="../companies/microsoft/">Microsoft</a>), Ruben Lopes da Fonte (<a href="../companies/cisco/">Cisco</a>), Gaisin Rustam (Microsoft)</p>
+<ul>
+<li><strong>Why</strong>: An end-user case study from Microsoft on deploying RDMA in the Azure WAN — extending lossless-network practice beyond the DC into the WAN, which few operators talk about publicly.</li>
+<li><strong>What</strong>: How AI-ready infrastructure is being built in the Azure WAN using RDMA for high throughput, low latency, and lossless transfer with minimal CPU load, and the congestion-management strategies (Priority Flow Control, ECN) used to handle oversubscription and microbursts (from abstract only).</li>
+<li><strong>How</strong>: RDMA across WAN infrastructure with PFC/ECN congestion control for microburst and oversubscription scenarios.</li>
+<li><strong>Where applicable</strong>: Microsoft Azure WAN-specific setup. Joint vendor-customer session, so expect some marketing gloss, but the scenario — lossless behavior at WAN scale — is unusually candid territory for Microsoft to discuss.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="groq-an-ai-success-story-deploying-high-performance-and-low-latency-ai-networks-using-cisco-nexus-9000-cssdcn-2005"><a href="groq-an-ai-success-story-deploying-high-performance-and-low-latency-ai-n/">Groq: An AI Success Story - Deploying High-Performance, and Low-Latency AI Networks Using Cisco Nexus 9000 - CSSDCN-2005</a><a class="headerlink" href="#groq-an-ai-success-story-deploying-high-performance-and-low-latency-ai-networks-using-cisco-nexus-9000-cssdcn-2005" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271879213001zkhz">Abstract</a></p>
+</div>
+<p>Swetha Velamuri (<a href="../companies/cisco/">Cisco</a>), Cameron Ferdinands (Groq)</p>
+<ul>
+<li><strong>Why</strong>: A real customer (Groq) describing inference-network design — inference traffic has different characteristics from training (latency-critical, bursty, iterative) and public detail on inference fabrics is scarce.</li>
+<li><strong>What</strong>: How Groq uses Nexus 9000/NX-OS to achieve scalability, bandwidth, low latency, and congestion management for AI inference, plus how Cisco optics choices reduce cost and energy (from abstract only — the abstract makes performance and cost claims without numbers; treat specifics as unverified until seen in the recording).</li>
+<li><strong>How</strong>: Groq's software-first hardware approach paired with Nexus congestion management and optics innovations.</li>
+<li><strong>Where applicable</strong>: Groq-specific inference deployments; success-story framing with a Cisco co-speaker, so expect a product-friendly narrative rather than a post-mortem.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="cisco-nexus-9000-architecture-brkdcn-3939"><a href="cisco-nexus-9000-architecture-brkdcn-3939/">Cisco Nexus 9000 Architecture - BRKDCN-3939</a><a class="headerlink" href="#cisco-nexus-9000-architecture-brkdcn-3939" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271892827001zyLO">Abstract</a></p>
+</div>
+<p>Faraz Taifehesmatian (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Switching silicon and forwarding internals are squarely in the PM's core interest; this is the deep-dive on the ASIC generation that underpins the AI-fabric sessions above.</li>
+<li><strong>What</strong>: An in-depth architecture study of the latest Nexus 9000 modular and top-of-rack switches: ASIC architecture, forwarding mechanics, physical design elements, and the hardware-enabled features that deliver DC network services (from abstract only).</li>
+<li><strong>How</strong>: Architecture walkthrough from silicon to system.</li>
+<li><strong>Where applicable</strong>: Cisco-specific silicon, but the trade-offs discussed (buffering, forwarding pipeline, physical design) are transferable to evaluating any modern DC switch ASIC.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966"><a href="vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966/">VXLAN EVPN: A Deep Dive into Packet Forwarding - BRKDCN-3966</a><a class="headerlink" href="#vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271893016001zKXr">Abstract</a></p>
+</div>
+<p>Lukas Krattiger (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: "A day in the life of a packet" is exactly the datapath-internals treatment the PM values — most EVPN content covers control plane; this follows the data plane.</li>
+<li><strong>What</strong>: How routing and bridging actually happen across a VXLAN EVPN fabric — what occurs from the ingress VTEP through to the egress VTEP and beyond, including how multi-destination traffic is handled (from abstract only).</li>
+<li><strong>How</strong>: Step-by-step packet walk through the overlay, ingress to egress.</li>
+<li><strong>Where applicable</strong>: The mechanics are general to VXLAN EVPN regardless of vendor; examples will be NX-OS-based.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="sonic-architecture-and-deployment-deep-dive-brkmsi-2004"><a href="sonic-architecture-and-deployment-deep-dive-brkmsi-2004/">SONiC Architecture and Deployment Deep Dive - BRKMSI-2004</a><a class="headerlink" href="#sonic-architecture-and-deployment-deep-dive-brkmsi-2004" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271967174001zlt7">Abstract</a></p>
+</div>
+<p>Jiri Chaloupka (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: SONiC is where open-source NOS momentum actually is, and a Cisco deep dive covering SONiC on their own Silicon One dataplane is a strong signal about where the disaggregation story is heading — including AI back-end networks as a deployment driver.</li>
+<li><strong>What</strong>: Part one covers SONiC's OS architecture in detail with examples of SONiC running on Cisco Silicon One NPU/data plane; part two covers deployment examples and when SONiC should be considered, including AI frontend and back-end networks (from abstract only).</li>
+<li><strong>How</strong>: Architecture decomposition of SONiC's componentized design, followed by deployment-decision guidance.</li>
+<li><strong>Where applicable</strong>: SONiC on Cisco hardware specifically, but the architecture content and the "when to choose SONiC" framing apply to any disaggregated-NOS evaluation.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="deployment-of-micro-segmentation-in-cisco-nx-os-vxlan-evpn-fabrics-with-vxlan-group-policy-option-gpo-brkdcn-2633"><a href="deployment-of-micro-segmentation-in-cisco-nx-os-vxlan-evpn-fabrics-with/">Deployment of Micro-Segmentation in Cisco NX-OS VXLAN EVPN Fabrics with VXLAN Group Policy Option (GPO) - BRKDCN-2633</a><a class="headerlink" href="#deployment-of-micro-segmentation-in-cisco-nx-os-vxlan-evpn-fabrics-with-vxlan-group-policy-option-gpo-brkdcn-2633" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271884455001zrLo">Abstract</a></p>
+</div>
+<p>Max Ardica (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: East-west segmentation enforced in the fabric itself — the intersection of the PM's network security and DC overlay interests — and grounded in an IETF draft rather than a purely proprietary mechanism.</li>
+<li><strong>What</strong>: Micro-segmentation using security groups and security group ACLs in NX-OS VXLAN EVPN fabrics via VXLAN Group Policy Option (IETF draft-smith-vxlan-group-policy-05), covering the control- and data-plane components of the implementation and common use cases including service-chaining simplification (from abstract only).</li>
+<li><strong>How</strong>: Group policy conveyed in the VXLAN header so per-application policy follows the workload anywhere in the fabric, replacing perimeter-centric inspection.</li>
+<li><strong>Where applicable</strong>: NX-OS EVPN fabrics; the mechanism follows an IETF draft so the concept is portable, but the described implementation is Cisco-specific.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="security-superpowers-with-ebpf-and-tetragon-brksec-2167"><a href="security-superpowers-with-ebpf-and-tetragon-brksec-2167/">Security superpowers with eBPF and Tetragon - BRKSEC-2167</a><a class="headerlink" href="#security-superpowers-with-ebpf-and-tetragon-brksec-2167" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750272001166001zXE7">Abstract</a></p>
+</div>
+<p>Liz Rice (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Liz Rice is one of the leading voices in eBPF/Cilium, and Tetragon is the open-source enforcement engine underneath Cisco's Hypershield — this session reveals where a major vendor's security stack is actually being built, from a contributor rather than a marketer.</li>
+<li><strong>What</strong>: A deep dive into Tetragon: YAML tracing policies mapped to eBPF programs attached to a variety of event types, multi-program "following" of a series of events to pinpoint likely-malicious behavior, and in-kernel event aggregation/filtering to minimize observability overhead (from abstract only).</li>
+<li><strong>How</strong>: eBPF programs attached at kernel event points; policy-based correlation across event sequences; in-kernel aggregation and filtering to keep overhead low.</li>
+<li><strong>Where applicable</strong>: Linux hosts and Kubernetes broadly — Tetragon is open source and vendor-neutral in applicability, while also being the substrate for Cisco's commercial Hypershield.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="the-swiss-army-knife-of-cloud-native-networking-brkcld-1012"><a href="the-swiss-army-knife-of-cloud-native-networking-brkcld-1012/">The Swiss Army Knife of Cloud Native Networking - BRKCLD-1012</a><a class="headerlink" href="#the-swiss-army-knife-of-cloud-native-networking-brkcld-1012" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271845187001zhhH">Abstract</a></p>
+</div>
+<p>Raymond De Jong (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Hits the PM's Cilium/BGP/IPAM interests directly — BGP from Cilium and LB IPAM for multi-tenant pools are the operational pieces most teams hit in production.</li>
+<li><strong>What</strong>: Cilium's advanced features — BGP, load balancing, LB IPAM, and network policies — for multi-cloud and multi-tenancy networking, including routing/connectivity between Kubernetes clusters and external networks, BGP setup across different topologies, and multi-tenant routing with multiple IP pools for LoadBalancer IP assignment (from abstract only).</li>
+<li><strong>How</strong>: eBPF datapath (Cilium) with a BGP control plane for external reachability, and LB IPAM pools giving platform engineers per-tenant LB IP allocation.</li>
+<li><strong>Where applicable</strong>: General Cilium/Kubernetes environments; mechanisms are open source even though the speaker is Cisco.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="are-you-prepared-for-the-next-typhoon-brksec-2499"><a href="are-you-prepared-for-the-next-typhoon-brksec-2499/">Are You Prepared for the Next Typhoon? - BRKSEC-2499</a><a class="headerlink" href="#are-you-prepared-for-the-next-typhoon-brksec-2499" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750272003117001zp8C">Abstract</a></p>
+</div>
+<p>Paul Giralt (<a href="../companies/cisco/">Cisco</a>), Steve Nowell (Cisco)</p>
+<ul>
+<li><strong>Why</strong>: Salt Typhoon is the defining nation-state compromise of network infrastructure in this era, and this session combines Talos threat insight with concrete hardening guidance plus Cisco's "secure by default" roadmap — with an explicit feedback opportunity on that roadmap.</li>
+<li><strong>What</strong>: The nature of the 2024 Salt Typhoon intrusions across multi-vendor infrastructure at major telecoms as understood by Talos, specific hardening steps available today, and planned future "secure by default" enhancements to network infrastructure (from abstract only).</li>
+<li><strong>How</strong>: Attack-surface analysis followed by hardening best practices and defensive-design changes.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to network infrastructure security; telecom operators are the most-affected vertical, but the hardening lessons apply to any operator of carrier or enterprise network gear.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="innovative-authentication-beyond-passwords-brksec-2584"><a href="innovative-authentication-beyond-passwords-brksec-2584/">Innovative Authentication: Beyond Passwords - BRKSEC-2584</a><a class="headerlink" href="#innovative-authentication-beyond-passwords-brksec-2584" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750272010780001zHEa">Abstract</a></p>
+</div>
+<p>Stefan Duernberger (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Directly the identity stack the PM tracks — passkeys, OAuth 2.0/OIDC — plus two genuinely emerging items (Google's Device-Bound Session Credentials and Shared Signals and Events) that sit beyond the basics.</li>
+<li><strong>What</strong>: The role and implementation of passkeys, OAuth 2.0 and OIDC for cross-platform authentication, Google DBSC, Cisco Duo Passport, and an overview of Shared Signals and Events — all framed within a Zero Trust architecture (from abstract only).</li>
+<li><strong>How</strong>: Protocol survey connecting credential technology (passkeys/WebAuthn) to authorization frameworks (OAuth/OIDC) to session-integrity (DBSC) and continuous-signal (SSSE) mechanisms.</li>
+<li><strong>Where applicable</strong>: General web and enterprise authentication; the Duo Passport portion is Cisco product content, but the protocol material is standards-based and general.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="deep-dive-into-ciscos-use-of-quic-masque-and-os-native-capabilities-to-deliver-frictionless-zero-trust-access-brksec-3027"><a href="deep-dive-into-ciscos-use-of-quic-masque-and-os-native-capabilities-to-d/">Deep Dive into Cisco's Use of QUIC, MASQUE and OS Native Capabilities to Deliver Frictionless Zero Trust Access - BRKSEC-3027</a><a class="headerlink" href="#deep-dive-into-ciscos-use-of-quic-masque-and-os-native-capabilities-to-deliver-frictionless-zero-trust-access-brksec-3027" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750272012757001zOOu">Abstract</a></p>
+</div>
+<p>Vinny Parla (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Shows where identity and transport converge: MASQUE/QUIC-based access proxied through OS-native clients from Apple, Google, and Samsung, with WebAuthn and passkeys in the loop — a credible picture of how frictionless ZTNA gets to Wi-Fi-level ubiquity.</li>
+<li><strong>What</strong>: How industry-standard protocols (MASQUE, QUIC, WebAuthn, passkeys, private 5G) can deliver Zero Trust Access with minimal user/admin friction; how native OS clients from Apple and Samsung and the Cisco Zero Trust Access module in Cisco Secure Client leverage MASQUE and QUIC for a seamless experience (from abstract only).</li>
+<li><strong>How</strong>: MASQUE-style proxying over QUIC tunnels integrated with OS-native network clients and passkey-based user identity.</li>
+<li><strong>Where applicable</strong>: Enterprise and consumer device access; heavily ecosystem-dependent (collaboration with Apple, Google, Samsung), so the OS-client pieces are platform-specific while the protocol layer is standard.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="impact-of-ai-traffic-in-transport-networks-brkspg-1180"><a href="impact-of-ai-traffic-in-transport-networks-brkspg-1180/">Impact of AI Traffic in Transport Networks - BRKSPG-1180</a><a class="headerlink" href="#impact-of-ai-traffic-in-transport-networks-brkspg-1180" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271963873001z5j7">Abstract</a></p>
+</div>
+<p>Virginia Teixeira (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Near-core for anyone responsible for DC/WAN interconnect: AI traffic patterns (RAG, grounding, agents, edge distribution) change DCI and WAN dimensioning assumptions in ways transport teams haven't absorbed yet.</li>
+<li><strong>What</strong>: An analysis of AI traffic characteristics across a set of AI use cases and their impact on WAN and DCI design requirements (from abstract only).</li>
+<li><strong>How</strong>: Traffic-pattern characterization mapped onto transport network design levers.</li>
+<li><strong>Where applicable</strong>: Service-provider and large-enterprise transport. The speaker's own framing is honest that AI deployment models are still settling, so expect early directional analysis rather than settled engineering rules.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="multi-tier-fabrics-network-designs-for-the-modern-data-center-brkdcn-2999"><a href="multi-tier-fabrics-network-designs-for-the-modern-data-center-brkdcn-299/">Multi-Tier Fabrics: Network Designs for the Modern Data Center - BRKDCN-2999</a><a class="headerlink" href="#multi-tier-fabrics-network-designs-for-the-modern-data-center-brkdcn-2999" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271892264001zRcH">Abstract</a></p>
+</div>
+<p>Marina Ferreira (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: The back half of this session is genuinely relevant physical-DC content — super-spine and hyperscale plane designs, where 400G/800G is cost-effective, fixed vs. modular trade-offs, and routed fabrics for cloud-native applications. The front half is Clos 101, which the PM doesn't need; hence adjacent rather than core.</li>
+<li><strong>What</strong>: Fat-tree, Clos, and leaf/spine foundations extended to super-spine and hyperscale plane designs, cost-effective use of 400G/800G, fixed-vs-modular switch decisions, and a review of self-organized routed fabrics for cloud-native applications (from abstract only).</li>
+<li><strong>How</strong>: Design-pattern survey with cost/scale reasoning.</li>
+<li><strong>Where applicable</strong>: General data center design, vendor-neutral in principle; the routed-fabric segment connects to the same IP-underlay-for-cloud trend the PM sees in Kubernetes environments.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="connecting-your-data-to-llms-identity-functions-and-agents-are-all-you-need-brketi-2411"><a href="connecting-your-data-to-llms-identity-functions-and-agents-are-all-you-n/">Connecting Your Data to LLMs: Identity, Functions and Agents are all you Need - BRKETI-2411</a><a class="headerlink" href="#connecting-your-data-to-llms-identity-functions-and-agents-are-all-you-need-brketi-2411" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271915660001znU9">Abstract</a></p>
+</div>
+<p>Guillaume De Saint Marc (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Agentic identity is one of the PM's explicit interests and almost absent from vendor programs — this is the closest hit: per-request authorization deciding which data an agent may fetch and serve.</li>
+<li><strong>What</strong>: Architectures and tools for connecting enterprise data (including on-prem) to LLMs without data migration, including real-time prompt inspection to identify the data required by a request, determine whether the user has rightful access, and serve only authorized data (from abstract only).</li>
+<li><strong>How</strong>: Prompt-time authorization — mapping an incoming prompt to data requirements and checking entitlements before data is served to the model.</li>
+<li><strong>Where applicable</strong>: Enterprise GenAI deployments; Cisco brings product positioning, but the underlying pattern — entitlement-aware data serving for agent requests — is broadly relevant to anyone designing agentic identity.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="evpn-fabric-in-the-real-world-securing-critical-infrastructure-in-finance-and-aviation-brkens-2655"><a href="evpn-fabric-in-the-real-world-securing-critical-infrastructure-in-financ/">EVPN Fabric in the Real World: Securing Critical Infrastructure in Finance and Aviation - BRKENS-2655</a><a class="headerlink" href="#evpn-fabric-in-the-real-world-securing-critical-infrastructure-in-finance-and-aviation-brkens-2655" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271921837001zgvo">Abstract</a></p>
+</div>
+<p>Daniel Cantor (Fiserv), Ekta Ghosh (Adani Airports Holding Limited), Rahul Kachalia (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Two real end users (Fiserv, Adani Airports) discussing EVPN-fabric modernization under regulatory pressure. Worth a look for the case-study value, but the abstract is executive-framed ("high-impact executive session") and offers no metrics, failure discussion, or technical depth — approach with skepticism.</li>
+<li><strong>What</strong>: How Fiserv and Adani Airports used Catalyst networking and EVPN fabric as the foundation for automated, always-on infrastructure, with claimed reductions in downtime and improved security posture (from abstract only — no numbers in the abstract; verify specifics in the recording).</li>
+<li><strong>How</strong>: Executive discussion/Q&amp;A format per the abstract.</li>
+<li><strong>Where applicable</strong>: Regulated enterprise environments (financial services, aviation/airports); campus and DC-edge scale rather than hyperscale.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="packet-buddy-chatting-with-your-pcaps-via-the-cloud-or-locally-on-your-own-machine-aihub-2000"><a href="packet-buddy-chatting-with-your-pcaps-via-the-cloud-or-locally-on-your-o/">Packet Buddy - Chatting with your PCAPs, via the Cloud or Locally on Your Own Machine! - AIHUB-2000</a><a class="headerlink" href="#packet-buddy-chatting-with-your-pcaps-via-the-cloud-or-locally-on-your-own-machine-aihub-2000" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271926126001z8AP">Abstract</a></p>
+</div>
+<p>Dave Zacks (<a href="../companies/cisco/">Cisco</a>), Prapanch Ramamoorthy (Cisco)</p>
+<ul>
+<li><strong>Why</strong>: LLM-assisted packet analysis is a genuinely new tool category, and the PM lives in PCAPs — this is the kind of thing worth knowing exists before it lands in a commercial product.</li>
+<li><strong>What</strong>: An open-source solution ("PACKET BUDDY") that lets you chat with your own Wireshark captures via a choice of LLMs — asking what traffic is present, what errors it sees, and getting help understanding packets and flows — deployable via cloud or locally on your own machine (from abstract only).</li>
+<li><strong>How</strong>: PCAP ingestion fed to an LLM with conversational querying; the local deployment option is the privacy-relevant detail.</li>
+<li><strong>Where applicable</strong>: Any environment; open source, with the obvious caveat that feeding captures to cloud LLMs has data-exposure implications — the local mode matters.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="packets-in-space-networking-for-the-final-frontier-ciscou-1057"><a href="packets-in-space-networking-for-the-final-frontier-ciscou-1057/">Packets in Space: Networking for the Final Frontier - CISCOU-1057</a><a class="headerlink" href="#packets-in-space-networking-for-the-final-frontier-ciscou-1057" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271840075001zf1I">Abstract</a></p>
+</div>
+<p>Lexie Cooper (Blue Origin), Eric Peterson (Blue Origin), Patrick Garggan (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Designing networks where failure is not an option and latency requirements are extreme forces first-principles thinking that is useful calibration for anyone building "critical" terrestrial infrastructure.</li>
+<li><strong>What</strong>: A moderated Q&amp;A with Blue Origin "rocket network engineers" on designing mission-critical networks for rockets and spacecraft — real-time telemetry, low-latency requirements, and extreme environmental conditions (from abstract only — note the program abstract is truncated mid-sentence, so the full scope of the session is unclear from the text alone).</li>
+<li><strong>How</strong>: Q&amp;A format rather than a prepared technical talk.</li>
+<li><strong>Where applicable</strong>: Aerospace-specific, but the deterministic, failure-intolerant design lessons generalize to any network with hard availability and timing requirements.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="an-introduction-to-quantum-mechanics-computing-and-networking-brketi-1401"><a href="an-introduction-to-quantum-mechanics-computing-and-networking-brketi-140/">An Introduction to Quantum Mechanics, Computing, and Networking - BRKETI-1401</a><a class="headerlink" href="#an-introduction-to-quantum-mechanics-computing-and-networking-brketi-1401" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ciscolive.com/on-demand/on-demand-library.html#/session/1750271916244001zYZ1">Abstract</a></p>
+</div>
+<p>Tim Szigeti (<a href="../companies/cisco/">Cisco</a>)</p>
+<ul>
+<li><strong>Why</strong>: Cisco is making a serious R&amp;D bet on quantum networking, and this is the clearest signal in the program of where the long-horizon network and security landscape may move (distributed quantum computing, entanglement-based secure communications, clock sync).</li>
+<li><strong>What</strong>: An introduction to quantum mechanics focused on qubits and their special properties — superposition, entanglement, no-cloning, including mathematical proofs — an overview of quantum computing's impact on network communications and security, and the building blocks, opportunities, and challenges of quantum networks, plus Cisco's current work (from abstract only).</li>
+<li><strong>How</strong>: Tutorial format; foundational science first, then networking implications.</li>
+<li><strong>Where applicable</strong>: Nothing here is deployable today — it is forward-looking R&amp;D context, useful for spotting the trajectory rather than near-term engineering.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>AI fabrics are the gravitational center of the entire program.</strong> Optics, Ethernet standards, switch ASICs, IOS-XR configuration, WAN design, and even coherent transport are all being reframed around AI training/inference traffic. The lossless-Ethernet problem (RoCEv2, PFC/ECN, microbursts, elephant flows) and the Ultra Ethernet Consortium's standardization work are the technical through-line — and notably, the lossless conversation has moved from the DC back-end into the WAN (Microsoft's Azure RDMA session).</li>
+<li><strong>Optics is now a first-class systems constraint.</strong> 800G/1.6T pluggables, breakout economics, 800 Gb/s and 1.6 Tb/s Ethernet standardization, and early co-packaged optics show the industry treating the optical module — its power, reach, and form factor — as a determinant of fabric topology rather than a pluggable afterthought.</li>
+<li><strong>eBPF has crossed from OSS novelty to vendor substrate.</strong> Liz Rice presenting Tetragon at Cisco Live, Tetragon powering Hypershield, and a full session on Cilium BGP/LB IPAM indicate that eBPF-based networking and security is now the foundation of a major vendor's cloud-native and security strategy — a meaningful trajectory signal for the ecosystem.</li>
+<li><strong>Identity is converging on session-bound credentials and continuous signals.</strong> Passkeys/WebAuthn, OAuth/OIDC, Google's Device-Bound Session Credentials, Shared Signals and Events, and MASQUE/QUIC-based zero trust collectively point away from one-time login events toward continuous, protocol-level session integrity — with agentic/LLM data-access authorization just beginning to appear at the edge of the program.</li>
+<li><strong>Nation-state infrastructure threat is driving a "secure by default" agenda.</strong> Salt Typhoon gets a full session combining Talos threat detail, concrete hardening steps, and a vendor roadmap for secure-by-default network devices — network device security is being treated as a lifecycle discipline, not a hardening checklist.</li>
+<li><strong>Open NOS momentum keeps building.</strong> A SONiC architecture deep dive on Cisco's own Silicon One dataplane — with AI back-end networks named as a key deployment driver — shows even incumbent vendors treating disaggregated operating systems as a primary path, not an experiment.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/ciscolive-us-2025.md"><code>digests/ciscolive-us-2025.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/ciscolive-us-2025.md"><code>prompts/ciscolive-us-2025.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../autocon-3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AutoCon 3 (Prague)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                AutoCon 3 (Prague)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../netuk-2/" class="md-footer__link md-footer__link--next" aria-label="Next: NetUK2 (The Brewery)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                NetUK2 (The Brewery)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

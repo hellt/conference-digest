@@ -580,6 +580,75 @@
         <loc>https://tldr.netdevops.me/ciscolive-eu-2026/vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/400g-800g-and-terabit-pluggable-optics-what-you-need-to-know-brkopt-2699/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/advancements-and-applications-of-coherent-pluggable-technology-in-high-b/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/an-introduction-to-quantum-mechanics-computing-and-networking-brketi-140/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/are-you-prepared-for-the-next-typhoon-brksec-2499/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/cisco-nexus-9000-architecture-brkdcn-3939/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/connecting-your-data-to-llms-identity-functions-and-agents-are-all-you-n/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/deep-dive-into-ciscos-use-of-quic-masque-and-os-native-capabilities-to-d/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/deployment-of-micro-segmentation-in-cisco-nx-os-vxlan-evpn-fabrics-with/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/ethernet-evolution-and-challenges-in-the-world-of-ai-brknwt-2504/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/evpn-fabric-in-the-real-world-securing-critical-infrastructure-in-financ/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/groq-an-ai-success-story-deploying-high-performance-and-low-latency-ai-n/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/how-cisco-build-ai-readiness-ip-backbone-with-8000-series-brkmsi-3000/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/impact-of-ai-traffic-in-transport-networks-brkspg-1180/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/innovative-authentication-beyond-passwords-brksec-2584/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/multi-tier-fabrics-network-designs-for-the-modern-data-center-brkdcn-299/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/optimizing-ai-ready-wan-infrastructure-with-microsoft-and-cisco-cssent-2/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/packet-buddy-chatting-with-your-pcaps-via-the-cloud-or-locally-on-your-o/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/packets-in-space-networking-for-the-final-frontier-ciscou-1057/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/security-superpowers-with-ebpf-and-tetragon-brksec-2167/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/sonic-architecture-and-deployment-deep-dive-brkmsi-2004/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/the-swiss-army-knife-of-cloud-native-networking-brkcld-1012/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-us-2025/vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/ciscolive-us-2026/</loc>
       </url>
       <url>
@@ -2782,6 +2851,45 @@
         <loc>https://tldr.netdevops.me/mlsys-2026/unleashing-scalable-context-parallelism-for-foundation-models-pre-traini/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/moreip-2025/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/moreip-2025/defending-europe-against-ddos-in-a-multi-polar-world/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/moreip-2025/farewell-legacy/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/moreip-2025/from-zero-to-ssl-automation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/moreip-2025/giving-our-birds-a-new-pair-of-wings/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/moreip-2025/ipv6-only-ixps-are-coming/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/moreip-2025/juniper-migration-journey/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/moreip-2025/panel-cross-ix-easy-peering-across-ixps/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/moreip-2025/panel-securing-the-vital-digital-infrastructures/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/moreip-2025/panel-the-power-of-precision-why-time-as-a-service-matters/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/moreip-2025/sneak-preview-the-erik-protocol-for-use-with-the-rpki/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/moreip-2025/the-floor/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/moreip-2025/traffic-statistics/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/moreip-2026/</loc>
       </url>
       <url>
@@ -3173,6 +3281,42 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/netnod-2026/understanding-and-optimising-transceiver-efficiency-using-internal-metri/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netuk-2/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netuk-2/analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netuk-2/bng-blaster-hands-on-training/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netuk-2/carbon-aware-routing-metrics-and-challenges/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netuk-2/detecting-non-spoofed-traffic-at-isp-ingress-points/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netuk-2/high-level-perspectives-on-artificial-intelligence-data-centers/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netuk-2/how-the-internet-routed-around-cable-damage-in-the-baltic-sea/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netuk-2/how-to-wash-your-servers-handling-extremes-of-weather-as-a-wisp/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netuk-2/power-consumption-considerations-in-metro-optical-networks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netuk-2/slash-your-cloud-network-costs-with-ebpf-network-monitoring/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netuk-2/some-interesting-stuff-i-found-on-ix-lans/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netuk-2/sorry-we-messed-up/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/netuk-3/</loc>

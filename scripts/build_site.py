@@ -817,7 +817,8 @@ def first_writeup(lines: list[str]) -> str:
 
 
 def render_talks(key: str, name: str, digest_title: str, started: date | None, ended: date | None,
-                 sections: list[dict], talk_tags: dict[str, list[str]] | None = None) -> tuple[list[tuple[str, str]], list[str]]:
+                 sections: list[dict], talk_tags: dict[str, list[str]] | None = None,
+                 source: str = "") -> tuple[list[tuple[str, str]], list[str]]:
     """One page per pick, as (path under docs/, page text), and each
     page's href from docs/posts/, in pick order. The pick's text is rendered
     as on the digest; the page adds a facts strip and the card front matter."""
@@ -850,6 +851,7 @@ def render_talks(key: str, name: str, digest_title: str, started: date | None, e
 
         facts = [
             f"[{digest_title} digest](../posts/{key}.md#{anchor_id(heading)})",
+            f"[Program]({source})" if source.startswith("http") else "",
             f"{tier.title()} pick",
             " · ".join(x for x in (place, dates) if x),
         ]
@@ -899,7 +901,7 @@ def render_post(key: str, entry: dict, meta: dict, body: str,
     source = entry.get("manual_fallback_url") or meta.get("source_url") or entry.get("program_url") or ""
     sections = pick_sections(rest)
     tags = tags or {}
-    talks, talk_links = render_talks(key, name, title, started, ended, sections, tags.get("talks"))
+    talks, talk_links = render_talks(key, name, title, started, ended, sections, tags.get("talks"), source)
     decorated, picks = annotate_employers(rest)
     decorated = decorate(decorated, talk_links)
 

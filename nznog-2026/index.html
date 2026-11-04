@@ -1,0 +1,1645 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A small, operator-heavy program (22 talks). Notable: none of the items carry paper or slide links in the material provided, so every write-up below is based on the program abstracts only. Tiers reflect the PM&#x27;s core interests (physical DC&#x2f;optics, cloud-native networking, network security,…">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/nznog-2026/">
+      
+      
+      
+        <link rel="prev" href="../kubecon-eu-2026/">
+      
+      
+        <link rel="next" href="../ciscolive-eu-2026/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>NZNOG 2026 — for a networking/identity PM - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="NZNOG 2026 — for a networking/identity PM · Conference Digest" />
+<meta property="og:description" content="A small, operator-heavy program (22 talks). Notable: none of the items carry paper or slide links in the material provided, so every write-up below is based on the program abstracts only. Tiers reflect the PM&#39;s core interests (physical DC/optics, cloud-native networking, network security,…" />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/nznog-2026.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/nznog-2026/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="NZNOG 2026 — for a networking/identity PM · Conference Digest" />
+<meta property="twitter:description" content="A small, operator-heavy program (22 talks). Notable: none of the items carry paper or slide links in the material provided, so every write-up below is based on the program abstracts only. Tiers reflect the PM&#39;s core interests (physical DC/optics, cloud-native networking, network security,…" />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/nznog-2026.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NZNOG 2026 — for a networking/identity PM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-tabs__powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-tabs__powered-text">Powered by</span>
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#radius-futures" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Radius Futures
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolving-optical-transport-400g-network-design-and-regional-diversity" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Evolving Optical Transport: 400G, Network Design, and Regional Diversity
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexible-for-16t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Channelmania! – future proof your DWDM network topology while keeping it flexible for 1.6T
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options-for-data-centre-interconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Options for Data Centre Interconnect
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiments-in-topology-visualization-using-bgp-ls-rfc-8571" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Experiments in Topology Visualization using BGP-LS (RFC-8571)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-open-rack-v3-to-enhance-your-data-centre-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Using Open Rack V3 to Enhance your Data Centre Infrastructure
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-network-state-checking-insights-from-the-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automated Network State Checking: Insights from the Field
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-evolution-of-tcp-transport-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Evolution of TCP Transport Protocols
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizing-traffic-flow-with-akamai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Optimizing Traffic Flow with Akamai
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuatahi-first-fibre-network-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tuatahi First Fibre: Network Update
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#routeviews-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Routeviews Update
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-fibre-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Open Fibre Standards
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designing-a-mikrotik-cgnat-solution-that-scales" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Designing a Mikrotik CGNAT Solution that Scales
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comfortable-complexity-of-network-overlays" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Comfortable Complexity of Network Overlays
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-evolution-of-network-configuration-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Evolution of Network Configuration Management
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datagrid-unlocking-the-potential-of-new-zealands-south-island" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Datagrid: Unlocking the Potential of New Zealand's South Island
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rethinking-netops-with-open-source-llms-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rethinking NetOps with Open-Source LLMs &amp; RAG
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ast-space-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AST Space Mobile
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defending-multistakeholder-internet-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Defending Multistakeholder Internet Governance
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#radius-futures" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Radius Futures
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolving-optical-transport-400g-network-design-and-regional-diversity" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Evolving Optical Transport: 400G, Network Design, and Regional Diversity
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexible-for-16t" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Channelmania! – future proof your DWDM network topology while keeping it flexible for 1.6T
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options-for-data-centre-interconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Options for Data Centre Interconnect
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiments-in-topology-visualization-using-bgp-ls-rfc-8571" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Experiments in Topology Visualization using BGP-LS (RFC-8571)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-open-rack-v3-to-enhance-your-data-centre-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Using Open Rack V3 to Enhance your Data Centre Infrastructure
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-network-state-checking-insights-from-the-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automated Network State Checking: Insights from the Field
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-evolution-of-tcp-transport-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Evolution of TCP Transport Protocols
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizing-traffic-flow-with-akamai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Optimizing Traffic Flow with Akamai
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuatahi-first-fibre-network-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tuatahi First Fibre: Network Update
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#routeviews-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Routeviews Update
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-fibre-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Open Fibre Standards
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designing-a-mikrotik-cgnat-solution-that-scales" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Designing a Mikrotik CGNAT Solution that Scales
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comfortable-complexity-of-network-overlays" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Comfortable Complexity of Network Overlays
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-evolution-of-network-configuration-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Evolution of Network Configuration Management
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datagrid-unlocking-the-potential-of-new-zealands-south-island" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Datagrid: Unlocking the Potential of New Zealand's South Island
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rethinking-netops-with-open-source-llms-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rethinking NetOps with Open-Source LLMs &amp; RAG
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ast-space-mobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AST Space Mobile
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defending-multistakeholder-internet-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Defending Multistakeholder Internet Governance
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>13 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="nznog-2026-for-a-networkingidentity-pm">NZNOG 2026 — for a networking/identity PM<a class="headerlink" href="#nznog-2026-for-a-networkingidentity-pm" title="Permanent link">#</a></h1>
+<p>A small, operator-heavy program (22 talks). Notable: none of the items carry paper or slide links in the material provided, so every write-up below is based on the program abstracts only. Tiers reflect the PM's core interests (physical DC/optics, cloud-native networking, network security, identity) with an operator-program lens: postmortems and adoptable tooling up-ranked, pitches down-ranked.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>March 27, 2026</span>
+<span class="digest-fact" markdown><a href="https://www.nznog.org/conferences/nznog-2026/talks.html">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="radius-futures"><a href="radius-futures/">Radius Futures</a><a class="headerlink" href="#radius-futures" title="Permanent link">#</a></h3>
+<p>Alan DeKok</p>
+<ul>
+<li><strong>Why</strong>: RADIUS is still the default AAA protocol for network access (802.1X, Wi-Fi, VPN) and sits squarely in the PM's identity/authentication territory. Its 1993 design shows its age — known operational and security pain points — and "next-generation" standards work determines how network AAA coexists with modern identity stacks (OIDC, passkeys, workload identity).</li>
+<li><strong>What</strong>: A survey of real-world problems affecting RADIUS deployments, and how emerging next-generation RADIUS standards can reduce them (from abstract only).</li>
+<li><strong>How</strong>: Protocol-level standards evolution rather than a product; the abstract does not enumerate the specific extensions, so expect the detail to be in the talk itself.</li>
+<li><strong>Where applicable</strong>: Broadly applicable — any operator or enterprise running AAA today. Protocol work, not vendor-specific. The main caveat is that the abstract stays high level; the value depends on which concrete drafts/problems get named.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="evolving-optical-transport-400g-network-design-and-regional-diversity"><a href="evolving-optical-transport-400g-network-design-and-regional-diversity/">Evolving Optical Transport: 400G, Network Design, and Regional Diversity</a><a class="headerlink" href="#evolving-optical-transport-400g-network-design-and-regional-diversity" title="Permanent link">#</a></h3>
+<p>Abouzar Asadi (Chorus)</p>
+<ul>
+<li><strong>Why</strong>: Coherent optics and line-system evolution are core to the PM's physical DC/WAN interconnect interests. A nationwide 400G rollout on NZ's largest open-access fibre network is one of the few talks here with real optical engineering content: line-system readiness, spectrum management, transceiver evolution, and ring diversity/protection.</li>
+<li><strong>What</strong>: The engineering journey to 400 Gbps nationwide on Chorus's network — what had to be true about the optical line system before 400G could ride it, how spectrum is managed, and how regional fibre rings are designed for diversity and protection (from abstract only).</li>
+<li><strong>How</strong>: Advances in coherent modulation and digital signal processing plus open optical architectures; diverse ring design and protection strategies for resiliency and service continuity.</li>
+<li><strong>Where applicable</strong>: Chorus/NZ-specific deployment, but the engineering content (line-system readiness for higher baud, spectrum planning, ring protection) transfers directly to any long-haul or metro optical operator. Watch for whether the "open optical" framing stays vendor-neutral.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexible-for-16t"><a href="channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-fl/">Channelmania! – future proof your DWDM network topology while keeping it flexible for 1.6T</a><a class="headerlink" href="#channelmania-future-proof-your-dwdm-network-topology-while-keeping-it-flexible-for-16t" title="Permanent link">#</a></h3>
+<p>Thomas Weible</p>
+<ul>
+<li><strong>Why</strong>: Planning DWDM channel grids for the 400G → 800G → 1.6T superchannel era is exactly the kind of physical-layer topology tradeoff the PM cares about — this is about how fibre capacity and reconfigurability interact over a 10+ year horizon.</li>
+<li><strong>What</strong>: An argument for moving to 400GHz channel grids: how the shift from narrow grids (200/100/50/25GHz) to wide-grid superchannels changes topology economics, how coherent detection being "blind" to anything but its own wavelength enables filterless designs, and how to keep legacy ≤10G signals coexisting on the same fibre pair while avoiding expensive ROADMs (from abstract only).</li>
+<li><strong>How</strong>: Wider fixed-grid (400GHz) filters plus coherent transceivers' tolerance of unfiltered neighbours: harvest filterless-topology cost benefits while retaining the flexibility to reassign bandwidth and carry legacy wavelengths.</li>
+<li><strong>Where applicable</strong>: Any DWDM operator with long-haul or metro infrastructure planning a decade out. The tradeoff is explicit — reduced flexibility vs. cost — and the "keep 10G and below on the same fibre" constraint matters for networks with legacy OTN payloads. The talk may carry a vendor perspective; the physics and grid economics are general.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="options-for-data-centre-interconnect"><a href="options-for-data-centre-interconnect/">Options for Data Centre Interconnect</a><a class="headerlink" href="#options-for-data-centre-interconnect" title="Permanent link">#</a></h3>
+<p>Matthew Hayes</p>
+<ul>
+<li><strong>Why</strong>: DCI is a named core interest, and NZ/ANZ is seeing genuine DC-to-DC demand growth from hyperscaler and AI service buildout. A structured comparison of DCI approaches is directly useful for interconnect planning.</li>
+<li><strong>What</strong>: A survey of common DCI approaches, from physical-layer solutions (fibre/DWDM) to higher-layer technologies, with how each works and the pros and cons of each, framed by ANZ market dynamics (from abstract only).</li>
+<li><strong>How</strong>: Comparative walkthrough of interconnect models rather than a single solution — the abstract does not name the specific technologies, so the depth depends on the talk.</li>
+<li><strong>Where applicable</strong>: DC operators and interconnect providers generally; not org-specific. Likely most valuable as a decision framework for choosing between dark-fibre/own-optics versus higher-layer managed options at different distance/capacity points.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="experiments-in-topology-visualization-using-bgp-ls-rfc-8571"><a href="experiments-in-topology-visualization-using-bgp-ls-rfc-8571/">Experiments in Topology Visualization using BGP-LS (RFC-8571)</a><a class="headerlink" href="#experiments-in-topology-visualization-using-bgp-ls-rfc-8571" title="Permanent link">#</a></h3>
+<p>Rick Williamson (Helios Software AU), Rob Simpson (Kordia Networks)</p>
+<ul>
+<li><strong>Why</strong>: BGP-LS is an underused source of live topology and TE data, and this is exactly the kind of experimental, adoptable tooling an operator program should surface. It ties directly to the PM's BGP/datapath-internals interest and offers hands-on access (remote lab network, iOS visualisation client) during the conference.</li>
+<li><strong>What</strong>: An experimental journey using BGP-LS as a practical live source of topology and traffic-engineering data for visualisation — started in a greenfields Public Safety Network, evolved into an approach suitable for organically grown operational networks (from abstract only).</li>
+<li><strong>How</strong>: BGP-LS (RFC 8571) exposes IGP link-state and TE information into BGP; a client consumes that feed to drive visual SPF computation and "what-if" simulations. The demo shows how link-state changes, failures, and metric adjustments propagate through BGP-LS in real time. They also outline a low-risk path for operators to trial BGP-LS in their own environments.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to heterogeneous, organically grown networks running IGP + BGP — which is most of them. The greenfields origin is noted but the authors explicitly generalised it. The offer of lab/client access makes this the most immediately try-it-yourself talk in the program.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="using-open-rack-v3-to-enhance-your-data-centre-infrastructure"><a href="using-open-rack-v3-to-enhance-your-data-centre-infrastructure/">Using Open Rack V3 to Enhance your Data Centre Infrastructure</a><a class="headerlink" href="#using-open-rack-v3-to-enhance-your-data-centre-infrastructure" title="Permanent link">#</a></h3>
+<p>Conrad Bullock</p>
+<ul>
+<li><strong>Why</strong>: Rack-level power, thermal, and mechanical standards are what make high-density AI/HPC fabrics physically possible — ORv3 (and OCP generally) is core physical-DC infrastructure territory, not adjacent to it. The NZ case study gives local grounding.</li>
+<li><strong>What</strong>: How the OCP Open Rack V3 standard improves efficiency, thermal management, and rack density, translating to lower opex, better cooling for high-density computing, and simplified maintenance — plus a New Zealand customer deployment case study with "real benefits" (from abstract only).</li>
+<li><strong>How</strong>: ORv3's modularity and standardised rack infrastructure supporting AI/HPC workloads and future scalability; the abstract does not detail the specific mechanisms (busbars, power levels, blind-mate designs), so the depth is in the talk.</li>
+<li><strong>Where applicable</strong>: DC operators building or refreshing high-density halls. The abstract's tone is promotional and the speaker's affiliation is not given, so assess on the day for vendor-pitch content — the case study is the part worth weighing.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="automated-network-state-checking-insights-from-the-field"><a href="automated-network-state-checking-insights-from-the-field/">Automated Network State Checking: Insights from the Field</a><a class="headerlink" href="#automated-network-state-checking-insights-from-the-field" title="Permanent link">#</a></h3>
+<p>Joe Shaw (REANNZ)</p>
+<ul>
+<li><strong>Why</strong>: This is the best operational postmortem-style talk in the program: a full domestic-backhaul hardware refresh where <em>every</em> service had to be rehomed with evidence of continuity — and the response was to build a generalised, model-driven verification system rather than hand-check services. Deeply transferable to anyone doing migrations.</li>
+<li><strong>What</strong>: REANNZ developed a generalised service model plus Python automation that reasons from live network data: it generated new configuration consistent with the new hardware and produced clear old-vs-new running-state comparisons at implementation time, iterated until it could verify even highly bespoke configurations. The talk demonstrates the system with case studies and the challenges overcome (from abstract only).</li>
+<li><strong>How</strong>: A generalised service model driven off live network state (not hand-catalogued per-service checks), automated config generation, and diff-style continuity evidence produced at cutover — a closed feedback loop between intent, generation, and verification.</li>
+<li><strong>Where applicable</strong>: REANNZ's R&amp;E network context is specific, but the technique is general: any operator facing a hardware refresh, architecture change, or migration where per-service manual verification doesn't scale. Particularly relevant wherever bespoke legacy configurations make off-the-shelf assurance tools insufficient.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="the-evolution-of-tcp-transport-protocols"><a href="the-evolution-of-tcp-transport-protocols/">The Evolution of TCP Transport Protocols</a><a class="headerlink" href="#the-evolution-of-tcp-transport-protocols" title="Permanent link">#</a></h3>
+<p>Geoff Huston</p>
+<ul>
+<li><strong>Why</strong>: Congestion-control fundamentals cut across everything the PM touches — from lossless/DC fabrics to internet transport — and the shift from loss-based control to BBR (with ECN being reconsidered) changes how buffers should be sized and how traffic behaves on your network.</li>
+<li><strong>What</strong>: A look at the fundamental feedback-loop problem in packet networking: various TCP flow control protocols, their relationship with network buffers, the reconsideration of explicit congestion notification, and the growth of BBR (from abstract only).</li>
+<li><strong>How</strong>: Analysis of the design space of sender/receiver feedback loops — loss-based, delay/ECN-based, and model-based (BBR) — and how each interacts with buffer sizing in the network.</li>
+<li><strong>Where applicable</strong>: Universal — every operator's queue/buffer behaviour is affected. Especially relevant as BBR-driven senders (large content/CDN players) increasingly set the tone for how paths are used.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="optimizing-traffic-flow-with-akamai"><a href="optimizing-traffic-flow-with-akamai/">Optimizing Traffic Flow with Akamai</a><a class="headerlink" href="#optimizing-traffic-flow-with-akamai" title="Permanent link">#</a></h3>
+<p>Kams Yeung</p>
+<ul>
+<li><strong>Why</strong>: The core insight — that classic BGP traffic engineering (AS-path prepending, MED, more-specifics) is largely <em>ineffective</em> against a large CDN's intelligent routing — is a practical lesson for any operator peering with CDNs, and the remediation list is concrete.</li>
+<li><strong>What</strong>: How Akamai's CDN is structured in NZ and maps traffic, why traditional BGP TE fails against it, and a set of operator best practices: dedicated DNS resolvers, complete and consistent route announcements, avoiding traffic filtering, avoiding CGNAT, and adopting IPv6 (from abstract only).</li>
+<li><strong>How</strong>: CDN-side intelligence (mapping/routing) responds to reachability and resolver signals rather than BGP path metrics — so operators influence delivery through routing hygiene, resolver placement, and IPv6 availability rather than prepending.</li>
+<li><strong>Where applicable</strong>: Any ISP or edge operator interconnecting with major CDNs. Akamai-specific in its mapping details but the pattern generalises to other intelligent-routing CDNs. It is an Akamai-delivered talk, so treat the "adopt IPv6 / avoid CGNAT" recommendations with the usual vendor-adjacent scepticism — though these align with broad community practice.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="tuatahi-first-fibre-network-update"><a href="tuatahi-first-fibre-network-update/">Tuatahi First Fibre: Network Update</a><a class="headerlink" href="#tuatahi-first-fibre-network-update" title="Permanent link">#</a></h3>
+<p>Murray Pearson</p>
+<ul>
+<li><strong>Why</strong>: A live production vendor transition (legacy Huawei GPON → Adtran architecture) at regional scale, plus a 100G handover product on the new platform — and it includes an actual failure story (multicast replication during the Whanganui cutover), which is exactly what an operator program should surface.</li>
+<li><strong>What</strong>: A Project Manawanui progress update: aggregation migration complete, staged regional access cutovers underway (Whanganui done, New Plymouth next), OLT replacement, large-scale service migration, TCFL aggregation modernisation with new handover points (Napier, Hastings, Rotorua), and 100G NNI migrations — with lessons learned including the multicast replication issue (from abstract only).</li>
+<li><strong>How</strong>: Staged regional cutover sequencing, OLT replacement with service continuity across a live network, and integration into updated operational systems.</li>
+<li><strong>Where applicable</strong>: NZ fibre-operator-specific in its topology and regulatory context, but the migration-sequencing and multicast-replication lessons transfer to any GPON/XGS-PON operator doing vendor transition or scaling aggregation to 100G.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="routeviews-update"><a href="routeviews-update/">Routeviews Update</a><a class="headerlink" href="#routeviews-update" title="Permanent link">#</a></h3>
+<p>Philip Smith</p>
+<ul>
+<li><strong>Why</strong>: RouteViews is the community's reference external view of BGP announcements, and this update covers a governance change (now run by NSRC) plus concrete new tooling — an API and a new BMP processor — that operators can directly use.</li>
+<li><strong>What</strong>: An introduction to the new team behind RouteViews, its operation on behalf of the global Internet community by NSRC, and new developments: the API, a new BMP processor, how operators use the system, and future plans (from abstract only).</li>
+<li><strong>How</strong>: Distributed route collectors giving operators an external perspective on their announcements; the new API and BMP processing extend how that data can be consumed programmatically.</li>
+<li><strong>Where applicable</strong>: Broadly useful — any operator wanting third-party verification of their routing visibility, and researchers tracking global infrastructure. Community project, not vendor.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="open-fibre-standards"><a href="open-fibre-standards/">Open Fibre Standards</a><a class="headerlink" href="#open-fibre-standards" title="Permanent link">#</a></h3>
+<p>Warren Finch</p>
+<ul>
+<li><strong>Why</strong>: Cyclone Gabrielle exposed what happens when nobody has a shared, structured view of physical fibre — shared corridors, thin diversity, no cross-operator picture. An open, machine-readable fibre data schema matters for resilience planning and is conceptually adjacent to how the PM thinks about infrastructure-as-data (and useful for DC site/diversity analysis).</li>
+<li><strong>What</strong>: An introduction to the Open Fibre Data Standard (OFDS): a common, open schema for describing terrestrial fibre infrastructure — routes, nodes, ownership attributes — interoperable and machine-readable, presented from a New Zealand resilience-planning perspective (from abstract only).</li>
+<li><strong>How</strong>: A standardised data model that lets fibre data be shared, analysed, and reused across operators, regulators, researchers, and emergency planners, supporting coordination and post-incident analysis.</li>
+<li><strong>Where applicable</strong>: The schema is general; the <em>value</em> depends on operators actually publishing their data, which is the hard part. Relevant wherever physical-route diversity is a resilience question — NZ context is the motivating case, not a constraint.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="designing-a-mikrotik-cgnat-solution-that-scales"><a href="designing-a-mikrotik-cgnat-solution-that-scales/">Designing a Mikrotik CGNAT Solution that Scales</a><a class="headerlink" href="#designing-a-mikrotik-cgnat-solution-that-scales" title="Permanent link">#</a></h3>
+<p>Matthew Enger (Leaptel)</p>
+<ul>
+<li><strong>Why</strong>: CGNAT at small/mid-ISP scale is a recurring pain point — statefulness, redundancy, and lawful-enforcement logging requirements all at once — and this is a from-the-field design others can replicate on a budget, distilled from commercial-solution experience.</li>
+<li><strong>What</strong>: A step-by-step redundant, scalable CGNAT solution built from Mikrotik hardware, informed by what the author learned from commercial CGNAT deployments in Leaptel's main POPs, while meeting law-enforcement (logging/accountability) requirements (from abstract only).</li>
+<li><strong>How</strong>: The abstract does not detail the mechanism (stateful NAT distribution, redundancy model, logging pipeline), so the design specifics are in the talk.</li>
+<li><strong>Where applicable</strong>: Small-to-medium ISPs; explicitly scale- and budget-constrained, and Mikrotik-specific — not a technique for large operators, but directly copyable for its target audience.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="comfortable-complexity-of-network-overlays"><a href="comfortable-complexity-of-network-overlays/">Comfortable Complexity of Network Overlays</a><a class="headerlink" href="#comfortable-complexity-of-network-overlays" title="Permanent link">#</a></h3>
+<p>Claudiu Captari</p>
+<ul>
+<li><strong>Why</strong>: Using EVPN as a single consistent service layer across carrier core, DC, and campus — over VXLAN, MPLS, or SRv6 — is a significant architectural trend that collapses the "snowflake per domain" problem, and it directly touches the PM's fabric/overlay territory.</li>
+<li><strong>What</strong>: An argument for network transformation through protocol reduction and consistent operational models, with EVPN as the key to delivering consistent L2 and L3 services across any transport and across core, DC, and campus environments (from abstract only).</li>
+<li><strong>How</strong>: EVPN as a unified control plane abstracted from the underlying transport (VXLAN/MPLS/SRv6), replacing per-domain bespoke protocols and skill sets.</li>
+<li><strong>Where applicable</strong>: Large multi-domain operators get the most from it. The abstract is architectural advocacy rather than a case study with results, and the speaker's affiliation is unstated — treat as a persuasive framing talk and weigh it for vendor-transformation-pitch content on the day.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="the-evolution-of-network-configuration-management"><a href="the-evolution-of-network-configuration-management/">The Evolution of Network Configuration Management</a><a class="headerlink" href="#the-evolution-of-network-configuration-management" title="Permanent link">#</a></h3>
+<p>Tim Raphael</p>
+<ul>
+<li><strong>Why</strong>: Config management is where the PM's declarative/intent-driven world (Kubernetes-style APIs) meets traditional networking — a well-structured survey of the evolution from hand-crafted configs to intent-driven operations is useful context for anyone building network tooling.</li>
+<li><strong>What</strong>: A journey through the evolution of configuration technologies and lessons learned: scripting, imperative operations, workflows, playbooks, APIs, RPCs, declarative models, and intent-driven operations — and how networks <em>should</em> be configured going forward (from abstract only).</li>
+<li><strong>How</strong>: Conceptual/survey talk tracing the maturity curve rather than a single tool or case study.</li>
+<li><strong>Where applicable</strong>: Broadly applicable; most valuable as a shared-vocabulary framing for where an organisation sits on the imperative-to-declarative spectrum.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="datagrid-unlocking-the-potential-of-new-zealands-south-island"><a href="datagrid-unlocking-the-potential-of-new-zealands-south-island/">Datagrid: Unlocking the Potential of New Zealand's South Island</a><a class="headerlink" href="#datagrid-unlocking-the-potential-of-new-zealands-south-island" title="Permanent link">#</a></h3>
+<p>Pierre Goiffon</p>
+<ul>
+<li><strong>Why</strong>: A 280MW AI datacentre in Invercargill plus the Tasman Ring submarine cable project is a material signal for the NZ DC/WAN interconnect landscape — relevant market intelligence for anyone in DC networking, even if the talk itself is a roadmap.</li>
+<li><strong>What</strong>: Datagrid's vision and roadmap for the Invercargill AI DC, the role of renewable energy and climate advantages, and the international and domestic connectivity plans (Tasman Ring) needed to make the South Island a global AI infrastructure hub (from abstract only).</li>
+<li><strong>How</strong>: As a company roadmap pitch: capacity, site, and connectivity plans rather than engineering detail.</li>
+<li><strong>Where applicable</strong>: This is vision/roadmap content, not an engineering talk — value it as infrastructure and market intelligence on where new DC and submarine capacity will land, not as technique.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="rethinking-netops-with-open-source-llms-rag"><a href="rethinking-netops-with-open-source-llms-rag/">Rethinking NetOps with Open-Source LLMs &amp; RAG</a><a class="headerlink" href="#rethinking-netops-with-open-source-llms-rag" title="Permanent link">#</a></h3>
+<p>Basem Al-Sabri</p>
+<ul>
+<li><strong>Why</strong>: LLM copilots for network operations are an emerging subfield, and the data-sovereignty framing (no sensitive configs/logs leaving the organisation) is the specific angle that makes this credible for network operators rather than hype.</li>
+<li><strong>What</strong>: A practical architecture combining open-source LLMs with retrieval-augmented generation, grounding model reasoning in the organisation's own knowledge base, configurations, and logs to reduce hallucinations and produce context-aware responses (from abstract only).</li>
+<li><strong>How</strong>: Fully open-source components across data ingestion, vector retrieval, inference, and orchestration — giving operators control over data sovereignty and compliance while avoiding vendor lock-in and usage-based fees.</li>
+<li><strong>Where applicable</strong>: Any operator, in principle. Early-stage — the abstract describes the architecture and its promises rather than measured results, so the proof will be in any demonstrated accuracy/evaluation shown live.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="ast-space-mobile"><a href="ast-space-mobile/">AST Space Mobile</a><a class="headerlink" href="#ast-space-mobile" title="Permanent link">#</a></h3>
+<p>Simon Allard (2degrees)</p>
+<ul>
+<li><strong>Why</strong>: Direct-to-device satellite is a genuine architectural shift in coverage economics — a terrestrial mobile operator integrating an LEO constellation via its <em>own</em> ground station is novel infrastructure work outside the PM's usual beat but worth seeing.</li>
+<li><strong>What</strong>: How AST SpaceMobile's satellite array provides mobile coverage where terrestrial networks can't, and how 2degrees is integrating the service into its network, including a 2degrees-built ground station (from abstract only).</li>
+<li><strong>How</strong>: The technical detail (spectrum sharing with terrestrial LTE, ground-station integration, handover behaviour) is promised in the talk; the abstract stays at the "how it works" overview level.</li>
+<li><strong>Where applicable</strong>: Mobile operators; NZ-specific integration but representative of a global D2D trend.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="defending-multistakeholder-internet-governance"><a href="defending-multistakeholder-internet-governance/">Defending Multistakeholder Internet Governance</a><a class="headerlink" href="#defending-multistakeholder-internet-governance" title="Permanent link">#</a></h3>
+<p>Jodi Anderson</p>
+<ul>
+<li><strong>Why</strong>: Not technical, but WSIS+20's outcome shapes the regulatory environment in which every technical decision in this program is made — governance developments increasingly reach into routing, security, and identity requirements.</li>
+<li><strong>What</strong>: Where WSIS+20 ended up and how, what happens next, how it sits in the geopolitical context, and where the technical community has opportunities to defend and promote multistakeholder Internet governance (from abstract only).</li>
+<li><strong>How</strong>: Policy/governance analysis rather than a technique.</li>
+<li><strong>Where applicable</strong>: Global, not NZ-specific; relevant to anyone whose products touch regulated infrastructure or identity.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>The optical race to 400G and beyond</strong>: Three talks (Chorus's nationwide 400G, DWDM grid planning for 1.6T superchannels, and DCI options) all sit on the same curve — coherent modulation, DSP, and open line systems are the shared engine, and topology/grid decisions made now determine flexibility for a decade.</li>
+<li><strong>AI as both workload and tool</strong>: AI is reshaping the program from two directions — AI/HPC buildout driving physical infrastructure (Datagrid's 280MW DC, ORv3 for high-density racks, DCI demand) and AI entering operations itself (open-source LLM + RAG NetOps with a data-sovereignty angle).</li>
+<li><strong>From scripts to state</strong>: A visible maturity arc in network automation — config management evolving from hand-crafting to declarative/intent models, REANNZ's model-driven migration verification reasoning from live data, and BGP-LS mining the control plane for live topology — operators are converging on closed-loop, model-based practice.</li>
+<li><strong>Resilience as a data problem</strong>: Post-Cyclone Gabrielle, the program treats physical diversity not just as building more fibre (Chorus's diverse rings) but as sharing structured fibre data (OFDS) so that fragility is visible <em>before</em> the next event.</li>
+<li><strong>Modernizing 1990s protocols in place</strong>: RADIUS next-generation standards and TCP's evolution toward BBR/ECN both acknowledge that the installed base won't be replaced — it gets upgraded in place, with all the compatibility friction that implies.</li>
+</ul>
+<p><em>Deliberately not covered: Enable's Network Transformation talk (high-level strategic overview with little transferable technical content in the abstract), "Life in a '90s ISP" (nostalgia), and the NZ IPv6 landscape update (abstract is a one-line pointer to a refreshed 2023 deck). The Akamai session is vendor-delivered but was kept for its actionable CDN/BGP traffic-engineering lessons.</em></p>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/nznog-2026.md"><code>digests/nznog-2026.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/nznog-2026.md"><code>prompts/nznog-2026.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../kubecon-eu-2026/" class="md-footer__link md-footer__link--prev" aria-label="Previous: KubeCon + CloudNativeCon Europe 2026">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                KubeCon + CloudNativeCon Europe 2026
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ciscolive-eu-2026/" class="md-footer__link md-footer__link--next" aria-label="Next: Cisco Live Europe 2026 (Amsterdam)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Cisco Live Europe 2026 (Amsterdam)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

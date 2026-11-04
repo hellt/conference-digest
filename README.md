@@ -193,6 +193,8 @@ conferences/
     lacnic.py        # LACNIC via the WP REST API behind the event sites
     pets.py          # PETS accepted papers: titles, authors, issues
     ausnog.py        # AusNOG day tables: titles, speakers, PDFs, YouTube
+    nznog.py         # NZNOG accepted-talks pages (titles, speakers, abstracts)
+    zanog.py         # ZANOG programs, wherever the annual ran (2026: iWeek)
     peeringdays.py   # Peering Days per-year sites: talks, speakers, decks
     moreip.py         # MORE-IP (AMS-IX): agenda articles with speakers, blurbs
     swinog.py         # SwiNOG meeting pages: talks, abstracts, slides, videos

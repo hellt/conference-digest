@@ -749,16 +749,6 @@ conferences:
     discovered: 2026-11-01
     notes: "Europe's largest carrier and digital-infrastructure marketplace (~4,000 attendees): fibre, data centres, subsea, AI infrastructure build, energy. Panels and keynotes with company affiliations; no recordings or slides. Auto-discovered 2026-11-01 from series 'capacity-europe'. end_date taken from the source."
 
-  - key: janog-58
-    name: "JANOG 58 Meeting"
-    type: operator
-    end_date: 2026-06-29
-    fetcher: janog
-    program_url: "https://www.janog.gr.jp/meeting/janog58/program-timetable/"
-    manual_fallback_url: "https://www.janog.gr.jp/meeting/janog58/program-timetable/"
-    discovered: 2026-11-01
-    notes: "Japan's network operators group (~1,000 attendees, Japanese-language program): backbone and DC operations, IX and peering, optical transport, automation, network security. Auto-discovered 2026-11-01 from series 'janog'. end_date taken from the source."
-
   - key: netuk-2
     name: "NetUK2 (The Brewery)"
     type: operator

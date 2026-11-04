@@ -22,8 +22,11 @@ Where each link comes from, in order:
    wrong" rule the fetchers follow.
 
 Links found earlier are kept when a later run cannot reach a source, so a
-refresh only ever adds. The model never writes these rows; `enrich()` removes
-any `**Links:**` line it finds in a pick and puts its own in its place.
+refresh only ever adds. Every file and video link is also probed before its
+row goes out (`link_alive`: direct request, Tavily Extract as the second
+opinion for a source that blocks the runner) and one confirmed dead is
+dropped instead of published. The model never writes these rows; `enrich()`
+removes any `**Links:**` line it finds in a pick and puts its own in its place.
 """
 
 from __future__ import annotations
@@ -620,7 +623,69 @@ def find_video(talk: str, ctx: Context, speakers: tuple[str, ...] = ()) -> Optio
     return min(accepted, key=lambda v: abs((v.published - ctx.end_date).days) if v.published and ctx.end_date else 0)
 
 
-# --------------------------------------------------------------------- rows --
+# ---------------------------------------------------------------- liveness --
+
+def _oembed_alive(url: str) -> Optional[bool]:
+    """A deleted or private video fails oEmbed; a live one answers with JSON."""
+    try:
+        r = HTTP.get("https://www.youtube.com/oembed", timeout=15,
+                     params={"format": "json", "url": url})
+    except Exception:
+        return None
+    if r.status_code == 200:
+        return True
+    return False if r.status_code in (400, 401, 404) else None
+
+
+def tavily_alive(url: str, key: str) -> Optional[bool]:
+    """Tavily Extract as a second opinion on a source that blocked the runner
+    (approved for link checks by the repository owner, 2026-11-04)."""
+    try:
+        resp = requests.post("https://api.tavily.com/extract", timeout=90,
+                             headers={"Authorization": f"Bearer {key}"},
+                             json={"urls": [url]})
+    except Exception:
+        return None
+    if resp.status_code != 200:
+        return None
+    data = resp.json()
+    for r in data.get("results") or []:
+        if r.get("url") == url and r.get("raw_content"):
+            return True
+    for f in data.get("failed_results") or []:
+        if f.get("url") == url:
+            return False if re.search(r"404|not found", str(f), re.I) else None
+    return None
+
+
+def link_alive(url: str, tavily_key: str = "") -> Optional[bool]:
+    """True (confirmed reachable), False (confirmed dead), None (cannot tell).
+
+    Videos are probed through YouTube's oEmbed; files through a direct request,
+    falling back to Tavily Extract when the source blocks the direct one. Only a
+    confirmed dead link is dropped: an unknown answer keeps it — the same
+    zero-rather-than-wrong rule, and a refresh keeps what it cannot check.
+    """
+    if youtube_id(url):
+        return _oembed_alive(url)
+    try:
+        r = HTTP.get(url, timeout=20, stream=True)
+        code = r.status_code
+        r.close()
+    except Exception:
+        code = None
+    if code == 200:
+        return True
+    if code in (404, 410):
+        return False
+    if code in (403, 429, 503) or code is None or code >= 500:
+        # Bot protection (or a transport failure the runner cannot tell apart
+        # from one): Tavily's word, when a key is set.
+        return tavily_alive(url, tavily_key) if tavily_key else None
+    return None
+
+
+# ----------------------------------------------------------------- rows --
 
 FORMATS = {"pdf": "PDF", "pptx": "PPTX", "ppt": "PPT", "key": "Keynote", "odp": "ODP"}
 
@@ -701,7 +766,7 @@ def enrich(markdown: str, prompt: str, ctx: Context, log=print) -> tuple[str, di
         if not fence and line.startswith("### "):
             heads.append(i)
     stats = {"picks": len(heads), "matched": 0, "page": 0, "pdf": 0, "slides": 0, "video": 0,
-             "video_from_page": 0, "video_from_search": 0, "unmatched": [], "added": []}
+             "video_from_page": 0, "video_from_search": 0, "unmatched": [], "added": [], "dropped": []}
     out: list[str] = []
     cursor = 0
     for n, h in enumerate(heads):
@@ -744,6 +809,15 @@ def enrich(markdown: str, prompt: str, ctx: Context, log=print) -> tuple[str, di
                 stats["video_from_search"] += 1
                 log(f"  recording found for {title[:70]!r}: {found}")
         links = tidy(links)
+        # A row goes out only with links that still resolve: each file and
+        # video link is probed, and one confirmed dead is dropped rather than
+        # published (ITNOG10 shipped fifteen 404 slide links before this).
+        for k in [k for k in ("pdf", "slides", "slides2", "materials", "video") if links.get(k)]:
+            time.sleep(ctx.delay)
+            if link_alive(links[k], ctx.tavily_key) is False:
+                log(f"  dead {k} link dropped for {re.split(r'\s+[—–]\s+', heading)[0][:60]!r}: {links[k]}")
+                stats["dropped"].append({"pick": re.split(r"\s+[—–]\s+", heading)[0][:120],
+                                         "kind": k, "url": links.pop(k)})
         for k in ("page", "pdf", "slides", "video"):
             stats[k] += bool(links.get(k))
         before = tidy(existing)

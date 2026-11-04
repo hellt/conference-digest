@@ -6,8 +6,9 @@
 
 Reads prompts/<KEY>.md for the program's links and rewrites the digest in place
 (default digests/<KEY>.md). Safe to run again: rows are rebuilt, links found
-before are kept, new recordings and slides are added. See conferences/links.py
-for where each link comes from and how a found recording is verified.
+before are kept, new recordings and slides are added, and links confirmed
+dead (404) are dropped. See conferences/links.py for where each link comes
+from, how a found recording is verified, and how liveness is probed.
 
 TAVILY_API_KEY, when set, is the fallback search if YouTube cannot be reached.
 Exit status: 0 on success (even if nothing was found), 1 on bad input.
@@ -54,11 +55,15 @@ def main() -> int:
     if args.stats:
         args.stats.write_text(json.dumps(stats, indent=2) + "\n", encoding="utf-8")
     if args.summary:
-        args.summary.write_text("".join(f"- {a['pick']}: {', '.join(a['links'])}\n" for a in stats["added"]),
-                                encoding="utf-8")
+        args.summary.write_text(
+            "".join(f"- {a['pick']}: {', '.join(a['links'])}\n" for a in stats["added"])
+            + "".join(f"- {d['pick']}: dropped dead {d['kind']} link {d['url']}\n" for d in stats["dropped"]))
     print(f"{args.key}: {stats['picks']} picks, {stats['matched']} matched to the program; "
           f"links: {stats['page']} abstract, {stats['pdf']} paper, {stats['slides']} slides, "
-          f"{stats['video']} recording ({stats['video_from_page']} from talk pages, {stats['video_from_search']} found by search)")
+          f"{stats['video']} recording ({stats['video_from_page']} from talk pages, {stats['video_from_search']} found by search); "
+          f"{len(stats['dropped'])} dead link(s) dropped")
+    for d in stats["dropped"]:
+        print(f"  dropped dead {d['kind']} link for {d['pick'][:70]!r}: {d['url']}")
     for h in stats["unmatched"]:
         print(f"  not in the program: {h}")
     return 0

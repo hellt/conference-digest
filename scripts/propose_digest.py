@@ -190,6 +190,7 @@ def main() -> int:
         "",
         *([f"- {n}" for n in notes] or ["- Nothing to flag. Every heading matches a program item."]),
         *([f"- No program links for: {h}" for h in links["unmatched"][:10]] if links else []),
+        *([f"- Dead link dropped ({d['kind']}): {d['url']}" for d in links["dropped"][:10]] if links else []),
         "",
         "### Before merging",
         "",

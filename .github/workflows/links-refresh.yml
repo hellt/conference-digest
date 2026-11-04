@@ -4,9 +4,10 @@ name: Links Refresh
 # digest was written. Every week this rebuilds the links row of each pick in
 # recent digests (conference ended in the last 120 days) with
 # scripts/enrich_links.py: talk pages are read again, missing recordings are
-# searched for and verified (conferences/links.py). A digest that gained links
-# gets one "links: <key>" pull request; merging it republishes the site. The
-# digest text is never changed, and links found before are kept.
+# searched for and verified (conferences/links.py), and every file and video
+# link is probed so a dead one is dropped rather than kept. A digest whose
+# links changed gets one "links: <key>" pull request; merging it republishes
+# the site. The digest text is never changed, and links found before are kept.
 #
 # Run it by hand for one digest of any age: Actions -> Links Refresh -> Run
 # workflow, with `conference: <key>`.
@@ -73,10 +74,10 @@ jobs:
               continue
             fi
             git add "digests/$key.md"
-            git commit --quiet -m "links: $key" -m "New links for these picks:" -m "$(cat "$added")" -m "Workflow run: $RUN_URL"
+            git commit --quiet -m "links: $key" -m "Links for these picks:" -m "$(cat "$added")" -m "Workflow run: $RUN_URL"
             git push --quiet --force origin "$branch"
             {
-              echo "Links Refresh found new links for picks in [\`digests/$key.md\`](../blob/$BASE/digests/$key.md). The digest text is unchanged."
+              echo "Links Refresh changed the links of picks in [\`digests/$key.md\`](../blob/$BASE/digests/$key.md) — new recordings or slides found, dead links dropped. The digest text is unchanged."
               echo
               cat "$added"
               echo
@@ -92,5 +93,5 @@ jobs:
               gh pr create --base "$BASE" --head "$branch" --title "links: $key" \
                 --body-file "$RUNNER_TEMP/body-$key.md" --label links-refresh
             fi
-            echo "- \`$key\`: $(grep -c '^- ' "$added") pick(s) gained links" >> "$GITHUB_STEP_SUMMARY"
+            echo "- \`$key\`: $(grep -c '^- ' "$added") pick(s) with link changes" >> "$GITHUB_STEP_SUMMARY"
           done

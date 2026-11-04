@@ -1774,6 +1774,72 @@
         <loc>https://tldr.netdevops.me/gtc-2026/transforming-bottlenecks-into-breakthroughs-scaling-secure-ai-networks-f/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/2038-is-gonna-be-epoch/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/attacking-the-developer-environment-through-drive-by-localhost-attacks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/bod-bytes-over-dns/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/building-an-unmarshelling-chain-from-hydrators/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/cli-ambush/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/from-yaml-to-root-cicd-pipeline-attacks-and-countermeasures/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/instrumenting-software-builds-to-detect-stealth-backdoors-and-other-curi/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/integrating-zeek-with-third-party-applications/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/lethal-language-models-from-bit-flip-to-rce-in-ollama/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/lolblue-living-off-the-land-with-blue-team-tools/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/nightmare-on-ntlm-street-legacys-revenge/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/no-way-to-enable-ssh-access-to-your-new-router-the-vendor-might-have-som/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/overlaps-overriding-laps-logic/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/palo-alto-globalprotect-remote-full-compromise-exploit-chain/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/red-team-story-offline-sccm-backup-secrets-decryption/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/revisiting-rands-lost-monte-carlo-simulations-sharla-perrine-paul-baran/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/romcom-exploits-firefox-and-windows-zero-days-in-the-wild/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/silent-killers-unmasking-a-large-scale-legacy-driver-exploitation-campai/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/whats-new-in-suricata-8-enhanced-detection-and-performance/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/when-netflow-meets-pcap-a-network-forensic-approach/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/hacklu-2025/wyse-management-subversion-taking-over-dells-wyse-management-suite/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/hacklu-2026/</loc>
       </url>
       <url>
@@ -2962,6 +3028,42 @@
         <loc>https://tldr.netdevops.me/netdev-0x1a/whats-next-for-the-psp-security-protocol-workshop/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/netnod-2025/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2025/analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2025/building-modern-and-scalable-dc-fabrics/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2025/encrypted-network-traffic-analysis-and-protection/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2025/mastering-network-operations-the-power-of-abstraction-in-automation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2025/meta-big-trends-and-how-it-will-change-the-network/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2025/optics-was-instrumental-in-building-the-internetand-will-be-crucial-in-a/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2025/recursive-dns-in-telia-company-sweden/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2025/srv6-usid-fundamental-transformation-of-the-ip-stack/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2025/the-illusion-of-control-trusting-software-in-the-age-of-compromise/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2025/ultra-ethernet/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/netnod-2025/your-as-set-is-crucial-to-your-routing-security-3-tips-on-securing-your/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/netnod-2026/</loc>
       </url>
       <url>
@@ -3305,6 +3407,81 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/nznog-2026/using-open-rack-v3-to-enhance-your-data-centre-infrastructure/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/accurate-cable-length-measurement-for-optimized-data-center-networking/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/agile-ai-architectures-the-fungible-data-center-for-the-ai-era/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/capacity-aware-adaptive-routing/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/cryptography-in-caliptra/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/csig-congestion-signaling-in-the-ai-era/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/development-challenges-and-next-generation-opportunities-for-linear-driv/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/disaggregated-leaf-spine-architecture-for-next-gen-azure-t2-network/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/driving-innovation-in-network-infrastructure-key-advances-from-the-sonic/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/ecore-architecture-and-whitebox-evolution-of-alibabas-service-oriented-d/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/enabling-technologies-for-next-generation-large-scale-ai-backend-network/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/evaluation-of-cpo-performance-and-pluggable-optics-health-for-reliable-a/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/evolution-of-ethernet-based-switch-platforms-and-fabrics-to-meet-metas-a/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/firefly-scalable-ultra-accurate-clock-synchronization-for-datacenters/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/inspect-data-analysis-tool-for-proactive-link-failure-detection-on-metas/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/methodology-and-observation-of-congestion-control-impact-on-moe-training/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/new-strategic-initiative-open-cluster-designs-for-ai/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/ocp-optical-circuit-switching-subproject-update/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/performance-evaluation-of-interconnect-technologies-for-ai-scale-up-comp/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/spdm-update/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/srv6-for-ai-backend/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/technical-aspects-of-ultra-ethernet-10/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/the-path-to-zero-flap-reinventing-optical-reliability-for-scalable-ai-cl/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/unifying-p4-with-ebpf-and-dpdk-via-xdp2/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ocp-2025/xasm-a-foundation-to-program-the-x2-with-p4/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/ocp-2026/</loc>

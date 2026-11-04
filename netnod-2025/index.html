@@ -1,0 +1,1421 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A single-day operator program (Netnod, Stockholm, 9 October 2025). Note on source quality: almost no abstracts were published for this program — several picks below are grounded in slide decks extracted by the pipeline, and the remainder had only titles and speakers to work from. That is flagged…">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/netnod-2025/">
+      
+      
+      
+        <link rel="prev" href="../sigcomm-2025/">
+      
+      
+        <link rel="next" href="../ocp-2025/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>Netnod Tech Meeting 2025 - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="Netnod Tech Meeting 2025 · Conference Digest" />
+<meta property="og:description" content="A single-day operator program (Netnod, Stockholm, 9 October 2025). Note on source quality: almost no abstracts were published for this program — several picks below are grounded in slide decks extracted by the pipeline, and the remainder had only titles and speakers to work from. That is flagged…" />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/netnod-2025.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/netnod-2025/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Netnod Tech Meeting 2025 · Conference Digest" />
+<meta property="twitter:description" content="A single-day operator program (Netnod, Stockholm, 9 October 2025). Note on source quality: almost no abstracts were published for this program — several picks below are grounded in slide decks extracted by the pipeline, and the remainder had only titles and speakers to work from. That is flagged…" />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/netnod-2025.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Netnod Tech Meeting 2025
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-tabs__powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-tabs__powered-text">Powered by</span>
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ultra-ethernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ultra Ethernet
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber-for-coherent-16qam-and-non-coherent-pam4-high-speed-transceivers-under-environmental-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for Coherent (16QAM) and Non-Coherent (PAM4) high speed transceivers under environmental variations
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srv6-usid-fundamental-transformation-of-the-ip-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SRv6 uSID: fundamental transformation of the IP stack
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-modern-and-scalable-dc-fabrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Building Modern and Scalable DC Fabrics
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-as-set-is-crucial-to-your-routing-security-3-tips-on-securing-your-as-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Your AS-set is crucial to your routing security. 3 tips on securing your AS-set
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mastering-network-operations-the-power-of-abstraction-in-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mastering Network Operations: The Power of Abstraction in Automation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encrypted-network-traffic-analysis-and-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Encrypted Network Traffic Analysis and Protection
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta-big-trends-and-how-it-will-change-the-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Meta – Big Trends and how it will change the Network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursive-dns-in-telia-company-sweden" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Recursive DNS in Telia Company Sweden
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optics-was-instrumental-in-building-the-internetand-will-be-crucial-in-an-ai-driven-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Optics was instrumental in building the Internet—and will be crucial in an AI-driven world
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-illusion-of-control-trusting-software-in-the-age-of-compromise" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Illusion of Control: Trusting Software in the Age of Compromise
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ultra-ethernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ultra Ethernet
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber-for-coherent-16qam-and-non-coherent-pam4-high-speed-transceivers-under-environmental-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for Coherent (16QAM) and Non-Coherent (PAM4) high speed transceivers under environmental variations
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srv6-usid-fundamental-transformation-of-the-ip-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SRv6 uSID: fundamental transformation of the IP stack
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-modern-and-scalable-dc-fabrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Building Modern and Scalable DC Fabrics
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-as-set-is-crucial-to-your-routing-security-3-tips-on-securing-your-as-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Your AS-set is crucial to your routing security. 3 tips on securing your AS-set
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mastering-network-operations-the-power-of-abstraction-in-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mastering Network Operations: The Power of Abstraction in Automation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encrypted-network-traffic-analysis-and-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Encrypted Network Traffic Analysis and Protection
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta-big-trends-and-how-it-will-change-the-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Meta – Big Trends and how it will change the Network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursive-dns-in-telia-company-sweden" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Recursive DNS in Telia Company Sweden
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optics-was-instrumental-in-building-the-internetand-will-be-crucial-in-an-ai-driven-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Optics was instrumental in building the Internet—and will be crucial in an AI-driven world
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-illusion-of-control-trusting-software-in-the-age-of-compromise" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Illusion of Control: Trusting Software in the Age of Compromise
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>12 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="netnod-tech-meeting-2025">Netnod Tech Meeting 2025<a class="headerlink" href="#netnod-tech-meeting-2025" title="Permanent link">#</a></h1>
+<p>A single-day operator program (Netnod, Stockholm, 9 October 2025). Note on source quality: almost no abstracts were published for this program — several picks below are grounded in slide decks extracted by the pipeline, and the remainder had only titles and speakers to work from. That is flagged per item. Host updates (Netnod), the ICANN keynote, the DNS-OARC event update, and the closing/social slots are skipped as housekeeping.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>October 9, 2025</span>
+<span class="digest-fact" markdown><a href="https://www.netnod.se/netnod-tech-meeting-2025">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="ultra-ethernet"><a href="ultra-ethernet/">Ultra Ethernet</a><a class="headerlink" href="#ultra-ethernet" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.netnod.se/sites/default/files/2025-10/15.Ultra%20Ethernet%20-%20Arista.pptx_.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/fRizzhFzcEU">Recording</a></p>
+</div>
+<p>Johan Ervenius — <a href="../companies/arista-networks/">Arista Networks</a> (Systems Engineer)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="fRizzhFzcEU" data-start="0" href="https://www.youtube.com/watch?v=fRizzhFzcEU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/fRizzhFzcEU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/fRizzhFzcEU/maxresdefault.jpg" alt="Play the recording: Ultra Ethernet" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: The AI/HPC fabric problem — how to carry RDMA-like traffic at scale without RoCEv2's lossless-network crutches — is squarely in the PM's lossless-fabric/DC interconnect territory, and UEC 1.0 is the standards answer the whole industry is converging on.</li>
+<li><strong>What</strong>: A technical walkthrough of the Ultra Ethernet Consortium specification (~500 pages, &gt;100 member companies) and its transport (UET). The core finding: flow-based ECMP hashing degrades badly with few large flows — the slide deck quantifies 32 servers with 8×10 Gbps flows each achieving only ~71% worst-case efficiency on 32 uplinks, versus 99.98% when traffic is packet-sprayed 204 ways. UET is designed so spraying works: packets carry their ultimate destination memory location so out-of-order packets go straight into posted buffers.</li>
+<li><strong>How</strong>: Key mechanisms: (1) out-of-order-capable RMA transport so one flow can use all paths; (2) packet trimming — switches truncate to 64 bytes and DSCP-mark "trimmed" instead of dropping, giving a fast congestion/loss signal; (3) sender-based Network Signal Congestion Control using delay, ECN and trimming together, plus an optional receiver-credit mode for incast (VOQ-like); (4) link-layer retransmission (ACK/NACK via 802.3 OCodes, negotiated via LLDP) to improve tail latency in pods with 256K–512K transceivers; (5) libfabric 2.0 as the application API.</li>
+<li><strong>Where applicable</strong>: Standards-track and multi-vendor rather than Arista-proprietary, so broadly relevant to any Ethernet AI fabric planning. But UET requires new NIC and switch silicon — nothing here deploys on a RoCE fleet today. The efficiency numbers are the speaker's own modeling, not an independent benchmark.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber-for-coherent-16qam-and-non-coherent-pam4-high-speed-transceivers-under-environmental-variations"><a href="analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber/">Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for Coherent (16QAM) and Non-Coherent (PAM4) high speed transceivers under environmental variations</a><a class="headerlink" href="#analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber-for-coherent-16qam-and-non-coherent-pam4-high-speed-transceivers-under-environmental-variations" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.netnod.se/sites/default/files/2025-10/Flexoptix%20-%20Network%20Reliability%20Analysis%20Coherent%20Non-Coherent-Netnod%20%282%29.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/4_1pM6o-pD4">Recording</a></p>
+</div>
+<p>Dr.-Ing. Gerhard Stein — <a href="../companies/flexoptix/">FLEXOPTIX</a> (with Thomas Weible)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="4_1pM6o-pD4" data-start="0" href="https://www.youtube.com/watch?v=4_1pM6o-pD4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/4_1pM6o-pD4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/4_1pM6o-pD4/maxresdefault.jpg" alt="Play the recording: Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for Coherent (16QAM) and Non-Coherent (PAM4) high speed transceiv" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Rare, concrete hardware lab data on how 100G–800G transceivers actually behave at the edge of their operating envelope — exactly the optics/physical-layer evidence a DC networking PM rarely gets at operator meetings.</li>
+<li><strong>What</strong>: A lab study of six device types (100G QSFP28 single-lambda DR and ER, 400G ZR coherent, 400G LR4, 400G QSFP112 DR4, 800G QSFP-DD DR8) measuring BER against fiber length, attenuation and temperature, up to and well past spec (~120 °C). Headline findings: direct-detection (grey/PAM4) transceivers' BER depends on both temperature and fiber length; coherent (400ZR) BER is largely insensitive to temperature and dominated by reach; there is very little margin between the CMIS high-alarm threshold and loss of signal; and after a thermal excursion, post-FEC BER recovered to roughly 10× worse than before the cooker was removed. Also a practical warning: short-reach testing of long-reach optics needs ≥11 dB attenuation or you damage the photodiodes.</li>
+<li><strong>How</strong>: FLEXOPTIX's programmable-transceiver platform (FLEXBOX5) used as the test rig, with BERT measurements, controlled attenuation on G.652.D spools, and passive heatsinks/fans to manipulate temperature; pre-FEC and post-FEC BER tracked as rolling averages rather than snapshots.</li>
+<li><strong>Where applicable</strong>: The measurement methodology and the failure-mode findings transfer to any 400G/800G optics deployment, DC or DCI. Caveats: the presenter works for a transceiver vendor, and this is component-level bench testing — no multi-vendor fleet statistics. Ends with a product-flavored live demo.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="srv6-usid-fundamental-transformation-of-the-ip-stack"><a href="srv6-usid-fundamental-transformation-of-the-ip-stack/">SRv6 uSID: fundamental transformation of the IP stack</a><a class="headerlink" href="#srv6-usid-fundamental-transformation-of-the-ip-stack" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.netnod.se/sites/default/files/2025-10/20251009-Netnod-SRv6-uSID-rev2.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/-Q9JYxKOp4U">Recording</a></p>
+</div>
+<p>Ahmed Abdeslam — <a href="../companies/cisco/">Cisco</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="-Q9JYxKOp4U" data-start="0" href="https://www.youtube.com/watch?v=-Q9JYxKOp4U" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/-Q9JYxKOp4U/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/-Q9JYxKOp4U/maxresdefault.jpg" alt="Play the recording: SRv6 uSID: fundamental transformation of the IP stack" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: uSID is now a Proposed Standard (RFC 9800) with real hyperscaler deployments, and the talk connects it directly to AI backend fabrics and DCI — the PM's datapath-internals and DC/WAN-interconnect interests. It is also the clearest signal that SRv6 is displacing VXLAN/SR-MPLS layering in new DC designs.</li>
+<li><strong>What</strong>: A Cisco view of SRv6 uSID: the 128-bit destination address becomes an ordered list of uSID instructions (typically ≤6 fit in the DA, SRH available for ultra-scale TE), replacing per-domain shims (MPLS core, VXLAN DC, GTP mobility). Includes third-party evidence: Microsoft quotes on why SRv6 fits AI backends (source routing instead of ECMP, path enumeration for latency, coupling with the workload scheduler, source-side failure detection), a Nebius design replacing VXLAN-in-DC + SR-MPLS-in-metro with one end-to-end uSID design with stateless service insertion, and an Alibaba ultra-scale DCI deployment across China. Claims &gt;85k Cisco routers shipped uSID-capable and SONiC mainline support (350+ PRs, 1600+ commits, contributors incl. Microsoft, Alibaba, Broadcom, NVIDIA).</li>
+<li><strong>How</strong>: uSID instructions bind to underlay TE, overlay, or service chaining; L3VPN/GRT services carried via BGP RFC 9252; AI backends run static uSID fabric + SDN controller rather than distributed routing; AI DCI argument is that MPLS TE doesn't fit (no MPLS in SONiC or DC hardware, pervasive-deployment cost, breaks end-to-end model).</li>
+<li><strong>Where applicable</strong>: The technology is standardized and multi-vendor, but this is a vendor talk with marketing framing ("fundamental transformation") and the deployment evidence is hyperscaler-specific (Microsoft, Alibaba, Nebius). For an operator, the transferable content is the architecture pattern — single protocol end-to-end, source-routed TE — not a drop-in design.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="building-modern-and-scalable-dc-fabrics"><a href="building-modern-and-scalable-dc-fabrics/">Building Modern and Scalable DC Fabrics</a><a class="headerlink" href="#building-modern-and-scalable-dc-fabrics" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.netnod.se/sites/default/files/2025-10/17.Building%20Modern%20and%20Scalable%20DC%20Fabrics%20-%20Alperen%20Akpinar%20061025.pptx_.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/JwlfAEgXw7o">Recording</a></p>
+</div>
+<p>Alperen Akpinar — <a href="../companies/nokia/">Nokia</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="JwlfAEgXw7o" data-start="0" href="https://www.youtube.com/watch?v=JwlfAEgXw7o" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/JwlfAEgXw7o/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/JwlfAEgXw7o/maxresdefault.jpg" alt="Play the recording: Building Modern and Scalable DC Fabrics" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: A useful map of how a major vendor is restructuring its DC portfolio around AI fabrics — backend fabrics, lossless/QoS, and DC gateways/DCI — plus an automation stack (EDA) that operators can actually try without a license.</li>
+<li><strong>What</strong>: An evolution framing (STP/VLANs → VPLS → EVPN/VXLAN → SRv6/uSID, 10M → 800G+) anchored on the scale challenge: AI is redefining "large DC" from ~30 MW (2013) to 100K–1M-GPU "AI factories". The concrete architecture: two-tier topologies for 1K–16K GPU clusters, multi-plane topologies for 100K+; 800G AI backend fabrics on 7220 IXR-H5 / 7250 IXR; dynamic load balancing and RDMA-aware (Q-pair) hashing; DCQCN with PFC/ECN; real-time congestion telemetry; backend multi-tenancy segmentation; DC gateways with 800G ZR+ coherent DCI and 4×400G FlexE bundles; Event-Driven Automation (EDA) on SR Linux with a model-driven NDK and Kubernetes-based foundation.</li>
+<li><strong>How</strong>: The transferable pattern is the tiering of designs by cluster size (two-tier vs multi-plane) and the coupling of backend fabric features (DLB, Q-pair hashing, congestion indicators) with an intent/event-driven automation layer rather than box-by-box config.</li>
+<li><strong>Where applicable</strong>: The portfolio specifics are Nokia-only (IXR platforms, EDA) — this is a vendor solution overview, not a neutral paper. The sizing/topology patterns and the "try-eda" unlicensed playground (<code>make try-eda</code>, no registration) are the broadly applicable bits.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="your-as-set-is-crucial-to-your-routing-security-3-tips-on-securing-your-as-set"><a href="your-as-set-is-crucial-to-your-routing-security-3-tips-on-securing-your/">Your AS-set is crucial to your routing security. 3 tips on securing your AS-set</a><a class="headerlink" href="#your-as-set-is-crucial-to-your-routing-security-3-tips-on-securing-your-as-set" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.netnod.se/sites/default/files/2025-10/10.Securing%20your%20AS-Set-Netnod.pptx_.pdf">Slides</a></p>
+</div>
+<p>Lasse Jarlskov — Telia</p>
+<ul>
+<li><strong>Why</strong>: Routing security hygiene with a concrete rule of thumb and free tooling — the kind of immediately actionable operator talk this digest exists to surface. Mismanaged IRR AS-SETs are a real leak/hijack vector via recursive expansion.</li>
+<li><strong>What</strong>: Three tips from a transit operator: (1) know your AS-set's purpose — customer vs. peer vs. IXP-member sets serve different filter-building use cases and conflating them causes confusion (example: AS-DATAIX, an IX AS-set that expands to more ASNs and prefixes than the global table, with a shown inclusion chain from AS-DATAIX down to Bahnhof's AS8473); (2) watch what you include — recursive references are powerful and dangerous, bigger is not better, check the size of customers' AS-sets; (3) monitor who includes <em>you</em> — every inclusion of your ASN/AS-set in someone else's policy is a potential hijack or leak affecting your customers, with no automatic approval mechanism.</li>
+<li><strong>How</strong>: RPSL/IRR objects built into upstream route filters; audit via bgp.tools' reverse-inclusion tool and Cloudflare Radar's IRR AS-set view; the recurring decision heuristic is "would you readvertise this in BGP?" — if not, it doesn't belong in the set.</li>
+<li><strong>Where applicable</strong>: General technique, applicable to any network with transit customers, peering, or route-server sessions — no scale or topology dependency. References (DKNOG, Kentik, MANRS, Cloudflare) are all public. Based on the slide deck (no abstract was published).</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="mastering-network-operations-the-power-of-abstraction-in-automation"><a href="mastering-network-operations-the-power-of-abstraction-in-automation/">Mastering Network Operations: The Power of Abstraction in Automation</a><a class="headerlink" href="#mastering-network-operations-the-power-of-abstraction-in-automation" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.netnod.se/sites/default/files/2025-10/9.netnod2025%20-%20The%20Power%20of%20Abstraction.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/yK7xxkBPnew">Recording</a></p>
+</div>
+<p>Jaakko Rautanen — Rautanen</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="yK7xxkBPnew" data-start="0" href="https://www.youtube.com/watch?v=yK7xxkBPnew" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/yK7xxkBPnew/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/yK7xxkBPnew/maxresdefault.jpg" alt="Play the recording: Mastering Network Operations: The Power of Abstraction in Automation" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Network automation done as a layered abstraction pipeline — the exact discipline the PM needs for cloud-native/fabric automation, presented as a transferable method rather than a product.</li>
+<li><strong>What</strong>: A consultant's automation stack built around NetBox (with a custom "Ninja" plugin): abstract service models at the top, detailed network state in the middle, vendor-specific configurations at the bottom, with a configuration pipeline translating between layers. A worked example models a virtual network both as a detailed per-site entity and as a generic abstract service. A four-step design process is laid out — split the service into parts, design each data model (fields, types, references, create/edit/delete logic), implement and test as a NetBox plugin in Python, deploy with data migrations.</li>
+<li><strong>How</strong>: Declarative, model-driven state in NetBox as the single source of truth, with code generation down the stack; lessons learned are: eliminate arbitrary rules, follow the declarative model, keep models generic.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to any shop that can run NetBox — this is a method, not a product. Caveat: the deck is high-level and conceptual; there are no metrics, scale figures, or postmortem detail, so treat it as a design pattern rather than a case study.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="encrypted-network-traffic-analysis-and-protection"><a href="encrypted-network-traffic-analysis-and-protection/">Encrypted Network Traffic Analysis and Protection</a><a class="headerlink" href="#encrypted-network-traffic-analysis-and-protection" title="Permanent link">#</a></h3>
+<p>David Hasselquist — Sectra</p>
+<ul>
+<li><strong>Why</strong>: Encrypted-traffic analysis sits in the PM's network-security interest — how to reason about (and protect) traffic you cannot decrypt, increasingly the default state of the network.</li>
+<li><strong>What</strong>: Unknown — no abstract, slides, or source text were published for this talk; only the title and speaker are available. The title indicates analysis of encrypted network traffic and protection mechanisms, and Sectra's background is in secure communications, so it may lean toward their secure-messaging domain rather than operator ETA tooling.</li>
+<li><strong>How</strong>: Not determinable from the program. Recommend watching the recording if ETA is on the roadmap this cycle.</li>
+<li><strong>Where applicable</strong>: Cannot be assessed. Flagged explicitly: <strong>no abstract or materials published; assessed from title and speaker affiliation only.</strong></li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="meta-big-trends-and-how-it-will-change-the-network"><a href="meta-big-trends-and-how-it-will-change-the-network/">Meta – Big Trends and how it will change the Network</a><a class="headerlink" href="#meta-big-trends-and-how-it-will-change-the-network" title="Permanent link">#</a></h3>
+<p>Janne Elvelid — <a href="../companies/meta/">META</a>, Fredrik “Hugge” Korsbäck — META</p>
+<ul>
+<li><strong>Why</strong>: Two Meta network engineers on macro trends reshaping networks — useful as a demand-side signal (what AI-era traffic and topologies will force on vendors and operators alike).</li>
+<li><strong>What</strong>: Not published — no abstract, slides, or source text for this session; only title and speakers are available.</li>
+<li><strong>How / Where applicable</strong>: Not determinable from the program. Worth a recording watch given the speakers' vantage point (Meta's infrastructure is a leading indicator for DC fabric and WAN build-outs), but this pick is based on the speakers alone. <strong>No abstract or materials published.</strong></li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="recursive-dns-in-telia-company-sweden"><a href="recursive-dns-in-telia-company-sweden/">Recursive DNS in Telia Company Sweden</a><a class="headerlink" href="#recursive-dns-in-telia-company-sweden" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://youtu.be/zdM0jF1WGSE">Recording</a></p>
+</div>
+<p>Björn Hellqvist — Telia</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="zdM0jF1WGSE" data-start="0" href="https://www.youtube.com/watch?v=zdM0jF1WGSE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/zdM0jF1WGSE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/zdM0jF1WGSE/maxresdefault.jpg" alt="Play the recording: Recursive DNS in Telia Company Sweden" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: National-telco operational practice on recursive resolver infrastructure — a domain adjacent to the PM's core, and an operator talk where deployment/failure stories often surface.</li>
+<li><strong>What</strong>: Unknown — no abstract or slides were published; only a title, speaker, and video are available.</li>
+<li><strong>How / Where applicable</strong>: Not determinable from the program. <strong>No abstract or materials published; assessed from title and speaker affiliation only.</strong></li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="optics-was-instrumental-in-building-the-internetand-will-be-crucial-in-an-ai-driven-world"><a href="optics-was-instrumental-in-building-the-internetand-will-be-crucial-in-a/">Optics was instrumental in building the Internet—and will be crucial in an AI-driven world</a><a class="headerlink" href="#optics-was-instrumental-in-building-the-internetand-will-be-crucial-in-an-ai-driven-world" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://youtu.be/WhkyBnPKbDM">Recording</a></p>
+</div>
+<p>Magnus Grenfeldt — Smartoptics</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="WhkyBnPKbDM" data-start="0" href="https://www.youtube.com/watch?v=WhkyBnPKbDM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/WhkyBnPKbDM/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/WhkyBnPKbDM/maxresdefault.jpg" alt="Play the recording: Optics was instrumental in building the Internet—and will be crucial in an AI-driven world" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Optics is core PM territory, but this session is a vendor presentation with no published abstract, slides, or source text — likely a Smartoptics DWDM product-lens view of the AI build-out.</li>
+<li><strong>What</strong>: Unknown beyond the title's thesis: optical transport as a historical Internet enabler and a future AI-driven one.</li>
+<li><strong>How / Where applicable</strong>: Not determinable from the program. Listed as adjacent rather than core precisely because there is no way to verify substance over pitch; the FLEXOPTIX talk (Core, above) is the optics session with actual data. <strong>No abstract or materials published; assessed from title and speaker affiliation only.</strong></li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="the-illusion-of-control-trusting-software-in-the-age-of-compromise"><a href="the-illusion-of-control-trusting-software-in-the-age-of-compromise/">The Illusion of Control: Trusting Software in the Age of Compromise</a><a class="headerlink" href="#the-illusion-of-control-trusting-software-in-the-age-of-compromise" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.netnod.se/sites/default/files/2025-10/18.The%20Illusion%20of%20Control.pdf">Slides</a> <a class="pick-link" href="https://youtu.be/mWIxKHxxTG0">Recording</a></p>
+</div>
+<p>Moin Rahman — Independent consultant / FreeBSD contributor</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="mWIxKHxxTG0" data-start="0" href="https://www.youtube.com/watch?v=mWIxKHxxTG0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/mWIxKHxxTG0/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/mWIxKHxxTG0/maxresdefault.jpg" alt="Play the recording: The Illusion of Control: Trusting Software in the Age of Compromise" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Not a networking talk at all — but it takes the "zero trust" idea the network world lives by and applies it to the software supply chain that <em>builds</em> the network stack (OS images, NOS builds, tooling). That framing — you don't control your security if you don't control your build — is a genuine signal of where infrastructure trust is heading.</li>
+<li><strong>What</strong>: An argument that the drift from DIY source builds (LFS, Gentoo, BSDs) to package managers and now CI/CD pipelines created "assumed, not verified" security, illustrated with SolarWinds, XZ, and CCleaner. The proposal is "Zero Trust Builds": trusted source selection, reproducible builds, isolated build environments, cryptographic verification of every step. Includes a concrete catalogue of what breaks reproducibility (timestamps, non-deterministic compilation, hardcoded paths, embedded UUIDs, locale sensitivity, unpinned internet dependencies) and what upstream developers should do about it (<code>SOURCE_DATE_EPOCH</code>, fixed seeds, pinned dependencies, <code>diffoscope</code> checks), plus the state of reproducible-build testing across Debian, FreeBSD, OpenBSD, NixOS, and others. A memorable demo point: <code>github.com/freebsd</code> vs <code>github.com/free6sd</code> — one character off, full pipeline compromise.</li>
+<li><strong>How</strong>: Deterministic/reproducible builds verified by byte-for-byte comparison, hardened isolated pipelines, and independent verification of vendor artifacts rather than trusting signatures alone ("signed binaries ≠ secure binaries").</li>
+<li><strong>Where applicable</strong>: General — applies to any organization's software supply chain, and by extension to how you trust the firmware and NOS images running your network. The speaker is an independent FreeBSD contributor, not a vendor; the content is a practice guide, not a pitch. Based on the slide deck (no abstract was published).</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>AI fabrics swallowed the program</strong>: nearly every infrastructure talk — Ultra Ethernet, SRv6 uSID, Nokia, optics — reframed itself around AI backend networks, multi-GPU clusters, and AI DCI. Even a Nordic IX meeting is now an AI-fabric meeting.</li>
+<li><strong>Lossless is being redesigned, not tuned</strong>: the field's collective move is away from RoCEv2's ECMP + PFC/DCQCN constraints toward packet spraying with out-of-order transports, new congestion signals (trimming, delay+ECN), and link-layer retransmission — UET is the concrete spec, and vendor roadmaps (DLB, Q-pair hashing) are converging on the same ideas.</li>
+<li><strong>Optics reliability is getting quantified</strong>: 800G-era talks are starting to bring measured BER-vs-temperature/reach data rather than spec-sheet claims, with coherent and PAM4 showing clearly different environmental sensitivities.</li>
+<li><strong>Standards are arriving faster</strong>: SRv6 uSID hit Proposed Standard (RFC 9800) with hyperscaler deployments, and UEC shipped a 500-page 1.0 spec — both are reaching operator audiences within a couple of years of first deployment, compressing the usual diffusion cycle.</li>
+<li><strong>Routing hygiene framed as shared responsibility</strong>: the AS-set talk positions IRR hygiene as a collective-good contribution, with free tooling (bgp.tools, Cloudflare Radar) making audit a low-effort routine task.</li>
+<li><strong>A programing caveat</strong>: this meeting published almost no abstracts, so slide decks (where they existed) did the heavy lifting; several potentially relevant talks (Meta, Sectra, Telia recursive DNS) remain unauditable from text and would require the recordings.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/netnod-2025.md"><code>digests/netnod-2025.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/netnod-2025.md"><code>prompts/netnod-2025.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../sigcomm-2025/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SIGCOMM 2025">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                SIGCOMM 2025
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ocp-2025/" class="md-footer__link md-footer__link--next" aria-label="Next: OCP Global Summit 2025">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                OCP Global Summit 2025
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

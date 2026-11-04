@@ -7,7 +7,7 @@ registry_key: ovscon-2024
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# Digest: Open vSwitch and OVN 2024 Fall Conference (Prague)
+# Open vSwitch and OVN 2024 Fall Conference (Prague)
 
 A single-track, contributor-heavy community conference. The center of gravity this cycle: renegotiating where hardware acceleration lives in the OVS architecture, pushing OVN out of its overlay bubble into the routed fabric, and turning observability into a datapath-native feature. Nearly everything is technical; the few vendor pitches are flagged below.
 

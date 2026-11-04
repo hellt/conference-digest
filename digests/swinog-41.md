@@ -7,7 +7,7 @@ registry_key: swinog-41
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# SwiNOG #41 — Digest
+# SwiNOG #41
 
 A compact, operator-heavy program: routing security (ASPA/BMP), physical-layer efficiency (optics power, shared spectrum), EVPN fabric scaling, automation frameworks, and one unusually data-rich talk on agentic AI in network operations. Community/organizational items (CHNUG intro, closing remarks) are omitted as non-technical.
 

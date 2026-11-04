@@ -7,7 +7,7 @@ registry_key: ovscon-2025
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# OVS + OVN 2025 Fall Conference (Prague) — Digest
+# OVS + OVN 2025 Fall Conference (Prague)
 
 This year's program is unusually dense in the PM's core territory: OVN is growing native fabric integration (BGP, BGP-EVPN, transit router), DPUs and hardware offload are driving new upstream OVN/OVS features, and AI/GPU workloads are stress-testing overlay designs. Watch for vendor framing on the NVIDIA DPU talks — several include real testbed numbers, which lifts them above pure product pitch.
 

@@ -7,7 +7,7 @@ registry_key: ciscolive-eu-2026
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# Cisco Live Europe 2026 (Amsterdam) — Digest
+# Cisco Live Europe 2026 (Amsterdam)
 
 **Note on sources**: all session `page:` links point to Cisco's login-gated on-demand library (a JavaScript single-page app); fetch attempts returned only the site shell, not session content. Every write-up below is therefore **(from abstract only)**. Cisco Live is a vendor conference: product positioning is the default, and the picks below were filtered for sessions with genuine technical or operational substance.
 

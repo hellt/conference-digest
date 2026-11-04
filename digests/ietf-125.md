@@ -7,7 +7,7 @@ registry_key: ietf-125
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# IETF 125 (Shenzhen) — Digest
+# IETF 125 (Shenzhen)
 
 A standards meeting: the substance is in the drafts, and the signal is in what is moving toward adoption. This cycle is dominated by two waves: **AI/ML Ethernet fabrics** (adaptive routing, sub-100µs fast reroute, lossless DCN+WAN flow control, multicast for collectives) and **agentic identity** (OAuth transaction tokens, delegation chains, SPIFFE client auth, workload identity hints in TLS). Both are moving from individual drafts toward WG adoption.
 

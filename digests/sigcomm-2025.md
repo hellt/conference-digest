@@ -6,7 +6,7 @@ generated: 2026-06-07
 registry_key: sigcomm-2025
 ---
 
-# SIGCOMM 2025 Digest
+# SIGCOMM 2025
 
 This is an AI-infrastructure-heavy cycle, and with physical DC/WAN systems treated as core, the program yields a strong Core tier: optics and topology, RDMA/lossless fabrics, hardware transports, programmable-dataplane work, and cloud-native datapath all land squarely in scope. I've pushed pure LLM-serving-algorithm and application-QoE work down or out, and reserved Wildcards for genuinely off-axis novelty.
 

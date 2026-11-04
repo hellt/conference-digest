@@ -7,7 +7,7 @@ registry_key: zanog-2026
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# ZANOG@iWeek 2026 — Operator Digest
+# ZANOG@iWeek 2026
 
 A compact regional operator program (South Africa / AFRINIC region). Much of the agenda is policy, licensing, and ISP business-model content, which has been filtered out. What remains is a solid routing-security thread, a rare hands-on trust-infrastructure talk, two optical/transport sessions, and adoptable open tooling. All session-page fetches returned only the program abstracts, so most write-ups below are abstract-grounded; the two sessions with no abstract at all are flagged explicitly.
 

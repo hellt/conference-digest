@@ -7,7 +7,7 @@ selection_basis: program text (draft titles + abstracts); no fetchable paper lin
 enrichment: none — program provided no pdf/page links beyond GitHub discussion venues; all write-ups are from abstract/draft text only
 -->
 
-# IETF 123 (Madrid) — Digest
+# IETF 123 (Madrid)
 
 A standards meeting, so the unit of work is the Internet-Draft, not the session. This cycle's signal is concentrated in three places that map directly onto your interests: **workload identity** finally cohering into a full WG-adopted stack (WIMSE), the **post-quantum migration** moving from algorithm definition into deployment mechanics across TLS/PKIX/COSE/JOSE, and **datacenter fabric** work in NVO3, RIFT, and SAVNET. Selection is from the program; every write-up below is grounded in the draft abstract only (no paper links were available to enrich from), and is flagged as such.
 

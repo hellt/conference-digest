@@ -7,7 +7,7 @@ registry_key: nlnog-2026
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# NLNOG Day 2026 — Digest
+# NLNOG Day 2026
 
 A compact, single-track operator program. No abstracts were published; every write-up below is grounded in the actual slides extracted for this run. Nine items total; one (the NLNAM community announcement) carries no technical content and is skipped.
 

@@ -6,7 +6,7 @@ generated: 2026-08-30
 registry_key: srecon-2025-americas
 -->
 
-# SREcon25 Americas — Digest
+# SREcon25 Americas
 
 Program source is the expanded schedule (titles, speakers, and abstracts; no PDF/slide/recording links were present in the pasted program text, so no Links field is included below — every write-up is grounded in the abstract only). This cycle's program skews heavily toward observability tooling, incident-response process, and organizational/human-factors content, plus a large AI/ML-infrastructure-operations cluster (safe model rollout, ML training governance, AI-assisted ops) — none of which is core to the PM's stated interests. The pick count below is intentionally small: it reflects genuinely thin coverage of DC/WAN networking, cloud-native networking, network security, and identity this cycle, not aggressive filtering of a networking-heavy program.
 

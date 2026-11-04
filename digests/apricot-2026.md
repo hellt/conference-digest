@@ -7,7 +7,7 @@ registry_key: apricot-2026
 written_by: ToFaRev (zai-org/GLM-5.3)
 -->
 
-# APRICOT 2026 (Jakarta) — Operator Digest
+# APRICOT 2026 (Jakarta)
 
 A routing- and peering-heavy operator program. For this reader — physical DC/WAN systems, cloud-native networking, security, and identity — the strongest material this cycle sits in four clusters: coherent-optics/IPoDWDM (finally production-ready), SRv6/EVPN fabric migration, a coherent wave of "post-ROV" routing-security work (ASPA, MESec, BMP-based visibility), and early standards activity around agentic/attestation identity at the IETF.
 

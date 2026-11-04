@@ -11,6 +11,8 @@ written_by: ToFaRev (zai-org/GLM-5.3)
 
 ### Telstra outage: The night a network decided the year was 2006
 
+**Links:** [Recording](https://www.youtube.com/watch?v=mJWE8npJKzA)
+
 Speakers: Sven-Christian Ebenhag - Netnod
 
 - **Why**: Outage postmortems are the highest-transfer-value content at an operator meeting, and the title suggests a time/date-handling fault at the root — a class of failure (certificate validity, RPKI/TLS time checks, protocol timers) that cuts across every network, not just one operator's.
@@ -29,6 +31,8 @@ Speakers: not listed in the program.
 
 ### Evolution and trends of optical networks
 
+**Links:** [Recording](https://www.youtube.com/watch?v=leS6_JonBIc)
+
 Speakers: not listed in the program.
 
 - **Why**: Optics are a core PM interest, and a dedicated trends talk is the cheapest way to recalibrate assumptions about coherent pluggables, DCI economics, and where the transport market is heading.
@@ -37,6 +41,8 @@ Speakers: not listed in the program.
 - **Where applicable**: Broadly applicable to DC/WAN interconnect planning; watch whether the framing is carrier-transport-centric or DC-centric, since that changes which trends transfer.
 
 ### Understanding and optimising transceiver efficiency using internal metrics for improved power savings
+
+**Links:** [Recording](https://www.youtube.com/watch?v=VuElGwCq6rY)
 
 Speakers: not listed in the program.
 
@@ -55,6 +61,8 @@ Speakers: Johan Ervenius - Arista Networks
 - **Where applicable**: Broadly applicable standards work, though the speaker is from Arista — expect standards content rather than a product pitch, but verify the deployment guidance isn't vendor-feature-shaped.
 
 ### StratoWeave: A New Architecture for Network Automation
+
+**Links:** [Recording](https://www.youtube.com/watch?v=HXuK0YCMDGc)
 
 Speakers: not listed in the program.
 
@@ -76,6 +84,8 @@ Speakers: panel, not individually listed in the program.
 
 ### Keynote speech: High volume AI vulnerability reports
 
+**Links:** [Recording](https://www.youtube.com/watch?v=mmYFHkkCAV8)
+
 Speakers: not listed in the program.
 
 - **Why**: Security-adjacent but significant: AI is generating large volumes of vulnerability reports aimed at maintainers and PSIRTs, and how the receiving side triages that flood is a live operational problem that will reach every security team, including the PM's.
@@ -85,6 +95,8 @@ Speakers: not listed in the program.
 
 ### Internet Resilience in Ukraine
 
+**Links:** [Recording](https://www.youtube.com/watch?v=C5vO-bwxtVI)
+
 Speakers: not listed in the program.
 
 - **Why**: Ukraine is the richest live case study of national-network resilience under sustained physical and cyber attack — connectivity engineering under war conditions, and a key input to European resilience planning, which is squarely an operator concern in the Nordics.
@@ -93,6 +105,8 @@ Speakers: not listed in the program.
 - **Where applicable**: Lessons are Ukraine-context-specific but transfer well to any resilience/continuity planning effort; this session is followed by a related *Q&A Internet Resilience* session (Fredrik Lindeberg, Netnod), which suggests a substantive discussion block.
 
 ### Surviving in the new geopolitical landscape
+
+**Links:** [Recording](https://www.youtube.com/watch?v=NyM55Lq-TCA)
 
 Speakers: Patrik Fältström - Netnod
 

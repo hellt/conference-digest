@@ -218,6 +218,7 @@ docs/  overrides/    # Zensical site sources (docs/posts/ and docs/<key>/ are ge
 layouts/             # the share-card layout (Zensical social plugin)
 mkdocs.yml pyproject.toml uv.lock Makefile
 .github/workflows/
+  ci.yml                  # unit tests + actionlint on PRs and main
   conference-digest.yml   # weekly scan
   digest-bot.yml          # ToFaRev drafts digests as PRs
   close-digest-issue.yml  # closes the issue when a digest lands
@@ -492,4 +493,15 @@ run.
 
 ## Dependencies
 
-`requests`, `beautifulsoup4`, `PyYAML`. Installed fresh in the workflow runner.
+`requirements.in` declares the direct runtime dependencies (`requests`,
+`beautifulsoup4`, `PyYAML`). `requirements.txt` is the locked, hash-checked
+installation file used by the workflows. After changing the direct dependencies,
+regenerate it with:
+
+```bash
+uv pip compile requirements.in --output-file requirements.txt --generate-hashes --python-version 3.14
+```
+
+The site toolchain is separately locked in `uv.lock`; `make site` uses it with
+`uv run --locked`. CI runs the unit tests and `actionlint` on pull requests and
+pushes to `main`.

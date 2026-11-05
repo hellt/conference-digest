@@ -41,7 +41,8 @@ registry.yaml (an edition)
   -> links-refresh.yml (weekly, 120 days) new recordings/slides -> PR "links: <key>"
 ```
 
-Five workflows: `conference-digest.yml` (weekly cron + `workflow_dispatch` with
+Six workflows: `ci.yml` (unit tests and actionlint on PRs and main),
+`conference-digest.yml` (weekly cron + `workflow_dispatch` with
 an optional `conference` key), `digest-bot.yml` (after each scan, on a human push
 to `prompts/*.md`, or `workflow_dispatch` for one key), `close-digest-issue.yml`
 (push to `digests/*.md`), `site.yml` (build on PRs, build + publish on main), and

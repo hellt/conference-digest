@@ -3,7 +3,7 @@ name = "conference-digest"
 version = "0.1.0"
 description = "Conference digests for a networking, security and identity PM"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.14"
 # The pipeline itself installs requirements.txt; this project file only pins
 # the site toolchain, run through uv as on containerlab.dev.
 dependencies = ["PyYAML>=6.0"]

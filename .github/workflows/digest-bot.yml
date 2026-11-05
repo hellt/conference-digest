@@ -42,8 +42,10 @@ concurrency:
 
 jobs:
   queue:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    # Read main after every completed scan. Valid committed prompts must still
+    # be drafted when a later scan step (especially issue bookkeeping) failed.
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
     permissions:
       contents: read
       pull-requests: read
@@ -52,19 +54,23 @@ jobs:
       source_ref: ${{ steps.queue.outputs.source_ref }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           # The scan commits prompts to the default branch, so read its tip.
           ref: ${{ github.event.repository.default_branch }}
           persist-credentials: false
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7
         with:
-          python-version: '3.11'
+          enable-cache: true
+          python-version: '3.14'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          uv venv --python 3.14 .venv
+          uv pip install --python .venv/bin/python --require-hashes -r requirements.txt
+          echo "$PWD/.venv/bin" >> "$GITHUB_PATH"
 
       - name: Find prompts waiting for a digest
         id: queue
@@ -81,6 +87,8 @@ jobs:
 
   write:
     needs: queue
+    # A reusable-workflow caller cannot set timeout-minutes. The pinned
+    # ToFaRev workflow enforces its own 45-minute timeout on the digest job.
     if: needs.queue.outputs.keys != '' && needs.queue.outputs.keys != '[]'
     strategy:
       fail-fast: false
@@ -107,36 +115,49 @@ jobs:
     needs: [queue, write]
     if: always() && needs.queue.result == 'success' && needs.queue.outputs.keys != '' && needs.queue.outputs.keys != '[]'
     runs-on: ubuntu-24.04
+    timeout-minutes: 120
     permissions:
       contents: write
       pull-requests: write
       issues: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           ref: ${{ needs.queue.outputs.source_ref }}
           fetch-depth: 0
 
       - name: Download digests
-        uses: actions/download-artifact@v4
-        continue-on-error: true   # every writer may have failed
+        id: download
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        continue-on-error: true   # no artifacts match when every writer fails
         with:
           pattern: tofarev-digest-*
           path: artifacts
 
+      - name: Check artifact download failure
+        if: steps.download.outcome == 'failure'
+        env:
+          WRITE_RESULT: ${{ needs.write.result }}
+        run: |
+          mkdir -p artifacts
+          if [ "$WRITE_RESULT" = success ]; then
+            echo "::error::All writers succeeded, but their artifacts could not be downloaded"
+            exit 1
+          fi
+          echo "::warning::Artifact download failed after writer failures; inspect the download step. Missing artifacts are checked per key below."
+
       - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7
         with:
           enable-cache: true
+          python-version: '3.14'
+
+      - name: Install dependencies
+        run: |
+          uv venv --python 3.14 .venv
+          uv pip install --python .venv/bin/python --require-hashes -r requirements.txt
+          echo "$PWD/.venv/bin" >> "$GITHUB_PATH"
 
       - name: Open one pull request per digest
         env:

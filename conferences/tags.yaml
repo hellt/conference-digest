@@ -4424,3 +4424,64 @@ mlsys-2026:
     - benchmarking
     - measurement
     - ml-for-networking
+itnog-9:
+  post:
+  - optics
+  - automation
+  - bgp
+  - network-security
+  - ai-networks
+  - peering
+  talks:
+    Networking for AI and Ultra Ethernet:
+    - ai-networks
+    - ethernet
+    - data-center-fabric
+    Power Consumption Considerations in Optical Metro Transport Networks:
+    - optics
+    - power
+    - interconnection
+    ? Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for
+      Coherent (16QAM) and Non-Coherent (PAM4) high speed transceivers under environmental
+      variations
+    : - optics
+      - benchmarking
+      - measurement
+    EVPN/VxLAN outside the data center:
+    - data-center-fabric
+    - bgp
+    - interconnection
+    Routing Security:
+    - bgp
+    - network-security
+    - pki
+    'PACMAN: Automazione della configurazione di rete in GARR, tra sfide tecnologiche e cambiamento culturale':
+    - automation
+    - configuration-management
+    - gitops
+    'Automating a Service Provider Network: A Practical Introduction':
+    - automation
+    - configuration-management
+    - network-security
+    'From Clicks to Code: Optical Network Automation Journey in GARR':
+    - automation
+    - optics
+    - orchestration
+    KINDNS:
+    - dns
+    - network-security
+    PeeringDB updates:
+    - peering
+    - authentication
+    - interconnection
+    IXP updates:
+    - peering
+    - troubleshooting
+    - sre
+    Costruire un ambiente di test sicuro per un IXP:
+    - testing
+    - peering
+    - network-security
+    ISDN - Protocol Wars:
+    - routing-protocols
+    - standardization

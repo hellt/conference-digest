@@ -1,0 +1,1612 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A compact operator program (~19 substantive talks, no published abstracts — all write-ups below are grounded in the extracted slide decks). Cloud-native networking (eBPF, Kubernetes, service mesh) and identity (passkeys, SPIFFE) are essentially absent from this program; the value here is…">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/ausnog-2025/">
+      
+      
+      
+        <link rel="prev" href="../ovscon-2024/">
+      
+      
+        <link rel="next" href="../ciscolive-eu-2025/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>AusNOG 2025 - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="AusNOG 2025 · Conference Digest" />
+<meta property="og:description" content="A compact operator program (~19 substantive talks, no published abstracts — all write-ups below are grounded in the extracted slide decks). Cloud-native networking (eBPF, Kubernetes, service mesh) and identity (passkeys, SPIFFE) are essentially absent from this program; the value here is…" />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/ausnog-2025.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/ausnog-2025/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="AusNOG 2025 · Conference Digest" />
+<meta property="twitter:description" content="A compact operator program (~19 substantive talks, no published abstracts — all write-ups below are grounded in the extracted slide decks). Cloud-native networking (eBPF, Kubernetes, service mesh) and identity (passkeys, SPIFFE) are essentially absent from this program; the value here is…" />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/ausnog-2025.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AusNOG 2025
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-tabs__powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-tabs__powered-text">Powered by</span>
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-packet-left-behind-awss-approach-to-building-and-operating-reliable-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        No Packet Left Behind: AWS's approach to building and operating reliable networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-ai-clusters-what-network-engineers-need-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Building AI Clusters: What Network Engineers need to know
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-of-transport-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Evolution of Transport Protocols
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aarnet-australias-academic-and-research-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AARNet - Australia's Academic and Research Network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-scourge-of-excessive-as-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Scourge of Excessive AS-SETs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-far-can-you-get-with-ix-route-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How far can you get with IX Route Servers?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defending-telco-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Defending Telco Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-smaller-nbn-aggregation-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A smaller NBN Aggregation Network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rethinking-network-troubleshooting-smarter-tools-and-better-visibility-at-nexthop" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rethinking Network Troubleshooting: Smarter Tools and Better Visibility at Nexthop
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-state-checking-a-case-study-in-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Network State Checking: A Case Study in Automation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cryptography-in-the-quantum-era" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cryptography in the Quantum Era
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designing-a-mikrotik-cgnat-solution-that-scales" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Designing a mikrotik cgnat solution that scales
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-comfortable-complexity-of-overlays" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The comfortable complexity of Overlays
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transport-protocols-evolution-or-how-to-migrate-your-configuration-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Transport Protocols Evolution or how to migrate your configuration today.
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-geopolitics-is-rerouting-submarine-cables" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How geopolitics is rerouting submarine cables
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bfd-going-down-from-bgp-timers-expiring" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BFD going down... from BGP timers expiring?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-packet-left-behind-awss-approach-to-building-and-operating-reliable-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        No Packet Left Behind: AWS's approach to building and operating reliable networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-ai-clusters-what-network-engineers-need-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Building AI Clusters: What Network Engineers need to know
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolution-of-transport-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Evolution of Transport Protocols
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aarnet-australias-academic-and-research-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AARNet - Australia's Academic and Research Network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-scourge-of-excessive-as-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Scourge of Excessive AS-SETs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-far-can-you-get-with-ix-route-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How far can you get with IX Route Servers?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defending-telco-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Defending Telco Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-smaller-nbn-aggregation-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A smaller NBN Aggregation Network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rethinking-network-troubleshooting-smarter-tools-and-better-visibility-at-nexthop" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rethinking Network Troubleshooting: Smarter Tools and Better Visibility at Nexthop
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-state-checking-a-case-study-in-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Network State Checking: A Case Study in Automation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cryptography-in-the-quantum-era" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cryptography in the Quantum Era
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designing-a-mikrotik-cgnat-solution-that-scales" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Designing a mikrotik cgnat solution that scales
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-comfortable-complexity-of-overlays" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The comfortable complexity of Overlays
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transport-protocols-evolution-or-how-to-migrate-your-configuration-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Transport Protocols Evolution or how to migrate your configuration today.
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-geopolitics-is-rerouting-submarine-cables" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How geopolitics is rerouting submarine cables
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bfd-going-down-from-bgp-timers-expiring" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BFD going down... from BGP timers expiring?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>20 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="ausnog-2025">AusNOG 2025<a class="headerlink" href="#ausnog-2025" title="Permanent link">#</a></h1>
+<p>A compact operator program (~19 substantive talks, no published abstracts — all write-ups below are grounded in the extracted slide decks). Cloud-native networking (eBPF, Kubernetes, service mesh) and identity (passkeys, SPIFFE) are essentially absent from this program; the value here is concentrated in physical DC/optics, WAN interconnect, routing security, and transport.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>January 10, 2025</span>
+<span class="digest-fact" markdown><a href="https://www.ausnog.net/events/ausnog-2025/program">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="no-packet-left-behind-awss-approach-to-building-and-operating-reliable-networks"><a href="no-packet-left-behind-awss-approach-to-building-and-operating-reliable-n/">No Packet Left Behind: AWS's approach to building and operating reliable networks</a><a class="headerlink" href="#no-packet-left-behind-awss-approach-to-building-and-operating-reliable-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-03-LincolnDale.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=GeE-4V7iXek">Recording</a></p>
+</div>
+<p>Lincoln Dale — <a href="../companies/amazon/">Amazon</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="GeE-4V7iXek" data-start="0" href="https://www.youtube.com/watch?v=GeE-4V7iXek" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/GeE-4V7iXek/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/GeE-4V7iXek/maxresdefault.jpg" alt="Play the recording: No Packet Left Behind: AWS's approach to building and operating reliable networks" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: The reference talk on hyperscale DC fabric design and closed-loop network operations — architecture, auto-remediation, and a vendor-agnostic discard-metric standardization effort the PM should track.</li>
+<li><strong>What</strong>: AWS's design tenets and numbers: cellular datacenter architecture (access cells, intra-/inter-AZ core cells) for blast-radius isolation; single-chip 1RU 12.8T fixed-port switches (32×400G) as the capacity building block — 100Tbps per rack, 3,200Tbps per 32 racks — explicitly choosing redundancy <em>between</em> boxes (3-tier Clos) over large-chassis dual-monolith. Operations side: 5-stage auto-remediation, &gt;1.8Bn metrics/min, &gt;96% of events auto-remediated; deployments always automated with intent validation (Batfish for routing-policy/ACL errors, plus an internal VM/containerlab-style system for scale validation) and rollback on any out-of-expectation metric.</li>
+<li><strong>How</strong>: Key insight that auto-remediation needs (a) architecture that supports it, (b) an accurate signal of impact that indicates cause, &copy; a deliberately small action set (isolate/restore device or link, roll back, move traffic, escalate) — because the wrong action is worse than none (draining a congested device worsens congestion). Notably, vendor discard counters were too inconsistent (grey failures, double counting), so AWS defined its own classification scheme, published as an IETF individual draft (<code>draft-evans-discardclass</code>), and mapped 64–256 hardware drop counters per platform onto it.</li>
+<li><strong>Where applicable</strong>: AWS-specific production scale and tooling, but the tenets, the rollback discipline, and especially the discard-classification work transfer to any large fabric operator. The discard taxonomy draft is relevant to anyone doing grey-failure detection in DC fabrics.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="building-ai-clusters-what-network-engineers-need-to-know"><a href="building-ai-clusters-what-network-engineers-need-to-know/">Building AI Clusters: What Network Engineers need to know</a><a class="headerlink" href="#building-ai-clusters-what-network-engineers-need-to-know" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-04-BrianWalsh.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=ReuAmLGa5O8">Recording</a></p>
+</div>
+<p>Brian Walsh — <a href="../companies/nokia/">Nokia</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="ReuAmLGa5O8" data-start="0" href="https://www.youtube.com/watch?v=ReuAmLGa5O8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/ReuAmLGa5O8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/ReuAmLGa5O8/maxresdefault.jpg" alt="Play the recording: Building AI Clusters: What Network Engineers need to know" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: AI training clusters are now the dominant forcing function in DC fabric design — rail-optimized topology, RoCE/lossless-adjacent behavior, and elephant-flow traffic patterns. squarely in the PM's RDMA/lossless-fabrics and topology interests.</li>
+<li><strong>What</strong>: A structured primer mapping the AI stack to network engineering decisions: programming frameworks (PyTorch DDP, NCCL/RCCL collectives) → parallelism strategies (data/pipeline/tensor) → collective operations (all-reduce, all-gather, send/recv) → the resulting NIC traffic pattern: periodic synchronized bursts, a few elephant flows, and job completion time bound by the <em>worst-case tail latency across the cluster</em> — fundamentally different from steady cloud traffic. In-node is NVLink/NVSwitch (or Infinity Fabric); across nodes it's InfiniBand, RoCEv2, and the emerging UEC. Cluster build-out is modular "Scalable Units": e.g., 256 air-cooled B200 GPUs in 9 racks, or a liquid-cooled GB200/NVL72 SU of 576 GPUs across 10 racks with 4 Ethernet GPU rails, NVLink switch trays, and CDUs — pre-validated at line rate, with fixed cabling/routing/software per SU and scale-out via spine/core.</li>
+<li><strong>How</strong>: Walks the full stack (CUDA kernels → collectives → topology) and shows concrete rack-elevation layouts per SU variant, with SU node count tied directly to GPU-server NIC count and leaf radix. Rail-optimized design: each NIC homed to its own rail-leaf.</li>
+<li><strong>Where applicable</strong>: Vendor-educational (Nokia) but not a product pitch — the GPU/collective/topology content is vendor-neutral. Directly applicable to anyone designing or evaluating AI back-end fabrics; assumes Ethernet/RoCEv2 as the baseline with IB/UEC as context.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="evolution-of-transport-protocols"><a href="evolution-of-transport-protocols/">Evolution of Transport Protocols</a><a class="headerlink" href="#evolution-of-transport-protocols" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-02-05-GeoffHuston.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=nc6Qb-LvPos">Recording</a></p>
+</div>
+<p>Geoff Huston — <a href="../companies/apnic/">APNIC</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="nc6Qb-LvPos" data-start="0" href="https://www.youtube.com/watch?v=nc6Qb-LvPos" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/nc6Qb-LvPos/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/nc6Qb-LvPos/maxresdefault.jpg" alt="Play the recording: Evolution of Transport Protocols" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Connects end-host congestion control to switch-silicon design constraints — buffer sizing math, on-chip memory tradeoffs, ECN, and BBR. Rare to see transport theory and switching hardware economics in one talk; directly relevant to physical DC networking and lossless-fabric thinking.</li>
+<li><strong>What</strong>: Why TCP session speeds have stalled in the tens of Gbps while optical transport heads to multi-terabit. The progression: Reno AIMD → CUBIC (fast capacity reaction but extended queue-formation phases and bufferbloat exacerbation) → BBR (pacing plus periodic RTT-based capacity probes every 8<sup>th</sup> RTT with 25% rate excursions; does <em>not</em> change its bandwidth estimate on loss). Buffer theory: single-flow sizing = BW·RTT; N desynchronized flows need BW·RTT/√N (Appenzeller/McKeown/Keslassy); with paced senders the residual requirement drops to O(log W). The punchline for switching: on-chip memory is only ~16–64MB, memory/memory-control consumes 20–60% of switch die area, and memory speed isn't scaling with transmission — so future capacity gains mandate <em>smaller</em> buffers, which demands paced, queue-sensitive senders (ECN or delay probing). ECN deployment remains sparse despite being the natural router-side queue-onset signal.</li>
+<li><strong>How</strong>: Control-law mechanics (ACK pacing, loss vs. delay probing, queue drain timing), buffer-sizing derivations, and a candid closing: "we don't know all that much about fine-grained behaviour of large-scale high-capacity switching systems… the Internet still contains important unsolved problems."</li>
+<li><strong>Where applicable</strong>: Broadly applicable fundamentals, vendor-neutral. The buffer-size and chip-memory sections directly inform DC switch selection and capacity planning; relevant context (not a treatment of) RDMA/lossless fabrics, which sidestep TCP control loops entirely.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="aarnet-australias-academic-and-research-network"><a href="aarnet-australias-academic-and-research-network/">AARNet - Australia's Academic and Research Network</a><a class="headerlink" href="#aarnet-australias-academic-and-research-network" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-02-07-PeterStamp.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=oVw9q91Yv1w">Recording</a></p>
+</div>
+<p>Peter Stamp — AARNet</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="oVw9q91Yv1w" data-start="0" href="https://www.youtube.com/watch?v=oVw9q91Yv1w" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/oVw9q91Yv1w/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/oVw9q91Yv1w/maxresdefault.jpg" alt="Play the recording: AARNet - Australia's Academic and Research Network" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: A clean packet-optical convergence case study — coherent 400G ZR+ pluggables plugged straight into routers, eliminating transponder shelves — plus a well-explained model-driven automation stack. Core to the PM's optics and DC/WAN interconnect interests.</li>
+<li><strong>What</strong>: AARNet5 redesign: at each ROADM site, a 1RU low-power router (2–4× 400G/100G ports) uses DWDM 400G QSFP-DD ZR+ coherent pluggables configured to a specific wavelength with high launch power, multiplexed directly by the ROADM — removing most transponders (each was 1RU and ~150W; ZR+ optics draw ~25W) and retiring end-of-life SDH. Every ROADM site becomes a regional PE offering 1/10/25/100G access with L2 e-line/e-LAN and L3VPN, eliminating city hairpins (a 30km regional circuit previously hauled 300km via the metro PE) and replacing manually provisioned optical protection with inherent IP fast-reroute. Automation: Cisco NSO with YANG service models ("order forms") and multi-vendor templates driving full service lifecycle — example backbone-link service encodes LAG members, micro-BFD, ISIS-SR/OSPF-LDP selection, delay measurement, SRLGs, MTU.</li>
+<li><strong>How</strong>: YANG models abstract vendor CLI; templates expand to device config via RESTCONF; hierarchical service model (Internet service → logical access circuit → device/interface) means editing the access circuit migrates the BGP neighbor, filters, and service to the new device automatically.</li>
+<li><strong>Where applicable</strong>: AARNet-specific topology and scale, but the techniques are broadly adoptable: ZR+-into-router requires close optical/router team coordination (wavelength, power, dispersion) and ROADM access; the NSO service-modeling pattern is generic. Steers usefully toward Steenbergen's NANOG optical tutorial for fundamentals.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="the-scourge-of-excessive-as-sets"><a href="the-scourge-of-excessive-as-sets/">The Scourge of Excessive AS-SETs</a><a class="headerlink" href="#the-scourge-of-excessive-as-sets" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-07-DougMadory.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=2FVJlXDPV_w">Recording</a></p>
+</div>
+<p>Doug Madory — <a href="../companies/kentik/">Kentik</a> (with Job Snijders)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="2FVJlXDPV_w" data-start="0" href="https://www.youtube.com/watch?v=2FVJlXDPV_w" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/2FVJlXDPV_w/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/2FVJlXDPV_w/maxresdefault.jpg" alt="Play the recording: The Scourge of Excessive AS-SETs" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: A routing-security postmortem plus measurement study showing exactly how IRR-based filtering breaks down and what the replacement path looks like — squarely in the PM's BGP/security interests.</li>
+<li><strong>What</strong>: Case study of the March 11, 2024 MTS (AS8359) leak of 30,000+ HKIX routes to Lumen and Arelion — exacerbated by AS-MTU, an AS-SET that expands to 43,823 ASNs (~52% of all ~83,617 routed ASNs). bgpq4 against AS-MTU produces a 1.29M-line Junos filter (271k lines even aggregated), covering 1.8 billion of the ~3 billion IPv4 addresses in the table. 2,192 AS-SETs expand to over 1,000 ASNs; nested recursion mixes customer/peer/IXP-member semantics — one traced chain runs Ukraine → Bulgaria (Balkan-IX) → NL-IX → Russia (TTK) → China (CN2) → South Africa → CTGNet → Rostelecom, ending at an <em>unrouted</em> ASN. Expansion also varies by source IRR (APNIC/RIPE/RADB), so authoritative sources must be declared in PeeringDB.</li>
+<li><strong>How</strong>: Demonstrated with bgpq4, Job's <code>irrtree</code>, and bgp.tools data; proposed hygiene (minimum membership, minimal recursion) acknowledged as unrealistic at global scale, with the real fix being RFC 9234 (BGP roles / in-band leak signaling) plus RPKI ASPA verification and future signed prefix lists.</li>
+<li><strong>Where applicable</strong>: Any operator generating BGP filters from IRR AS-SETs — no special scale required. The ASPA/signed-prefix-list direction is the globally relevant follow-on for route-leak mitigation.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="how-far-can-you-get-with-ix-route-servers"><a href="how-far-can-you-get-with-ix-route-servers/">How far can you get with IX Route Servers?</a><a class="headerlink" href="#how-far-can-you-get-with-ix-route-servers" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-08-BenCartwrightCox.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=6yapG6nV7O0">Recording</a></p>
+</div>
+<p>Ben Cartwright-Cox — bgp.tools / Port 179 LTD</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="6yapG6nV7O0" data-start="0" href="https://www.youtube.com/watch?v=6yapG6nV7O0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/6yapG6nV7O0/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/6yapG6nV7O0/maxresdefault.jpg" alt="Play the recording: How far can you get with IX Route Servers?" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Takes a peering design question ("can I run route-server-only?") and answers it with real measurement, using a genuinely clever data-plane technique for the part BGP cannot signal. Directly relevant to BGP/peering work.</li>
+<li><strong>What</strong>: Across 113 IXes (bgp.tools collector presence), outbound RS-only reachability is 56.6% of the IPv4 DFZ (557,996 of 986,502 prefixes) and 60% of IPv6. Inbound is the surprise: BGP gives no "I accepted your prefix" signal, so he announced a dedicated prefix (203.10.63.0/24, courtesy APNIC/Geoff Huston) to all route servers, then pinged known-responsive hosts <em>sourcing from that prefix</em> — replies return only if the target network actually imports RS routes. Result: only 14.3% of testable prefixes can reach an RS-only network; 85% cannot. Three big European IXes alone yield 12% vs 14.3% for all 113 — a small set of large downstream-heavy networks dominates. Many networks export to RS; few import (131k vs 558k prefixes).</li>
+<li><strong>How</strong>: RIB-diffing for outbound; ICMP-source-prefix probing via bgp.tools "IX satellite machines" for inbound, reusing its naughty-packet detection pipeline to attribute which networks replies came from (top sources: BBIX Tokyo/Singapore, DE-CIX FRA — China Mobile Intl, Bharti, FPT, Telkom Indonesia, RETN, EdgeUno).</li>
+<li><strong>Where applicable</strong>: Survey is specific to the 113 IXes bgp.tools inhabits (notably excluding Equinix IX and Internet Australia/IX Australia). Caveats stated by the speaker: 60% of prefixes ≠ 60% of traffic (eyeball traffic concentrates in ~5 ASNs), and more-specific TE announcements aren't captured. Oceania-only RS presence yields just 4.8%/0.51% depending on direction. Directly useful for transit-vs-RS-only strategy in the region.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="defending-telco-networks"><a href="defending-telco-networks/">Defending Telco Networks</a><a class="headerlink" href="#defending-telco-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-02-08-AnthonySchofield.pdf">Slides</a></p>
+</div>
+<p>Anthony Schofield — Vocus</p>
+<ul>
+<li><strong>Why</strong>: A concrete, staged attack/defense walkthrough of router-plane compromise using only native device functionality — exactly the operational security depth the PM values, and unusually detailed for an operator conference.</li>
+<li><strong>What</strong>: An LOTL (living-off-the-land) kill chain against telco gear, explicitly derived from Vocus wargames/tabletops, not production: (1) initial access via an exposed SNMPv2 RW community on a BNG — legacy "best practice" strings now brute-forceable; config exfiltrated via SNMP-set copy-to-TFTP, then an SSH backdoor provisioned via SNMP sets; (2) credential harvesting using the router's own packet-capture utility to grab RANCID credentials and the TACACS+ secret, decrypted offline; (3) lateral movement on the rancid service account — indistinguishable from normal rancid logins, hiding in plain sight; (4) persistence via IOS XR application-hosting to spawn an SSH daemon (port 57722) in the underlying Linux shell. Defenses per stage: control-plane ACL compliance automation, SNMP brute-force alerting, RadSec, SIEM alerting on "Configured from x.x.x.x by SNMP" (should never happen), least-privilege lockdown of service accounts and jump hosts, no device-to-device lateral movement, MFA on jump hosts, microsegmentation, retiring legacy, plus passkeys/EDR/NDR.</li>
+<li><strong>How</strong>: Live demos against a real, internet-connected lab ("Bozo Networks", documented at bozo.net.au), each attack stage paired with specific countermeasures; references the CISA/ASD joint advisory of 28 August.</li>
+<li><strong>Where applicable</strong>: Explicitly hypothetical/wargame material, not a production postmortem — but the patterns (SNMP RW, RANCID credential risk, vendor Linux shells on routers) are generic and apply to any operator with legacy Cisco gear. Cisco-centric examples; the control-plane discipline transfers to any vendor.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="a-smaller-nbn-aggregation-network"><a href="a-smaller-nbn-aggregation-network/">A smaller NBN Aggregation Network</a><a class="headerlink" href="#a-smaller-nbn-aggregation-network" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-10-CraigAskings.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=SPfKzz3Awek">Recording</a></p>
+</div>
+<p>Craig Askings — Telair</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="SPfKzz3Awek" data-start="0" href="https://www.youtube.com/watch?v=SPfKzz3Awek" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/SPfKzz3Awek/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/SPfKzz3Awek/maxresdefault.jpg" alt="Play the recording: A smaller NBN Aggregation Network" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: A small-operator counter-trend worth attention: using long-reach optics over leased dark fiber to <em>collapse</em> a distributed aggregation footprint into a few DCs, on whitebox hardware. Physical interconnect economics in the wild.</li>
+<li><strong>What</strong>: Triggered by NBN pricebook changes (10GBaseER NNI activation/MRC drops, plus Infraco dark-fiber offers between DCs and POIs), Telair redesigned: 10GBaseER NNI on dark fiber back to nearby DCs, collapsing 39 POIs into 8 PoPs, 82+ routers down to 16 (2 per PoP), and bringing 5 DCs on net. Hardware: Ufispace S9510-28DC whitebox (24×25G SFP28, 2×400G QSFP-DD OpenZR+, 2×100G) running IP Infusion OcNOS with the MPLS license. Migration was executed in batches (single POI → multi-POI batches → mopup, sequenced state by state), i.e., ordinary churn. The deck also flags real DC cross-connect economics: NEXTDC's single cable licence fee vs. Equinix charging per tie-cable pair vs. Polaris free within the carrier room; Vocus DC cross-connects "close to impossible" to organize.</li>
+<li><strong>How</strong>: Long-reach ER optics over point-to-point dark fiber let the L3 NNI handoff physically live in the DC instead of at each POI — the whole aggregation layer follows. Amusing fiber-path reality checks included (2.5km by road = 12km fiber; 31km road = 81km fiber path).</li>
+<li><strong>Where applicable</strong>: Australia/NBN-specific economics (pricebook, Infraco DF offers) — the constraints are org- and market-specific. But the technique (ER/ZR+ optics + whitebox + DF to consolidate scattered handoff points into DCs) transfers to any metro/regional aggregation design, and the DC cross-connect pricing comparison is useful for any co-location strategy.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="rethinking-network-troubleshooting-smarter-tools-and-better-visibility-at-nexthop"><a href="rethinking-network-troubleshooting-smarter-tools-and-better-visibility-a/">Rethinking Network Troubleshooting: Smarter Tools and Better Visibility at Nexthop</a><a class="headerlink" href="#rethinking-network-troubleshooting-smarter-tools-and-better-visibility-at-nexthop" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-01-DavidBrown.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=f0u0XZHcrDs">Recording</a></p>
+</div>
+<p>David Brown — Nexthop</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="f0u0XZHcrDs" data-start="0" href="https://www.youtube.com/watch?v=f0u0XZHcrDs" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/f0u0XZHcrDs/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/f0u0XZHcrDs/maxresdefault.jpg" alt="Play the recording: Rethinking Network Troubleshooting: Smarter Tools and Better Visibility at Nexthop" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: An honest walk through monitoring blind spots — especially optics — and a buildable open-source visibility stack. The optics lesson alone is worth the PM's time.</li>
+<li><strong>What</strong>: A "typical fault process" case: intermittent loss, everything looks fine, eventually reproduced with sustained pings — root cause a marginal optic (RX -18.86dBm, a 10km optic inside a DC). Hard-won lesson stated bluntly: "optics die a slow death and TX monitoring lies all the time," and monitoring is too inward-facing. The response: ping-all-the-things mesh (8.8.8.8 the most-pinged target, 1.1.1.1 second), a flow pipeline of pmacct (sFlow+BGP) → Kafka → ClickHouse → Grafana correlated with Telegraf/SNMP, and a custom Python daemon (<code>PingMonitorAgent</code>) running natively on Arista EOS via the agent framework — Kafka-driven ping targets, fping processes per source interface/IP/VRF, results keyed by router_id and if_index so they join cleanly with sFlow data, with ProcMgr auto-relaunch on crash.</li>
+<li><strong>How</strong>: EOS agent framework for in-switch active probing; pmacct/Kafka/ClickHouse for per-AS loss/jitter dashboards. Includes an Arista-as-Linux exploration (network namespaces, iperf on the switch CPU: 237Mbps, then 1.21Gbps after stripping iptables and control-plane protection — a lab demo, not a recommendation).</li>
+<li><strong>Where applicable</strong>: Nexthop is a small Australian DC/hosting operator; the pmacct pipeline and RX-power alerting are broadly adoptable. The in-switch agent portion is Arista EOS-specific. Good source of adoptable tooling patterns rather than strategy.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="network-state-checking-a-case-study-in-automation"><a href="network-state-checking-a-case-study-in-automation/">Network State Checking: A Case Study in Automation</a><a class="headerlink" href="#network-state-checking-a-case-study-in-automation" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-02-CraigHenderson.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=FL28XtauK7o">Recording</a></p>
+</div>
+<p>Craig Henderson — REANNZ</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="FL28XtauK7o" data-start="0" href="https://www.youtube.com/watch?v=FL28XtauK7o" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/FL28XtauK7o/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/FL28XtauK7o/maxresdefault.jpg" alt="Play the recording: Network State Checking: A Case Study in Automation" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: A model case study in migration-verification automation with an unusually honest evaluation — including the incidents the tooling failed to catch and its structural limitations.</li>
+<li><strong>What</strong>: During a national hardware refresh (~97% generated configs, 8–12 member handovers per 3-hour nightly window), REANNZ built tooling to snapshot all per-interface state pre/post-migration — link/MTU/optical RX, VLAN push/pop, EVPN multi-homing forwarding/blocking status, BFD session state, BGP neighbors with routes received/accepted/advertised, OSPF adjacencies — and diff it so the engineer's attention goes to the most-likely-broken services. The "trial" section is the gem: three real incidents (omitted BGP domain attribute causing loop detection to suppress active routes; omitted MTU isolating a remote region; omitted downstream BGP config), each with a verdict — tooling innocent, tooling available-but-unused, or no tooling ("terrible engineer"). Stated limitations: the tool only knows what it knows (unanticipated config flies under the radar), network-as-source-of-truth doesn't scale for service metadata, and the approach is network-centric, not service-centric.</li>
+<li><strong>How</strong>: The "Bender" automation monorepo (unified config parsing since 2019, generator library for standard configs) feeding pre/post state capture and diffing; next step is an intent database plus an orchestration layer owning service lifecycle, with custom config managed inside the orchestrator for visibility.</li>
+<li><strong>Where applicable</strong>: REANNZ NREN context (member handovers, perfSONAR) is org-specific, but the pattern — automated state-diff verification plus honest post-hoc attribution — transfers to any refresh/migration project, DC or otherwise.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="cryptography-in-the-quantum-era"><a href="cryptography-in-the-quantum-era/">Cryptography in the Quantum Era</a><a class="headerlink" href="#cryptography-in-the-quantum-era" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-02-01-PareshKhatri.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=hqlpCY1CUVk">Recording</a></p>
+</div>
+<p>Paresh Khatri — <a href="../companies/nokia/">Nokia</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="hqlpCY1CUVk" data-start="0" href="https://www.youtube.com/watch?v=hqlpCY1CUVk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/hqlpCY1CUVk/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/hqlpCY1CUVk/maxresdefault.jpg" alt="Play the recording: Cryptography in the Quantum Era" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: PQC migration affects the PM's identity/PKI portfolio (TLS, certificates, protocol auth). This is a primer, but it carries a current, vendor-neutral snapshot of the standards and policy timelines.</li>
+<li><strong>What</strong>: The standard framing, done well: Shor breaks RSA/DH/ECC (breaking RSA-2048 estimated at ~4,000 logical qubits / 100M gates vs. today's hundreds of qubits); Grover only halves symmetric strength, so AES-128 remains fine; the present-day threat is HNDL — harvest-now-decrypt-later — with expert-survey "Q-Day" estimates as early as ~2030 and the explicit note that we won't be told when a CRQC first exists. Mosca's inequality (x + y &gt; z) drives migration urgency. Standards snapshot: NIST FIPS 203 (ML-KEM), 204 (ML-DSA), 205 (SLH-DSA), HQC selected as an ML-KEM alternative; IETF hybrid PQ/T key-exchange and signature drafts for TLS 1.3 and IKE/IPsec; 3GPP PQC studies in 6G Rel-20 with normative specs targeted at Rel-21. Positioning: QKD (physics-based, point-to-point key distribution only, eavesdrop-detectable, ETSI GS 0014 interfaces) and PQC as complementary — QKD for symmetric key distribution on fixed paths, PQC for authentication and key agreement at scale. Strategy: crypto-agility plus layered defense-in-depth starting now.</li>
+<li><strong>How</strong>: Explanatory, from qubit/superposition basics through HNDL attack flow to a migration decision framework.</li>
+<li><strong>Where applicable</strong>: Vendor (Nokia) educational talk with an IP-transport lens — the standards/timeline content is global and vendor-neutral. For a PM already deep in identity this is closer to a checklist than news; its value is the consolidated IETF/3GPP status and the QKD-vs-PQC boundary, which is directly relevant to certificate/protocol roadmaps.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="designing-a-mikrotik-cgnat-solution-that-scales"><a href="designing-a-mikrotik-cgnat-solution-that-scales/">Designing a mikrotik cgnat solution that scales</a><a class="headerlink" href="#designing-a-mikrotik-cgnat-solution-that-scales" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-02-02-MatthewEnger.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=2rpbAIkkARg">Recording</a></p>
+</div>
+<p>Matthew Enger — Leaptel</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="2rpbAIkkARg" data-start="0" href="https://www.youtube.com/watch?v=2rpbAIkkARg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/2rpbAIkkARg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/2rpbAIkkARg/maxresdefault.jpg" alt="Play the recording: Designing a mikrotik cgnat solution that scales" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Solid operator content on cheap whitebox CGNAT — and the static-port-block logging pattern is a genuinely smart answer to a hard compliance problem.</li>
+<li><strong>What</strong>: Leaptel (~70k subscribers, &gt;300G national aggregate) built CGNAT on Mikrotik CCR2216 (~$5k AUD/box; 2×100G + 12×25G; 16 ARM cores; ~42G real-world "conditions apply"). Law-enforcement logging is solved by <em>static</em> port allocation — 250 (currently) / 200 (new design) ports mapped per CGNAT customer IP, so the only record needed is the RADIUS entry for the CGNAT IP plus a lookup table; no per-flow NAT logs. Redundancy: VRRP toward the BNGs, BGP toward an L3 switch with AS-prepend per box and address-list-partitioned pools, all NAT rules pre-staged on both boxes; <code>tcp-established-timeout</code> cut to 31 minutes to stretch conntrack (max 1,048,576 entries) across ~7,000+ services. Failover testing: VRRP takeover in ≤3s, but conntrack resets on cutover — impact minutes, and QUIC's path-validation may stretch recovery to ~30s. Honest limitations: ~75% CPU on some cores, no dynamic port allocation on Mikrotik, occasional spontaneous reboots (recovers quickly), and load distribution across appliances still unsolved.</li>
+<li><strong>How</strong>: Full config walkthrough (VLANs/VRRP, ROS7 BGP templates/connections/filters, the Mikrotik wiki's CGNAT port-block script generating hundreds of chained NAT rules, fasttrack with HW offload), all validated on a spare-parts test rig (two Mikrotiks plus a mock BNG and an Arista L3 switch) before production.</li>
+<li><strong>Where applicable</strong>: Leaptel-specific scale and traffic; best suited to small/mid ISPs — the largest east-coast sites are moving to a commercial CGNAT solution and the freed hardware bolsters other sites. The static-port-block logging pattern and the failover/conntrade-off lessons transfer broadly.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="the-comfortable-complexity-of-overlays"><a href="the-comfortable-complexity-of-overlays/">The comfortable complexity of Overlays</a><a class="headerlink" href="#the-comfortable-complexity-of-overlays" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-02-09-ClaudiuCaptari.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=fbZDDJb0sdM">Recording</a></p>
+</div>
+<p>Claudiu Captari — Arista</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="fbZDDJb0sdM" data-start="0" href="https://www.youtube.com/watch?v=fbZDDJb0sdM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/fbZDDJb0sdM/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/fbZDDJb0sdM/maxresdefault.jpg" alt="Play the recording: The comfortable complexity of Overlays" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: The "EVPN everywhere" architectural argument, cleanly organized — useful as the current vendor-consensus view on unifying DC/campus/WAN overlays, which the PM touches via DC fabric work.</li>
+<li><strong>What</strong>: The case for EVPN as a single service plane across domains, with transport chosen per domain: VXLAN where bandwidth is cheap (DC/campus leaf-spine with ECMP), VXLAN-over-IPsec / Secure-EVPN for branch, SR/SRv6 for bandwidth-constrained or TE-needing WAN — stitched by EVPN gateways (RFC 9014) that re-originate type-2/type-5 routes with new next-hop/encapsulation per domain, providing hierarchical flood-list scaling for BUM traffic and reduced EVPN state churn across domains. Includes the full EVPN RFC map (7432, 8214, 8365, 9135/9136, 9014, 9251, OISM) with ~48 active drafts, EANTC multi-vendor interop testing across six testbeds, high-speed in-flight encryption options (MACSec, IPSec, VXLANsec), and SRv6 use cases including AI-fabric TE where the <em>server NIC</em> computes and applies SRv6 encapsulation and leaf/spine nodes just perform uSID forwarding.</li>
+<li><strong>How</strong>: Architecture pitch built on open standards: gateway route re-origination, all-active multi-homing, symmetric/asymmetric/centralized IRB, OISM multicast, FlexAlgo and dynamic SR-TE for the WAN.</li>
+<li><strong>Where applicable</strong>: Arista session — an architecture pitch for a consistent operational model, though grounded in open RFCs and EANTC interop rather than proprietary features. Relevant to multi-domain enterprise/DC designers evaluating overlay convergence; the domain-by-transport mapping is the transferable part.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="transport-protocols-evolution-or-how-to-migrate-your-configuration-today"><a href="transport-protocols-evolution-or-how-to-migrate-your-configuration-today/">Transport Protocols Evolution or how to migrate your configuration today.</a><a class="headerlink" href="#transport-protocols-evolution-or-how-to-migrate-your-configuration-today" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-02-04-AlexMitev.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=O664YnFGpbQ">Recording</a></p>
+</div>
+<p>Alex Mitev — <a href="../companies/cisco/">Cisco</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="O664YnFGpbQ" data-start="0" href="https://www.youtube.com/watch?v=O664YnFGpbQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/O664YnFGpbQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/O664YnFGpbQ/maxresdefault.jpg" alt="Play the recording: Transport Protocols Evolution or how to migrate your configuration today." loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Practical, config-level RSVP-TE→SR migration guidance for WAN transport — complements the Arista overlay talk with the "how to actually move" side.</li>
+<li><strong>What</strong>: Historical framing of RSVP-TE's scaling failure (headend 8k→32k and midpoint 64k→256k state growth, k·n² core state, no inter-domain) versus SR's state-in-the-packet model, then a use-case ladder: Ti-LFA for post-convergence-path FRR with 100% coverage and ECMP backups (replacing the hard-to-complete RSVP FRR configurations shown in full); microloop avoidance via segment-routing with RIB-update delay; Flex-Algo covering ~80% of transport intents with metric+constraints (delay, affinities, SRLG); explicit SR paths for the 5–10% needing strict/weighted SID lists; on-demand nexthop + automated steering (~95% of use); disjointness; guaranteed-bandwidth circuit-style policies with SDN-controller-managed reservation and QoS admission control; auto-bandwidth (RSVP-style behavior without midpoint state); tactical TE for congestion mitigation. Full IOS XR config snippets throughout, and an RFC reference set (8402, 8754, 8986, 9252, 9256, 9350, 9352, 9259, 9503, 9800).</li>
+<li><strong>How</strong>: Config-first teaching: each ladder rung gets its problem statement, config, and a "share of use cases" estimate.</li>
+<li><strong>Where applicable</strong>: Configs are Cisco IOS XR-specific; the concepts and RFCs are multi-vendor (and overlap with the Arista WAN-SR content). Most useful to operators with existing MPLS/RSVP estates planning incremental SR migration. Vendor-educational rather than a product pitch.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="how-geopolitics-is-rerouting-submarine-cables"><a href="how-geopolitics-is-rerouting-submarine-cables/">How geopolitics is rerouting submarine cables</a><a class="headerlink" href="#how-geopolitics-is-rerouting-submarine-cables" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-05-JocelinnKang.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=1S9CBUmAkXs">Recording</a></p>
+</div>
+<p>Jocelinn Kang — Nodalys</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="1S9CBUmAkXs" data-start="0" href="https://www.youtube.com/watch?v=1S9CBUmAkXs" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/1S9CBUmAkXs/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/1S9CBUmAkXs/maxresdefault.jpg" alt="Play the recording: How geopolitics is rerouting submarine cables" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Not something the PM would search for, but it reframes intercontinental capacity planning as a geopolitical exercise — cables now follow politics and hyperscaler balance sheets, not shortest paths. This changes how long-haul interconnect and DC site decisions get made.</li>
+<li><strong>What</strong>: The subsea industry's two new shapers: hyperscalers — Google, Meta, AWS, Microsoft account for &gt;70% of global subcable bandwidth usage (2023), connecting data centers rather than population centers and vertically integrating supply chains (cables in service grew from ~130 in 2010 to 570 in 2025) — and geostrategic competition, exercised through permits and licenses (increasingly hard Chinese permits for South China Sea routes, so installers avoid the SCS; US opposition to US–China/Hong Kong landings, rerouting systems to SEA and Australia) and supply-chain exclusion. Case studies: PLCN, BtoBE→CAP-1, SEA-ME-WE 6, SJC2. Also covered: minilateral state partnerships (Coral Sea, Palau, East Micronesia, Google's Pacific Connect including Tuvalu), historical wartime cable cutting (1898, 1914), peacetime surveillance (Ivy Bells, Snowden disclosures), current hybrid-warfare activity (Baltic and Taiwan cable incidents, Salt Typhoon, an attempted cyber attack on submarine-cable management systems in Oahu), and the net effect: Hong Kong losing hub appeal while Australia rises as a safer Indo-Pacific route and digital hub.</li>
+<li><strong>How</strong>: Case-study narrative with maps and a breakdown of the concrete levers (permits, licenses, vendor participation, vessel access) through which governments now shape physical topology.</li>
+<li><strong>Where applicable</strong>: Analyst/consultant perspective with no hands-on technique — but directly relevant input to anyone doing trans-Pacific capacity planning, DC site selection, or evaluating route diversity claims on submarine cables. Australian-market lens.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="bfd-going-down-from-bgp-timers-expiring"><a href="bfd-going-down-from-bgp-timers-expiring/">BFD going down... from BGP timers expiring?</a><a class="headerlink" href="#bfd-going-down-from-bgp-timers-expiring" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-09-LouisJarasius.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=Ldsz3tRvEX8">Recording</a></p>
+</div>
+<p>Louis Jarasius — 5GN</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="Ldsz3tRvEX8" data-start="0" href="https://www.youtube.com/watch?v=Ldsz3tRvEX8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Ldsz3tRvEX8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Ldsz3tRvEX8/maxresdefault.jpg" alt="Play the recording: BFD going down... from BGP timers expiring?" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: The title alone signals an obscure control-plane protocol interaction (BGP timer expiry manifesting as BFD failure) — the kind of datapath/control-plane quirk worth knowing about given the PM's BGP-internals interest, and the sort of thing that bites silently in production.</li>
+<li><strong>What</strong>: Unknown — no abstract was published for this session and no materials could be extracted; the program lists title, speaker, and links only. Assessment is from the title alone.</li>
+<li><strong>How</strong>: Not determinable from available materials; the slides and video links are published and should be reviewed directly.</li>
+<li><strong>Where applicable</strong>: Appears to be a 5GN operational case study; flagged here on the strength of the topic, with the explicit caveat that the write-up could not be grounded in source material.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>AI clusters are the new design driver</strong>: Nokia's collectives/tail-latency/SU framing, Cloudflare's "AI demands on the carrier network" (bursty elephant flows, congestion), and Arista/Cisco's SRv6-based AI-fabric TE all point the same way — the next DC fabric generation is being designed around synchronized elephant flows, not steady-state cloud traffic.</li>
+<li><strong>Packet-optical convergence is real and shipping</strong>: AARNet's 400G ZR+ pluggables directly into routers (transponders at 150W→25W) and Telair's ER-optics-over-dark-fiber consolidation show coherent pluggables physically re-shaping interconnect economics at both NREN and small-operator scale.</li>
+<li><strong>Scale-down as a counter-trend</strong>: alongside hyperscaler talks, the program features two operators shrinking hardware footprints profitably (Telair's 82→16 routers; Leaptel's $5k whitebox CGNAT) — whitebox economics have reached aggregation and broadband edges.</li>
+<li><strong>Demand for precise, standards-based signals over self-asserted data</strong>: AWS's discard-classification draft, Kentik's AS-SET pollution analysis (with RFC 9234/ASPA as the fix), and bgp.tools's RS measurement all reflect the same push — replace folklore-grade data (IRR sets, vendor drop counters, "I import from the RS, trust me") with classified, measurable, or cryptographically verifiable signals.</li>
+<li><strong>Honest evaluation as a genre</strong>: REANNZ's "tooling on trial" (with incident-by-incident verdicts), Vocus's wargame-derived attack chain, and Nexthop's failed-troubleshooting walkthrough all model the postmortem discipline the best operator content is built on.</li>
+<li><strong>Automation maturing from scripts to intent</strong>: REANNZ's progression (one-off scripts → config-parsing monorepo → intent database + orchestrator) and AARNet's NSO/YANG service models echo AWS's closed-loop pipeline — network-as-source-of-truth is being retired across the board.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/ausnog-2025.md"><code>digests/ausnog-2025.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/ausnog-2025.md"><code>prompts/ausnog-2025.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ovscon-2024/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Open vSwitch and OVN 2024 Fall Conference (Prague)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Open vSwitch and OVN 2024 Fall Conference (Prague)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ciscolive-eu-2025/" class="md-footer__link md-footer__link--next" aria-label="Next: Cisco Live Europe 2025 (Amsterdam)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Cisco Live Europe 2025 (Amsterdam)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

@@ -196,6 +196,57 @@
         <loc>https://tldr.netdevops.me/arin-58/routing-security-update/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/a-smaller-nbn-aggregation-network/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/aarnet-australias-academic-and-research-network/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/bfd-going-down-from-bgp-timers-expiring/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/building-ai-clusters-what-network-engineers-need-to-know/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/cryptography-in-the-quantum-era/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/defending-telco-networks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/designing-a-mikrotik-cgnat-solution-that-scales/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/evolution-of-transport-protocols/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/how-far-can-you-get-with-ix-route-servers/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/how-geopolitics-is-rerouting-submarine-cables/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/network-state-checking-a-case-study-in-automation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/no-packet-left-behind-awss-approach-to-building-and-operating-reliable-n/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/rethinking-network-troubleshooting-smarter-tools-and-better-visibility-a/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/the-comfortable-complexity-of-overlays/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/the-scourge-of-excessive-as-sets/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ausnog-2025/transport-protocols-evolution-or-how-to-migrate-your-configuration-today/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/ausnog-2026/</loc>
       </url>
       <url>
@@ -506,6 +557,78 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/we-built-for-predictability-the-workloads-didnt-care/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/advanced-innovations-in-srv6-usid-and-ip-measurements-brkspg-3198/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/advancements-and-applications-of-coherent-pluggable-technology-in-high-b/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/ai-ready-data-center-sustainability-vs-infrastructure-requirements-how-t/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/cisco-8000-and-ovhcloud-a-successful-adoption-since-2020-cssspg-2389/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/connecting-your-data-to-llms-identity-functions-and-agents-are-all-you-n/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/deep-dive-into-ciscos-use-of-quic-masque-and-os-native-capabilities-to-d/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/deployment-of-micro-segmentation-in-cisco-nx-os-vxlan-evpn-fabrics-with/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/designing-routed-optical-networks-ipmpls-considerations-brkspg-2029/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/ethernet-based-fabric-for-ai-cluster-powered-by-silicon-one-sonic-an-ult/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/everything-you-ever-wanted-to-know-about-power-in-routers-and-switches-a/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/ipethernet-storage-networking-for-ai-infrastructure-brkdcn-2945/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/kubernetes-k8s-infrastructure-connectivity-for-aci-network-designs-for-t/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/multi-tier-fabrics-network-designs-for-the-modern-data-center-brkdcn-299/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/observing-genai-infrastructure-you-cant-protect-what-you-cant-see-devnet/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/packet-buddy-chatting-with-your-pcaps-via-the-cloud-or-locally-on-your-o/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/qkd-impact-on-optical-system-and-pqc-solution-brkopt-3086/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/secure-operations-for-an-ipv6-network-brksec-2044/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/securing-the-olympics-the-cybersecurity-architecture-for-paris-2024-brks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/the-new-encrypted-protocol-stack-taking-over-the-internet-and-how-to-dea/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/using-agentic-iac-for-managing-infrastructure-the-good-the-bad-and-the-u/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/using-ethernet-for-ai-networking-ciscou-2038/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/vxlan-bgp-evpn-multi-site-brkdcn-2913/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ciscolive-eu-2025/vxlan-evpn-a-deep-dive-into-packet-forwarding-brkdcn-3966/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/ciscolive-eu-2026/</loc>

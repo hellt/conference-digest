@@ -4424,6 +4424,64 @@ mlsys-2026:
     - benchmarking
     - measurement
     - ml-for-networking
+mlsys-2025:
+  post:
+  - ai-networks
+  - network-security
+  - ml-for-networking
+  - gpu-clusters
+  - interconnection
+  talks:
+    Context Parallelism for Scalable Million-Token Inference:
+    - ai-networks
+    - rdma
+    - gpu-clusters
+    - benchmarking
+    'COMET: Fine-grained Computation-communication Overlapping for Mixture-of-Experts':
+    - ai-networks
+    - gpu-clusters
+    - rdma
+    'Photon: Federated LLM Pre-Training':
+    - ai-networks
+    - interconnection
+    - capacity-planning
+    Supply-Chain Attacks in Machine Learning Frameworks:
+    - network-security
+    - vulnerability-management
+    - open-source
+    'TileLink: Generating Efficient Compute-Communication Overlapping Kernels using Tile-Centric Primitives':
+    - ai-networks
+    - gpu-clusters
+    - orchestration
+    'ThunderServe: High-performance and Cost-efficient LLM Serving in Cloud Environments':
+    - ai-networks
+    - load-balancing
+    - capacity-planning
+    'AIOpsLab: A Holistic Framework to Evaluate AI Agents for Enabling Autonomous Clouds':
+    - ml-for-networking
+    - sre
+    - troubleshooting
+    - observability
+    'LAVA: Lifetime-Aware VM Allocation with Learned Distributions and Adaptation to Mispredictions':
+    - ml-for-networking
+    - capacity-planning
+    A Bring-Your-Own-Model Approach for ML-Driven Storage Placement in Warehouse-Scale Computers:
+    - ml-for-networking
+    - capacity-planning
+    'Radius: Range-based Gradient Sparsity for Large Foundation Model Pre-training':
+    - ai-networks
+    - benchmarking
+    'AI Metropolis: Scaling Large Language Model-based Multi-Agent Simulation with Out-of-order Execution':
+    - orchestration
+    - automation
+    'VoLUT: Efficient Volumetric streaming enhanced by LUT-based super-resolution':
+    - cdn
+    - mobile
+    - measurement
+    'Extreme PyTorch: Inside the Most Demanding ML Workloads—and the Open Challenges in Building AI Agents to Democratize Them':
+    - ai-networks
+    - automation
+    - sre
 itnog-9:
   post:
   - optics

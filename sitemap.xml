@@ -73,6 +73,9 @@
         <loc>https://tldr.netdevops.me/archive/2025/page/2/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/archive/2025/page/3/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/archive/2026/</loc>
       </url>
       <url>
@@ -3635,6 +3638,45 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/nsdi-2026/zooroute-enhancing-cloud-scale-network-reliability-via-candidate-path-pr/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nznog-2025/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nznog-2025/ai-networking-ultraethernet-the-road-to-16t-and-beyond/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nznog-2025/analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nznog-2025/challenges-in-simulating-leo-satellite-networks-like-starlink/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nznog-2025/chorus-is-going-boost-fibre-plans-for-over-700000-kiwi-homes-find-out-ho/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nznog-2025/communications-resilience/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nznog-2025/dns-resolvers-and-nameservers-in-new-zealand/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nznog-2025/dnssec-for-nz-post-incident-recovery-and-improvement-or-how-to-see-the-t/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nznog-2025/implementing-precision-timing-sync-as-a-service-in-a-telecommunications/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nznog-2025/ip-quirks-and-features/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nznog-2025/kindns-promoting-dns-security-best-practices/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nznog-2025/passive-optical-networking/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/nznog-2025/were-not-in-kansas-anymore-my-experiences-with-ip-geolocation/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/nznog-2026/</loc>

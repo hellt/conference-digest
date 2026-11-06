@@ -1,0 +1,1450 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="NZNOG&#x27;s operator program skews toward access networks, DNS, and NZ-specific infrastructure, but several sessions land squarely on physical datacenter optics, AI fabric interconnect, timing&#x2f;sync transport, and operational security postmortems. None of the items below had fuller source text…">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/nznog-2025/">
+      
+      
+      
+        <link rel="prev" href="../kubecon-eu-2025/">
+      
+      
+        <link rel="next" href="../nsdi-2025/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>NZNOG 2025 - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="NZNOG 2025 · Conference Digest" />
+<meta property="og:description" content="NZNOG&#39;s operator program skews toward access networks, DNS, and NZ-specific infrastructure, but several sessions land squarely on physical datacenter optics, AI fabric interconnect, timing/sync transport, and operational security postmortems. None of the items below had fuller source text…" />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/nznog-2025.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/nznog-2025/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="NZNOG 2025 · Conference Digest" />
+<meta property="twitter:description" content="NZNOG&#39;s operator program skews toward access networks, DNS, and NZ-specific infrastructure, but several sessions land squarely on physical datacenter optics, AI fabric interconnect, timing/sync transport, and operational security postmortems. None of the items below had fuller source text…" />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/nznog-2025.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NZNOG 2025
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Employers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-tabs__powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-tabs__powered-text">Powered by</span>
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-tabs__powered-logo md-tabs__powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber-for-coherent-16qam-and-non-coherent-pam4-high-speed-transceivers-under-environmental-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for Coherent (16QAM) and Non-Coherent (PAM4) high speed transceivers under environmental variations
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-networking-ultraethernet-the-road-to-16t-and-beyond" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AI Networking, UltraEthernet, the road to 1.6T and beyond.
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-precision-timing-sync-as-a-service-in-a-telecommunications-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Implementing Precision Timing / Sync as a Service in a Telecommunications Network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dnssec-for-nz-post-incident-recovery-and-improvement-or-how-to-see-the-train-coming-down-the-tunnel-next-time-for-sure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DNSSEC for .nz: post-incident recovery and improvement (or, how to see the train coming down the tunnel next time. For Sure.)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-resolvers-and-nameservers-in-new-zealand" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DNS Resolvers and Nameservers in New Zealand
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communications-resilience" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Communications Resilience
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-quirks-and-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IP Quirks and Features
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chorus-is-going-boost-fibre-plans-for-over-700000-kiwi-homes-find-out-how-we-will-technically-deliver-the-upgrade-and-how-you-can-get-the-best-performance-out-of-chorus-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Chorus is going boost fibre plans for over 700,000 Kiwi homes – find out how we will technically deliver the upgrade and how you can get the best performance out of Chorus' services 😮‍💨
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kindns-promoting-dns-security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        KINDNS: Promoting DNS Security Best Practices
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive-optical-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Passive Optical Networking
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges-in-simulating-leo-satellite-networks-like-starlink" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Challenges in simulating LEO satellite networks like Starlink
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#were-not-in-kansas-anymore-my-experiences-with-ip-geolocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        We're not in Kansas anymore: my experiences with IP geolocation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skipped" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Skipped
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Employers
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber-for-coherent-16qam-and-non-coherent-pam4-high-speed-transceivers-under-environmental-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for Coherent (16QAM) and Non-Coherent (PAM4) high speed transceivers under environmental variations
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-networking-ultraethernet-the-road-to-16t-and-beyond" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AI Networking, UltraEthernet, the road to 1.6T and beyond.
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-precision-timing-sync-as-a-service-in-a-telecommunications-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Implementing Precision Timing / Sync as a Service in a Telecommunications Network
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dnssec-for-nz-post-incident-recovery-and-improvement-or-how-to-see-the-train-coming-down-the-tunnel-next-time-for-sure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DNSSEC for .nz: post-incident recovery and improvement (or, how to see the train coming down the tunnel next time. For Sure.)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-resolvers-and-nameservers-in-new-zealand" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DNS Resolvers and Nameservers in New Zealand
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communications-resilience" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Communications Resilience
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-quirks-and-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IP Quirks and Features
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chorus-is-going-boost-fibre-plans-for-over-700000-kiwi-homes-find-out-how-we-will-technically-deliver-the-upgrade-and-how-you-can-get-the-best-performance-out-of-chorus-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Chorus is going boost fibre plans for over 700,000 Kiwi homes – find out how we will technically deliver the upgrade and how you can get the best performance out of Chorus' services 😮‍💨
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kindns-promoting-dns-security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        KINDNS: Promoting DNS Security Best Practices
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive-optical-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Passive Optical Networking
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges-in-simulating-leo-satellite-networks-like-starlink" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Challenges in simulating LEO satellite networks like Starlink
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#were-not-in-kansas-anymore-my-experiences-with-ip-geolocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        We're not in Kansas anymore: my experiences with IP geolocation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skipped" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Skipped
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>10 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="nznog-2025">NZNOG 2025<a class="headerlink" href="#nznog-2025" title="Permanent link">#</a></h1>
+<p>NZNOG's operator program skews toward access networks, DNS, and NZ-specific infrastructure, but several sessions land squarely on physical datacenter optics, AI fabric interconnect, timing/sync transport, and operational security postmortems. None of the items below had fuller source text available, so every write-up is grounded in the program abstract only.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>April 11, 2025</span>
+<span class="digest-fact" markdown><a href="https://www.nznog.org/conferences/nznog-2025/talks.html">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber-for-coherent-16qam-and-non-coherent-pam4-high-speed-transceivers-under-environmental-variations"><a href="analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber/">Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for Coherent (16QAM) and Non-Coherent (PAM4) high speed transceivers under environmental variations</a><a class="headerlink" href="#analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber-for-coherent-16qam-and-non-coherent-pam4-high-speed-transceivers-under-environmental-variations" title="Permanent link">#</a></h3>
+<p>Thomas Weible (<a href="../companies/flexoptix/">Flexoptix</a>)</p>
+<ul>
+<li><strong>Why</strong>: Directly on the PM's physical-optics beat. As 800G and coherent-lite pluggables move from WAN long-haul into DC interconnect and even intra-fabric links, operators need to know how close to the SNR cliff a link can run and still stay within BER targets — and how temperature and cable length shift that cliff. This is the reliability data that informs margining decisions for 100G/400G/800G deployments.</li>
+<li><strong>What</strong>: A measurement-driven analysis of how much SNR headroom coherent (16QAM) versus non-coherent (PAM4) transceivers need to sustain a tolerable BER, factoring in environmental variation (temperature, cable length) to predict how long a link stays reliable. (from abstract only)</li>
+<li><strong>How</strong>: Data collected via Flexoptix's Flexbox programmable transceiver platform, comparing error behavior of coherent 16QAM and PAM4 optics across the SNR range and environmental conditions, with implications drawn for network performance.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to anyone buying or margining high-speed optics, but note the data comes from the vendor's own Flexbox tooling — the framing favors Flexoptix's ecosystem. The coherent-vs-PAM4 comparison itself transfers to any 400G/800G link budget decision.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="ai-networking-ultraethernet-the-road-to-16t-and-beyond"><a href="ai-networking-ultraethernet-the-road-to-16t-and-beyond/">AI Networking, UltraEthernet, the road to 1.6T and beyond.</a><a class="headerlink" href="#ai-networking-ultraethernet-the-road-to-16t-and-beyond" title="Permanent link">#</a></h3>
+<p>Matthew Thurbon (Arista)</p>
+<ul>
+<li><strong>Why</strong>: Sits at the intersection of the PM's core interests: AI/HPC fabrics, lossless Ethernet design, next-generation optics (LPO), and the 800G→1.6T speed roadmap. UltraEthernet Consortium (UEC) is the emerging open-standards answer to InfiniBand for AI clusters — worth tracking for anyone in DC fabric work, since UEC's latency/lossless/reliability semantics will shape merchant Ethernet for AI back-end networks regardless of vendor.</li>
+<li><strong>What</strong>: A survey of the design requirements AI applications impose on networks (bandwidth, scale, latency, energy), how UEC's open-standards approach addresses them, and the optics roadmap — specifically standards-based LPO transceivers and 800GbE/1.6TbE — that enables next-gen AI interconnect. (from abstract only)</li>
+<li><strong>How</strong>: Architectural walkthrough of AI fabric requirements and the UEC transport specification direction, paired with the optical layer: LPO as a power/cost-reduced alternative to full DSP pluggables, and the 800G/1.6T port speeds those enable.</li>
+<li><strong>Where applicable</strong>: Datacenter and AI/HPC fabric design generally. Vendor-presented (Arista), so expect the framing to favor Ethernet/merchant-silicon answers over InfiniBand, but the UEC and LPO content is standards-level and broadly relevant.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="implementing-precision-timing-sync-as-a-service-in-a-telecommunications-network"><a href="implementing-precision-timing-sync-as-a-service-in-a-telecommunications/">Implementing Precision Timing / Sync as a Service in a Telecommunications Network</a><a class="headerlink" href="#implementing-precision-timing-sync-as-a-service-in-a-telecommunications-network" title="Permanent link">#</a></h3>
+<p>Phil Carlisle (Chorus)</p>
+<ul>
+<li><strong>Why</strong>: Timing distribution is physical-network infrastructure: PTP (IEEE1588v2) and SyncE over terrestrial transport is both a hard operational problem (asymmetry, wander, hop budget) and a growing service as GNSS jamming/spoofing makes antenna-per-site architectures risky. Relevant to anyone building or consuming time-sensitive transport — including sync-sensitive DC fabrics — and a good case study in hardening a WAN service against GNSS vulnerability.</li>
+<li><strong>What</strong>: Chorus's investigation and lab/customer trials of delivering precision timing as a network service over its own transport using IEEE1588v2 and SyncE, instead of deploying GNSS receivers at every consumer site, and what rolling that out across the Chorus network implies. (from abstract only)</li>
+<li><strong>How</strong>: Terrestrial time transfer over existing fiber transport (PTP with SyncE frequency assist), replacing per-site GNSS clocks — motivated by both deployment cost (clock + antenna + cabling per site at scale) and GNSS's vulnerability to jamming, spoofing, and space weather.</li>
+<li><strong>Where applicable</strong>: The trial findings are Chorus/topology-specific (NZ access network), but the pattern — PTP-as-a-service over operator transport to eliminate fragile distributed GNSS — transfers to any operator or large campus/DC environment with sync consumers (mobile, power, finance).</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="dnssec-for-nz-post-incident-recovery-and-improvement-or-how-to-see-the-train-coming-down-the-tunnel-next-time-for-sure"><a href="dnssec-for-nz-post-incident-recovery-and-improvement-or-how-to-see-the-t/">DNSSEC for .nz: post-incident recovery and improvement (or, how to see the train coming down the tunnel next time. For Sure.)</a><a class="headerlink" href="#dnssec-for-nz-post-incident-recovery-and-improvement-or-how-to-see-the-train-coming-down-the-tunnel-next-time-for-sure" title="Permanent link">#</a></h3>
+<p>Paul Radford (InternetNZ)</p>
+<ul>
+<li><strong>Why</strong>: A concrete, transferable postmortem in network security: the failure wasn't the zone data being internally consistent, it was that nobody validated how the zone behaves against <em>caching recursive resolvers</em> in the real world. The lesson — your correctness checks must model the consumer's cache, not just your own output — generalizes far beyond DNSSEC to any system validated in isolation from its consumers.</li>
+<li><strong>What</strong>: The story of the .nz DNSSEC incident, what observability gaps it exposed, and the "fake root" validation system InternetNZ built afterward: a test harness with caching recursive resolvers in the loop that validates zone outputs against real-world query/validation behavior before publication. (from abstract only)</li>
+<li><strong>How</strong>: Pre-release validation that replays the resolver ecosystem — not just checking zone files for internal consistency but exercising DNSSEC validation through caching recursive servers in scenarios approximating production, catching negative side effects before the zone ships.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to any DNS operator (TLD, enterprise authoritative, or hosted zones); the harness approach is adoptable by anyone running authoritative DNS with DNSSEC. Org-specific only in the incident details.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="dns-resolvers-and-nameservers-in-new-zealand"><a href="dns-resolvers-and-nameservers-in-new-zealand/">DNS Resolvers and Nameservers in New Zealand</a><a class="headerlink" href="#dns-resolvers-and-nameservers-in-new-zealand" title="Permanent link">#</a></h3>
+<p>Geoff Huston (<a href="../companies/apnic/">APNIC</a>)</p>
+<ul>
+<li><strong>Why</strong>: Rigorous measurement of how resolvers actually pick and re-evaluate authoritative servers, and whether popular domains' NS provisioning matches that behavior — directly useful for anyone reasoning about DNS performance, anycast placement, or NS-set design in production.</li>
+<li><strong>What</strong>: An extension of prior resolver-behavior and RIPE-Atlas studies using APNIC's distributed ad system to observe the authoritative-server selection process from millions of real end-users worldwide, then checking how two name sets — the root-zone TLDs and the .nz domains in the Tranco top 1M — are provisioned against observed resolver behavior. (from abstract only)</li>
+<li><strong>How</strong>: Recruits end-users via APNIC's ad-based measurement network (much larger vantage point base than Atlas probes), instruments their resolvers' selection process for a controlled domain set, and compares the observed selection dynamics against the NS configuration of high-traffic zones.</li>
+<li><strong>Where applicable</strong>: General measurement results, applicable to any operator thinking about authoritative DNS placement; the .nz/Tranco slice gives it a local angle.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="communications-resilience"><a href="communications-resilience/">Communications Resilience</a><a class="headerlink" href="#communications-resilience" title="Permanent link">#</a></h3>
+<p>Jon Brewer (Telco2)</p>
+<ul>
+<li><strong>Why</strong>: Physical-infrastructure risk modeling is squarely in the "running networks" skillset: knowing that your fiber routes share a road, a transformer, or a liquefaction zone is the difference between claimed and actual redundancy. This is a practical methodology talk for infrastructure dependency mapping.</li>
+<li><strong>What</strong>: An approach to mapping telecom infrastructure to identify vulnerabilities and assess risk: data collection and maintenance strategies, dependency mapping (shared power transformers, single-road access routes), and visualization of natural hazards (fault lines, liquefaction zones, landslide-prone areas). (from abstract only)</li>
+<li><strong>How</strong>: Correlate asset location data with shared-dependency and geohazard datasets, visualize overlap, and use the resulting map to drive risk assessment and hardening priorities.</li>
+<li><strong>Where applicable</strong>: Methodology is broadly applicable to any operator or large enterprise with physical plant; the hazard layers shown are NZ-specific (fault/liquefaction data), but the technique transfers anywhere geohazard data exists.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="ip-quirks-and-features"><a href="ip-quirks-and-features/">IP Quirks and Features</a><a class="headerlink" href="#ip-quirks-and-features" title="Permanent link">#</a></h3>
+<p>Mark Smith</p>
+<ul>
+<li><strong>Why</strong>: For a PM whose interests include protocol internals, this is the "why is IP the way it is" talk — the historical design decisions (ARP's late arrival, IPv4 addressing complexity, why IPv6 grew to 128 bits) that explain today's protocol behavior and deployment friction. Context that makes IPv6 and datapath design decisions more legible.</li>
+<li><strong>What</strong>: A historical tour of IP feature evolution from the 1974 Cerf/Kahn paper through the multi-protocol 1990s (IPX, AppleTalk) to IPv6, framed around design goals and why the protocols became more complicated than their designers intended, with IPv6's design and deployment model as the through-line. (from abstract only)</li>
+<li><strong>How</strong>: Historical analysis rather than new research — the speaker's long IETF IPv6 working-group involvement and multi-protocol-era operating experience used to explain design decisions and their operational consequences.</li>
+<li><strong>Where applicable</strong>: Educational/contextual rather than a technique to adopt; useful background for anyone operating or designing IP networks, especially around IPv6 deployment strategy.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="chorus-is-going-boost-fibre-plans-for-over-700000-kiwi-homes-find-out-how-we-will-technically-deliver-the-upgrade-and-how-you-can-get-the-best-performance-out-of-chorus-services"><a href="chorus-is-going-boost-fibre-plans-for-over-700000-kiwi-homes-find-out-ho/">Chorus is going boost fibre plans for over 700,000 Kiwi homes – find out how we will technically deliver the upgrade and how you can get the best performance out of Chorus' services 😮‍💨</a><a class="headerlink" href="#chorus-is-going-boost-fibre-plans-for-over-700000-kiwi-homes-find-out-how-we-will-technically-deliver-the-upgrade-and-how-you-can-get-the-best-performance-out-of-chorus-services" title="Permanent link">#</a></h3>
+<p>Brent Marquis (Chorus)</p>
+<ul>
+<li><strong>Why</strong>: A mass-change automation story: re-homing 700k+ live services to new speed tiers without customer impact, across a web of interlocking systems. The decoupling and migration-scripting techniques are what make it worth the PM's time, independent of the access-network specifics.</li>
+<li><strong>What</strong>: How Chorus will apply wholesale plan speed upgrades (50/10→100/20, 300/100→500/100 from June 2025) across its network without impacting live services, including how the network configuration enables the change, the process/scripts used for the service migration, and how RSPs and customers can extract best performance. (from abstract only)</li>
+<li><strong>How</strong>: Decoupling the network change from the surrounding in-flight work and systems interactions, using scripted service migration over a network configuration designed to tolerate live modification.</li>
+<li><strong>Where applicable</strong>: Org-specific in its details (Chorus's GPON wholesale systems), but the pattern — decouple, script, migrate at scale without customer-visible impact — transfers to any operator running mass service modifications.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="kindns-promoting-dns-security-best-practices"><a href="kindns-promoting-dns-security-best-practices/">KINDNS: Promoting DNS Security Best Practices</a><a class="headerlink" href="#kindns-promoting-dns-security-best-practices" title="Permanent link">#</a></h3>
+<p>Champika Wijayatunga (ICANN)</p>
+<ul>
+<li><strong>Why</strong>: Security-hygiene framework for DNS operators of all sizes; useful as a checklist and as a signal of what the DNS ecosystem considers baseline defenses. Lightweight on novelty but practical for anyone running authoritative or recursive infrastructure.</li>
+<li><strong>What</strong>: ICANN's KINDNS framework — a curated set of simple, straightforward operational security measures that DNS operators of any size can implement, aimed at closing the patchwork of uneven security levels across the DNS ecosystem that attackers exploit. (from abstract only)</li>
+<li><strong>How</strong>: Norm-setting via a published best-practice framework: identify the highest-impact security measures (the ones smaller operators struggle to track and larger operators selectively skip) and package them for adoption.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to any DNS operator; not a technical innovation but a gap-closing checklist.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="passive-optical-networking"><a href="passive-optical-networking/">Passive Optical Networking</a><a class="headerlink" href="#passive-optical-networking" title="Permanent link">#</a></h3>
+<p>Daniel Hutchins (Ciena)</p>
+<ul>
+<li><strong>Why</strong>: Marginal for the PM, but PON's evolution beyond 10G (25G/50G time- and wavelength-domain options) is the access-side bookend of the optics roadmap they track — the same traffic-growth forces pushing 800G in the DC push higher split ratios and rates at the edge.</li>
+<li><strong>What</strong>: A recap of PON fundamentals, where standards and deployments stand today, and how PON evolves beyond 10G to support higher speeds and increasing traffic demands. (from abstract only)</li>
+<li><strong>How</strong>: Standards/deployment survey of next-generation PON options and their capacity implications.</li>
+<li><strong>Where applicable</strong>: Access/broadband networks; vendor-presented (Ciena), and pitched as a recap-plus-roadmap, so treat the evolution claims with the usual vendor filter. Skippable if your remit doesn't touch access networks.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="challenges-in-simulating-leo-satellite-networks-like-starlink"><a href="challenges-in-simulating-leo-satellite-networks-like-starlink/">Challenges in simulating LEO satellite networks like Starlink</a><a class="headerlink" href="#challenges-in-simulating-leo-satellite-networks-like-starlink" title="Permanent link">#</a></h3>
+<p>Wayne Reiher (UoA)</p>
+<ul>
+<li><strong>Why</strong>: Not the PM's domain, but a genuinely interesting emulation technique: reproducing LEO's time-varying latency, load, and handover dynamics on real physical hardware at ~150 devices — a problem most people solve badly in software simulators. The approach (continuously driving netem and token-bucket parameters from an orbital model) is a reusable pattern for testing any time-varying transport path, and LEO is increasingly a real WAN-transit option to reason about.</li>
+<li><strong>What</strong>: The University of Auckland's work extending an existing hardware-based GEO/MEO satellite simulator to LEO constellations, and the technical challenges of doing so on an extensive physical setup of around 150 devices. (from abstract only)</li>
+<li><strong>How</strong>: Continuous real-time updates to <code>netem</code> delay and token-bucket-filter rate parameters to replicate the changing latencies and data rates a ground station experiences as satellites move, clients hand over, and inter-satellite links switch — as opposed to the static latencies/rates that make GEO and MEO easy to simulate.</li>
+<li><strong>Where applicable</strong>: Test-lab technique; adoption requires a physical emulation rig, so it's academic-lab-scale rather than something to lift directly, but the parameter-driving methodology transfers to any hardware path-emulation setup.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="were-not-in-kansas-anymore-my-experiences-with-ip-geolocation"><a href="were-not-in-kansas-anymore-my-experiences-with-ip-geolocation/">We're not in Kansas anymore: my experiences with IP geolocation</a><a class="headerlink" href="#were-not-in-kansas-anymore-my-experiences-with-ip-geolocation" title="Permanent link">#</a></h3>
+<p>Shane Alcock (Alcock Network Intelligence, IODA)</p>
+<ul>
+<li><strong>Why</strong>: Not core, but a candid consumer-side account of geolocation data quality — how the datasets are derived, where they go wrong, and the gotchas in using them — which matters to anyone doing geo-based policy, content access, or outage attribution. The IODA outage-attribution use case makes it concrete.</li>
+<li><strong>What</strong>: The speaker's experiences consuming IP geolocation data inside IODA (Internet Outage Detection and Analysis) to attribute observed Internet outages to geographic regions, plus a documentation of how geolocation datasets are built and the failure modes encountered. (from abstract only)</li>
+<li><strong>How</strong>: Practitioner experience report: working with commercial/derived geolocation feeds against observed outage data, and the mismatches that arise when the data's granularity, freshness, or methodology doesn't match the attribution task.</li>
+<li><strong>Where applicable</strong>: Applicable to anyone using IP geolocation for analytics, geo-blocking, or content delivery decisions; not a technique with infrastructure prerequisites, but a set of caveats.</li>
+</ul>
+</div>
+<h2 id="skipped">Skipped<a class="headerlink" href="#skipped" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>The Weakest Link in the Modern Cyber Threat Landscape</strong> (CyberFern) — general security-awareness messaging, no transferable technique.</li>
+<li><strong>AI-Powered Telco SecOps Use Cases</strong> (Fortinet) — vendor pitch in substance.</li>
+<li><strong>Resilient and Inclusive Networks</strong> (TUANZ) — policy/social accessibility framing, not technical.</li>
+<li><strong>Internet Governance</strong> (InternetNZ) — WSIS+20/multistakeholderism policy track, no operational content.</li>
+</ul>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>AI fabrics pull the whole optics stack along</strong>: Two talks (Arista's UltraEthernet/LPO/1.6T, Flexoptix's 800G SNR/BER analysis) show AI-cluster demands driving coherent techniques and LPO into short-reach optics — a shift from "best-effort Ethernet, throw margin at it" to engineered link budgets at 800G+.</li>
+<li><strong>The cache is part of your system</strong>: The .nz DNSSEC incident and Huston's resolver study both center the same lesson — correctness must be validated against real resolver/caching behavior, not against your own internally-consistent output.</li>
+<li><strong>GNSS is a single point of failure</strong>: Chorus's Sync-as-a-Service trials reflect a wider move to terrestrial PTP/SyncE distribution as jamming/spoofing awareness grows — timing is becoming a delivered, hardened network service rather than a per-site antenna.</li>
+<li><strong>Mass change without disruption is the operator skill</strong>: Chorus's 700k-home speed migration is representative: the hard problems are decoupling, scripting, and sequencing across interlocking systems, not the config change itself.</li>
+<li><strong>Mapping the physical plant against the physical world</strong>: Communications Resilience's shared-dependency and geohazard mapping signals growing operator investment in physical-layer risk data — claimed redundancy versus actual shared-road/shared-transformer reality.</li>
+<li><strong>A regional program with strong local operators</strong>: Several strong sessions are NZ-infrastructure-specific (Chorus, InternetNZ, Chorus timing trials); the techniques transfer even where the topology doesn't.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/nznog-2025.md"><code>digests/nznog-2025.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/nznog-2025.md"><code>prompts/nznog-2025.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../kubecon-eu-2025/" class="md-footer__link md-footer__link--prev" aria-label="Previous: KubeCon + CloudNativeCon Europe 2025 (London)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                KubeCon + CloudNativeCon Europe 2025 (London)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../nsdi-2025/" class="md-footer__link md-footer__link--next" aria-label="Next: NSDI &#x27;25">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                NSDI '25
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

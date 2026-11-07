@@ -842,3 +842,12 @@ conferences:
     manual_fallback_url: "https://mlsys.org/Conferences/2026"
     discovered: 2026-11-04
     notes: "The systems-for-machine-learning conference (peer-reviewed, ~1,000 attendees): training and inference infrastructure, LLM serving, GPU/accelerator systems, distributed ML, compilers and runtime for ML. Papers with full abstracts plus invited talks, from the conference's virtual site; OpenReview pdfs and SlidesLive recordings linked per paper. Auto-discovered 2026-11-04 from series 'mlsys'. end_date taken from the source."
+
+  - key: opi-2026
+    name: "OPI Summit on DPUs/IPUs 2026"
+    end_date: 2026-10-15
+    fetcher: sched
+    program_url: "https://opisummit2026.sched.com/list/descriptions/"
+    manual_fallback_url: "https://opisummit2026.sched.com/"
+    discovered: 2026-11-07
+    notes: "Open Programmable Infrastructure's DPU/IPU summit, co-located with OCP Global Summit in San Jose: vendor-neutral DPU/IPU APIs and control planes, network/storage/security offload, cloud-native integration and AI infrastructure. Titles, speakers, abstracts and slide decks from Sched; recordings on the official OPI YouTube channel (@OPI_project). Auto-discovered 2026-11-07 from series 'opi'. end_date taken from the source."

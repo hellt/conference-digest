@@ -649,3 +649,17 @@ series:
     program_url_template: "https://events.linuxfoundation.org/pytorch-conference-north-america/"
     manual_fallback_url_template: "https://events.linuxfoundation.org/pytorch-conference-north-america/program/schedule/"
     notes: "The PyTorch ecosystem conference (~1,500 attendees): PyTorch core, torch.compile and performance, distributed training and inference, production ML systems, hardware/accelerator integration. Titles, speakers and full abstracts from the Sessionize schedule the event page links; recordings on the PyTorch YouTube channel."
+
+  # OPI Summit on DPUs/IPUs: one Sched site per year, read by the generic
+  # Sched fetcher. The 2026 schedule states its exact date; the official OPI
+  # YouTube channel carries a per-edition playlist of talk recordings.
+  - series: opi
+    enumerate: year
+    key_template: "opi-{year}"
+    name_template: "OPI Summit on DPUs/IPUs {year}"
+    fetcher: sched
+    start: 2026
+    lookahead: 2
+    program_url_template: "https://opisummit{year}.sched.com/list/descriptions/"
+    manual_fallback_url_template: "https://opisummit{year}.sched.com/"
+    notes: "Open Programmable Infrastructure's DPU/IPU summit, co-located with OCP Global Summit in San Jose: vendor-neutral DPU/IPU APIs and control planes, network/storage/security offload, cloud-native integration and AI infrastructure. Titles, speakers, abstracts and slide decks from Sched; recordings on the official OPI YouTube channel (@OPI_project)."

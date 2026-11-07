@@ -4543,3 +4543,46 @@ itnog-9:
     ISDN - Protocol Wars:
     - routing-protocols
     - standardization
+opi-2026:
+  post:
+  - dpu
+  - ai-networks
+  - automation
+  - identity
+  - linux-networking
+  - open-source
+  talks:
+    'From Platform Baseline to Platform Handoff: Automating DPU Onboarding with sZTP - Anssi Söderena, Fusionlayer, Inc':
+    - dpu
+    - automation
+    - identity
+    - kubernetes
+    Network Engine's Hardware Matrix Problem, and Why DPUs Solve What NICs Can't - Josh Brooks, WorldTech IT/Network Engine:
+    - dpu
+    - linux-networking
+    - open-source
+    ? 'One Control Plane, Many DPU/IPUs: SONiC DASH and Open DSE Powered by OPI -
+      Serey Kong, Intel Corporation & Mounire El Houmaidi, BE-NET'
+    : - dpu
+      - sdn
+      - api
+      - orchestration
+    Reimagining DPUs for Storage Control and End-to-End Confidential AI - Jitendra Singh & Anshuman Ghosh, Microsoft:
+    - dpu
+    - attestation
+    - ai-networks
+    ? 'Feeding the AI Factory: The Role of DPU/IPUs in AI Infrastructure - Tina Tsou,
+      Board Chair, LF Edge; Rajalaxmi Angadi, Senior Engineering Manager, Intel &
+      Moderated by Paul Pindell, F5 Networks'
+    : - ai-networks
+      - dpu
+      - gpu-clusters
+    ? 'KV Cache in the Agentic Era: The Five Forces that Decide Where the Cache Lives,
+      and What a DPU Can Do About It - Jigar Kuverji Savla, Tensordyne'
+    : - ai-networks
+      - dpu
+      - benchmarking
+    How Open Hardware Access Builds the Next Generation of Infrastructure Engineers - Sam Dasilva, Red Hat:
+    - open-source
+    - dpu
+    - containers

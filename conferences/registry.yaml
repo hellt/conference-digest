@@ -804,7 +804,7 @@ conferences:
     program_url: "https://www.nznog.org/conferences/nznog-2025/talks.html"
     manual_fallback_url: "https://www.nznog.org/conferences/nznog-2025/talks.html"
     discovered: 2026-11-04
-    notes: "New Zealand network operators: IX and peering, DNS, routing security, optics, network automation. Titles, speakers and abstracts from the accepted-talks page; recordings are whole-day streams, so the links step adds no per-talk recording. Auto-discovered 2026-11-04 from series 'nznog'. end_date taken from the source."
+    notes: "New Zealand network operators: IX and peering, DNS, routing security, optics, network automation. Titles, speakers and abstracts from the accepted-talks page; recordings are whole-day streams, with reviewed transcript offsets for all 2025 talks in links.py. Auto-discovered 2026-11-04 from series 'nznog'. end_date taken from the source."
 
   - key: nznog-2026
     name: "NZNOG 2026"
@@ -814,7 +814,7 @@ conferences:
     program_url: "https://www.nznog.org/conferences/nznog-2026/talks.html"
     manual_fallback_url: "https://www.nznog.org/conferences/nznog-2026/talks.html"
     discovered: 2026-11-04
-    notes: "New Zealand network operators: IX and peering, DNS, routing security, optics, network automation. Titles, speakers and abstracts from the accepted-talks page; recordings are whole-day streams, so the links step adds no per-talk recording. Auto-discovered 2026-11-04 from series 'nznog'. end_date taken from the source."
+    notes: "New Zealand network operators: IX and peering, DNS, routing security, optics, network automation. Titles, speakers and abstracts from the accepted-talks page; recordings are whole-day streams, with reviewed transcript offsets for all 2026 talks in links.py. Auto-discovered 2026-11-04 from series 'nznog'. end_date taken from the source."
 
   - key: pytorch-2026
     name: "PyTorch Conference 2026"

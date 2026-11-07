@@ -88,6 +88,7 @@ A deck published in two formats gets both links (`Slides (PDF) · Slides
 (PPTX)`). The links come from the program (fetchers record each item's `page:`, `pdf:`,
 `slides:`, `video:` and IETF `materials:`), from the talk's own page read again
 (USENIX, Sched and netdev pages add slides and the recording after the event),
+from reviewed transcript offsets into whole-day streams (`RECORDING_STREAMS`),
 and, for a pick still without a recording, from a YouTube search. A found
 recording is linked only if its title or description carries the talk's title,
 the conference or its channel is named, and it was uploaded within eight months

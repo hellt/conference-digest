@@ -15,6 +15,8 @@ A small, operator-heavy program (22 talks). Notable: none of the items carry pap
 
 ### Radius Futures
 
+**Links:** [Recording](https://www.youtube.com/watch?v=_qzUslAh9M8&t=3490s)
+
 Alan DeKok
 
 - **Why**: RADIUS is still the default AAA protocol for network access (802.1X, Wi-Fi, VPN) and sits squarely in the PM's identity/authentication territory. Its 1993 design shows its age — known operational and security pain points — and "next-generation" standards work determines how network AAA coexists with modern identity stacks (OIDC, passkeys, workload identity).
@@ -23,6 +25,8 @@ Alan DeKok
 - **Where applicable**: Broadly applicable — any operator or enterprise running AAA today. Protocol work, not vendor-specific. The main caveat is that the abstract stays high level; the value depends on which concrete drafts/problems get named.
 
 ### Evolving Optical Transport: 400G, Network Design, and Regional Diversity
+
+**Links:** [Recording](https://www.youtube.com/watch?v=zHCJov9WM-c&t=9259s)
 
 Abouzar Asadi (Chorus)
 
@@ -33,6 +37,8 @@ Abouzar Asadi (Chorus)
 
 ### Channelmania! – future proof your DWDM network topology while keeping it flexible for 1.6T
 
+**Links:** [Recording](https://www.youtube.com/watch?v=zHCJov9WM-c&t=1905s)
+
 Thomas Weible
 
 - **Why**: Planning DWDM channel grids for the 400G → 800G → 1.6T superchannel era is exactly the kind of physical-layer topology tradeoff the PM cares about — this is about how fibre capacity and reconfigurability interact over a 10+ year horizon.
@@ -41,6 +47,8 @@ Thomas Weible
 - **Where applicable**: Any DWDM operator with long-haul or metro infrastructure planning a decade out. The tradeoff is explicit — reduced flexibility vs. cost — and the "keep 10G and below on the same fibre" constraint matters for networks with legacy OTN payloads. The talk may carry a vendor perspective; the physics and grid economics are general.
 
 ### Options for Data Centre Interconnect
+
+**Links:** [Recording](https://www.youtube.com/watch?v=zHCJov9WM-c&t=45s)
 
 Matthew Hayes
 
@@ -51,6 +59,8 @@ Matthew Hayes
 
 ### Experiments in Topology Visualization using BGP-LS (RFC-8571)
 
+**Links:** [Recording](https://www.youtube.com/watch?v=zHCJov9WM-c&t=11173s)
+
 Rick Williamson (Helios Software AU), Rob Simpson (Kordia Networks)
 
 - **Why**: BGP-LS is an underused source of live topology and TE data, and this is exactly the kind of experimental, adoptable tooling an operator program should surface. It ties directly to the PM's BGP/datapath-internals interest and offers hands-on access (remote lab network, iOS visualisation client) during the conference.
@@ -60,6 +70,8 @@ Rick Williamson (Helios Software AU), Rob Simpson (Kordia Networks)
 
 ### Using Open Rack V3 to Enhance your Data Centre Infrastructure
 
+**Links:** [Recording](https://www.youtube.com/watch?v=zHCJov9WM-c&t=18434s)
+
 Conrad Bullock
 
 - **Why**: Rack-level power, thermal, and mechanical standards are what make high-density AI/HPC fabrics physically possible — ORv3 (and OCP generally) is core physical-DC infrastructure territory, not adjacent to it. The NZ case study gives local grounding.
@@ -68,6 +80,8 @@ Conrad Bullock
 - **Where applicable**: DC operators building or refreshing high-density halls. The abstract's tone is promotional and the speaker's affiliation is not given, so assess on the day for vendor-pitch content — the case study is the part worth weighing.
 
 ### Automated Network State Checking: Insights from the Field
+
+**Links:** [Recording](https://www.youtube.com/watch?v=_qzUslAh9M8&t=18910s)
 
 Joe Shaw (REANNZ)
 
@@ -80,6 +94,8 @@ Joe Shaw (REANNZ)
 
 ### The Evolution of TCP Transport Protocols
 
+**Links:** [Recording](https://www.youtube.com/watch?v=_qzUslAh9M8&t=6375s)
+
 Geoff Huston
 
 - **Why**: Congestion-control fundamentals cut across everything the PM touches — from lossless/DC fabrics to internet transport — and the shift from loss-based control to BBR (with ECN being reconsidered) changes how buffers should be sized and how traffic behaves on your network.
@@ -88,6 +104,8 @@ Geoff Huston
 - **Where applicable**: Universal — every operator's queue/buffer behaviour is affected. Especially relevant as BBR-driven senders (large content/CDN players) increasingly set the tone for how paths are used.
 
 ### Optimizing Traffic Flow with Akamai
+
+**Links:** [Recording](https://www.youtube.com/watch?v=_qzUslAh9M8&t=389s)
 
 Kams Yeung
 
@@ -98,6 +116,8 @@ Kams Yeung
 
 ### Tuatahi First Fibre: Network Update
 
+**Links:** [Recording](https://www.youtube.com/watch?v=_qzUslAh9M8&t=14069s)
+
 Murray Pearson
 
 - **Why**: A live production vendor transition (legacy Huawei GPON → Adtran architecture) at regional scale, plus a 100G handover product on the new platform — and it includes an actual failure story (multicast replication during the Whanganui cutover), which is exactly what an operator program should surface.
@@ -106,6 +126,8 @@ Murray Pearson
 - **Where applicable**: NZ fibre-operator-specific in its topology and regulatory context, but the migration-sequencing and multicast-replication lessons transfer to any GPON/XGS-PON operator doing vendor transition or scaling aggregation to 100G.
 
 ### Routeviews Update
+
+**Links:** [Recording](https://www.youtube.com/watch?v=zHCJov9WM-c&t=12874s)
 
 Philip Smith
 
@@ -116,6 +138,8 @@ Philip Smith
 
 ### Open Fibre Standards
 
+**Links:** [Recording](https://www.youtube.com/watch?v=zHCJov9WM-c&t=3427s)
+
 Warren Finch
 
 - **Why**: Cyclone Gabrielle exposed what happens when nobody has a shared, structured view of physical fibre — shared corridors, thin diversity, no cross-operator picture. An open, machine-readable fibre data schema matters for resilience planning and is conceptually adjacent to how the PM thinks about infrastructure-as-data (and useful for DC site/diversity analysis).
@@ -124,6 +148,8 @@ Warren Finch
 - **Where applicable**: The schema is general; the *value* depends on operators actually publishing their data, which is the hard part. Relevant wherever physical-route diversity is a resilience question — NZ context is the motivating case, not a constraint.
 
 ### Designing a Mikrotik CGNAT Solution that Scales
+
+**Links:** [Recording](https://www.youtube.com/watch?v=_qzUslAh9M8&t=4918s)
 
 Matthew Enger (Leaptel)
 
@@ -134,6 +160,8 @@ Matthew Enger (Leaptel)
 
 ### Comfortable Complexity of Network Overlays
 
+**Links:** [Recording](https://www.youtube.com/watch?v=_qzUslAh9M8&t=1852s)
+
 Claudiu Captari
 
 - **Why**: Using EVPN as a single consistent service layer across carrier core, DC, and campus — over VXLAN, MPLS, or SRv6 — is a significant architectural trend that collapses the "snowflake per domain" problem, and it directly touches the PM's fabric/overlay territory.
@@ -143,6 +171,8 @@ Claudiu Captari
 
 ### The Evolution of Network Configuration Management
 
+**Links:** [Recording](https://www.youtube.com/watch?v=_qzUslAh9M8&t=17412s)
+
 Tim Raphael
 
 - **Why**: Config management is where the PM's declarative/intent-driven world (Kubernetes-style APIs) meets traditional networking — a well-structured survey of the evolution from hand-crafted configs to intent-driven operations is useful context for anyone building network tooling.
@@ -151,6 +181,8 @@ Tim Raphael
 - **Where applicable**: Broadly applicable; most valuable as a shared-vocabulary framing for where an organisation sits on the imperative-to-declarative spectrum.
 
 ### Datagrid: Unlocking the Potential of New Zealand's South Island
+
+**Links:** [Recording](https://www.youtube.com/watch?v=zHCJov9WM-c&t=16692s)
 
 Pierre Goiffon
 
@@ -163,6 +195,8 @@ Pierre Goiffon
 
 ### Rethinking NetOps with Open-Source LLMs & RAG
 
+**Links:** [Recording](https://www.youtube.com/watch?v=_qzUslAh9M8&t=15823s)
+
 Basem Al-Sabri
 
 - **Why**: LLM copilots for network operations are an emerging subfield, and the data-sovereignty framing (no sensitive configs/logs leaving the organisation) is the specific angle that makes this credible for network operators rather than hype.
@@ -172,6 +206,8 @@ Basem Al-Sabri
 
 ### AST Space Mobile
 
+**Links:** [Recording](https://www.youtube.com/watch?v=zHCJov9WM-c&t=7224s)
+
 Simon Allard (2degrees)
 
 - **Why**: Direct-to-device satellite is a genuine architectural shift in coverage economics — a terrestrial mobile operator integrating an LEO constellation via its *own* ground station is novel infrastructure work outside the PM's usual beat but worth seeing.
@@ -180,6 +216,8 @@ Simon Allard (2degrees)
 - **Where applicable**: Mobile operators; NZ-specific integration but representative of a global D2D trend.
 
 ### Defending Multistakeholder Internet Governance
+
+**Links:** [Recording](https://www.youtube.com/watch?v=zHCJov9WM-c&t=5253s)
 
 Jodi Anderson
 

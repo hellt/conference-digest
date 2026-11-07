@@ -15,6 +15,8 @@ NZNOG's operator program skews toward access networks, DNS, and NZ-specific infr
 
 ### Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for Coherent (16QAM) and Non-Coherent (PAM4) high speed transceivers under environmental variations
 
+**Links:** [Recording](https://www.youtube.com/watch?v=cl9tBfiPNZk&t=2644s)
+
 Thomas Weible (Flexoptix)
 
 - **Why**: Directly on the PM's physical-optics beat. As 800G and coherent-lite pluggables move from WAN long-haul into DC interconnect and even intra-fabric links, operators need to know how close to the SNR cliff a link can run and still stay within BER targets — and how temperature and cable length shift that cliff. This is the reliability data that informs margining decisions for 100G/400G/800G deployments.
@@ -23,6 +25,8 @@ Thomas Weible (Flexoptix)
 - **Where applicable**: Broadly applicable to anyone buying or margining high-speed optics, but note the data comes from the vendor's own Flexbox tooling — the framing favors Flexoptix's ecosystem. The coherent-vs-PAM4 comparison itself transfers to any 400G/800G link budget decision.
 
 ### AI Networking, UltraEthernet, the road to 1.6T and beyond.
+
+**Links:** [Recording](https://www.youtube.com/watch?v=Q-sPQ7p5n9c&t=3248s)
 
 Matthew Thurbon (Arista)
 
@@ -33,6 +37,8 @@ Matthew Thurbon (Arista)
 
 ### Implementing Precision Timing / Sync as a Service in a Telecommunications Network
 
+**Links:** [Recording](https://www.youtube.com/watch?v=Q-sPQ7p5n9c&t=7763s)
+
 Phil Carlisle (Chorus)
 
 - **Why**: Timing distribution is physical-network infrastructure: PTP (IEEE1588v2) and SyncE over terrestrial transport is both a hard operational problem (asymmetry, wander, hop budget) and a growing service as GNSS jamming/spoofing makes antenna-per-site architectures risky. Relevant to anyone building or consuming time-sensitive transport — including sync-sensitive DC fabrics — and a good case study in hardening a WAN service against GNSS vulnerability.
@@ -41,6 +47,8 @@ Phil Carlisle (Chorus)
 - **Where applicable**: The trial findings are Chorus/topology-specific (NZ access network), but the pattern — PTP-as-a-service over operator transport to eliminate fragile distributed GNSS — transfers to any operator or large campus/DC environment with sync consumers (mobile, power, finance).
 
 ### DNSSEC for .nz: post-incident recovery and improvement (or, how to see the train coming down the tunnel next time. For Sure.)
+
+**Links:** [Recording](https://www.youtube.com/watch?v=cl9tBfiPNZk&t=8286s)
 
 Paul Radford (InternetNZ)
 
@@ -53,6 +61,8 @@ Paul Radford (InternetNZ)
 
 ### DNS Resolvers and Nameservers in New Zealand
 
+**Links:** [Recording](https://www.youtube.com/watch?v=cl9tBfiPNZk&t=10011s)
+
 Geoff Huston (APNIC)
 
 - **Why**: Rigorous measurement of how resolvers actually pick and re-evaluate authoritative servers, and whether popular domains' NS provisioning matches that behavior — directly useful for anyone reasoning about DNS performance, anycast placement, or NS-set design in production.
@@ -61,6 +71,8 @@ Geoff Huston (APNIC)
 - **Where applicable**: General measurement results, applicable to any operator thinking about authoritative DNS placement; the .nz/Tranco slice gives it a local angle.
 
 ### Communications Resilience
+
+**Links:** [Recording](https://www.youtube.com/watch?v=Q-sPQ7p5n9c&t=18778s)
 
 Jon Brewer (Telco2)
 
@@ -71,6 +83,8 @@ Jon Brewer (Telco2)
 
 ### IP Quirks and Features
 
+**Links:** [Recording](https://www.youtube.com/watch?v=Q-sPQ7p5n9c&t=11544s)
+
 Mark Smith
 
 - **Why**: For a PM whose interests include protocol internals, this is the "why is IP the way it is" talk — the historical design decisions (ARP's late arrival, IPv4 addressing complexity, why IPv6 grew to 128 bits) that explain today's protocol behavior and deployment friction. Context that makes IPv6 and datapath design decisions more legible.
@@ -79,6 +93,8 @@ Mark Smith
 - **Where applicable**: Educational/contextual rather than a technique to adopt; useful background for anyone operating or designing IP networks, especially around IPv6 deployment strategy.
 
 ### Chorus is going boost fibre plans for over 700,000 Kiwi homes – find out how we will technically deliver the upgrade and how you can get the best performance out of Chorus' services 😮‍💨
+
+**Links:** [Recording](https://www.youtube.com/watch?v=Q-sPQ7p5n9c&t=1980s)
 
 Brent Marquis (Chorus)
 
@@ -89,6 +105,8 @@ Brent Marquis (Chorus)
 
 ### KINDNS: Promoting DNS Security Best Practices
 
+**Links:** [Recording](https://www.youtube.com/watch?v=cl9tBfiPNZk&t=11876s)
+
 Champika Wijayatunga (ICANN)
 
 - **Why**: Security-hygiene framework for DNS operators of all sizes; useful as a checklist and as a signal of what the DNS ecosystem considers baseline defenses. Lightweight on novelty but practical for anyone running authoritative or recursive infrastructure.
@@ -97,6 +115,8 @@ Champika Wijayatunga (ICANN)
 - **Where applicable**: Broadly applicable to any DNS operator; not a technical innovation but a gap-closing checklist.
 
 ### Passive Optical Networking
+
+**Links:** [Recording](https://www.youtube.com/watch?v=cl9tBfiPNZk&t=4262s)
 
 Daniel Hutchins (Ciena)
 
@@ -109,6 +129,8 @@ Daniel Hutchins (Ciena)
 
 ### Challenges in simulating LEO satellite networks like Starlink
 
+**Links:** [Recording](https://www.youtube.com/watch?v=Q-sPQ7p5n9c&t=9702s)
+
 Wayne Reiher (UoA)
 
 - **Why**: Not the PM's domain, but a genuinely interesting emulation technique: reproducing LEO's time-varying latency, load, and handover dynamics on real physical hardware at ~150 devices — a problem most people solve badly in software simulators. The approach (continuously driving netem and token-bucket parameters from an orbital model) is a reusable pattern for testing any time-varying transport path, and LEO is increasingly a real WAN-transit option to reason about.
@@ -117,6 +139,8 @@ Wayne Reiher (UoA)
 - **Where applicable**: Test-lab technique; adoption requires a physical emulation rig, so it's academic-lab-scale rather than something to lift directly, but the parameter-driving methodology transfers to any hardware path-emulation setup.
 
 ### We're not in Kansas anymore: my experiences with IP geolocation
+
+**Links:** [Recording](https://www.youtube.com/watch?v=cl9tBfiPNZk&t=20955s)
 
 Shane Alcock (Alcock Network Intelligence, IODA)
 

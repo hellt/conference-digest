@@ -440,7 +440,7 @@ series:
     lookahead: 2
     program_url_template: "https://www.nznog.org/conferences/nznog-{year}/talks.html"
     manual_fallback_url_template: "https://www.nznog.org/conferences/nznog-{year}/talks.html"
-    notes: "New Zealand network operators: IX and peering, DNS, routing security, optics, network automation. Titles, speakers and abstracts from the accepted-talks page; recordings are whole-day streams, so the links step adds no per-talk recording."
+    notes: "New Zealand network operators: IX and peering, DNS, routing security, optics, network automation. Titles, speakers and abstracts from the accepted-talks page; recordings are whole-day streams, with per-talk links added where transcript offsets have been reviewed."
 
   # Peering Days: each edition gets its own site (<year>.peeringdays.eu) with
   # a static programme page — day headings, one block per slot, bold titles,

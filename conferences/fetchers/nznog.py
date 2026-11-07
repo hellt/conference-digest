@@ -4,8 +4,8 @@ nznog.org keeps one site per conference under /conferences/nznog-<year>/.
 talks.html lists the accepted talks in the order received: an h3 speaker
 heading, a bold line, abstract paragraphs and an italic speaker bio. The
 page links no slides, and recordings are whole-day streams on NZNOG's
-YouTube channel rather than per-talk uploads, so the links step finds none
-of the latter — that stays honest rather than guessed.
+YouTube channel rather than per-talk uploads. Reviewed caption-transcript
+offsets in links.py can point each talk into the right daily stream.
 
 The layout changed between editions: 2026 puts the plain speaker name in
 the h3 and the talk title in the bold line; 2025 packed "Speaker - Title"

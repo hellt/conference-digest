@@ -84,12 +84,13 @@ a:focus-visible, button:focus-visible, label:focus-visible {
 .md-tabs__link { font-size: .6rem; margin-top: .65rem; opacity: 1; }
 .md-tabs__link:hover, .md-tabs__item--active .md-tabs__link { color: var(--signal-ink); }
 .md-tabs__item--powered { margin-left: auto; }
-.md-tabs__link.md-tabs__powered { display: flex; align-items: center; gap: .55rem; }
-.md-tabs__powered-text { color: var(--signal-muted); font-size: .5rem; }
-.md-tabs__powered-logo { height: 1rem; width: auto; }
-.md-tabs__powered-logo--dark,
-[data-md-color-scheme="slate"] .md-tabs__powered-logo--light { display: none; }
-[data-md-color-scheme="slate"] .md-tabs__powered-logo--dark { display: inline; }
+.md-nav__item--powered { display: none; }
+.md-powered { display: flex; align-items: center; gap: .55rem; }
+.md-powered-text { color: var(--signal-muted); font-size: .5rem; white-space: nowrap; }
+.md-powered-logo { height: 1rem; width: auto; }
+.md-powered-logo--dark,
+[data-md-color-scheme="slate"] .md-powered-logo--light { display: none; }
+[data-md-color-scheme="slate"] .md-powered-logo--dark { display: inline; }
 
 /* Retain the existing native palette radio controls and sun/moon glyph. */
 .md-header__option[data-md-component="palette"] {
@@ -274,11 +275,8 @@ a:focus-visible, button:focus-visible, label:focus-visible {
 :root { --md-text-font-family: Inter, Arial, sans-serif; }
 .md-header__topic { font-weight: 500; }
 .md-nav--secondary .md-typeset { font: inherit; letter-spacing: inherit; }
-/* Keep the provider credit visible beside the mobile drawer navigation. */
+/* The desktop tabs credit moves to the bottom of the mobile drawer. */
 @media(max-width:76.234375em) {
-  .md-tabs { display: block; }
-  .md-tabs__item:not(.md-tabs__item--powered) { display: none; }
-  .md-tabs__item--powered { margin-left: 0; height: 2rem; }
-  .md-tabs__link.md-tabs__powered { margin-top: .45rem; }
-  .md-tabs__list { padding-left: .6rem; }
+  .md-nav__item--powered { display: block; }
+  .md-nav__item--powered .md-powered { gap: .4rem; }
 }

@@ -22,7 +22,7 @@ This list mixes recurring series configured for automatic discovery with individ
 flowchart LR
   S["Series rules and edition registry"] --> D["Discover editions and fetch programs"]
   D --> P["Committed digest prompt and tracking issue"]
-  P --> T["ToFaRev: shortlist, select, write"]
+  P --> T["Nebius Token Factory: shortlist, select, write"]
   T --> C["Validate, add links and search tags"]
   C --> R["Digest pull request"]
   R -->|A person merges| W["Published site"]
@@ -61,21 +61,19 @@ For a successful fetch, code composes `prompts/<key>.md` from:
 
 The prompt is the bot's job specification and source material, not just a wrapper around the program. It defines the reader's interests, the Core / Adjacent / Wildcard selection rules, and the preference for novel techniques, substantiated results, and transferable operational lessons over vendor pitches. It also requires exact program titles, a consistent Why / What / How / Where-applicable write-up, a Themes section, and search keywords. Grounding rules tell the writer to read linked papers or pages on a best-effort basis, never invent missing findings, and mark write-ups based only on an abstract.
 
-The generated prompt is committed and becomes the input to ToFaRev. The scan also opens or updates that edition's tracking issue. Keeping the prompt in the repository makes the run reproducible and provides the manual path: a blocked program can be pasted below the prompt's `PROGRAM TEXT` separator, and a person can run the same prompt outside the bot.
+The generated prompt is committed and becomes the input to the drafting workflow. The scan also opens or updates that edition's tracking issue. Keeping the prompt in the repository makes the run reproducible and provides the manual path: a blocked program can be pasted below the prompt's `PROGRAM TEXT` separator, and a person can run the same prompt outside the bot.
 
-### 3. Draft with ToFaRev and Nebius Token Factory
+### 3. Draft with Nebius Token Factory
 
-[ToFaRev](https://github.com/hellt/tofarev) runs after a scan, after a prompt is pushed, or on manual dispatch. Its normal queue contains committed prompts that do not yet have a digest or an open digest PR; a forced run can rewrite one conference and update its PR. For large programs it works in stages: batches are shortlisted in parallel, the shortlist is narrowed to the final selections, and the writer drafts from those items. It can enrich the selected items from their linked papers, slides, and talk pages; enrichment deepens the write-up but does not change selection or tier.
+The drafting workflow runs after a scan, after a prompt is pushed, or on manual dispatch. Its normal queue contains committed prompts that do not yet have a digest or an open digest PR; a forced run can rewrite one conference and update its PR.
 
-[Nebius Token Factory](https://tokenfactory.nebius.com/) supplies the **hosted model inference** for this drafting step. The repository's Digest Bot workflow calls a ToFaRev reusable workflow pinned to a full commit SHA. ToFaRev runs in its isolated container, reads the prompt at the scan's commit, and authenticates to Token Factory with the repository's `TOFAREV_API_KEY` secret. The configured model is `zai-org/GLM-5.3`, with context and output limits set in the workflow.
+[Nebius Token Factory](https://tokenfactory.nebius.com/) is the **inference engine for all model work**, using the configured `zai-org/GLM-5.3` model. For large programs, it shortlists batches in parallel, narrows the shortlist to the final selections, and writes the digest from those items. The drafting workflow can enrich selected items from their linked papers, slides, and talk pages; enrichment deepens the write-up but does not change selection or tier.
 
-ToFaRev returns `digest.md` and `result.json` as an artifact; the model does not push to this repository. The separate proposal job validates that artifact and opens the PR using this repository's own credentials. An optional `TAVILY_API_KEY` is distinct from the Token Factory key: it lets ToFaRev read linked PDFs that block GitHub runners, and supports the deterministic source-reading and link-search fallbacks described below.
-
-Token Factory is therefore used for the model calls behind shortlisting, selection, and writing. It is not used to discover editions, fetch conference programs, build links rows, publish the site, or host the repository. Those are code and workflow steps. The same committed prompt can also be run by hand without using this bot path.
+The workflow returns the draft for automated validation and pull-request review; the model does not push to this repository. Discovering editions, fetching programs, building links rows, and publishing the site remain code and workflow steps, not model work. The same committed prompt can also be run by hand without using this bot path.
 
 ### 4. Validate the draft and build every links row
 
-Code performs the final mechanical checks. ToFaRev's checks reduce links absent from the program text to plain text and flag pick headings that match no program item. The proposal step validates the artifact and metadata, normalizes the conference title, extracts the writer's keywords into `conferences/tags.yaml`, and builds the site before proposing the change.
+Code performs the final mechanical checks. Automated checks reduce links absent from the program text to plain text and flag pick headings that match no program item. The proposal step validates the artifact and metadata, normalizes the conference title, extracts the writer's keywords into `conferences/tags.yaml`, and builds the site before proposing the change.
 
 For every pick, `conferences/links.py` builds a `**Links:**` row when at least one usable link exists; the model never writes the row. Slides and YouTube recordings are resolved in this order:
 

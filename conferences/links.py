@@ -106,12 +106,14 @@ CHANNELS = {
     "mlsys": ("mlsys",),
     "pytorch": ("pytorch",),
     "opi": ("open programmable infrastructure", "opi project"),
+    "atscale": ("@scale", "at scale", "atscale conference"),
 }
 DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon": "SREcon",
            "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF", "nanog": "NANOG",
            "autocon": "AutoCon", "ovscon": "OVS OVN conference", "ciscolive": "Cisco Live",
            "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG", "gtc": "GTC", "ccs": "CCS", "imc": "IMC", "conext": "CoNEXT", "apricot": "APRICOT", "fosdem": "FOSDEM", "hacklu": "hack.lu", "tnc": "TNC GÉANT", "arin": "ARIN", "lacnic": "LACNIC", "pets": "PETS", "ausnog": "AusNOG", "nznog": "NZNOG", "zanog": "ZANOG", "peeringdays": "Peering Days", "moreip": "MORE-IP", "swinog": "SwiNOG", "capacity": "Capacity Europe", "nogfi": "nog.fi", "netuk": "NetUK", "grnog": "GRNOG", "dknog": "DKNOG", "itnog": "ITNOG", "netnod": "Netnod", "cfgmgmtcamp": "CfgMgmtCamp", "ocp": "OCP Global Summit",
-           "mlsys": "MLSys", "pytorch": "PyTorch Conference", "opi": "OPI Summit"}
+           "mlsys": "MLSys", "pytorch": "PyTorch Conference", "opi": "OPI Summit",
+           "atscale": "@Scale"}
 # YouTube channels that hold a conference's own recordings, keyed by the
 # first segment of the registry key. Searched before the general YouTube
 # search: uploads are often retitled or shortened when published, and the
@@ -121,6 +123,7 @@ UPLOAD_CHANNELS = {
     "nznog": "@nznog3664",
     "zanog": "@nognetza",
     "opi": "@OPI_project",
+    "atscale": "@scaleconference",
 }
 # (video id, start seconds) within whole-day streams. NZNOG 2025/2026 have no
 # descriptions or chapters, so these starts were reviewed against the spoken

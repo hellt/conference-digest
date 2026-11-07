@@ -494,6 +494,16 @@ run.
   abstracts. Slide decks are attached to the Sched session pages; recordings
   are found on the official `@OPI_project` YouTube channel. The series starts
   with the 2026 edition, held alongside OCP Global Summit in San Jose.
+- **@Scale** (Meta): one WordPress agenda layout serves the four current
+  series — Networking, Product, AI & Data, and Systems & Reliability. Accordion
+  items carry exact titles, speakers with companies and abstracts; Product and
+  AI & Data also include video-on-demand or poster tabs. Unique item ids become
+  per-talk anchors (duplicated source ids are deliberately not linked). Watch
+  buttons resolve through their @Scale video page to the embedded YouTube
+  upload; missing and future recordings use the official `@scaleconference`
+  channel. Discovery reads only the event hero because article-card dates below
+  the agenda can outvote the real event date. Form CSS mentions captcha, so this
+  is a status-only source like MORE-IP and SwiNOG.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

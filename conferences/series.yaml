@@ -663,3 +663,50 @@ series:
     program_url_template: "https://opisummit{year}.sched.com/list/descriptions/"
     manual_fallback_url_template: "https://opisummit{year}.sched.com/"
     notes: "Open Programmable Infrastructure's DPU/IPU summit, co-located with OCP Global Summit in San Jose: vendor-neutral DPU/IPU APIs and control planes, network/storage/security offload, cloud-native integration and AI infrastructure. Titles, speakers, abstracts and slide decks from Sched; recordings on the official OPI YouTube channel (@OPI_project)."
+
+  # Meta's four active @Scale series use the same WordPress event layout. The
+  # agenda carries talks, speakers, abstracts and per-item anchors; published
+  # Watch buttons resolve to YouTube, and later recordings use @scaleconference.
+  - series: atscale-networking
+    enumerate: year
+    key_template: "atscale-networking-{year}"
+    name_template: "@Scale: Networking {year}"
+    fetcher: atscale
+    start: 2026
+    lookahead: 2
+    program_url_template: "https://atscaleconference.com/events/networking-{year}/"
+    manual_fallback_url_template: "https://atscaleconference.com/events/networking-{year}/"
+    notes: "Meta's large-scale networking event: AI fabrics and RDMA, datacenter and backbone architecture, network operations, optics, interconnects and co-design. Full agenda with speakers and abstracts; recordings on the official @Scale YouTube channel (@scaleconference)."
+
+  - series: atscale-product
+    enumerate: year
+    key_template: "atscale-product-{year}"
+    name_template: "@Scale: Product {year}"
+    fetcher: atscale
+    start: 2026
+    lookahead: 2
+    program_url_template: "https://atscaleconference.com/events/product-{year}/"
+    manual_fallback_url_template: "https://atscaleconference.com/events/product-{year}/"
+    notes: "Meta's AI-native product engineering event, consolidating Product, RTC, Mobile and Video @Scale: media, agents, product velocity, applied AI and reliability. Full agenda with speakers and abstracts; recordings on the official @Scale YouTube channel (@scaleconference)."
+
+  - series: atscale-ai-data
+    enumerate: year
+    key_template: "atscale-ai-data-{year}"
+    name_template: "@Scale: AI & Data {year}"
+    fetcher: atscale
+    start: 2026
+    lookahead: 2
+    program_url_template: "https://atscaleconference.com/events/ai-data-{year}/"
+    manual_fallback_url_template: "https://atscaleconference.com/events/ai-data-{year}/"
+    notes: "Meta's AI and data systems event, bringing together the earlier Data, AI and AI Infra @Scale series: agents, recommender systems, ML infrastructure, training data and data platforms. Talks and poster sessions with abstracts; recordings on @scaleconference."
+
+  - series: atscale-systems-reliability
+    enumerate: year
+    key_template: "atscale-systems-reliability-{year}"
+    name_template: "@Scale: Systems & Reliability {year}"
+    fetcher: atscale
+    start: 2026
+    lookahead: 2
+    program_url_template: "https://atscaleconference.com/events/systems-reliability-{year}/"
+    manual_fallback_url_template: "https://atscaleconference.com/events/systems-reliability-{year}/"
+    notes: "Meta's systems and reliability event, consolidating the earlier Systems and Reliability @Scale series: AI infrastructure, cloud and datacenter systems, production operations, security and incident response. Full agenda with abstracts; recordings on @scaleconference."

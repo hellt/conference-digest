@@ -34,6 +34,7 @@ from .netnod import NetnodFetcher
 from .ocp import OcpFetcher
 from .mlsys import MlsysFetcher
 from .sessionize import SessionizeFetcher
+from .atscale import AtScaleFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -72,6 +73,7 @@ FETCHERS = {
     "ocp": OcpFetcher(),
     "mlsys": MlsysFetcher(),
     "sessionize": SessionizeFetcher(),
+    "atscale": AtScaleFetcher(),
 }
 
 

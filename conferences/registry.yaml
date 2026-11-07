@@ -851,3 +851,39 @@ conferences:
     manual_fallback_url: "https://opisummit2026.sched.com/"
     discovered: 2026-11-07
     notes: "Open Programmable Infrastructure's DPU/IPU summit, co-located with OCP Global Summit in San Jose: vendor-neutral DPU/IPU APIs and control planes, network/storage/security offload, cloud-native integration and AI infrastructure. Titles, speakers, abstracts and slide decks from Sched; recordings on the official OPI YouTube channel (@OPI_project). Auto-discovered 2026-11-07 from series 'opi'. end_date taken from the source."
+
+  - key: atscale-networking-2026
+    name: "@Scale: Networking 2026"
+    end_date: 2026-08-25
+    fetcher: atscale
+    program_url: "https://atscaleconference.com/events/networking-2026/"
+    manual_fallback_url: "https://atscaleconference.com/events/networking-2026/"
+    discovered: 2026-11-07
+    notes: "Meta's large-scale networking event: AI fabrics and RDMA, datacenter and backbone architecture, network operations, optics, interconnects and co-design. Full agenda with speakers and abstracts; recordings on the official @Scale YouTube channel (@scaleconference). Auto-discovered 2026-11-07 from series 'atscale-networking'. end_date taken from the source."
+
+  - key: atscale-product-2026
+    name: "@Scale: Product 2026"
+    end_date: 2026-10-28
+    fetcher: atscale
+    program_url: "https://atscaleconference.com/events/product-2026/"
+    manual_fallback_url: "https://atscaleconference.com/events/product-2026/"
+    discovered: 2026-11-07
+    notes: "Meta's AI-native product engineering event, consolidating Product, RTC, Mobile and Video @Scale: media, agents, product velocity, applied AI and reliability. Full agenda with speakers and abstracts; recordings on the official @Scale YouTube channel (@scaleconference). Auto-discovered 2026-11-07 from series 'atscale-product'. end_date taken from the source."
+
+  - key: atscale-ai-data-2026
+    name: "@Scale: AI & Data 2026"
+    end_date: 2026-06-17
+    fetcher: atscale
+    program_url: "https://atscaleconference.com/events/ai-data-2026/"
+    manual_fallback_url: "https://atscaleconference.com/events/ai-data-2026/"
+    discovered: 2026-11-07
+    notes: "Meta's AI and data systems event, bringing together the earlier Data, AI and AI Infra @Scale series: agents, recommender systems, ML infrastructure, training data and data platforms. Talks and poster sessions with abstracts; recordings on @scaleconference. Auto-discovered 2026-11-07 from series 'atscale-ai-data'. end_date taken from the source."
+
+  - key: atscale-systems-reliability-2026
+    name: "@Scale: Systems & Reliability 2026"
+    end_date: 2026-06-25
+    fetcher: atscale
+    program_url: "https://atscaleconference.com/events/systems-reliability-2026/"
+    manual_fallback_url: "https://atscaleconference.com/events/systems-reliability-2026/"
+    discovered: 2026-11-07
+    notes: "Meta's systems and reliability event, consolidating the earlier Systems and Reliability @Scale series: AI infrastructure, cloud and datacenter systems, production operations, security and incident response. Full agenda with abstracts; recordings on @scaleconference. Auto-discovered 2026-11-07 from series 'atscale-systems-reliability'. end_date taken from the source."

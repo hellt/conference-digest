@@ -5,9 +5,8 @@ Guidance for Claude Code working in this repo.
 ## What this repo is
 
 A pipeline that turns published conference programs into curated **digests** for
-one specific reader: a PM working on physical DC networking, cloud-native
-networking, network security, and identity. Automation fetches programs and
-builds prompts; ToFaRev (an LLM bot, `hellt/tofarev`) drafts each digest and
+one specific reader: a PM working on networking, cloud, Kubernetes, and AI.
+Automation fetches programs and builds prompts; ToFaRev (an LLM bot, `hellt/tofarev`) drafts each digest and
 opens a pull request, and a person merges it. A Claude session (or the user)
 can still run a prompt by hand. Merged digests are published as a Zensical blog
 on GitHub Pages. The only model calls in CI happen inside ToFaRev's reusable

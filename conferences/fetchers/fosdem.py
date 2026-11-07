@@ -16,16 +16,15 @@ from xml.etree import ElementTree
 
 from .base import Fetcher, FetchResult, ProbeResult, http_get, OK, NOT_PUBLISHED
 
-# Track slugs relevant to physical DC / cloud-native networking, security and
-# identity. "main" is kept for the keynotes; "junior" (young makers) is not.
+# Track slugs relevant to networking, cloud, Kubernetes, and AI. "main" is
+# kept for the keynotes; "junior" (young makers) is not.
 RELEVANT_TRACKS = {
     "main",
     "network",
     "ebpf",
     "dns",
-    "security",
-    "identity-and-access-management",
-    "confidential-computing",
+    "ai",
+    "hpc-big-data-data-science",
     "containers",
     "virtualization-and-cloud-infrastructure",
     "kernel",

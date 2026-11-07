@@ -316,9 +316,9 @@ series:
   # same feed the mobile apps use — with per-event pages, abstracts, speakers,
   # slide attachments and video.fosdem.org recordings. The event is far wider
   # than this digest's reader, so the fetcher keeps a curated track set
-  # (network, eBPF, DNS, security, identity, confidential computing,
-  # containers, virtualization, kernel, main) and drops workshops and
-  # lightning talks; edit RELEVANT_TRACKS in fosdem.py as interests shift.
+  # (network, eBPF, DNS, AI, HPC/data science, containers,
+  # virtualization/cloud infrastructure, kernel, main) and drops workshops
+  # and lightning talks; edit RELEVANT_TRACKS in fosdem.py as interests shift.
   - series: fosdem
     enumerate: year
     key_template: "fosdem-{year}"
@@ -327,7 +327,7 @@ series:
     start: 2026
     program_url_template: "https://fosdem.org/{year}/schedule/xml"
     manual_fallback_url_template: "https://fosdem.org/{year}/schedule/"
-    notes: "Europe's largest FOSS event: open-source networking (Linux, OVS, eBPF/XDP), DNS, security and identity devrooms. Curated track filter in the fetcher; per-talk pages, slides and video.fosdem.org recordings."
+    notes: "Europe's largest FOSS event: open-source networking (Linux, OVS, eBPF/XDP), DNS, AI, cloud and Kubernetes devrooms. Curated track filter in the fetcher; per-talk pages, slides and video.fosdem.org recordings."
 
   # hack.lu runs its CfP on pretalx.com, whose public schedule export gives
   # every talk with speakers, full abstract and its Pretalx page. The fetcher

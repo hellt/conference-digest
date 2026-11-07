@@ -1,7 +1,7 @@
 # conference-digest
 
-Curated **digests** of conferences relevant to datacenter and cloud-native
-networking, network security, and identity, published as a blog at
+Curated **digests** of conferences relevant to networking, cloud, Kubernetes,
+and AI, published as a blog at
 **https://tldr.netdevops.me/**.
 
 A GitHub Actions workflow fetches each conference's published program, wraps it
@@ -375,7 +375,7 @@ run.
 - **FOSDEM**: one schedule XML per edition gives every event's page, abstract,
   speakers, slide attachments and video.fosdem.org recording. With ~1000
   events over 71 tracks the fetcher keeps a curated track set (network, eBPF,
-  DNS, security, IAM, confidential computing, containers, virtualization,
+  DNS, AI, HPC/data science, containers, virtualization/cloud infrastructure,
   kernel, main) and drops workshops and lightning talks; `RELEVANT_TRACKS` in
   `fosdem.py` is the lever. The XML states the conference dates exactly.
 - **Pretalx (generic)**: conferences whose CfP runs on Pretalx expose the

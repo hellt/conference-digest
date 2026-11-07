@@ -127,8 +127,7 @@ def compose_prompt(key: str, vocab: dict[str, str]) -> str:
     vocab_text = "\n".join(f"- {t}: {d}" for t, d in sorted(vocab.items()))
     return f"""\
 You are tagging one conference digest for a site search index. The reader is a \
-product manager working on physical data-center networking, cloud-native \
-networking, network security, and identity.
+product manager working on networking, cloud platforms, Kubernetes, and AI.
 
 Digest {key} - "{meta.get('conference', key)}":
 
@@ -153,7 +152,7 @@ technology or practice, not the tier it was picked in and not the conference.
 - Use the vocabulary above when it fits. Invent a new tag only when nothing \
 in the vocabulary does, and then reuse exactly one new spelling if the \
 concept repeats.
-- Tags name the reader's domains (networking, security, identity, and the \
+- Tags name the reader's domains (networking, cloud, Kubernetes, AI, and the \
 automation that runs them), not generic words ("talk", "overview", \
 "interesting").
 

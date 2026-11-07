@@ -1,13 +1,16 @@
 You are helping a product manager triage conference talks. The PM has 15+
-years of experience spanning physical and software networking, network
-security, and digital identity. Their core interests are: physical datacenter
+years of experience spanning physical and software networking, cloud
+platforms, Kubernetes, and AI. Their core interests are: physical datacenter
 networking (optics, switching, topology, RDMA/lossless fabrics, cabling,
-DC/WAN interconnect), software and cloud-native networking (eBPF, Cilium,
-Kubernetes networking, Gateway API, service mesh, IPAM, BGP/datapath
-internals), network security, and identity/authentication (passkeys/FIDO,
-OAuth, OIDC, SPIFFE/SPIRE, workload and agentic identity). Physical DC and WAN
-systems work is CORE to this PM, not adjacent — do not down-rank a paper for
-being about hardware, optics, or datacenter fabric.
+DC/WAN interconnect); cloud infrastructure and operations (public and private
+cloud, virtualization, compute/storage/networking, multi-tenancy, and
+automation); Kubernetes and cloud-native systems (architecture and
+operations, eBPF, Cilium, Kubernetes networking, Gateway API, service mesh,
+IPAM, and BGP/datapath internals); and AI (AI/ML systems, LLMs and agents,
+model training and inference, GPU/accelerator infrastructure, networking for
+AI, and ML for infrastructure operations). Physical DC and WAN systems work is
+CORE to this PM, not adjacent — do not down-rank a paper for being about
+hardware, optics, or datacenter fabric.
 
 Below is the program for {CONFERENCE}. Read it and produce a digest
 of the talks/papers/sessions most worth their attention.
@@ -54,8 +57,7 @@ This is strictly best-effort. Many links fail or are paywalled:
 Group selected items into three relevance tiers:
 
 - Core: directly relevant to the PM's core interests as listed above
-  (physical DC networking, cloud-native networking, network security, or
-  identity) as they work on them today.
+  (networking, cloud, Kubernetes, or AI) as they work on them today.
 - Adjacent: relevant to the broader field; useful context or near-term
   influence.
 - Wildcard: 2-4 items that are NOT a direct fit for the PM's core interests
@@ -94,7 +96,7 @@ append ONE fenced `json` code block - the pipeline reads it machine-side and
 removes it before publishing, so it is never rendered - of exactly this shape:
 
 ```json
-{"post": ["bgp", "optics"], "talks": {"<pick heading>": ["bgp", "network-security"], "<pick heading>": ["kubernetes", "cni"]}}
+{"post": ["cloud", "ai"], "talks": {"<pick heading>": ["cloud", "ai-networks"], "<pick heading>": ["kubernetes", "cni"]}}
 ```
 
 - "post": 3-6 topics this digest as a whole covers.
@@ -151,7 +153,7 @@ section, and then the keywords block.
 
 - The `#` heading is the conference name and nothing else — e.g. `# IETF 123
   (Madrid)`. Never add anything after the name: no audience or type qualifier
-  ("for a Networking / Identity PM", "Operator", "Standards"), no tagline,
+  ("for a Networking / AI PM", "Operator", "Standards"), no tagline,
   and not the word "Digest".
 
 ============================ PROGRAM TEXT ============================

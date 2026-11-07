@@ -14,7 +14,7 @@ repo_url: https://github.com/hellt/conference-digest
 nav:
   - Digests: index.md
   - Conferences: conferences.md
-  - Employers: companies/index.md
+  - Companies: companies/index.md
   - How it works: how-it-works.md
 
 theme:

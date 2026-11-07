@@ -17,7 +17,7 @@ reads it and writes derived, gitignored files that `zensical build` publishes:
   docs/companies/*.md    one page per employer, linking every picked talk with
                          a speaker from that employer; employer names in each
                          pick's speaker line link here (built with the index
-                         companies/index.md, the Employers tab)
+                         companies/index.md, the Companies tab)
   docs/conferences.md    every registry edition and where it stands
 
 The digest text itself is not rewritten: headings and wording pass through
@@ -109,7 +109,7 @@ NON_ATTRIBUTION = re.compile(r"^\s*(?:[-*+]\s+)?\*\*(?:Links?:?|Why|What|How|Whe
 HEADED = re.compile(r"^### (.+?) — (.+) — (?:Core|Adjacent|Wildcard)$")
 AUTHORS = re.compile(r"^- \*\*Authors / tier\*\*:\s*")
 
-# Employers worth browsing by, mapped to the canonical name their page uses.
+# Companies worth browsing by, mapped to the canonical name their page uses.
 # The canonical spelling is matched as written; each alias adds a variant
 # seen in digests ("Cisco Systems" and "Cisco ThousandEyes" are Cisco, "AWS"
 # is Amazon, universities appear under both full and short names). A name the
@@ -1004,7 +1004,7 @@ def render_tracker(registry: dict[str, dict], posts: dict[str, dict]) -> str:
 
 def render_companies(companies: dict[str, list[dict]], posts: dict[str, dict]) -> None:
     """One page per employer — every picked talk with one of its speakers,
-    grouped by digest, newest first — plus the Employers index."""
+    grouped by digest, newest first — plus the Companies index."""
     if COMPANIES.exists():
         shutil.rmtree(COMPANIES)
     COMPANIES.mkdir(parents=True)
@@ -1020,7 +1020,7 @@ def render_companies(companies: dict[str, list[dict]], posts: dict[str, dict]) -
             front_matter({
                 "title": name,
                 "description": f"Every picked talk across the conference digests with a speaker from {name}.",
-                "card": {"kind": "employer", "conference": "Employer", "title": name, "presenter": summary},
+                "card": {"kind": "employer", "conference": "Company", "title": name, "presenter": summary},
             }).rstrip("\n"),
             "",
             f"# {name}",
@@ -1040,14 +1040,14 @@ def render_companies(companies: dict[str, list[dict]], posts: dict[str, dict]) -
     )
     index = (
         "---\n"
-        "title: Employers\n"
-        "description: Every employer behind the picked talks, with all their talks across the digests.\n"
+        "title: Companies\n"
+        "description: Every company behind the picked talks, with all their talks across the digests.\n"
         "hide:\n"
         "  - toc\n"
         "---\n\n"
-        "# Employers\n\n"
+        "# Companies\n\n"
         "Each digest names the people behind its picks and who they speak for. These pages collect "
-        "the picked talks by employer, across every conference, newest first; employer names in a "
+        "the picked talks by company, across every conference, newest first; company names in a "
         "digest link here.\n\n"
         f"{entries}\n"
     )

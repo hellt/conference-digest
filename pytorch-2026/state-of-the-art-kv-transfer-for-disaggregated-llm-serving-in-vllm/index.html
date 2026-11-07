@@ -682,7 +682,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1255023">Abstract</a></p>
 </div>
-<p>Nicolò Lucchesi (Mistral AI, vLLM maintainer), Sunita Nadampalli (<a href="../../companies/amazon/">Amazon</a>), Zhanqiu Hu (<a href="../../companies/red-hat/">Red Hat</a>)</p>
+<p>Nicolò Lucchesi (<a href="../../companies/mistral-ai/">Mistral AI</a>, vLLM maintainer), Sunita Nadampalli (<a href="../../companies/amazon/">Amazon</a>), Zhanqiu Hu (<a href="../../companies/red-hat/">Red Hat</a>)</p>
 <ul>
 <li><strong>Why</strong>: P/D disaggregation turns KV-cache transfer into a first-class network workload — bidirectional, latency-sensitive, stateful — that inference fabrics must now be designed for. This is the talk defining that transfer layer's requirements.</li>
 <li><strong>What</strong>: Developments in vLLM's disaggregated serving stack: hybrid-model transfer with heterogeneous TP (Nemotron, Qwen3.5, DeepSeek-V4 with interleaved attention, KV compression, sliding windows), bidirectional KV transfer for agentic multi-turn sessions, a KV Push connector that reduces TTFT, and KV cache leases for reliability under failures and traffic spikes. On Nemotron, disaggregated P/D Pareto-dominates co-located serving across concurrency levels. (from abstract only)</li>

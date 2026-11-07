@@ -1441,7 +1441,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://2026ocpglobal.fnvirtual.app/a/schedule/10079/">Abstract</a></p>
 </div>
-<p>Arvind Srinivasan (<a href="../companies/meta/">Meta</a>), Sandeep Nagaraja (Meta), Balakrishnan Raman (AMD)</p>
+<p>Arvind Srinivasan (<a href="../companies/meta/">Meta</a>), Sandeep Nagaraja (Meta), Balakrishnan Raman (<a href="../companies/amd/">AMD</a>)</p>
 <ul>
 <li><strong>Why</strong>: A clean-sheet replacement for RoCEv2 from one of the largest GPU-fleet operators, now being opened as a spec — directly in the PM's lossless-fabrics/RDMA core interest and a candidate competitor/complement to MRC (below).</li>
 <li><strong>What</strong>: MetaRoCE, a multipath, out-of-order, receiver-driven RDMA transport that treats Ethernet as lossy by design rather than patching lossless fabrics with more tuning; Meta is publishing the specification for industry adoption (from abstract only).</li>
@@ -1569,7 +1569,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://2026ocpglobal.fnvirtual.app/a/schedule/8904/">Abstract</a></p>
 </div>
-<p>Jasmeet Bagga (Facebook), Andrey Golovanov (<a href="../companies/meta/">Meta</a>)</p>
+<p>Jasmeet Bagga (<a href="../companies/meta/">Facebook</a>), Andrey Golovanov (Meta)</p>
 <ul>
 <li><strong>Why</strong>: Meta WAN/backbone architecture is squarely in the PM's DC/WAN-interconnect core interest, and this is an unusually internals-heavy talk: SRv6 for traffic engineering, shallow-buffer switches for long-haul, and real SAI/FBOSS experience.</li>
 <li><strong>What</strong>: RBB (Regional Backbone), a newly designed inter-region connectivity network running in parallel to Meta's express backbone (EBB), motivated by the cost of replicating latency-sensitive core services into every region as region count grows (from abstract only).</li>
@@ -1673,7 +1673,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://2026ocpglobal.fnvirtual.app/a/schedule/9155/">Abstract</a></p>
 </div>
-<p>Fabrizio Damato (AMD), Xiaoyu Ruan (<a href="../companies/intel/">Intel</a>)</p>
+<p>Fabrizio Damato (<a href="../companies/amd/">AMD</a>), Xiaoyu Ruan (<a href="../companies/intel/">Intel</a>)</p>
 <ul>
 <li><strong>Why</strong>: Directly in the PM's workload-identity core interest at the hardware layer: operator/tenant-owned PKI enrollment for fleet devices, standardized over SPDM instead of per-vendor proprietary flows.</li>
 <li><strong>What</strong>: The OCP Device Identity Provisioning specification: an Attested CSR that cryptographically binds a newly generated device keypair to the device's attested identity and measured state, plus a keypair-discovery flow so enrollment authorities can enumerate the identity keys a device exposes (from abstract only).</li>
@@ -1740,7 +1740,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://2026ocpglobal.fnvirtual.app/a/schedule/9129/">Abstract</a> <a class="pick-link" href="https://github.com/ahmadexp-turba/Analytics">Materials</a></p>
 </div>
-<p>Ahmad Byagowi (TBD), Lukas Landgraf (turbalance)</p>
+<p>Ahmad Byagowi (TBD), Lukas Landgraf (<a href="../companies/turbalance/">turbalance</a>)</p>
 <ul>
 <li><strong>Why</strong>: The observability gap this addresses — many dashboards, no common evidence model — sits exactly at the junction of the PM's telemetry and Kubernetes/eBPF interests, and clock alignment as the basis for cross-machine trust is an idea worth stealing.</li>
 <li><strong>What</strong>: A lab-built reference architecture for clock-aligned AI telemetry: a source-bundle contract, live agents, a conservative benchmark ladder, a Redfish/BMC lane, and a lakehouse path that preserves provenance and never synthesizes unsupported metrics; links DCGM/NVML, host counters, Prometheus, Kubernetes, Redfish, eBPF/OTel evidence, and PTP/NTP clock state (from abstract only).</li>

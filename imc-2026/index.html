@@ -1275,7 +1275,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3809148">Paper</a></p>
 </div>
-<p>Authors: Eric Pauley (<a href="../companies/virginia-tech/">Virginia Tech</a> &amp; Terrace Networks), Yohan Beugin (University of Wisconsin-Madison), Paul Barford (University of Wisconsin-Madison), Patrick Traynor (University of Florida), Patrick McDaniel (University of Wisconsin-Madison)</p>
+<p>Authors: Eric Pauley (<a href="../companies/virginia-tech/">Virginia Tech</a> &amp; <a href="../companies/terrace-networks/">Terrace Networks</a>), Yohan Beugin (<a href="../companies/university-of-wisconsin-madison/">University of Wisconsin-Madison</a>), Paul Barford (University of Wisconsin-Madison), Patrick Traynor (<a href="../companies/university-of-florida/">University of Florida</a>), Patrick McDaniel (University of Wisconsin-Madison)</p>
 <ul>
 <li><strong>Why</strong>: The 2021 "cloud IP address reuse" vulnerability class (tenants pinning trust — allowlists, firewall rules, cert SANs — to public IPs that the provider will re-allocate to someone else) is directly relevant to anyone operating multi-cloud infrastructure. This is one of the few papers measuring both whether defenders fixed it and whether attackers are actually exploiting it.</li>
 <li><strong>What</strong>: A three-year longitudinal study of defender and attacker response. The headline findings are bad on both sides: 60% of originally-observed vulnerabilities were still present years after disclosure, and exploitation has increased 39x since the original disclosures. The active measurement surfaces a global, multi-cloud adversarial apparatus that identifies and exploits latent configurations — hosting malicious content, mal-issuing TLS certificates, and executing cookie-based attacks on target sites. (from abstract only)</li>
@@ -1288,7 +1288,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3839797">Paper</a></p>
 </div>
-<p>Authors: Nimesha Wickramasinghe (UNSW), Frank Li (<a href="../companies/georgia-institute-of-technology/">Georgia Tech</a>), Sanjay Jha (UNSW), Arash Shaghaghi (UNSW)</p>
+<p>Authors: Nimesha Wickramasinghe (<a href="../companies/unsw/">UNSW</a>), Frank Li (<a href="../companies/georgia-institute-of-technology/">Georgia Tech</a>), Sanjay Jha (UNSW), Arash Shaghaghi (UNSW)</p>
 <ul>
 <li><strong>Why</strong>: If you own or influence TLS-terminated services, the PQC migration is now an operational question, not a planning exercise. This paper tells you where the Internet actually is versus where government roadmaps say it should be — useful both for your own rollout sequencing and for evaluating vendor readiness claims.</li>
 <li><strong>What</strong>: Three measurement rounds (July 2025–March 2026) covering one million public HTTPS endpoints, with over two billion TLS 1.3 handshakes from 11 distributed vantage points. Key findings: every observed post-quantum negotiation converged on the same hybrid — X25519MLKEM768 — but there is no verified deployment of post-quantum <em>signature</em> algorithms for authentication; hybrid adoption is concentrated in managed infrastructure providers; country/sector deployment does not track published transition timelines; and — counter to earlier experimental studies — hybrid key exchange showed no meaningful latency penalty in Internet settings. (from abstract only)</li>
@@ -1301,7 +1301,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3839820">Paper</a></p>
 </div>
-<p>Authors: Nehal Fooda (<a href="../companies/university-of-maryland/">University of Maryland</a>), James Larisch (<a href="../companies/cloudflare/">Cloudflare</a>), John Schanck (Mozilla), Bruce Maggs (Duke University and Emerald Innovations), Tijay Chung (<a href="../companies/virginia-tech/">Virginia Tech</a>), Dave Levin (University of Maryland)</p>
+<p>Authors: Nehal Fooda (<a href="../companies/university-of-maryland/">University of Maryland</a>), James Larisch (<a href="../companies/cloudflare/">Cloudflare</a>), John Schanck (<a href="../companies/mozilla/">Mozilla</a>), Bruce Maggs (<a href="../companies/duke-university/">Duke University</a> and <a href="../companies/emerald-innovations/">Emerald Innovations</a>), Tijay Chung (<a href="../companies/virginia-tech/">Virginia Tech</a>), Dave Levin (University of Maryland)</p>
 <ul>
 <li><strong>Why</strong>: Revocation is the last line of defense after key compromise, and the entire chain has been measured <em>except</em> one leg: how long a CA takes to turn a revocation request into publicly downloadable revocation data. If you run incident response for key compromise, that leg determines your real remediation window.</li>
 <li><strong>What</strong>: The first study of CA-side revocation-data publication latency, covering six of the most popular CAs across both CRL and OCSP, plus end-to-end latency through to Mozilla Firefox's CRLite. Headline: CAs generally operate on tighter bounds than the CA/B Baseline Requirements strictly require, but some major CAs still show up to 24-hour delays from request to availability. (from abstract only)</li>
@@ -1314,7 +1314,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3809135">Paper</a></p>
 </div>
-<p>Authors: Caleb Wang, Ying Zhang, Qianli Dong, Esteban Carisimo (<a href="../companies/northwestern-university/">Northwestern University</a>), Ramakrishnan Durairajan (University of Oregon), Fabian Bustamante (Northwestern University)</p>
+<p>Authors: Caleb Wang, Ying Zhang, Qianli Dong, Esteban Carisimo (<a href="../companies/northwestern-university/">Northwestern University</a>), Ramakrishnan Durairajan (<a href="../companies/university-of-oregon/">University of Oregon</a>), Fabian Bustamante (Northwestern University)</p>
 <ul>
 <li><strong>Why</strong>: Submarine cables are the physical substrate of every intercontinental WAN and cloud-region interconnect. Knowing which cables a path actually rides — and which cables are disproportionately stressed — is foundational to reasoning about interconnect capacity, redundancy, and geopolitical/physical risk.</li>
 <li><strong>What</strong>: Calypso, a framework that maps traceroute paths to the specific submarine cables they traverse, plus <em>Route Stress</em>, a traceroute-derived metric estimating the relative importance of individual cables. Validated through expert validation, failure analysis, and regional case studies demonstrating SCN dependency discovery. (from abstract only)</li>
@@ -1327,7 +1327,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3809152">Paper</a></p>
 </div>
-<p>Authors: Simon Sundberg, Anna Brunstrom (Karlstad University), Simone Ferlin-Reiter (<a href="../companies/red-hat/">Red Hat</a> and Karlstad University), Jesper Dangaard Brouer (<a href="../companies/cloudflare/">Cloudflare</a>), Toke Høiland-Jørgensen (Red Hat)</p>
+<p>Authors: Simon Sundberg, Anna Brunstrom (<a href="../companies/karlstad-university/">Karlstad University</a>), Simone Ferlin-Reiter (<a href="../companies/red-hat/">Red Hat</a> and Karlstad University), Jesper Dangaard Brouer (<a href="../companies/cloudflare/">Cloudflare</a>), Toke Høiland-Jørgensen (Red Hat)</p>
 <ul>
 <li><strong>Why</strong>: Once network paths drop into sub-millisecond territory — RDMA-era fabrics, co-located services — the host itself (NIC–CPU interconnect, kernel network stack, scheduling) becomes a first-order latency source. This is the paper at the intersection of your Linux datapath-internals interest and production reality, with authors from Red Hat and Cloudflare. Promoted from Adjacent: kernel-stack latency instrumentation in a production CDN is squarely core.</li>
 <li><strong>What</strong>: <code>netstacklat</code>, a monitoring tool that continuously captures latency at multiple points in the host network path, from the earliest parts of the Linux kernel network stack through to the application's read. Evaluated across 144 HTTP workload variations (Nginx and Apache), with monitoring overhead inflating tail latency by no more than ~6%, versus &gt;100% for previous monitoring solutions. Includes initial findings from deployment in Cloudflare's global CDN. (from abstract only)</li>
@@ -1354,7 +1354,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3839819">Paper</a></p>
 </div>
-<p>Authors: Hamim Hamid, David Adei, Bradley Reaves (North Carolina State University)</p>
+<p>Authors: Hamim Hamid, David Adei, Bradley Reaves (<a href="../companies/north-carolina-state-university/">North Carolina State University</a>)</p>
 <ul>
 <li><strong>Why</strong>: A rare natural experiment in federated identity infrastructure: a brand-new, industry-wide, federated PKI mandated and deployed in under two years. For anyone designing or operating federated trust frameworks (and thinking about PKI hygiene generally), the failure modes documented here are the canonical ones to design against.</li>
 <li><strong>What</strong>: A longitudinal study (Nov 2021–Feb 2026) of STIR/SHAKEN deployment from signaling data on 7.75 million calls collected by telephone honeypots. Rapid adoption, but pervasive standards non-compliance: providers signing calls with root keys, and originating calls with pre-signed attestations copied from unrelated calls. Practices and compliance are improving, but only at a modest pace. (from abstract only)</li>
@@ -1367,7 +1367,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3839811">Paper</a></p>
 </div>
-<p>Authors: Jürgen Brandl (TU Wien), Florian Holzbauer (IT:U), Aaron Kaplan (European Commission, DIGIT S.2), Johanna Ullrich (IT:U), Adrian Dabrowski (University of Applied Sciences Technikum Wien)</p>
+<p>Authors: Jürgen Brandl (<a href="../companies/technical-university-of-vienna/">TU Wien</a>), Florian Holzbauer (<a href="../companies/it-u/">IT:U</a>), Aaron Kaplan (<a href="../companies/european-commission/">European Commission</a>, DIGIT S.2), Johanna Ullrich (IT:U), Adrian Dabrowski (<a href="../companies/university-of-applied-sciences-technikum-wien/">University of Applied Sciences Technikum Wien</a>)</p>
 <ul>
 <li><strong>Why</strong>: Quantifies, for the first time systematically, how dependent EU institutions are on non-EU infrastructure. If your organization has EU regulatory exposure (NIS2, DORA) or sells into regulated EU sectors, this is a concrete dependency map of your customers' environment.</li>
 <li><strong>What</strong>: Empirical analysis of 1,988 domains across government, banking, media, and higher education in all 27 EU member states, across six sovereignty dimensions: nameservers, web hosting, external resources, certificate authorities, email, and SaaS. Only 61 domains (3%) show no detectable non-EU dependency. Key exposures: CDN/DDoS services, cloud-hosted email, office suites, and TLS certificates. A neat methodological detail: internal third-party SaaS deployments are detected via domain verification tokens. (from abstract only)</li>
@@ -1380,7 +1380,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3809141">Paper</a></p>
 </div>
-<p>Authors: Vivian Band (University of Glasgow), Romain Fontugne (IIJ Research Laboratory)</p>
+<p>Authors: Vivian Band (<a href="../companies/university-of-glasgow/">University of Glasgow</a>), Romain Fontugne (<a href="../companies/internet-initiative-japan/">IIJ Research Laboratory</a>)</p>
 <ul>
 <li><strong>Why</strong>: As your dual-stack footprint grows, IPv6 reachability is not a clean mirror of IPv4 — peering disputes (the Cogent–Hurricane Electric case being the exemplar) fragment the IPv6 topology. Anyone running IPv6-only or IPv6-preferred infrastructure should understand this failure mode.</li>
 <li><strong>What</strong>: Quantifies IPv6 fragmentation via BGP-measured reachability differences between large transit providers, and uses forward DNS data to estimate the impact on popular website reachability. Findings: IPv6 fragmentation is substantial relative to the unified IPv4 topology, is worsening over time, and an increasing number of popular sites are partially reachable in IPv6. IPv4 fallback currently masks the user-facing impact. (from abstract only)</li>
@@ -1393,7 +1393,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3809146">Paper</a> <a class="pick-link" href="https://www.youtube.com/watch?v=JwHLkzLmXlU">Recording</a></p>
 </div>
-<p>Authors: Muhammad Hamza, Eric Pauley, Taejoong Chung (<a href="../companies/virginia-tech/">Virginia Tech</a>), Mattijs Jonker, Raffaele Sommese (University of Twente), Simon Fernandez, Olivier Hureau (Univ. Grenoble Alpes, CNRS, Grenoble INP, LIG)</p>
+<p>Authors: Muhammad Hamza, Eric Pauley, Taejoong Chung (<a href="../companies/virginia-tech/">Virginia Tech</a>), Mattijs Jonker, Raffaele Sommese (<a href="../companies/university-of-twente/">University of Twente</a>), Simon Fernandez, Olivier Hureau (<a href="../companies/university-of-grenoble-alpes/">Univ. Grenoble Alpes</a>, <a href="../companies/cnrs/">CNRS</a>, <a href="../companies/grenoble-inp/">Grenoble INP</a>, <a href="../companies/lig/">LIG</a>)</p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="JwHLkzLmXlU" data-start="0" href="https://www.youtube.com/watch?v=JwHLkzLmXlU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/JwHLkzLmXlU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/JwHLkzLmXlU/maxresdefault.jpg" alt="Play the recording: Split Alignment: Diffusing SPF Vulnerabilities With DMARC" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Authentication protocols don't compose safely — SPF weaknesses, when layered with DMARC's organizational context, can enable organization-wide spoofing. This is a good study of how layered auth protocols amplify each other's flaws, with a deployable fix.</li>
@@ -1420,7 +1420,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3839791">Paper</a></p>
 </div>
-<p>Authors: Joel Sommers (Colgate University), Calvin Kranig, Wei-Shiang Wung, Paul Barford (University of Wisconsin-Madison), Mark Crovella (Boston University), Eric Pauley (<a href="../companies/virginia-tech/">Virginia Tech</a> &amp; Terrace Networks)</p>
+<p>Authors: Joel Sommers (<a href="../companies/colgate-university/">Colgate University</a>), Calvin Kranig, Wei-Shiang Wung, Paul Barford (<a href="../companies/university-of-wisconsin-madison/">University of Wisconsin-Madison</a>), Mark Crovella (<a href="../companies/boston-university/">Boston University</a>), Eric Pauley (<a href="../companies/virginia-tech/">Virginia Tech</a> &amp; <a href="../companies/terrace-networks/">Terrace Networks</a>)</p>
 <ul>
 <li><strong>Why</strong>: DNS naming conventions leak infrastructure topology and operational structure — this work makes them machine-usable both for asset discovery and for auditing your own records. For anyone who cares about IPAM hygiene or infrastructure enumeration, this is a genuinely new tool capability.</li>
 <li><strong>What</strong>: <code>namefill</code> uses <em>programming by example</em> to synthesize executable functions that summarize DNS naming conventions. Unlike regexes, the synthesized functions can <em>generate</em> predicted FQDNs, enabling active probing for undiscovered names and systematic auditing of existing records. Applied to 1.2 billion PTR records: 313K distinct conventions across 254K domains, covering 67.7% of IP/FQDN pairs (complementary to geotoken-focused tools). Found 991 misconfigurations (43 verified with operators) and, as a discovery tool, surfaced 194M previously unrecorded forward DNS names from 2.76M training names — a 70× expansion. (from abstract only)</li>
@@ -1433,7 +1433,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3809157">Paper</a></p>
 </div>
-<p>Authors: Yevheniya Nosyk, Simon Fernandez, Andrzej Duda, Maciej Korczyński (KOR Labs / Univ. Grenoble Alpes, CNRS, Grenoble INP, LIG)</p>
+<p>Authors: Yevheniya Nosyk, Simon Fernandez, Andrzej Duda, Maciej Korczyński (<a href="../companies/kor-labs/">KOR Labs</a> / <a href="../companies/university-of-grenoble-alpes/">Univ. Grenoble Alpes</a>, <a href="../companies/cnrs/">CNRS</a>, <a href="../companies/grenoble-inp/">Grenoble INP</a>, <a href="../companies/lig/">LIG</a>)</p>
 <ul>
 <li><strong>Why</strong>: The recursive-to-authoritative hop is the last unencrypted DNS link, and it is the one state censors have demonstratively used for traffic analysis and response injection. RFC 9539 (opportunistic ADoT/ADoQ) is the mechanism intended to close it — this paper tells you how much of the Internet actually speaks it.</li>
 <li><strong>What</strong>: A measurement of RFC 9539 deployment covering both recursive resolvers and authoritative nameservers. Bottom line: fewer than 1% of registered domains (3.1M) support authoritative DoT or DoQ, with one provider accounting for the vast majority of those deployments. (from abstract only)</li>
@@ -1446,7 +1446,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3809143">Paper</a></p>
 </div>
-<p>Authors: Justin Loye, Romain Fontugne (IIJ Research Laboratory), Esteban Bautista (Univ. Littoral Cote d'Opale, LISIC)</p>
+<p>Authors: Justin Loye, Romain Fontugne (<a href="../companies/internet-initiative-japan/">IIJ Research Laboratory</a>), Esteban Bautista (<a href="../companies/university-of-littoral-c-te-d-opale/">Univ. Littoral Cote d'Opale</a>, <a href="../companies/lisic/">LISIC</a>)</p>
 <ul>
 <li><strong>Why</strong>: Outage and route-leak detection that operators could actually run — near real-time, unsupervised, and without large training datasets — has been a persistent gap. This is a credible attempt to close it.</li>
 <li><strong>What</strong>: MADBGP, an anomaly-detection pipeline combining (i) a temporal-graph modeling of the AS-level Internet, (ii) QuickRIB, a scalable tool for generating temporal graphs from public BGP data, and (iii) an extension of the MAD temporal-graph anomaly-detection method to weighted graphs, applied to real BGP anomalies for the first time. On ten major BGP events (outages and route leaks at different scales), it reportedly significantly outperforms IODA's BGP results. (from abstract only)</li>
@@ -1460,7 +1460,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3839790">Paper</a></p>
 </div>
-<p>Authors: Eric Kapitanski, Jelena Mirkovic (<a href="../companies/university-of-southern-california/">USC</a> <a href="../companies/information-sciences-institute/">Information Sciences Institute</a>)</p>
+<p>Authors: Eric Kapitanski, Jelena Mirkovic (<a href="../companies/information-sciences-institute/">USC Information Sciences Institute</a>)</p>
 <ul>
 <li><strong>Why</strong>: A genuinely new vantage point for Internet security measurement. The insight — attackers avoid known dark-space sensors and behave differently toward production endpoints — means your own production fleet is an underused sensor, and this work proves it quantitatively.</li>
 <li><strong>What</strong>: LightScope, a lightweight application that unifies passive Layer-4 observation with selective proxying to a remote Layer-7 honeypot, running on unused ports of <em>production</em> servers. Two months of data from 235 deployments shows scanner populations, port-targeting profiles, and post-login behaviors only partially visible from dark-space telescopes and honeynets — including 64,686 scanners observed by LightScope and no other vantage point. (from abstract only)</li>
@@ -1473,7 +1473,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3809154">Paper</a></p>
 </div>
-<p>Authors: Xu Lin, Jacob Anthony Eckfeldt (Washington State University), Shujiang Wu, Pengfei Sun (F5, Inc.), Jason Polakis (<a href="../companies/university-of-illinois-chicago/">University of Illinois Chicago</a>)</p>
+<p>Authors: Xu Lin, Jacob Anthony Eckfeldt (<a href="../companies/washington-state-university/">Washington State University</a>), Shujiang Wu, Pengfei Sun (<a href="../companies/f5/">F5, Inc.</a>), Jason Polakis (<a href="../companies/university-of-illinois-chicago/">University of Illinois Chicago</a>)</p>
 <ul>
 <li><strong>Why</strong>: Browser fingerprinting increasingly shows up as an authentication and fraud signal, so its actual stability matters to identity work. This paper subverts the community's established understanding: fingerprints are inherently unstable even when nothing about the device changes.</li>
 <li><strong>What</strong>: An in-depth analysis of fingerprints from users authenticating to high-value web services, revealing that prevalent attributes change even in stable execution environments (e.g., minor deviations in browsers' floating-point arithmetic or HTML element-size calculations) — a fundamental obstacle to fingerprinting's real-world effectiveness. It then proposes Predictive-FP, an adaptive strategy that uses historical population-wide information to anticipate unstable values and ignores ephemeral attributes, re-identifying ~51% more devices after 6 months than state of the art. A configurable privacy-preserving browser extension counteracts the technique on non-allowlisted sites. (from abstract only)</li>
@@ -1486,7 +1486,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3839829">Paper</a></p>
 </div>
-<p>Authors: Thomas Holterbach, Thomas Alfroy (bgproutes.io), Abbas Mohsenpour (UCLouvain), Thomas Krenc (IIJ Research Laboratory), kc Claffy (<a href="../companies/caida/">CAIDA</a>), Cristel Pelsser (UCLouvain)</p>
+<p>Authors: Thomas Holterbach, Thomas Alfroy (<a href="../companies/bgproutes-io/">bgproutes.io</a>), Abbas Mohsenpour (<a href="../companies/uclouvain/">UCLouvain</a>), Thomas Krenc (<a href="../companies/internet-initiative-japan/">IIJ Research Laboratory</a>), kc Claffy (<a href="../companies/caida/">CAIDA</a>), Cristel Pelsser (UCLouvain)</p>
 <ul>
 <li><strong>Why</strong>: Not a paper about networking per se, but a strong signal of where infrastructure tooling is heading: LLM-synthesized code over purpose-built compressed data stores. The pipeline — measurement insight (BGP data is highly redundant and compressible) enabling a domain API that an LLM can drive — is a template worth stealing for any large operational dataset you own.</li>
 <li><strong>What</strong>: ChatBGP, a domain-specific chatbot that turns plain-English BGP questions into Python code running against a compressed BGP database, returning answers in seconds rather than the hours that MRT-archive analysis takes. Four contributions: a measurement study showing BGP data is highly redundant and compressible; a database scheme exploiting that redundancy for fast retrieval; an expressive API over the database; and a prompt-engineering scheme guiding ChatGPT to synthesize optimized, minimal-retrieval Python against that API. (from abstract only)</li>
@@ -1499,7 +1499,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conferences.sigcomm.org/imc/2026/program/">Abstract</a> <a class="pick-link" href="https://doi.org/10.1145/3777912.3839783">Paper</a></p>
 </div>
-<p>Authors: Timofey Shpakov (<a href="../companies/eth-zurich/">ETH Zürich</a>), Martin Burkhart (armasuisse Science and Technology), Laurent Vanbever (ETH Zürich)</p>
+<p>Authors: Timofey Shpakov (<a href="../companies/eth-zurich/">ETH Zürich</a>), Martin Burkhart (<a href="../companies/armasuisse-science-and-technology/">armasuisse Science and Technology</a>), Laurent Vanbever (ETH Zürich)</p>
 <ul>
 <li><strong>Why</strong>: A methodological correction with real consequences: several recent studies (most prominently the often-cited ET-BERT) claim encrypted traffic exhibits detectable randomness deficiencies usable for application classification. If those evidentiary foundations are artifacts, a chunk of the encrypted-traffic-classification literature — and vendor claims built on it — rests on sand.</li>
 <li><strong>What</strong>: A systematic replication of the randomness experiments, re-implemented with the NIST Statistical Test Suite on encrypted traffic generated under controlled conditions. The reported statistical signals do not provide sufficient evidence of non-randomness beyond what statistical hypothesis testing and finite-sample effects would produce. Observed test failures and discriminative patterns are consistent with methodological artifacts: improper aggregation, p-value misinterpretation, and train/test information leakage. (from abstract only)</li>

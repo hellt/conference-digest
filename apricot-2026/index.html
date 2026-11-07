@@ -1297,7 +1297,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/8fce29f4-7b55-4fe0-8181-e2e2460da097.pdf">Slides</a></p>
 </div>
-<p>Mark Tinka, TransmissionCo</p>
+<p>Mark Tinka, <a href="../companies/transmissionco/">TransmissionCo</a></p>
 <ul>
 <li><strong>Why</strong>: IPoDWDM failed once (2000s: proprietary, fixed, power-hungry line cards) and is now succeeding — this talk explains exactly what changed and who is deploying it, which matters for anyone planning DC/WAN interconnect on dark fiber or short DWDM spans.</li>
 <li><strong>What</strong>: A state-of-the-market walkthrough of routed optical networking built on MSA coherent pluggables. Per CignalAI data cited, coherent pluggables outsold proprietary embedded optics 2:1 in 2025, and most 400G-ZR shipments have gone into hyperscaler IPoDWDM deployments; hyperscalers are converging on OSFP for 800G-ZR for thermal reasons. Includes a live reference network: a 130 km span in Cape Town built from a Juniper ACX7300 router with 2x 400G-ZR+ QSFP-DD plugs plus a third-party open line system — no transponder tier.</li>
@@ -1323,7 +1323,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/6b3ca07b-f892-483d-b9f7-19dd727054a3.pdf">Slides</a></p>
 </div>
-<p>Julio Sirota, NIC.br</p>
+<p>Julio Sirota, <a href="../companies/nic-br/">NIC.br</a></p>
 <ul>
 <li><strong>Why</strong>: A production migration template for anyone running a large L2 fabric (IXP peering LAN or DC) on aging LDP+VPLS: flood-based MAC learning, ARP/ND storms, and unknown-unicast flooding are exactly the failure modes EVPN was built to fix.</li>
 <li><strong>What</strong>: The completed migration of IX.br São Paulo (one of the world's largest IX fabrics) from LDP+VPLS to SRv6 EVPN. Concrete results: 84% of equipment (97% of capacity) now on EVPN CSID SRv6 with proxy ARP/ND, unknown-unicast flood eliminated, and a large measured drop in ARP/Neighbor Solicitation volume — including visible reduction in CPU load on participant routers.</li>
@@ -1336,7 +1336,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/c4acd498-1fd0-463a-bf65-16044fb86d99.pdf">Slides</a></p>
 </div>
-<p>Branimir Rajtar, 5x9 Networks</p>
+<p>Branimir Rajtar, <a href="../companies/5x9-networks/">5x9 Networks</a></p>
 <ul>
 <li><strong>Why</strong>: The datapath-internals story of the year at this conference — what it actually takes to make commodity x86 forward at terabit rates, relevant to anyone building or evaluating software dataplanes (vBNG, vEPC, NFV).</li>
 <li><strong>What</strong>: The evolution of a virtualized BNG from many small 4-vCPU forwarder VMs to a single "Big VM" forwarder, ending at 200 Mpps per CPU and 1.6 Tbps on one server (~600 W). Includes an honest comparison table: ASIC white-label switching (multi-terabit, low flexibility, ~30k subscribers) vs. x86 (~1 Tbps and improving, ~200k subscribers, high flexibility, C/DPDK/eBPF/P4 development).</li>
@@ -1349,7 +1349,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/a548a2ef-e856-451d-bfe1-fa8a5455f4cc.pdf">Slides</a></p>
 </div>
-<p>Stefano Servillo, University of Rome "La Sapienza" (with Spadaccino, Konstantaras, Luciani, Cuomo)</p>
+<p>Stefano Servillo, <a href="../companies/sapienza-university-of-rome/">University of Rome "La Sapienza"</a> (with Spadaccino, Konstantaras, Luciani, Cuomo)</p>
 <ul>
 <li><strong>Why</strong>: A formally defined, quantified vulnerability in the IRR-based route-server filtering that most of the world's IXPs rely on — directly relevant to routing security practice.</li>
 <li><strong>What</strong>: The blind spot: IRR validation via AS-SET expansion builds a prefix list per peer but never binds prefixes to their legitimate origin AS, so a prefix covered by a route object under any AS that appears in a member's AS-SET is accepted by the route server regardless of who really owns it. Stale AS-SETs make this worse: of ~130k allocated ASes only ~77k are active, so AS-SETs routinely contain unallocated, private, or inactive ASes whose route objects can weaponize the gap. The team demonstrates prefix hijacking through this path, quantifies prevalence across a large set of IXPs, and validates with real route-server data from AMS-IX and NAMEX.</li>
@@ -1375,7 +1375,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/77c06f7d-00f1-4201-a963-b31cbb9be3a6.pdf">Slides</a></p>
 </div>
-<p>Tim Bruijnzeels, RIPE</p>
+<p>Tim Bruijnzeels, <a href="../companies/ripe-ncc/">RIPE</a></p>
 <ul>
 <li><strong>Why</strong>: ASPA is the mechanism operators will be asked to deploy after ROV; this is the clearest available explanation of its verification semantics — what it catches, what it deliberately tolerates, and how it fails.</li>
 <li><strong>What</strong>: A worked tutorial of ASPA (AS Provider Authorisations): objects like ROAs, signed by the customer-AS holder, authorizing one or more provider ASes. Routes learned from customers are invalid if a hop is proven "Not Provider"; the system supports partial deployment (no attestation = fail open, as does an RPKI validation problem itself), and it detects valley-free violations by constructing the longest UP ramp (customer→provider from the origin) and DOWN ramp (provider→customer from the receiver) and rejecting paths with a gap — i.e., route leaks — regardless of whether the cause is accident, leak, or spoofing.</li>
@@ -1388,7 +1388,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/2ea34790-9ba4-436d-8f0a-8fa643a6c731.pdf">Slides</a></p>
 </div>
-<p>Paresh Khatri, <a href="../companies/nokia/">Nokia</a> (delivered with Warren Kumari, Dhruv Dhody, and Suresh Krishnan, IAB)</p>
+<p>Paresh Khatri, <a href="../companies/nokia/">Nokia</a> (delivered with Warren Kumari, Dhruv Dhody, and Suresh Krishnan, <a href="../companies/internet-architecture-board/">IAB</a>)</p>
 <ul>
 <li><strong>Why</strong>: The standards radar this cycle is unusually relevant: three of the newly chartered working groups touch attestation, bot/agent authentication, and PKI — squarely in identity territory — alongside routing and ops topics.</li>
 <li><strong>What</strong>: New WGs: Secure Evidence and Attestation Transport (SEAT), Domain Connection (DCONN), Open Cloud Mesh (OCM), Web Bot Auth (WEBBOTAUTH), and PKI, Logs, And Tree Signatures (PLANTS); Authenticated Transfer (ATP) in chartering. BoFs at IETF 125: CATALIST (coordinating AI agent-to-agent communications work) and ONSEN (operationalizing service abstractions). Also reports the IAB workshop on IP address geolocation concluding that IP is a weak, overloaded geolocation signal (anycast, satellite, overlays) — a useful data point for anyone building location-dependent policy.</li>
@@ -1401,7 +1401,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/444b491c-a5c0-4e42-a6e0-bde2d7020557.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=uktSxm_ZZs0">Recording</a></p>
 </div>
-<p>Thomas Holterbach, University of Strasbourg (with Thomas Alfroy, Cristel Pelsser)</p>
+<p>Thomas Holterbach, <a href="../companies/university-of-strasbourg/">University of Strasbourg</a> (with Thomas Alfroy, Cristel Pelsser)</p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="uktSxm_ZZs0" data-start="0" href="https://www.youtube.com/watch?v=uktSxm_ZZs0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/uktSxm_ZZs0/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/uktSxm_ZZs0/maxresdefault.jpg" alt="Play the recording: bgproutes.io: A Next-Generation BGP Data Collection Platform" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: RIPE RIS and RouteViews only collect best-path announcements; monitoring hijacks, leaks, and policy behavior needs more, and this platform — running for a year — shows how to get it.</li>
@@ -1429,7 +1429,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/dd8b382e-43af-4f2b-adc8-57320445ccc2.pdf">Slides</a></p>
 </div>
-<p>Phil Mawson, Vocus</p>
+<p>Phil Mawson, <a href="../companies/vocus/">Vocus</a></p>
 <ul>
 <li><strong>Why</strong>: The management plane is what saves you when the data plane is down — this is a multi-year, build-it-again carrier case study with real design decisions, prompted by exactly the class of outage (Optus AS7474 national outage, November 2023; Meta, October 2021) that makes OOB non-negotiable.</li>
 <li><strong>What</strong>: Vocus' consolidation of many inherited bespoke OOB solutions into a dedicated national OOB MPLS network, built alongside a new zero-touch-provisioned aggregation network.</li>
@@ -1442,7 +1442,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/356755e3-72be-43db-844d-98627bf845c9.pdf">Slides</a></p>
 </div>
-<p>Sanjaya, <a href="../companies/apnic/">APNIC</a> (with Carlos Martinez, LACNIC)</p>
+<p>Sanjaya, APNIC (with Carlos Martinez, <a href="../companies/lacnic/">LACNIC</a>)</p>
 <ul>
 <li><strong>Why</strong>: A rare public postmortem of a hijack executed through humans, not protocol weakness — and a direct answer to whether RPKI would have stopped it.</li>
 <li><strong>What</strong>: LACNIC address space was hijacked intermittently in July 2025 by a rogue AS with a repeat-offender history across multiple RIR regions. The investigation (LACNIC → APNIC → APJII/IDNIC) found the bad actor had hijacked the ASN itself and convinced a multinational transit provider to provision transit using forged company letterhead and a faked domain — short random BGP advertisements followed. The transit provider terminated service on the victim's report; the case was jointly written up as a community case study.</li>
@@ -1468,7 +1468,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/457aa45c-b33e-4382-bff1-12e69861bfb2.pdf">Slides</a></p>
 </div>
-<p>Randy Bush, Internet Initiative Japan</p>
+<p>Randy Bush, <a href="../companies/internet-initiative-japan/">Internet Initiative Japan</a></p>
 <ul>
 <li><strong>Why</strong>: Two real cases where external vantage points found in minutes what provider NOCs couldn't find in weeks — cheap, adoptable debugging technique.</li>
 <li><strong>What</strong>: Case 1: a serial-console server on a colo LAN became unreachable; the provider's week of debugging failed, one Atlas global/random traceroute found the problem (with hover-text and clickable hop detail as the "smoking gun"), fixed within an hour. Case 2: a friend's IPv6 was unrouted for months while the ISP NOC saw nothing; 15 Atlas probes inside that same ISP exposed the internal routing problem to a senior engineer within hours.</li>
@@ -1481,7 +1481,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/c2e37815-ae9e-4a8e-940f-c61ac8672a3c.pdf">Slides</a></p>
 </div>
-<p>Yoshinobu Matsuzaki, IIJ (APRICOT Technical Committee)</p>
+<p>Yoshinobu Matsuzaki, <a href="../companies/internet-initiative-japan/">IIJ</a> (<a href="../companies/apricot/">APRICOT Technical Committee</a>)</p>
 <ul>
 <li><strong>Why</strong>: A compact live postmortem from running a real network under load — including an IPv6-mostly deployment with measured client behavior and a genuinely unusual BGP debugging story.</li>
 <li><strong>What</strong>: The APRICOT 2026 NOC ran dual transit (Lintasarta, Envision) plus Starlink backup, Akvorado NetFlow analysis, and an IPv6-mostly design: 609 unique MACs, 70% of clients (431) operated IPv6-only via NAT64 (DHCPv4 option 108 signaling), 30% dual-stack, 300 Mbps peak. Incidents and fixes: WiFi channel overload at the opening plenary; a BGP "ghost route" — their prefixes showed globally reachable via route-views/RIS but lacked actual reachability, traced to a longer-than-expected AS_PATH left over from an earlier temporary announcement, cleared by contacting ASes on the path (one had a config bug); a rogue AP broadcasting the same SSID/password outside controller management, fixed by a reset; and intermittent public-DNS resolution failures on IPv4 queries with RD=1, fixed by offering local resolvers via RDNSS/DHCP.</li>
@@ -1508,7 +1508,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/e2575506-e364-46f1-8b4d-cfa746bfacdf.pdf">Slides</a></p>
 </div>
-<p>Marc Blanchet, Viagenie</p>
+<p>Marc Blanchet, <a href="../companies/viagenie/">Viagenie</a></p>
 <ul>
 <li><strong>Why</strong>: Not operationally relevant, but the most instructive stress test of the IP suite's assumptions you'll read this year — what breaks when RTT is minutes and links vanish for hours.</li>
 <li><strong>What</strong>: An architecture for Moon and Mars networks in which every link carries IP: 3GPP (5G/6G) and 802.11/WiFi on the surface, CCSDS for deep space, spacecraft onboard networks also IP — creating a single Layer-3 network end to end, aligned with NASA's LunaNet interoperability specification. The core problems: Earth-Moon ~2 s one-way delay, Earth-Mars 4–22 minutes, and intermittence (an orbiter passing behind a body turns a 2-second path into a 2-hour gap; until full laser-linked constellations exist, disruptions are the norm).</li>
@@ -1518,7 +1518,7 @@
 </div>
 <div class="pick pick-wildcard">
 <h3 id="keynote-the-agentic-shift-the-internet-industry-reimagined"><a href="keynote-the-agentic-shift-the-internet-industry-reimagined/">Keynote: The Agentic Shift: The Internet Industry Reimagined</a><a class="headerlink" href="#keynote-the-agentic-shift-the-internet-industry-reimagined" title="Permanent link">#</a></h3>
-<p>Mukhammad Andri Setiawan, Universitas Islam Indonesia</p>
+<p>Mukhammad Andri Setiawan, <a href="../companies/universitas-islam-indonesia/">Universitas Islam Indonesia</a></p>
 <ul>
 <li><strong>Why</strong>: The direction-of-field keynote: autonomous agents as operators of infrastructure — the world the IETF's WEBBOTAUTH and CATALIST efforts (see the IETF update above) are being chartered for.</li>
 <li><strong>What</strong>: An argument that the industry is shifting from manual configuration to networks configured by agents, code generated without SQL, and ops moving from hands-on engineering to high-level coordination — with roles emerging for the next decade: "Agent Shepherds" guiding agent swarms, "Sovereignty Architects" for ethical/policy frameworks, and "Compute Brokers" managing agent-economy compute. Also covers bias and accuracy risks, and "AI sovereignty" as a national capability.</li>
@@ -1531,7 +1531,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://conference.apnic.net/61/assets/presentation-files/09204dc4-859e-4df7-ac9f-24a5e3bfe055.pdf">Slides</a></p>
 </div>
-<p>Katarina Stefanović, Telecom Serbia</p>
+<p>Katarina Stefanović, <a href="../companies/telecom-serbia/">Telecom Serbia</a></p>
 <ul>
 <li><strong>Why</strong>: A surprising measured result: LEO satellite paths, though physically longer, can beat terrestrial mobile networks on long-haul latency and stability — with real data, not vendor claims.</li>
 <li><strong>What</strong>: A 7-day continuous RIPE Atlas measurement campaign comparing Starlink LEO connectivity against 4G/5G mobile networks across multiple European countries, targeting an APNIC-hosted host in Singapore: Starlink consistently showed lower and more stable long-haul RTT (enabled by backbone efficiency and evolving inter-satellite-laser routing), while mobile networks showed higher jitter and EPC-driven processing delays despite shorter physical paths.</li>

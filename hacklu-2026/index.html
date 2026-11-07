@@ -1298,7 +1298,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/YK99LZ/">Abstract</a></p>
 </div>
-<p>Michael Rodler (X-41 DSEC)</p>
+<p>Michael Rodler (<a href="../companies/x-41-dsec/">X-41 DSEC</a>)</p>
 <ul>
 <li><strong>Why</strong>: In an Envoy-based service mesh, the sidecar <em>is</em> your security policy — mTLS termination, authz, rate limits. This shows the pod boundary around that control plane is softer than assumed, which matters to anyone running Istio/Envoy in multi-tenant clusters.</li>
 <li><strong>What</strong>: From root in one container of a Pod, the authors reach Envoy's hot-restart shared-memory file and turn it into an ASLR leak and an arbitrary-write primitive — effectively compromising the mesh proxy from a sibling container. Upstream called it "not a security issue"; the authors argue that's only half true on Kubernetes, where containers in a Pod share more than the kernel. A 5-minute lightning talk; the research was previously published as an X-41 blog post (so full technical depth is available outside the talk slot).</li>
@@ -1311,7 +1311,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/V7HSZA/">Abstract</a></p>
 </div>
-<p>Alexander Neff (DigiTrace GmbH)</p>
+<p>Alexander Neff (<a href="../companies/digitrace-gmbh/">DigiTrace GmbH</a>)</p>
 <ul>
 <li><strong>Why</strong>: ADCS misconfiguration research has produced the most consequential AD attack techniques of the last years, and this adds a new numbered entry that chains PKI trust into host compromise. Directly in your AD-identity wheelhouse.</li>
 <li><strong>What</strong>: A new escalation technique, dubbed ESC17, combining misconfigured certificate templates with a MitM on HTTPS-enabled WSUS to gain command execution on Windows machines that are configured <em>per best practice</em>. The authors found that partial ESC1 mitigations leave room for this less-discussed path, and that the root cause is general to ADCS trust relationships, not WSUS-specific. A companion blog post exists, and the speaker maintains related open-source tooling (NetExec, wsuks, EVENmonitor).</li>
@@ -1324,7 +1324,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/MKEBV9/">Abstract</a></p>
 </div>
-<p>francesco lacerenza, Mohamed Ouad (Doyensec)</p>
+<p>francesco lacerenza, Mohamed Ouad (<a href="../companies/doyensec/">Doyensec</a>)</p>
 <ul>
 <li><strong>Why</strong>: SSO/OIDC/SAML testing is exactly your identity-testing pain point; this is a purpose-built attacker-side IdP rather than a lab shack.</li>
 <li><strong>What</strong>: An open-source (Doyensec, on GitHub) "weaponized" Identity Provider implementing OIDC, SAML 2.0, and SCIM, with the ability to intercept, mock, and re-sign assertions/tokens. Lightning talk; they claim time-to-test is short enough to reproduce famous SSO CVEs live in 5 minutes, with an AWS Cognito target demoed on stage. Not recorded.</li>
@@ -1363,7 +1363,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/VKQEXS/">Abstract</a></p>
 </div>
-<p>Jacob Torrey (Thinkst Applied Research)</p>
+<p>Jacob Torrey (<a href="../companies/thinkst-applied-research/">Thinkst Applied Research</a>)</p>
 <ul>
 <li><strong>Why</strong>: MFA adoption has pushed attackers to session theft (AiTM phishing, infostealers) — this is the defensive countermove on the exact session/token battleground your identity roadmap cares about.</li>
 <li><strong>What</strong>: Session-cookie Canarytokens: tokens that look 100% real but alert when a thief uses them and yield only a fake account. Covers which platforms can be supported, scaling architecture, and three novel deployment mechanisms: injecting into Chrome's SQLite cookie DB, a custom extension populating the in-memory cookie store, and a thin filesystem filter that redirects all <em>non-browser</em> reads of the browser profile to decoy data — so infostealers grab bait while normal browsing is unaffected.</li>
@@ -1376,7 +1376,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/C3XZZY/">Abstract</a></p>
 </div>
-<p>Paweł Pawliński, Jan Adamski, Jakub Koman (NASK / CERT.PL), Paul Jung (CIRCL)</p>
+<p>Paweł Pawliński, Jan Adamski, Jakub Koman (<a href="../companies/nask/">NASK</a> / CERT.PL), Paul Jung (<a href="../companies/circl/">CIRCL</a>)</p>
 <ul>
 <li><strong>Why</strong>: Network telescopes are pure network telemetry at internet scale — scanning, botnets, exploitation attempts, DDoS, misconfigurations — and this is operator-led (two national CERTs) rather than academic.</li>
 <li><strong>What</strong>: A 2-hour workshop in two halves: (1) how CIRCL and NASK/CERT.PL collect and process large network telescopes — pipelines that turn raw unsolicited packets into structured, enriched datasets and actionable threat intelligence, with honest discussion of strengths and limitations; (2) a hackathon-style exploration of real telescope datasets with instructor support and no predefined outcome.</li>
@@ -1403,7 +1403,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/M9973K/">Abstract</a> <a class="pick-link" href="https://pretalx.com/media/hack-lu-2026/submissions/M9973K/resources/Workshop_MAGI_FHI834D.pdf">Slides</a></p>
 </div>
-<p>Sven Ulke, Alexander Gödeke, Martin Glück (incident response team, SVA-Cybersecurity)</p>
+<p>Sven Ulke, Alexander Gödeke, Martin Glück (incident response team, <a href="../companies/sva-cybersecurity/">SVA-Cybersecurity</a>)</p>
 <ul>
 <li><strong>Why</strong>: BEC investigations are now identity-breach investigations: stolen session cookies, OAuth grant abuse, inbox-rule persistence. This gives you the concrete evidence model for what an AiTM compromise looks like in a cloud IdP's telemetry.</li>
 <li><strong>What</strong>: MAGIC (Microsoft Azure Graph Information Crawler), an open-source Python toolset collecting IR-relevant M365 data via Microsoft Graph, plus a 2-hour hands-on training around a realistic BEC scenario: which evidence matters (sign-ins, message traces, mailbox artifacts, conditional access events, OAuth grants, inbox rules/forwarding), and how to build a defensible investigation timeline in Timesketch/OpenSearch.</li>
@@ -1429,7 +1429,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/JA8RSF/">Abstract</a> <a class="pick-link" href="https://pretalx.com/media/hack-lu-2026/submissions/JA8RSF/resources/hack_lu_2026_Fmd7UNY.pdf">Slides</a></p>
 </div>
-<p>Sébastien Larinier (ESIEA / LORIA; founder of CERT Sekoia)</p>
+<p>Sébastien Larinier (<a href="../companies/esiea/">ESIEA</a> / <a href="../companies/loria/">LORIA</a>; founder of <a href="../companies/cert-sekoia/">CERT Sekoia</a>)</p>
 <ul>
 <li><strong>Why</strong>: Solid protocol-level reverse engineering with immediately deployable network detection output (Suricata rules, User-Agent and endpoint patterns) — and a methodology (mock C2 servers) transferable to any proprietary C2 you need to analyze safely.</li>
 <li><strong>What</strong>: Full C2 protocol RE of three commercial stalkerware families — Hoverwatch/Snoopza (DES/ECB with hardcoded 8-byte key, in-binary C2 domains, a "refog" attribution canary, hidden YouTube Kids surveillance, cross-install device fingerprinting persisting Android ID on shared storage), Mobile Tracker Free (dropper + 60+ FCM commands, WebRTC live streaming, Device Admin anti-uninstall, remote wipe), and iKeyMonitor (REST + WebSocket/XML dual C2, RTMP screen mirroring, 3DES auth, <code>uoload</code> typos as accidental fingerprints). Deliverables: protocol specs, FastAPI mock C2 servers, Suricata/YARA rules, host IOCs, forensic triage checklists — all released open source.</li>
@@ -1442,7 +1442,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/YAUCQT/">Abstract</a></p>
 </div>
-<p>Jiří Vinopal (Check Point Research)</p>
+<p>Jiří Vinopal (<a href="../companies/check-point/">Check Point Research</a>)</p>
 <ul>
 <li><strong>Why</strong>: The "trusted security component as attack primitive" pattern taken to its logical end — a Microsoft-signed, always-present driver repurposed for Ring-0 operations without any memory corruption, which classic driver-blocklists can't touch.</li>
 <li><strong>What</strong>: First full RE of BTR.sys, the Windows Defender Boot-Time Removal driver: its undocumented RC4-encrypted transaction protocol, hardcoded key, and integrity scheme — unchanged from Windows 7 through 11 25H2. BTR_CLI constructs valid encrypted transactions exercising all six Action IDs (arbitrary file/registry operations). The "Golden Window" executes the primitive after filesystem init but before EDR/AV user-mode services start, neutralizing the security stack on a fully patched Win 11 25H2 without exploits or BYOVD.</li>
@@ -1455,7 +1455,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/8DDHAC/">Abstract</a></p>
 </div>
-<p>Paul Jung (CIRCL)</p>
+<p>Paul Jung (<a href="../companies/circl/">CIRCL</a>)</p>
 <ul>
 <li><strong>Why</strong>: Self-hosted, open-source internet/asset scanning and monitoring — the "run your own Shodan/Censys for your own scope" answer, with no commercial API limits or data-sharing.</li>
 <li><strong>What</strong>: Plum Island, CIRCL's open-source scanning and monitoring platform (from the D4 project): build a searchable inventory of network services on your own assets or internal networks, track changes over time, turn scanning into continuous monitoring. Also introduces Plum Antibodies, a detection-rule repository now integrated into RuleZet. Lightning talk format.</li>
@@ -1468,7 +1468,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/SKB7U8/">Abstract</a></p>
 </div>
-<p>Bilal Hassan, Bob van der Kamp (NCSC-NL / University of Amsterdam)</p>
+<p>Bilal Hassan, Bob van der Kamp (<a href="../companies/ncsc-nl/">NCSC-NL</a> / <a href="../companies/university-of-amsterdam/">University of Amsterdam</a>)</p>
 <ul>
 <li><strong>Why</strong>: Post-disclosure, "find every vulnerable host before attackers do" is a networking problem — and the feature table reaches into exactly the L3/L4 quirks you know well (TTL, DF, TOS, TCP MSS differences between PLC vendors).</li>
 <li><strong>What</strong>: A NCSC-NL-commissioned methodology (master thesis, UvA) formalizing how analysts derive a working Censys/Shodan query for a specific vulnerable product/version: a decision tree whose leaves are either an effective query or the conclusion none exists; a cross-domain feature table (certificates, HTML, CSS, URL paths, TTL/TOS/DF values, MSS — e.g., Schneider PLC MSS 1380 vs. Siemens 1460); and a CLI prototype automating feature identification and query construction, with real vulnerability examples.</li>
@@ -1481,7 +1481,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/FAGXJE/">Abstract</a></p>
 </div>
-<p>Niels Teusink (Eye Security)</p>
+<p>Niels Teusink (<a href="../companies/eye-security/">Eye Security</a>)</p>
 <ul>
 <li><strong>Why</strong>: The clearest possible case study that update endpoints are long-lived critical infrastructure: abandoned software whose updater never stopped phoning home to expired domains.</li>
 <li><strong>What</strong>: During threat hunting, the authors found millions of systems still running the Time4Popcorn updater, connecting to unregistered domains; registering one exposed millions of unique hardware IDs per month. The update mechanism has no meaningful security — the right domain registration would have yielded instant compromise of millions of machines including government, military, and corporate networks (CVE-2026-30612). The talk covers the RE of Windows/macOS updater binaries, hardware-ID generation bugs, AV interactions, and the ethics/legality of a possible "benevolent update" to disable the service at scale.</li>
@@ -1508,7 +1508,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/DLUE7G/">Abstract</a></p>
 </div>
-<p>Eric Wagner (University of Luxembourg), Matteo Frigo (Polytechnic University of Turin)</p>
+<p>Eric Wagner (<a href="../companies/university-of-luxembourg/">University of Luxembourg</a>), Matteo Frigo (<a href="../companies/politecnico-di-torino/">Polytechnic University of Turin</a>)</p>
 <ul>
 <li><strong>Why</strong>: Signals where the field is heading: passive, fully-automated protocol RE that collapses what took days into minutes — with obvious carry-over to other CPS/OT traffic and an explicit warning about pairing with LLM-driven exploit generation.</li>
 <li><strong>What</strong>: A fully automated method that identifies the CAN bitfields encoding physical vehicle features (speed, acceleration, throttle) from <em>raw passive traffic</em> in minutes, on previously unseen models with no documentation — replacing manual/fuzzing/heuristic RE that demanded persistent access and expert time. Demonstrated on multiple vehicles.</li>
@@ -1521,7 +1521,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/TTDFMD/">Abstract</a></p>
 </div>
-<p>Jonas Hess (Trovent Security)</p>
+<p>Jonas Hess (<a href="../companies/trovent-security/">Trovent Security</a>)</p>
 <ul>
 <li><strong>Why</strong>: As LLMs get embedded in processing pipelines (support, email, agents), this is prompt injection through a channel your UI sanitization doesn't even render — the mismatch between what humans see and what models ingest.</li>
 <li><strong>What</strong>: Emoji composition (flags, skin tones, families) works by gluing invisible codepoints onto a visible one, and Unicode sets no length limit. Instructions can be hidden inside a single visible emoji character: renderers drop what they don't understand, tokenizers read everything. Live tests against chatbots follow. The talk's own title is a working example. Lightning talk.</li>

@@ -682,7 +682,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/YAUCQT/">Abstract</a></p>
 </div>
-<p>Jiří Vinopal (Check Point Research)</p>
+<p>Jiří Vinopal (<a href="../../companies/check-point/">Check Point Research</a>)</p>
 <ul>
 <li><strong>Why</strong>: The "trusted security component as attack primitive" pattern taken to its logical end — a Microsoft-signed, always-present driver repurposed for Ring-0 operations without any memory corruption, which classic driver-blocklists can't touch.</li>
 <li><strong>What</strong>: First full RE of BTR.sys, the Windows Defender Boot-Time Removal driver: its undocumented RC4-encrypted transaction protocol, hardcoded key, and integrity scheme — unchanged from Windows 7 through 11 25H2. BTR_CLI constructs valid encrypted transactions exercising all six Action IDs (arbitrary file/registry operations). The "Golden Window" executes the primitive after filesystem init but before EDR/AV user-mode services start, neutralizing the security stack on a fully patched Win 11 25H2 without exploits or BYOVD.</li>

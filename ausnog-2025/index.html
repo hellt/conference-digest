@@ -1273,7 +1273,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-02-07-PeterStamp.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=oVw9q91Yv1w">Recording</a></p>
 </div>
-<p>Peter Stamp — AARNet</p>
+<p>Peter Stamp — <a href="../companies/aarnet/">AARNet</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="oVw9q91Yv1w" data-start="0" href="https://www.youtube.com/watch?v=oVw9q91Yv1w" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/oVw9q91Yv1w/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/oVw9q91Yv1w/maxresdefault.jpg" alt="Play the recording: AARNet - Australia's Academic and Research Network" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A clean packet-optical convergence case study — coherent 400G ZR+ pluggables plugged straight into routers, eliminating transponder shelves — plus a well-explained model-driven automation stack. Core to the PM's optics and DC/WAN interconnect interests.</li>
@@ -1301,7 +1301,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-08-BenCartwrightCox.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=6yapG6nV7O0">Recording</a></p>
 </div>
-<p>Ben Cartwright-Cox — bgp.tools / Port 179 LTD</p>
+<p>Ben Cartwright-Cox — <a href="../companies/bgp-tools/">bgp.tools</a> / <a href="../companies/port-179-ltd/">Port 179 LTD</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="6yapG6nV7O0" data-start="0" href="https://www.youtube.com/watch?v=6yapG6nV7O0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/6yapG6nV7O0/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/6yapG6nV7O0/maxresdefault.jpg" alt="Play the recording: How far can you get with IX Route Servers?" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Takes a peering design question ("can I run route-server-only?") and answers it with real measurement, using a genuinely clever data-plane technique for the part BGP cannot signal. Directly relevant to BGP/peering work.</li>
@@ -1315,7 +1315,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-02-08-AnthonySchofield.pdf">Slides</a></p>
 </div>
-<p>Anthony Schofield — Vocus</p>
+<p>Anthony Schofield — <a href="../companies/vocus/">Vocus</a></p>
 <ul>
 <li><strong>Why</strong>: A concrete, staged attack/defense walkthrough of router-plane compromise using only native device functionality — exactly the operational security depth the PM values, and unusually detailed for an operator conference.</li>
 <li><strong>What</strong>: An LOTL (living-off-the-land) kill chain against telco gear, explicitly derived from Vocus wargames/tabletops, not production: (1) initial access via an exposed SNMPv2 RW community on a BNG — legacy "best practice" strings now brute-forceable; config exfiltrated via SNMP-set copy-to-TFTP, then an SSH backdoor provisioned via SNMP sets; (2) credential harvesting using the router's own packet-capture utility to grab RANCID credentials and the TACACS+ secret, decrypted offline; (3) lateral movement on the rancid service account — indistinguishable from normal rancid logins, hiding in plain sight; (4) persistence via IOS XR application-hosting to spawn an SSH daemon (port 57722) in the underlying Linux shell. Defenses per stage: control-plane ACL compliance automation, SNMP brute-force alerting, RadSec, SIEM alerting on "Configured from x.x.x.x by SNMP" (should never happen), least-privilege lockdown of service accounts and jump hosts, no device-to-device lateral movement, MFA on jump hosts, microsegmentation, retiring legacy, plus passkeys/EDR/NDR.</li>
@@ -1328,7 +1328,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-10-CraigAskings.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=SPfKzz3Awek">Recording</a></p>
 </div>
-<p>Craig Askings — Telair</p>
+<p>Craig Askings — <a href="../companies/telair/">Telair</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="SPfKzz3Awek" data-start="0" href="https://www.youtube.com/watch?v=SPfKzz3Awek" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/SPfKzz3Awek/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/SPfKzz3Awek/maxresdefault.jpg" alt="Play the recording: A smaller NBN Aggregation Network" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A small-operator counter-trend worth attention: using long-reach optics over leased dark fiber to <em>collapse</em> a distributed aggregation footprint into a few DCs, on whitebox hardware. Physical interconnect economics in the wild.</li>
@@ -1343,7 +1343,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-01-DavidBrown.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=f0u0XZHcrDs">Recording</a></p>
 </div>
-<p>David Brown — Nexthop</p>
+<p>David Brown — <a href="../companies/nexthop-ai/">Nexthop</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="f0u0XZHcrDs" data-start="0" href="https://www.youtube.com/watch?v=f0u0XZHcrDs" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/f0u0XZHcrDs/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/f0u0XZHcrDs/maxresdefault.jpg" alt="Play the recording: Rethinking Network Troubleshooting: Smarter Tools and Better Visibility at Nexthop" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: An honest walk through monitoring blind spots — especially optics — and a buildable open-source visibility stack. The optics lesson alone is worth the PM's time.</li>
@@ -1357,7 +1357,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-02-CraigHenderson.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=FL28XtauK7o">Recording</a></p>
 </div>
-<p>Craig Henderson — REANNZ</p>
+<p>Craig Henderson — <a href="../companies/reannz/">REANNZ</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="FL28XtauK7o" data-start="0" href="https://www.youtube.com/watch?v=FL28XtauK7o" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/FL28XtauK7o/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/FL28XtauK7o/maxresdefault.jpg" alt="Play the recording: Network State Checking: A Case Study in Automation" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A model case study in migration-verification automation with an unusually honest evaluation — including the incidents the tooling failed to catch and its structural limitations.</li>
@@ -1385,7 +1385,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-02-02-MatthewEnger.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=2rpbAIkkARg">Recording</a></p>
 </div>
-<p>Matthew Enger — Leaptel</p>
+<p>Matthew Enger — <a href="../companies/leaptel/">Leaptel</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="2rpbAIkkARg" data-start="0" href="https://www.youtube.com/watch?v=2rpbAIkkARg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/2rpbAIkkARg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/2rpbAIkkARg/maxresdefault.jpg" alt="Play the recording: Designing a mikrotik cgnat solution that scales" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Solid operator content on cheap whitebox CGNAT — and the static-port-block logging pattern is a genuinely smart answer to a hard compliance problem.</li>
@@ -1399,7 +1399,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-02-09-ClaudiuCaptari.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=fbZDDJb0sdM">Recording</a></p>
 </div>
-<p>Claudiu Captari — Arista</p>
+<p>Claudiu Captari — <a href="../companies/arista-networks/">Arista</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="fbZDDJb0sdM" data-start="0" href="https://www.youtube.com/watch?v=fbZDDJb0sdM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/fbZDDJb0sdM/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/fbZDDJb0sdM/maxresdefault.jpg" alt="Play the recording: The comfortable complexity of Overlays" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: The "EVPN everywhere" architectural argument, cleanly organized — useful as the current vendor-consensus view on unifying DC/campus/WAN overlays, which the PM touches via DC fabric work.</li>
@@ -1428,7 +1428,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-05-JocelinnKang.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=1S9CBUmAkXs">Recording</a></p>
 </div>
-<p>Jocelinn Kang — Nodalys</p>
+<p>Jocelinn Kang — <a href="../companies/nodalys/">Nodalys</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="1S9CBUmAkXs" data-start="0" href="https://www.youtube.com/watch?v=1S9CBUmAkXs" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/1S9CBUmAkXs/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/1S9CBUmAkXs/maxresdefault.jpg" alt="Play the recording: How geopolitics is rerouting submarine cables" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Not something the PM would search for, but it reframes intercontinental capacity planning as a geopolitical exercise — cables now follow politics and hyperscaler balance sheets, not shortest paths. This changes how long-haul interconnect and DC site decisions get made.</li>
@@ -1442,7 +1442,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.ausnog.net/sites/default/files/ausnog-2025/presentations/ausnog-2025-01-09-LouisJarasius.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=Ldsz3tRvEX8">Recording</a></p>
 </div>
-<p>Louis Jarasius — 5GN</p>
+<p>Louis Jarasius — <a href="../companies/5gn/">5GN</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="Ldsz3tRvEX8" data-start="0" href="https://www.youtube.com/watch?v=Ldsz3tRvEX8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Ldsz3tRvEX8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Ldsz3tRvEX8/maxresdefault.jpg" alt="Play the recording: BFD going down... from BGP timers expiring?" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: The title alone signals an obscure control-plane protocol interaction (BGP timer expiry manifesting as BFD failure) — the kind of datapath/control-plane quirk worth knowing about given the PM's BGP-internals interest, and the sort of thing that bites silently in production.</li>

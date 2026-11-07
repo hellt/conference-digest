@@ -1295,7 +1295,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t4">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/2024_ovn-con_fabric-integration.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=dCKNrAdISWY">Recording</a></p>
 </div>
-<p>Speakers: Felix Huettner, STACKIT GmbH &amp; Co. KG, and Frode Nordahl, Canonical</p>
+<p>Speakers: Felix Huettner, <a href="../companies/stackit/">STACKIT GmbH &amp; Co. KG</a>, and Frode Nordahl, Canonical</p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="dCKNrAdISWY" data-start="0" href="https://www.youtube.com/watch?v=dCKNrAdISWY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/dCKNrAdISWY/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/dCKNrAdISWY/maxresdefault.jpg" alt="Play the recording: Integrating OVN into the Network Fabric" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: The hard boundary between OVN overlays and the physical fabric — stretched L2, MAC-flapping failover, external BGP agents — is a problem anyone running OVN at DC scale hits. This is the most direct fabric/interconnect talk in the program.</p>
 <p><strong>What</strong>: A rearchitecture of OVN's external connectivity to replace stretched L2 with dynamic routing. A new "magic router" logical construct translates overlay L2 networks into per-chassis point-to-point networks; it is not pinned to any chassis, so egress uses ECMP across gateway chassis and ingress can enter via any of its LRPs. Failover happens by moving dynamic routes instead of MACs, so failover speed is no longer limited by routing convergence, and BFD lets the fabric pick alternate paths.</p>
@@ -1307,7 +1307,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t1">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/Running%20OVS%20on%20a%20large%20CPU%20system.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=jX5dVJVSUoc">Recording</a></p>
 </div>
-<p>Speakers: Eelco Chaudron, <a href="../companies/red-hat/">Red Hat</a>, Inc.</p>
+<p>Speakers: Eelco Chaudron, <a href="../companies/red-hat/">Red Hat, Inc.</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="jX5dVJVSUoc" data-start="0" href="https://www.youtube.com/watch?v=jX5dVJVSUoc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/jX5dVJVSUoc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/jX5dVJVSUoc/maxresdefault.jpg" alt="Play the recording: Running Open vSwitch on a large CPU System" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: Modern DC hosts are 128–256 CPUs, and this is a rare measured study of what actually breaks in ovs-vswitchd and the kernel datapath at that scale — including an OOM-killer incident reproduced during testing. Directly relevant to anyone running OVS on current-generation EPYC-class compute.</p>
 <p><strong>What</strong>: On a 128-CPU EPYC 7702P (OVS 3.3, RHEL 9.5), the revalidator process stops scaling past a handful of threads: with 200k datapath flows, mean flow-dump duration goes 169.7 ms → 180.7 ms → 183.4 ms for 4/32/128 revalidator threads, due to lock contention in <code>nl_dump_next()</code> (the mutex serializes netlink dump recvs to avoid an in-kernel EINVAL race on pooled sockets). With traffic landing on many CPUs, per-CPU <code>sw_flow_stat</code> structures (32 bytes each, allocated on demand) consume 782 MB for 200k flows at 128 CPUs and 1.5 GB at 256 CPUs — the real problem is not the memory but the latency of accumulating non-linearly-stored stats, which grows dump duration until a ~1.3 s threshold forces the flow limit down. Interface-statistics sweeps (~every 5 s) take 63 ms at 64 CPUs vs 104 ms at 128, with kernel exception counters adding ~451 ns per interface at 128 CPUs.</p>
@@ -1331,7 +1331,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t8">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/OpenShift%20Networking%20Transformed.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=KwznQq8f7LM">Recording</a></p>
 </div>
-<p>Speakers: Jakob Meng, Maxime Coquelin, <a href="../companies/red-hat/">Red Hat</a>, Inc.</p>
+<p>Speakers: Jakob Meng, Maxime Coquelin, <a href="../companies/red-hat/">Red Hat, Inc.</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="KwznQq8f7LM" data-start="0" href="https://www.youtube.com/watch?v=KwznQq8f7LM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/KwznQq8f7LM/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/KwznQq8f7LM/maxresdefault.jpg" alt="Play the recording: OpenShift Networking Transformed: Fully Embracing DPDK Datapaths in OVN-K8s!" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: A complete userspace datapath from NIC to pod in OVN-Kubernetes — kernel bypass inside a managed Kubernetes distribution, with refreshingly honest benchmark results including where it loses.</p>
 <p><strong>What</strong>: Replaced veth-based pod connectivity with VDUSE (a purely software vDPA device: a kernel driver on the vDPA bus plus a userspace device implemented via the DPDK Vhost library). OVS reuses its <code>dpdkvhostuserclient</code> port type, so the datapath is the well-optimized Vhost-user one; OVN-K8s creates VDUSE devices instead of veth pairs when userspace bridges are detected. Motivations: partitioning (network infra isolated on dedicated CPUs), determinism, and uniformity across primary/secondary networks including KubeVirt.</p>
@@ -1343,7 +1343,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t19">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/OVS_OVN%20Conf%2024_%20_%28P%29sampling%20kubernetes%20network%20policies_%20.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=gLwDsaiUuN4&amp;t=2s">Recording</a></p>
 </div>
-<p>Speakers: Dumitru Ceara, Nadia Pinaeva, Adrian Moreno, <a href="../companies/red-hat/">Red Hat</a>, Inc.</p>
+<p>Speakers: Dumitru Ceara, Nadia Pinaeva, Adrian Moreno, <a href="../companies/red-hat/">Red Hat, Inc.</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="gLwDsaiUuN4" data-start="2" href="https://www.youtube.com/watch?v=gLwDsaiUuN4&t=2s" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/gLwDsaiUuN4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/gLwDsaiUuN4/maxresdefault.jpg" alt="Play the recording: (P)sampling kubernetes network policies" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: "Why was this connection allowed or denied" is the top operational pain point in clusters with thousands of NetworkPolicies — and this talk shows the full cross-stack feature chain (kernel → OVS → OVN → ovn-kubernetes) that solves it at line rate.</p>
 <p><strong>What</strong>: Live NetworkPolicy visibility via OVN ACL sampling (OVN 24.09: new <code>Sampling_App</code>, <code>Sample_Collector</code>, <code>Sample</code> NB tables; per-ACL <code>sample_new</code>/<code>sample_est</code>). It replaces the OVN drop-debugging design's IPFIX export, which forced every sample through the kernel → ovs-vswitchd path, sharing a netlink socket with upcalls (packet loss) and causing IPFIX-cache contention.</p>
@@ -1355,7 +1355,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t2">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/Low%20on%20Stack_%20Flexible%20protocols%20vs%20limited%20memory.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=MpXC7CuTKMQ">Recording</a></p>
 </div>
-<p>Speakers: Ilya Maximets, <a href="../companies/red-hat/">Red Hat</a>, Inc.</p>
+<p>Speakers: Ilya Maximets, <a href="../companies/red-hat/">Red Hat, Inc.</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="MpXC7CuTKMQ" data-start="0" href="https://www.youtube.com/watch?v=MpXC7CuTKMQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/MpXC7CuTKMQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/MpXC7CuTKMQ/maxresdefault.jpg" alt="Play the recording: Low on Stack: Flexible protocols vs. Limited Memory" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: Deep OVS internals on a real correctness hazard — stack exhaustion from recursive parsing/execution of flexible protocols (Netlink actions, OpenFlow translation) — and it decodes the warnings operators actually see in the field (resubmit limits, deferred action limits).</p>
 <p><strong>What</strong>: How OVS bounds recursion on both sides of the datapath. Kernel: ~16 kB stack, so nested Netlink actions (e.g., <code>clone(clone(...))</code>, up to 64 kB of nesting in a 16-bit length field) are executed via a Deferred Actions FIFO instead of unbounded recursion. Userspace: 2–8 MB stacks, but OpenFlow translation recurses through <code>goto_table</code>/<code>resubmit</code>/<code>ct(table=N)</code>/patch-port output; the existing depth/resubmit limits work out to roughly 512 B–2 kB of stack budget per rule.</p>
@@ -1379,7 +1379,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t23">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=CgecMK9EhPU">Recording</a></p>
 </div>
-<p>Speakers: Junho Suh, <a href="../companies/intel/">Intel</a>, Inc. (from abstract only)</p>
+<p>Speakers: Junho Suh, <a href="../companies/intel/">Intel, Inc.</a> (from abstract only)</p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="CgecMK9EhPU" data-start="0" href="https://www.youtube.com/watch?v=CgecMK9EhPU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/CgecMK9EhPU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/CgecMK9EhPU/maxresdefault.jpg" alt="Play the recording: P4OVN: Offloading OVN to Intel IPU for Intel Developer Cloud" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: A production DPU/IPU offload of OVN — not a demo — running in Intel Developer Cloud, and one of the few concrete data points on where SmartNIC-based virtual networking is actually deployed at service scale.</p>
 <p><strong>What</strong>: A hardware/software co-design: a hardware flow cache implemented in P4 on the IPU's programmable packet processing engine handles L2/L3 forwarding and connection tracking, while the IPU's compute tiles run OVS for stateful processing (ACL, NAT, LB). Covers deployment and operation for distributed virtual routers and distributed/centralized NAT gateways, plus OVN central, engineered to meet IDC scale requirements.</p>
@@ -1391,7 +1391,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t22">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=Gf4M-ZSmTz4">Recording</a></p>
 </div>
-<p>Speakers: Mark Michelson, <a href="../companies/red-hat/">Red Hat</a>, Inc. (from abstract only)</p>
+<p>Speakers: Mark Michelson, <a href="../companies/red-hat/">Red Hat, Inc.</a> (from abstract only)</p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="Gf4M-ZSmTz4" data-start="0" href="https://www.youtube.com/watch?v=Gf4M-ZSmTz4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/Gf4M-ZSmTz4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/Gf4M-ZSmTz4/maxresdefault.jpg" alt="Play the recording: Composable Services in OVN" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: Reveals where the core OVN team is taking the project's architecture — the session type this digest is told to up-rank.</p>
 <p><strong>What</strong>: A new proposal to extract certain functionality from existing OVN logical datapaths and implement it as standalone specialized datapaths ("composable services"), giving administrators more clarity and power over packet processing, with ACLs, NATs, and load balancers called out as beneficiaries, plus possible future offerings.</p>
@@ -1416,7 +1416,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t3">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/Current%20Challenges%20with%20OpenStack%20Ironic,%20SR-IOV,%20and%20OVN.odp">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=irHtlLm9ACw">Recording</a></p>
 </div>
-<p>Speakers: Michal Nasiadka, Bartosz Bezak, StackHPC (from abstract only)</p>
+<p>Speakers: Michal Nasiadka, Bartosz Bezak, <a href="../companies/stackhpc/">StackHPC</a> (from abstract only)</p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="irHtlLm9ACw" data-start="0" href="https://www.youtube.com/watch?v=irHtlLm9ACw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/irHtlLm9ACw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/irHtlLm9ACw/maxresdefault.jpg" alt="Play the recording: Current Challenges with OpenStack Ironic, SR-IOV, and OVN" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: SR-IOV and bare-metal networking against OVN is an under-documented corner of the stack, told by an operator (StackHPC) rather than a vendor.</p>
 <p><strong>What</strong>: The ongoing problems implementing OpenStack Neutron ML2/OVN with Ironic/SR-IOV external ports: root causes, solutions under development and their upstream status (testing and reviews), plus temporary production workarounds.</p>
@@ -1427,7 +1427,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t11">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/Harman-Jerin%20-%20Harnessing%20Marvell%20Accelerators%20with%20Open%20vSwitch%28OVS%29%20Hardware%20Offload%20for%20Accelerated%20Network%20Performance.pptx">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=80biE5L7jqw">Recording</a></p>
 </div>
-<p>Speakers: Harman Kalra, Jerin Jacob Kollanukkaran, Marvell</p>
+<p>Speakers: Harman Kalra, Jerin Jacob Kollanukkaran, <a href="../companies/marvell/">Marvell</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="80biE5L7jqw" data-start="0" href="https://www.youtube.com/watch?v=80biE5L7jqw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/80biE5L7jqw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/80biE5L7jqw/maxresdefault.jpg" alt="Play the recording: Harnessing Marvell Accelerators with OVS Hardware Offload for Accelerated Network Performance" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: Concrete DPU silicon detail (Octeon CN10K) from a vendor other than NVIDIA — useful for anyone comparing offload platforms.</p>
 <p><strong>What</strong>: An "ovs-offload-engine" alongside OVS that offloads OVS-classified flows into the CN10K's parser/CAM hardware: NIX (controller/DMA), NPC (parser forming MCAM keys, 16K entries), NPA (packet memory pointers), CPT (inline IPsec by intercepting strongSwan SA/SP policies via DPDK rte_security), conntrack-offload compensation, virtio integration up to 100 Gbps, and flow actions (RSS, VLAN strip/insert, mirroring, multicast).</p>
@@ -1439,7 +1439,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t16">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/OVN_VM_Migration_Enhancements.pptx">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=aHHK5RUcRCw">Recording</a></p>
 </div>
-<p>Speakers: Naveen Yerramneni, Nutanix (contributors: Naveen Yerramneni, Shibir Basak, Mansi Sharma, Nutanix)</p>
+<p>Speakers: Naveen Yerramneni, <a href="../companies/nutanix/">Nutanix</a> (contributors: Naveen Yerramneni, Shibir Basak, Mansi Sharma, Nutanix)</p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="aHHK5RUcRCw" data-start="0" href="https://www.youtube.com/watch?v=aHHK5RUcRCw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/aHHK5RUcRCw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/aHHK5RUcRCw/maxresdefault.jpg" alt="Play the recording: VM Migration Enhancements" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: Live migration is where overlay networking semantics visibly break (proxy-ARP races, FDB staleness, conntrack loss) — and these are real upstream OVN features, not Nutanix-private patches.</p>
 <p><strong>What</strong>: New logical switch port options for migration: <code>pkt_clone_type=mc_unknown</code> (clone traffic to unknown ports while the destination binding is being established, fixing drops at migration start), <code>disable_arp_nd_rsp</code> (skip the ARP/ND responder so packets reach the port instead of being eaten by stale proxy ARP on the source), <code>force_fdb_lookup</code> (learn a port's additional MACs through OVN's native FDB, avoiding packet duplication when combined with cloning), and <code>disable_garp_rarp</code>. Plus FDB cleanup on port down, and controller CT-zone reservation (<code>external_ids:reserve_ct_zones</code>) so conntrack entries can be synchronized during migration — the latter two patches under review at talk time.</p>
@@ -1451,7 +1451,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t10">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/ofproto_detrace%20-%20The%20missing%20link..pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=OP3F1o3ozjM">Recording</a></p>
 </div>
-<p>Speakers: Ales Musil, Dumitru Ceara, <a href="../companies/red-hat/">Red Hat</a>, Inc.</p>
+<p>Speakers: Ales Musil, Dumitru Ceara, <a href="../companies/red-hat/">Red Hat, Inc.</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="OP3F1o3ozjM" data-start="0" href="https://www.youtube.com/watch?v=OP3F1o3ozjM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/OP3F1o3ozjM/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/OP3F1o3ozjM/maxresdefault.jpg" alt="Play the recording: ofproto/detrace - The missing link." loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: The debugging story across OVS/OVN's abstraction layers finally gets a one-command answer — new in OVS 3.4.</p>
 <p><strong>What</strong>: <code>ofproto/detrace</code> takes a datapath flow's UFID and outputs the OpenFlow rules and groups that contributed to its creation, bridging the gap between optimized kernel flows and the controller-configured pipeline that produced them.</p>
@@ -1463,7 +1463,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t20">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/OVS_OVN%20Conf%2024_%20_Tracing%20packets%20in%20OVS_%20an%20update%20on%20Retis__%20.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=K0ldVsWkLJw">Recording</a></p>
 </div>
-<p>Speakers: Paolo Valerio, Adrian Moreno, <a href="../companies/red-hat/">Red Hat</a>, Inc.</p>
+<p>Speakers: Paolo Valerio, Adrian Moreno, <a href="../companies/red-hat/">Red Hat, Inc.</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="K0ldVsWkLJw" data-start="0" href="https://www.youtube.com/watch?v=K0ldVsWkLJw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/K0ldVsWkLJw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/K0ldVsWkLJw/maxresdefault.jpg" alt="Play the recording: Tracing packets in OVS: an update on Retis" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: eBPF-based packet tracing that follows packets across the kernel stack, the OVS datapath, <em>and</em> userspace upcalls — the visibility gap most tools leave.</p>
 <p><strong>What</strong>: Retis is a network tracing tool where OVS is a first-class citizen: eBPF programs on tracepoints/kprobes plus USDT probes in ovs-vswitchd (requires <code>--enable-usdt-probes</code>) to track a packet from upcall through action execution. New since last cycle: Python bindings (pyo3, on PyPI, with an embedded shell) and OVS flow enrichment — a kretprobe on <code>ovs_flow_tbl_lookup_stats</code> captures the UFID, then Retis queries ovs-vswitchd at runtime via <code>dpctl/get-flow</code> and <code>ofproto/detrace</code> (throttled and cached) to attach the full datapath and OpenFlow flows to trace events.</p>
@@ -1475,7 +1475,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t17">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=bAIrGaNbBWk">Recording</a></p>
 </div>
-<p>Speakers: Farhat Ullah, Farhan Tariq, Dreambig Semiconductor Inc. (from abstract only)</p>
+<p>Speakers: Farhat Ullah, Farhan Tariq, <a href="../companies/dreambig-semiconductor/">Dreambig Semiconductor Inc.</a> (from abstract only)</p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="bAIrGaNbBWk" data-start="0" href="https://www.youtube.com/watch?v=bAIrGaNbBWk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/bAIrGaNbBWk/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/bAIrGaNbBWk/maxresdefault.jpg" alt="Play the recording: Introducing exact-match hardware offload for OVS" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: Attacks the TCAM orthodoxy in DPU/SmartNIC flow lookup — power consumption and scalability — with an exact-match alternative blending micro/megaflow characteristics.</p>
 <p><strong>What</strong>: A critique that TCAM-based megaflow offload doesn't scale with ever-growing flow counts, and that TCAM alternatives complicate maintenance and hurt performance as megaflow table counts grow; the proposed solution brings exact-match hardware offload to OVS, demonstrated live.</p>
@@ -1498,7 +1498,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t13">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=hCVegvOWrqk">Recording</a></p>
 </div>
-<p>Speakers: Emil Stahl, KTH Royal Institute of Technology; Q&amp;A portion hosted by Eelco Chaudron, <a href="../companies/red-hat/">Red Hat</a> (from abstract only)</p>
+<p>Speakers: Emil Stahl, <a href="../companies/kth-royal-institute-of-technology/">KTH Royal Institute of Technology</a>; Q&amp;A portion hosted by Eelco Chaudron, <a href="../companies/red-hat/">Red Hat</a> (from abstract only)</p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="hCVegvOWrqk" data-start="0" href="https://www.youtube.com/watch?v=hCVegvOWrqk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/hCVegvOWrqk/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/hCVegvOWrqk/maxresdefault.jpg" alt="Play the recording: Improving megaflow cache performance in Open vSwitch with branch prediction" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: An academic outsider's angle on a practitioner problem — the PM wouldn't search for this, and it may preview where datapath caching goes next.</p>
 <p><strong>What</strong>: The argument that the slow path (datapath ↔ control plane interaction on megaflow-cache misses) is poised to become the bottleneck in high-throughput networks, and that upcalls can be reduced by <em>predicting imminent traffic</em> — using coflows to anticipate flows before they miss the cache.</p>
@@ -1510,7 +1510,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/#t9">Abstract</a> <a class="pick-link" href="https://www.openvswitch.org/support/ovscon2024/slides/Automating%20Root%20Cause%20Analysis%20in%20OVS_OVN-Based%20Deployments%20Using%20AI_ML.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=2OB29dygaH0">Recording</a></p>
 </div>
-<p>Speakers: Gurpreet Singh, <a href="../companies/red-hat/">Red Hat</a>, Inc.</p>
+<p>Speakers: Gurpreet Singh, <a href="../companies/red-hat/">Red Hat, Inc.</a></p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="2OB29dygaH0" data-start="0" href="https://www.youtube.com/watch?v=2OB29dygaH0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/2OB29dygaH0/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/2OB29dygaH0/maxresdefault.jpg" alt="Play the recording: Automating Root Cause Analysis in OVS/OVN-Based Deployments Using AI/ML" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <p><strong>Why</strong>: A PM-to-PM talk that is thin on its own results but signals where vendor investment is going: closed-loop, ML-driven RCA for virtualized networking.</p>
 <p><strong>What</strong>: The problem statement is real and well-framed: OVS/OVN-level metrics are missing in shared virtualized environments, nothing correlates metrics to policies or resource allocation, and RCA is manual and slow. The proposed approach: Self-Organizing-Map-based anomaly detection (citing prior published work reporting 99% accuracy on real DC data, with acknowledged processing-time and scale challenges), a fault-injection sandbox (CPU/network/memory stress, Tx/Rx queue oversubscription) for pre-training models on simulated environments, OpenTelemetry-based collection, and closed-loop anomaly mitigation.</p>

@@ -682,7 +682,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://dl.acm.org/doi/10.1145/3749217">Abstract</a> <a class="pick-link" href="https://dl.acm.org/doi/pdf/10.1145/3749217">Paper</a></p>
 </div>
-<p>Habib Mostafaei (TU/e); Mohammad Ezzati (TU Berlin); Pieter J. L. Cuijpers (TU/e); Stefan Schmid (TU Berlin); Gábor Rétvári (BME); Sem Borst (TU/e)</p>
+<p>Habib Mostafaei (<a href="../../companies/technical-university-of-eindhoven/">TU/e</a>); Mohammad Ezzati (<a href="../../companies/technical-university-of-berlin/">TU Berlin</a>); Pieter J. L. Cuijpers (TU/e); Stefan Schmid (TU Berlin); Gábor Rétvári (<a href="../../companies/budapest-university-of-technology-and-economics/">BME</a>); Sem Borst (TU/e)</p>
 <ul>
 <li><strong>Why</strong>: PIFO — the abstraction underlying ideal push-in-first-out scheduling — has been blocked from real switch silicon because it needs line-speed sorting. The approximations that fit hardware (SP-PIFO, AIFO) don't scale in queue count. This paper's approximation is startlingly cheap, and it sometimes beats the abstraction it approximates.</li>
 <li><strong>What</strong>: A new PIFO approximation, Exp-PIFO, that tracks scheduling state with only two memory cells and uses a lookup table to avoid complex control flow. Empirically it sometimes outperforms strict PIFO on flow-completion-time metrics — and the paper explains why rather than shrugging. Proof-of-concept on Intel Tofino uses significantly less memory than SP-PIFO/AIFO implementations (from abstract only).</li>

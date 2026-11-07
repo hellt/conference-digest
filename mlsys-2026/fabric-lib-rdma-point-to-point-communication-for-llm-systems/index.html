@@ -682,7 +682,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://openreview.net/forum?id=SjVa05wEiY">Abstract</a> <a class="pick-link" href="https://openreview.net/pdf?id=SjVa05wEiY">Paper</a></p>
 </div>
-<p>Nandor Licker, Kevin Hu, Vladimir Zaytsev, Lequn Chen (Perplexity AI, per the paper's open-source repository)</p>
+<p>Nandor Licker, Kevin Hu, Vladimir Zaytsev, Lequn Chen (<a href="../../companies/perplexity-ai/">Perplexity AI</a>, per the paper's open-source repository)</p>
 <ul>
 <li><strong>Why</strong>: Disaggregated inference, MoE expert routing, and async RL fine-tuning all need flexible point-to-point RDMA, not just collectives — but today's implementations are locked to specific NICs. This is the clearest statement of the problem at the point where RoCE fabrics and LLM serving actually meet, and it ships as open source.</li>
 <li><strong>What</strong>: A NIC-abstraction library that exposes uniform one-sided <code>WriteImm</code> operations across heterogeneous NICs, demonstrated at 400 Gbps on both NVIDIA ConnectX-7 and AWS EFA, and proven through three production use cases: KV-cache transfer for disaggregated inference, RL weight sync (1.3 s for trillion-parameter models), and MoE dispatch/combine that beats DeepEP decode latency on ConnectX-7 — with the first viable EFA latencies (from abstract only).</li>

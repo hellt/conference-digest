@@ -682,7 +682,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/YK99LZ/">Abstract</a></p>
 </div>
-<p>Michael Rodler (X-41 DSEC)</p>
+<p>Michael Rodler (<a href="../../companies/x-41-dsec/">X-41 DSEC</a>)</p>
 <ul>
 <li><strong>Why</strong>: In an Envoy-based service mesh, the sidecar <em>is</em> your security policy — mTLS termination, authz, rate limits. This shows the pod boundary around that control plane is softer than assumed, which matters to anyone running Istio/Envoy in multi-tenant clusters.</li>
 <li><strong>What</strong>: From root in one container of a Pod, the authors reach Envoy's hot-restart shared-memory file and turn it into an ASLR leak and an arbitrary-write primitive — effectively compromising the mesh proxy from a sibling container. Upstream called it "not a security issue"; the authors argue that's only half true on Kubernetes, where containers in a Pod share more than the kernel. A 5-minute lightning talk; the research was previously published as an X-41 blog post (so full technical depth is available outside the talk slot).</li>

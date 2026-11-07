@@ -682,7 +682,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256215">Abstract</a></p>
 </div>
-<p>Prachi Gupta — AMD</p>
+<p>Prachi Gupta — <a href="../../companies/amd/">AMD</a></p>
 <ul>
 <li><strong>Why</strong>: Ports of GPU-initiated one-sided RMA to a second vendor are evidence this is becoming a cross-vendor fabric primitive rather than an NVIDIA trick — worth tracking for multi-vendor estate planning.</li>
 <li><strong>What</strong>: rocSHMEM backend for PyTorch symmetric memory, now upstream: the device-side OpenSHMEM API (one-sided put/get, non-blocking get, put-with-signal, wait-until) exposed as Triton-callable primitives so a kernel initiates its own communication. MoE all-to-all dispatch and combine are constructed within the kernel and overlapped with expert compute; comparison against RCCL host-driven all-to-all on representative MoE workloads promised. (from abstract only)</li>

@@ -1385,7 +1385,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://openreview.net/forum?id=SjVa05wEiY">Abstract</a> <a class="pick-link" href="https://openreview.net/pdf?id=SjVa05wEiY">Paper</a></p>
 </div>
-<p>Nandor Licker, Kevin Hu, Vladimir Zaytsev, Lequn Chen (Perplexity AI, per the paper's open-source repository)</p>
+<p>Nandor Licker, Kevin Hu, Vladimir Zaytsev, Lequn Chen (<a href="../companies/perplexity-ai/">Perplexity AI</a>, per the paper's open-source repository)</p>
 <ul>
 <li><strong>Why</strong>: Disaggregated inference, MoE expert routing, and async RL fine-tuning all need flexible point-to-point RDMA, not just collectives — but today's implementations are locked to specific NICs. This is the clearest statement of the problem at the point where RoCE fabrics and LLM serving actually meet, and it ships as open source.</li>
 <li><strong>What</strong>: A NIC-abstraction library that exposes uniform one-sided <code>WriteImm</code> operations across heterogeneous NICs, demonstrated at 400 Gbps on both NVIDIA ConnectX-7 and AWS EFA, and proven through three production use cases: KV-cache transfer for disaggregated inference, RL weight sync (1.3 s for trillion-parameter models), and MoE dispatch/combine that beats DeepEP decode latency on ConnectX-7 — with the first viable EFA latencies (from abstract only).</li>
@@ -1398,7 +1398,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://openreview.net/forum?id=n7o6C3p3wk">Abstract</a> <a class="pick-link" href="https://openreview.net/pdf?id=n7o6C3p3wk">Paper</a></p>
 </div>
-<p>Fumikazu Konishi, Yuuki Tsubouchi, Hirofumi Tsuruta (SAKURA Internet Research Center)</p>
+<p>Fumikazu Konishi, Yuuki Tsubouchi, Hirofumi Tsuruta (<a href="../companies/sakura-internet-research-center/">SAKURA Internet Research Center</a>)</p>
 <ul>
 <li><strong>Why</strong>: A top-100 TOP500 system built on a fully open networking stack — 800 GbE, SONiC, RoCEv2 — is the strongest public existence proof yet that vendor-neutral Ethernet fabrics scale to frontier LLM training. For anyone evaluating SONiC/white-box options for AI clusters, this matters more than another InfiniBand case study.</li>
 <li><strong>What</strong>: A 100-node managed HPC cluster (8× H100 per node, 2 PB all-flash Lustre) on a rail-optimized 800 GbE leaf–spine fabric with RoCEv2 and SONiC, ranked 49<sup>th</sup> in ISC 2025 TOP500 (33.95 PFLOP/s HPL, 339.86 PFLOP/s FP8 HPL-MxP) — the only top-100 system using a fully open network stack. The paper also reports single-tenant workload dynamics: small jobs dominate by count, a few large jobs consume most GPU-hours, and usage shifted from large-scale training to mid-scale iterative refinement over the project's life (from abstract only).</li>
@@ -1450,7 +1450,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://openreview.net/forum?id=IZaXDwDtL1">Abstract</a> <a class="pick-link" href="https://openreview.net/pdf?id=IZaXDwDtL1">Paper</a></p>
 </div>
-<p>Andrew Bitar, Aravind Vayalapra, Baorui Zhou, et al. (Groq, per the paper — the deployment studied is Groq's public cloud)</p>
+<p>Andrew Bitar, Aravind Vayalapra, Baorui Zhou, et al. (<a href="../companies/groq/">Groq</a>, per the paper — the deployment studied is Groq's public cloud)</p>
 <ul>
 <li><strong>Why</strong>: A production counterpoint to HBM-based GPU serving: SRAM-resident weights eliminate the decode memory-bandwidth bottleneck, and the system runs at hundreds of billions of tokens daily. The interconnect story — a synchronous, low-diameter network scaling to thousands of chips — is a live example of topology choices driving serving latency.</li>
 <li><strong>What</strong>: A review of Groq's first-generation SRAM-based inference pipelines: (1) a synchronous low-diameter interconnect enabling low-latency scaling across thousands of chips, (2) serving optimizations under tight memory capacity, and (3) large-pipeline designs that sustain efficiency and latency across varying prefill-to-decode ratios and context lengths, delivering state-of-the-art latency (from abstract only).</li>
@@ -1542,7 +1542,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://openreview.net/forum?id=s2WcSv2Hzt">Abstract</a> <a class="pick-link" href="https://openreview.net/pdf?id=s2WcSv2Hzt">Paper</a></p>
 </div>
-<p>Srinivas, Andrey Balogh, Brad B, et al. (MLCommons-led effort with industry participation from <a href="../companies/nvidia/">NVIDIA</a>, AMD, <a href="../companies/meta/">Meta</a>, Keysight, <a href="../companies/hpe/">HPE</a>, and others, per the paper)</p>
+<p>Srinivas, Andrey Balogh, Brad B, et al. (<a href="../companies/mlcommons/">MLCommons</a>-led effort with industry participation from <a href="../companies/nvidia/">NVIDIA</a>, <a href="../companies/amd/">AMD</a>, <a href="../companies/meta/">Meta</a>, <a href="../companies/keysight/">Keysight</a>, <a href="../companies/hpe/">HPE</a>, and others, per the paper)</p>
 <ul>
 <li><strong>Why</strong>: There is no portable, vendor-neutral way to characterize distributed AI workloads' behavior on a fabric. Chakra's standardized execution-trace format is becoming the interchange layer for AI-cluster benchmarking and co-design — effectively the telemetry standard to watch.</li>
 <li><strong>What</strong>: An open ecosystem whose core is Chakra Execution Traces (ETs): graph-based representations of compute, memory, and communication operations with data/control dependencies, timing, and resource constraints, plus tools for collection, analysis, generation, and replay into simulators and emulators. Includes analysis of traces from production AI clusters and real-world case studies; adopted by MLCommons (from abstract only).</li>

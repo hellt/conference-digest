@@ -1,9 +1,9 @@
-// Conferences tracker: the name-filter box above the table. Typing keeps only
-// the rows whose conference name contains the text (case-insensitive). With
-// instant navigation the page is swapped without a reload, so wire on every
-// visit, exactly like video.js does.
+// Conference and employer trackers: the name-filter box above the table.
+// Typing keeps only rows whose first-column name contains the text
+// (case-insensitive). With instant navigation the page is swapped without a
+// reload, so wire on every visit, exactly like video.js does.
 const wireConfFilter = () => {
-  const input = document.getElementById("conf-search");
+  const input = document.querySelector(".conf-filter input[type='search']");
   if (!input || input.dataset.wired) return;
   const scope = input.closest(".md-content") || document;
   const table = scope.querySelector("table");

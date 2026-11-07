@@ -212,7 +212,7 @@ scripts/
   propose_digest.py           # validates a ToFaRev artifact, writes PR text
   enrich_links.py             # adds/refreshes each pick's links row
   links_queue.py              # which digests Links Refresh revisits
-  build_site.py               # digests/ -> docs/posts/, docs/<key>/ talk pages, Employers, Conferences
+  build_site.py               # digests/ -> docs/posts/, docs/<key>/ talk pages, Companies, Conferences
 prompts/             # generated, committed by the workflow
 digests/             # merged digests; presence = done
 docs/  overrides/    # Zensical site sources (docs/posts/ and docs/<key>/ are generated)

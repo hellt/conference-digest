@@ -218,7 +218,7 @@ and write-up; the folder's own `.gitignore` of `*` keeps it out of git and
 marks it for cleanup on the next run, and a hand-made `docs/<key>/` stops the
 build), builds `docs/companies/`
 (one page per employer in `build_site.py`'s `EMPLOYER_VARIANTS` map, listing
-every pick with a speaker from that employer — the Employers tab) and writes the
+every pick with a speaker from that employer — the Companies tab) and writes the
 Conferences tracker. Style lives in `docs/stylesheets/extra.css` and `overrides/`,
 adapted from containerlab.dev. The tracker carries a client-side name filter
 (`docs/javascripts/conf-filter.js`), styled in `extra.css`. Never edit

@@ -1,6 +1,8 @@
 {#-
-  Zensical's partials/nav.html (zensical_ui 0.0.41), plus the Nebius Token
-  Factory credit as the last item in the mobile navigation drawer.
+  Zensical's partials/nav.html (zensical_ui 0.0.41), with the blog plugin's
+  automatic year-redirecting Archive item removed (the explicit nav item points
+  to the year cards), plus the Nebius Token Factory credit as the last item in
+  the mobile navigation drawer.
 -#}
 {% import "partials/nav-item.html" as item with context %}
 {% set class = "md-nav md-nav--primary" %}
@@ -23,7 +25,7 @@
     </div>
   {% endif %}
   <ul class="md-nav__list" data-md-scrollfix>
-    {% for nav_item in nav.items %}
+    {% for nav_item in nav.items if nav_item.title != "Archive" or nav_item.url == "archive/" %}
       {% set path = "__nav_" ~ loop.index %}
       {{ item.render(nav_item, path, 1) }}
     {% endfor %}

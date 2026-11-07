@@ -167,7 +167,7 @@ a:focus-visible, button:focus-visible, label:focus-visible {
 .md-typeset .digest-fact { display: inline; color: var(--signal-muted); font-size: .55rem; line-height: 1.8; }
 .md-typeset .digest-fact + .digest-fact::before { content: '·'; margin: 0 .55rem; }
 .md-typeset .digest-fact a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
-/* Conferences tracker: the name-filter box above the table. */
+/* Conference and employer trackers: the name-filter box above the table. */
 .md-typeset .conf-filter { margin: 1rem 0 1.2rem; }
 .md-typeset .conf-filter input {
   width: 100%;

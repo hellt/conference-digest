@@ -1,6 +1,9 @@
 """Offline regressions for media viewers in generated site pages."""
 
+from pathlib import Path
+from tempfile import TemporaryDirectory
 from unittest import TestCase, skipUnless
+from unittest.mock import patch
 from urllib.parse import parse_qs, urlsplit
 
 try:
@@ -10,10 +13,88 @@ except ImportError:  # Installed by the site's docs dependency group.
 
 from bs4 import BeautifulSoup
 
-from scripts.build_site import decorate, links_block, render_post, render_talks, media_block
+from scripts.build_site import (
+    annotate_employers,
+    decorate,
+    employer_spans,
+    link_employers,
+    links_block,
+    media_block,
+    render_companies,
+    render_post,
+    render_talks,
+)
 
 
 RECORDING = "https://ripe93.ripe.net/media/videos/routing.mp4"
+
+
+class EmployerTests(TestCase):
+    def test_plain_parenthetical_and_legal_suffix_attributions(self):
+        cases = (
+            ("Mark Tinka, TransmissionCo", "[TransmissionCo](../companies/transmissionco.md)"),
+            ("Christoph Glingener (CEO, ADTRAN)", "[ADTRAN](../companies/adtran.md)"),
+            ("Speakers: Eelco Chaudron, Red Hat, Inc.", "[Red Hat, Inc.](../companies/red-hat.md)"),
+            ("Yoshiyuki Tabata, Hitachi, Ltd.", "[Hitachi, Ltd.](../companies/hitachi.md)"),
+            ("Thomas Holterbach, University of Strasbourg",
+             "[University of Strasbourg](../companies/university-of-strasbourg.md)"),
+        )
+        for line, link in cases:
+            with self.subTest(line=line):
+                self.assertIn(link, link_employers(line))
+
+    def test_every_employer_in_compound_attribution_is_linked(self):
+        line = "Murayyiam Parvez et al. (Purdue, Michigan, UCSB, Open U. Israel, NIKSUN)"
+        linked = link_employers(line)
+        self.assertEqual(
+            {canonical for _, _, canonical in employer_spans(line)},
+            {"Purdue University", "University of Michigan", "University of California, Santa Barbara",
+             "Open University of Israel", "NIKSUN"},
+        )
+        for spelling in ("Purdue", "Michigan", "UCSB", "Open U. Israel", "NIKSUN"):
+            self.assertIn(f"[{spelling}](", linked)
+
+    def test_headed_attributions_aliases_and_pick_records(self):
+        rest = (
+            "## Core\n"
+            "### InfiniteHBD — Chenchen Shou et al. (Peking U. / StepFun / Lightelligence) — Core\n"
+            "**Links:** [Abstract](https://example.org/paper)\n"
+        )
+        rendered, picks = annotate_employers(rest)
+        self.assertEqual(len(picks), 1)
+        self.assertEqual(picks[0]["employers"], ["Lightelligence", "Peking University", "StepFun"])
+        for spelling in ("Peking U.", "StepFun", "Lightelligence"):
+            self.assertIn(f"[{spelling}](", rendered)
+
+    def test_missing_or_unknown_affiliation_is_not_invented(self):
+        rest = "## Core\n### Routing\n\nJane Doe (no affiliation listed)\n\n**Why:** Routing matters."
+        rendered, picks = annotate_employers(rest)
+        self.assertEqual(rendered, rest)
+        self.assertEqual(picks, [])
+
+    def test_short_acronym_does_not_match_an_ordinary_word(self):
+        self.assertEqual(employer_spans("Orderlock and its implications for protocol design"), [])
+        self.assertEqual(employer_spans("Dave Ferry (ITS)"), [(12, 15, "ITS")])
+
+    def test_employer_that_is_also_a_surname_does_not_link_speaker_name(self):
+        self.assertEqual(employer_spans("Jaakko Rautanen"), [])
+        line = "Jaakko Rautanen — Rautanen"
+        spans = employer_spans(line)
+        self.assertEqual([(line[s:e], canonical) for s, e, canonical in spans], [("Rautanen", "Rautanen")])
+        self.assertEqual(link_employers(line).count("]("), 1)
+
+    def test_employers_index_has_name_filter_and_table(self):
+        with TemporaryDirectory() as tmp, patch("scripts.build_site.COMPANIES", Path(tmp) / "companies"):
+            render_companies({"Cisco": [], "Arista Networks": []}, {})
+            index = (Path(tmp) / "companies" / "index.md").read_text(encoding="utf-8")
+        self.assertIn('<div class="conf-filter">', index)
+        self.assertIn('id="company-search"', index)
+        self.assertIn('placeholder="Filter by employer name"', index)
+        self.assertIn('aria-label="Filter employers by name"', index)
+        self.assertIn("| Employer | Talks |\n|---|---|", index)
+        self.assertIn("| [Arista Networks](arista-networks.md) | 0 |", index)
+        self.assertIn("| [Cisco](cisco.md) | 0 |", index)
+        self.assertLess(index.index("| [Arista Networks]"), index.index("| [Cisco]"))
 
 
 class RecordingTests(TestCase):

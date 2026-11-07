@@ -1,4 +1,4 @@
-"""Offline regressions for RIPE, NLNOG Day and DENOG's public sources."""
+"""Offline regressions for RIPE, NLNOG Day, DENOG and NZNOG sources."""
 
 from copy import deepcopy
 from datetime import date
@@ -14,7 +14,7 @@ from conferences.fetchers.base import MANUAL_FALLBACK, NOT_PUBLISHED, OK
 from conferences.fetchers.denog import DenogFetcher
 from conferences.fetchers.nlnog import NlnogFetcher
 from conferences.fetchers.ripe import RipeFetcher
-from conferences.links import Context, enrich, program_items, scrape_page
+from conferences.links import Context, RECORDING_STREAMS, enrich, program_items, scrape_page
 from scripts.discover_editions import candidates, fill, latest_ident
 
 RIPE = "https://ripe91.ripe.net/programme/meeting-plan/"
@@ -197,6 +197,33 @@ class DenogTests(TestCase):
         html = '<a href="/media/denog17/submissions/ABCDEF/resources/deck.pdf">PDF</a>'
         with patch("conferences.links.HTTP.get", return_value=response(html)):
             self.assertTrue(scrape_page(url)["slides"].endswith("deck.pdf"))
+
+
+class NznogTests(TestCase):
+    def test_stream_offsets_cover_every_program_talk(self):
+        root = Path(__file__).resolve().parents[1]
+        editions = {
+            "nznog-2025": {"Q-sPQ7p5n9c", "cl9tBfiPNZk"},
+            "nznog-2026": {"_qzUslAh9M8", "zHCJov9WM-c"},
+        }
+        for key, videos in editions.items():
+            with self.subTest(key=key):
+                talks = {item.title for item in program_items((root / f"prompts/{key}.md").read_text())}
+                streams = RECORDING_STREAMS[key]
+                self.assertEqual(set(streams), talks)
+                self.assertEqual({vid for vid, _ in streams.values()}, videos)
+                self.assertTrue(all(start >= 0 for _, start in streams.values()))
+
+    def test_refresh_uses_reviewed_offset_without_per_talk_search(self):
+        prompt = "### Radius Futures\nSpeakers: Alan DeKok\n"
+        with patch("conferences.links.find_recording") as search, \
+             patch("conferences.links.link_alive", return_value=True):
+            digest, stats = enrich("## Core\n### Radius Futures\nA pick.\n", prompt,
+                                   Context(key="nznog-2026", search=True, fetch_pages=False, delay=0))
+        search.assert_not_called()
+        self.assertEqual(stats["video_from_stream"], 1)
+        self.assertEqual(stats["video_from_search"], 0)
+        self.assertIn("[Recording](https://www.youtube.com/watch?v=_qzUslAh9M8&t=3490s)", digest)
 
 
 class OperatorIntegrationTests(TestCase):

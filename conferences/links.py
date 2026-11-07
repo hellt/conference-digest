@@ -11,7 +11,10 @@ Where each link comes from, in order:
    `materials:`), written by the fetcher from the conference's own pages.
 2. The item's `page:` (the talk or paper page), fetched again now: USENIX,
    Sched and netdev pages gain slides and an embedded recording after the event.
-3. For a pick still without a recording: the conference's own YouTube
+3. A reviewed offset into a conference's whole-day YouTube stream
+   (RECORDING_STREAMS), when the daily video has no per-talk upload or chapter
+   metadata. These offsets are established from the caption transcript.
+4. For a pick still without a recording: the conference's own YouTube
    channel when one is known (UPLOAD_CHANNELS), then a general YouTube
    search, falling back to Tavily search when YouTube cannot be reached
    (TAVILY_API_KEY). A candidate is linked only after `verify()` accepts it:
@@ -116,6 +119,54 @@ UPLOAD_CHANNELS = {
     "netnod": "@netnodix",
     "nznog": "@nznog3664",
     "zanog": "@nognetza",
+}
+# (video id, start seconds) within whole-day streams. NZNOG 2025/2026 have no
+# descriptions or chapters, so these starts were reviewed against the spoken
+# introductions in their English caption transcripts (2026-11-07).
+RECORDING_STREAMS = {
+    "nznog-2025": {
+        "Chorus is going boost fibre plans for over 700,000 Kiwi homes – find out how we will technically deliver the upgrade and how you can get the best performance out of Chorus’ services 😮‍💨": ("Q-sPQ7p5n9c", 1980),
+        "AI Networking, UltraEthernet, the road to 1.6T and beyond.": ("Q-sPQ7p5n9c", 3248),
+        "Implementing Precision Timing / Sync as a Service in a Telecommunications Network": ("Q-sPQ7p5n9c", 7763),
+        "Challenges in simulating LEO satellite networks like Starlink": ("Q-sPQ7p5n9c", 9702),
+        # The first IP Quirks start at 9600 had broken slides; this is the restart.
+        "IP Quirks and Features": ("Q-sPQ7p5n9c", 11544),
+        "Internet Governance": ("Q-sPQ7p5n9c", 16734),
+        "Communications Resilience": ("Q-sPQ7p5n9c", 18778),
+        "Resilient and Inclusive Networks: Ensuring communication for all in all times": ("Q-sPQ7p5n9c", 20710),
+        "Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for Coherent (16QAM) and Non-Coherent (PAM4) high speed transceivers under environmental variations": ("cl9tBfiPNZk", 2644),
+        "Passive Optical Networking": ("cl9tBfiPNZk", 4262),
+        "DNSSEC for .nz: post-incident recovery and improvement (or, how to see the train coming down the tunnel next time. For sure.)": ("cl9tBfiPNZk", 8286),
+        "DNS Resolvers and Nameservers in New Zealand": ("cl9tBfiPNZk", 10011),
+        "KINDNS: Promoting DNS Security Best Practices": ("cl9tBfiPNZk", 11876),
+        "The Weakest Link in the Modern Cyber Threat Landscape": ("cl9tBfiPNZk", 17236),
+        "AI-Powered Telco SecOps Use Cases": ("cl9tBfiPNZk", 19188),
+        "We’re not in Kansas anymore: my experiences with IP geolocation": ("cl9tBfiPNZk", 20955),
+    },
+    "nznog-2026": {
+        "Optimizing Traffic Flow with Akamai": ("_qzUslAh9M8", 389),
+        "Comfortable Complexity of Network Overlays": ("_qzUslAh9M8", 1852),
+        "Radius Futures": ("_qzUslAh9M8", 3490),
+        "Designing a Mikrotik CGNAT Solution that Scales": ("_qzUslAh9M8", 4918),
+        "The Evolution of TCP Transport Protocols": ("_qzUslAh9M8", 6375),
+        "Life in a ’90s ISP. VUW Internetworking Group and NetLink, 1992-1997": ("_qzUslAh9M8", 10455),
+        "Enable Network Transformation Programme & Migration Journey": ("_qzUslAh9M8", 12323),
+        "Tuatahi First Fibre: Network Update": ("_qzUslAh9M8", 14069),
+        "Rethinking NetOps with Open-Source LLMs & RAG": ("_qzUslAh9M8", 15823),
+        "The Evolution of Network Configuration Management": ("_qzUslAh9M8", 17412),
+        "Automated Network State Checking: Insights from the Field": ("_qzUslAh9M8", 18910),
+        "Options for Data Centre Interconnect": ("zHCJov9WM-c", 45),
+        "Channelmania! – future proof your DWDM network topology while keeping it flexible for 1.6T": ("zHCJov9WM-c", 1905),
+        "Open Fibre Standards": ("zHCJov9WM-c", 3427),
+        "Defending Multistakeholder Internet Governance": ("zHCJov9WM-c", 5253),
+        "AST Space Mobile": ("zHCJov9WM-c", 7224),
+        "Evolving Optical Transport: 400G, Network Design, and Regional Diversity": ("zHCJov9WM-c", 9259),
+        "Experiments in Topology Visualization using BGP-LS (RFC-8571)": ("zHCJov9WM-c", 11173),
+        "Routeviews Update": ("zHCJov9WM-c", 12874),
+        "IPv6 Landscape in NZ : Has it Changed": ("zHCJov9WM-c", 14675),
+        "Datagrid: Unlocking the Potential of New Zealand’s South Island": ("zHCJov9WM-c", 16692),
+        "Using Open Rack V3 to Enhance your Data Centre Infrastructure": ("zHCJov9WM-c", 18434),
+    },
 }
 # URLs that only ever hold presentation decks, whatever the link text says.
 DECK_URLS = re.compile(
@@ -766,7 +817,8 @@ def enrich(markdown: str, prompt: str, ctx: Context, log=print) -> tuple[str, di
         if not fence and line.startswith("### "):
             heads.append(i)
     stats = {"picks": len(heads), "matched": 0, "page": 0, "pdf": 0, "slides": 0, "video": 0,
-             "video_from_page": 0, "video_from_search": 0, "unmatched": [], "added": [], "dropped": []}
+             "video_from_page": 0, "video_from_stream": 0, "video_from_search": 0,
+             "unmatched": [], "added": [], "dropped": []}
     out: list[str] = []
     cursor = 0
     for n, h in enumerate(heads):
@@ -791,6 +843,11 @@ def enrich(markdown: str, prompt: str, ctx: Context, log=print) -> tuple[str, di
             links.setdefault(k, v)
         if item:
             stats["matched"] += 1
+            stream = RECORDING_STREAMS.get(ctx.key, {}).get(item.title)
+            if stream and not links.get("video"):
+                vid, start = stream
+                links["video"] = f"https://www.youtube.com/watch?v={vid}&t={start}s"
+                stats["video_from_stream"] += 1
             if ctx.fetch_pages and links.get("page") and not (links.get("video") and links.get("slides")):
                 time.sleep(ctx.delay)
                 for k, v in scrape_page(links["page"], ctx.tavily_key).items():

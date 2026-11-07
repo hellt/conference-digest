@@ -60,7 +60,8 @@ def main() -> int:
             + "".join(f"- {d['pick']}: dropped dead {d['kind']} link {d['url']}\n" for d in stats["dropped"]))
     print(f"{args.key}: {stats['picks']} picks, {stats['matched']} matched to the program; "
           f"links: {stats['page']} abstract, {stats['pdf']} paper, {stats['slides']} slides, "
-          f"{stats['video']} recording ({stats['video_from_page']} from talk pages, {stats['video_from_search']} found by search); "
+          f"{stats['video']} recording ({stats['video_from_page']} from talk pages, "
+          f"{stats['video_from_stream']} from reviewed stream offsets, {stats['video_from_search']} found by search); "
           f"{len(stats['dropped'])} dead link(s) dropped")
     for d in stats["dropped"]:
         print(f"  dropped dead {d['kind']} link for {d['pick'][:70]!r}: {d['url']}")

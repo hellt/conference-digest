@@ -171,7 +171,8 @@ def main() -> int:
                       f"{stats.get('selected', 0)} sent to the writer" if staged else "whole program sent to the writer"),
         ("Picks", str(stats.get("picks", "?"))),
         *([("Links", f"{links['page']} abstract pages, {links['pdf']} papers, {links['slides']} slides, "
-                     f"{links['video']} recordings ({links['video_from_search']} found by a verified search)")]
+                     f"{links['video']} recordings ({links['video_from_stream']} at reviewed stream offsets, "
+                     f"{links['video_from_search']} found by a verified search)")]
           if links else []),
         ("Model", f"{written_by}, {stats.get('calls', '?')} calls in {stats.get('seconds', '?')} s"),
     ]

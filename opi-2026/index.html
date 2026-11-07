@@ -1,0 +1,1319 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Note on sourcing: the sched.com pages returned 403 to the fetcher for every item, so all write-ups below are grounded in the program abstracts and speaker bios only, marked accordingly.">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/opi-2026/">
+      
+      
+      
+        <link rel="prev" href="../netnod-2026/">
+      
+      
+        <link rel="next" href="../ocp-2026/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>OPI Summit on DPUs/IPUs 2026 - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="OPI Summit on DPUs/IPUs 2026 · Conference Digest" />
+<meta property="og:description" content="Note on sourcing: the sched.com pages returned 403 to the fetcher for every item, so all write-ups below are grounded in the program abstracts and speaker bios only, marked accordingly." />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/opi-2026.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/opi-2026/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="OPI Summit on DPUs/IPUs 2026 · Conference Digest" />
+<meta property="twitter:description" content="Note on sourcing: the sched.com pages returned 403 to the fetcher for every item, so all write-ups below are grounded in the program abstracts and speaker bios only, marked accordingly." />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/opi-2026.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OPI Summit on DPUs/IPUs 2026
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../archive/2026/" class="md-tabs__link">
+          
+  
+  Archive
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Companies
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-powered-text">Powered by</span>
+          <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-platform-baseline-to-platform-handoff-automating-dpu-onboarding-with-sztp-anssi-soderena-fusionlayer-inc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Platform Baseline to Platform Handoff: Automating DPU Onboarding with sZTP - Anssi Söderena, Fusionlayer, Inc
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-engines-hardware-matrix-problem-and-why-dpus-solve-what-nics-cant-josh-brooks-worldtech-itnetwork-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Network Engine's Hardware Matrix Problem, and Why DPUs Solve What NICs Can't - Josh Brooks, WorldTech IT/Network Engine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-control-plane-many-dpuipus-sonic-dash-and-open-dse-powered-by-opi-serey-kong-intel-corporation-mounire-el-houmaidi-be-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        One Control Plane, Many DPU/IPUs: SONiC DASH and Open DSE Powered by OPI - Serey Kong, Intel Corporation &amp; Mounire El Houmaidi, BE-NET
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reimagining-dpus-for-storage-control-and-end-to-end-confidential-ai-jitendra-singh-anshuman-ghosh-microsoft" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reimagining DPUs for Storage Control and End-to-End Confidential AI - Jitendra Singh &amp; Anshuman Ghosh, Microsoft
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feeding-the-ai-factory-the-role-of-dpuipus-in-ai-infrastructure-tina-tsou-board-chair-lf-edge-rajalaxmi-angadi-senior-engineering-manager-intel-moderated-by-paul-pindell-f5-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Feeding the AI Factory: The Role of DPU/IPUs in AI Infrastructure - Tina Tsou, Board Chair, LF Edge; Rajalaxmi Angadi, Senior Engineering Manager, Intel &amp; Moderated by Paul Pindell, F5 Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kv-cache-in-the-agentic-era-the-five-forces-that-decide-where-the-cache-lives-and-what-a-dpu-can-do-about-it-jigar-kuverji-savla-tensordyne" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        KV Cache in the Agentic Era: The Five Forces that Decide Where the Cache Lives, and What a DPU Can Do About It - Jigar Kuverji Savla, Tensordyne
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-open-hardware-access-builds-the-next-generation-of-infrastructure-engineers-sam-dasilva-red-hat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How Open Hardware Access Builds the Next Generation of Infrastructure Engineers - Sam Dasilva, Red Hat
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-the-rest-of-the-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Notes on the rest of the program
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Archive
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2026
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2025
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2024
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Companies
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    <li class="md-nav__item md-nav__item--powered">
+      <a href="https://tokenfactory.nebius.com/" class="md-nav__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+        <span class="md-powered-text">Powered by</span>
+        <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+        <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+      </a>
+    </li>
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-platform-baseline-to-platform-handoff-automating-dpu-onboarding-with-sztp-anssi-soderena-fusionlayer-inc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Platform Baseline to Platform Handoff: Automating DPU Onboarding with sZTP - Anssi Söderena, Fusionlayer, Inc
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-engines-hardware-matrix-problem-and-why-dpus-solve-what-nics-cant-josh-brooks-worldtech-itnetwork-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Network Engine's Hardware Matrix Problem, and Why DPUs Solve What NICs Can't - Josh Brooks, WorldTech IT/Network Engine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-control-plane-many-dpuipus-sonic-dash-and-open-dse-powered-by-opi-serey-kong-intel-corporation-mounire-el-houmaidi-be-net" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        One Control Plane, Many DPU/IPUs: SONiC DASH and Open DSE Powered by OPI - Serey Kong, Intel Corporation &amp; Mounire El Houmaidi, BE-NET
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reimagining-dpus-for-storage-control-and-end-to-end-confidential-ai-jitendra-singh-anshuman-ghosh-microsoft" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reimagining DPUs for Storage Control and End-to-End Confidential AI - Jitendra Singh &amp; Anshuman Ghosh, Microsoft
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feeding-the-ai-factory-the-role-of-dpuipus-in-ai-infrastructure-tina-tsou-board-chair-lf-edge-rajalaxmi-angadi-senior-engineering-manager-intel-moderated-by-paul-pindell-f5-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Feeding the AI Factory: The Role of DPU/IPUs in AI Infrastructure - Tina Tsou, Board Chair, LF Edge; Rajalaxmi Angadi, Senior Engineering Manager, Intel &amp; Moderated by Paul Pindell, F5 Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kv-cache-in-the-agentic-era-the-five-forces-that-decide-where-the-cache-lives-and-what-a-dpu-can-do-about-it-jigar-kuverji-savla-tensordyne" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        KV Cache in the Agentic Era: The Five Forces that Decide Where the Cache Lives, and What a DPU Can Do About It - Jigar Kuverji Savla, Tensordyne
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-open-hardware-access-builds-the-next-generation-of-infrastructure-engineers-sam-dasilva-red-hat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How Open Hardware Access Builds the Next Generation of Infrastructure Engineers - Sam Dasilva, Red Hat
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-the-rest-of-the-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Notes on the rest of the program
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>10 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="opi-summit-on-dpusipus-2026">OPI Summit on DPUs/IPUs 2026<a class="headerlink" href="#opi-summit-on-dpusipus-2026" title="Permanent link">#</a></h1>
+<p>Note on sourcing: the sched.com pages returned 403 to the fetcher for every item, so all write-ups below are grounded in the program abstracts and speaker bios only, marked accordingly.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>October 15, 2026</span>
+<span class="digest-fact" markdown><a href="https://opisummit2026.sched.com/">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="from-platform-baseline-to-platform-handoff-automating-dpu-onboarding-with-sztp-anssi-soderena-fusionlayer-inc"><a href="from-platform-baseline-to-platform-handoff-automating-dpu-onboarding-wit/">From Platform Baseline to Platform Handoff: Automating DPU Onboarding with sZTP - Anssi Söderena, Fusionlayer, Inc</a><a class="headerlink" href="#from-platform-baseline-to-platform-handoff-automating-dpu-onboarding-with-sztp-anssi-soderena-fusionlayer-inc" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://opisummit2026.sched.com/event/2WY4V/from-platform-baseline-to-platform-handoff-automating-dpu-onboarding-with-sztp-anssi-soderena-fusionlayer-inc">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=QFNrSKinfYY">Recording</a></p>
+</div>
+<p>Speakers: Anssi Söderena, Senior Software Developer, FusionLayer Group</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="QFNrSKinfYY" data-start="0" href="https://www.youtube.com/watch?v=QFNrSKinfYY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/QFNrSKinfYY/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/QFNrSKinfYY/maxresdefault.jpg" alt="Play the recording: From Platform Baseline to Platform Handoff: Automating DPU Onboarding with sZTP - Anssi Söderena, Fusionlayer, Inc" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: A DPU that has booted and pulled an IP is not production-ready — it still needs a <em>trusted</em> identity, known-good software, configuration, and provable state before anything will schedule workloads on it. This is exactly the seam between identity/bootstrapping and infrastructure automation that most DPU material hand-waves, and it is a concrete OPI Blueprint with lab results rather than a concept pitch.</li>
+<li><strong>What</strong>: An OPI Blueprint that onboards an NVIDIA BlueField-3 from a known platform baseline using a Secure Zero Touch Provisioning (sZTP) server/client built on RFC 8572 (SZTP Bootstrap Data), then hands the DPU off to Kubernetes and the F5 Lifecycle Operator, with F5 BIG-IP Next for Kubernetes running TMM on the DPU. The session covers the workflow, lab findings, validation approach, compatibility constraints, and the boundary between sZTP onboarding and host/BMC-mediated BFB provisioning. (from abstract only)</li>
+<li><strong>How</strong>: sZTP establishes trust and identity, applies initial configuration, runs bootstrap scripts, and reports onboarding progress and errors back to the server. Validation is end-to-end: real application traffic is pushed through the DPU to prove the onboarded state actually works before handoff to the Kubernetes operators.</li>
+<li><strong>Where applicable</strong>: Firmly pinned to specific platform prerequisites in this blueprint: NVIDIA BlueField-3, the NVIDIA BF-Bundle, an F5-supported DOCA version, and vanilla Kubernetes with BIG-IP Next for Kubernetes. But the sZTP pattern itself (RFC 8572 + baseline attestation + traffic validation + operator handoff) is vendor-neutral and reusable for any DPU/SmartNIC onboarding pipeline. The presenter is the author of the open-source <code>fl-sztp</code> client, so expect real implementation detail.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="network-engines-hardware-matrix-problem-and-why-dpus-solve-what-nics-cant-josh-brooks-worldtech-itnetwork-engine"><a href="network-engines-hardware-matrix-problem-and-why-dpus-solve-what-nics-can/">Network Engine's Hardware Matrix Problem, and Why DPUs Solve What NICs Can't - Josh Brooks, WorldTech IT/Network Engine</a><a class="headerlink" href="#network-engines-hardware-matrix-problem-and-why-dpus-solve-what-nics-cant-josh-brooks-worldtech-itnetwork-engine" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://opisummit2026.sched.com/event/2WY4e/network-engines-hardware-matrix-problem-and-why-dpus-solve-what-nics-cant-josh-brooks-worldtech-itnetwork-engine">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=s2UsuWlTCWg">Recording</a></p>
+</div>
+<p>Speakers: Josh Brooks, Chief Solutions Architect / Distinguished Technologist, WorldTech IT</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="s2UsuWlTCWg" data-start="0" href="https://www.youtube.com/watch?v=s2UsuWlTCWg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/s2UsuWlTCWg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/s2UsuWlTCWg/maxresdefault.jpg" alt="Play the recording: Network Engine's Hardware Matrix Problem, and Why DPUs Solve What NICs Can't - Josh Brooks, WorldTech IT/Network Engine" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: This is a rare, candid product-engineering postmortem about the gap every operator hits with SmartNIC offload: hardware support is a matrix, not a feature. The speaker runs a real product (a hypervisor for network virtual appliances) and explains precisely why NIC offload paths fragment — E823 supports switchdev, X710 does not, OVS-DPDK double-burns CPU when the appliance already runs its own DPDK fast path.</li>
+<li><strong>What</strong>: WorldTech IT currently ships Network Engine without OVS, leaning on Linux bridges with NIC hardware acceleration, virtio multi-queue tuning, and SR-IOV/IOMMU passthrough for performance-critical NVAs — an explicitly pragmatic workaround. The talk announces OPI Blueprint 003: move OVS offload onto a DPU (NVIDIA BlueField-3 first, since it is largely packaged there), so switching stops consuming host CPU cores entirely, with the goal of generalizing the pattern to KVM and KubeVirt across the ecosystem. (from abstract only)</li>
+<li><strong>How</strong>: Offload the host OVS datapath to the DPU's Arm cores via the BlueField-3's existing OVS packaging, rather than stacking DPDK in the host on top of appliance DPDK, or depending on per-NIC switchdev support that only exists on part of the hardware matrix.</li>
+<li><strong>Where applicable</strong>: Describes WorldTech IT's own product engineering, but the underlying problem (per-NIC offload matrix, DPDK-in-host vs DPDK-in-appliance, when passthrough beats bridging) is common to anyone running virtualized network functions on commodity NICs. Blueprint work starts from one vendor's silicon (BlueField-3), which the speaker is upfront about — the OPI point is turning that single-vendor example into a repeatable standard.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="one-control-plane-many-dpuipus-sonic-dash-and-open-dse-powered-by-opi-serey-kong-intel-corporation-mounire-el-houmaidi-be-net"><a href="one-control-plane-many-dpuipus-sonic-dash-and-open-dse-powered-by-opi-se/">One Control Plane, Many DPU/IPUs: SONiC DASH and Open DSE Powered by OPI - Serey Kong, Intel Corporation &amp; Mounire El Houmaidi, BE-NET</a><a class="headerlink" href="#one-control-plane-many-dpuipus-sonic-dash-and-open-dse-powered-by-opi-serey-kong-intel-corporation-mounire-el-houmaidi-be-net" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://opisummit2026.sched.com/event/2WY4h/one-control-plane-many-dpuipus-sonic-dash-and-open-dse-powered-by-opi-serey-kong-intel-corporation-mounire-el-houmaidi-be-net">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=lekF_DDMKNA">Recording</a></p>
+</div>
+<p>Speakers: Serey Kong, Tech Lead - Driver Architect, <a href="../companies/intel/">Intel</a> Corporation; Mounire El Houmaidi, BE-NET</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="lekF_DDMKNA" data-start="0" href="https://www.youtube.com/watch?v=lekF_DDMKNA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/lekF_DDMKNA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/lekF_DDMKNA/maxresdefault.jpg" alt="Play the recording: One Control Plane, Many DPU/IPUs: SONiC DASH and Open DSE Powered by OPI - Serey Kong, Intel Corporation  Mounire El Houmaidi, BE-NET" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Heterogeneous DPU racks are becoming normal, and today each vendor's SDK drags its own control surface with it. This session demonstrates two working PoCs for the problem — translating a NOS control plane into vendor-neutral OPI APIs, and reconciling state across four vendors' DPUs — which is the central question for anyone planning multi-silicon DPU fleets.</li>
+<li><strong>What</strong>: Two proof-of-concepts. (1) An in-process SAI-to-OPI adapter (<code>libsai_opi_adapter.so</code>) that translates SONiC DASH overlay objects — ENI, VNet, ACL — directly into OPI gRPC calls, keeping proprietary vendor SDKs confined to the DPU SoC so the host control plane stays uniform across mixed-vendor racks. (2) Open DSE, an intent-driven framework that executes workloads across NVIDIA, Intel, AMD, and Marvell DPUs, using OPI to reconcile state and — notably — to distinguish <em>functional connectivity</em> from <em>true hardware offload</em>, i.e. to verify offload actually happened rather than being emulated in software. (from abstract only)</li>
+<li><strong>How</strong>: The adapter pattern maps SONiC's SAI object model onto OPI's gRPC northbound API; Open DSE drives intent across heterogeneous DPUs and uses OPI state reconciliation as the ground truth for whether offload is genuine. This is the software-offload trap in disguise — a NIC can accept the API and still do the work on the host — so the verification distinction is a genuinely practical contribution.</li>
+<li><strong>Where applicable</strong>: The SAI adapter is tied to SONiC DASH deployments; Open DSE spans NVIDIA, Intel, AMD, and Marvell silicon per the abstract. These are PoCs, so treat multi-vendor coverage as demonstrated-in-lab rather than production-hardened, but the architecture (vendor SDKs isolated on the SoC, one gRPC northbound) is broadly applicable and aligns with where the OPI project is heading.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="reimagining-dpus-for-storage-control-and-end-to-end-confidential-ai-jitendra-singh-anshuman-ghosh-microsoft"><a href="reimagining-dpus-for-storage-control-and-end-to-end-confidential-ai-jite/">Reimagining DPUs for Storage Control and End-to-End Confidential AI - Jitendra Singh &amp; Anshuman Ghosh, Microsoft</a><a class="headerlink" href="#reimagining-dpus-for-storage-control-and-end-to-end-confidential-ai-jitendra-singh-anshuman-ghosh-microsoft" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://opisummit2026.sched.com/event/2WY6I/reimagining-dpus-for-storage-control-and-end-to-end-confidential-ai-jitendra-singh-anshuman-ghosh-microsoft">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=ydaEIXprp-Q">Recording</a></p>
+</div>
+<p>Speakers: Jitendra Singh and Anshuman Ghosh, Senior Software Engineers, <a href="../companies/microsoft/">Microsoft</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="ydaEIXprp-Q" data-start="0" href="https://www.youtube.com/watch?v=ydaEIXprp-Q" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/ydaEIXprp-Q/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/ydaEIXprp-Q/maxresdefault.jpg" alt="Play the recording: Reimagining DPUs for Storage Control and End-to-End Confidential AI - Jitendra Singh  Anshuman Ghosh, Microsoft" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: The identity/attestation angle makes this worth watching: the claim is that DPUs evolve from offload engines into a <em>verifiable trust layer</em> for AI infrastructure — a place where attestation, policy enforcement, and tenant isolation live in hardware independent of the host. That intersects directly with workload-identity and confidential-computing roadmaps even if you don't run AI factories.</li>
+<li><strong>What</strong>: An architectural vision talk, not a results talk: how DPUs can serve as a common control and security layer across storage, networking, and AI infrastructure, enabling disaggregated storage, optimized storage-to-accelerator data paths (checkpoints, embeddings, vector indexes, KV caches, prompts), tenant isolation, attestation, and trusted-execution workflows for "confidential AI." It frames DPUs as foundational building blocks for security-first, AI-native platforms and closes on challenges and open opportunities. (from abstract only)</li>
+<li><strong>How</strong>: Mechanisms named in the abstract are DPU-mediated storage control, active data movement between storage and accelerators, and DPU-enforced policy/attestation across the data path. No specific system, measurement, or deployment is described, so expect architecture patterns rather than substantiated numbers.</li>
+<li><strong>Where applicable</strong>: Vendor (Microsoft) perspective on where DPU platforms are heading; it sketches a plausible convergence of confidential computing, attestation, and infrastructure offload, but nothing here is yet a deployable technique. Useful as roadmap signal for how attested data paths may be positioned over the next cycle.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="feeding-the-ai-factory-the-role-of-dpuipus-in-ai-infrastructure-tina-tsou-board-chair-lf-edge-rajalaxmi-angadi-senior-engineering-manager-intel-moderated-by-paul-pindell-f5-networks"><a href="feeding-the-ai-factory-the-role-of-dpuipus-in-ai-infrastructure-tina-tso/">Feeding the AI Factory: The Role of DPU/IPUs in AI Infrastructure - Tina Tsou, Board Chair, LF Edge; Rajalaxmi Angadi, Senior Engineering Manager, Intel &amp; Moderated by Paul Pindell, F5 Networks</a><a class="headerlink" href="#feeding-the-ai-factory-the-role-of-dpuipus-in-ai-infrastructure-tina-tsou-board-chair-lf-edge-rajalaxmi-angadi-senior-engineering-manager-intel-moderated-by-paul-pindell-f5-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://opisummit2026.sched.com/event/2WY7O/feeding-the-ai-factory-the-role-of-dpuipus-in-ai-infrastructure-tina-tsou-board-chair-lf-edge-rajalaxmi-angadi-senior-engineering-manager-intel-moderated-by-paul-pindell-f5-networks">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=RMVzDWcRIZI">Recording</a></p>
+</div>
+<p>Speakers: Tina Tsou (LF Edge / InfiniEdge AI TSC), Rajalaxmi Angadi (<a href="../companies/intel/">Intel</a>), Paul Pindell (<a href="../companies/f5/">F5</a> Networks)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="RMVzDWcRIZI" data-start="0" href="https://www.youtube.com/watch?v=RMVzDWcRIZI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/RMVzDWcRIZI/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/RMVzDWcRIZI/maxresdefault.jpg" alt="Play the recording: Feeding the AI Factory: The Role of DPU/IPUs in AI Infrastructure - Tina Tsou, Board Chair, LF Edge; Rajalaxmi Angadi, Senior Engineering Ma" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Positions the DPU question the industry is actually arguing about: at 800G+ AI-fabric scale, the bottleneck shifts from GPU compute to data movement, storage I/O, and infrastructure overhead — and the panel's through-line is whether OPI can keep heterogeneous DPU/IPU fleets from fragmenting into per-vendor silos.</li>
+<li><strong>What</strong>: A panel discussion on offloading virtual networking, NVMe-oF storage access for KV caches, security enforcement, and telemetry to DPUs/IPUs to reclaim host CPU/GPU cycles, enforce hardware-isolated security air gaps, and improve AI job completion times in multi-tenant clusters — with emphasis on OPI's role in preventing vendor lock-in via standardized gRPC APIs, gNMI telemetry, and the community DPU Operator as unified northbound abstractions. (from abstract only)</li>
+<li><strong>How</strong>: Panel format — no single technique to evaluate, but the framing (one open AI-factory blueprint over heterogeneous silicon, DPU as the multi-tenancy security boundary) is a useful synthesis of where hyperscalers and cloud providers are converging.</li>
+<li><strong>Where applicable</strong>: Relevant to multi-tenant AI cluster operators and cloud providers; the OPI abstractions it references are real upstream work (DPU Operator, gNMI, gRPC) but the session itself is discussion, not evaluation. Skew toward Intel/NVIDIA-era 800G assumptions.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="kv-cache-in-the-agentic-era-the-five-forces-that-decide-where-the-cache-lives-and-what-a-dpu-can-do-about-it-jigar-kuverji-savla-tensordyne"><a href="kv-cache-in-the-agentic-era-the-five-forces-that-decide-where-the-cache/">KV Cache in the Agentic Era: The Five Forces that Decide Where the Cache Lives, and What a DPU Can Do About It - Jigar Kuverji Savla, Tensordyne</a><a class="headerlink" href="#kv-cache-in-the-agentic-era-the-five-forces-that-decide-where-the-cache-lives-and-what-a-dpu-can-do-about-it-jigar-kuverji-savla-tensordyne" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://opisummit2026.sched.com/event/2YjCu/kv-cache-in-the-agentic-era-the-five-forces-that-decide-where-the-cache-lives-and-what-a-dpu-can-do-about-it-jigar-kuverji-savla-tensordyne">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=noXNOdN-rsA">Recording</a></p>
+</div>
+<p>Speakers: Jigar Kuverji Savla, ASIC Architect &amp; Product Manager, Tensordyne</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="noXNOdN-rsA" data-start="0" href="https://www.youtube.com/watch?v=noXNOdN-rsA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/noXNOdN-rsA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/noXNOdN-rsA/maxresdefault.jpg" alt="Play the recording: KV Cache in the Agentic Era: The Five Forces that Decide Where the Cache Lives, and What a DPU Can Do About It - Jigar Kuverji Savla, Tensor" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Agentic AI workloads re-read entire conversation histories each turn, which turns KV-cache placement into a <em>systems</em> problem spanning chip memory, system RAM, local drives, network storage, and — the speaker argues — the DPU as the data mover. This is a concrete case of AI workload pressure reshaping data-path design, with numbers attached.</li>
+<li><strong>What</strong>: A framework of "five forces" that determine where KV-cache memory should live: (1) agent turns — move memory blocks only at turn boundaries; (2) execution stages — keep the main processor on control while the DPU moves whole blocks; (3) model sizes — size storage to actual context needs and stop moving data at the crossover point; (4) orchestrators — store shared text once, route tasks to the holder, track hit rates by tier; (5) hardware paths — the physical route determines real speed. Claims measured results: a well-chosen path yields a 3.4x speedup while a poor one costs a 3.84x slowdown, raising the question of whether freed chip memory should buy cheaper servers or more useful capacity. The talk offers a blueprint for measuring the whole data path. (from abstract only)</li>
+<li><strong>How</strong>: Tiered memory placement with turn-boundary migration, DPU-driven bulk data movement, orchestrator-level deduplication and locality-aware routing, and an end-to-end path-measurement methodology.</li>
+<li><strong>Where applicable</strong>: Specific to agentic inference serving (context-heavy, read-mostly, turn-structured workloads) rather than training or general serving. The 3.4x/3.84x figures come from the speaker's own testing at Tensordyne; methodology details are promised in the talk but not in the abstract, so treat the exact numbers as single-vendor until seen.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="how-open-hardware-access-builds-the-next-generation-of-infrastructure-engineers-sam-dasilva-red-hat"><a href="how-open-hardware-access-builds-the-next-generation-of-infrastructure-en/">How Open Hardware Access Builds the Next Generation of Infrastructure Engineers - Sam Dasilva, Red Hat</a><a class="headerlink" href="#how-open-hardware-access-builds-the-next-generation-of-infrastructure-engineers-sam-dasilva-red-hat" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://opisummit2026.sched.com/event/2WY4b/how-open-hardware-access-builds-the-next-generation-of-infrastructure-engineers-sam-dasilva-red-hat">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=FCtZUv8rmcg">Recording</a></p>
+</div>
+<p>Speakers: Sam Dasilva, Associate Software Engineer, <a href="../companies/red-hat/">Red Hat</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="FCtZUv8rmcg" data-start="0" href="https://www.youtube.com/watch?v=FCtZUv8rmcg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/FCtZUv8rmcg/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/FCtZUv8rmcg/maxresdefault.jpg" alt="Play the recording: How Open Hardware Access Builds the Next Generation of Infrastructure Engineers - Sam Dasilva, Red Hat" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Not a networking technique, but a genuinely different argument: the open-source model fixed <em>contributor access to software</em> decades ago, but infrastructure-acceleration work (DPUs, SuperNICs) is still gated behind vendor employment — so the contributor pipeline for the exact hardware class this whole conference is about is artificially narrow. The talk walks one full path: CS student with no STEM background → Red Hat intern on DPU/SmartNIC work → OPI LFX mentee who upstreamed the DPU Operator.</li>
+<li><strong>What</strong>: The technical substance of the handoff: decoupling the DPU Operator from OpenShift-specific dependencies, making it work on vanilla Kubernetes, validating across Fedora/CentOS Stream/AlmaLinux via bootable containers, and standing up multi-vendor community CI for DPU hardware. Plus the argument that open hardware labs plus mentorship produce both working code and working engineers. (from abstract only)</li>
+<li><strong>How</strong>: Concretely: dependency decoupling for k8s portability, bootable-container-based OS validation matrices, and community CI across multiple DPU vendors — the same engineering patterns (portability, CI, upstreaming) applied to the hardware-access problem itself.</li>
+<li><strong>Where applicable</strong>: Relevant to anyone building or depending on open infrastructure projects facing hardware access as the bottleneck (DPU/IPU, SmartNIC, accelerator ecosystems). The multi-vendor CI story also matters operationally if you consume the DPU Operator: it describes what is actually validated, and on what.</li>
+</ul>
+</div>
+<h2 id="notes-on-the-rest-of-the-program">Notes on the rest of the program<a class="headerlink" href="#notes-on-the-rest-of-the-program" title="Permanent link">#</a></h2>
+<p>The program is short; beyond the sessions above it consists of meals, a break, and opening remarks. One session — <em>From Complexity to Deployment: Bridging the DPU Adoption Gap</em> (Benoit Paquin, Kalray) — has no abstract in the program text, only a speaker bio (Kalray product management lead), so its substance cannot be assessed; a vendor PM-led talk with no published abstract is likely roadmap-flavored and is not selected here.</p>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>OPI's maturity pivot from spec to blueprint</strong>: the strongest talks are OPI Blueprints with lab findings (sZTP onboarding, OVS-on-DPU, SAI adapter), not abstract API definitions — the project is now proving patterns on real silicon.</li>
+<li><strong>Multi-vendor verification as the hard problem</strong>: several sessions converge on distinguishing genuine hardware offload from software emulation, and keeping proprietary SDKs confined to the DPU SoC behind a gRPC/gNMI northbound.</li>
+<li><strong>DPUs as the security and trust boundary</strong>: hardware-isolated air gaps, attestation, trusted bootstrapping, and confidential-AI data paths — identity/trust functions are migrating into the DPU layer.</li>
+<li><strong>AI workloads are rewriting DPU requirements</strong>: KV-cache movement, NVMe-oF for accelerators, and turn-structured memory migration are driving a new class of data-path problems (and marketing) around DPUs.</li>
+<li><strong>The BlueField-3 gravity well</strong>: NVIDIA's BlueField-3 is the default first target for nearly every blueprint, which makes the single-vendor-to-standard transition both the explicit goal and the open risk of the ecosystem.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/opi-2026.md"><code>digests/opi-2026.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/opi-2026.md"><code>prompts/opi-2026.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../netnod-2026/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Netnod Tech Meeting 2026">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Netnod Tech Meeting 2026
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ocp-2026/" class="md-footer__link md-footer__link--next" aria-label="Next: OCP Global Summit 2026">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                OCP Global Summit 2026
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

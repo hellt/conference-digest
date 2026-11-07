@@ -679,7 +679,19 @@
 <span class="digest-fact" markdown>11 April 2025</span></p>
 </div>
 <div class="pick pick-core">
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.youtube.com/watch?v=cl9tBfiPNZk&amp;t=8286s">Recording</a></p>
+</div>
 <p>Paul Radford (InternetNZ)</p>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="cl9tBfiPNZk" data-start="8286" href="https://www.youtube.com/watch?v=cl9tBfiPNZk&t=8286s" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/cl9tBfiPNZk/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/cl9tBfiPNZk/maxresdefault.jpg" alt="Play the recording: DNSSEC for .nz: post-incident recovery and improvement (or, how to see the train coming down the tunnel next time. For Sure.)" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: A concrete, transferable postmortem in network security: the failure wasn't the zone data being internally consistent, it was that nobody validated how the zone behaves against <em>caching recursive resolvers</em> in the real world. The lesson — your correctness checks must model the consumer's cache, not just your own output — generalizes far beyond DNSSEC to any system validated in isolation from its consumers.</li>
 <li><strong>What</strong>: The story of the .nz DNSSEC incident, what observability gaps it exposed, and the "fake root" validation system InternetNZ built afterward: a test harness with caching recursive resolvers in the loop that validates zone outputs against real-world query/validation behavior before publication. (from abstract only)</li>

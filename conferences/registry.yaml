@@ -13,6 +13,9 @@
 # FIELDS
 #   key        Unique slug. Also the prompt/digest filename stem. No spaces.
 #   name       Human-readable conference + year.
+#   location   Optional "City · Country", shown beside the date in digest lists.
+#   description
+#              Optional one-sentence conference summary for digest list cards.
 #   start_date Optional ISO date the conference program began, for the site header.
 #   end_date   ISO date (YYYY-MM-DD) the event ended. Selection is based on this.
 #   fetcher    Which fetcher module handles it: usenix | ietf | sched | sigcomm | netdev | nanog | autocon | ovscon | ciscolive | ripe | nlnog | denog | gtc
@@ -43,6 +46,8 @@ conferences:
 
   - key: ciscolive-us-2025
     name: "Cisco Live US 2025 (San Diego)"
+    location: "San Diego · United States"
+    description: "Cisco's flagship conference for enterprise networking, data centers, automation, security, and cloud infrastructure."
     start_date: 2025-06-08
     end_date: 2025-06-12  # https://blogs.cisco.com/customerexperience/cisco-live-2025-back-in-san-diego
     fetcher: ciscolive
@@ -52,6 +57,8 @@ conferences:
 
   - key: ciscolive-eu-2025
     name: "Cisco Live Europe 2025 (Amsterdam)"
+    location: "Amsterdam · Netherlands"
+    description: "Cisco's flagship conference for enterprise networking, data centers, automation, security, and cloud infrastructure."
     start_date: 2025-02-09
     end_date: 2025-02-14  # https://blogs.cisco.com/cisco-devnet/explore-cisco-ios-xe-automation-at-cisco-live-emea-2025
     fetcher: ciscolive
@@ -67,6 +74,8 @@ conferences:
 
   - key: nsdi-2025
     name: "NSDI '25 (22nd USENIX Symposium on Networked Systems Design and Implementation)"
+    location: "Philadelphia · United States"
+    description: "Peer-reviewed research on the design, implementation, and operation of networked and distributed systems."
     start_date: 2025-04-28
     end_date: 2025-04-30
     fetcher: usenix
@@ -77,6 +86,8 @@ conferences:
 
   - key: usenix-security-2025
     name: "USENIX Security '25 (34th USENIX Security Symposium)"
+    location: "Seattle · United States"
+    description: "Research and practitioner advances in systems security, network security, privacy, identity, and applied cryptography."
     start_date: 2025-08-13
     end_date: 2025-08-15
     fetcher: usenix
@@ -87,6 +98,8 @@ conferences:
 
   - key: srecon-2025-americas
     name: "SREcon25 Americas"
+    location: "Santa Clara · United States"
+    description: "Engineering and operating reliable, complex distributed systems at scale, with deep technical discussions and production lessons."
     start_date: 2025-03-25
     end_date: 2025-03-27
     fetcher: usenix
@@ -104,6 +117,8 @@ conferences:
 
   - key: ietf-122
     name: "IETF 122 (Bangkok)"
+    location: "Bangkok · Thailand"
+    description: "The Internet Engineering Task Force meeting for developing Internet standards across routing, transport, security, and applications."
     start_date: 2025-03-15
     end_date: 2025-03-21
     fetcher: ietf
@@ -113,6 +128,8 @@ conferences:
 
   - key: ietf-123
     name: "IETF 123 (Madrid)"
+    location: "Madrid · Spain"
+    description: "The Internet Engineering Task Force meeting for developing Internet standards across routing, transport, security, and applications."
     start_date: 2025-07-19
     end_date: 2025-07-25
     fetcher: ietf
@@ -130,6 +147,8 @@ conferences:
 
   - key: kubecon-eu-2025
     name: "KubeCon + CloudNativeCon Europe 2025 (London)"
+    location: "London · United Kingdom"
+    description: "The Cloud Native Computing Foundation's flagship conference for Kubernetes, cloud-native infrastructure, networking, and platform engineering."
     start_date: 2025-04-01
     end_date: 2025-04-04
     fetcher: sched
@@ -139,6 +158,8 @@ conferences:
 
   - key: kubecon-na-2025
     name: "KubeCon + CloudNativeCon North America 2025"
+    location: "Atlanta · United States"
+    description: "The Cloud Native Computing Foundation's flagship conference for Kubernetes, cloud-native infrastructure, networking, and platform engineering."
     start_date: 2025-11-10
     end_date: 2025-11-13  # https://events.linuxfoundation.org/sponsor-cncf-events
     fetcher: sched
@@ -155,6 +176,8 @@ conferences:
 
   - key: sigcomm-2025
     name: "ACM SIGCOMM 2025 (Coimbra)"
+    location: "Coimbra · Portugal"
+    description: "ACM's flagship conference on data communication, covering network architecture, protocols, systems, measurement, and security."
     start_date: 2025-09-08
     end_date: 2025-09-11
     fetcher: sigcomm
@@ -171,6 +194,8 @@ conferences:
 
   - key: netdev-0x1a
     name: "Netdev 0x1A (Rome)"
+    location: "Rome · Italy"
+    description: "A technical conference on Linux kernel networking, including eBPF/XDP, packet processing, NIC offload, and transport internals."
     start_date: 2026-07-13
     end_date: 2026-07-16
     fetcher: netdev
@@ -187,6 +212,8 @@ conferences:
 
   - key: gtc-2026
     name: "NVIDIA GTC 2026 (San Jose)"
+    location: "San Jose · United States"
+    description: "NVIDIA's conference on accelerated computing, AI infrastructure, networking, and large-scale AI systems."
     start_date: 2026-03-16
     end_date: 2026-03-19
     fetcher: gtc
@@ -203,6 +230,8 @@ conferences:
 
   - key: kubecon-eu-2026
     name: "KubeCon + CloudNativeCon Europe 2026"
+    location: "Amsterdam · Netherlands"
+    description: "The Cloud Native Computing Foundation's flagship conference for Kubernetes, cloud-native infrastructure, networking, and platform engineering."
     start_date: 2026-03-23
     end_date: 2026-03-26  # https://events.linuxfoundation.org/about/calendar/archive/
     fetcher: sched
@@ -213,6 +242,8 @@ conferences:
 
   - key: nsdi-2026
     name: "NSDI '26 (USENIX Symposium on Networked Systems Design and Implementation)"
+    location: "Renton · United States"
+    description: "Peer-reviewed research on the design, implementation, and operation of networked and distributed systems."
     end_date: 2026-04-30
     fetcher: usenix
     run_location: local
@@ -223,6 +254,8 @@ conferences:
 
   - key: ietf-124
     name: "IETF 124 (Montreal)"
+    location: "Montreal · Canada"
+    description: "The Internet Engineering Task Force meeting for developing Internet standards across routing, transport, security, and applications."
     start_date: 2025-11-01
     end_date: 2025-11-07
     fetcher: ietf
@@ -233,6 +266,8 @@ conferences:
 
   - key: ietf-125
     name: "IETF 125 (Shenzhen)"
+    location: "Shenzhen · China"
+    description: "The Internet Engineering Task Force meeting for developing Internet standards across routing, transport, security, and applications."
     start_date: 2026-03-14
     end_date: 2026-03-20
     fetcher: ietf
@@ -243,6 +278,8 @@ conferences:
 
   - key: ietf-126
     name: "IETF 126 (Vienna)"
+    location: "Vienna · Austria"
+    description: "The Internet Engineering Task Force meeting for developing Internet standards across routing, transport, security, and applications."
     start_date: 2026-07-18
     end_date: 2026-07-24
     fetcher: ietf
@@ -253,6 +290,7 @@ conferences:
 
   - key: ietf-127
     name: "IETF 127 (San Francisco)"
+    description: "The Internet Engineering Task Force meeting for developing Internet standards across routing, transport, security, and applications."
     end_date: 2026-11-20
     fetcher: ietf
     program_url: "https://datatracker.ietf.org/meeting/127/agenda.json"
@@ -262,6 +300,7 @@ conferences:
 
   - key: ietf-128
     name: "IETF 128 (Kuala Lumpur)"
+    description: "The Internet Engineering Task Force meeting for developing Internet standards across routing, transport, security, and applications."
     end_date: 2027-03-12
     fetcher: ietf
     program_url: "https://datatracker.ietf.org/meeting/128/agenda.json"
@@ -271,6 +310,7 @@ conferences:
 
   - key: ietf-129
     name: "IETF 129 (Berlin)"
+    description: "The Internet Engineering Task Force meeting for developing Internet standards across routing, transport, security, and applications."
     end_date: 2027-07-23
     fetcher: ietf
     program_url: "https://datatracker.ietf.org/meeting/129/agenda.json"
@@ -280,6 +320,8 @@ conferences:
 
   - key: nanog-96
     name: "NANOG 96"
+    location: "San Francisco · United States"
+    description: "The North American Network Operators' Group meeting on Internet operations, routing, interconnection, infrastructure, and automation."
     start_date: 2026-02-02
     end_date: 2026-02-04
     fetcher: nanog
@@ -289,6 +331,8 @@ conferences:
 
   - key: nanog-97
     name: "NANOG 97"
+    location: "Bellevue · United States"
+    description: "The North American Network Operators' Group meeting on Internet operations, routing, interconnection, infrastructure, and automation."
     start_date: 2026-06-01
     end_date: 2026-06-03
     fetcher: nanog
@@ -298,6 +342,8 @@ conferences:
 
   - key: nanog-98
     name: "NANOG 98"
+    location: "Miami · United States"
+    description: "The North American Network Operators' Group meeting on Internet operations, routing, interconnection, infrastructure, and automation."
     start_date: 2026-10-19
     end_date: 2026-10-21
     fetcher: nanog
@@ -307,6 +353,8 @@ conferences:
 
   - key: autocon-3
     name: "AutoCon 3 (Prague)"
+    location: "Prague · Czechia"
+    description: "A practitioner conference on network automation, orchestration, observability, source of truth, testing, and AI for NetOps."
     start_date: 2025-05-28
     end_date: 2025-05-30
     fetcher: autocon
@@ -316,6 +364,8 @@ conferences:
 
   - key: autocon-4
     name: "AutoCon 4 (Austin)"
+    location: "Austin · United States"
+    description: "A practitioner conference on network automation, orchestration, observability, source of truth, testing, and AI for NetOps."
     start_date: 2025-11-19
     end_date: 2025-11-21
     fetcher: autocon
@@ -325,6 +375,8 @@ conferences:
 
   - key: autocon-5
     name: "AutoCon 5 (Munich)"
+    location: "Munich · Germany"
+    description: "A practitioner conference on network automation, orchestration, observability, source of truth, testing, and AI for NetOps."
     start_date: 2026-06-10
     end_date: 2026-06-12
     fetcher: autocon
@@ -334,6 +386,8 @@ conferences:
 
   - key: ovscon-2024
     name: "Open vSwitch and OVN 2024 Fall Conference (Prague)"
+    location: "Prague · Czechia"
+    description: "The Open vSwitch and OVN community conference on virtual networking, hardware offload, Kubernetes networking, and programmable infrastructure."
     start_date: 2024-11-20
     end_date: 2024-11-21
     fetcher: ovscon
@@ -343,6 +397,8 @@ conferences:
 
   - key: ovscon-2025
     name: "Open vSwitch and OVN 2025 Fall Conference (Prague)"
+    location: "Prague · Czechia"
+    description: "The Open vSwitch and OVN community conference on virtual networking, hardware offload, Kubernetes networking, and programmable infrastructure."
     start_date: 2025-11-19
     end_date: 2025-11-20
     fetcher: ovscon
@@ -352,6 +408,7 @@ conferences:
 
   - key: ovscon-2026
     name: "Open vSwitch and OVN 2026 Fall Conference"
+    description: "The Open vSwitch and OVN community conference on virtual networking, hardware offload, Kubernetes networking, and programmable infrastructure."
     end_date: 2026-11-04
     fetcher: ovscon
     program_url: "https://www.openvswitch.org/support/ovscon2026/"
@@ -361,6 +418,8 @@ conferences:
 
   - key: ripe-91
     name: "RIPE 91 (Bucharest)"
+    location: "Bucharest · Romania"
+    description: "A European operator meeting on Internet infrastructure, routing, DNS, peering, measurement, policy, and network automation."
     start_date: 2025-10-20
     end_date: 2025-10-24
     fetcher: ripe
@@ -370,6 +429,8 @@ conferences:
 
   - key: ripe-92
     name: "RIPE 92 (Edinburgh)"
+    location: "Edinburgh · United Kingdom"
+    description: "A European operator meeting on Internet infrastructure, routing, DNS, peering, measurement, policy, and network automation."
     start_date: 2026-05-18
     end_date: 2026-05-22
     fetcher: ripe
@@ -379,6 +440,8 @@ conferences:
 
   - key: nlnog-2025
     name: "NLNOG Day 2025 (Amsterdam)"
+    location: "Amsterdam · Netherlands"
+    description: "The Dutch network operators' meeting on routing, Internet infrastructure, automation, and operational practice."
     start_date: 2025-09-30
     end_date: 2025-09-30
     fetcher: nlnog
@@ -388,6 +451,8 @@ conferences:
 
   - key: nlnog-2026
     name: "NLNOG Day 2026 (Hilversum)"
+    location: "Hilversum · Netherlands"
+    description: "The Dutch network operators' meeting on routing, Internet infrastructure, automation, and operational practice."
     start_date: 2026-09-04
     end_date: 2026-09-04
     fetcher: nlnog
@@ -397,6 +462,8 @@ conferences:
 
   - key: denog-17
     name: "DENOG 17 (Essen)"
+    location: "Essen · Germany"
+    description: "The German network operators' conference on Internet infrastructure, routing, data centers, automation, and security."
     start_date: 2025-11-09
     end_date: 2025-11-11
     fetcher: denog
@@ -406,6 +473,7 @@ conferences:
 
   - key: denog-18
     name: "DENOG 18 (Essen)"
+    description: "The German network operators' conference on Internet infrastructure, routing, data centers, automation, and security."
     start_date: 2026-11-15
     end_date: 2026-11-17
     fetcher: denog
@@ -415,6 +483,8 @@ conferences:
 
   - key: ripe-93
     name: "RIPE 93"
+    location: "Sofia · Bulgaria"
+    description: "A European operator meeting on Internet infrastructure, routing, DNS, peering, measurement, policy, and network automation."
     end_date: 2026-10-30
     fetcher: ripe
     program_url: "https://ripe93.ripe.net/programme/meeting-plan/"
@@ -424,6 +494,7 @@ conferences:
 
   - key: tnc-2026
     name: "TNC26 (GÉANT research networking conference)"
+    description: "GÉANT's research and education networking conference on NREN infrastructure, campus and data-center networking, identity, and security."
     end_date: 2026-06-12
     fetcher: tnc
     program_url: "https://tnc26.geant.org/"
@@ -432,6 +503,8 @@ conferences:
 
   - key: nogfi-2026-06
     name: "nog.fi meeting 2026.06"
+    location: "Tampere · Finland"
+    description: "The Finnish network operators' meeting on Internet infrastructure, routing, security, and operational practice."
     start_date: 2026-06-16
     end_date: 2026-06-17
     fetcher: indico
@@ -441,6 +514,7 @@ conferences:
 
   - key: nogfi-2026-11
     name: "nog.fi meeting 2026.11"
+    description: "The Finnish network operators' meeting on Internet infrastructure, routing, security, and operational practice."
     start_date: 2026-11-24
     end_date: 2026-11-24
     fetcher: indico
@@ -450,6 +524,8 @@ conferences:
 
   - key: grnog-20
     name: "GRNOG 20"
+    location: "Athens · Greece"
+    description: "The Greek network operators' meeting on Internet infrastructure, routing, security, and operational practice."
     start_date: 2026-06-30
     end_date: 2026-06-30
     fetcher: indico
@@ -459,6 +535,8 @@ conferences:
 
   - key: ciscolive-us-2026
     name: "Cisco Live US 2026 (Las Vegas)"
+    location: "Las Vegas · United States"
+    description: "Cisco's flagship conference for enterprise networking, data centers, automation, security, and cloud infrastructure."
     end_date: 2026-06-30
     fetcher: ciscolive
     program_url: "https://www.ciscolive.com/on-demand/on-demand-library.html"
@@ -468,6 +546,8 @@ conferences:
 
   - key: ciscolive-eu-2026
     name: "Cisco Live Europe 2026 (Amsterdam)"
+    location: "Amsterdam · Netherlands"
+    description: "Cisco's flagship conference for enterprise networking, data centers, automation, security, and cloud infrastructure."
     end_date: 2026-03-31
     fetcher: ciscolive
     program_url: "https://www.ciscolive.com/on-demand/on-demand-library.html"
@@ -477,6 +557,7 @@ conferences:
 
   - key: autocon-6
     name: "AutoCon 6"
+    description: "A practitioner conference on network automation, orchestration, observability, source of truth, testing, and AI for NetOps."
     end_date: 2026-11-20
     fetcher: autocon
     program_url: "https://networkautomation.forum/autocon6"
@@ -486,6 +567,7 @@ conferences:
 
   - key: ccs-2026
     name: "ACM CCS 2026"
+    description: "ACM's flagship computer security conference covering applied cryptography, authentication, systems and network security, privacy, and measurement."
     end_date: 2026-11-18
     fetcher: ccs
     program_url: "https://www.sigsac.org/ccs/CCS2026/program/schedule.html"
@@ -495,6 +577,8 @@ conferences:
 
   - key: imc-2026
     name: "ACM IMC 2026"
+    location: "Karlsruhe · Germany"
+    description: "ACM's Internet measurement conference on network topology, performance, security, censorship, and Internet-wide analysis."
     end_date: 2026-10-16
     fetcher: imc
     program_url: "https://conferences.sigcomm.org/imc/2026/program/"
@@ -504,6 +588,8 @@ conferences:
 
   - key: conext-2025
     name: "ACM CoNEXT 2025"
+    location: "Hong Kong · China"
+    description: "ACM's conference on emerging networking experiments and systems, from transport and data centers to wireless and measurement."
     end_date: 2025-12-02
     fetcher: conext
     program_url: "https://conferences.sigcomm.org/co-next/2025/partials/program.html"
@@ -513,6 +599,8 @@ conferences:
 
   - key: apricot-2026
     name: "APRICOT 2026 (Jakarta)"
+    location: "Jakarta · Indonesia"
+    description: "The Asia-Pacific Internet operators' summit on routing, peering, DNS, infrastructure, security, and automation."
     end_date: 2026-02-12
     fetcher: apricot
     program_url: "https://api.apnic.net/web/v1/events"
@@ -522,6 +610,8 @@ conferences:
 
   - key: fosdem-2026
     name: "FOSDEM 2026"
+    location: "Brussels · Belgium"
+    description: "Europe's large free and open-source software conference, with dedicated tracks for networking, security, infrastructure, and open standards."
     end_date: 2026-02-01
     fetcher: fosdem
     program_url: "https://fosdem.org/2026/schedule/xml"
@@ -531,6 +621,8 @@ conferences:
 
   - key: hacklu-2025
     name: "hack.lu 2025"
+    location: "Luxembourg · Luxembourg"
+    description: "An open security conference organized by CIRCL, covering offensive and defensive security, privacy, identity, and Internet infrastructure."
     end_date: 2025-10-24
     fetcher: pretalx
     program_url: "https://pretalx.com/hack-lu-2025/schedule/export/schedule.json"
@@ -540,6 +632,8 @@ conferences:
 
   - key: hacklu-2026
     name: "hack.lu 2026"
+    location: "Luxembourg · Luxembourg"
+    description: "An open security conference organized by CIRCL, covering offensive and defensive security, privacy, identity, and Internet infrastructure."
     end_date: 2026-10-23
     fetcher: pretalx
     program_url: "https://pretalx.com/hack-lu-2026/schedule/export/schedule.json"
@@ -549,6 +643,8 @@ conferences:
 
   - key: arin-56
     name: "ARIN 56 Public Policy and Members Meeting"
+    location: "Arlington · United States"
+    description: "ARIN's public policy and members meeting on Internet number resources, registry operations, IPv6, routing security, and governance."
     end_date: 2025-10-31
     fetcher: arin
     program_url: "https://www.arin.net/participate/meetings/ARIN56"
@@ -558,6 +654,8 @@ conferences:
 
   - key: arin-57
     name: "ARIN 57 Public Policy and Members Meeting"
+    location: "Louisville · United States"
+    description: "ARIN's public policy and members meeting on Internet number resources, registry operations, IPv6, routing security, and governance."
     end_date: 2026-04-22
     fetcher: arin
     program_url: "https://www.arin.net/participate/meetings/ARIN57"
@@ -567,6 +665,8 @@ conferences:
 
   - key: arin-58
     name: "ARIN 58 Public Policy and Members Meeting"
+    location: "Miami · United States"
+    description: "ARIN's public policy and members meeting on Internet number resources, registry operations, IPv6, routing security, and governance."
     end_date: 2026-10-23
     fetcher: arin
     program_url: "https://www.arin.net/participate/meetings/ARIN58"
@@ -576,6 +676,8 @@ conferences:
 
   - key: lacnic-45
     name: "LACNIC 45"
+    location: "Panama City · Panama"
+    description: "The Latin American and Caribbean Internet registry meeting on routing, IPv6, DNS, peering, security, and regional policy."
     end_date: 2026-05-28
     fetcher: lacnic
     program_url: "https://apievt.lacnic.net/wp-json/wp/v2"
@@ -585,6 +687,8 @@ conferences:
 
   - key: lacnic-46
     name: "LACNIC 46"
+    location: "Mendoza · Argentina"
+    description: "The Latin American and Caribbean Internet registry meeting on routing, IPv6, DNS, peering, security, and regional policy."
     end_date: 2026-10-22
     fetcher: lacnic
     program_url: "https://apievt.lacnic.net/wp-json/wp/v2"
@@ -594,6 +698,8 @@ conferences:
 
   - key: pets-2026
     name: "PETS 2026 (Privacy Enhancing Technologies Symposium)"
+    location: "Calgary · Canada"
+    description: "The Privacy Enhancing Technologies Symposium on anonymity, privacy engineering, measurement, identity, and usable privacy."
     end_date: 2026-07-25
     fetcher: pets
     program_url: "https://petsymposium.org/2026/paperlist.php"
@@ -603,6 +709,8 @@ conferences:
 
   - key: ausnog-2025
     name: "AusNOG 2025"
+    location: "Melbourne · Australia"
+    description: "The Australian network operators' conference on Internet infrastructure, peering, data centers, routing, automation, and security."
     end_date: 2025-01-10
     fetcher: ausnog
     program_url: "https://www.ausnog.net/events/ausnog-2025/program"
@@ -612,6 +720,8 @@ conferences:
 
   - key: ausnog-2026
     name: "AusNOG 2026"
+    location: "Brisbane · Australia"
+    description: "The Australian network operators' conference on Internet infrastructure, peering, data centers, routing, automation, and security."
     end_date: 2026-09-05
     fetcher: ausnog
     program_url: "https://www.ausnog.net/events/ausnog-2026/program"
@@ -621,6 +731,8 @@ conferences:
 
   - key: peeringdays-2026
     name: "Peering Days 2026"
+    location: "Bologna · Italy"
+    description: "A Central and Eastern European conference on interconnection, Internet exchanges, routing security, optics, and data-center interconnect."
     end_date: 2026-03-25
     fetcher: peeringdays
     program_url: "https://2026.peeringdays.eu/programme/"
@@ -630,6 +742,8 @@ conferences:
 
   - key: moreip-2025
     name: "MORE-IP 2025"
+    location: "Amsterdam · Netherlands"
+    description: "AMS-IX's community event on interconnection, peering, Internet exchanges, connectivity policy, and digital infrastructure."
     end_date: 2025-05-29
     fetcher: moreip
     program_url: "https://more-ip-event.net/more-ip-2025/agenda/"
@@ -639,6 +753,8 @@ conferences:
 
   - key: moreip-2026
     name: "MORE-IP 2026"
+    location: "Amsterdam · Netherlands"
+    description: "AMS-IX's community event on interconnection, peering, Internet exchanges, connectivity policy, and digital infrastructure."
     end_date: 2026-05-29
     fetcher: moreip
     program_url: "https://more-ip-event.net/more-ip-2026/agenda/"
@@ -648,6 +764,7 @@ conferences:
 
   - key: moreip-2027
     name: "MORE-IP 2027"
+    description: "AMS-IX's community event on interconnection, peering, Internet exchanges, connectivity policy, and digital infrastructure."
     end_date: 2027-05-29
     fetcher: moreip
     program_url: "https://more-ip-event.net/more-ip-2027/agenda/"
@@ -657,6 +774,8 @@ conferences:
 
   - key: swinog-41
     name: "SwiNOG #41"
+    location: "Bern · Switzerland"
+    description: "The Swiss network operators' meeting on Internet infrastructure, routing, peering, data centers, automation, and security."
     end_date: 2026-04-28
     fetcher: swinog
     program_url: "https://www.swinog.ch/meetings/swinog41/"
@@ -666,6 +785,8 @@ conferences:
 
   - key: swinog-42
     name: "SwiNOG #42"
+    location: "Solothurn · Switzerland"
+    description: "The Swiss network operators' meeting on Internet infrastructure, routing, peering, data centers, automation, and security."
     end_date: 2026-10-21
     fetcher: swinog
     program_url: "https://www.swinog.ch/meetings/swinog42/"
@@ -675,6 +796,8 @@ conferences:
 
   - key: capacity-2026
     name: "Capacity Europe 2026"
+    location: "London · United Kingdom"
+    description: "A carrier and digital-infrastructure conference on connectivity, fiber, subsea cables, data centers, AI infrastructure, and investment."
     end_date: 2026-10-15
     fetcher: capacity
     program_url: "https://www.capacityeurope.com/agenda/"
@@ -684,6 +807,8 @@ conferences:
 
   - key: netuk-2
     name: "NetUK2 (The Brewery)"
+    location: "London · United Kingdom"
+    description: "The UK network infrastructure community meeting on Internet exchanges, peering, routing, automation, and operational practice."
     end_date: 2025-07-08
     fetcher: indico
     program_url: "https://indico.netuk.org/event/2/"
@@ -693,6 +818,8 @@ conferences:
 
   - key: netuk-3
     name: "NetUK3 (The Brewery)"
+    location: "London · United Kingdom"
+    description: "The UK network infrastructure community meeting on Internet exchanges, peering, routing, automation, and operational practice."
     end_date: 2026-07-07
     fetcher: indico
     program_url: "https://indico.netuk.org/event/3/"
@@ -702,6 +829,8 @@ conferences:
 
   - key: dknog-16
     name: "DKNOG16 (Scandic Copenhagen)"
+    location: "Copenhagen · Denmark"
+    description: "The Danish network operators' meeting on Internet infrastructure, routing, security, automation, and operational practice."
     end_date: 2026-03-06
     fetcher: indico
     program_url: "https://dknog16.dknog.dk/"
@@ -711,6 +840,8 @@ conferences:
 
   - key: itnog-9
     name: "ITNOG9"
+    location: "Bologna · Italy"
+    description: "The Italian network operators' conference on Internet infrastructure, routing, IPv6, peering, data centers, and security."
     end_date: 2025-05-20
     fetcher: itnog
     program_url: "https://www.itnog.it/itnog9"
@@ -720,6 +851,8 @@ conferences:
 
   - key: itnog-10
     name: "ITNOG10"
+    location: "Bologna · Italy"
+    description: "The Italian network operators' conference on Internet infrastructure, routing, IPv6, peering, data centers, and security."
     end_date: 2026-04-21
     fetcher: itnog
     program_url: "https://www.itnog.it/itnog10"
@@ -729,6 +862,8 @@ conferences:
 
   - key: netnod-2025
     name: "Netnod Tech Meeting 2025"
+    location: "Stockholm · Sweden"
+    description: "Netnod's technical meeting on interconnection, Internet exchanges, routing security, DNS, timing, and network infrastructure."
     end_date: 2025-10-09
     fetcher: netnod
     program_url: "https://www.netnod.se/netnod-tech-meeting-2025"
@@ -738,6 +873,8 @@ conferences:
 
   - key: netnod-2026
     name: "Netnod Tech Meeting 2026"
+    location: "Stockholm · Sweden"
+    description: "Netnod's technical meeting on interconnection, Internet exchanges, routing security, DNS, timing, and network infrastructure."
     end_date: 2026-10-06
     fetcher: netnod
     program_url: "https://www.netnod.se/netnod-tech-meeting-2026"
@@ -747,6 +884,8 @@ conferences:
 
   - key: cfgmgmtcamp-2026
     name: "CfgMgmtCamp Ghent 2026"
+    location: "Ghent · Belgium"
+    description: "An open-source infrastructure automation conference covering configuration management, GitOps, network automation, and immutable systems."
     end_date: 2026-02-04
     fetcher: pretalx
     program_url: "https://cfp.cfgmgmtcamp.be/ghent2026/schedule/export/schedule.json"
@@ -756,6 +895,7 @@ conferences:
 
   - key: moreip-2028
     name: "MORE-IP 2028"
+    description: "AMS-IX's community event on interconnection, peering, Internet exchanges, connectivity policy, and digital infrastructure."
     end_date: 2028-05-29
     fetcher: moreip
     program_url: "https://more-ip-event.net/more-ip-2028/agenda/"
@@ -765,6 +905,8 @@ conferences:
 
   - key: ocp-2025
     name: "OCP Global Summit 2025"
+    location: "San Jose · United States"
+    description: "The Open Compute Project summit on open data-center hardware, AI infrastructure, networking, storage, power, cooling, and security."
     end_date: 2025-10-16
     fetcher: ocp
     program_url: "https://2025ocpglobal.fnvirtual.app/a/schedule/"
@@ -774,6 +916,8 @@ conferences:
 
   - key: ocp-2026
     name: "OCP Global Summit 2026"
+    location: "San Jose · United States"
+    description: "The Open Compute Project summit on open data-center hardware, AI infrastructure, networking, storage, power, cooling, and security."
     end_date: 2026-10-15
     fetcher: ocp
     program_url: "https://2026ocpglobal.fnvirtual.app/a/schedule/"
@@ -789,6 +933,8 @@ conferences:
   # are already gone; 2026 (ZANOG@iWeek, Irene) is the one with a live program.
   - key: zanog-2026
     name: "ZANOG@iWeek 2026"
+    location: "Irene · South Africa"
+    description: "The South African network operators' meeting at iWeek, covering Internet infrastructure, routing, peering, DNS, and policy."
     type: operator
     end_date: 2026-04-23
     fetcher: zanog
@@ -798,6 +944,8 @@ conferences:
 
   - key: nznog-2025
     name: "NZNOG 2025"
+    location: "Napier · New Zealand"
+    description: "The New Zealand network operators' conference on Internet infrastructure, peering, DNS, routing security, optics, and automation."
     type: operator
     end_date: 2025-04-11
     fetcher: nznog
@@ -808,6 +956,8 @@ conferences:
 
   - key: nznog-2026
     name: "NZNOG 2026"
+    location: "Christchurch · New Zealand"
+    description: "The New Zealand network operators' conference on Internet infrastructure, peering, DNS, routing security, optics, and automation."
     type: operator
     end_date: 2026-03-27
     fetcher: nznog
@@ -818,6 +968,8 @@ conferences:
 
   - key: pytorch-2026
     name: "PyTorch Conference 2026"
+    location: "San Jose · United States"
+    description: "The PyTorch community conference on machine-learning frameworks, distributed training, inference, production ML, and hardware acceleration."
     end_date: 2026-10-21
     fetcher: sessionize
     program_url: "https://events.linuxfoundation.org/pytorch-conference-north-america/"
@@ -827,6 +979,8 @@ conferences:
 
   - key: mlsys-2025
     name: "MLSys 2025"
+    location: "Santa Clara · United States"
+    description: "A research conference on systems for machine learning, including training and inference infrastructure, distributed systems, and ML compilers."
     end_date: 2025-05-15
     fetcher: mlsys
     program_url: "https://mlsys.org/virtual/2025/papers.html?filter=titles"
@@ -836,6 +990,8 @@ conferences:
 
   - key: mlsys-2026
     name: "MLSys 2026"
+    location: "Bellevue · United States"
+    description: "A research conference on systems for machine learning, including training and inference infrastructure, distributed systems, and ML compilers."
     end_date: 2026-05-22
     fetcher: mlsys
     program_url: "https://mlsys.org/virtual/2026/papers.html?filter=titles"
@@ -845,6 +1001,8 @@ conferences:
 
   - key: opi-2026
     name: "OPI Summit on DPUs/IPUs 2026"
+    location: "San Jose · United States"
+    description: "The Open Programmable Infrastructure summit on DPU/IPU APIs, offload, cloud-native integration, and AI infrastructure."
     end_date: 2026-10-15
     fetcher: sched
     program_url: "https://opisummit2026.sched.com/list/descriptions/"
@@ -854,6 +1012,7 @@ conferences:
 
   - key: atscale-networking-2026
     name: "@Scale: Networking 2026"
+    description: "Meta's large-scale networking conference on AI fabrics, RDMA, data-center and backbone architecture, operations, and optical interconnects."
     end_date: 2026-08-25
     fetcher: atscale
     program_url: "https://atscaleconference.com/events/networking-2026/"
@@ -863,6 +1022,7 @@ conferences:
 
   - key: atscale-product-2026
     name: "@Scale: Product 2026"
+    description: "Meta's AI-native product engineering conference on media, agents, product velocity, applied AI, and production reliability."
     end_date: 2026-10-28
     fetcher: atscale
     program_url: "https://atscaleconference.com/events/product-2026/"
@@ -872,6 +1032,7 @@ conferences:
 
   - key: atscale-ai-data-2026
     name: "@Scale: AI & Data 2026"
+    description: "Meta's AI and data systems conference on agents, recommender systems, ML infrastructure, training data, and data platforms."
     end_date: 2026-06-17
     fetcher: atscale
     program_url: "https://atscaleconference.com/events/ai-data-2026/"
@@ -881,6 +1042,7 @@ conferences:
 
   - key: atscale-systems-reliability-2026
     name: "@Scale: Systems & Reliability 2026"
+    description: "Meta's systems and reliability conference on AI infrastructure, cloud and data-center systems, production operations, and incident response."
     end_date: 2026-06-25
     fetcher: atscale
     program_url: "https://atscaleconference.com/events/systems-reliability-2026/"

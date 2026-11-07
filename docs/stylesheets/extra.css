@@ -141,11 +141,8 @@ a:focus-visible, button:focus-visible, label:focus-visible {
 .md-typeset .cd-hero { padding: .4rem 0 1.8rem; max-width: 48rem; }
 .md-typeset .cd-eyebrow { font-size: .5rem; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 1rem; color: var(--signal-muted); }
 .md-typeset .cd-hero h1 { font-size: clamp(2.2rem, 4.7vw, 3.8rem); margin: 0 0 .8rem; }
-.md-typeset .cd-hero h1 em { font-style: normal; font-weight: 300; color: var(--signal-accent); }
 .md-typeset .cd-hero > p:last-child { max-width: 34rem; margin: 0; color: var(--signal-muted); font-size: .7rem; }
 .md-typeset .cd-hero .headerlink { display: none; }
-.md-content__inner > header.md-typeset > h2 { padding: 1.1rem 0; margin: 0; border-top: 1px solid var(--signal-rule); font-size: 1.25rem; }
-.md-content__inner > header.md-typeset > h2 .headerlink { display: none; }
 .md-post--excerpt { display: grid; grid-template-columns: 9rem minmax(0,1fr); gap: 1.4rem; margin: 0; padding: 1.5rem 0; border-top: 1px solid var(--signal-rule); }
 .md-post--excerpt .md-post__header { margin: 0; }
 .md-post--excerpt .md-post__authors { display: none; }

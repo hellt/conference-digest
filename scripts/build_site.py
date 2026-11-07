@@ -1313,6 +1313,9 @@ def render_post(key: str, entry: dict, meta: dict, body: str,
     if re.match(r"^\d+ picks\b", intro):
         intro = intro.partition("\n\n")[2]
     name = entry.get("name") or meta.get("conference") or key
+    description = str(entry.get("description", "")).strip()
+    if not description:
+        raise ValueError(f"{key}: add a short description to its registry entry")
     title = clean_title(h1, name)
     written_by = str(meta.get("written_by", "")).strip()
     bot = written_by.lower().startswith("tofarev")
@@ -1336,7 +1339,7 @@ def render_post(key: str, entry: dict, meta: dict, body: str,
         "date": published.isoformat(),
         "slug": key,
         "title": title,
-        "description": plain(intro or name),
+        "description": summary(description, 180),
         "card": {
             "kind": "digest",
             "conference": "Conference digest",
@@ -1346,6 +1349,8 @@ def render_post(key: str, entry: dict, meta: dict, body: str,
                          + ", ".join(f"{n} {t}" for t, n in counts.items() if n),
         },
     }
+    if entry.get("location"):
+        front["location"] = entry["location"]
     if bot:
         front["authors"] = ["tofarev"]
     post_tags = tags.get("post")

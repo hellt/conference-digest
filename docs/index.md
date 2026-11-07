@@ -5,7 +5,7 @@ hide:
 card:
   conference: Conference Digest
   when: Networking · Cloud · Kubernetes · AI
-  title: The talks worth your time.
+  title: All the talks in one place
   presenter: Selected talks and papers from networking, cloud, Kubernetes and AI conferences.
 ---
 
@@ -13,10 +13,8 @@ card:
 
 <p class="cd-eyebrow">Networking · Cloud · Kubernetes · AI</p>
 
-# The talks worth *your time.*
+# All the talks in one place
 
 Selected talks and papers from networking, cloud, Kubernetes, and AI conferences, with the context to put them to work.
 
 </div>
-
-## All digests

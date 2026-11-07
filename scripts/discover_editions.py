@@ -148,6 +148,10 @@ def render_entry(entry: dict) -> str:
     lines = [
         f"  - key: {entry['key']}",
         f"    name: {yaml_str(entry['name'])}",
+    ]
+    if entry.get("description"):
+        lines.append(f"    description: {yaml_str(entry['description'])}")
+    lines += [
         f"    end_date: {entry['end_date']}",
         f"    fetcher: {entry['fetcher']}",
     ]
@@ -280,6 +284,7 @@ def main() -> int:
                 "fetcher": spec["fetcher"],
                 "program_url": fill(spec["program_url_template"], ident, mode),
                 "manual_fallback_url": fill(spec["manual_fallback_url_template"], ident, mode),
+                "description": spec.get("description", ""),
             }
             fetcher = get_fetcher(spec["fetcher"])
             years = [ident] if mode == "year" else None

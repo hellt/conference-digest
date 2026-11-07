@@ -65,8 +65,8 @@ item's `page:`/`pdf:`/`slides:`/`video:`/`materials:` line (fetchers write it);
 the talk's `page:`, fetched again (USENIX, Sched and netdev pages gain slides and
 an embedded recording after the event; Tavily Extract reads pages that block the
 runner); then, for a pick without a recording, the conference's own YouTube
-channel when one is listed in `links.py`'s `UPLOAD_CHANNELS` (netnod:
-@netnodix) — a channel candidate passes `channel_verify()`, where a title
+channel when one is listed in `links.py`'s `UPLOAD_CHANNELS` (for example,
+netnod: @netnodix; OPI Summit: @OPI_project) — a channel candidate passes `channel_verify()`, where a title
 shortened to its start is enough — then a YouTube search (Tavily search as
 the fallback) whose candidates must pass `verify()`. Recordings appear weeks
 after a conference, so `links-refresh.yml` reruns this for 120 days and opens a

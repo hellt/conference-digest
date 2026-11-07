@@ -489,6 +489,11 @@ run.
   registration, meals and breaks are dropped by title and shape. Recordings
   are not in the schedule — the links step finds them on the PyTorch
   YouTube channel.
+- **OPI Summit on DPUs/IPUs** uses the generic Sched fetcher: one
+  `opisummit<year>.sched.com` programme per edition with titles, speakers and
+  abstracts. Slide decks are attached to the Sched session pages; recordings
+  are found on the official `@OPI_project` YouTube channel. The series starts
+  with the 2026 edition, held alongside OCP Global Summit in San Jose.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

@@ -430,5 +430,11 @@
     "attempts": 0,
     "last_attempt": "2026-11-04T14:15:35.075701+00:00",
     "last_error": ""
+  },
+  "opi-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-07T12:25:02.832864+00:00",
+    "last_error": ""
   }
 }

@@ -105,12 +105,13 @@ CHANNELS = {
     "ocp": ("open compute project", "ocp global summit"),
     "mlsys": ("mlsys",),
     "pytorch": ("pytorch",),
+    "opi": ("open programmable infrastructure", "opi project"),
 }
 DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon": "SREcon",
            "usenix": "USENIX", "netdev": "netdev", "ietf": "IETF", "nanog": "NANOG",
            "autocon": "AutoCon", "ovscon": "OVS OVN conference", "ciscolive": "Cisco Live",
            "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG", "gtc": "GTC", "ccs": "CCS", "imc": "IMC", "conext": "CoNEXT", "apricot": "APRICOT", "fosdem": "FOSDEM", "hacklu": "hack.lu", "tnc": "TNC GÉANT", "arin": "ARIN", "lacnic": "LACNIC", "pets": "PETS", "ausnog": "AusNOG", "nznog": "NZNOG", "zanog": "ZANOG", "peeringdays": "Peering Days", "moreip": "MORE-IP", "swinog": "SwiNOG", "capacity": "Capacity Europe", "nogfi": "nog.fi", "netuk": "NetUK", "grnog": "GRNOG", "dknog": "DKNOG", "itnog": "ITNOG", "netnod": "Netnod", "cfgmgmtcamp": "CfgMgmtCamp", "ocp": "OCP Global Summit",
-           "mlsys": "MLSys", "pytorch": "PyTorch Conference"}
+           "mlsys": "MLSys", "pytorch": "PyTorch Conference", "opi": "OPI Summit"}
 # YouTube channels that hold a conference's own recordings, keyed by the
 # first segment of the registry key. Searched before the general YouTube
 # search: uploads are often retitled or shortened when published, and the
@@ -119,6 +120,7 @@ UPLOAD_CHANNELS = {
     "netnod": "@netnodix",
     "nznog": "@nznog3664",
     "zanog": "@nognetza",
+    "opi": "@OPI_project",
 }
 # (video id, start seconds) within whole-day streams. NZNOG 2025/2026 have no
 # descriptions or chapters, so these starts were reviewed against the spoken
@@ -170,7 +172,8 @@ RECORDING_STREAMS = {
 }
 # URLs that only ever hold presentation decks, whatever the link text says.
 DECK_URLS = re.compile(
-    r"static\.sched\.com/hosted_files/|storage\.googleapis\.com/site-media-prod/meetings/"
+    r"static\.sched\.com/hosted_files/|hosted-files\.sched\.co/"
+    r"|storage\.googleapis\.com/site-media-prod/meetings/"
     r"|(?:pretalx\.com|cfp\.denog\.de)/media/denog\d+/submissions/"
 )
 STOP = {"the", "and", "for", "with", "from", "into", "over", "using", "via", "its", "our", "your",
@@ -589,10 +592,22 @@ def title_core(title: str) -> str:
     return re.split(r"\s+[–—-]\s+", TITLE_LABEL.sub("", title), 1)[0]
 
 
+def channel_title_matches(talk: str, video: Video) -> bool:
+    """A channel upload may keep only the start of the programme title."""
+    core = norm(title_core(video.title))
+    wants = (norm(title_core(talk)), norm(re.split(r"\s+[–—-]\s+", talk, maxsplit=1)[0]))
+    return len(core) >= 12 and any(want.startswith(core) or core.startswith(want) for want in wants)
+
+
 def verify(talk: str, video: Video, ctx: Context, speakers: tuple[str, ...] = ()) -> bool:
     if video.seconds and video.seconds < 90:
         return False
-    return title_matches(talk, video, speakers) and event_matches(video, ctx)
+    matched = title_matches(talk, video, speakers)
+    if not matched and any(n in video.author.lower() for n in CHANNELS.get(ctx.marker, ())):
+        # General search can return the official channel too; give its shortened
+        # uploads the same gate as candidates from the channel's own search.
+        matched = channel_title_matches(talk, video)
+    return matched and event_matches(video, ctx)
 
 
 def channel_verify(talk: str, video: Video, ctx: Context, speakers: tuple[str, ...] = ()) -> bool:
@@ -607,10 +622,7 @@ def channel_verify(talk: str, video: Video, ctx: Context, speakers: tuple[str, .
         return False
     if not event_matches(video, ctx):
         return False
-    if title_matches(talk, video, speakers):
-        return True
-    core, want = norm(title_core(video.title)), norm(title_core(talk))
-    return len(core) >= 12 and (want.startswith(core) or core.startswith(want))
+    return title_matches(talk, video, speakers) or channel_title_matches(talk, video)
 
 
 def find_recording(talk: str, ctx: Context, speakers: tuple[str, ...] = ()) -> Optional[str]:

@@ -46,19 +46,19 @@ from urllib.parse import urlencode
 
 from .base import Fetcher, FetchResult, ProbeResult, http_get, OK, NOT_PUBLISHED
 
-# WGs whose work touches DC / cloud-native networking, network security, identity.
+# WGs whose work touches networking, cloud, Kubernetes, and AI infrastructure.
 RELEVANT_WGS = {
-    # identity / auth
-    "oauth", "wimse", "scitt", "spice", "rats", "jose", "cose", "secdispatch",
+    # cloud / compute / AI traffic steering
+    "cats", "teas",
     # transport / datapath / proxying
-    "masque", "quic", "tls", "tsvwg", "httpbis", "tcpm",
+    "masque", "quic", "tls", "tsvwg", "httpbis", "tcpm", "ccwg", "scone",
     # routing / addressing / ops
     "idr", "grow", "savnet", "rtgwg", "6man", "v6ops", "dnsop", "add",
     "spring", "lsr", "srv6ops",
-    # security infra
-    "ipsecme", "anima", "acme", "lamps", "pquip",
     # network virtualization / service
     "nvo3", "rift", "bess",
+    # network management / automation
+    "netconf", "netmod", "opsawg",
 }
 
 SITE = "https://datatracker.ietf.org"

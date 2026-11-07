@@ -4,7 +4,7 @@ title: How it works
 
 # How it works
 
-Conference programs are long. KubeCon has more than 500 sessions, and an IETF meeting has more than 1,000 active drafts in the tracked working groups. This site keeps the few items that matter to one reader. That reader is a product manager who works on physical datacenter networking, cloud-native networking, network security, and identity.
+Conference programs are long. KubeCon has more than 500 sessions, and an IETF meeting has more than 1,000 active drafts in the tracked working groups. This site keeps the few items that matter to one reader. That reader is a product manager who works on networking, cloud platforms, Kubernetes, and AI.
 
 ## The pipeline
 
@@ -27,13 +27,13 @@ flowchart LR
 
 ## Search
 
-Every page carries topic keywords, shown as suggestions while you type. The digest's writer picks them for the digest and each of its talks from a small controlled vocabulary of the reader's areas (BGP, AI clusters, optics, Kubernetes, identity, and so on). The pipeline reads them out of the draft, stores them in the repository like any other hand-editable metadata, and the site's search indexes them like it indexes a page's title — so searching for a topic such as `ebpf` or `zero trust` finds the talks about it even when neither word appears in the title.
+Every page carries topic keywords, shown as suggestions while you type. The digest's writer picks them for the digest and each of its talks from a small controlled vocabulary of the reader's areas (BGP, AI clusters, optics, Kubernetes, cloud, and so on). The pipeline reads them out of the draft, stores them in the repository like any other hand-editable metadata, and the site's search indexes them like it indexes a page's title — so searching for a topic such as `ebpf` or `Kubernetes` finds the talks about it even when neither word appears in the title.
 
 ## Reading a digest
 
 | Tier | Meaning |
 |---|---|
-| **Core** | Directly about datacenter and WAN networking, cloud-native networking, network security, or identity. |
+| **Core** | Directly about networking, cloud, Kubernetes, or AI. |
 | **Adjacent** | Relevant to the broader field: useful context, or likely to matter soon. |
 | **Wildcard** | Two to four items outside these interests that are novel or show where the field is going. |
 | **Themes** | The patterns across the whole program. |

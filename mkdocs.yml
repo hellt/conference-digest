@@ -5,7 +5,7 @@
 # docs/posts/ and docs/conferences.md (both gitignored) before every build.
 site_name: Conference Digest
 site_description: >-
-  The talks and papers worth a networking, security and identity PM's time,
+  The talks and papers worth a networking, cloud, Kubernetes and AI PM's time,
   picked from each conference program and summarized by ToFaRev.
 site_url: "https://tldr.netdevops.me/"
 repo_name: hellt/conference-digest

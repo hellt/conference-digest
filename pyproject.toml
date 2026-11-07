@@ -1,7 +1,7 @@
 [project]
 name = "conference-digest"
 version = "0.1.0"
-description = "Conference digests for a networking, security and identity PM"
+description = "Conference digests for a networking, cloud, Kubernetes and AI PM"
 readme = "README.md"
 requires-python = ">=3.14"
 # The pipeline itself installs requirements.txt; this project file only pins

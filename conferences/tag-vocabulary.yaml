@@ -16,6 +16,7 @@
 # A hand edit of this list is safe: nothing derives from it at build time.
 
 vocabulary:
+  ai: artificial intelligence systems, applications and practices not covered by a finer AI tag
   ai-networks: networking for AI/ML training and inference clusters (job-level load balancing, collectives, topology-aware scheduling)
   gpu-clusters: GPU accelerator interconnects and cluster fabrics (NVLink, scale-up vs scale-out)
   ml-for-networking: machine learning applied to network operation (anomaly detection, traffic prediction, AIOps)
@@ -41,10 +42,11 @@ vocabulary:
   cdn: content delivery networks
   address-policy: IP address and ASN allocation policy (RIR policy processes)
   internet-governance: regulation, standards bodies, and geopolitics of the internet
-  kubernetes: Kubernetes and its networking
+  kubernetes: Kubernetes architecture, operations, workloads and networking
   cni: container network interfaces and container networking plugins
   containers: containerization, images, runtimes
   service-mesh: service mesh (sidecars, eBPF meshes, mTLS between services)
+  cloud: public and private cloud infrastructure, platforms and operations
   cloud-native: cloud-native patterns in general (CNCF ecosystem)
   orchestration: workflow and device orchestration, intent-based systems, network controllers
   automation: network automation (tooling, pipelines, source of truth, CI/CD for networks)

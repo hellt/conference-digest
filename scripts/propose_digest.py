@@ -50,7 +50,7 @@ def normalize_title(markdown: str, name: str) -> tuple[str, str | None]:
     """Return (markdown, note): the `#` heading becomes `# <name>`.
 
     The writer sometimes qualifies the title with an audience or type
-    ("Digest for a Networking / Identity PM", "Operator Digest", a tagline)
+    ("Digest for a Networking / AI PM", "Operator Digest", a tagline)
     or appends the word "Digest"; the title is the conference name alone,
     decided here by code - like the links rows, never by the model.
     """

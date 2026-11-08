@@ -32,9 +32,10 @@
 #   end_date_hint
 #               "MM-DD" fallback, used ONLY when the source doesn't state its
 #               dates. Discovery prefers the real dates it scans off the page.
+#   description One-sentence conference summary used on digest list cards.
 #   fetcher / run_location / notes
 #               Copied onto every discovered edition, exactly as registry.yaml
-#               defines them.
+#               defines them (description is copied too).
 
 series:
 
@@ -46,6 +47,7 @@ series:
     enumerate: year
     key_template: "ciscolive-us-{year}"
     name_template: "Cisco Live US {year}"
+    description: "Cisco's flagship conference for enterprise networking, data centers, automation, security, and cloud infrastructure."
     fetcher: ciscolive
     end_date_hint: "06-30"
     program_url_template: "https://www.ciscolive.com/on-demand/on-demand-library.html"
@@ -56,6 +58,7 @@ series:
     enumerate: year
     key_template: "ciscolive-eu-{year}"
     name_template: "Cisco Live Europe {year}"
+    description: "Cisco's flagship conference for enterprise networking, data centers, automation, security, and cloud infrastructure."
     fetcher: ciscolive
     end_date_hint: "03-31"
     program_url_template: "https://www.ciscolive.com/on-demand/on-demand-library.html"
@@ -69,6 +72,7 @@ series:
     enumerate: year
     key_template: "kubecon-eu-{year}"
     name_template: "KubeCon + CloudNativeCon Europe {year}"
+    description: "The Cloud Native Computing Foundation's flagship conference for Kubernetes, cloud-native infrastructure, networking, and platform engineering."
     fetcher: sched
     end_date_hint: "04-04"
     program_url_template: "https://kccnceu{year}.sched.com/list/descriptions/"
@@ -79,6 +83,7 @@ series:
     enumerate: year
     key_template: "kubecon-na-{year}"
     name_template: "KubeCon + CloudNativeCon North America {year}"
+    description: "The Cloud Native Computing Foundation's flagship conference for Kubernetes, cloud-native infrastructure, networking, and platform engineering."
     fetcher: sched
     end_date_hint: "11-14"
     program_url_template: "https://kccncna{year}.sched.com/list/descriptions/"
@@ -89,6 +94,7 @@ series:
     enumerate: year
     key_template: "sigcomm-{year}"
     name_template: "ACM SIGCOMM {year}"
+    description: "ACM's flagship conference on data communication, covering network architecture, protocols, systems, measurement, and security."
     fetcher: sigcomm
     end_date_hint: "09-11"
     program_url_template: "https://conferences.sigcomm.org/sigcomm/{year}/program/papers-info/"
@@ -102,6 +108,7 @@ series:
     enumerate: year
     key_template: "nsdi-{year}"
     name_template: "NSDI '{yy} (USENIX Symposium on Networked Systems Design and Implementation)"
+    description: "Peer-reviewed research on the design, implementation, and operation of networked and distributed systems."
     fetcher: usenix
     run_location: local
     end_date_hint: "04-30"
@@ -113,6 +120,7 @@ series:
     enumerate: year
     key_template: "usenix-security-{year}"
     name_template: "USENIX Security '{yy}"
+    description: "Research and practitioner advances in systems security, network security, privacy, identity, and applied cryptography."
     fetcher: usenix
     run_location: local
     end_date_hint: "08-15"
@@ -124,6 +132,7 @@ series:
     enumerate: year
     key_template: "srecon-{year}-americas"
     name_template: "SREcon{yy} Americas"
+    description: "Engineering and operating reliable, complex distributed systems at scale, with deep technical discussions and production lessons."
     fetcher: usenix
     run_location: local
     end_date_hint: "03-27"
@@ -139,6 +148,7 @@ series:
     lookahead: 4
     key_template: "ietf-{n}"
     name_template: "IETF {n}"
+    description: "The Internet Engineering Task Force meeting for developing Internet standards across routing, transport, security, and applications."
     fetcher: ietf
     program_url_template: "https://datatracker.ietf.org/meeting/{n}/agenda.json"
     manual_fallback_url_template: "https://datatracker.ietf.org/meeting/{n}/agenda"
@@ -151,6 +161,7 @@ series:
     ordinal_format: hex
     key_template: "netdev-0x{hex}"
     name_template: "Netdev 0x{HEX}"
+    description: "A technical conference on Linux kernel networking, including eBPF/XDP, packet processing, NIC offload, and transport internals."
     fetcher: netdev
     end_date_hint: "07-16"
     program_url_template: "https://netdevconf.info/0x{HEX}/pages/sessions.html"
@@ -165,6 +176,7 @@ series:
     enumerate: ordinal
     key_template: "nanog-{n}"
     name_template: "NANOG {n}"
+    description: "The North American Network Operators' Group meeting on Internet operations, routing, interconnection, infrastructure, and automation."
     fetcher: nanog
     lookahead: 2
     program_url_template: "https://nanog.org/events/nanog-{n}/agenda/"
@@ -180,6 +192,7 @@ series:
     enumerate: ordinal
     key_template: "autocon-{n}"
     name_template: "AutoCon {n}"
+    description: "A practitioner conference on network automation, orchestration, observability, source of truth, testing, and AI for NetOps."
     fetcher: autocon
     lookahead: 2
     program_url_template: "https://networkautomation.forum/autocon{n}"
@@ -192,6 +205,7 @@ series:
     enumerate: year
     key_template: "ovscon-{year}"
     name_template: "Open vSwitch and OVN {year} Fall Conference"
+    description: "The Open vSwitch and OVN community conference on virtual networking, hardware offload, Kubernetes networking, and programmable infrastructure."
     fetcher: ovscon
     program_url_template: "https://www.openvswitch.org/support/ovscon{year}/"
     manual_fallback_url_template: "https://www.openvswitch.org/support/ovscon{year}/"
@@ -203,6 +217,7 @@ series:
     start: 91
     key_template: "ripe-{n}"
     name_template: "RIPE {n}"
+    description: "A European operator meeting on Internet infrastructure, routing, DNS, peering, measurement, policy, and network automation."
     fetcher: ripe
     lookahead: 2
     program_url_template: "https://ripe{n}.ripe.net/programme/meeting-plan/"
@@ -214,6 +229,7 @@ series:
     start: 2025
     key_template: "nlnog-{year}"
     name_template: "NLNOG Day {year}"
+    description: "The Dutch network operators' meeting on routing, Internet infrastructure, automation, and operational practice."
     fetcher: nlnog
     program_url_template: "https://nlnog.net/events/nlnog-day-{year}/"
     manual_fallback_url_template: "https://nlnog.net/events/nlnog-day-{year}/"
@@ -225,6 +241,7 @@ series:
     start: 17
     key_template: "denog-{n}"
     name_template: "DENOG {n}"
+    description: "The German network operators' conference on Internet infrastructure, routing, data centers, automation, and security."
     fetcher: denog
     lookahead: 2
     program_url_template: "https://www.denog.de/de/meetings/denog{n}/agenda.html"
@@ -242,6 +259,7 @@ series:
     enumerate: year
     key_template: "gtc-{year}"
     name_template: "NVIDIA GTC {year} (San Jose)"
+    description: "NVIDIA's conference on accelerated computing, AI infrastructure, networking, and large-scale AI systems."
     fetcher: gtc
     end_date_hint: "03-21"
     program_url_template: "https://www.nvidia.com/gtc/session-catalog/"
@@ -259,6 +277,7 @@ series:
     enumerate: year
     key_template: "ccs-{year}"
     name_template: "ACM CCS {year}"
+    description: "ACM's flagship computer security conference covering applied cryptography, authentication, systems and network security, privacy, and measurement."
     fetcher: ccs
     start: 2026
     end_date_hint: "11-21"
@@ -273,6 +292,7 @@ series:
     enumerate: year
     key_template: "imc-{year}"
     name_template: "ACM IMC {year}"
+    description: "ACM's Internet measurement conference on network topology, performance, security, censorship, and Internet-wide analysis."
     fetcher: imc
     start: 2026
     end_date_hint: "10-31"
@@ -289,6 +309,7 @@ series:
     enumerate: year
     key_template: "conext-{year}"
     name_template: "ACM CoNEXT {year}"
+    description: "ACM's conference on emerging networking experiments and systems, from transport and data centers to wireless and measurement."
     fetcher: conext
     start: 2025
     end_date_hint: "12-05"
@@ -305,6 +326,7 @@ series:
     enumerate: year
     key_template: "apricot-{year}"
     name_template: "APRICOT {year}"
+    description: "The Asia-Pacific Internet operators' summit on routing, peering, DNS, infrastructure, security, and automation."
     fetcher: apricot
     start: 2025
     lookahead: 3
@@ -323,6 +345,7 @@ series:
     enumerate: year
     key_template: "fosdem-{year}"
     name_template: "FOSDEM {year}"
+    description: "Europe's large free and open-source software conference, with dedicated tracks for networking, security, infrastructure, and open standards."
     fetcher: fosdem
     start: 2026
     program_url_template: "https://fosdem.org/{year}/schedule/xml"
@@ -337,6 +360,7 @@ series:
     enumerate: year
     key_template: "hacklu-{year}"
     name_template: "hack.lu {year}"
+    description: "An open security conference organized by CIRCL, covering offensive and defensive security, privacy, identity, and Internet infrastructure."
     fetcher: pretalx
     start: 2025
     lookahead: 3
@@ -355,6 +379,7 @@ series:
     enumerate: year
     key_template: "tnc-{year}"
     name_template: "TNC{yy} (GÉANT research networking conference)"
+    description: "GÉANT's research and education networking conference on NREN infrastructure, campus and data-center networking, identity, and security."
     fetcher: tnc
     start: 2026
     end_date_hint: "06-12"
@@ -371,6 +396,7 @@ series:
     enumerate: ordinal
     key_template: "arin-{n}"
     name_template: "ARIN {n} Public Policy and Members Meeting"
+    description: "ARIN's public policy and members meeting on Internet number resources, registry operations, IPv6, routing security, and governance."
     fetcher: arin
     start: 56
     lookahead: 3
@@ -388,6 +414,7 @@ series:
     enumerate: ordinal
     key_template: "lacnic-{n}"
     name_template: "LACNIC {n}"
+    description: "The Latin American and Caribbean Internet registry meeting on routing, IPv6, DNS, peering, security, and regional policy."
     fetcher: lacnic
     start: 45
     lookahead: 3
@@ -403,6 +430,7 @@ series:
     enumerate: year
     key_template: "pets-{year}"
     name_template: "PETS {year} (Privacy Enhancing Technologies Symposium)"
+    description: "The Privacy Enhancing Technologies Symposium on anonymity, privacy engineering, measurement, identity, and usable privacy."
     fetcher: pets
     start: 2026
     end_date_hint: "07-25"
@@ -418,6 +446,7 @@ series:
     enumerate: year
     key_template: "ausnog-{year}"
     name_template: "AusNOG {year}"
+    description: "The Australian network operators' conference on Internet infrastructure, peering, data centers, routing, automation, and security."
     fetcher: ausnog
     start: 2025
     end_date_hint: "09-05"
@@ -434,6 +463,7 @@ series:
     enumerate: year
     key_template: "nznog-{year}"
     name_template: "NZNOG {year}"
+    description: "The New Zealand network operators' conference on Internet infrastructure, peering, DNS, routing security, optics, and automation."
     type: operator
     fetcher: nznog
     start: 2025
@@ -451,6 +481,7 @@ series:
     enumerate: year
     key_template: "peeringdays-{year}"
     name_template: "Peering Days {year}"
+    description: "A Central and Eastern European conference on interconnection, Internet exchanges, routing security, optics, and data-center interconnect."
     fetcher: peeringdays
     start: 2026
     end_date_hint: "03-31"
@@ -467,6 +498,7 @@ series:
     enumerate: year
     key_template: "moreip-{year}"
     name_template: "MORE-IP {year}"
+    description: "AMS-IX's community event on interconnection, peering, Internet exchanges, connectivity policy, and digital infrastructure."
     fetcher: moreip
     start: 2025
     end_date_hint: "05-29"
@@ -483,6 +515,7 @@ series:
     enumerate: ordinal
     key_template: "swinog-{n}"
     name_template: "SwiNOG #{n}"
+    description: "The Swiss network operators' meeting on Internet infrastructure, routing, peering, data centers, automation, and security."
     fetcher: swinog
     start: 41
     lookahead: 2
@@ -502,6 +535,7 @@ series:
     enumerate: year
     key_template: "capacity-{year}"
     name_template: "Capacity Europe {year}"
+    description: "A carrier and digital-infrastructure conference on connectivity, fiber, subsea cables, data centers, AI infrastructure, and investment."
     fetcher: capacity
     start: 2026
     end_date_hint: "10-16"
@@ -517,6 +551,7 @@ series:
     enumerate: ordinal
     key_template: "netuk-{n}"
     name_template: "NetUK{n}"
+    description: "The UK network infrastructure community meeting on Internet exchanges, peering, routing, automation, and operational practice."
     fetcher: indico
     start: 2
     lookahead: 2
@@ -531,6 +566,7 @@ series:
     enumerate: ordinal
     key_template: "grnog-{n}"
     name_template: "GRNOG {n}"
+    description: "The Greek network operators' meeting on Internet infrastructure, routing, security, and operational practice."
     fetcher: indico
     start: 21
     lookahead: 2
@@ -547,6 +583,7 @@ series:
     enumerate: ordinal
     key_template: "dknog-{n}"
     name_template: "DKNOG{n}"
+    description: "The Danish network operators' meeting on Internet infrastructure, routing, security, automation, and operational practice."
     fetcher: indico
     start: 16
     lookahead: 2
@@ -562,6 +599,7 @@ series:
     enumerate: ordinal
     key_template: "itnog-{n}"
     name_template: "ITNOG{n}"
+    description: "The Italian network operators' conference on Internet infrastructure, routing, IPv6, peering, data centers, and security."
     fetcher: itnog
     start: 9
     lookahead: 2
@@ -578,6 +616,7 @@ series:
     enumerate: year
     key_template: "netnod-{year}"
     name_template: "Netnod Tech Meeting {year}"
+    description: "Netnod's technical meeting on interconnection, Internet exchanges, routing security, DNS, timing, and network infrastructure."
     fetcher: netnod
     start: 2025
     end_date_hint: "10-06"
@@ -592,6 +631,7 @@ series:
     enumerate: year
     key_template: "cfgmgmtcamp-{year}"
     name_template: "CfgMgmtCamp Ghent {year}"
+    description: "An open-source infrastructure automation conference covering configuration management, GitOps, network automation, and immutable systems."
     fetcher: pretalx
     start: 2026
     lookahead: 2
@@ -612,6 +652,7 @@ series:
     enumerate: year
     key_template: "ocp-{year}"
     name_template: "OCP Global Summit {year}"
+    description: "The Open Compute Project summit on open data-center hardware, AI infrastructure, networking, storage, power, cooling, and security."
     fetcher: ocp
     start: 2025
     lookahead: 2
@@ -627,6 +668,7 @@ series:
     enumerate: year
     key_template: "mlsys-{year}"
     name_template: "MLSys {year}"
+    description: "A research conference on systems for machine learning, including training and inference infrastructure, distributed systems, and ML compilers."
     fetcher: mlsys
     start: 2025
     lookahead: 2
@@ -643,6 +685,7 @@ series:
     enumerate: year
     key_template: "pytorch-{year}"
     name_template: "PyTorch Conference {year}"
+    description: "The PyTorch community conference on machine-learning frameworks, distributed training, inference, production ML, and hardware acceleration."
     fetcher: sessionize
     start: 2026
     lookahead: 2
@@ -657,6 +700,7 @@ series:
     enumerate: year
     key_template: "opi-{year}"
     name_template: "OPI Summit on DPUs/IPUs {year}"
+    description: "The Open Programmable Infrastructure summit on DPU/IPU APIs, offload, cloud-native integration, and AI infrastructure."
     fetcher: sched
     start: 2026
     lookahead: 2
@@ -671,6 +715,7 @@ series:
     enumerate: year
     key_template: "atscale-networking-{year}"
     name_template: "@Scale: Networking {year}"
+    description: "Meta's large-scale networking conference on AI fabrics, RDMA, data-center and backbone architecture, operations, and optical interconnects."
     fetcher: atscale
     start: 2026
     lookahead: 2
@@ -682,6 +727,7 @@ series:
     enumerate: year
     key_template: "atscale-product-{year}"
     name_template: "@Scale: Product {year}"
+    description: "Meta's AI-native product engineering conference on media, agents, product velocity, applied AI, and production reliability."
     fetcher: atscale
     start: 2026
     lookahead: 2
@@ -693,6 +739,7 @@ series:
     enumerate: year
     key_template: "atscale-ai-data-{year}"
     name_template: "@Scale: AI & Data {year}"
+    description: "Meta's AI and data systems conference on agents, recommender systems, ML infrastructure, training data, and data platforms."
     fetcher: atscale
     start: 2026
     lookahead: 2
@@ -704,6 +751,7 @@ series:
     enumerate: year
     key_template: "atscale-systems-reliability-{year}"
     name_template: "@Scale: Systems & Reliability {year}"
+    description: "Meta's systems and reliability conference on AI infrastructure, cloud and data-center systems, production operations, and incident response."
     fetcher: atscale
     start: 2026
     lookahead: 2

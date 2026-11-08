@@ -12,6 +12,7 @@ except ImportError:  # Installed by the site's docs dependency group.
     markdown = None
 
 from bs4 import BeautifulSoup
+import yaml
 
 from scripts.build_site import (
     annotate_employers,
@@ -19,6 +20,7 @@ from scripts.build_site import (
     employer_spans,
     link_employers,
     links_block,
+    load_registry,
     media_block,
     render_companies,
     render_post,
@@ -95,6 +97,41 @@ class EmployerTests(TestCase):
         self.assertIn("| [Arista Networks](arista-networks.md) | 0 |", index)
         self.assertIn("| [Cisco](cisco.md) | 0 |", index)
         self.assertLess(index.index("| [Arista Networks]"), index.index("| [Cisco]"))
+
+
+class PostMetadataTests(TestCase):
+    def test_card_uses_registry_summary_and_location_without_changing_intro(self):
+        body = "# Conference\n\nThe full digest introduction.\n\n## Core\n"
+        entry = {
+            "name": "Conference",
+            "description": "A short conference summary.",
+            "location": "Prague · Czechia",
+        }
+        page, _, _, _ = render_post("test-2026", entry, {}, body)
+        front = yaml.safe_load(page.split("---", 2)[1])
+        self.assertEqual(front["description"], "A short conference summary.")
+        self.assertEqual(front["location"], "Prague · Czechia")
+        self.assertIn("\nThe full digest introduction.\n\n<!-- more -->", page)
+
+    def test_missing_registry_description_fails_instead_of_using_digest_intro(self):
+        with self.assertRaisesRegex(ValueError, "test-2026: add a short description"):
+            render_post("test-2026", {"name": "Conference"}, {},
+                        "# Conference\n\nA long digest introduction.\n\n## Core\n")
+
+    def test_every_registry_edition_has_a_short_card_description(self):
+        for key, entry in load_registry().items():
+            with self.subTest(conference=key):
+                self.assertTrue(entry.get("description"))
+                self.assertLessEqual(len(entry["description"]), 180)
+
+    def test_every_published_digest_has_card_summary_and_city_country(self):
+        registry = load_registry()
+        for digest in (Path(__file__).parent.parent / "digests").glob("*.md"):
+            with self.subTest(digest=digest.stem):
+                entry = registry[digest.stem]
+                self.assertTrue(entry.get("description"))
+                self.assertLessEqual(len(entry["description"]), 180)
+                self.assertRegex(entry.get("location", ""), r"^\S.* · .*\S$")
 
 
 class RecordingTests(TestCase):
@@ -210,7 +247,7 @@ class SlideViewerTests(TestCase):
     def test_viewers_only_on_talk_pages_with_source_links_preserved(self):
         row = f"**Links:** [Slides (PDF)]({self.PDF}) · [Slides (PPTX)]({self.PPTX}) · [Recording]({RECORDING})"
         body = f"# Conference\n\nIntro\n\n## Core\n### Routing\n{row}\n\n*Jane Doe*\n\n**Why:** Routing matters.\n"
-        digest, _, _, talks = render_post("test-2026", {"name": "Conference"}, {}, body)
+        digest, _, _, talks = render_post("test-2026", {"name": "Conference", "description": "A conference."}, {}, body)
         talk = talks[0][1]
         self.assertNotIn("<iframe ", digest)
         self.assertNotIn("pick-media", digest)

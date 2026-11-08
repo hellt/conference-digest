@@ -142,6 +142,7 @@ If a conference keeps its decks under a URL that holds nothing else, such as NAN
     enumerate: ordinal            # or: year
     key_template: "example-{n}"   # must match keys already in registry.yaml
     name_template: "Example {n}"
+    description: "A one-sentence conference summary for digest list cards."
     fetcher: example
     lookahead: 2
     start: 41                     # first edition, for a brand-new series
@@ -157,7 +158,7 @@ Check it without writing anything:
 python3 scripts/discover_editions.py --dry-run --series example
 ```
 
-**A one-off event, or a past edition you want now**, gets a block in `conferences/registry.yaml`. Use the same fields, but with a concrete `key`, `name`, `end_date`, `program_url` and `manual_fallback_url`. Never rename a key once it has a prompt, an issue or a digest.
+**A one-off event, or a past edition you want now**, gets a block in `conferences/registry.yaml`. Use the same fields, but with a concrete `key`, `name`, `description`, `end_date`, `program_url` and `manual_fallback_url`. Never rename a key once it has a prompt, an issue or a digest.
 
 ## 5. Try it locally
 

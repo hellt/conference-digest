@@ -49,7 +49,13 @@ with sync_playwright() as p:
             assert page.locator('.ambient,.line-field,.featured').count()==0
             assert 'From the reading list' not in page.locator('body').inner_text()
             if name=='home':
-                assert page.locator('.md-post--excerpt').count()==12
+                cards=page.locator('.md-post--excerpt')
+                assert cards.count()==12
+                assert page.locator('.cd-hero h1').inner_text()=='All the talks in one place'
+                assert page.locator('header.md-typeset h2').count()==0
+                assert cards.first.locator('.md-meta__item').all_inner_texts()==['October 30, 2026','Sofia · Bulgaria']
+                assert 'min read' not in cards.first.inner_text()
+                assert cards.first.locator('.md-post__content > p').inner_text()==('A European operator meeting on Internet infrastructure, routing, DNS, peering, measurement, policy, and network automation.')
                 assert page.locator('.cd-hero').bounding_box()['height'] < 280
             else:
                 assert page.locator('.pick').count()==17

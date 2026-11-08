@@ -489,6 +489,11 @@ run.
   registration, meals and breaks are dropped by title and shape. Recordings
   are not in the schedule — the links step finds them on the PyTorch
   YouTube channel.
+- **MCP Dev Summit North America** uses the generic Sched fetcher: one
+  `mcpdevsummitna<yy>.sched.com` programme per edition with titles, speakers
+  and abstracts. Speaker-provided slide decks are attached to the Sched
+  session pages; recordings are on the official `@AgenticAI-Foundation`
+  YouTube channel. The series starts with the April 2026 New York edition.
 - **OPI Summit on DPUs/IPUs** uses the generic Sched fetcher: one
   `opisummit<year>.sched.com` programme per edition with titles, speakers and
   abstracts. Slide decks are attached to the Sched session pages; recordings

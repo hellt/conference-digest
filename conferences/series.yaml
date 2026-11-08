@@ -693,6 +693,22 @@ series:
     manual_fallback_url_template: "https://events.linuxfoundation.org/pytorch-conference-north-america/program/schedule/"
     notes: "The PyTorch ecosystem conference (~1,500 attendees): PyTorch core, torch.compile and performance, distributed training and inference, production ML systems, hardware/accelerator integration. Titles, speakers and full abstracts from the Sessionize schedule the event page links; recordings on the PyTorch YouTube channel."
 
+  # MCP Dev Summit North America: one Sched site per year (the URL uses the
+  # two-digit year). Sched publishes speaker-submitted slide decks; the event
+  # page links the official recording playlist on the Agentic AI Foundation
+  # YouTube channel.
+  - series: mcpdevsummit-na
+    enumerate: year
+    key_template: "mcpdevsummit-na-{year}"
+    name_template: "MCP Dev Summit North America {year}"
+    description: "The Model Context Protocol developer summit on MCP servers, clients, security, tooling, and production AI-agent integrations."
+    fetcher: sched
+    start: 2026
+    lookahead: 2
+    program_url_template: "https://mcpdevsummitna{yy}.sched.com/list/descriptions/"
+    manual_fallback_url_template: "https://mcpdevsummitna{yy}.sched.com/"
+    notes: "The Model Context Protocol developer summit: MCP servers and clients, agentic applications, authentication and authorization, security, observability, registries and production integrations. Titles, speakers, abstracts and slide decks from Sched; recordings on the official Agentic AI Foundation YouTube channel (@AgenticAI-Foundation)."
+
   # OPI Summit on DPUs/IPUs: one Sched site per year, read by the generic
   # Sched fetcher. The 2026 schedule states its exact date; the official OPI
   # YouTube channel carries a per-edition playlist of talk recordings.

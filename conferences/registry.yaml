@@ -1049,3 +1049,13 @@ conferences:
     manual_fallback_url: "https://atscaleconference.com/events/systems-reliability-2026/"
     discovered: 2026-11-07
     notes: "Meta's systems and reliability event, consolidating the earlier Systems and Reliability @Scale series: AI infrastructure, cloud and datacenter systems, production operations, security and incident response. Full agenda with abstracts; recordings on @scaleconference. Auto-discovered 2026-11-07 from series 'atscale-systems-reliability'. end_date taken from the source."
+
+  - key: mcpdevsummit-na-2026
+    name: "MCP Dev Summit North America 2026"
+    description: "The Model Context Protocol developer summit on MCP servers, clients, security, tooling, and production AI-agent integrations."
+    end_date: 2026-04-03
+    fetcher: sched
+    program_url: "https://mcpdevsummitna26.sched.com/list/descriptions/"
+    manual_fallback_url: "https://mcpdevsummitna26.sched.com/"
+    discovered: 2026-11-08
+    notes: "The Model Context Protocol developer summit: MCP servers and clients, agentic applications, authentication and authorization, security, observability, registries and production integrations. Titles, speakers, abstracts and slide decks from Sched; recordings on the official Agentic AI Foundation YouTube channel (@AgenticAI-Foundation). Auto-discovered 2026-11-08 from series 'mcpdevsummit-na'. end_date taken from the source."

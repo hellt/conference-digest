@@ -4586,3 +4586,55 @@ opi-2026:
     - open-source
     - dpu
     - containers
+atscale-product-2026:
+  post:
+  - ai
+  - sre
+  - observability
+  - testing
+  - benchmarking
+  talks:
+    The future is products that grow themselves!:
+    - ai
+    - sre
+    - capacity-planning
+    From On-Call to Always-On:
+    - ai
+    - sre
+    - troubleshooting
+    'Ship Fast, Break Nothing: How AI Tests What AI Builds':
+    - ai
+    - testing
+    Preview Player Reliability and the Agentic Defense Loop on Edits:
+    - ai
+    - sre
+    - troubleshooting
+    - observability
+    'Chasing a Moving Target: Going AI-Native on Edits'' Video Seek Engine':
+    - ai
+    - observability
+    - benchmarking
+    'ML Video Codec (MLVC): Research to Product':
+    - ai
+    - benchmarking
+    Adopting AV1 for Real-Time Communication (RTC) at Scale:
+    - http
+    - benchmarking
+    Flywheel of Media Models & Product Velocity:
+    - ai
+    - benchmarking
+    'Beyond “Good Enough”: How deployments accelerate research at the Audio AI Frontier':
+    - ai
+    - benchmarking
+    'Content Accessibility at Scale: AI Voice Translations at Meta':
+    - ai
+    - measurement
+    Rhythm - Anticipatory Intelligence for Organizations:
+    - ai
+    - privacy
+    'Fireside Chat: Designing for the Agentic Era':
+    - ai
+    - orchestration
+    'Live Panel: AI Generated Media Provenance at Scale':
+    - ai
+    - pki

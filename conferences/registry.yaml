@@ -1059,3 +1059,39 @@ conferences:
     manual_fallback_url: "https://mcpdevsummitna26.sched.com/"
     discovered: 2026-11-08
     notes: "The Model Context Protocol developer summit: MCP servers and clients, agentic applications, authentication and authorization, security, observability, registries and production integrations. Titles, speakers, abstracts and slide decks from Sched; recordings on the official Agentic AI Foundation YouTube channel (@AgenticAI-Foundation). Auto-discovered 2026-11-08 from series 'mcpdevsummit-na'. end_date taken from the source."
+
+  - key: onesummit-2024
+    name: "ONE Summit 2024"
+    location: "San Jose · United States"
+    description: "The Linux Foundation's summit for open-source networking, edge, cloud, telecom, AI infrastructure, and operational deployments."
+    start_date: 2024-04-29
+    end_date: 2024-05-01
+    fetcher: sched
+    program_url: "https://onesummit2024.sched.com/list/descriptions/"
+    manual_fallback_url: "https://onesummit2024.sched.com/"
+    discovered: 2026-11-09
+    notes: "Linux Foundation open networking and edge: disaggregation, network automation, cloud-native telecom, edge AI, APIs and production operations. Titles, speakers, abstracts and speaker decks from Sched; recordings on the official LF Networking YouTube channel (@lfnetworking). Auto-discovered 2026-11-09 from series 'onesummit'. end_date taken from the source."
+
+  - key: onesummit-2025
+    name: "Open Networking & Edge Summit 2025"
+    location: "London · United Kingdom"
+    description: "The Linux Foundation's summit for open-source networking, edge, cloud, telecom, AI infrastructure, and operational deployments."
+    start_date: 2025-03-31
+    end_date: 2025-03-31
+    fetcher: sched
+    program_url: "https://onesummit2025.sched.com/list/descriptions/"
+    manual_fallback_url: "https://onesummit2025.sched.com/"
+    discovered: 2026-11-09
+    notes: "Linux Foundation open networking and edge: disaggregation, network automation, cloud-native telecom, edge AI, APIs and production operations. Titles, speakers, abstracts and speaker decks from Sched; recordings on the official LF Networking YouTube channel (@lfnetworking). Auto-discovered 2026-11-09 from series 'onesummit'. end_date taken from the source."
+
+  - key: onesummit-2026
+    name: "ONE Summit Japan 2026"
+    location: "Tokyo · Japan"
+    description: "The Linux Foundation's summit for open-source networking, edge, cloud, telecom, AI infrastructure, and operational deployments."
+    start_date: 2026-12-10
+    end_date: 2026-12-11
+    fetcher: sched
+    program_url: "https://onesummit2026.sched.com/list/descriptions/"
+    manual_fallback_url: "https://onesummit2026.sched.com/"
+    discovered: 2026-11-09
+    notes: "Linux Foundation open networking and edge: disaggregation, network automation, cloud-native telecom, edge AI, APIs and production operations. Titles, speakers, abstracts and speaker decks from Sched; recordings on the official LF Networking YouTube channel (@lfnetworking). Auto-discovered 2026-11-09 from series 'onesummit'. end_date taken from the source."

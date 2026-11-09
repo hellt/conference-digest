@@ -56,6 +56,15 @@ class EmployerTests(TestCase):
         for spelling in ("Purdue", "Michigan", "UCSB", "Open U. Israel", "NIKSUN"):
             self.assertIn(f"[{spelling}](", linked)
 
+    def test_repeated_employer_is_linked_for_each_speaker(self):
+        line = "Numan Siddique, Crusoe; Ketan Supanekar, Crusoe"
+        linked = link_employers(line)
+        self.assertEqual(
+            [(line[s:e], canonical) for s, e, canonical in employer_spans(line)],
+            [("Crusoe", "Crusoe"), ("Crusoe", "Crusoe")],
+        )
+        self.assertEqual(linked.count("[Crusoe](../companies/crusoe.md)"), 2)
+
     def test_headed_attributions_aliases_and_pick_records(self):
         rest = (
             "## Core\n"

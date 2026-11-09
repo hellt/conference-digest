@@ -548,7 +548,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t11">Abstract</a></p>
 </div>
-<p>Jaime Caamano, <a href="../../companies/red-hat/">Red Hat</a>, LLC.; Matteo Dallaglio, Red Hat, LLC.; Tim Rozet, <a href="../../companies/nvidia/">NVIDIA</a></p>
+<p>Jaime Caamano, <a href="../../companies/red-hat/">Red Hat</a>, LLC.; Matteo Dallaglio, <a href="../../companies/red-hat/">Red Hat</a>, LLC.; Tim Rozet, <a href="../../companies/nvidia/">NVIDIA</a></p>
 <ul>
 <li><strong>Why</strong>: A beautiful datapath pathology: with hundreds/thousands of UDNs sharing one uplink/IP/MAC, ARP replies can't be mapped back to their originating router (conntrack can't track them), so OVN-Kubernetes fans them out to every patch port — duplicating neighbor state, ballooning the OpenFlow footprint, and eventually exceeding OVS recirculation limits. This is exactly the "K8s networking meets datapath internals" intersection.</li>
 <li><strong>What</strong>: The full arc of an ARP storm at UDN scale: how fan-out surfaced, the constraints any fix must preserve, a short-term flow fix constraining fan-out on the shared gateway bridge, a mid-term prototype steering discovery through the default gateway router, and the resulting upstream OVN feature — Shared MAC-binding scopes, letting related logical router ports share one set of learned neighbor bindings instead of per-router duplication. (from abstract only)</li>

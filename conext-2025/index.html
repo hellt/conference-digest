@@ -1163,7 +1163,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://dl.acm.org/doi/10.1145/3749216">Abstract</a> <a class="pick-link" href="https://dl.acm.org/doi/pdf/10.1145/3749216">Paper</a></p>
 </div>
-<p>Farbod Shahinfar; Sebastiano Miano (<a href="../companies/politecnico-di-milano/">Politecnico di Milano</a>); Aurojit Panda (<a href="../companies/new-york-university/">NYU</a>); Gianni Antichi (Politecnico di Milano &amp; <a href="../companies/queen-mary-university-of-london/">Queen Mary University of London</a>)</p>
+<p>Farbod Shahinfar; Sebastiano Miano (<a href="../companies/politecnico-di-milano/">Politecnico di Milano</a>); Aurojit Panda (<a href="../companies/new-york-university/">NYU</a>); Gianni Antichi (<a href="../companies/politecnico-di-milano/">Politecnico di Milano</a> &amp; <a href="../companies/queen-mary-university-of-london/">Queen Mary University of London</a>)</p>
 <ul>
 <li><strong>Why</strong>: eBPF is the load-bearing technology behind Cilium, service-mesh dataplanes, and a growing share of host networking. This paper asks the inverse of the usual question — not "how fast can eBPF go" but "where does eBPF actively hurt" — and the answer should change how you reason about which workloads belong on which side of the kernel boundary.</li>
 <li><strong>What</strong>: A systematic benchmark study showing that many networked applications cannot benefit from eBPF at all, and that eBPF can create performance isolation violations between co-located applications and constrain deployment and workload choices. The paper also assesses whether in-flight kernel work (e.g., the ongoing JIT/verifier and scheduling improvements) fixes the identified limits, and proposes directions for the community (from abstract only).</li>
@@ -1202,7 +1202,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://dl.acm.org/doi/10.1145/3730966">Abstract</a> <a class="pick-link" href="https://dl.acm.org/doi/pdf/10.1145/3730966">Paper</a></p>
 </div>
-<p>Nikita Tyunyayev; Clément Delzotti (<a href="../companies/uclouvain/">UCLouvain</a>); Haggai Eran (<a href="../companies/nvidia/">NVIDIA</a>); Tom Barbette (UCLouvain, Belgium)</p>
+<p>Nikita Tyunyayev; Clément Delzotti (<a href="../companies/uclouvain/">UCLouvain</a>); Haggai Eran (<a href="../companies/nvidia/">NVIDIA</a>); Tom Barbette (<a href="../companies/uclouvain/">UCLouvain</a>, Belgium)</p>
 <ul>
 <li><strong>Why</strong>: As NICs get "smarter," the descriptor/driver software interface is becoming the bottleneck — the paper frames it as a 300-cycle-per-packet budget at NFV speeds, of which even DPDK eats 20%. This is a proposal to redesign that boundary, which matters to anyone betting on SmartNIC-offloaded dataplanes.</li>
 <li><strong>What</strong>: An argument and prototype for NICs adapting to application needs rather than drivers acting as translators: a datapath API that compiles into different buffer-management models per application, tailoring packet descriptors so the application receives packets precisely in the form it needs. Reported result: 2.2× more traffic served at equal loss constraints vs. state of the art (from abstract only).</li>
@@ -1215,7 +1215,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://dl.acm.org/doi/10.1145/3768993">Abstract</a> <a class="pick-link" href="https://dl.acm.org/doi/pdf/10.1145/3768993">Paper</a></p>
 </div>
-<p>Yiran Lei (<a href="../companies/carnegie-mellon-university/">Carnegie Mellon University</a>); Francisco Chamiça Pereira (<a href="../companies/inesc-id/">INESC-ID</a>/IST Lisboa); Arvind Krishnamurthy (<a href="../companies/university-of-washington/">University of Washington</a>); Justine Sherry (Carnegie Mellon University)</p>
+<p>Yiran Lei (<a href="../companies/carnegie-mellon-university/">Carnegie Mellon University</a>); Francisco Chamiça Pereira (<a href="../companies/inesc-id/">INESC-ID</a>/<a href="../companies/inesc-id/">IST Lisboa</a>); Arvind Krishnamurthy (<a href="../companies/university-of-washington/">University of Washington</a>); Justine Sherry (<a href="../companies/carnegie-mellon-university/">Carnegie Mellon University</a>)</p>
 <ul>
 <li><strong>Why</strong>: The PISA-switch + general-purpose-server hybrid ("best of both worlds") keeps failing on one problem: keeping distributed state consistent across the two platforms without wrecking latency. This paper attacks exactly that, and it is the kind of result that shapes the next generation of hybrid middlebox designs.</li>
 <li><strong>What</strong>: A tightly-coupled architecture guaranteeing consistent shared state between a Tofino switch and co-located general-purpose processors, with 6µs P99 packet latency, 5.2× better energy efficiency, and 6.4× better processing latency than server-based systems — which the authors note cannot fully/correctly support shared state between platforms (from abstract only).</li>
@@ -1228,7 +1228,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://dl.acm.org/doi/10.1145/3749220">Abstract</a> <a class="pick-link" href="https://dl.acm.org/doi/pdf/10.1145/3749220">Paper</a></p>
 </div>
-<p>Jacopo Bufalino (<a href="../companies/aalto-university/">Aalto University</a>, <a href="../companies/cnam/">CNAM</a>); Jose Luis Martin Navarro (Aalto University, <a href="../companies/universitat-polit-cnica-de-val-ncia/">Universitat Politècnica de València</a>); Mario Di Francesco; Tuomas Aura (Aalto University)</p>
+<p>Jacopo Bufalino (<a href="../companies/aalto-university/">Aalto University</a>, <a href="../companies/cnam/">CNAM</a>); Jose Luis Martin Navarro (<a href="../companies/aalto-university/">Aalto University</a>, <a href="../companies/universitat-polit-cnica-de-val-ncia/">Universitat Politècnica de València</a>); Mario Di Francesco; Tuomas Aura (<a href="../companies/aalto-university/">Aalto University</a>)</p>
 <ul>
 <li><strong>Why</strong>: K8s network policy and cluster networking config is a real, underserved attack surface — most K8s security work targets the API server or supply chain, not the network configuration enabling lateral movement. This is an empirical study of that gap at real-organization scale.</li>
 <li><strong>What</strong>: A comprehensive analysis of network misconfigurations in Kubernetes deployments, focused on lateral movement risk. The authors evaluated 287 open-source applications from six organizations and found 634 misconfigurations, "well beyond" what state-of-the-art tooling catches; 30+ applications have already been fixed with their proposed mitigations after responsible disclosure (from abstract only).</li>
@@ -1241,7 +1241,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://dl.acm.org/doi/10.1145/3768975">Abstract</a> <a class="pick-link" href="https://dl.acm.org/doi/pdf/10.1145/3768975">Paper</a></p>
 </div>
-<p>Jiangchen Zhu; Ethan Katz-Bassett (<a href="../companies/columbia-university/">Columbia University</a>); Tom Koch (<a href="../companies/google/">Google</a>); Matt Calder (<a href="../companies/meta/">Meta</a>); Italo Cunha (<a href="../companies/universidade-federal-de-minas-gerais/">UFMG</a>); Kevin Vermeulen (<a href="../companies/cnrs/">CNRS</a>, <a href="../companies/cole-polytechnique/">École Polytechnique</a>); Shuyue Yu; Ilgar Mammadov (Columbia University)</p>
+<p>Jiangchen Zhu; Ethan Katz-Bassett (<a href="../companies/columbia-university/">Columbia University</a>); Tom Koch (<a href="../companies/google/">Google</a>); Matt Calder (<a href="../companies/meta/">Meta</a>); Italo Cunha (<a href="../companies/universidade-federal-de-minas-gerais/">UFMG</a>); Kevin Vermeulen (<a href="../companies/cnrs/">CNRS</a>, <a href="../companies/cole-polytechnique/">École Polytechnique</a>); Shuyue Yu; Ilgar Mammadov (<a href="../companies/columbia-university/">Columbia University</a>)</p>
 <ul>
 <li><strong>Why</strong>: Best Paper, and directly on the anycast-vs-DNS-redirection problem every large service faces for client-to-site mapping. It proves a structural tradeoff rather than proposing yet another mapping system — that reframing is what makes it worth a practitioner's time.</li>
 <li><strong>What</strong>: A demonstration that general-purpose client-to-site direction methods face inevitable tradeoffs among precise control, high availability, and routing stability, plus new routing techniques that establish a better Pareto frontier than anycast or DNS-based unicast redirection. One technique speeds unicast failover by up to 5 minutes while keeping unicast's control advantages; another achieves anycast's availability with far better control (from abstract only).</li>
@@ -1280,7 +1280,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://dl.acm.org/doi/10.1145/3749217">Abstract</a> <a class="pick-link" href="https://dl.acm.org/doi/pdf/10.1145/3749217">Paper</a></p>
 </div>
-<p>Habib Mostafaei (<a href="../companies/technical-university-of-eindhoven/">TU/e</a>); Mohammad Ezzati (<a href="../companies/technical-university-of-berlin/">TU Berlin</a>); Pieter J. L. Cuijpers (TU/e); Stefan Schmid (TU Berlin); Gábor Rétvári (<a href="../companies/budapest-university-of-technology-and-economics/">BME</a>); Sem Borst (TU/e)</p>
+<p>Habib Mostafaei (<a href="../companies/technical-university-of-eindhoven/">TU/e</a>); Mohammad Ezzati (<a href="../companies/technical-university-of-berlin/">TU Berlin</a>); Pieter J. L. Cuijpers (<a href="../companies/technical-university-of-eindhoven/">TU/e</a>); Stefan Schmid (<a href="../companies/technical-university-of-berlin/">TU Berlin</a>); Gábor Rétvári (<a href="../companies/budapest-university-of-technology-and-economics/">BME</a>); Sem Borst (<a href="../companies/technical-university-of-eindhoven/">TU/e</a>)</p>
 <ul>
 <li><strong>Why</strong>: PIFO — the abstraction underlying ideal push-in-first-out scheduling — has been blocked from real switch silicon because it needs line-speed sorting. The approximations that fit hardware (SP-PIFO, AIFO) don't scale in queue count. This paper's approximation is startlingly cheap, and it sometimes beats the abstraction it approximates.</li>
 <li><strong>What</strong>: A new PIFO approximation, Exp-PIFO, that tracks scheduling state with only two memory cells and uses a lookup table to avoid complex control flow. Empirically it sometimes outperforms strict PIFO on flow-completion-time metrics — and the paper explains why rather than shrugging. Proof-of-concept on Intel Tofino uses significantly less memory than SP-PIFO/AIFO implementations (from abstract only).</li>
@@ -1294,7 +1294,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://dl.acm.org/doi/10.1145/3768977">Abstract</a> <a class="pick-link" href="https://dl.acm.org/doi/pdf/10.1145/3768977">Paper</a></p>
 </div>
-<p>Peter Okelmann; Ilya Meignan-Masson; Masanori Misono; Pramod Bhatotia (<a href="../companies/technical-university-of-munich/">Technical University of Munich</a> (TUM))</p>
+<p>Peter Okelmann; Ilya Meignan-Masson; Masanori Misono; Pramod Bhatotia (<a href="../companies/technical-university-of-munich/">Technical University of Munich</a> (<a href="../companies/technical-university-of-munich/">TUM</a>))</p>
 <ul>
 <li><strong>Why</strong>: The eBPF-as-extension-mechanism idea escapes the Linux kernel: here it's used to make unikernel VNFs hot-updatable without rebuilds, restarts, or state loss. If you care about where eBPF's programming model goes next, this is a data point.</li>
 <li><strong>What</strong>: An extensible networked OS for dynamic, stateful network functions. Integrating eBPF enables dynamic, verified code execution to update packet-processing logic live; reported results include drastically reduced reconfiguration time, amortized verification costs, and up to 3× better performance vs. Linux-based VNF deployments, while keeping unikernel lightness (from abstract only).</li>
@@ -1320,7 +1320,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://dl.acm.org/doi/10.1145/3768999">Abstract</a> <a class="pick-link" href="https://dl.acm.org/doi/pdf/10.1145/3768999">Paper</a></p>
 </div>
-<p>Hejing Li (<a href="../companies/max-planck-institute-for-software-systems/">MPI-SWS</a>); Marvin Meiers (<a href="../companies/saarland-university/">Saarland University</a>); Jialin Li (<a href="../companies/national-university-of-singapore/">NUS</a>); Antoine Kaufmann (<a href="../companies/max-planck-institute-for-informatics/">MPI</a>-SWS)</p>
+<p>Hejing Li (<a href="../companies/max-planck-institute-for-software-systems/">MPI-SWS</a>); Marvin Meiers (<a href="../companies/saarland-university/">Saarland University</a>); Jialin Li (<a href="../companies/national-university-of-singapore/">NUS</a>); Antoine Kaufmann (<a href="../companies/max-planck-institute-for-software-systems/">MPI-SWS</a>)</p>
 <ul>
 <li><strong>Why</strong>: Their premise matches what DC practitioners know: bottlenecks today are in host software and hardware, not the wire protocol, yet most network evaluation still simulates protocols. SepaNet makes end-to-end (full-system) simulation at cluster scale tractable — a methodology shift for anyone reasoning about DC system design.</li>
 <li><strong>What</strong>: A simulation framework that lets users navigate fidelity/time/resource tradeoffs explicitly by mixing simulation models of different fidelity with controlled parallelization, guided by a profiler that identifies bottlenecks and informs partitioning. Demonstrated: a 1200-node datacenter network running end-to-end applications, simulated in 175 minutes for 20 s of system time on 24 cores (from abstract only).</li>
@@ -1346,7 +1346,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://dl.acm.org/doi/10.1145/3749221">Abstract</a> <a class="pick-link" href="https://dl.acm.org/doi/pdf/10.1145/3749221">Paper</a></p>
 </div>
-<p>Hammas Bin Tanveer (<a href="../companies/university-of-iowa/">University of Iowa</a>) et al. (<a href="../companies/akamai/">Akamai</a>, <a href="../companies/caida/">CAIDA</a>/<a href="../companies/university-of-california-san-diego/">UCSD</a>, <a href="../companies/max-planck-institute-for-informatics/">MPI-INF</a>, <a href="../companies/ipinfo/">IPinfo</a>, <a href="../companies/walton-institute/">Walton Institute</a>, <a href="../companies/mit/">MIT</a>; kc Claffy, UC San Diego)</p>
+<p>Hammas Bin Tanveer (<a href="../companies/university-of-iowa/">University of Iowa</a>) et al. (<a href="../companies/akamai/">Akamai</a>, <a href="../companies/caida/">CAIDA</a>/<a href="../companies/university-of-california-san-diego/">UCSD</a>, <a href="../companies/max-planck-institute-for-informatics/">MPI-INF</a>, <a href="../companies/ipinfo/">IPinfo</a>, <a href="../companies/walton-institute/">Walton Institute</a>, <a href="../companies/mit/">MIT</a>; kc Claffy, <a href="../companies/university-of-california-san-diego/">UC San Diego</a>)</p>
 <ul>
 <li><strong>Why</strong>: IPv6's address space was supposed to make scanning moot; this dataset shows a sustained two-year increase in IPv6 scanning anyway, and characterizes how scanners actually work — directly relevant to your network-security interests and to any assumption that v6 reachability implies obscurity.</li>
 <li><strong>What</strong>: The largest-ever IPv6 proactive telescope, deployed in a production ISP, collecting 600M+ unsolicited packets from ~1.9k ASes over 10 months. The paper characterizes scan sources, evaluates five defense-relevant features across the stack, and reverse-engineers scanner strategies (from abstract only).</li>
@@ -1359,7 +1359,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://dl.acm.org/doi/10.1145/3768986">Abstract</a> <a class="pick-link" href="https://dl.acm.org/doi/pdf/10.1145/3768986">Paper</a></p>
 </div>
-<p>Md Nadim (<a href="../companies/iowa-state-university/">Iowa State University</a>) et al. (<a href="../companies/university-of-california-irvine/">UC Irvine</a>, <a href="../companies/ohio-state-university/">Ohio State</a>; Hongwei Zhang, Iowa State)</p>
+<p>Md Nadim (<a href="../companies/iowa-state-university/">Iowa State University</a>) et al. (<a href="../companies/university-of-california-irvine/">UC Irvine</a>, <a href="../companies/ohio-state-university/">Ohio State</a>; Hongwei Zhang, <a href="../companies/iowa-state-university/">Iowa State</a>)</p>
 <ul>
 <li><strong>Why</strong>: This is free-space optical x-haul — physical-layer transport work with real 10+ km field deployment, quantitative scintillation/weather characterization, and a publicly available testbed and dataset. Given your optics and DC/WAN-interconnect focus, this is the conference's main physical-optics presence.</li>
 <li><strong>What</strong>: R-Optical, a first-of-its-kind 10+ km terrestrial FSOC x-haul system, permanently deployed as a public research testbed. Demonstrated 2.92 Gbps on a single channel, with a path to 160 Gbps aggregate via 16 channels of 10G SFP+ and multi-Tbps potential with 100G/400G coherent transceivers; also quantifies scintillation and weather impact on long-range FSOC (from abstract only).</li>
@@ -1399,7 +1399,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://dl.acm.org/doi/10.1145/3768996">Abstract</a> <a class="pick-link" href="https://dl.acm.org/doi/pdf/10.1145/3768996">Paper</a></p>
 </div>
-<p>Manuel Eppler (<a href="../companies/siemens/">Siemens AG</a>, <a href="../companies/university-of-t-bingen/">University of Tuebingen</a>) et al. (University of Tuebingen, Siemens AG, <a href="../companies/university-of-kassel/">University of Kassel</a>)</p>
+<p>Manuel Eppler (<a href="../companies/siemens/">Siemens AG</a>, <a href="../companies/university-of-t-bingen/">University of Tuebingen</a>) et al. (<a href="../companies/university-of-t-bingen/">University of Tuebingen</a>, <a href="../companies/siemens/">Siemens AG</a>, <a href="../companies/university-of-kassel/">University of Kassel</a>)</p>
 <ul>
 <li><strong>Why</strong>: A black-box method to measure what switch datasheets never tell you: per-switch internal forwarding delays at nanosecond granularity — the numbers you need before you can compute valid TAS gate schedules or PSFP configurations at all. As switching-hardware work with an industrial-metrology flavor, it's a methodology you'd want your vendors measured with.</li>
 <li><strong>What</strong>: A delay model for TSN switches plus a measurement methodology to quantify its parameters on any given switch — the first known approach to deriving these delays. Applied to switches from Kontron and Relyum, it reveals significantly different operational delays between vendors (from abstract only).</li>

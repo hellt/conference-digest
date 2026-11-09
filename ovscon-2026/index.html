@@ -1183,7 +1183,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t27">Abstract</a></p>
 </div>
-<p>Patryk Diak, <a href="../companies/red-hat/">Red Hat</a>, LLC.; Dumitru Ceara, Red Hat, LLC.</p>
+<p>Patryk Diak, <a href="../companies/red-hat/">Red Hat</a>, LLC.; Dumitru Ceara, <a href="../companies/red-hat/">Red Hat</a>, LLC.</p>
 <ul>
 <li><strong>Why</strong>: The canonical modern debugging story — a scaling problem that turned out to be distributed across every layer of the stack. This is exactly the kind of full-stack triage (K8s API → OVN NB/SB → OVS flows → kernel) the PM's world runs on, and the "telemetry we wish we'd had" is directly reusable.</li>
 <li><strong>What</strong>: A postmortem-style account of scaling OVN-Kubernetes UDN workloads in which every layer contributed a small failure, and all of them had to be fixed before any improvement was visible. The core finding: most engineering time went to localizing the failing layer, not to fixing it. (from abstract only)</li>
@@ -1235,7 +1235,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t12">Abstract</a></p>
 </div>
-<p>Sragdhara Datta Chaudhuri, <a href="../companies/nutanix/">Nutanix</a>; Priyankar Jain, Nutanix</p>
+<p>Sragdhara Datta Chaudhuri, <a href="../companies/nutanix/">Nutanix</a>; Priyankar Jain, <a href="../companies/nutanix/">Nutanix</a></p>
 <ul>
 <li><strong>Why</strong>: Multi-cluster K8s + VMs in one VPC with local control planes is the shape of most real hybrid estates. This is a working architecture ("interconnect of interconnects") rather than a proposal, built from OVN-IC primitives a PM could reproduce.</li>
 <li><strong>What</strong>: Nutanix Flow CNI, built on OVN-Kubernetes and OVN-IC, extends the VPC model across VM and multi-cluster Kubernetes environments: shared logical routing domain, bi-directional federated service reachability (VM VIPs ↔ K8s ClusterIPs), and cross-cluster DNS for ClusterIP services — all while each environment keeps its own control plane. (from abstract only)</li>
@@ -1248,7 +1248,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t15">Abstract</a></p>
 </div>
-<p>Numan Siddique, <a href="../companies/crusoe/">Crusoe</a>; Ketan Supanekar, Crusoe</p>
+<p>Numan Siddique, <a href="../companies/crusoe/">Crusoe</a>; Ketan Supanekar, <a href="../companies/crusoe/">Crusoe</a></p>
 <ul>
 <li><strong>Why</strong>: Crusoe is an AI-cloud operator re-architecting its OVN control plane — and it's led by Numan Siddique, OVN's longtime maintainer. A production AI-cloud at the point where the central Southbound DB becomes the bottleneck is a rare, candid data point.</li>
 <li><strong>What</strong>: The current OVN-relay architecture and its bottlenecks, a re-architecture modeled on OVN-Kubernetes Interconnect, and an evaluation of control-plane backing stores — k8s api-server/etcd with custom CRDs vs. NATS KV — with the chosen option and rationale. The talk explicitly asks the community whether the central OVN SB DB can be replaced by api-server/etcd or NATS KV. (from abstract only)</li>
@@ -1274,7 +1274,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t11">Abstract</a></p>
 </div>
-<p>Jaime Caamano, <a href="../companies/red-hat/">Red Hat</a>, LLC.; Matteo Dallaglio, Red Hat, LLC.; Tim Rozet, <a href="../companies/nvidia/">NVIDIA</a></p>
+<p>Jaime Caamano, <a href="../companies/red-hat/">Red Hat</a>, LLC.; Matteo Dallaglio, <a href="../companies/red-hat/">Red Hat</a>, LLC.; Tim Rozet, <a href="../companies/nvidia/">NVIDIA</a></p>
 <ul>
 <li><strong>Why</strong>: A beautiful datapath pathology: with hundreds/thousands of UDNs sharing one uplink/IP/MAC, ARP replies can't be mapped back to their originating router (conntrack can't track them), so OVN-Kubernetes fans them out to every patch port — duplicating neighbor state, ballooning the OpenFlow footprint, and eventually exceeding OVS recirculation limits. This is exactly the "K8s networking meets datapath internals" intersection.</li>
 <li><strong>What</strong>: The full arc of an ARP storm at UDN scale: how fan-out surfaced, the constraints any fix must preserve, a short-term flow fix constraining fan-out on the shared gateway bridge, a mid-term prototype steering discovery through the default gateway router, and the resulting upstream OVN feature — Shared MAC-binding scopes, letting related logical router ports share one set of learned neighbor bindings instead of per-router duplication. (from abstract only)</li>
@@ -1419,7 +1419,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t17">Abstract</a></p>
 </div>
-<p>Or Mazza, <a href="../companies/nvidia/">NVIDIA</a>; Quentin Barrand, NVIDIA; Alin Serdean, NVIDIA</p>
+<p>Or Mazza, <a href="../companies/nvidia/">NVIDIA</a>; Quentin Barrand, <a href="../companies/nvidia/">NVIDIA</a>; Alin Serdean, <a href="../companies/nvidia/">NVIDIA</a></p>
 <ul>
 <li><strong>Why</strong>: Not a networking-technique talk but a direction signal: a C→Rust rewrite of a production OpenFlow controller (HBN on BlueField) with binary compatibility preserved and <em>measured</em> gains — 8% faster insertion, 14% faster deletion, 57% faster flow-statistics collection — plus an explicit debate about rewriting parts of OVS itself in Rust.</li>
 <li><strong>What</strong>: The HBN controller rewrite from C to Rust for memory safety, concurrency, and testability, delivered without disrupting users, with the above performance numbers and practical lessons from running it in a real DPU platform. The speakers open the question of where Rust fits in OVS proper and what C bindings would be required. (from abstract only)</li>

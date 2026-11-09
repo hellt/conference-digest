@@ -548,7 +548,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://dl.acm.org/doi/10.1145/3730966">Abstract</a> <a class="pick-link" href="https://dl.acm.org/doi/pdf/10.1145/3730966">Paper</a></p>
 </div>
-<p>Nikita Tyunyayev; Clément Delzotti (<a href="../../companies/uclouvain/">UCLouvain</a>); Haggai Eran (<a href="../../companies/nvidia/">NVIDIA</a>); Tom Barbette (UCLouvain, Belgium)</p>
+<p>Nikita Tyunyayev; Clément Delzotti (<a href="../../companies/uclouvain/">UCLouvain</a>); Haggai Eran (<a href="../../companies/nvidia/">NVIDIA</a>); Tom Barbette (<a href="../../companies/uclouvain/">UCLouvain</a>, Belgium)</p>
 <ul>
 <li><strong>Why</strong>: As NICs get "smarter," the descriptor/driver software interface is becoming the bottleneck — the paper frames it as a 300-cycle-per-packet budget at NFV speeds, of which even DPDK eats 20%. This is a proposal to redesign that boundary, which matters to anyone betting on SmartNIC-offloaded dataplanes.</li>
 <li><strong>What</strong>: An argument and prototype for NICs adapting to application needs rather than drivers acting as translators: a datapath API that compiles into different buffer-management models per application, tailoring packet descriptors so the application receives packets precisely in the form it needs. Reported result: 2.2× more traffic served at equal loss constraints vs. state of the art (from abstract only).</li>

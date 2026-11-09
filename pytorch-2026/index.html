@@ -1281,7 +1281,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257030">Abstract</a></p>
 </div>
-<p>Ke Wen (<a href="../companies/nvidia/">NVIDIA</a>), Natalia Gimelshein (<a href="../companies/meta/">Meta</a>), Kapil Sharma (Meta, PyTorch Distributed)</p>
+<p>Ke Wen (<a href="../companies/nvidia/">NVIDIA</a>), Natalia Gimelshein (<a href="../companies/meta/">Meta</a>), Kapil Sharma (<a href="../companies/meta/">Meta</a>, PyTorch Distributed)</p>
 <ul>
 <li><strong>Why</strong>: One-sided RMA issued from inside GPU kernels is the biggest change in how accelerators use the fabric since collectives; this is the guided tour of the programming model, and it pairs directly with the new <code>torch.distributed</code> window APIs.</li>
 <li><strong>What</strong>: PyTorch Symmetric Memory gives every rank a direct window into its peers' GPU memory, erasing the compute/communication boundary. A practical tour across five themes: compute–communication fusion (pushing partial results to a peer from inside a kernel), one-sided puts/gets plus <code>torch.distributed.TokenSwitch</code> supporting expert-parallel MoE with autograd, binding NCCL device primitives into a CUDA DSL (cute-DSL), device-side profiling plus CUDA Graph capture, and community adoption. (from abstract only)</li>

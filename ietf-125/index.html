@@ -1399,7 +1399,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-xu-ipsecme-esp-in-udp-lb/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-ipsecme-encapsulating-ipsec-esp-in-udp-for-load-balancing-00">Slides</a> <a class="pick-link" href="https://youtu.be/-0_gLUb5r3c">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/ipsecme">Materials</a></p>
 </div>
-<p>Xiaohu Xu (<a href="../companies/china-mobile/">China Mobile</a>), Shraddha Hegde (<a href="../companies/hpe/">HPE</a>), Boris Pismenny (<a href="../companies/nvidia/">Nvidia</a>), Dacheng Zhang, Liang Xia (<a href="../companies/huawei/">Huawei</a>), Mahendra Puttaswamy (HPE)</p>
+<p>Xiaohu Xu (<a href="../companies/china-mobile/">China Mobile</a>), Shraddha Hegde (<a href="../companies/hpe/">HPE</a>), Boris Pismenny (<a href="../companies/nvidia/">Nvidia</a>), Dacheng Zhang, Liang Xia (<a href="../companies/huawei/">Huawei</a>), Mahendra Puttaswamy (<a href="../companies/hpe/">HPE</a>)</p>
 <ul>
 <li><strong>Why</strong>: ESP has no entropy, so IPsec tunnels hash onto one ECMP path / one LAG member and one CPU core (no RSS spread). For SD-WAN branch interconnects and, increasingly, cloud-provider encryption of DCI WAN traffic (financial/governmental clouds), this strands bandwidth and CPU.</li>
 <li><strong>What</strong>: A UDP encapsulation of ESP where the 16-bit UDP source port carries a per-flow entropy value, letting unmodified switches and routers load-balance IPsec traffic across ECMP/LAG, and letting x86 IPsec gateways RSS-distribute across cores. Alternative to running multiple parallel tunnels.</li>

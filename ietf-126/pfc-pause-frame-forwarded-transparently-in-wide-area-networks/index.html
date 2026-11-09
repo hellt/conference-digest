@@ -548,7 +548,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-he-rtgwg-wan-pfc/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-rtgwg-pfc-pause-frame-forwarded-transparently-in-wide-area-networks-00">Slides</a> <a class="pick-link" href="https://youtu.be/0lOx_vRs1no">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/rtgwg">Materials</a></p>
 </div>
-<p>Xiaoming He (<a href="../../companies/china-telecom/">China Telecom</a>), Lijie Deng (China Telecom).</p>
+<p>Xiaoming He (<a href="../../companies/china-telecom/">China Telecom</a>), Lijie Deng (<a href="../../companies/china-telecom/">China Telecom</a>).</p>
 <ul>
 <li><strong>Why</strong>: AI and distributed-storage workloads now run RDMA across metro/wide-area links between data centers; the draft's argument is that AIDC interconnect needs lossless WAN transmission, and hop-by-hop PFC in the WAN is both costly and amplifies head-of-line blocking, deadlock and congestion diffusion.</li>
 <li><strong>What</strong>: China Telecom's proposal to carry PFC PAUSE frames <em>transparently</em> across the WAN: the egress PE validates the PFC frame (destination MAC must be 01-80-C2-00-00-01, source must be the directly-connected DC gateway port), encapsulates it in the DCI tunnel (SRv6, SR-MPLS, or VXLAN), and transit nodes forward it untouched; the ingress PE decapsulates, rewrites the source MAC to its own port, and delivers it to the source DC gateway. End-to-end flow control with zero PFC capability required in WAN nodes.</li>

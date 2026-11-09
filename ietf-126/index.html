@@ -1321,7 +1321,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-filsfils-srv6ops-srv6-ai-backend/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-srv6ops-34-srv6-in-ai-backend-01">Slides</a> <a class="pick-link" href="https://youtu.be/kxTId7do_y4">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/srv6ops">Materials</a></p>
 </div>
-<p>Ahmed Abdelsalam (<a href="../companies/cisco/">Cisco</a>), on behalf of co-authors from Cisco, <a href="../companies/microsoft/">Microsoft</a>, <a href="../companies/oracle/">Oracle Cloud</a>, <a href="../companies/ibm/">IBM Cloud</a>, <a href="../companies/nvidia/">NVIDIA</a> and <a href="../companies/arrcus/">Arrcus</a>.</p>
+<p>Ahmed Abdelsalam (<a href="../companies/cisco/">Cisco</a>), on behalf of co-authors from <a href="../companies/cisco/">Cisco</a>, <a href="../companies/microsoft/">Microsoft</a>, <a href="../companies/oracle/">Oracle Cloud</a>, <a href="../companies/ibm/">IBM Cloud</a>, <a href="../companies/nvidia/">NVIDIA</a> and <a href="../companies/arrcus/">Arrcus</a>.</p>
 <ul>
 <li><strong>Why</strong>: This is the hyperscaler reference design for AI backends — the draft the SRv6/srv6ops community is rallying around, and it is requesting WG adoption at this meeting.</li>
 <li><strong>What</strong>: Describes how SRv6 NEXT-CSID enables deterministic path placement: the NIC's transport stack encodes each path as an ordered segment list in the packet header, and the fabric forwards statelessly. It documents the MRC (Multipath Reliable Connection) design: packet spraying, ECN-based adaptive load balancing, out-of-order memory placement, selective retransmission, and packet trimming for incast — reaching 131,000 GPUs with only two tiers of switches (8×100Gb/s per host instead of 1×800Gb/s).</li>
@@ -1386,7 +1386,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-he-rtgwg-wan-pfc/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-rtgwg-pfc-pause-frame-forwarded-transparently-in-wide-area-networks-00">Slides</a> <a class="pick-link" href="https://youtu.be/0lOx_vRs1no">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/rtgwg">Materials</a></p>
 </div>
-<p>Xiaoming He (<a href="../companies/china-telecom/">China Telecom</a>), Lijie Deng (China Telecom).</p>
+<p>Xiaoming He (<a href="../companies/china-telecom/">China Telecom</a>), Lijie Deng (<a href="../companies/china-telecom/">China Telecom</a>).</p>
 <ul>
 <li><strong>Why</strong>: AI and distributed-storage workloads now run RDMA across metro/wide-area links between data centers; the draft's argument is that AIDC interconnect needs lossless WAN transmission, and hop-by-hop PFC in the WAN is both costly and amplifies head-of-line blocking, deadlock and congestion diffusion.</li>
 <li><strong>What</strong>: China Telecom's proposal to carry PFC PAUSE frames <em>transparently</em> across the WAN: the egress PE validates the PFC frame (destination MAC must be 01-80-C2-00-00-01, source must be the directly-connected DC gateway port), encapsulates it in the DCI tunnel (SRv6, SR-MPLS, or VXLAN), and transit nodes forward it untouched; the ingress PE decapsulates, rewrites the source MAC to its own port, and delivers it to the source DC gateway. End-to-end flow control with zero PFC capability required in WAN nodes.</li>
@@ -1399,7 +1399,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ruan-spring-priority-flow-control-sid/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-spring-srv6-behavior-extension-for-flow-control-in-wan-00">Slides</a> <a class="pick-link" href="https://youtu.be/3ui3EfTTLkA">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/spring">Materials</a></p>
 </div>
-<p>Zhengxin Han (<a href="../companies/china-unicom/">China Unicom</a>, presenter), Zheng Ruan, Yao Liu, MengYao Han, Ying Liu (China Unicom/<a href="../companies/zte/">ZTE</a>).</p>
+<p>Zhengxin Han (<a href="../companies/china-unicom/">China Unicom</a>, presenter), Zheng Ruan, Yao Liu, MengYao Han, Ying Liu (<a href="../companies/china-unicom/">China Unicom</a>/<a href="../companies/zte/">ZTE</a>).</p>
 <ul>
 <li><strong>Why</strong>: The SRv6-flavored answer to the same lossless-WAN problem — with two advantages over transparent PFC: backpressure can traverse legacy non-PFC devices, and it can be scoped to per-tenant/slice queues instead of coarse port-level pausing. The SPRING list already reached consensus (June–July 2025) that a new SRv6 behavior is the preferred approach.</li>
 <li><strong>What</strong>: A new <code>End.X.PFC</code> behavior that flags PFC-capable interfaces along an SRv6 path. PFC frames are encapsulated into <em>reverse</em> SRv6 tunnels whose final segment is the <code>End.X.PFC</code> SID of the target upstream interface, delivering backpressure precisely to the right node even across non-PFC legacy transit devices.</li>

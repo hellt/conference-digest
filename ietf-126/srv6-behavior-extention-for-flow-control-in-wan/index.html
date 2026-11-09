@@ -548,7 +548,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ruan-spring-priority-flow-control-sid/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/materials/slides-126-spring-srv6-behavior-extension-for-flow-control-in-wan-00">Slides</a> <a class="pick-link" href="https://youtu.be/3ui3EfTTLkA">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/126/session/spring">Materials</a></p>
 </div>
-<p>Zhengxin Han (<a href="../../companies/china-unicom/">China Unicom</a>, presenter), Zheng Ruan, Yao Liu, MengYao Han, Ying Liu (China Unicom/<a href="../../companies/zte/">ZTE</a>).</p>
+<p>Zhengxin Han (<a href="../../companies/china-unicom/">China Unicom</a>, presenter), Zheng Ruan, Yao Liu, MengYao Han, Ying Liu (<a href="../../companies/china-unicom/">China Unicom</a>/<a href="../../companies/zte/">ZTE</a>).</p>
 <ul>
 <li><strong>Why</strong>: The SRv6-flavored answer to the same lossless-WAN problem — with two advantages over transparent PFC: backpressure can traverse legacy non-PFC devices, and it can be scoped to per-tenant/slice queues instead of coarse port-level pausing. The SPRING list already reached consensus (June–July 2025) that a new SRv6 behavior is the preferred approach.</li>
 <li><strong>What</strong>: A new <code>End.X.PFC</code> behavior that flags PFC-capable interfaces along an SRv6 path. PFC frames are encapsulated into <em>reverse</em> SRv6 tunnels whose final segment is the <code>End.X.PFC</code> SID of the target upstream interface, delivering backpressure precisely to the right node even across non-PFC legacy transit devices.</li>

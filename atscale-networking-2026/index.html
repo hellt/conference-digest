@@ -1,0 +1,1400 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Meta&#x27;s large-scale networking conference on AI fabrics, RDMA, data-center and backbone architecture, operations, and optical interconnects.">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/atscale-networking-2026/">
+      
+      
+      
+        <link rel="prev" href="../pets-2026/">
+      
+      
+        <link rel="next" href="../nlnog-2026/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>@Scale: Networking 2026 - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="@Scale: Networking 2026 · Conference Digest" />
+<meta property="og:description" content="Meta&#39;s large-scale networking conference on AI fabrics, RDMA, data-center and backbone architecture, operations, and optical interconnects." />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/atscale-networking-2026.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/atscale-networking-2026/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="@Scale: Networking 2026 · Conference Digest" />
+<meta property="twitter:description" content="Meta&#39;s large-scale networking conference on AI fabrics, RDMA, data-center and backbone architecture, operations, and optical interconnects." />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/atscale-networking-2026.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              @Scale: Networking 2026
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Companies
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../archive/" class="md-tabs__link">
+        
+  
+  Archive
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-powered-text">Powered by</span>
+          <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resilient-ai-supercomputer-networking-using-mrc-and-srv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Resilient AI Supercomputer Networking using MRC and SRv6
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metaroce-metas-rdma-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MetaRoCE: Meta's RDMA Transport
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metaroce-from-spec-to-nic-to-open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MetaRoCE: From Spec to NIC to Open Source
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virgo-scale-out-data-center-network-for-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Virgo: scale-out data center network for AI
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fiber-networks-innovations-for-ai-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fiber Networks Innovations for AI at Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-network-design-at-scale-3-min-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Physical Network Design at Scale + 3 min Q&amp;A
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#co-designing-communication-for-ai-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Co-Designing Communication for AI Accelerators
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-scalable-ai-cloud-interconnects-with-srv6-3-min-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Building scalable AI cloud interconnects with SRv6 + 3 min Q&amp;A
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lightning-talk-the-plan-that-learns" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lightning Talk - The Plan That Learns
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lightning-talk-ai4ni-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lightning Talk - AI4NI @Runtime
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-scale-machine-learning-network-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Anatomy of @scale Machine Learning Network Operations
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-panel-scale-out-networking-for-ai-supercomputers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Live Panel: Scale-Out Networking for AI Supercomputers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lightning-talk-10x-network-design-engineer" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lightning Talk - 10x Network Design Engineer
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-panel-building-at-the-roofline-planning-and-delivering-gigawatt-scale-ai-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Live Panel: Building at the Roofline — Planning and Delivering Gigawatt-Scale AI Infrastructure
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Companies
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    <li class="md-nav__item md-nav__item--powered">
+      <a href="https://tokenfactory.nebius.com/" class="md-nav__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+        <span class="md-powered-text">Powered by</span>
+        <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+        <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+      </a>
+    </li>
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resilient-ai-supercomputer-networking-using-mrc-and-srv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Resilient AI Supercomputer Networking using MRC and SRv6
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metaroce-metas-rdma-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MetaRoCE: Meta's RDMA Transport
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metaroce-from-spec-to-nic-to-open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MetaRoCE: From Spec to NIC to Open Source
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virgo-scale-out-data-center-network-for-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Virgo: scale-out data center network for AI
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fiber-networks-innovations-for-ai-at-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fiber Networks Innovations for AI at Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-network-design-at-scale-3-min-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Physical Network Design at Scale + 3 min Q&amp;A
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#co-designing-communication-for-ai-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Co-Designing Communication for AI Accelerators
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-scalable-ai-cloud-interconnects-with-srv6-3-min-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Building scalable AI cloud interconnects with SRv6 + 3 min Q&amp;A
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lightning-talk-the-plan-that-learns" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lightning Talk - The Plan That Learns
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lightning-talk-ai4ni-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lightning Talk - AI4NI @Runtime
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-scale-machine-learning-network-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Anatomy of @scale Machine Learning Network Operations
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-panel-scale-out-networking-for-ai-supercomputers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Live Panel: Scale-Out Networking for AI Supercomputers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lightning-talk-10x-network-design-engineer" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lightning Talk - 10x Network Design Engineer
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-panel-building-at-the-roofline-planning-and-delivering-gigawatt-scale-ai-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Live Panel: Building at the Roofline — Planning and Delivering Gigawatt-Scale AI Infrastructure
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>12 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="scale-networking-2026">@Scale: Networking 2026<a class="headerlink" href="#scale-networking-2026" title="Permanent link">#</a></h1>
+<p>A single-day program (August 25, 2026, Santa Clara) almost entirely organized around one question: how to build, transport, and physically deliver networks for frontier-scale AI training. No papers or slide decks were published with the program, and the conference page adds nothing substantive beyond the abstracts, so every write-up below is based on abstract text only (marked per item); the Meta keynote and the MetaRoCE group Q&amp;A have no published abstracts and are not assessed. Of the four AI-agent lightning talks, <em>AI-Native Network Capacity Management</em> (Mohab Gawish, Meta) substantially overlaps <em>The Plan That Learns</em> and is covered in passing rather than as a separate pick.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>August 25, 2026</span>
+<span class="digest-fact" markdown><a href="https://atscaleconference.com/events/networking-2026/">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="resilient-ai-supercomputer-networking-using-mrc-and-srv6"><a href="resilient-ai-supercomputer-networking-using-mrc-and-srv6/">Resilient AI Supercomputer Networking using MRC and SRv6</a><a class="headerlink" href="#resilient-ai-supercomputer-networking-using-mrc-and-srv6" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-18">Abstract</a></p>
+</div>
+<p>Jitendra Padhye (<a href="../companies/openai/">OpenAI</a>)</p>
+<ul>
+<li><strong>Why</strong>: Tail latency — not average throughput — is what stalls synchronous pretraining at frontier scale, and one colliding flow or one failed link can throttle a job of tens of thousands of accelerators. This is OpenAI's production answer, and it is a transport-plus-routing co-design rather than a tweak to either.</li>
+<li><strong>What</strong>: MRC, a new RDMA-based transport that sprays across many paths and actively load-balances between them, eliminating flow collisions; paired with static SRv6 source routing that lets the transport bypass failures on its own. Run in production at OpenAI to train frontier models, where MRC lets training jobs ride out network failures that previously would have interrupted the run. (The abstract calls this a three-pronged approach but enumerates only two prongs; the third is not specified in the program text.) (from abstract only)</li>
+<li><strong>How</strong>: Path spraying removes the ECMP flow-collision problem by not pinning flows to single paths; active load balancing keeps utilization even as paths churn. SRv6 segment lists encode the path, so on failure the endpoints — not the routing protocol — select alternates: failover without reconvergence.</li>
+<li><strong>Where applicable</strong>: OpenAI's production training clusters, org-specific at extreme scale. The pattern (spray plus endpoint-controlled, source-routed failover over richly connected Ethernet) is broadly transferable, but it presumes a multipath topology and an SRv6-capable fabric.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="metaroce-metas-rdma-transport"><a href="metaroce-metas-rdma-transport/">MetaRoCE: Meta's RDMA Transport</a><a class="headerlink" href="#metaroce-metas-rdma-transport" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-19">Abstract</a></p>
+</div>
+<p>Arvind Srinivasan (<a href="../companies/meta/">Meta</a>), Kingshuk Mandal (<a href="../companies/keysight/">Keysight</a> Technologies)</p>
+<ul>
+<li><strong>Why</strong>: Meta redesigned RDMA from scratch for clusters growing past a million accelerators, and its core bet — accept lossy Ethernet, push all transport intelligence into the NIC, decouple from topology — is the same architectural direction other frontier operators are taking. This is the overview talk: mechanisms, the topology it enables, and the standards push.</li>
+<li><strong>What</strong>: MetaRoCE is a clean-sheet, multipath, out-of-order, receiver-driven RDMA transport that treats Ethernet as inherently lossy and pushes all intelligence into the NIC. Decoupling transport from topology is what makes TCO-optimized multiplane FPF topologies viable on commodity Ethernet with frictionless application adoption. A conformance suite developed with Keysight validates implementations from software reference through hardware emulation to production silicon, and Meta is opening MetaRoCE to the industry as a candidate ubiquitous RDMA transport for AI-scale networks. (from abstract only)</li>
+<li><strong>How</strong>: NIC-resident intelligence with receiver-driven operation and out-of-order delivery, so the transport survives loss and reordering without requiring a lossless fabric underneath; multipath operation replaces fabric-wide coordination. The conformance suite is the mechanism for multi-vendor interoperability.</li>
+<li><strong>Where applicable</strong>: Meta's accelerator clusters (million-scale, multi-region) and its multiplane FPF fabric plans — org-specific scale, but explicitly positioned for industry-wide adoption; the Keysight conformance chain signals serious intent for portability across NIC and silicon vendors.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="metaroce-from-spec-to-nic-to-open-source"><a href="metaroce-from-spec-to-nic-to-open-source/">MetaRoCE: From Spec to NIC to Open Source</a><a class="headerlink" href="#metaroce-from-spec-to-nic-to-open-source" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-21">Abstract</a></p>
+</div>
+<p>Sandeep Nagaraja (<a href="../companies/meta/">Meta</a>), Balakrishnan Raman (<a href="../companies/amd/">AMD</a>)</p>
+<ul>
+<li><strong>Why</strong>: The companion deep-dive with the evidence: real-world performance results across multiplane topologies, tail latency, and long-distance RDMA, plus the open-source release (specification, reference implementation, compliance suites) at OCP. For anyone deciding whether MetaRoCE matters beyond Meta, this is the talk with numbers.</li>
+<li><strong>What</strong>: MetaRoCE's journey from specification to silicon: a reference software implementation on AMD programmable NICs, demonstrated scaling out within a cluster and scaling across fabrics for diverse deployment needs. Performance results span multiplane FPF topologies, tail-latency optimization, and long-distance RDMA. First look at Meta's open-source release of the specification, reference implementation, and compliance suites at OCP. (from abstract only)</li>
+<li><strong>How</strong>: Reference software implementation on AMD programmable NIC hardware; the scaling and performance claims are demonstrated on that stack rather than only asserted.</li>
+<li><strong>Where applicable</strong>: The reference implementation is tied to AMD programmable NIC silicon — an implementation constraint, not a protocol one — and the performance results come from Meta's multiplane FPF deployment context. The open spec and compliance suites are aimed at portable adoption by others.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="virgo-scale-out-data-center-network-for-ai"><a href="virgo-scale-out-data-center-network-for-ai/">Virgo: scale-out data center network for AI</a><a class="headerlink" href="#virgo-scale-out-data-center-network-for-ai" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-40">Abstract</a></p>
+</div>
+<p>Jeongkeun "JK" Lee (<a href="../companies/google/">Google</a>)</p>
+<ul>
+<li><strong>Why</strong>: Google splitting AI east-west traffic onto a purpose-built fabric — separate from Jupiter, which is retained for north-south — is a major architectural datapoint. Virgo will carry production ML traffic for Google Cloud's A5x bare-metal instances (NVIDIA Vera Rubin NVL72) and is a building block for next-gen TPUs, so its design choices will be exercised at frontier scale.</li>
+<li><strong>What</strong>: Virgo, a dedicated accelerator-to-accelerator east-west fabric optimized for massive horizontal scale, engineered for deterministic latency and maximum resilience to deliver high goodput for ML workloads. Design principles: resilience, observability, deployability, and multi-building scale. (from abstract only)</li>
+<li><strong>How</strong>: Optimized for the traffic shape of ML workloads (tightly coupled horizontal collectives) rather than general datacenter traffic; deterministic latency and resilience are stated design goals, but the mechanisms are not detailed in the abstract.</li>
+<li><strong>Where applicable</strong>: Google production and Google Cloud A5x instances; multi-building scale implies campus-scale cross-building connectivity. Google-specific build, but the split of "dedicated AI scale-out fabric beside the general-purpose fabric" mirrors choices at Meta and OpenAI and is an industry-direction signal.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="fiber-networks-innovations-for-ai-at-scale"><a href="fiber-networks-innovations-for-ai-at-scale/">Fiber Networks Innovations for AI at Scale</a><a class="headerlink" href="#fiber-networks-innovations-for-ai-at-scale" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-39">Abstract</a> <a class="pick-link" href="https://atscaleconference.com/building-the-backbone-of-ai-inside-the-nao-mega-clusters-fiber-revolution/">Materials</a></p>
+</div>
+<p>Fabrice Ouandji (<a href="../companies/meta/">Meta</a>), Sebastian Gault (Meta)</p>
+<ul>
+<li><strong>Why</strong>: Once transports and fabrics are sorted, the binding constraint for mega clusters is the physical fiber plant: exploding fiber counts, demand landing in unpredictable places, and compressed delivery timelines. This is the physical-layer heart of the program — the PM's cabling and fiber-plant territory — and the conference site pairs it with a featured article on the NAO mega cluster's fiber build.</li>
+<li><strong>What</strong>: The connectivity challenge created by Prometheus: significantly higher fiber count requirements, highly dynamic demand location, and compressed delivery timelines, and the innovations required to meet that demand across multiple data centers in the cluster. (from abstract only)</li>
+<li><strong>How</strong>: Not specified in the abstract — the talk covers the fiber-plant and delivery innovations themselves; no mechanism detail is available from the program.</li>
+<li><strong>Where applicable</strong>: Meta's Prometheus/NAO mega-cluster build — org-specific scale and timelines, but the problem (fiber-count explosion plus unpredictable demand placement across a multi-building campus) is universal for anyone building AI campuses.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="physical-network-design-at-scale-3-min-qa"><a href="physical-network-design-at-scale-3-min-qa/">Physical Network Design at Scale + 3 min Q&amp;A</a><a class="headerlink" href="#physical-network-design-at-scale-3-min-qa" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-36">Abstract</a> <a class="pick-link" href="https://atscaleconference.com/physical-network-design-at-scale/">Materials</a></p>
+</div>
+<p>Richard Cziva (<a href="../companies/meta/">Meta</a>), Brandon Premo (Meta)</p>
+<ul>
+<li><strong>Why</strong>: Physical network design — placing thousands of devices and planning millions of fibers under failure-domain constraints — has been stubbornly manual, and AI demand makes that manual process the bottleneck. Loom is a concrete, deployed system that compressed end-to-end design from months to hours. Squarely in the PM's physical-datacenter plus automation interests.</li>
+<li><strong>What</strong>: Loom, Meta's system for automating the end-to-end physical network design pipeline, orchestrating two components: Planogram, which places network devices across the physical floorplan subject to dimensional and failure-domain constraints, and a fiber design component that generates end-to-end fiber connectivity across the variety of connectivity patterns driven by physical constraints. Together they cut design time from months to hours and produce more complex, more efficient designs with fewer resources. (from abstract only)</li>
+<li><strong>How</strong>: Constraint-based device placement plus automated fiber connectivity generation, orchestrated as a pipeline — cleanly decomposing "where devices go" from "how everything gets cabled."</li>
+<li><strong>Where applicable</strong>: Built against Meta's floorplans, fabric families, and failure-domain rules — the constraints are Meta-specific — but the decomposition (constrained placement plus automated fiber path design) transfers to any large operator and is a strong candidate pattern for vendor tooling roadmaps.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="co-designing-communication-for-ai-accelerators"><a href="co-designing-communication-for-ai-accelerators/">Co-Designing Communication for AI Accelerators</a><a class="headerlink" href="#co-designing-communication-for-ai-accelerators" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-41">Abstract</a></p>
+</div>
+<p>Rajeev Nair (<a href="../companies/meta/">Meta</a>), Wes Bland (Meta)</p>
+<ul>
+<li><strong>Why</strong>: MTIA 300 treats communication as a first-class architectural citizen — dedicated message engines — and introduces "network fungibility," where the same NIC hardware flexes between scale-up and scale-out roles. That flexibility is a genuinely different point in the accelerator interconnect design space, relevant both to AI networking and to how non-GPU accelerators change fabric requirements.</li>
+<li><strong>What</strong>: The communications architecture of MTIA 300, Meta's custom AI training and inference accelerator: dedicated message engines offload communication workloads, decoupling communication from the primary compute grid, minimizing resource contention and raising both compute and network efficiency. "Network fungibility" lets the same NICs adapt to scale-up or scale-out configurations depending on production needs, within a tight co-design loop across hardware, software, and models. (from abstract only)</li>
+<li><strong>How</strong>: Communication offload into dedicated engines rather than shared-resource handling on the compute grid; NIC role flexibility instead of parts hard-partitioned into scale-up-only or scale-out-only.</li>
+<li><strong>Where applicable</strong>: Meta's MTIA custom silicon — the specific implementation is Meta-specific, but the principles (offload communication from the compute grid; don't hard-partition NICs by role) transfer to any accelerator program, and the scale-up/scale-out fungibility question is live for GPU fleets too.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="building-scalable-ai-cloud-interconnects-with-srv6-3-min-qa"><a href="building-scalable-ai-cloud-interconnects-with-srv6-3-min-qa/">Building scalable AI cloud interconnects with SRv6 + 3 min Q&amp;A</a><a class="headerlink" href="#building-scalable-ai-cloud-interconnects-with-srv6-3-min-qa" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-37">Abstract</a></p>
+</div>
+<p>Alexey Gorovoy (<a href="../companies/nebius/">Nebius</a>)</p>
+<ul>
+<li><strong>Why</strong>: AI-cloud tenants need predictable bandwidth into their virtual networks and services that behave identically from the virtual edge out to the WAN. Nebius' answer — SRv6 as the single architectural building block across both domains — removes the protocol-translation seam that plagues multi-domain interconnects. Directly relevant to the PM's cloud, interconnect, and segment-routing interests.</li>
+<li><strong>What</strong>: Nebius' evolving architecture for customer cloud interconnects: SRv6 bridges the virtual cloud environment with the physical network edge, enabling end-to-end VPN and traffic-engineering services without protocol translation between datacenter and WAN domains, with latest implementation experience shared. (from abstract only)</li>
+<li><strong>How</strong>: SRv6 network programming — segment-encoded service instructions — applied uniformly from the cloud edge across datacenter and WAN, so one forwarding architecture carries customer VPNs and traffic engineering end to end instead of stitching per-domain protocols.</li>
+<li><strong>Where applicable</strong>: Nebius' AI cloud — a single-operator, SRv6-capable fabric is required end to end, so it is operator-specific. The unifying pattern (one overlay architecture across domains instead of DC/WAN protocol stitching) applies to any provider or large enterprise building multi-domain interconnects.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="lightning-talk-the-plan-that-learns"><a href="lightning-talk-the-plan-that-learns/">Lightning Talk - The Plan That Learns</a><a class="headerlink" href="#lightning-talk-the-plan-that-learns" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-31">Abstract</a></p>
+</div>
+<p>Ben Vallis (<a href="../companies/meta/">Meta</a>)</p>
+<ul>
+<li><strong>Why</strong>: Capacity planning is where years-ahead commitments meet guaranteed-wrong forecasts, and this talk applies agents not to forecast accuracy but to decision quality under uncertainty — positioning capacity to keep options open — which is a more defensible use of ML than "better predictions." Core to the PM's ML-for-infrastructure-operations interest.</li>
+<li><strong>What</strong>: Agents applied to the judgment-heavy decisions that stayed manual: acting inside narrow buy windows (continuous signal triage surfacing the handful of truly novel sites, weeks down to minutes); trusting data across systems that disagree on basic definitions (a measure-enrich-regrade loop); and choosing among coupled, timing-sensitive levers (a ranked, costed menu of moves with the reasoning attached). The stated frontier: agents that remember every decision and its outcome, so judgment compounds instead of resetting with each planner. (from abstract only)</li>
+<li><strong>How</strong>: Agentic triage over continuous signal streams, a cross-system data-trust reconciliation loop, and decision memory — explicitly framed as buying optionality under wrong forecasts, not improving the forecast.</li>
+<li><strong>Where applicable</strong>: Meta's capacity planning (years-ahead commitments, correlated demand shocks) — org-specific context and lightning-talk-stage maturity, but the optionality framing and decision-memory idea transfer to any large operator. The companion talk <em>AI-Native Network Capacity Management</em> covers the same lifecycle pipeline stage-by-stage with agents as first-class participants.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="lightning-talk-ai4ni-runtime"><a href="lightning-talk-ai4ni-runtime/">Lightning Talk - AI4NI @Runtime</a><a class="headerlink" href="#lightning-talk-ai4ni-runtime" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-34">Abstract</a></p>
+</div>
+<p>YuLing Chen (<a href="../companies/meta/">Meta</a>)</p>
+<ul>
+<li><strong>Why</strong>: Most AI-for-networking content in this program targets planning and design time; this is the runtime side — agents embedded in live operations for reliability, performance, and efficiency, with production trials behind it. That is the closest thing to deployable ML-for-networking evidence in the program.</li>
+<li><strong>What</strong>: AI4NI @Runtime: AI agents across three dimensions — reliability, performance, and efficiency — with the solution architecture, example agentic systems, initial findings from production trials, and the key technical challenges and planned directions. (from abstract only)</li>
+<li><strong>How</strong>: Agent architecture embedded in runtime operations; the mechanisms are not detailed in the abstract, but production trials are cited as the evidence base.</li>
+<li><strong>Where applicable</strong>: Meta's production network serving billions of users; early-stage, org-specific results — the value is the architecture and the honest challenge list, not yet-transferable outcomes.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="anatomy-of-scale-machine-learning-network-operations"><a href="anatomy-of-scale-machine-learning-network-operations/">Anatomy of @scale Machine Learning Network Operations</a><a class="headerlink" href="#anatomy-of-scale-machine-learning-network-operations" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-20">Abstract</a></p>
+</div>
+<p>Jim Julson (<a href="../companies/coreweave/">Coreweave</a>)</p>
+<ul>
+<li><strong>Why</strong>: Operating — not just designing — ML networks is where transferable lessons live, and Coreweave runs GPU infrastructure at AI-cloud scale. Caveat: the published abstract is contentless ("a journey through the operational challenges and nuances"), so substance cannot be assessed from the program; included for topic relevance and speaker position.</li>
+<li><strong>What</strong>: The operational challenges and nuances of machine learning and AI infrastructure networks at Coreweave — no specifics beyond that framing are available. (from abstract only)</li>
+<li><strong>How</strong>: Not described in the abstract.</li>
+<li><strong>Where applicable</strong>: Coreweave's GPU cloud — expect operator-specific experience. Worth attending for potential postmortem and operational content, but nothing in the program substantiates it yet; judge from the recording.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="live-panel-scale-out-networking-for-ai-supercomputers"><a href="live-panel-scale-out-networking-for-ai-supercomputers/">Live Panel: Scale-Out Networking for AI Supercomputers</a><a class="headerlink" href="#live-panel-scale-out-networking-for-ai-supercomputers" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-29">Abstract</a></p>
+</div>
+<p>Rajiv Krishnamurthy (<a href="../companies/meta/">Meta</a>), Joseph Provine (Meta), Andrew Dickinson (<a href="../companies/oracle/">Oracle</a>), Jim Julson (<a href="../companies/coreweave/">Coreweave</a>), Jitendra Padhye (<a href="../companies/openai/">OpenAI</a>)</p>
+<ul>
+<li><strong>Why</strong>: The architects behind this cycle's individual talks (MetaRoCE, MRC) plus Oracle and Coreweave in one room, comparing topology choices, congestion control at extreme scale, and network/training-framework co-design — useful as the cross-operator synthesis of the Core talks.</li>
+<li><strong>What</strong>: Practitioner panel on connecting tens of thousands of accelerators into a single tightly coupled fabric: architectures, transport protocols, and operational lessons behind supercomputer-scale AI training networks. (from abstract only)</li>
+<li><strong>How</strong>: Live discussion, not a presented technique.</li>
+<li><strong>Where applicable</strong>: Frontier-lab and hyperscaler scale; expect org-specific positions. The value is comparative — where the panelists' approaches converge (multipath, endpoint intelligence) and where they genuinely disagree — rather than new techniques.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="lightning-talk-10x-network-design-engineer"><a href="lightning-talk-10x-network-design-engineer/">Lightning Talk - 10x Network Design Engineer</a><a class="headerlink" href="#lightning-talk-10x-network-design-engineer" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-32">Abstract</a></p>
+</div>
+<p>Maaz Mohiuddin (<a href="../companies/meta/">Meta</a>)</p>
+<ul>
+<li><strong>Why</strong>: Pairs with Loom (Core): where Loom automates physical design as a constraint system, this talk is about agents owning design judgment end-to-end, and it is candid about what still fails — validation above all. The "engineer as author-to-approver" framing is where design automation is heading industry-wide.</li>
+<li><strong>What</strong>: Agent-assisted steps in datacenter network design today — sizing a fabric, proposing a topology, analyzing a change — with the trajectory toward a single agent owning design end-to-end, real waypoints from Meta's fabrics, what already works, and where the hard problems remain (validation, above all). Humans still make the call; they no longer draw every line. (from abstract only)</li>
+<li><strong>How</strong>: Agents assist discrete steps within the design pipeline with human approval gates; the mechanism detail is not in the abstract.</li>
+<li><strong>Where applicable</strong>: Meta's fabrics — org-specific waypoints. The author-to-approver shift and the validation bottleneck are general to any design-automation effort, which is why this earns a slot despite overlapping Loom.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="live-panel-building-at-the-roofline-planning-and-delivering-gigawatt-scale-ai-infrastructure"><a href="live-panel-building-at-the-roofline-planning-and-delivering-gigawatt-sca/">Live Panel: Building at the Roofline — Planning and Delivering Gigawatt-Scale AI Infrastructure</a><a class="headerlink" href="#live-panel-building-at-the-roofline-planning-and-delivering-gigawatt-scale-ai-infrastructure" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-42">Abstract</a></p>
+</div>
+<p>Omar Baldonado (<a href="../companies/meta/">Meta</a>), Amrita Kenue (Meta), Lucas Benson (<a href="../companies/microsoft/">Microsoft</a>), Nikita Parikh (<a href="../companies/google/">Google</a>)</p>
+<ul>
+<li><strong>Why</strong>: Not a networking session — power, buildings, fiber, and accelerators sourced at the edge of what the supply ecosystem can deliver — but it defines the envelope every network design in this program lives inside: rack power, building capacity, multi-generation fleets, and component lead times bound what fabrics can even be built. The panel composition makes it concrete: per the conference page, the Microsoft panelist leads strategic sourcing for optics and switches supporting Azure's AI fleet, and the Google panelist is a next-generation networking sourcing lead — this is the layer above the network roadmap.</li>
+<li><strong>What</strong>: Panel with infrastructure planning and technical sourcing leaders from Google, Meta, and Microsoft on long-range fleet strategy across multiple technology generations, multi-vendor orchestration, and the engineering realities of delivering AI infrastructure at gigawatt scale at the roofline of industry capacity.</li>
+<li><strong>How</strong>: Live discussion, not a presented technique.</li>
+<li><strong>Where applicable</strong>: Hyperscaler fleets, but the constraints discussed — power, lead times, multi-generation estates — are industry-wide. Any roadmap that assumes unconstrained optics, switch, or fiber supply should watch this.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>The scale-out AI fabric is now its own network class.</strong> Google's Virgo (dedicated east-west accelerator fabric beside Jupiter), Meta's MetaRoCE-plus-multiplane-FPF, and OpenAI's MRC all encode the same split: general-purpose datacenter networking and accelerator scale-out networking are designed separately, with different latency, resilience, and goodput requirements.</li>
+<li><strong>Transport intelligence is moving to the endpoint.</strong> MRC and MetaRoCE both treat the fabric as commodity, inherently lossy Ethernet and push multipath, out-of-order, actively load-balanced behavior into the NIC/endpoints — a decisive move away from lossless-fabric-era RDMA assumptions.</li>
+<li><strong>Static source routing is the resilience and unification mechanism of choice.</strong> OpenAI pairs MRC with static SRv6 so the transport bypasses failures without waiting for reconvergence; Nebius uses SRv6 as one building block across DC and WAN. Endpoint-controlled path selection looks like a recurring pattern.</li>
+<li><strong>The AI transport is becoming an open standards battleground.</strong> Meta is releasing the MetaRoCE specification, a reference implementation on AMD NICs, and a Keysight-built conformance suite at OCP, explicitly aiming for it to become the ubiquitous RDMA transport for AI-scale networks — the obvious comparison point for anyone tracking the Ultra Ethernet space.</li>
+<li><strong>The physical plant is the scaling constraint, and it is getting automated.</strong> Fiber counts, demand placement, and delivery timelines for mega clusters (NAO/Prometheus) are the hard problems, and Loom (constrained placement plus automated fiber design, months to hours) shows the automation response; MTIA 300 shows the same pressure pushing communication into accelerator silicon.</li>
+<li><strong>AI agents are entering the network lifecycle end-to-end.</strong> Four lightning talks cover agents in capacity planning, the capacity pipeline, physical design, and runtime operations — early results and Meta-internal today, but a collective bet that the next automation frontier in networking is agentic, with validation named as the open hard problem.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/atscale-networking-2026.md"><code>digests/atscale-networking-2026.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/atscale-networking-2026.md"><code>prompts/atscale-networking-2026.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../pets-2026/" class="md-footer__link md-footer__link--prev" aria-label="Previous: PETS 2026">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                PETS 2026
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../nlnog-2026/" class="md-footer__link md-footer__link--next" aria-label="Next: NLNOG Day 2026">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                NLNOG Day 2026
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

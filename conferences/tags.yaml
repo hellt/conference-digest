@@ -4790,6 +4790,7 @@ atscale-product-2026:
     'Live Panel: AI Generated Media Provenance at Scale':
     - ai
     - pki
+
 atscale-ai-data-2026:
   post:
   - ai
@@ -4860,3 +4861,52 @@ atscale-ai-data-2026:
     'The Agent Feed: A Communication Layer for Multi-Agent Collaboration':
     - ai
     - api
+
+atscale-systems-reliability-2026:
+  post:
+  - ai
+  - cloud
+  - sre
+  - gpu-clusters
+  - automation
+  talks:
+    Our Journey to Safely Unleash Agents at Meta Scale:
+    - ai
+    - automation
+    - sre
+    'The Agentic Infrastructure Gap: In-Distribution Languages Make It a Coding Problem':
+    - automation
+    - cloud
+    - ai
+    Extending Meta to the Public Cloud:
+    - cloud
+    - gpu-clusters
+    - ai
+    'Teaching AI to Fight Fires: Autonomous Reliability Agents at Meta Scale':
+    - ml-for-networking
+    - sre
+    - troubleshooting
+    Experience Productionizing and Operating GB200 clusters:
+    - gpu-clusters
+    - ai-networks
+    - orchestration
+    Taming AI Infrastructure Failures with Agentic Debugging:
+    - ai
+    - troubleshooting
+    - gpu-clusters
+    AI Storage Blueprint:
+    - ai
+    - gpu-clusters
+    - capacity-planning
+    '[Almost] Fail & Tell: Stop The World':
+    - sre
+    - troubleshooting
+    - cloud
+    Securing Production Debugging at Hyperscale:
+    - kubernetes
+    - sre
+    - ai
+    Building Privacy Aware Infrastructure in the AI-Native Era:
+    - ai
+    - privacy
+

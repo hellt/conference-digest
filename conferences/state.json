@@ -138,10 +138,10 @@
     "last_error": ""
   },
   "tnc-2026": {
-    "status": "stalled",
-    "attempts": 7,
-    "last_attempt": "2026-11-09T08:50:52.407537+00:00",
-    "last_error": "programme is a client-side app with no public data endpoint (programme page reachable; event ended 2026-06-12); open manual_fallback_url and paste the programme into the prompt"
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-09T18:39:20.219403+00:00",
+    "last_error": ""
   },
   "nogfi-2026-06": {
     "status": "published",
@@ -469,20 +469,20 @@
   },
   "mcpdevsummit-na-2026": {
     "status": "manual",
-    "attempts": 1,
-    "last_attempt": "2026-11-09T08:50:52.407537+00:00",
+    "attempts": 2,
+    "last_attempt": "2026-11-09T18:39:20.219403+00:00",
     "last_error": "Sched returned 403 / challenge; open the schedule and paste it manually."
   },
   "onesummit-2024": {
     "status": "manual",
-    "attempts": 1,
-    "last_attempt": "2026-11-09T08:50:52.407537+00:00",
+    "attempts": 2,
+    "last_attempt": "2026-11-09T18:39:20.219403+00:00",
     "last_error": "Sched returned 403 / challenge; open the schedule and paste it manually."
   },
   "onesummit-2025": {
     "status": "manual",
-    "attempts": 1,
-    "last_attempt": "2026-11-09T08:50:52.407537+00:00",
+    "attempts": 2,
+    "last_attempt": "2026-11-09T18:39:20.219403+00:00",
     "last_error": "Sched returned 403 / challenge; open the schedule and paste it manually."
   }
 }

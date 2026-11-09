@@ -1,0 +1,1266 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Meta&#x27;s systems and reliability conference on AI infrastructure, cloud and data-center systems, production operations, and incident response.">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/atscale-systems-reliability-2026/">
+      
+      
+      
+        <link rel="prev" href="../nogfi-2026-06/">
+      
+      
+        <link rel="next" href="../grnog-20/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>@Scale: Systems & Reliability 2026 - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="@Scale: Systems &amp; Reliability 2026 · Conference Digest" />
+<meta property="og:description" content="Meta&#39;s systems and reliability conference on AI infrastructure, cloud and data-center systems, production operations, and incident response." />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/atscale-systems-reliability-2026.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/atscale-systems-reliability-2026/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="@Scale: Systems &amp; Reliability 2026 · Conference Digest" />
+<meta property="twitter:description" content="Meta&#39;s systems and reliability conference on AI infrastructure, cloud and data-center systems, production operations, and incident response." />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/atscale-systems-reliability-2026.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              @Scale: Systems & Reliability 2026
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Companies
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../archive/" class="md-tabs__link">
+        
+  
+  Archive
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-powered-text">Powered by</span>
+          <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#our-journey-to-safely-unleash-agents-at-meta-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Our Journey to Safely Unleash Agents at Meta Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-agentic-infrastructure-gap-in-distribution-languages-make-it-a-coding-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Agentic Infrastructure Gap: In-Distribution Languages Make It a Coding Problem
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extending-meta-to-the-public-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Extending Meta to the Public Cloud
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teaching-ai-to-fight-fires-autonomous-reliability-agents-at-meta-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Teaching AI to Fight Fires: Autonomous Reliability Agents at Meta Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experience-productionizing-and-operating-gb200-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Experience Productionizing and Operating GB200 clusters
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taming-ai-infrastructure-failures-with-agentic-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Taming AI Infrastructure Failures with Agentic Debugging
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-storage-blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AI Storage Blueprint
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#almost-fail-tell-stop-the-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        [Almost] Fail &amp; Tell: Stop The World
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securing-production-debugging-at-hyperscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Securing Production Debugging at Hyperscale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-privacy-aware-infrastructure-in-the-ai-native-era" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Building Privacy Aware Infrastructure in the AI-Native Era
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Companies
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    <li class="md-nav__item md-nav__item--powered">
+      <a href="https://tokenfactory.nebius.com/" class="md-nav__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+        <span class="md-powered-text">Powered by</span>
+        <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+        <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+      </a>
+    </li>
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#our-journey-to-safely-unleash-agents-at-meta-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Our Journey to Safely Unleash Agents at Meta Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-agentic-infrastructure-gap-in-distribution-languages-make-it-a-coding-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Agentic Infrastructure Gap: In-Distribution Languages Make It a Coding Problem
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extending-meta-to-the-public-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Extending Meta to the Public Cloud
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teaching-ai-to-fight-fires-autonomous-reliability-agents-at-meta-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Teaching AI to Fight Fires: Autonomous Reliability Agents at Meta Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experience-productionizing-and-operating-gb200-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Experience Productionizing and Operating GB200 clusters
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taming-ai-infrastructure-failures-with-agentic-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Taming AI Infrastructure Failures with Agentic Debugging
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-storage-blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AI Storage Blueprint
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#almost-fail-tell-stop-the-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        [Almost] Fail &amp; Tell: Stop The World
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securing-production-debugging-at-hyperscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Securing Production Debugging at Hyperscale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-privacy-aware-infrastructure-in-the-ai-native-era" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Building Privacy Aware Infrastructure in the AI-Native Era
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>10 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="scale-systems-reliability-2026">@Scale: Systems &amp; Reliability 2026<a class="headerlink" href="#scale-systems-reliability-2026" title="Permanent link">#</a></h1>
+<p>A one-day, Meta-anchored systems event (Bellevue, June 25, 2026) with NVIDIA, Microsoft, and Pulumi guests. The 2026 program has a clear center of gravity: AI infrastructure (GPU capacity, storage, cluster operations) and AI <em>operating</em> infrastructure (agents debugging GPUs, investigating incidents, managing config). Note on sourcing: no papers or slides are published for this event; the conference page contains only the abstracts reproduced in the program, so every write-up below is <strong>(from abstract only)</strong>. A few sessions (the two keynotes, the Live Q&amp;A, and the four-company panel) publish no substantive abstract and are not selected.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>June 25, 2026</span>
+<span class="digest-fact" markdown><a href="https://atscaleconference.com/events/systems-reliability-2026/">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="our-journey-to-safely-unleash-agents-at-meta-scale"><a href="our-journey-to-safely-unleash-agents-at-meta-scale/">Our Journey to Safely Unleash Agents at Meta Scale</a><a class="headerlink" href="#our-journey-to-safely-unleash-agents-at-meta-scale" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/systems-reliability-2026/#agenda-item-6">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=QHg0HeqIcqY">Session recording</a> <a class="pick-link" href="https://atscaleconference.com/metas-journey-to-safely-unleash-agents-at-scale/">Materials</a></p>
+</div>
+<p>David Pariag (<a href="../companies/meta/">Meta</a>)</p>
+<ul>
+<li><strong>Why</strong>: The first real deployments of AI agents that touch production infrastructure — not write code, but <em>operate</em> systems (debug GPU failures, remediate outages). The access-control and guardrail problem this creates is one any operator of a large fleet will face within a couple of years; Meta is furthest along publicly.</li>
+<li><strong>What</strong>: Meta's program-level learnings from enabling agentic access to its systems: building internal agents, deploying third-party agents, observing how agents interact with their infrastructure, and deploying guardrails to prevent destructive actions. A journey/lessons talk rather than a single system. (from abstract only)</li>
+<li><strong>How</strong>: Not detailed in the abstract; expect case studies of what agents did to infra when let loose, and the containment mechanisms built in response.</li>
+<li><strong>Where applicable</strong>: Meta-specific scale and internal tooling, but the problem space — authenticated agent identity, action scoping, blast-radius limits, observability of agent behavior — is universal for anyone running cloud or Kubernetes estates.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="the-agentic-infrastructure-gap-in-distribution-languages-make-it-a-coding-problem"><a href="the-agentic-infrastructure-gap-in-distribution-languages-make-it-a-codin/">The Agentic Infrastructure Gap: In-Distribution Languages Make It a Coding Problem</a><a class="headerlink" href="#the-agentic-infrastructure-gap-in-distribution-languages-make-it-a-coding-problem" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/systems-reliability-2026/#agenda-item-7">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=P4PpoTH9ADc">Recording</a></p>
+</div>
+<p>Joe Duffy (Pulumi)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="P4PpoTH9ADc" data-start="0" href="https://www.youtube.com/watch?v=P4PpoTH9ADc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/P4PpoTH9ADc/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/P4PpoTH9ADc/maxresdefault.jpg" alt="Play the recording: The Agentic Infrastructure Gap: In-Distribution Languages Make It a Coding Problem" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: A sharp thesis on <em>how</em> agents should manage infrastructure: LLMs are trained on billions of lines of Python/TypeScript/Go and almost nothing on your bespoke DSLs, consoles, and runbooks. If agents are going to run infra, the infra's interface needs to live in the distribution the model was trained on. Directly relevant to how network automation and IaC platforms should be shaped for agent consumption.</li>
+<li><strong>What</strong>: The argument that "assembling IKEA furniture" — consoles, API keys, copy-pasted config — is the agent blocker, and that modeling infrastructure in real programming languages reduces agent management to a coding problem, given an oracle that maps code changes back to infrastructure outcomes. Includes learnings from Pulumi's work with frontier AI companies. (from abstract only)</li>
+<li><strong>How</strong>: Infrastructure expressed as code in mainstream languages (Pulumi's model), plus a preview/plan-style oracle that predicts infrastructure outcomes from code diffs, closing the agent's feedback loop.</li>
+<li><strong>Where applicable</strong>: General-purpose for IaC and cloud provisioning; expect vendor framing (Pulumi CEO) but the in-distribution-language argument applies to any automation surface, including network config generation.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="extending-meta-to-the-public-cloud"><a href="extending-meta-to-the-public-cloud/">Extending Meta to the Public Cloud</a><a class="headerlink" href="#extending-meta-to-the-public-cloud" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/systems-reliability-2026/#agenda-item-8">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=p08-ef0QKYQ">Recording</a></p>
+</div>
+<p>Dinesh Govindasamy (<a href="../companies/meta/">Meta</a>), Sargun Dhillon (Meta)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="p08-ef0QKYQ" data-start="0" href="https://www.youtube.com/watch?v=p08-ef0QKYQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/p08-ef0QKYQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/p08-ef0QKYQ/maxresdefault.jpg" alt="Play the recording: Extending Meta to the Public Cloud" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: A hyperscaler with one of the world's largest private DC footprints deliberately adopting public cloud — for GPU capacity — is a rare, high-signal data point on hybrid strategy and capacity optionality. Sargun Dhillon (long-time Meta infra) presenting adds credibility that this is engineering substance, not a partnership announcement.</li>
+<li><strong>What</strong>: How Meta integrated public cloud into its overall infrastructure footprint: initial forays driven by GPU compute demand, multi-cloud used explicitly as optionality ("capacity hyperliquidity"), and full integration into Meta's platform, OS, and fleet management stack so internal customers see cloud capacity as ubiquitous rather than a separate silo. (from abstract only)</li>
+<li><strong>How</strong>: Not detailed in the abstract; the interesting engineering is presumably in extending Meta's host OS, provisioning, and fleet management to cloud instances so tooling parity holds across estates.</li>
+<li><strong>Where applicable</strong>: Meta-specific (their internal stack is not reproducible), but the strategic and integration lessons — treating cloud as a fungible capacity pool behind a uniform fleet-management abstraction — transfer to any large hybrid operator.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="teaching-ai-to-fight-fires-autonomous-reliability-agents-at-meta-scale"><a href="teaching-ai-to-fight-fires-autonomous-reliability-agents-at-meta-scale/">Teaching AI to Fight Fires: Autonomous Reliability Agents at Meta Scale</a><a class="headerlink" href="#teaching-ai-to-fight-fires-autonomous-reliability-agents-at-meta-scale" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.youtube.com/watch?v=irtqkj3fHxM">Session recording</a> <a class="pick-link" href="https://atscaleconference.com/teaching-ai-to-fight-fires-building-the-reliability-flywheel-at-meta/">Materials</a></p>
+</div>
+<p>Gaurav Mitra (<a href="../companies/meta/">Meta</a>)</p>
+<ul>
+<li><strong>Why</strong>: The most quantitatively substantiated AIOps deployment in the program: an investigation agent that has handled 1,000+ real incidents, cut detection-to-mitigation time by 60%, and matches senior on-call engineers ~80% of the time. That is deployment evidence, not a demo — and it is squarely in the "ML for infrastructure operations" interest area.</li>
+<li><strong>What</strong>: The "reliability flywheel": an always-on investigation copilot that encodes senior on-call engineers' investigation methods and improves with every incident, deployed across Meta's recommendation systems. The talk also lays out a staged autonomy progression: pattern identification, autonomous investigation, supervised mitigation of low-risk reversible actions, and self-healing as the end state — plus an explicit treatment of the trust boundary between agents and humans. (from abstract only; the event page's article teaser adds that the originating December 2024 config change caused a widespread routing error across every region, taking 50+ engineers and 28 hours to recover)</li>
+<li><strong>How</strong>: Context-engineered architecture correlating time-series metrics, deployment logs, configuration changes, and infrastructure health, built on structured tool servers and reusable workflows rather than free-form prompting.</li>
+<li><strong>Where applicable</strong>: Validated on Meta's recommendation infra (org-specific numbers), but the architecture — tool servers + reusable investigation workflows + human-in-the-loop trust ladder — is a transferable pattern for incident automation in any environment.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="experience-productionizing-and-operating-gb200-clusters"><a href="experience-productionizing-and-operating-gb200-clusters/">Experience Productionizing and Operating GB200 clusters</a><a class="headerlink" href="#experience-productionizing-and-operating-gb200-clusters" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.youtube.com/watch?v=1o4emwSid78">Recording</a></p>
+</div>
+<p>Ankur Srivastava (<a href="../companies/nvidia/">NVIDIA</a>), Sachin Kumar Lakharia (NVIDIA), Douglas Wightman (NVIDIA)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="1o4emwSid78" data-start="0" href="https://www.youtube.com/watch?v=1o4emwSid78" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/1o4emwSid78/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/1o4emwSid78/maxresdefault.jpg" alt="Play the recording: Experience Productionizing and Operating GB200 clusters" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Rack-scale NVLink systems (GB200 NVL72: 72 GPUs with an exascale-scale NVLink fabric in one rack) change how clusters must be scheduled and operated — fabric locality becomes the dominant scheduling constraint. First-party operational experience from NVIDIA on bringing up and running a large cluster is hard to get elsewhere.</li>
+<li><strong>What</strong>: Production experience operating large GB200 clusters: topology-aware scheduling in Slurm to maximize NVLink fabric utilization, GPU-occupancy and scheduling recommendations validated with a Slurm simulator, and the unglamorous bring-up work — health checks, rack testing, slow-node identification, supporting large-scale training runs. Cites &gt;2.6x MLPerf training improvement attributable to the NVL72 system. (from abstract only)</li>
+<li><strong>How</strong>: Topology-aware Slurm scheduling (placing jobs to exploit intra-rack NVLink bandwidth) plus simulation-driven occupancy policy; operational practices for node/rack validation before admitting capacity to the pool.</li>
+<li><strong>Where applicable</strong>: Tied to NVIDIA GB200 NVL72 silicon and Slurm specifically — the concrete recommendations don't port directly to non-NVL systems or Kubernetes schedulers. The <em>method</em> (topology as a first-class scheduling input, simulator-tuned occupancy, systematic slow-node quarantine) generalizes to any tightly-coupled accelerator fabric.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="taming-ai-infrastructure-failures-with-agentic-debugging"><a href="taming-ai-infrastructure-failures-with-agentic-debugging/">Taming AI Infrastructure Failures with Agentic Debugging</a><a class="headerlink" href="#taming-ai-infrastructure-failures-with-agentic-debugging" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.youtube.com/watch?v=9wc0556pIwg">Session recording</a> <a class="pick-link" href="https://atscaleconference.com/leveraging-agents-to-debug-nccl-watchdog-timeouts/">Materials</a></p>
+</div>
+<p>Phillip Liu (<a href="../companies/meta/">Meta</a>)</p>
+<ul>
+<li><strong>Why</strong>: NCCL watchdog timeouts are the canonical "everything looks fine until a collective hangs" failure of distributed PyTorch training — anyone running GPU clusters has paid this tax. A root-cause taxonomy built from a year of internal incidents and shared with the PyTorch community is immediately actionable.</li>
+<li><strong>What</strong>: A categorization of the major root-cause buckets behind NCCL watchdog timeouts (investigated at Meta, in partnership with the PyTorch community), distilled into a practical decision tree and runbook to compress triage time — plus early results using agents to assist root-cause analysis. The abstract openly flags that details are still TBD. (from abstract only)</li>
+<li><strong>How</strong>: Systematic bucketing of observed failure modes into a decision tree; agent-assisted RCA layered on top of the structured workflow (a companion article describes it as "a technical, repeatable workflow").</li>
+<li><strong>Where applicable</strong>: Broadly applicable — this failure mode affects anyone running PyTorch distributed training, not just Meta. Since NCCL timeouts are usually a <em>symptom</em> (slow node, fabric congestion, misconfigured transport, process hang), expect the taxonomy to span host, NIC/transport, and network layers.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="ai-storage-blueprint"><a href="ai-storage-blueprint/">AI Storage Blueprint</a><a class="headerlink" href="#ai-storage-blueprint" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://atscaleconference.com/events/systems-reliability-2026/#agenda-item-19">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=xc_BxLsijWA">Recording</a></p>
+</div>
+<p>Sidharth Bajaj (<a href="../companies/meta/">Meta</a>), Venkatraghavan Srinivasan (Meta)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="xc_BxLsijWA" data-start="0" href="https://www.youtube.com/watch?v=xc_BxLsijWA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/xc_BxLsijWA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/xc_BxLsijWA/maxresdefault.jpg" alt="Play the recording: AI Storage Blueprint" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: In training clusters, storage is frequently what gates GPU utilization (checkpoint I/O, dataset streaming, data-loading jitter). Meta re-architecting its storage stack around AI workloads is the storage-side counterpart of the GB200 scheduling talk.</li>
+<li><strong>What</strong>: How Meta evolved its storage architecture to serve an environment where frontier models ship in weeks, framed around two explicit optimization targets: GPU utilization and research velocity. (from abstract only)</li>
+<li><strong>How</strong>: Not detailed in the abstract; the two stated hurdles imply work on throughput/latency consistency for training data paths and on flexibility/speed of the research workflow.</li>
+<li><strong>Where applicable</strong>: Meta-specific production setup; the framing (storage judged by GPU-hours protected and researcher iteration speed) is a useful lens for any AI-cluster storage design even before the details land.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="almost-fail-tell-stop-the-world">[Almost] Fail &amp; Tell: Stop The World<a class="headerlink" href="#almost-fail-tell-stop-the-world" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.youtube.com/watch?v=-0v6UUPLvF8">Session recording</a> <a class="pick-link" href="https://atscaleconference.com/almost-fail-tell-stop-the-world/">Materials</a></p>
+</div>
+<p>Phil Lopreiato (<a href="../companies/meta/">Meta</a>), Rahul Iyengar (Meta)</p>
+<ul>
+<li><strong>Why</strong>: A near-miss postmortem with a genuinely unusual mechanism: re-bootstrapping the infrastructure control plane of an entire region on the fly. Control-plane recovery and DR-preparedness are underrepresented topics, and this is a real production story, told by Meta's sitewide reliability people.</li>
+<li><strong>What</strong>: The March 2025 incident in which Meta avoided a prolonged sitewide outage, containing the issue in minutes by rebuilding the control plane for a whole region live using emergency tooling — presented as a case study in DR preparedness and calm incident command. (from abstract only)</li>
+<li><strong>How</strong>: Not detailed in the abstract; the substance will be in what the emergency tooling does, how regional control-plane state is reconstructed, and how the response was organized.</li>
+<li><strong>Where applicable</strong>: Meta-specific event, but the lessons — rehearsed emergency tooling, control-plane as a recoverable artifact, decisive regional action over slow diagnosis — transfer to any operator with regionalized infrastructure.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="securing-production-debugging-at-hyperscale"><a href="securing-production-debugging-at-hyperscale/">Securing Production Debugging at Hyperscale</a><a class="headerlink" href="#securing-production-debugging-at-hyperscale" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.youtube.com/watch?v=UAs6-gNzFks">Recording</a></p>
+</div>
+<p>Shridivya Sharma (<a href="../companies/microsoft/">Microsoft</a>), Luke Kelly (Microsoft)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="UAs6-gNzFks" data-start="0" href="https://www.youtube.com/watch?v=UAs6-gNzFks" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/UAs6-gNzFks/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/UAs6-gNzFks/maxresdefault.jpg" alt="Play the recording: Securing Production Debugging at Hyperscale" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: The "how do humans (and now agents) safely touch production boxes" problem, worked at Microsoft's K8s fleet scale. Relevant to anyone operating Kubernetes estates where break-glass access is the default risk story.</li>
+<li><strong>What</strong>: Microsoft's approach to production debugging across a global fleet of Kubernetes clusters: SSH-based access integrated with just-in-time privilege elevation and task-based (rather than open-shell) execution, kept secure and auditable — then those same building blocks exposed to AI (Semantic Kernel) so on-call engineers get assisted resolution rather than raw shell. (from abstract only)</li>
+<li><strong>How</strong>: Structured, auditable debugging primitives (JIT elevation + task-scoped SSH commands) that double as a safe action surface for AI assistance — the same "give agents constrained, task-shaped interfaces" theme running through the Meta talks.</li>
+<li><strong>Where applicable</strong>: Microsoft's fleet, but the pattern is general for large K8s estates; the AI-assist portion is early-stage and Microsoft-stack-specific (Semantic Kernel).</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="building-privacy-aware-infrastructure-in-the-ai-native-era"><a href="building-privacy-aware-infrastructure-in-the-ai-native-era/">Building Privacy Aware Infrastructure in the AI-Native Era</a><a class="headerlink" href="#building-privacy-aware-infrastructure-in-the-ai-native-era" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.youtube.com/watch?v=q9RSv2ltZtU">Recording</a></p>
+</div>
+<p>Rituraj Kirti (<a href="../companies/meta/">Meta</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="q9RSv2ltZtU" data-start="0" href="https://www.youtube.com/watch?v=q9RSv2ltZtU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/q9RSv2ltZtU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/q9RSv2ltZtU/maxresdefault.jpg" alt="Play the recording: Building Privacy Aware Infrastructure in the AI-Native Era" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Not about networking or AI infra per se — but it presents the most transferable <em>AI systems</em> architecture in the program: how to run an LLM-driven control loop in production while converging it to deterministic, auditable, near-zero-LLM operation. That pattern applies far beyond privacy, e.g., to policy enforcement and classification over network/infra assets.</li>
+<li><strong>What</strong>: A case study in AI-native asset classification at the scale of millions of data assets: a hybrid deterministic-rules engine with LLM fallback that converts messy context (metadata, lineage, code references, scan signals) into enforceable privacy controls — with ground-truth + eval self-improvement loops and a distillation step that exports high-performing LLM behavior into an auditable <code>rules.yaml</code>, driving LLM usage toward near-zero while improving determinism, latency, and cost. (from abstract only)</li>
+<li><strong>How</strong>: Active learning focuses human review on high-value examples; LLM-as-Judge provides scalable review signal (with kappa reliability reported); evaluation gates prevent regressions and circular reinforcement; the converged behavior is distilled into declarative rules with drift monitoring in production.</li>
+<li><strong>Where applicable</strong>: The privacy use case is Meta-specific, but the loop design — LLM with fallback, eval gates, distillation to declarative rules, drift monitoring — is a general recipe for any "LLM in the infra control path" system where you eventually need auditability and predictable latency/cost.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Agents move from writing code to operating systems.</strong> Nearly every talk puts an agent on the production side — debugging GPU failures (Pariag), investigating incidents (Mitra), root-causing NCCL hangs (Liu), assisting on-call (Microsoft). The field's center of attention is no longer code generation; it is safe agentic <em>action</em> on live infrastructure.</li>
+<li><strong>The trust boundary is the hard problem.</strong> Across Meta and Microsoft, the shared answer is the same shape: constrained, task-scoped, auditable action surfaces (guardrails, JIT elevation, task-based execution, supervised mitigation of low-risk reversible actions) rather than autonomous shells.</li>
+<li><strong>GPU capacity is the forcing function.</strong> Meta going to public cloud for GPU compute, storage re-architected around GPU utilization, and GB200 operationalization all trace to the same pressure — and multi-cloud shows up explicitly as capacity optionality rather than ideology.</li>
+<li><strong>Distilling AI behavior into deterministic artifacts.</strong> Two talks independently converge on exporting what the model learned into auditable, non-AI form: <code>rules.yaml</code> in the privacy talk, decision trees/runbooks in the NCCL talk. LLMs as a <em>generation</em> mechanism for deterministic policy, not a runtime dependency.</li>
+<li><strong>Topology-aware scheduling is now an operational discipline.</strong> The GB200 talk treats fabric topology as the primary scheduling input, validated via simulation — a preview of how scale-up/scale-out asymmetry will dominate cluster orchestration generally.</li>
+<li><strong>Scarcity caveat</strong>: this program publishes abstracts only, no papers or slides, and several sessions (keynotes, Q&amp;A, panel) have no technical abstract at all. Depth here must come from the recordings and the companion articles on the @Scale site.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/atscale-systems-reliability-2026.md"><code>digests/atscale-systems-reliability-2026.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/atscale-systems-reliability-2026.md"><code>prompts/atscale-systems-reliability-2026.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../nogfi-2026-06/" class="md-footer__link md-footer__link--prev" aria-label="Previous: nog.fi meeting 2026.06">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                nog.fi meeting 2026.06
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../grnog-20/" class="md-footer__link md-footer__link--next" aria-label="Next: GRNOG 20">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                GRNOG 20
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

@@ -4586,7 +4586,6 @@ opi-2026:
     - open-source
     - dpu
     - containers
-
 atscale-networking-2026:
   post:
   - ai-networks
@@ -4655,8 +4654,6 @@ atscale-networking-2026:
     - power
     - capacity-planning
     - ai
-
-ovscon-2026:
 ovscon-2026:
   post:
   - kubernetes
@@ -4741,8 +4738,6 @@ ovscon-2026:
     - benchmarking
     99 Patches, but Reviews Ain't One:
     - open-source
-
-
 atscale-product-2026:
   post:
   - ai
@@ -4795,4 +4790,73 @@ atscale-product-2026:
     'Live Panel: AI Generated Media Provenance at Scale':
     - ai
     - pki
-
+atscale-ai-data-2026:
+  post:
+  - ai
+  - cloud
+  - automation
+  - sre
+  - capacity-planning
+  talks:
+    How Meta Scaled AI Training Storage via Data Normalization:
+    - ai
+    - cloud
+    - capacity-planning
+    'Citrine: Catching Million-Dollar ML Anti-Patterns Before They Ship':
+    - ai
+    - automation
+    - open-source
+    'ASEA: Autonomous Agents for ML Serving Efficiency at Scale':
+    - ai
+    - ml-for-networking
+    - automation
+    'LP Planner: Synchronization-Aware Sharding Optimization for Large-Scale DLRM Model Training':
+    - ai
+    - capacity-planning
+    'Architecting Infrastructure for the AI Native Future: Scaling Autonomous Agents on Google TPUs':
+    - ai
+    - gpu-clusters
+    - cloud
+    Agentic Inference Optimization for RecSys ML models:
+    - ai
+    - automation
+    - benchmarking
+    'SparkSentry: Autonomous Error Detection, Triage, and Repair for Spark at Scale':
+    - ai
+    - sre
+    - troubleshooting
+    - automation
+    Data Governance in the World of Agents:
+    - ai
+    - authorization
+    - zero-trust
+    'Meta-ML: Supercharging ML Productivity at Scale with AI-Native Infrastructure':
+    - ai
+    - automation
+    - orchestration
+    'XStream: Meta''s unified stream processing service':
+    - cloud
+    - ai
+    Scaling Batch Graph Processing to Trillions of Edges:
+    - ai
+    - cloud
+    - capacity-planning
+    'Agent Memory at Meta Scale: One Query Language for Graph, Vector, and Memory':
+    - ai
+    - api
+    'Evaluating Opsmate: Grading AI Incident Investigations at Scale':
+    - ai
+    - sre
+    - benchmarking
+    'Cache the Session, Not the Data: 40x Faster ML Iteration with a Shared Sidecar at Meta':
+    - ai
+    - automation
+    'Designing for Human Agency in AI-Augmented Software: A Quality Attribute Approach':
+    - ai
+    - standardization
+    'Agentic Data Flywheel: A Multi-Agent System for Scalable Multimodal Training Data Production':
+    - ai
+    - automation
+    'The Agent Feed: A Communication Layer for Multi-Agent Collaboration':
+    - ai
+    - api

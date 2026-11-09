@@ -1,0 +1,1592 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The Open vSwitch and OVN community conference on virtual networking, hardware offload, Kubernetes networking, and programmable infrastructure.">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/ovscon-2026/">
+      
+      
+      
+        <link rel="prev" href="../ripe-93/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>Open vSwitch and OVN 2026 Fall Conference - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="Open vSwitch and OVN 2026 Fall Conference · Conference Digest" />
+<meta property="og:description" content="The Open vSwitch and OVN community conference on virtual networking, hardware offload, Kubernetes networking, and programmable infrastructure." />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/ovscon-2026.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/ovscon-2026/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Open vSwitch and OVN 2026 Fall Conference · Conference Digest" />
+<meta property="twitter:description" content="The Open vSwitch and OVN community conference on virtual networking, hardware offload, Kubernetes networking, and programmable infrastructure." />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/ovscon-2026.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Open vSwitch and OVN 2026 Fall Conference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Companies
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../archive/" class="md-tabs__link">
+        
+  
+  Archive
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-powered-text">Powered by</span>
+          <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lost-in-the-layers-scaling-ovn-kubernetes-user-defined-networks-from-k8s-api-to-the-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lost in the Layers - Scaling OVN-Kubernetes User-Defined Networks from K8S API to the kernel
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-user-defined-networks-to-evpn-scaling-ovn-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From User Defined Networks to EVPN: Scaling OVN-Kubernetes
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-tunnel-too-many-no-overlay-mode-in-ovn-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        One Tunnel Too Many: No-Overlay Mode in OVN-Kubernetes
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-switch-a-load-balancer-and-an-acl-walk-into-a-pipeline-and-conntrack-ruins-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Switch, a Load Balancer, and an ACL Walk into a Pipeline…. And Conntrack Ruins Everything
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-unified-networking-fabric-for-vms-and-multi-cluster-kubernetes-workloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Unified Networking Fabric for VMs and Multi-Cluster Kubernetes workloads
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-we-are-scaling-crusoe-cloud-using-ovn-interconnect-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How we are scaling Crusoe cloud using OVN interconnect approach
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#route-scope-delimitation-as-a-control-plane-scalability-mechanism-for-ovn-interconnect-using-route-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Route scope delimitation as a control plane scalability mechanism for OVN Interconnect using route tags
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-shared-gateway-a-thousand-routers-scaling-arpndp-in-ovn-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        One Shared Gateway, a Thousand Routers: Scaling ARP/NDP in OVN-Kubernetes
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-ovn-kubernetes-one-dpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Two OVN-Kubernetes, One DPU
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ovn-local-a-new-proposed-architecture-for-ovn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ovn-local: A new proposed architecture for OVN
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-network-control-plane-and-ovs-vswitchd-with-kernel-datapath-without-impacting-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Upgrading network control plane and ovs-vswitchd with kernel datapath without impacting users
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#targeted-megaflow-revalidation-in-open-vswitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Targeted Megaflow Revalidation in Open vSwitch
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teaching-ai-to-debug-ovn-layer-aware-troubleshooting-with-the-ovn-kubernetes-mcp-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Teaching AI to Debug OVN: Layer-Aware Troubleshooting with the ovn-kubernetes MCP Server
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stateless-load-balancing-in-ovn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Stateless Load Balancing in OVN
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#death-by-kernel-locks-hyperscalers-road-to-dpdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Death by Kernel locks: Hyperscalers road to DPDK
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ovens-freezers-and-radiofrequency-cavities-the-ongoing-migration-of-the-cern-cloud-to-ovn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ovens, freezers, and radiofrequency cavities: The ongoing migration of the CERN Cloud to OVN
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-api-to-rule-them-all-reworking-the-ovs-hardware-offload-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        One API to Rule Them All: Reworking the OVS Hardware Offload Layers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conntrack-semantics-and-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Conntrack: Semantics and Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rebuilding-an-openflow-controller-in-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rebuilding an OpenFlow Controller in Rust
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#99-patches-but-reviews-aint-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        99 Patches, but Reviews Ain't One
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Companies
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    <li class="md-nav__item md-nav__item--powered">
+      <a href="https://tokenfactory.nebius.com/" class="md-nav__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+        <span class="md-powered-text">Powered by</span>
+        <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+        <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+      </a>
+    </li>
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lost-in-the-layers-scaling-ovn-kubernetes-user-defined-networks-from-k8s-api-to-the-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lost in the Layers - Scaling OVN-Kubernetes User-Defined Networks from K8S API to the kernel
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-user-defined-networks-to-evpn-scaling-ovn-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From User Defined Networks to EVPN: Scaling OVN-Kubernetes
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-tunnel-too-many-no-overlay-mode-in-ovn-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        One Tunnel Too Many: No-Overlay Mode in OVN-Kubernetes
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-switch-a-load-balancer-and-an-acl-walk-into-a-pipeline-and-conntrack-ruins-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Switch, a Load Balancer, and an ACL Walk into a Pipeline…. And Conntrack Ruins Everything
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-unified-networking-fabric-for-vms-and-multi-cluster-kubernetes-workloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A Unified Networking Fabric for VMs and Multi-Cluster Kubernetes workloads
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-we-are-scaling-crusoe-cloud-using-ovn-interconnect-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How we are scaling Crusoe cloud using OVN interconnect approach
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#route-scope-delimitation-as-a-control-plane-scalability-mechanism-for-ovn-interconnect-using-route-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Route scope delimitation as a control plane scalability mechanism for OVN Interconnect using route tags
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-shared-gateway-a-thousand-routers-scaling-arpndp-in-ovn-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        One Shared Gateway, a Thousand Routers: Scaling ARP/NDP in OVN-Kubernetes
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-ovn-kubernetes-one-dpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Two OVN-Kubernetes, One DPU
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ovn-local-a-new-proposed-architecture-for-ovn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ovn-local: A new proposed architecture for OVN
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-network-control-plane-and-ovs-vswitchd-with-kernel-datapath-without-impacting-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Upgrading network control plane and ovs-vswitchd with kernel datapath without impacting users
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#targeted-megaflow-revalidation-in-open-vswitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Targeted Megaflow Revalidation in Open vSwitch
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teaching-ai-to-debug-ovn-layer-aware-troubleshooting-with-the-ovn-kubernetes-mcp-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Teaching AI to Debug OVN: Layer-Aware Troubleshooting with the ovn-kubernetes MCP Server
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stateless-load-balancing-in-ovn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Stateless Load Balancing in OVN
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#death-by-kernel-locks-hyperscalers-road-to-dpdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Death by Kernel locks: Hyperscalers road to DPDK
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ovens-freezers-and-radiofrequency-cavities-the-ongoing-migration-of-the-cern-cloud-to-ovn" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ovens, freezers, and radiofrequency cavities: The ongoing migration of the CERN Cloud to OVN
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-api-to-rule-them-all-reworking-the-ovs-hardware-offload-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        One API to Rule Them All: Reworking the OVS Hardware Offload Layers
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conntrack-semantics-and-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Conntrack: Semantics and Scale
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rebuilding-an-openflow-controller-in-rust" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rebuilding an OpenFlow Controller in Rust
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#99-patches-but-reviews-aint-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        99 Patches, but Reviews Ain't One
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>16 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="open-vswitch-and-ovn-2026-fall-conference">Open vSwitch and OVN 2026 Fall Conference<a class="headerlink" href="#open-vswitch-and-ovn-2026-fall-conference" title="Permanent link">#</a></h1>
+<p>User-Defined Networks (UDNs) dominated this year's program: now that per-tenant virtual networks have landed in OVN-Kubernetes, the community spent 2026 discovering everything that breaks at 100s–1000s of networks — ARP fan-out, conntrack interactions, control-plane recompute costs. Alongside that, a second thread runs through the program: federating independent OVN domains (multi-cluster, VM+K8s, multi-AZ VPC peering) via OVN Interconnect, and a third: OVS reworking itself for a hardware-offloaded, Rust- and AI-adjacent future. Note: no paper or slide links were available for any item at time of writing; every write-up below is grounded in the conference abstracts only.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>November 4, 2026</span>
+<span class="digest-fact" markdown><a href="https://www.openvswitch.org/support/ovscon2026/">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="lost-in-the-layers-scaling-ovn-kubernetes-user-defined-networks-from-k8s-api-to-the-kernel"><a href="lost-in-the-layers-scaling-ovn-kubernetes-user-defined-networks-from-k8s/">Lost in the Layers - Scaling OVN-Kubernetes User-Defined Networks from K8S API to the kernel</a><a class="headerlink" href="#lost-in-the-layers-scaling-ovn-kubernetes-user-defined-networks-from-k8s-api-to-the-kernel" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t27">Abstract</a></p>
+</div>
+<p>Patryk Diak, <a href="../companies/red-hat/">Red Hat</a>, LLC.; Dumitru Ceara, Red Hat, LLC.</p>
+<ul>
+<li><strong>Why</strong>: The canonical modern debugging story — a scaling problem that turned out to be distributed across every layer of the stack. This is exactly the kind of full-stack triage (K8s API → OVN NB/SB → OVS flows → kernel) the PM's world runs on, and the "telemetry we wish we'd had" is directly reusable.</li>
+<li><strong>What</strong>: A postmortem-style account of scaling OVN-Kubernetes UDN workloads in which every layer contributed a small failure, and all of them had to be fixed before any improvement was visible. The core finding: most engineering time went to localizing the failing layer, not to fixing it. (from abstract only)</li>
+<li><strong>How</strong>: Systematic per-layer bisection from the Kubernetes API server down to the kernel, with a retrospective on the observability gaps that made attribution slow.</li>
+<li><strong>Where applicable</strong>: General to any OVN-Kubernetes deployment pushing UDN density; the telemetry recommendations transfer to any layered CNI debugging. Not tied to a particular operator's scale, though the pain obviously grows with network count.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="from-user-defined-networks-to-evpn-scaling-ovn-kubernetes"><a href="from-user-defined-networks-to-evpn-scaling-ovn-kubernetes/">From User Defined Networks to EVPN: Scaling OVN-Kubernetes</a><a class="headerlink" href="#from-user-defined-networks-to-evpn-scaling-ovn-kubernetes" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t2">Abstract</a></p>
+</div>
+<p>Mohit Sheth; Venkata Anil Kommaddi; Joe Talerico, <a href="../companies/red-hat/">Red Hat</a>, LLC.</p>
+<ul>
+<li><strong>Why</strong>: Firmly substantiated scale methodology, not anecdotes: OpenShift PerfScale built repeatable kube-burner workloads for UDN/CUDN density, BGP advertisement, and EVPN connectivity, and reports the bottlenecks found (OVN NB/SB, OVS) and what actually moved the needle.</li>
+<li><strong>What</strong>: A testbed and workload-model description covering L2/L3 UDN and ClusterUDN density, churn, BGP route advertisements, and EVPN east-west/north-south connectivity — spanning 100s of CUDNs and 1000s of namespaces/pods/VMs — plus the concrete improvements that increased achievable scale and a repeatable methodology for measuring tenant networking at scale. (from abstract only)</li>
+<li><strong>How</strong>: Multi-node testbeds with external FRR peers, VTEPs, VRFs and pod/VM traffic endpoints; kube-burner-driven density and churn workloads; measurement of CUDN allocation latency, pod-readiness latency, OVN NB/SB and OVS bottlenecks, and BGP import/export timing.</li>
+<li><strong>Where applicable</strong>: The methodology is upstream and repeatable; the specific bottlenecks are OVN-Kubernetes/Red Hat-stack-specific but the measurement pattern transfers to any tenant-networking platform.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="one-tunnel-too-many-no-overlay-mode-in-ovn-kubernetes"><a href="one-tunnel-too-many-no-overlay-mode-in-ovn-kubernetes/">One Tunnel Too Many: No-Overlay Mode in OVN-Kubernetes</a><a class="headerlink" href="#one-tunnel-too-many-no-overlay-mode-in-ovn-kubernetes" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t4">Abstract</a></p>
+</div>
+<p>Riccardo Ravaioli, <a href="../companies/nvidia/">NVIDIA</a></p>
+<ul>
+<li><strong>Why</strong>: Directly hits the PM's BGP + datapath interests. When the fabric already provides an overlay, stacking Geneve on top wastes MTU and adds encapsulation cost — this is OVN-Kubernetes learning to be fabric-aware.</li>
+<li><strong>What</strong>: A new no-overlay mode letting the cluster default network and primary L3 ClusterUserDefinedNetworks route inter-node traffic via BGP-learned routes with no Geneve encapsulation, while OVN still handles local networking, policy, and Services. Per-network choice, so Geneve and no-overlay networks coexist in one cluster. (from abstract only)</li>
+<li><strong>How</strong>: BGP-learned routes replace the tunnel for inter-node forwarding (administrator-configured BGP or a managed full-mesh option); the talk follows a packet across nodes and covers the config choices that matter — outbound SNAT, MTU, tenant isolation. NVIDIA's DPU-based VM networking is one concrete example.</li>
+<li><strong>Where applicable</strong>: Clusters sitting on a fabric that already provides the overlay/underlay (typical DPU- or ToR-terminated environments). Joint Red Hat/NVIDIA effort; constraints around primary L3 networks and SNAT shape deployment.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="a-switch-a-load-balancer-and-an-acl-walk-into-a-pipeline-and-conntrack-ruins-everything"><a href="a-switch-a-load-balancer-and-an-acl-walk-into-a-pipeline-and-conntrack-r/">A Switch, a Load Balancer, and an ACL Walk into a Pipeline…. And Conntrack Ruins Everything</a><a class="headerlink" href="#a-switch-a-load-balancer-and-an-acl-walk-into-a-pipeline-and-conntrack-ruins-everything" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t10">Abstract</a></p>
+</div>
+<p>Surya Seetharaman, <a href="../companies/red-hat/">Red Hat</a>, LLC.; Nadia Pinaeva, <a href="../companies/nvidia/">NVIDIA</a></p>
+<ul>
+<li><strong>Why</strong>: UDN isolation is not the end state — address-space exhaustion and inter-team service access require controlled connectivity between tenant islands. This is the API (ClusterNetworkConnect in ovn-k v1.3) doing that, plus a genuinely instructive conntrack/ACL evaluation-order puzzle.</li>
+<li><strong>What</strong>: ClusterNetworkConnect, a declarative admin API connecting isolated UDNs with full pod-to-pod, service-only, or both; symmetric but non-transitive connectivity. Plus the war story of how load balancers on switches interact with conntrack and ACL evaluation order to break the "allow service, drop pod-to-pod" intent, the shipped workaround, and why the long-term fix is hard. (from abstract only)</li>
+<li><strong>How</strong>: A distributed transit router peers with each connected network's router via point-to-point subnets carved deterministically from a user-configured CIDR; load balancers are placed on connected networks' switches so cross-network DNAT works with existing routing.</li>
+<li><strong>Where applicable</strong>: OVN-Kubernetes v1.3+ with UDNs; the conntrack/ACL ordering lesson applies to anyone designing stateful policy over OVN load balancers generally.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="a-unified-networking-fabric-for-vms-and-multi-cluster-kubernetes-workloads"><a href="a-unified-networking-fabric-for-vms-and-multi-cluster-kubernetes-workloa/">A Unified Networking Fabric for VMs and Multi-Cluster Kubernetes workloads</a><a class="headerlink" href="#a-unified-networking-fabric-for-vms-and-multi-cluster-kubernetes-workloads" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t12">Abstract</a></p>
+</div>
+<p>Sragdhara Datta Chaudhuri, <a href="../companies/nutanix/">Nutanix</a>; Priyankar Jain, Nutanix</p>
+<ul>
+<li><strong>Why</strong>: Multi-cluster K8s + VMs in one VPC with local control planes is the shape of most real hybrid estates. This is a working architecture ("interconnect of interconnects") rather than a proposal, built from OVN-IC primitives a PM could reproduce.</li>
+<li><strong>What</strong>: Nutanix Flow CNI, built on OVN-Kubernetes and OVN-IC, extends the VPC model across VM and multi-cluster Kubernetes environments: shared logical routing domain, bi-directional federated service reachability (VM VIPs ↔ K8s ClusterIPs), and cross-cluster DNS for ClusterIP services — all while each environment keeps its own control plane. (from abstract only)</li>
+<li><strong>How</strong>: Hierarchical OVN connectivity — OVN-Kubernetes Interconnect mode distributes control/datapath state within a cluster; OVN-IC links independent OVN domains via transit switches and a shared interconnect DB. Backend selection stays local to the destination domain. A controller publishes service FQDNs/ClusterIPs to a shared OVSDB and a CoreDNS extension builds per-VPC views on the <code>svc.cluster.local</code> model.</li>
+<li><strong>Where applicable</strong>: The architecture is Nutanix Flow CNI-specific in its packaging, but the federation pattern (independent OVN domains, exchanged routes/VIPs, shared OVSDB for service discovery) is general to any OVN-IC-based multi-cluster fabric.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="how-we-are-scaling-crusoe-cloud-using-ovn-interconnect-approach"><a href="how-we-are-scaling-crusoe-cloud-using-ovn-interconnect-approach/">How we are scaling Crusoe cloud using OVN interconnect approach</a><a class="headerlink" href="#how-we-are-scaling-crusoe-cloud-using-ovn-interconnect-approach" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t15">Abstract</a></p>
+</div>
+<p>Numan Siddique, <a href="../companies/crusoe/">Crusoe</a>; Ketan Supanekar, Crusoe</p>
+<ul>
+<li><strong>Why</strong>: Crusoe is an AI-cloud operator re-architecting its OVN control plane — and it's led by Numan Siddique, OVN's longtime maintainer. A production AI-cloud at the point where the central Southbound DB becomes the bottleneck is a rare, candid data point.</li>
+<li><strong>What</strong>: The current OVN-relay architecture and its bottlenecks, a re-architecture modeled on OVN-Kubernetes Interconnect, and an evaluation of control-plane backing stores — k8s api-server/etcd with custom CRDs vs. NATS KV — with the chosen option and rationale. The talk explicitly asks the community whether the central OVN SB DB can be replaced by api-server/etcd or NATS KV. (from abstract only)</li>
+<li><strong>How</strong>: Moving from relayed central OVSDB to the ovn-kubernetes-style Interconnect decomposition (per-zone local state, IC database at the top), and re-homing control-plane persistence on a different storage substrate.</li>
+<li><strong>Where applicable</strong>: Crusoe-specific production constraints, but the SB-DB bottleneck and the storage-backend question generalize to any large single-tenant-scale OVN cloud. Watch for whether the community adopts the experimental backend.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="route-scope-delimitation-as-a-control-plane-scalability-mechanism-for-ovn-interconnect-using-route-tags"><a href="route-scope-delimitation-as-a-control-plane-scalability-mechanism-for-ov/">Route scope delimitation as a control plane scalability mechanism for OVN Interconnect using route tags</a><a class="headerlink" href="#route-scope-delimitation-as-a-control-plane-scalability-mechanism-for-ovn-interconnect-using-route-tags" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t9">Abstract</a></p>
+</div>
+<p>Lucas Vargas Dias, Magalu Cloud; Julio Cesar Vanti, Magalu Cloud</p>
+<ul>
+<li><strong>Why</strong>: One of the few talks with a hard quantified result: topological isolation (per-peering transit switch) costs <strong>2.56x</strong> the Southbound logical flows of tag-based route scoping for identical connectivity. That's a real, transferable design trade-off for anyone building multi-AZ VPC peering on OVN-IC.</li>
+<li><strong>What</strong>: A comparison of two ways to bound route exchange between peered VPCs in OVN Interconnect: a transit switch per peering (data-plane isolation, expensive) vs. one shared transit switch with declarative scoping via <code>ic-route-tag</code> / <code>ic-route-learn-tag-rules</code> / <code>ic-route-filter-tag</code> (control-plane isolation, substantially cheaper in memory, in northd full-recompute latency, in flow installation after reconnect, and in every unrelated NB write). The trade-off is stated plainly: tag scoping constrains route learning only; a manual static route can still cross the shared L2 domain, so per-pair topology remains necessary where data-plane isolation must hold. (from abstract only)</li>
+<li><strong>How</strong>: Measurement-driven comparison of lflow-node recomputes, flow counts, and operation latency between the two topologies on identical connectivity.</li>
+<li><strong>Where applicable</strong>: Any OVN-IC VPC-peering deployment; the technique is upstream OVN configuration (general), the numbers come from Magalu Cloud's production-derived testing. Isolation requirements (control-plane-only vs. data-plane) decide which option is valid.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="one-shared-gateway-a-thousand-routers-scaling-arpndp-in-ovn-kubernetes"><a href="one-shared-gateway-a-thousand-routers-scaling-arpndp-in-ovn-kubernetes/">One Shared Gateway, a Thousand Routers: Scaling ARP/NDP in OVN-Kubernetes</a><a class="headerlink" href="#one-shared-gateway-a-thousand-routers-scaling-arpndp-in-ovn-kubernetes" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t11">Abstract</a></p>
+</div>
+<p>Jaime Caamano, <a href="../companies/red-hat/">Red Hat</a>, LLC.; Matteo Dallaglio, Red Hat, LLC.; Tim Rozet, <a href="../companies/nvidia/">NVIDIA</a></p>
+<ul>
+<li><strong>Why</strong>: A beautiful datapath pathology: with hundreds/thousands of UDNs sharing one uplink/IP/MAC, ARP replies can't be mapped back to their originating router (conntrack can't track them), so OVN-Kubernetes fans them out to every patch port — duplicating neighbor state, ballooning the OpenFlow footprint, and eventually exceeding OVS recirculation limits. This is exactly the "K8s networking meets datapath internals" intersection.</li>
+<li><strong>What</strong>: The full arc of an ARP storm at UDN scale: how fan-out surfaced, the constraints any fix must preserve, a short-term flow fix constraining fan-out on the shared gateway bridge, a mid-term prototype steering discovery through the default gateway router, and the resulting upstream OVN feature — Shared MAC-binding scopes, letting related logical router ports share one set of learned neighbor bindings instead of per-router duplication. (from abstract only)</li>
+<li><strong>How</strong>: Learn through a single gateway router and steer ARP/NDP to it, propagating learned bindings to the UDNs, rather than fanning discovery traffic to every gateway router.</li>
+<li><strong>Where applicable</strong>: OVN-Kubernetes shared-gateway deployments at high UDN count; the Shared MAC-binding scope is a general OVN feature usable beyond ovn-k. Red Hat/NVIDIA collaboration shaping the fix at the right layer.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="two-ovn-kubernetes-one-dpu"><a href="two-ovn-kubernetes-one-dpu/">Two OVN-Kubernetes, One DPU</a><a class="headerlink" href="#two-ovn-kubernetes-one-dpu" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t14">Abstract</a></p>
+</div>
+<p>Alin Serdean, <a href="../companies/nvidia/">NVIDIA</a>; Igal Tsoiref, <a href="../companies/red-hat/">Red Hat</a>, LLC.</p>
+<ul>
+<li><strong>Why</strong>: DPU-mode ovn-kubernetes today serves only the host cluster — pods scheduled on the DPU's own node get nothing. Running two full ovn-k instances on one card, sharing only what must be shared, is a concrete step toward DPUs as first-class compute, which matters for accelerator-adjacent infrastructure.</li>
+<li><strong>What</strong>: A proposal and working prototype for a second, full-mode ovn-kubernetes instance on the same DPU, each instance keeping its own OVN databases and Kubernetes API, with the genuinely shared resources carefully partitioned. Built on co-hosted ovn-controller (experimental since 23.03, untagged in 26.09.0). (from abstract only)</li>
+<li><strong>How</strong>: The enumerated hard parts: <code>system-id</code> as the one key that can't be chassis-specific, conntrack zones staying clear of shared gateway zones, 15-character management-port name limits, two instances can't share a gateway bridge (ovnk owns its whole flow table), and ownership assignment for bridges, nftables tables, metrics ports and socket paths. Prototype demo; PRs referenced.</li>
+<li><strong>Where applicable</strong>: DPU-accelerated Kubernetes (NVIDIA BlueField-class cards, Red Hat + NVIDIA joint work). The resource-partitioning lessons generalize to any two network stacks sharing one host.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="ovn-local-a-new-proposed-architecture-for-ovn"><a href="ovn-local-a-new-proposed-architecture-for-ovn/">ovn-local: A new proposed architecture for OVN</a><a class="headerlink" href="#ovn-local-a-new-proposed-architecture-for-ovn" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t26">Abstract</a></p>
+</div>
+<p>Mark Michelson; Ilya Maximets; Dumitru Ceara; Ales Musil, <a href="../companies/red-hat/">Red Hat</a>, LLC.</p>
+<ul>
+<li><strong>Why</strong>: A panel proposing to re-architect OVN itself — fewer processes, fewer databases — because a decade of feature growth and changed deployment patterns (smaller, more distributed footprints à la ovn-k IC) has left the original centralized architecture a poor fit. Architecture-level signals like this are rare and worth a PM's attention.</li>
+<li><strong>What</strong>: A proposal for a leaner OVN deployment model with a smaller footprint, promising easier deployment and upgrades, faster processing, and reduced memory and disk requirements. (from abstract only)</li>
+<li><strong>How</strong>: Consolidating the process/database structure of OVN (details are the panel's subject); positioned as the direction future OVN releases will take.</li>
+<li><strong>Where applicable</strong>: Every OVN deployment if it lands — this is upstream-project direction-setting by the core maintainers, not an operator-specific design. Watch this one for the following release cycle.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="upgrading-network-control-plane-and-ovs-vswitchd-with-kernel-datapath-without-impacting-users"><a href="upgrading-network-control-plane-and-ovs-vswitchd-with-kernel-datapath-wi/">Upgrading network control plane and ovs-vswitchd with kernel datapath without impacting users</a><a class="headerlink" href="#upgrading-network-control-plane-and-ovs-vswitchd-with-kernel-datapath-without-impacting-users" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t6">Abstract</a></p>
+</div>
+<p>Aleksandr Ankudinov, <a href="../companies/nebius/">Nebius</a></p>
+<ul>
+<li><strong>Why</strong>: Live-upgrading the network data plane of a large public cloud without user-visible impact is one of the hardest ops problems in the field. Nebius shares the actual tricks — including running two ovs-vswitchd in parallel, "doing the forbidden" — which is gold for anyone operating OVS-based infrastructure in Kubernetes.</li>
+<li><strong>What</strong>: Techniques for restarting/replacing the three components (vpc-agent, ovs-vswitchd, OVS kernel module) while existing flows keep traffic flowing: flow cookies as version tags for cleanup, OpenFlow <code>note</code> actions as cross-restart storage, disciplined group-ID allocation, and the parallel-vswitchd upgrade dance with <code>flow-restore-wait</code> — including how to make two daemons fight and how to make them stop. Plus the Kubernetes-specific oddities, and a theoretical scheme for loading two OVS kernel modules at once. (from abstract only)</li>
+<li><strong>How</strong>: Desired-state reconciliation over versioned flows, plus dual-daemon handover during upgrade; kernel module itself is not hot-upgraded today.</li>
+<li><strong>Where applicable</strong>: Nebius public-cloud specifics (kernel datapath, agent-based control), but the versioning/reconciliation patterns apply to any OVS/OpenFlow deployment. The parallel-daemon scheme carries real risk — treat as inspiration, not recipe.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="targeted-megaflow-revalidation-in-open-vswitch"><a href="targeted-megaflow-revalidation-in-open-vswitch/">Targeted Megaflow Revalidation in Open vSwitch</a><a class="headerlink" href="#targeted-megaflow-revalidation-in-open-vswitch" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t28">Abstract</a></p>
+</div>
+<p>Gaetan Rivet, <a href="../companies/nvidia/">NVIDIA</a></p>
+<ul>
+<li><strong>Why</strong>: A diagnosed failure mode that "has limited the scale of our Open vSwitch deployments at NVIDIA": after any configuration change, OVS revalidates <em>all</em> megaflows, which can cascade into flow eviction, revalidator destabilization, and megaflow population collapse — a rebuild under overload. A concrete fix with a dependency-tracking design, implemented and running in production fork form.</li>
+<li><strong>What</strong>: Targeted megaflow revalidation, implemented in the OVS-DOCA fork: record the reason for each revalidation and extend xcache to track each megaflow's dependencies, so only affected megaflows are retranslated after a change. Also gives controller authors a way to structure OpenFlow pipelines so configuration changes have bounded impact; upstreaming is intended. (from abstract only)</li>
+<li><strong>How</strong>: Dependency tracking including indirect and negative dependencies (watched ports, missing groups), with AI-assisted testing used to cover the dependency matrix; part of a wider revalidation-stabilization effort that continues with a better flow-capacity control law.</li>
+<li><strong>Where applicable</strong>: Any large OVS deployment, but the current implementation lives in NVIDIA's OVS-DOCA fork (DOCA/BlueField context) — upstream availability is the thing to watch. The dependency-completeness caveat is the main risk.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="teaching-ai-to-debug-ovn-layer-aware-troubleshooting-with-the-ovn-kubernetes-mcp-server"><a href="teaching-ai-to-debug-ovn-layer-aware-troubleshooting-with-the-ovn-kubern/">Teaching AI to Debug OVN: Layer-Aware Troubleshooting with the ovn-kubernetes MCP Server</a><a class="headerlink" href="#teaching-ai-to-debug-ovn-layer-aware-troubleshooting-with-the-ovn-kubernetes-mcp-server" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t8">Abstract</a></p>
+</div>
+<p>Keshav Kabra, <a href="../companies/nvidia/">NVIDIA</a>; Surya Seetharaman, <a href="../companies/red-hat/">Red Hat</a>, LLC.</p>
+<ul>
+<li><strong>Why</strong>: Sits squarely on the PM's AI-for-infrastructure interest: a community MCP server that exposes OVN/OVS/K8s/kernel layers to AI agents as structured tools, with an honest accounting of where AI triage helps and where humans still must check.</li>
+<li><strong>What</strong>: The ovn-kubernetes MCP server: read-only, structured tools wrapping ovn-nbctl, ovn-sbctl, ovn-trace, ovs-ofctl, ovs-appctl plus Kubernetes and kernel-networking state — working on live clusters and offline on must-gather/sos-report artifacts. Includes a demo of an agent tracing a symptom from pod to logical/physical datapath to root cause. (from abstract only)</li>
+<li><strong>How</strong>: Deliberate design choices: wrapper tools rather than generic exec, least-privilege access, tools grouped by network layer — a reusable pattern for exposing infrastructure primitives to LLM agents safely.</li>
+<li><strong>Where applicable</strong>: General to OVN-Kubernetes clusters today; the MCP-wrapping pattern transfers to any layered system. Triage-assist, not autonomous repair.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="stateless-load-balancing-in-ovn"><a href="stateless-load-balancing-in-ovn/">Stateless Load Balancing in OVN</a><a class="headerlink" href="#stateless-load-balancing-in-ovn" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t24">Abstract</a></p>
+</div>
+<p>Alexandra Rukomoinikova, K2 Cloud</p>
+<ul>
+<li><strong>Why</strong>: Horizontal gateway scaling is blocked by conntrack pinning every connection to one gateway chassis. Rather than sync conntrack (the usual answer), this moves the NAT to the backend's hypervisor — a different architectural point in the design space, in production at a cloud provider.</li>
+<li><strong>What</strong>: The story of the new "deferred-nat" load balancer option: backend selected statelessly per packet on the router, packet delivered by MAC, DNAT and conntrack state created on the backend's own hypervisor; established sessions survive backend changes via incremental select-group updates instead of rebuilds. Includes why conntrack synchronization, extending <code>use_stateless_nat</code>, and cross-AZ backends were rejected. (from abstract only)</li>
+<li><strong>How</strong>: NAT deferred to the backend hypervisor, eliminating per-gateway conntrack state as the horizontal-scaling bottleneck.</li>
+<li><strong>Where applicable</strong>: OVN deployments needing horizontally scalable load-balancer gateways (public/private cloud). K2 Cloud runs it in production; work remains (per the speakers). Requires OVN support for the deferred-nat option.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="death-by-kernel-locks-hyperscalers-road-to-dpdk"><a href="death-by-kernel-locks-hyperscalers-road-to-dpdk/">Death by Kernel locks: Hyperscalers road to DPDK</a><a class="headerlink" href="#death-by-kernel-locks-hyperscalers-road-to-dpdk" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t18">Abstract</a></p>
+</div>
+<p>Florian Werner, Schwarz Digits; Felix Huettner, Schwarz Digits</p>
+<ul>
+<li><strong>Why</strong>: Kernel-lock contention is the classic reason large OVN gateway deployments give up on netlink/kernel bridges. This is a full-fleet migration to DPDK bridges with pitfalls and before/after performance comparisons — a decision many operators are facing with the same data.</li>
+<li><strong>What</strong>: The migration of all Schwarz Digits OVN gateway chassis from kernel netlink bridges to DPDK bridges: motivations (kernel-lock pathologies), migration pitfalls, and performance comparisons between the two. (from abstract only)</li>
+<li><strong>How</strong>: Fleet-wide bridge-type migration on OVN gateway chassis; pairs with the follow-up <code>dpdk conntrack performance</code> talk on the conntrack problems they found.</li>
+<li><strong>Where applicable</strong>: Schwarz Digits' environment (their silicon, their workloads) — treat the direction and pitfalls as transferable, the numbers as org-specific. Relevant wherever kernel-datapath scaling limits bite.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="ovens-freezers-and-radiofrequency-cavities-the-ongoing-migration-of-the-cern-cloud-to-ovn"><a href="ovens-freezers-and-radiofrequency-cavities-the-ongoing-migration-of-the/">Ovens, freezers, and radiofrequency cavities: The ongoing migration of the CERN Cloud to OVN</a><a class="headerlink" href="#ovens-freezers-and-radiofrequency-cavities-the-ongoing-migration-of-the-cern-cloud-to-ovn" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t25">Abstract</a></p>
+</div>
+<p>Christopher Barnes, CERN; Richard Bachmann, CERN</p>
+<ul>
+<li><strong>Why</strong>: A 1.4k-hypervisor, 15k-VM private OpenStack cloud migrating LinuxBridge → OVN across two datacenters is a serious private-cloud migration at research-lab scale — squarely the PM's virtualization/private-cloud territory, told with open questions rather than a victory lap.</li>
+<li><strong>What</strong>: Mid-migration experience report: deployment adjustments made along the way, issues encountered, and open questions the CERN team wants community input on. (from abstract only)</li>
+<li><strong>How</strong>: Incremental migration of a two-datacenter OpenStack cloud from LinuxBridge networking to OVN.</li>
+<li><strong>Where applicable</strong>: OpenStack-based private clouds; CERN's scale and two-site layout are specific, but the LinuxBridge→OVN migration playbook is broadly reusable.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="one-api-to-rule-them-all-reworking-the-ovs-hardware-offload-layers"><a href="one-api-to-rule-them-all-reworking-the-ovs-hardware-offload-layers/">One API to Rule Them All: Reworking the OVS Hardware Offload Layers</a><a class="headerlink" href="#one-api-to-rule-them-all-reworking-the-ovs-hardware-offload-layers" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t22">Abstract</a></p>
+</div>
+<p>Eelco Chaudron, <a href="../companies/red-hat/">Red Hat</a>, LLC.</p>
+<ul>
+<li><strong>Why</strong>: Offload in OVS was historically duplicated per provider (kernel TC flower vs. DPDK rte_flow via netdev-offload), making vendor integration invasive. The new <code>dpif-offload</code> API layer that has landed upstream unifies this — foundational plumbing for every DPU/SmartNIC story elsewhere in the program.</li>
+<li><strong>What</strong>: The dpif-offload API layer now in OVS: a unified abstraction for hardware offload sitting above provider implementations, centralizing offload handling, simplifying vendor integration, and reducing duplicated logic — plus the migration story from the old netdev-offload model and what it enables next. (from abstract only)</li>
+<li><strong>How</strong>: A single offload API above provider-specific implementations (kernel TC flower and DPDK rte_flow behind it), so new offload features land in one place instead of N.</li>
+<li><strong>Where applicable</strong>: Anyone building or consuming OVS hardware offload (TC flower, DPDK rte_flow, DOCA-style providers); landed upstream, so this is the new baseline architecture rather than a fork.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="conntrack-semantics-and-scale"><a href="conntrack-semantics-and-scale/">Conntrack: Semantics and Scale</a><a class="headerlink" href="#conntrack-semantics-and-scale" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t23">Abstract</a></p>
+</div>
+<p>Aaron Conole, <a href="../companies/red-hat/">Red Hat</a>, LLC.</p>
+<ul>
+<li><strong>Why</strong>: Conntrack quietly became the L3/L4 interface of the OpenFlow pipeline, and this year's program shows it breaking things in at least three other talks (ACL ordering, ARP tracking, DPDK performance). This is the framing talk on what conntrack must guarantee across implementations and how it scales — including hardware acceleration paths.</li>
+<li><strong>What</strong>: A decade-look at conntrack in OVS and the open questions: which behaviors must be common across all conntrack implementations, how the userspace implementation scales to modern demands, and how <code>ct()</code> can be extended through a hardware acceleration path — with what is done, what remains unmerged, and how to contribute. (from abstract only)</li>
+<li><strong>How</strong>: Retrospective plus forward-looking work items on common semantics, userspace scaling, and hardware <code>ct()</code> acceleration.</li>
+<li><strong>Where applicable</strong>: All of OVS/OVN — conntrack semantics constrain every stateful feature above them. Particularly relevant to userspace/DPDK and offload users.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="rebuilding-an-openflow-controller-in-rust"><a href="rebuilding-an-openflow-controller-in-rust/">Rebuilding an OpenFlow Controller in Rust</a><a class="headerlink" href="#rebuilding-an-openflow-controller-in-rust" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t17">Abstract</a></p>
+</div>
+<p>Or Mazza, <a href="../companies/nvidia/">NVIDIA</a>; Quentin Barrand, NVIDIA; Alin Serdean, NVIDIA</p>
+<ul>
+<li><strong>Why</strong>: Not a networking-technique talk but a direction signal: a C→Rust rewrite of a production OpenFlow controller (HBN on BlueField) with binary compatibility preserved and <em>measured</em> gains — 8% faster insertion, 14% faster deletion, 57% faster flow-statistics collection — plus an explicit debate about rewriting parts of OVS itself in Rust.</li>
+<li><strong>What</strong>: The HBN controller rewrite from C to Rust for memory safety, concurrency, and testability, delivered without disrupting users, with the above performance numbers and practical lessons from running it in a real DPU platform. The speakers open the question of where Rust fits in OVS proper and what C bindings would be required. (from abstract only)</li>
+<li><strong>How</strong>: Incremental Rust introduction behind a binary-compatible interface; measurable before/after flow-operation benchmarks.</li>
+<li><strong>Where applicable</strong>: The results are HBN/BlueField-specific; the rewrite pattern and the OVS-in-Rust debate generalize to the whole project — which is why it's worth a PM's attention even beyond the immediate platform.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="99-patches-but-reviews-aint-one"><a href="99-patches-but-reviews-aint-one/">99 Patches, but Reviews Ain't One</a><a class="headerlink" href="#99-patches-but-reviews-aint-one" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://www.openvswitch.org/support/ovscon2026/#t16">Abstract</a></p>
+</div>
+<p>Eelco Chaudron, <a href="../companies/red-hat/">Red Hat</a>, LLC.</p>
+<ul>
+<li><strong>Why</strong>: Not about networking at all — about the OVS project's review bottleneck, with numbers on review workload and where patches stall. For anyone whose product depends on OVS/OVN landing features (and whose teams could review), this is the health-of-the-substrate talk.</li>
+<li><strong>What</strong>: A patch's journey from ovs-dev to merge, an honest look at who actually reviews, numbers on current review workload and bottlenecks, and the case that community review is essential to merge speed and knowledge spread. (from abstract only)</li>
+<li><strong>How</strong>: Lightning-talk analysis of review statistics across the project's patch flow.</li>
+<li><strong>Where applicable</strong>: The OVS/OVN contributor and dependent-vendor ecosystem generally; lightning-talk depth, so expect data over solutions.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>UDNs grew up and broke everything</strong>: User-Defined Networks moved from headline feature to scaling liability — ARP/NDP fan-out, conntrack/ACL interactions, control-plane recomputes, and inter-UDN connectivity (ClusterNetworkConnect) dominate the program. Tenant-network density is now OVN-Kubernetes's central stress test.</li>
+<li><strong>"Interconnect of interconnects" is the federation pattern</strong>: Nutanix (VM+multi-cluster VPC), Crusoe (AI-cloud re-architecture), and Magalu (multi-AZ VPC peering) all converge on the same idea — federate independent OVN domains via OVN-IC while keeping control planes local, with the VPC as the unit of federation.</li>
+<li><strong>Control-plane costs are being quantified, finally</strong>: the 2.56x lflow cost of topological vs. tag-based route scoping, ovn-cp-bench's single-host cloud-scale testbench, PerfScale's repeatable UDN/EVPN workloads, and targeted megaflow revalidation all treat control-plane cost as a measurable, optimizable quantity rather than folklore.</li>
+<li><strong>Fabric-aware OVN-Kubernetes</strong>: no-overlay mode (BGP-learned routes instead of Geneve) and EVPN testing reflect clusters increasingly deployed onto fabrics that already know how to route — the CNI stops re-solving problems the underlay solved.</li>
+<li><strong>OVS retooling for a hardware datapath</strong>: the dpif-offload API consolidation, software/hardware hash alignment, two-ovn-on-one-DPU, and megaflow-revalidation work in the DOCA fork all point at a future where the software datapath is the exception, not the rule.</li>
+<li><strong>Rust and AI entering the toolchain</strong>: a production OpenFlow controller rewritten in Rust with measured gains (and an OVS-in-Rust debate opened), an MCP server teaching AI agents to debug OVN, and AI-assisted testing of revalidation dependencies — both technologies arriving in the project's core workflows, not just its keynotes.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/ovscon-2026.md"><code>digests/ovscon-2026.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/ovscon-2026.md"><code>prompts/ovscon-2026.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ripe-93/" class="md-footer__link md-footer__link--prev" aria-label="Previous: RIPE 93">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                RIPE 93
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

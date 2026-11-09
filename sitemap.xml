@@ -5488,6 +5488,69 @@
         <loc>https://tldr.netdevops.me/ovscon-2025/you-want-to-upgrade-what-a-field-guide-to-risky-network-changes/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/99-patches-but-reviews-aint-one/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/a-switch-a-load-balancer-and-an-acl-walk-into-a-pipeline-and-conntrack-r/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/a-unified-networking-fabric-for-vms-and-multi-cluster-kubernetes-workloa/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/conntrack-semantics-and-scale/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/death-by-kernel-locks-hyperscalers-road-to-dpdk/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/from-user-defined-networks-to-evpn-scaling-ovn-kubernetes/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/how-we-are-scaling-crusoe-cloud-using-ovn-interconnect-approach/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/lost-in-the-layers-scaling-ovn-kubernetes-user-defined-networks-from-k8s/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/one-api-to-rule-them-all-reworking-the-ovs-hardware-offload-layers/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/one-shared-gateway-a-thousand-routers-scaling-arpndp-in-ovn-kubernetes/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/one-tunnel-too-many-no-overlay-mode-in-ovn-kubernetes/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/ovens-freezers-and-radiofrequency-cavities-the-ongoing-migration-of-the/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/ovn-local-a-new-proposed-architecture-for-ovn/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/rebuilding-an-openflow-controller-in-rust/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/route-scope-delimitation-as-a-control-plane-scalability-mechanism-for-ov/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/stateless-load-balancing-in-ovn/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/targeted-megaflow-revalidation-in-open-vswitch/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/teaching-ai-to-debug-ovn-layer-aware-troubleshooting-with-the-ovn-kubern/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/two-ovn-kubernetes-one-dpu/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ovscon-2026/upgrading-network-control-plane-and-ovs-vswitchd-with-kernel-datapath-wi/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/page/2/</loc>
       </url>
       <url>

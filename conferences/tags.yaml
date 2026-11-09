@@ -4586,3 +4586,87 @@ opi-2026:
     - open-source
     - dpu
     - containers
+ovscon-2026:
+  post:
+  - kubernetes
+  - cloud
+  - sdn
+  - cni
+  - dpu
+  - ai
+  talks:
+    Lost in the Layers - Scaling OVN-Kubernetes User-Defined Networks from K8S API to the kernel:
+    - kubernetes
+    - cni
+    - troubleshooting
+    - observability
+    'From User Defined Networks to EVPN: Scaling OVN-Kubernetes':
+    - kubernetes
+    - benchmarking
+    - bgp
+    'One Tunnel Too Many: No-Overlay Mode in OVN-Kubernetes':
+    - kubernetes
+    - bgp
+    - cni
+    A Switch, a Load Balancer, and an ACL Walk into a Pipeline…. And Conntrack Ruins Everything:
+    - kubernetes
+    - cni
+    - load-balancing
+    A Unified Networking Fabric for VMs and Multi-Cluster Kubernetes workloads:
+    - kubernetes
+    - cloud
+    - cni
+    - interconnection
+    How we are scaling Crusoe cloud using OVN interconnect approach:
+    - cloud
+    - sdn
+    - orchestration
+    Route scope delimitation as a control plane scalability mechanism for OVN Interconnect using route tags:
+    - cloud
+    - sdn
+    - benchmarking
+    'One Shared Gateway, a Thousand Routers: Scaling ARP/NDP in OVN-Kubernetes':
+    - kubernetes
+    - cni
+    - linux-networking
+    Two OVN-Kubernetes, One DPU:
+    - dpu
+    - kubernetes
+    - cni
+    'ovn-local: A new proposed architecture for OVN':
+    - sdn
+    - orchestration
+    Upgrading network control plane and ovs-vswitchd with kernel datapath without impacting users:
+    - cloud
+    - sre
+    - linux-networking
+    Targeted Megaflow Revalidation in Open vSwitch:
+    - linux-networking
+    - dpu
+    - testing
+    'Teaching AI to Debug OVN: Layer-Aware Troubleshooting with the ovn-kubernetes MCP Server':
+    - ai
+    - kubernetes
+    - troubleshooting
+    Stateless Load Balancing in OVN:
+    - load-balancing
+    - cloud
+    'Death by Kernel locks: Hyperscalers road to DPDK':
+    - cloud
+    - linux-networking
+    - benchmarking
+    'Ovens, freezers, and radiofrequency cavities: The ongoing migration of the CERN Cloud to OVN':
+    - cloud
+    - troubleshooting
+    'One API to Rule Them All: Reworking the OVS Hardware Offload Layers':
+    - dpu
+    - linux-networking
+    'Conntrack: Semantics and Scale':
+    - linux-networking
+    - dpu
+    Rebuilding an OpenFlow Controller in Rust:
+    - dpu
+    - open-source
+    - benchmarking
+    99 Patches, but Reviews Ain't One:
+    - open-source

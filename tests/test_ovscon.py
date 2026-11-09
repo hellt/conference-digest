@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 from conferences.fetchers import get_fetcher
 from conferences.fetchers.base import MANUAL_FALLBACK, NOT_PUBLISHED, OK
 from conferences.fetchers.ovscon import OvsconFetcher, talk_links
-from conferences.links import Context, enrich, program_items, scrape_page
+from conferences.links import Context, UPLOAD_CHANNELS, enrich, program_items, scrape_page
 from scripts.discover_editions import candidates, fill, latest_ident
 
 
@@ -70,6 +70,9 @@ class OvsconTests(TestCase):
 
     def test_registered(self):
         self.assertIsInstance(get_fetcher("ovscon"), OvsconFetcher)
+
+    def test_official_channel_is_used_for_later_recordings(self):
+        self.assertEqual(UPLOAD_CHANNELS["ovscon"], "@OpenvSwitchOrg")
 
     def test_legacy_abstracts_materials_and_missing_decks(self):
         text, count = self.fetcher._parse(LEGACY, URL)

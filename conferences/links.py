@@ -129,6 +129,7 @@ UPLOAD_CHANNELS = {
     "mcpdevsummit": "@AgenticAI-Foundation",
     "onesummit": "@lfnetworking",
     "atscale": "@scaleconference",
+    "ocp": "@OpencomputeOrg",
     "ovscon": "@OpenvSwitchOrg",
 }
 # (video id, start seconds) within whole-day streams. NZNOG 2025/2026 have no

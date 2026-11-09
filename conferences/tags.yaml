@@ -4586,3 +4586,71 @@ opi-2026:
     - open-source
     - dpu
     - containers
+atscale-networking-2026:
+  post:
+  - ai-networks
+  - rdma
+  - data-center-fabric
+  - automation
+  - ml-for-networking
+  - segment-routing
+  talks:
+    Resilient AI Supercomputer Networking using MRC and SRv6:
+    - rdma
+    - ai-networks
+    - segment-routing
+    - load-balancing
+    'MetaRoCE: Meta''s RDMA Transport':
+    - rdma
+    - ai-networks
+    - data-center-fabric
+    - dpu
+    'MetaRoCE: From Spec to NIC to Open Source':
+    - rdma
+    - dpu
+    - open-source
+    - ai-networks
+    'Virgo: scale-out data center network for AI':
+    - ai-networks
+    - data-center-fabric
+    - gpu-clusters
+    Fiber Networks Innovations for AI at Scale:
+    - cabling
+    - optics
+    - ai-networks
+    Physical Network Design at Scale + 3 min Q&A:
+    - automation
+    - cabling
+    - data-center-fabric
+    Co-Designing Communication for AI Accelerators:
+    - ai-networks
+    - gpu-clusters
+    - dpu
+    Building scalable AI cloud interconnects with SRv6 + 3 min Q&A:
+    - segment-routing
+    - cloud
+    - interconnection
+    Lightning Talk - The Plan That Learns:
+    - ml-for-networking
+    - capacity-planning
+    - ai
+    Lightning Talk - AI4NI @Runtime:
+    - ml-for-networking
+    - sre
+    - ai
+    Anatomy of @scale Machine Learning Network Operations:
+    - ai-networks
+    - sre
+    - troubleshooting
+    'Live Panel: Scale-Out Networking for AI Supercomputers':
+    - ai-networks
+    - data-center-fabric
+    - congestion-control
+    Lightning Talk - 10x Network Design Engineer:
+    - automation
+    - ml-for-networking
+    - data-center-fabric
+    'Live Panel: Building at the Roofline — Planning and Delivering Gigawatt-Scale AI Infrastructure':
+    - power
+    - capacity-planning
+    - ai

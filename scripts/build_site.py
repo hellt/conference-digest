@@ -782,8 +782,7 @@ def anchor_id(heading: str) -> str:
 
 def employer_spans(text: str) -> list[tuple[int, int, str]]:
     """(start, end, canonical) of each employer mention in `text`; when spans
-    overlap the longer name wins ("Cisco ThousandEyes" over "Cisco"), and each
-    employer links at most once per line."""
+    overlap the longer name wins ("Cisco ThousandEyes" over "Cisco")."""
     found = []
     # A two-word speaker name is not an attribution when the surname also
     # happens to be a company ("Jaakko Rautanen"). A later, delimited mention
@@ -795,15 +794,12 @@ def employer_spans(text: str) -> list[tuple[int, int, str]]:
                 continue
             found.append((m.start(), m.end(), canonical))
     found.sort(key=lambda f: (f[0], f[0] - f[1]))  # by start, longest span first
-    picked, taken, seen = [], [], set()
+    picked, taken = [], []
     for s, e, c in found:
         if any(s < t and e > b for b, t in taken):
             continue
-        if c in seen:
-            continue
         taken.append((s, e))
         picked.append((s, e, c))
-        seen.add(c)
     return picked
 
 

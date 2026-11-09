@@ -139,8 +139,8 @@
   },
   "tnc-2026": {
     "status": "stalled",
-    "attempts": 6,
-    "last_attempt": "2026-11-04T15:01:30.212048+00:00",
+    "attempts": 7,
+    "last_attempt": "2026-11-09T08:50:52.407537+00:00",
     "last_error": "programme is a client-side app with no public data endpoint (programme page reachable; event ended 2026-06-12); open manual_fallback_url and paste the programme into the prompt"
   },
   "nogfi-2026-06": {
@@ -436,5 +436,53 @@
     "attempts": 0,
     "last_attempt": "2026-11-07T12:25:02.832864+00:00",
     "last_error": ""
+  },
+  "ovscon-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-09T08:50:52.407537+00:00",
+    "last_error": ""
+  },
+  "atscale-networking-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-09T08:50:52.407537+00:00",
+    "last_error": ""
+  },
+  "atscale-product-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-09T08:50:52.407537+00:00",
+    "last_error": ""
+  },
+  "atscale-ai-data-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-09T08:50:52.407537+00:00",
+    "last_error": ""
+  },
+  "atscale-systems-reliability-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-09T08:50:52.407537+00:00",
+    "last_error": ""
+  },
+  "mcpdevsummit-na-2026": {
+    "status": "manual",
+    "attempts": 1,
+    "last_attempt": "2026-11-09T08:50:52.407537+00:00",
+    "last_error": "Sched returned 403 / challenge; open the schedule and paste it manually."
+  },
+  "onesummit-2024": {
+    "status": "manual",
+    "attempts": 1,
+    "last_attempt": "2026-11-09T08:50:52.407537+00:00",
+    "last_error": "Sched returned 403 / challenge; open the schedule and paste it manually."
+  },
+  "onesummit-2025": {
+    "status": "manual",
+    "attempts": 1,
+    "last_attempt": "2026-11-09T08:50:52.407537+00:00",
+    "last_error": "Sched returned 403 / challenge; open the schedule and paste it manually."
   }
 }

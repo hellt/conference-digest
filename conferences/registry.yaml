@@ -1095,3 +1095,13 @@ conferences:
     manual_fallback_url: "https://onesummit2026.sched.com/"
     discovered: 2026-11-09
     notes: "Linux Foundation open networking and edge: disaggregation, network automation, cloud-native telecom, edge AI, APIs and production operations. Titles, speakers, abstracts and speaker decks from Sched; recordings on the official LF Networking YouTube channel (@lfnetworking). Auto-discovered 2026-11-09 from series 'onesummit'. end_date taken from the source."
+
+  - key: moreip-2029
+    name: "MORE-IP 2029"
+    description: "AMS-IX's community event on interconnection, peering, Internet exchanges, connectivity policy, and digital infrastructure."
+    end_date: 2029-05-29
+    fetcher: moreip
+    program_url: "https://more-ip-event.net/more-ip-2029/agenda/"
+    manual_fallback_url: "https://more-ip-event.net/more-ip-2029/agenda/"
+    discovered: 2026-11-09
+    notes: "AMS-IX interconnection event (~300 participants): IX and DC interconnect, peering, European connectivity policy, DNS and internet resilience. Titles, speakers, blurbs and YouTube recordings. Auto-discovered 2026-11-09 from series 'moreip'. end_date is an ESTIMATE from the series hint — confirm it against the event page."

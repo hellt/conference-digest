@@ -385,10 +385,11 @@ run.
   abstract that mentions "captcha" is not a bot challenge.
 - **TNC**: tnc<yy>.geant.org blocks datacenter IPs, so the probe reads the
   site through Tavily Extract for the dates (owner-approved 2026-11-01, same
-  as NANOG). The programme is a client-side app with no public data endpoint
-  and GÉANT's Indico is bot-walled, so the fetcher returns `manual` and the
-  digest is written from the manual-paste path; recordings for the links step
-  land on the GÉANT YouTube channel.
+  as NANOG). The programme page's embedded Pretty Event app exposes public
+  JSON endpoints for the complete schedule and configuration. The fetcher
+  reads those directly to get every presentation, abstract, speaker and slide
+  attachment, without going through bot-walled Indico; recordings for the
+  links step land on the GÉANT YouTube channel.
 - **ARIN**: one plain-HTML agenda page per meeting, one table per day. Every
   row carries the agenda item, speaker, slide PDF and a timestamped YouTube
   webcast link; policy rows link their draft pages. Same URL shape since

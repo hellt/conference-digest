@@ -26,7 +26,7 @@ Netnod Tech Meeting 200+, NetUK/GRNOG/DKNOG/nog.fi/ITNOG national NOGs.
 | APRICOT | `apricot` | open APNIC conference API | apricot-2026: 133 talks; 2027 dates already in the API |
 | FOSDEM | `fosdem` | Pentabarf schedule XML | fosdem-2026: 158 events across 10 relevant tracks, 157 with recordings |
 | hack.lu | `pretalx` | pretalx.com schedule export | hacklu-2025: 124, hacklu-2026: 116 talks |
-| TNC | `tnc` | Tavily probe + manual paste | tnc-2026: dates verified; programme must be pasted (below) |
+| TNC | `tnc` | Tavily probe + Pretty Event JSON | tnc-2026: 181 programme items from 111 sessions |
 | ARIN | `arin` | agenda tables | arin-56/57/58: 24/35/28 items with PDFs + timestamped YouTube |
 | LACNIC | `lacnic` | WP REST API behind the event sites | lacnic-45/46: 69/68 items with per-language recordings |
 | PETS | `pets` | accepted-papers page | pets-2026: 160 papers (titles+authors) |
@@ -57,17 +57,15 @@ Netnod Tech Meeting 200+, NetUK/GRNOG/DKNOG/nog.fi/ITNOG national NOGs.
 
 ## Things that did not work, and how they were handled
 
-- **TNC's programme is automation-proof.** `tnc{yy}.geant.org` serves a plain
-  403 to datacenter clients; Tavily Extract reads the WordPress pages (owner
-  approval covers blocked public pages, 2026-11-01) but the programme itself
-  is a client-side app whose data has no public endpoint — and the GÉANT
-  Indico (`events.geant.org/event/2225`, which backs it) sits behind a JS
-  "Verification in progress" interstitial that also blocks Tavily. The fetcher
-  therefore probes the dates through Tavily and returns `manual_fallback`;
-  `tnc-2026` is hand-added to the registry for the manual-paste path. Caveat:
-  because fetch() never returns OK, the state machine flips it to `stalled`
-  after four scans (~2 months) unless the programme is pasted — the stalled
-  label there means "paste me", not "fetcher broken".
+- **TNC's programme is in its app API, not Indico.** `tnc{yy}.geant.org`
+  serves a plain 403 to datacenter clients; Tavily Extract reads the WordPress
+  pages (owner approval covers blocked public pages, 2026-11-01). Tavily's
+  rendered programme only exposes the default day, and GÉANT's Indico blocks
+  both direct requests and Tavily. The WordPress REST source, however, names
+  the embedded Pretty Event loader, whose public programme and config JSON
+  endpoints are directly readable. The fetcher uses those for all sessions,
+  presentations, abstracts, speakers and attachments; Tavily remains only the
+  discovery probe for dates.
 
 - **APNIC's API keeps only recent editions.** APRICOT 2025 resolves in the
   events listing but its event document has no sessions, so discovery reports

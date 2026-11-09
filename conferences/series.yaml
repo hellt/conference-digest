@@ -370,11 +370,10 @@ series:
 
   # TNC (GÉANT's research and education networking conference). The per-year
   # WordPress site 403s datacenter clients, so the probe reads it through
-  # Tavily Extract (owner-approved, 2026-11-01) for the dates. The programme
-  # itself is a client-side app with no public data endpoint, and the GÉANT
-  # Indico behind it is bot-walled too — so fetch() returns manual_fallback and
-  # TNC digests are written from the manual-paste path. Recordings land on the
-  # GÉANT YouTube channel for the links step.
+  # Tavily Extract (owner-approved, 2026-11-01) for the dates. Its embedded
+  # Pretty Event app publishes the full programme as directly readable JSON:
+  # sessions, presentations, abstracts, speakers and attachments. Recordings
+  # land on the GÉANT YouTube channel for the links step.
   - series: tnc
     enumerate: year
     key_template: "tnc-{year}"
@@ -385,7 +384,7 @@ series:
     end_date_hint: "06-12"
     program_url_template: "https://tnc{yy}.geant.org/"
     manual_fallback_url_template: "https://tnc{yy}.geant.org/programme/"
-    notes: "European NREN conference: campus and DC networking for research, R&E infrastructure, identity federation, security. Program is pasted by hand (JS-only source); see FINDINGS-2026-11-new-conferences.md."
+    notes: "European NREN conference: campus and DC networking for research, R&E infrastructure, identity federation, security. Full programme from the embedded Pretty Event app's public JSON API; dates through Tavily."
 
   # ARIN's Public Policy and Members Meetings: the per-meeting agenda page is
   # plain HTML tables — Agenda Item | Speaker | Presentation | Webcast. Policy

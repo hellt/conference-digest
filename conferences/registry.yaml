@@ -408,6 +408,7 @@ conferences:
 
   - key: ovscon-2026
     name: "Open vSwitch and OVN 2026 Fall Conference"
+    location: "Heilbronn · Germany"
     description: "The Open vSwitch and OVN community conference on virtual networking, hardware offload, Kubernetes networking, and programmable infrastructure."
     end_date: 2026-11-04
     fetcher: ovscon
@@ -1012,6 +1013,7 @@ conferences:
 
   - key: atscale-networking-2026
     name: "@Scale: Networking 2026"
+    location: "Santa Clara · United States"
     description: "Meta's large-scale networking conference on AI fabrics, RDMA, data-center and backbone architecture, operations, and optical interconnects."
     end_date: 2026-08-25
     fetcher: atscale
@@ -1022,6 +1024,7 @@ conferences:
 
   - key: atscale-product-2026
     name: "@Scale: Product 2026"
+    location: "Menlo Park · United States"
     description: "Meta's AI-native product engineering conference on media, agents, product velocity, applied AI, and production reliability."
     end_date: 2026-10-28
     fetcher: atscale
@@ -1032,6 +1035,7 @@ conferences:
 
   - key: atscale-ai-data-2026
     name: "@Scale: AI & Data 2026"
+    location: "Menlo Park · United States"
     description: "Meta's AI and data systems conference on agents, recommender systems, ML infrastructure, training data, and data platforms."
     end_date: 2026-06-17
     fetcher: atscale
@@ -1042,6 +1046,7 @@ conferences:
 
   - key: atscale-systems-reliability-2026
     name: "@Scale: Systems & Reliability 2026"
+    location: "Bellevue · United States"
     description: "Meta's systems and reliability conference on AI infrastructure, cloud and data-center systems, production operations, and incident response."
     end_date: 2026-06-25
     fetcher: atscale

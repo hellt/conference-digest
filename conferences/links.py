@@ -107,6 +107,8 @@ CHANNELS = {
     "pytorch": ("pytorch",),
     "opi": ("open programmable infrastructure", "opi project"),
     "mcpdevsummit": ("mcp dev summit", "agentic ai foundation"),
+    "onesummit": ("one summit", "open networking & edge summit", "open networking and edge summit",
+                  "lf networking", "linux foundation networking"),
     "atscale": ("@scale", "at scale", "atscale conference"),
 }
 DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon": "SREcon",
@@ -114,7 +116,7 @@ DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon":
            "autocon": "AutoCon", "ovscon": "OVS OVN conference", "ciscolive": "Cisco Live",
            "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG", "gtc": "GTC", "ccs": "CCS", "imc": "IMC", "conext": "CoNEXT", "apricot": "APRICOT", "fosdem": "FOSDEM", "hacklu": "hack.lu", "tnc": "TNC GÉANT", "arin": "ARIN", "lacnic": "LACNIC", "pets": "PETS", "ausnog": "AusNOG", "nznog": "NZNOG", "zanog": "ZANOG", "peeringdays": "Peering Days", "moreip": "MORE-IP", "swinog": "SwiNOG", "capacity": "Capacity Europe", "nogfi": "nog.fi", "netuk": "NetUK", "grnog": "GRNOG", "dknog": "DKNOG", "itnog": "ITNOG", "netnod": "Netnod", "cfgmgmtcamp": "CfgMgmtCamp", "ocp": "OCP Global Summit",
            "mlsys": "MLSys", "pytorch": "PyTorch Conference", "opi": "OPI Summit",
-           "mcpdevsummit": "MCP Dev Summit", "atscale": "@Scale"}
+           "mcpdevsummit": "MCP Dev Summit", "onesummit": "ONE Summit", "atscale": "@Scale"}
 # YouTube channels that hold a conference's own recordings, keyed by the
 # first segment of the registry key. Searched before the general YouTube
 # search: uploads are often retitled or shortened when published, and the
@@ -125,6 +127,7 @@ UPLOAD_CHANNELS = {
     "zanog": "@nognetza",
     "opi": "@OPI_project",
     "mcpdevsummit": "@AgenticAI-Foundation",
+    "onesummit": "@lfnetworking",
     "atscale": "@scaleconference",
 }
 # (video id, start seconds) within whole-day streams. NZNOG 2025/2026 have no

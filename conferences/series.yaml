@@ -709,6 +709,21 @@ series:
     manual_fallback_url_template: "https://mcpdevsummitna{yy}.sched.com/"
     notes: "The Model Context Protocol developer summit: MCP servers and clients, agentic applications, authentication and authorization, security, observability, registries and production integrations. Titles, speakers, abstracts and slide decks from Sched; recordings on the official Agentic AI Foundation YouTube channel (@AgenticAI-Foundation)."
 
+  # ONE Summit is the Linux Foundation's Open Networking & Edge Summit.
+  # Editions move between regions, but every year uses the same Sched host.
+  # Speaker decks are attached to Sched; recordings go to LF Networking.
+  - series: onesummit
+    enumerate: year
+    key_template: "onesummit-{year}"
+    name_template: "ONE Summit {year}"
+    description: "The Linux Foundation's summit for open-source networking, edge, cloud, telecom, AI infrastructure, and operational deployments."
+    fetcher: sched
+    start: 2024
+    lookahead: 2
+    program_url_template: "https://onesummit{year}.sched.com/list/descriptions/"
+    manual_fallback_url_template: "https://onesummit{year}.sched.com/"
+    notes: "Linux Foundation open networking and edge: disaggregation, network automation, cloud-native telecom, edge AI, APIs and production operations. Titles, speakers, abstracts and speaker decks from Sched; recordings on the official LF Networking YouTube channel (@lfnetworking)."
+
   # OPI Summit on DPUs/IPUs: one Sched site per year, read by the generic
   # Sched fetcher. The 2026 schedule states its exact date; the official OPI
   # YouTube channel carries a per-edition playlist of talk recordings.

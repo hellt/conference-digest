@@ -494,6 +494,12 @@ run.
   and abstracts. Speaker-provided slide decks are attached to the Sched
   session pages; recordings are on the official `@AgenticAI-Foundation`
   YouTube channel. The series starts with the April 2026 New York edition.
+- **ONE Summit / Open Networking & Edge Summit** uses the generic Sched
+  fetcher: one `onesummit<year>.sched.com` programme per edition with titles,
+  speakers and abstracts. Speaker-provided decks are attached to the Sched
+  session pages; recordings are on the official `@lfnetworking` YouTube
+  channel. The series covers the 2024 San Jose, 2025 London and 2026 Tokyo
+  editions.
 - **OPI Summit on DPUs/IPUs** uses the generic Sched fetcher: one
   `opisummit<year>.sched.com` programme per edition with titles, speakers and
   abstracts. Slide decks are attached to the Sched session pages; recordings

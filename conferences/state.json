@@ -468,21 +468,21 @@
     "last_error": ""
   },
   "mcpdevsummit-na-2026": {
-    "status": "manual",
-    "attempts": 2,
-    "last_attempt": "2026-11-09T18:39:20.219403+00:00",
-    "last_error": "Sched returned 403 / challenge; open the schedule and paste it manually."
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-10T07:50:24.803645+00:00",
+    "last_error": ""
   },
   "onesummit-2024": {
-    "status": "manual",
-    "attempts": 2,
-    "last_attempt": "2026-11-09T18:39:20.219403+00:00",
-    "last_error": "Sched returned 403 / challenge; open the schedule and paste it manually."
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-10T07:50:24.803645+00:00",
+    "last_error": ""
   },
   "onesummit-2025": {
-    "status": "manual",
-    "attempts": 2,
-    "last_attempt": "2026-11-09T18:39:20.219403+00:00",
-    "last_error": "Sched returned 403 / challenge; open the schedule and paste it manually."
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-10T07:47:52.134129+00:00",
+    "last_error": ""
   }
 }

@@ -4790,7 +4790,6 @@ atscale-product-2026:
     'Live Panel: AI Generated Media Provenance at Scale':
     - ai
     - pki
-
 atscale-ai-data-2026:
   post:
   - ai
@@ -4861,7 +4860,6 @@ atscale-ai-data-2026:
     'The Agent Feed: A Communication Layer for Multi-Agent Collaboration':
     - ai
     - api
-
 atscale-systems-reliability-2026:
   post:
   - ai
@@ -4909,4 +4907,101 @@ atscale-systems-reliability-2026:
     Building Privacy Aware Infrastructure in the AI-Native Era:
     - ai
     - privacy
-
+tnc-2026:
+  post:
+  - optics
+  - ai
+  - kubernetes
+  - automation
+  - observability
+  - time-sync
+  talks:
+    This is the end of the network as we know it, and we feel fine:
+    - automation
+    - bgp
+    - orchestration
+    'Building AI That Works: ESnet''s Pragmatic Approach to AI-Driven Operational Excellence':
+    - ai
+    - ml-for-networking
+    - sre
+    Machine Learning for Anomaly Detection in RNP Network Operations:
+    - ml-for-networking
+    - anomaly-detection
+    - observability
+    Discovering a DWDM network with Tomography:
+    - optics
+    - measurement
+    - telemetry
+    'Churn: GÉANT''s Next Iteration in Network Monitoring and Reporting':
+    - observability
+    - telemetry
+    - open-source
+    'Network Flow Monitoring: An Evaluation of Modern Collector Software':
+    - observability
+    - benchmarking
+    - open-source
+    AI, American Science Cloud, and the Genesis Mission:
+    - ai
+    - ai-networks
+    - cloud
+    Distributed Active Network Monitoring with nmaas – Insights from an NREN production deployment:
+    - kubernetes
+    - automation
+    - measurement
+    'Federated Network Troubleshooting: Deploying HAWAT and Looking Glass Across the R&E Community':
+    - ai
+    - troubleshooting
+    - observability
+    Coordinating BGP Policy and Tooling Across the Global R&E Infrastructure:
+    - bgp
+    - network-security
+    - measurement
+    Procurement of dark fiber and optical spectrum for the new research network in Norway. Strategies and learnings:
+    - optics
+    - cabling
+    - interconnection
+    'Time Travels in the L-Band: Deploying a National White Rabbit Infrastructure over Active DWDM Networks':
+    - time-sync
+    - optics
+    - automation
+    'Streamlining Multi-Vendor Automation: Auto-generated RESTCONF Clients from YANG Models':
+    - automation
+    - api
+    - configuration-management
+    'Saz: Engineering Safe Agentic Workflows for Real-World Operations':
+    - ai
+    - automation
+    - orchestration
+    Exploring nmaas Platform Use Cases – Beyond network and service monitoring (Plugged-in):
+    - kubernetes
+    - cloud
+    - automation
+    'Digital Global Gateway: Shaping the Future of Global R&E Connectivity':
+    - interconnection
+    - internet-governance
+    'The Journey: From Cloud Complexity to Platformisation':
+    - cloud
+    - cloud-native
+    The CERN experiments' network journey to IPv6-only:
+    - ipv6
+    - interconnection
+    'Below the Sky: Presentations':
+    - time-sync
+    - optics
+    'Traffic at 3am: Armed with a Toothpick against AI Scrapers':
+    - ai
+    - network-security
+    - tls
+    'From Public Cloud AI to National Infrastructure: Lessons from Sunet Scribe':
+    - ai
+    - cloud
+    - open-source
+    'Toward Scalable Quantum Networks: Lessons from InterQnet':
+    - quantum-networking
+    Honeypots and beyond – LLMs in cyberdefence:
+    - ai
+    - threat-intelligence
+    Instant Data Structures via Shared Memory:
+    - automation
+    - configuration-management
+    - benchmarking

@@ -21,7 +21,7 @@ Before you write code, open the conference's program and answer these questions.
 - `run_location: local` means CI skips the fetch, and you run it from your own machine, where the site serves you normally.
 - The manual-paste path covers a source that blocks even that: you paste the program into the prompt by hand (see CLAUDE.md).
 
-The one exception is **NANOG**. nanog.org blocks every automated client, so the repository owner explicitly approved reading its public agenda through Tavily Extract (2026-11-01). Record any such approval in the fetcher's docstring and in CLAUDE.md, as NANOG's are.
+Approved exceptions are **NANOG** (agenda and talk pages), **TNC** (date probes), both approved 2026-11-01, and **Sched** (only after three direct attempts fail; approved 2026-11-10). Record any such approval in the fetcher's docstring and in CLAUDE.md, as those fetchers do. A transient challenge is not immediately a manual fallback: Sched retries directly before trying Tavily, and becomes `manual` only when both routes fail.
 
 Recordings are a separate case. The links step looks them up on YouTube and checks each match, so a talk page that blocks the runner does not cost a pick its recording.
 

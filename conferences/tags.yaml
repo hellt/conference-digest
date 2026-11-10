@@ -5005,3 +5005,89 @@ tnc-2026:
     - automation
     - configuration-management
     - benchmarking
+onesummit-2024:
+  post:
+  - open-source
+  - ai
+  - kubernetes
+  - data-center-fabric
+  - automation
+  - ml-for-networking
+  talks:
+    SONiC BGP Loading Optimization - Joy Qin & Eddie Ruan, Alibaba Cloud:
+    - bgp
+    - switching
+    - open-source
+    Non-Minimal Path Routing for AI and Cloud Computation Networks - David Wong, Claruspon Systems, Inc.:
+    - ai-networks
+    - data-center-fabric
+    - bgp
+    - load-balancing
+    ALPINE - SONiC Switchstack Simulation - Sonika Jindal & Bhagat Janarthanan, Google:
+    - kubernetes
+    - testing
+    - data-center-fabric
+    P4-Based Automated Reasoning - Steffen Smolka, Google:
+    - p4
+    - testing
+    - sdn
+    How Open Programmable Infrastructure (OPI) Improves Portability of Cloud & Data Center Applications - Paul Pindell, F5:
+    - dpu
+    - automation
+    - open-source
+    Introduction to Photonic Disaggregated Computing Architecture - Shigeru Kotabe, Fujitsu:
+    - optics
+    - ai
+    Applying AI/ML Methods to Diagnose Network Issues Using Telemetry Data - Frank Brockners, Cisco:
+    - ml-for-networking
+    - telemetry
+    - troubleshooting
+    Kubeflow & Istio, a Perfect Match! Investigating Istio’s Role in MLOps - Nina Polshakova & Peter Jausovec, Solo.io:
+    - service-mesh
+    - ai
+    - kubernetes
+    Embracing a Data-Driven Approach to Network Automation - Jason Edelman, Network to Code:
+    - automation
+    - configuration-management
+    'Keynote: Leveraging Open Source for Operational Excellence at Scale - Dave Temkin, Walmart':
+    - cloud
+    - sre
+    - open-source
+    'SDN Journey in Verizon: Experiences, Challenges and Path Forward - Yueping Zhang & Sanjay Nayak, Verizon':
+    - sdn
+    - orchestration
+    - cloud
+    'Code Vs. Data: Optimizing NFV Orchestration with Nephio - Tal Liron, Google':
+    - kubernetes
+    - orchestration
+    - gitops
+    Lessons Learned from Using Nephio to Manage a Real-World 5G Core - István Kispál, Nokia:
+    - gitops
+    - orchestration
+    - automation
+    Overcoming Challenges for AI-Fabric with SONiC - Madhu Paluru, Aviz Networks:
+    - ai-networks
+    - open-source
+    - automation
+    Real-World Network Function Chaining - Lessons Learned - Benjamin Goldstone, Dell Technologies:
+    - cloud
+    - linux-networking
+    - open-source
+    'Harnessing Observability with AI for Edge Applications: Innovations in APM/T - Fatih E. Nar, Red Hat':
+    - ebpf
+    - observability
+    - ai
+    'RAN-in-the-Cloud: Utilization and New Services Breakthroughs - Amar Kapadia, Aarna Networks & Shuvo Chowdhury, NVIDIA':
+    - gpu-clusters
+    - cloud
+    - mobile
+    'The Dark Side of AI: The Hidden Supply Chain Risks in Open-Source AI Models - Guy Nachshon, Checkmarx':
+    - ai
+    - vulnerability-management
+    Full Stack Explicit Confidence with Project Alvarium - Trevor Conn, Dell Technologies:
+    - attestation
+    - observability
+    - zero-trust
+    Network and Computing Infrastructure for the 2030s - Haruhisa Fukano & Inoue Reo, Fujitsu:
+    - optics
+    - power

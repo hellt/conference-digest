@@ -5005,3 +5005,87 @@ tnc-2026:
     - automation
     - configuration-management
     - benchmarking
+mcpdevsummit-na-2026:
+  post:
+  - ai
+  - cloud
+  - kubernetes
+  - cloud-native
+  - automation
+  talks:
+    'Keynote: MCP @ Amazon Scale - James Hood, Principal Software Engineer, Amazon Web Services':
+    - ai
+    - automation
+    - cloud
+    ? 'Keynote: Operating MCPs at Enterprise Scale: Uber''s Journey - Meghana Somasundara,
+      Agentic AI Lead & Rush Tehrani, Head of Engineering, Agentic AI Platform, Uber
+      Technologies, Inc.'
+    : - ai
+      - api
+      - orchestration
+    'Keynote: Duolingo''s AI Slackbot: An Enterprise Assistant With 180+ MCP Tools - Aaron Wang, Software Engineer, Duolingo Inc':
+    - ai
+    - sre
+    - observability
+    'Stateless: The Future of MCP Transports - Shaun Smith, Hugging Face & Kurtis Van Gent, Google':
+    - ai
+    - http
+    - cloud-native
+    'Bridging Kernel Space and AI: Building an MCP Server for Linux Scheduler Observability - Daniel Hodges, Meta':
+    - linux-networking
+    - ebpf
+    - observability
+    - ai
+    'From One MCP Server To an Ecosystem: When MCP Stops Being a Server and Becomes a Platform - Vaibhav Tupe, Equinix':
+    - ai
+    - orchestration
+    - automation
+    ? 'MCP Traffic Handling at Scale: Stateless Design, Proxies, and the Road Ahead
+      - Erica Hughberg, Tetrate & Boteng Yao, Google'
+    : - load-balancing
+      - ai
+      - cloud-native
+    'Durable, Asynchronous, and Tricky: Implementing MCP Tasks in Practice - Cornelia Davis, Temporal':
+    - orchestration
+    - ai
+    - cloud-native
+    'Kubernetes-Native Agent Discovery: A Unified Registry for MCP Servers and Skills - Carlos Santana, AWS':
+    - kubernetes
+    - cloud-native
+    - ai
+    'MCP at 18 Months: Protocols, Patterns, and What We Didn''t See Coming - Shaun Smith, Hugging Face':
+    - ai
+    - cloud
+    'One Spec, Ten SDKs, Zero Excuses: Conformance Testing MCP - Paul Carleton, Anthropic':
+    - testing
+    - api
+    - ai
+    'Evolution, Not Revolution: How MCP Is Reshaping OAuth - Aaron Parecki, Okta':
+    - authentication
+    - authorization
+    - ai
+    'Interceptors for MCP: A Production-Tested Standard for Agentic Middleware - Kurt Degiorgio & Cannis Chan, Bloomberg':
+    - api
+    - network-security
+    - ai
+    Every API Is a Tool for Agents - Matt Carey, Cloudflare:
+    - api
+    - cloud
+    - ai
+    'MCP Servers in the Wild: Managing Tool Complexity at Scale - Arnav Balyan, Concierge AI':
+    - ai
+    - api
+    - orchestration
+    ? Towards Building Safe & Secure Agentic AI - Dawn Song, UC Berkeley; UC Berkeley
+      Center for Responsible Decentralized Intelligence & Matt White, Linux Foundation/PyTorch
+      Foundation
+    : - network-security
+      - ai
+      - offensive-security
+    'MCPwned: Hacking MCP Servers With One Skeleton Key Vulnerability - Jonathan Leitschuh, Independent':
+    - network-security
+    - dns
+    - ai
+    What if MCP was Symmetric? - Jerome Swannack, Anthropic:
+    - ai
+    - api

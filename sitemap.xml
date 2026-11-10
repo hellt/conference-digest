@@ -91,6 +91,9 @@
         <loc>https://tldr.netdevops.me/archive/2026/page/4/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/archive/2026/page/5/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/arin-56/</loc>
       </url>
       <url>
@@ -6272,6 +6275,81 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/swinog-42/the-cloud-native-advantage-intent-based-network-automation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/ai-american-science-cloud-and-the-genesis-mission/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/below-the-sky-presentations/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/building-ai-that-works-esnets-pragmatic-approach-to-ai-driven-operationa/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/churn-geants-next-iteration-in-network-monitoring-and-reporting/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/coordinating-bgp-policy-and-tooling-across-the-global-re-infrastructure/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/digital-global-gateway-shaping-the-future-of-global-re-connectivity/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/discovering-a-dwdm-network-with-tomography/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/distributed-active-network-monitoring-with-nmaas-insights-from-an-nren-p/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/exploring-nmaas-platform-use-cases-beyond-network-and-service-monitoring/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/federated-network-troubleshooting-deploying-hawat-and-looking-glass-acro/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/from-public-cloud-ai-to-national-infrastructure-lessons-from-sunet-scrib/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/honeypots-and-beyond-llms-in-cyberdefence/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/instant-data-structures-via-shared-memory/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/machine-learning-for-anomaly-detection-in-rnp-network-operations/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/network-flow-monitoring-an-evaluation-of-modern-collector-software/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/procurement-of-dark-fiber-and-optical-spectrum-for-the-new-research-netw/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/saz-engineering-safe-agentic-workflows-for-real-world-operations/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/streamlining-multi-vendor-automation-auto-generated-restconf-clients-fro/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/the-cern-experiments-network-journey-to-ipv6-only/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/the-journey-from-cloud-complexity-to-platformisation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/this-is-the-end-of-the-network-as-we-know-it-and-we-feel-fine/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/time-travels-in-the-l-band-deploying-a-national-white-rabbit-infrastruct/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/toward-scalable-quantum-networks-lessons-from-interqnet/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/tnc-2026/traffic-at-3am-armed-with-a-toothpick-against-ai-scrapers/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/usenix-security-2025/</loc>

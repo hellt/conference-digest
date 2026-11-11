@@ -317,18 +317,6 @@ GTC_SESSION = re.compile(r"/gtc/session-catalog/sessions/(gtc\d{2}-[a-z0-9]+)/?$
 NOD_API = "https://api-prod.nvidia.com/services/nod/api/v1/"
 KALTURA_VIDEO = re.compile(r"urn:nvidia:events:kaltura:([A-Za-z0-9_]+)")
 KALTURA_PDF = re.compile(r"urn:nvidia:events:assets:kaltura:([A-Za-z0-9_]+)")
-KALTURA_WIDGET = "https://cdnapi-ev.kaltura.com/api_v3/service/session/action/startWidgetSession"
-
-
-def kaltura_widget_ks() -> str:
-    """An anonymous, short-lived session for NVIDIA's public Kaltura player."""
-    try:
-        resp = HTTP.post(KALTURA_WIDGET, timeout=20,
-                         data={"widgetId": "_2935771", "expiry": 86400, "format": 1})
-        ks = resp.json().get("ks", "") if resp.status_code == 200 else ""
-    except Exception:
-        return ""
-    return ks if re.fullmatch(r"[A-Za-z0-9_-]+={0,2}", ks) else ""
 
 
 def scrape_gtc_page(url: str) -> dict[str, str]:
@@ -336,7 +324,8 @@ def scrape_gtc_page(url: str) -> dict[str, str]:
 
     The on-demand page is client-rendered, so its HTML has no download links.
     NVIDIA's public session API names the Kaltura video and PDF assets. Video
-    embeds get an anonymous Kaltura widget session (KS). PDF downloads need
+    playback is restricted to NVIDIA domains, so link to the on-demand page
+    rather than embedding Kaltura's player on this site. PDF downloads need
     the signed URL minted by the same API, rather than the unsigned Kaltura
     URL (which answers with an access-control error).
     """
@@ -373,14 +362,7 @@ def scrape_gtc_page(url: str) -> dict[str, str]:
 
     found["talk"] = f"https://www.nvidia.com/en-us/on-demand/session/{session_id}/"
     if video_id:
-        ks = kaltura_widget_ks()
-        if ks:
-            found["video"] = (
-                "https://cdnapisec.kaltura.com/p/2935771/sp/293577100/"
-                "embedIframeJs/uiconf_id/56782552/partner_id/2935771"
-                f"?iframeembed=true&playerId=kaltura_player&entry_id={video_id}"
-                f"&ks={quote(ks, safe='')}"
-            )
+        found["video"] = found["talk"] + "#watch"
     if pdf_id:
         try:
             resp = HTTP.get(
@@ -979,9 +961,10 @@ def enrich(markdown: str, prompt: str, ctx: Context, log=print) -> tuple[str, di
                 for k, v in scrape_page(links["page"], ctx.tavily_key).items():
                     # NVIDIA's signed Kaltura PDF URLs are renewed on every
                     # GTC refresh; all other discoveries only fill gaps.
-                    renew = ctx.marker == "gtc" and k in ("slides", "video") \
-                        and (urlparse(v).hostname or "").endswith(".kaltura.com") \
-                        and (k == "slides" or (urlparse(links.get(k, "")).hostname or "").endswith(".kaltura.com"))
+                    renew = ctx.marker == "gtc" and (
+                        (k == "slides" and (urlparse(v).hostname or "").endswith(".kaltura.com"))
+                        or (k == "video" and (urlparse(links.get(k, "")).hostname or "").endswith(".kaltura.com"))
+                    )
                     if not links.get(k) or renew:
                         links[k] = v
                         if k == "video" and not existing.get("video"):

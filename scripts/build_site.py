@@ -25,8 +25,7 @@ The digest text itself is not rewritten: headings and wording pass through
 unchanged. Each pick's `**Links:**` row (written by conferences/links.py)
 becomes a row of plain source links, a talk recording on YouTube also gets a
 click-to-play thumbnail (docs/javascripts/video.js swaps in the player), direct
-video files get a native HTML player, and signed Kaltura recordings get an
-iframe. Per-talk pages also embed slide viewers
+video files get a native HTML player. Per-talk pages also embed slide viewers
 alongside recordings in Video / PPTX / PDF tabs. PDFs use the browser's native
 viewer; GitHub-hosted downloads are loaded as PDF blobs by slides.js.
 Employer names in the speaker line
@@ -903,16 +902,6 @@ def links_block(row: str, title: str) -> tuple[list[str], list[str]]:
             f'<div class="pick-video"><video class="pick-video__frame" controls playsinline preload="none" '
             f'src="{src}" aria-label="{label}">'
             f'<a href="{src}">Watch the recording</a></video></div>',
-            "",
-        ]
-    elif recording and (urlsplit(recording).hostname or "").endswith(".kaltura.com") \
-            and re.search(r"/(?:embedIframeJs|mwEmbedFrame\.php)/", recording) \
-            and re.search(r"[?&]ks=", recording):
-        src = escape(recording, quote=True)
-        label = escape(f"Recording: {title}", quote=True)
-        player = [
-            f'<div class="pick-video"><iframe class="pick-video__frame" src="{src}" '
-            f'title="{label}" loading="lazy" allowfullscreen></iframe></div>',
             "",
         ]
     return out, player

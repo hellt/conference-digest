@@ -5091,3 +5091,58 @@ onesummit-2024:
     Network and Computing Infrastructure for the 2030s - Haruhisa Fukano & Inoue Reo, Fujitsu:
     - optics
     - power
+onesummit-2025:
+  post:
+  - cloud
+  - ai
+  - automation
+  - cloud-native
+  - open-source
+  talks:
+    'SONiC: The Global Networking Operating System for All':
+    - switching
+    - automation
+    - open-source
+    - data-center-fabric
+    IOWN Global Forum and Open Source - Key Enablers for Next Decade:
+    - optics
+    - interconnection
+    - open-source
+    AI - Lessons Learnt from World's Largest Network:
+    - ml-for-networking
+    - ai
+    - orchestration
+    State of Open Source Networking - Arpit Joshipura & Hilary Carter, The Linux Foundation:
+    - open-source
+    - cloud
+    - measurement
+    An Industry Analyst's Perspective on Telco Cloud:
+    - cloud
+    - automation
+    - orchestration
+    'Sponsored Session: Ready for Impact: EVE Steps from 10k Kubernetes Clusters to Edge AI':
+    - kubernetes
+    - cloud-native
+    - ai
+    Network Infrastructure to APIs - How Open Source Enables Speed of Innovation and Monetization:
+    - api
+    - cloud
+    - open-source
+    A Journey Towards Automated Telco Cloud:
+    - cloud
+    - automation
+    - orchestration
+    ? Standards and Open Source Harmonization - Silvia Almagia, ETSI; Hui Deng, Huawei;
+      Raúl Álvarez, Open Compute Project Foundation; Moderated by Arpit Joshipura,
+      The Linux Foundation
+    : - standardization
+      - open-source
+      - cloud-native
+    'AI-RAN and Open Source: Building Scalable Dataset Pipelines for AI Training':
+    - ai
+    - open-source
+    - mobile
+    'InstantX: Vodafone''s Edge Innovation for the Future of Telco':
+    - open-source
+    - cloud-native
+    - mobile

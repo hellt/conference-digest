@@ -259,9 +259,11 @@ run.
 ## Fetcher notes & known fragilities
 
 - **USENIX** and **Sched** are HTML scrapers using browser-like headers. Both
-  sites can bot-block (USENIX confirmed to do so). On a block they return
-  `manual` and the issue gives you the URL to copy from by hand. The HTML class
-  selectors are best-effort; if a site restyles, the fetcher returns zero items
+  sites can bot-block (USENIX confirmed to do so). Sched makes three direct
+  attempts, then tries Tavily Extract when `TAVILY_API_KEY` is set; only if
+  both routes fail does it return `manual` with the URL to copy by hand.
+  USENIX still returns `manual` on its first block. The HTML class selectors
+  are best-effort; if a site restyles, the fetcher returns zero items
   (`not_published`) and eventually trips the stall flag rather than producing
   wrong output. **The first live run is the real test of these selectors.**
 - **IETF** uses the open datatracker API (no key, no bot-block) for one

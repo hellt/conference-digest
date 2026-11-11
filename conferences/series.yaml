@@ -22,7 +22,7 @@
 #               Templates filled with, for `year` series:
 #                 {year} 2026   {yy} 26
 #               and for `ordinal` series:
-#                 {n} 27   {hex} 1b   {HEX} 1B
+#                 {n} 27   {nnn} 027   {hex} 1b   {HEX} 1B
 #               key_template MUST match the keys already in registry.yaml —
 #               discovery reads it backwards to find where the series is up to.
 #   lookahead   How many unseen editions to probe per run (default 2). IETF
@@ -788,3 +788,19 @@ series:
     program_url_template: "https://atscaleconference.com/events/systems-reliability-{year}/"
     manual_fallback_url_template: "https://atscaleconference.com/events/systems-reliability-{year}/"
     notes: "Meta's systems and reliability event, consolidating the earlier Systems and Reliability @Scale series: AI infrastructure, cloud and datacenter systems, production operations, security and incident response. Full agenda with abstracts; recordings on @scaleconference."
+
+  # Swiss Network User Group evening meetups. Each static Jekyll agenda lists
+  # speaker-led technical talks with PDF decks and YouTube recordings, but no
+  # abstracts. CHNUG 5 is an event/CfP page until its agenda is published.
+  # Edition numbers are zero-padded in URLs via the {nnn} ordinal slot.
+  - series: chnug
+    enumerate: ordinal
+    key_template: "chnug-{n}"
+    name_template: "CHNUG #{n}"
+    description: "The Swiss Network User Group's practitioner meetups on networking, automation, observability, cloud connectivity, and operations."
+    fetcher: chnug
+    start: 2
+    lookahead: 4
+    program_url_template: "https://chnug.ch/chnug{nnn}"
+    manual_fallback_url_template: "https://chnug.ch/chnug{nnn}"
+    notes: "Swiss Network User Group evening meetups: network automation, observability, routing, optical and data-center networking. Titles, speakers, PDF slides and YouTube recordings; no abstracts published."

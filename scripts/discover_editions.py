@@ -79,6 +79,7 @@ def fill(template: str, ident: int, mode: str) -> str:
         return template.replace("{year}", str(ident)).replace("{yy}", f"{ident % 100:02d}")
     return (
         template.replace("{n}", str(ident))
+        .replace("{nnn}", f"{ident:03d}")
         .replace("{hex}", format(ident, "x"))
         .replace("{HEX}", format(ident, "X"))
     )

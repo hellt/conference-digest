@@ -1179,3 +1179,33 @@ conferences:
     program_url: "https://ai.engineer/code/2026"
     manual_fallback_url: "https://ai.engineer/code/2026/schedule"
     notes: "Complete 108-session program available from the official public sessions.json feed. Registered on 2026-11-11 while the edition is ongoing; its prompt is intentionally left for the first eligible scan after the November 12 end date so Digest Bot does not draft from an in-progress conference."
+
+  - key: chnug-2
+    name: "CHNUG #2"
+    description: "The Swiss Network User Group's practitioner meetups on networking, automation, observability, cloud connectivity, and operations."
+    end_date: 2026-03-12
+    fetcher: chnug
+    program_url: "https://chnug.ch/chnug002"
+    manual_fallback_url: "https://chnug.ch/chnug002"
+    discovered: 2026-11-11
+    notes: "Swiss Network User Group evening meetups: network automation, observability, routing, optical and data-center networking. Titles, speakers, PDF slides and YouTube recordings; no abstracts published. Auto-discovered 2026-11-11 from series 'chnug'. end_date taken from the source."
+
+  - key: chnug-3
+    name: "CHNUG #3"
+    description: "The Swiss Network User Group's practitioner meetups on networking, automation, observability, cloud connectivity, and operations."
+    end_date: 2026-05-28
+    fetcher: chnug
+    program_url: "https://chnug.ch/chnug003"
+    manual_fallback_url: "https://chnug.ch/chnug003"
+    discovered: 2026-11-11
+    notes: "Swiss Network User Group evening meetups: network automation, observability, routing, optical and data-center networking. Titles, speakers, PDF slides and YouTube recordings; no abstracts published. Auto-discovered 2026-11-11 from series 'chnug'. end_date taken from the source."
+
+  - key: chnug-4
+    name: "CHNUG #4"
+    description: "The Swiss Network User Group's practitioner meetups on networking, automation, observability, cloud connectivity, and operations."
+    end_date: 2026-08-26
+    fetcher: chnug
+    program_url: "https://chnug.ch/chnug004"
+    manual_fallback_url: "https://chnug.ch/chnug004"
+    discovered: 2026-11-11
+    notes: "Swiss Network User Group evening meetups: network automation, observability, routing, optical and data-center networking. Titles, speakers, PDF slides and YouTube recordings; no abstracts published. Auto-discovered 2026-11-11 from series 'chnug'. end_date taken from the source."

@@ -566,6 +566,11 @@
 <p><strong>How:</strong> The kernel owns the full transport — stream management, congestion control, loss recovery, packet handling, connection migration, flow control — while the TLS handshake stays in userspace, coordinated for kernel consumers through the existing <code>net/handshake</code> framework and the <code>tlshd</code> service. The socket API keeps <code>connect()</code>/<code>accept()</code>/<code>sendmsg()</code>/<code>recvmsg()</code> and extends it with ALPN-based dispatching, transport-parameter configuration and stream lifecycle control. Validation covers interop against major QUIC implementations, syzkaller fuzzing and high-speed benchmarking; consumers so far include Samba, in-progress NFS work, curl HTTP/3 and NetPerfMeter. Future work: upstreaming across kernel and GnuTLS, and NIC crypto offload. (From abstract only.)</p>
 <p><strong>Where applicable:</strong> Broad, once upstream — but note the split trust model (handshake in userspace via <code>tlshd</code>) and that NIC crypto offload is still future work.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/http/">http</a>
+<a class="talk-tag" href="../../tags/linux-networking/">linux-networking</a>
+<a class="talk-tag" href="../../tags/encryption/">encryption</a></p>
+</footer>
 
 
 

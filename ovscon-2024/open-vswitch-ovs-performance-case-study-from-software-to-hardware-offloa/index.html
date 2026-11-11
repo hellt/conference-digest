@@ -566,6 +566,11 @@
 <p><strong>How</strong>: Evaluated with CyPerf-generated HTTP traffic comparing OVS-DPDK vs OVS-DOCA: long-connection CPS (30K rate, 850 KB sessions — the favorable case) and short-connection CPS (40K/30K rates, 2 KB sessions — the worst case with ~3 offloaded packets per connection). Claimed outcomes: negligible overhead for short connections, significant improvement for long ones, better scaling/stability under concurrency. (The result charts are images; no specific figures are quotable from the extracted slides.)</p>
 <p><strong>Where applicable</strong>: NVIDIA hardware via the DOCA framework — vendor-specific. But the design lessons (offload has real per-connection cost; elephant/mice traffic distribution determines whether offloading pays; state synchronization between HW and SW is the hard part) generalize to any CT-offload strategy.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/linux-networking/">linux-networking</a>
+<a class="talk-tag" href="../../tags/dpu/">dpu</a>
+<a class="talk-tag" href="../../tags/benchmarking/">benchmarking</a></p>
+</footer>
 
 
 

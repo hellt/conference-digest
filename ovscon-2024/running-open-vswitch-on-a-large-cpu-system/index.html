@@ -566,6 +566,11 @@
 <p><strong>How</strong>: USDT probes and bpftrace-based scripts (<code>reval_monitor.py</code>, <code>kernel_delay.py</code>), veth/netns test topologies, Scapy traffic pinned with taskset, and 1024-veth-pair configurations to isolate the statistics path. A simulated pod-churn test (128 OVN ports, continuous add/delete) shows ~50% more <code>recvmsg()</code> time at 128 cores, traced toward <code>netdev_get_addrs()</code>/<code>getifaddrs()</code> but left for further investigation.</p>
 <p><strong>Where applicable</strong>: Kernel datapath (the <code>sw_flow_stat</code> issues are OVS kmod-specific) on large-CPU hosts — K8s nodes, NFV compute. Follow-ups listed: remove the <code>nl_dump_next()</code> mutex, optimize kmod stats gathering, possibly patch glibc's <code>getifaddrs()</code> (which wastes ~6% gathering unneeded per-CPU IPv6 stats).</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/linux-networking/">linux-networking</a>
+<a class="talk-tag" href="../../tags/benchmarking/">benchmarking</a>
+<a class="talk-tag" href="../../tags/troubleshooting/">troubleshooting</a></p>
+</footer>
 
 
 

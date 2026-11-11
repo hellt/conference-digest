@@ -566,6 +566,11 @@
 <p><strong>How:</strong> A host component (userspace or kernel) periodically sends probe packets, uses hardware timestamping to get path RTT, converts that into a per-path congestion estimate, then distributes the resulting control value across the active Queue Pairs for that peer via a driver-mediated QP update interface. The author is explicit that probe RTT is a deployable starting signal rather than the right one, and that the same framework could take ECN counts, ACK/progress counters, retransmit events and path-health indicators. (From abstract only.)</p>
 <p><strong>Where applicable:</strong> RDMA/IP datacenter fabrics carrying mixed traffic — AI collectives, storage, KV-cache movement, HPC, front-end — where one fixed firmware algorithm is a poor fit for all of them. Needs driver support for the QP update interface, so vendor cooperation is still on the critical path.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/congestion-control/">congestion-control</a>
+<a class="talk-tag" href="../../tags/rdma/">rdma</a>
+<a class="talk-tag" href="../../tags/linux-networking/">linux-networking</a></p>
+</footer>
 
 
 

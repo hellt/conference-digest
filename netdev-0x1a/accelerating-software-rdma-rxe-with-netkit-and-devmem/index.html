@@ -566,6 +566,10 @@
 <p><strong>How:</strong> Today RXE encapsulates RoCEv2 in UDP/IP, so same-host inter-namespace traffic traverses routing lookups, Netfilter and redundant copies. Hooking netkit's native TX/RX bypasses the IP layer entirely, giving a claimed 10-20% same-host latency reduction in namespace environments (proportional to how much routing/firewall complexity is skipped). Layering devmem TCP and dma-buf on top — with hardware queue leasing/splitting from the physical NIC (e.g. ConnectX-6) — lands payloads directly in device (GPU) memory. For observability, instead of kprobes or driver patches, an eBPF program on netkit's tcx hook parses RDMA headers (BTH etc.) into a ring buffer for PCAP dumping. Presented with a live demo across namespaces based on kernel selftests. (From abstract only.)</p>
 <p><strong>Where applicable:</strong> Containerized RDMA, particularly where zero-copy hardware RXE support is absent. The devmem half needs a NIC supporting queue leasing and a dma-buf provider, so treat the "100% zero copy" claim as hardware-conditional.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/rdma/">rdma</a>
+<a class="talk-tag" href="../../tags/linux-networking/">linux-networking</a></p>
+</footer>
 
 
 

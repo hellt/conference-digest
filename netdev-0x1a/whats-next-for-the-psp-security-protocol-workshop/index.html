@@ -566,6 +566,11 @@
 <p><strong>How:</strong> PSP's design points, per the deck: scalable (10M+ flows, 100K+ flow changes/sec; all Rx keys derived from one device key, so O(1) key storage), deliberately minimal (no AH, only AES-GCM/AES-GMAC, no replay protection because L4 already has it), and datacenter-shaped (UDP encapsulation so existing load balancers hash it, plaintext headers so telemetry still works under AEAD, HW-timestamp-derived IV for latency measurement). Candidate v2 work named on the panel slide: multi-user security, cluster-mode key derivation, key exchange, confidential compute, SR-IOV, FIPS 140-3, ChaCha20-Poly1305, optional wire-format fields. Kernel-side work in flight includes netkit and packetdrill support, with packetdrill gaining PSP encap and netlink ops in the <code>.pkt</code> language and a wireserver that does a real key exchange against the stack under test.</p>
 <p><strong>Where applicable:</strong> Datacenter and cloud-tunnel scenarios with PSP-capable NICs; deployed at scale at Google today. The OCP move is the signal to watch — it's what would make PSP a multi-vendor baseline rather than one operator's protocol.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/encryption/">encryption</a>
+<a class="talk-tag" href="../../tags/linux-networking/">linux-networking</a>
+<a class="talk-tag" href="../../tags/standardization/">standardization</a></p>
+</footer>
 
 
 

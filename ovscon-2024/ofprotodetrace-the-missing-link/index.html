@@ -566,6 +566,11 @@
 <p><strong>How</strong>: The chain is: UFID → OpenFlow cookies → (with <code>ovn-detrace</code>) OVN Southbound Logical_Flows via stage-hints → Northbound objects (Port_Bindings, Load_Balancer VIP mappings, ACLs). The worked example walks a Geneve-encapsulated, DNAT'd connection from <code>dpctl/dump-flows</code> output all the way to the specific load balancer VIP.</p>
 <p><strong>Where applicable</strong>: Any OVS/OVN deployment on OVS ≥ 3.4; the mantra — "UFIDs → cookies → stage-hints → external-ids" — is worth remembering regardless of tooling.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/troubleshooting/">troubleshooting</a>
+<a class="talk-tag" href="../../tags/observability/">observability</a>
+<a class="talk-tag" href="../../tags/open-source/">open-source</a></p>
+</footer>
 
 
 

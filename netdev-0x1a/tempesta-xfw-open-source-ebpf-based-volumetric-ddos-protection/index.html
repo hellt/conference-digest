@@ -566,6 +566,11 @@
 <p><strong>How:</strong> A multi-layer filter — source port/address filtering, reputation and GeoIP, IP/UDP/TCP anomaly checks, destination-IP rate limiting as last resort — with XDP and tc programs arranged for multi-NIC nodes. The talk compares leaky buckets, sliding windows and probabilistic rate limiting and the configuration hazards of each; covers TCP authentication for ACK/RST floods and SYN-flood protection across host, router and scrubbing scenarios; DNS-specific parsing and acceleration; Prometheus metrics with per-CPU high-throughput incident logging to ClickHouse (sampled under overload); and an evaluation mode for safe deployment. Notes that most filtering logic turns out to be shared across the deployment architectures. (From abstract only.)</p>
 <p><strong>Where applicable:</strong> Broadly deployable open source (<a href="https://github.com/tempesta-tech/xFW">repo</a>, full release scheduled June 2026), from single hosts to scrubbing centres. It is the vendor's own project, so treat performance claims accordingly.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/ddos/">ddos</a>
+<a class="talk-tag" href="../../tags/ebpf/">ebpf</a>
+<a class="talk-tag" href="../../tags/open-source/">open-source</a></p>
+</footer>
 
 
 

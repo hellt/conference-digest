@@ -566,6 +566,10 @@
 <p><strong>How</strong>: The genuinely new technique: track actual stack consumption at runtime using <code>__builtin_frame_address(0)</code> and <code>pthread_attr_getstacksize()</code>, and trigger recirculation when the frame address approaches the stack limit — an RFC patch ("ofproto-dpif-xlate: Recirculate on stack exhaustion") that turns a potential crash into a graceful recirculate-with-frozen-state.</p>
 <p><strong>Where applicable</strong>: All OVS deployments, kernel and userspace; most acute where controller-generated pipelines (OVN, or any SDN app composing deep resubmit chains) stress translation depth.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/linux-networking/">linux-networking</a>
+<a class="talk-tag" href="../../tags/troubleshooting/">troubleshooting</a></p>
+</footer>
 
 
 

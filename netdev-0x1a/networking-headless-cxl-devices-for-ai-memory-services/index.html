@@ -563,6 +563,10 @@
 <p><strong>How:</strong> Host and device daemons each open <code>/dev/net/tun</code>, configure a virtual L3 interface and <code>mmap</code> the same CXL HDM-H window as a shared packet ring, with ordering rules to carry packets reliably over memory; a host-pod bridge pattern gives the device-side Linux a service IP so clients never see the memory window. ping, ssh, Redis and TCP services work end to end with no new module. Reported: 60x less host-link traffic than a host-side compute path, and 2.56x FAISS vector-search throughput scaling across four cards. (From abstract only.)</p>
 <p><strong>Where applicable:</strong> CXL Type-2 "smart memory" hardware, which is rare today — but the pattern (network identity for a device that has no network) is the interesting part.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/cxl/">cxl</a>
+<a class="talk-tag" href="../../tags/ai-networks/">ai-networks</a></p>
+</footer>
 
 
 

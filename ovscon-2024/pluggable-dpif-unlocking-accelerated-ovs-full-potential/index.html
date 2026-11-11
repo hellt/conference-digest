@@ -569,6 +569,10 @@
 <p><strong>How</strong>: The slides walk through concrete failure modes of the current model: a <code>ct()</code> action placed mid-pipeline after packet modifications means a HW miss lands in SW with broken context; <code>dp_hash</code> uses Jenkins in SW while HW hashes differ, causing consistency failures and TCP disconnects; meter state split between HW and SW; megaflow aging relying on per-HW-type counters; EMC/SMC cache context invisible to the offload layer. In the proposed model, packets can be bounced back to hardware (with next recirc-id and metadata) to complete the pipeline, and vendors handle their own DPIF maintenance — formalizing what customers already do by forking dpif-netdev.</p>
 <p><strong>Where applicable</strong>: OVS community architecture decision with ecosystem-wide implications. The reference implementation is NVIDIA's DOCA DPIF, but the proposal is explicitly multi-vendor (P4 vs DOCA Flow cited as different integration styles). Watch this if you have any SmartNIC/DPU strategy.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/programmable-dataplane/">programmable-dataplane</a>
+<a class="talk-tag" href="../../tags/dpu/">dpu</a></p>
+</footer>
 
 
 

@@ -566,6 +566,10 @@
 <p><strong>How:</strong> Message parsing and work-conserving scheduling happen directly in the kernel's TCP receive path, at the earliest possible point, eliminating head-of-line blocking within and across connections. Compatible with existing RPC protocols, TLS (via kTLS) and the normal TCP stack. Reported: HOL blocking eliminated across connection counts, up to 5x higher throughput-under-SLO than KCM, and 1.56x for gRPC with 23% less userspace CPU for 2% more kernel time. (From abstract only.)</p>
 <p><strong>Where applicable:</strong> Research prototype as an out-of-tree module; the numbers are the argument for pushing message semantics down, not something to deploy now.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/linux-networking/">linux-networking</a>
+<a class="talk-tag" href="../../tags/packet-scheduling/">packet-scheduling</a></p>
+</footer>
 
 
 

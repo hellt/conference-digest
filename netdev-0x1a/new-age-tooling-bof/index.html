@@ -566,6 +566,10 @@
 <p><strong>How:</strong> The fuzzing work extends BRF (a Syzkaller fork) for MPTCP because stateless fuzzers can't get past the kernel's token-lookup-then-HMAC chain — it reports two upstream-mergeable bugs in <code>net/mptcp/</code> (a userspace-PM alloc-during-teardown race, and a kernel-PM-reachable divide-by-zero in <code>tcp_tso_segs</code> that re-emerges a 2021 bug class), with honest limits stated (N=2, no controlled baseline). The submission-filter proposal is four gates, three fully automatable in CI, aimed at the ~80% of submissions where the bug doesn't exist, the root-cause analysis is hallucinated, or the patch was never tested. Sashiko, introduced mid-March 2026, is reported as adopted by most major subsystems. (From abstract only.)</p>
 <p><strong>Where applicable:</strong> Any maintainer-side process facing AI-generated contributions; the gate framework is explicitly proposed as useful regardless of whether AI was involved.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/automation/">automation</a>
+<a class="talk-tag" href="../../tags/open-source/">open-source</a></p>
+</footer>
 
 
 

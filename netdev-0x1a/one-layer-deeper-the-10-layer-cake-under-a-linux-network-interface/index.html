@@ -566,6 +566,10 @@
 <p><strong>How:</strong> The framing is that the old playbook ("turn everything off and go fast") no longer applies, because firewalls, observability and multi-tenant isolation are production requirements. Packets can vanish at the NIC, XDP, tc, conntrack, qdisc, softnet backlog, socket receive queue or the application runtime queue — and a service can honestly report it processed everything it received while the kernel drops packets it never saw. Concrete examples: why <code>sendmmsg()</code>/<code>recvmmsg()</code> still matter, why treating the socket receive queue as a warehouse causes loss and latency, where UDP loses segmentation offload behaviour, where VLAN acceleration hides metadata userspace needs, and the real cost of stacked XDP/tc/netfilter/conntrack/BPF hooks. Ends below the packet path at cache efficiency, code size and TLB misses. (From abstract only.)</p>
 <p><strong>Where applicable:</strong> Universal. Cloudflare's 31.4 Tbps attack-mitigation scale is context, not a prerequisite.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/linux-networking/">linux-networking</a>
+<a class="talk-tag" href="../../tags/dpu/">dpu</a></p>
+</footer>
 
 
 

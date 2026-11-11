@@ -566,6 +566,10 @@
 <p><strong>How:</strong> On L2: RFC 8986 defines <code>End.DX2</code>/<code>DT2U</code>/<code>DT2M</code> and RFC 9252 the EVPN-over-SRv6 overlay, but the kernel only implements the <code>End.DX2</code> cross-connect with no native L2 endpoint netdevice; a recent netdev RFC series adds <code>End.DT2U</code> plus an <code>sr6</code> Ethernet pseudowire device, which is what would make a VXLAN-like deployment model (and therefore replacing VXLAN in Kubernetes CNIs, OVN, Neutron) viable. The provider thread adds <code>tablesnoop</code>, a lookup-level tracer sitting between tcpdump and pwru/retis that traces PBR, v4/v6 route lookups, SRv6 head-end/endpoint behaviors and MPLS label ops, plus SRv6 Redundancy Protection (a new R-SID format from <code>draft-ietf-spring-sr-redundancy-protection</code>) with 802.1CB FRER extended to SRv6 encapsulation via XDP. (From abstract and agenda.)</p>
 <p><strong>Where applicable:</strong> Broadly applicable and mostly upstream-track: Linux has had SRv6 for 9 years, FRR 5 years, with SONiC/Cilium/VPP in the ecosystem. The L2 pseudowire work is RFC-series-stage, so treat the VXLAN-replacement story as a direction, not a shipping option.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/segment-routing/">segment-routing</a>
+<a class="talk-tag" href="../../tags/standardization/">standardization</a></p>
+</footer>
 
 
 

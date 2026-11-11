@@ -566,6 +566,11 @@
 <p><strong>How:</strong> A userspace Lua agent generates an nftables bridge ruleset that dispatches each new flow to a Netfilter hook for classification; nftables then caches the verdict in a set so subsequent packets bypass Lua entirely. Three new bindings: <code>luanetfilter</code> (Netfilter hooks), <code>luaskb</code> (socket-buffer access and reply synthesis), <code>luanftables</code> (libnftables wrapper). Sustains 1.4 Gbps at parity with a plain Linux bridge on a Wi-Fi 6 AP under mixed Ethernet/Wi-Fi HTTPS load; shipping as the in-kernel engine of a commercial secure wireless gateway on OpenWiFi APs. (From abstract only.)</p>
 <p><strong>Where applicable:</strong> Constrained gateway hardware that can't sustain DPI-by-interception; the classify-once-then-cache-the-verdict structure generalizes well beyond Lua.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/firewall/">firewall</a>
+<a class="talk-tag" href="../../tags/linux-networking/">linux-networking</a>
+<a class="talk-tag" href="../../tags/open-source/">open-source</a></p>
+</footer>
 
 
 

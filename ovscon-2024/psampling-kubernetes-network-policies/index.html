@@ -566,6 +566,11 @@
 <p><strong>How</strong>: The kernel's psample netlink multicast group now ships samples directly to listeners, bypassing ovs-vswitchd entirely; OVS gained a psample datapath action (integrated with <code>sample()</code> and <code>trunc()</code>, cookie support added) plus an OVS 3.4 optimization where the sample action's <code>obs_point</code> can be loaded from packet fields (<code>NXM_NX_CT_LABEL</code>). OVN encodes the observation point into <code>ct_label</code> at connection commit, collapsing the reply-direction sampling from O(number-of-ACLs) flows to exactly two flows regardless of ACL count.</p>
 <p><strong>Where applicable</strong>: OVN-Kubernetes/OpenShift deployments of any size. Note the psample action is implemented in the kernel datapath (ACL sampling itself works with either IPFIX or psample collectors). The pattern — OVN-generated metadata riding packet samples — is extensible to other observability applications.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/kubernetes/">kubernetes</a>
+<a class="talk-tag" href="../../tags/observability/">observability</a>
+<a class="talk-tag" href="../../tags/network-security/">network-security</a></p>
+</footer>
 
 
 

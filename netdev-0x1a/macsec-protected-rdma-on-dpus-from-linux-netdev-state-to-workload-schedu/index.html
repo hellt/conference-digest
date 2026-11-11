@@ -566,6 +566,11 @@
 <p><strong>How:</strong> MACsec (802.1AE) sits at L2, below the RDMA transport, so a hardware-offloaded MACsec engine encrypts egress under RoCE with no host CPU crypto cost; the kernel already has the plumbing (<code>macsec_ops</code>, <code>NETIF_F_HW_MACSEC</code>, <code>ip macsec offload mac</code>). The hard part is the split: the host sees an RDMA-capable PCIe function while the MACsec engine, egress port and control plane live on the DPU. DRANet-Sec turns the resulting netdev feature advertisement into a ResourceSlice entry, so a pod requests placement on nodes where RDMA egress is genuinely protected — MACsec becomes a second offload stacked under RDMA, invisible to the workload. The talk's stated focus is keeping the advertised capability aligned with the real protected datapath, a problem that recurs for any DPU-resident offload exposed to the scheduler.</p>
 <p><strong>Where applicable:</strong> Multi-tenant AI/HPC clusters with DPU-based RDMA; demonstrated on a DPU testbed with the Red Hat DPU Operator / OpenShift + Cilium offload stack as context. The capability-advertisement-vs-reality problem generalizes to every DRA-scheduled hardware feature.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/encryption/">encryption</a>
+<a class="talk-tag" href="../../tags/rdma/">rdma</a>
+<a class="talk-tag" href="../../tags/dpu/">dpu</a></p>
+</footer>
 
 
 

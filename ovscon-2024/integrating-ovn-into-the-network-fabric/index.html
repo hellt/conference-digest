@@ -566,6 +566,11 @@
 <p><strong>How</strong>: Work in flight includes exporting routes from OVN logical routers to Linux route tables, importing routes back in, auto-generating LRPs/LSPs per chassis (so the CMS needs no changes), and optimizing ingress/egress based on LRP locality. Route advertisement and learning via BGP, with distinct route preferences per gateway chassis and an active-active version of distributed gateway ports. A patchset ("OVN Fabric integration") is on patchwork.</p>
 <p><strong>Where applicable</strong>: OVN-based clouds generally — the speakers come from STACKIT (OpenStack) and Canonical, and the design supersedes the ovn-bgp-agent pattern. The stretched-L2 drawbacks it enumerates (bonding/MLAG requirements, MAC moves on failover) are universal; the fix requires upstream OVN patches that were not yet merged at talk time.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/bgp/">bgp</a>
+<a class="talk-tag" href="../../tags/data-center-fabric/">data-center-fabric</a>
+<a class="talk-tag" href="../../tags/troubleshooting/">troubleshooting</a></p>
+</footer>
 
 
 

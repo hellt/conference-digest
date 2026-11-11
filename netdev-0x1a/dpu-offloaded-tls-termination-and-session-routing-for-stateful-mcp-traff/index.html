@@ -566,6 +566,10 @@
 <p><strong>How:</strong> MCP sessions are pinned to a backend by an application-layer <code>Mcp-Session-Id</code> that the backend assigns in the initialization response — so affinity is invisible at connection time and only readable after TLS termination. On the DPU, the proxy does the OpenSSL handshake in userspace then enables kernel TLS via <code>SSL_OP_ENABLE_KTLS</code>, handing record processing to the kernel <code>tls</code> subsystem where cipher and kernel support allow. It extracts the session id from decrypted headers into an in-process affinity table (round-robin for new sessions), and a single-process epoll state machine multiplexes handshakes, forwarding, long-lived SSE relay and teardown. JWT validation on the DPU rejects unauthorized requests before they reach inference hosts. Evaluation covers session affinity correctness, backend balance, stale-session handling and kTLS stability over long-lived streams. (From abstract only.)</p>
 <p><strong>Where applicable:</strong> Explicitly framed as a reusable architecture on commodity DPUs with no kernel modifications, rather than a new protocol — so the pattern (identity checks at the DPU boundary, kTLS fallback path) transfers even if MCP doesn't.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/dpu/">dpu</a>
+<a class="talk-tag" href="../../tags/tls/">tls</a></p>
+</footer>
 
 
 

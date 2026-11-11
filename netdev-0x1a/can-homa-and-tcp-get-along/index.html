@@ -566,6 +566,10 @@
 <p><strong>How:</strong> Baseline finding: running together, TCP gets slightly <em>better</em> (Homa reduces buffer utilization) while Homa degrades badly (TCP still overloads buffers). <code>homa_qdisc</code> paces output for both protocols to prevent NIC queue buildup, implements Homa's SRPT policy plus a limited SRPT for TCP, and balances output between the two under congestion. With it, Homa suffers only slight degradation alongside TCP, TCP latency improves over the no-qdisc case, and TCP-only short-message tail latency improves by nearly 2x versus <code>fq_codel</code>. (From abstract only.)</p>
 <p><strong>Where applicable:</strong> General Linux hosts — this is a qdisc, not a fabric requirement. Homa itself still wants switch priority queues; the <code>fq_codel</code> tail-latency result is interesting independently of whether you ever run Homa.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/congestion-control/">congestion-control</a>
+<a class="talk-tag" href="../../tags/linux-networking/">linux-networking</a></p>
+</footer>
 
 
 

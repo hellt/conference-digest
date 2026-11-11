@@ -568,6 +568,11 @@
 <li><strong>Where applicable</strong>: Demonstrated on NVIDIA GPU cloud / cloud gaming topologies, but the mechanism is generic OVN. Scale is the open issue: 8 NICs × 1000 chassis ≈ 64k tunnel ports per node, which stresses ovs-vswitchd. Mitigations proposed but not yet landed: flow-based tunnels (loses IPSec/BFD), a "Transport Plane" grouping that cuts 64→8 tunnels per node (87.5% fewer), and intra-node tunneling to preserve HW offload across NICs.</li>
 </ul>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/gpu-clusters/">gpu-clusters</a>
+<a class="talk-tag" href="../../tags/ai-networks/">ai-networks</a>
+<a class="talk-tag" href="../../tags/cni/">cni</a></p>
+</footer>
 
 
 

@@ -566,6 +566,10 @@
 <p><strong>How</strong>: Measured on Intel Xeon Gold 6438N, RHEL 9.6, isolated CPUs, 1 GB hugepages, OVS 3.4+: veth performs slightly better on small block sizes, VDUSE outperforms veth on medium sizes, and VDUSE plateaus on large blocks where ~40% of cycles on the Rx virtqueue IRQ CPU are spent in the bounce-buffer copy (100% busy). Stated cons: memory bandwidth cost from bounce buffers, operational complexity (kernel args, hugepages, NUMA tuning), higher CPU from PMDs (partially mitigated by PMD load-based sleeping at the cost of wakeup latency), and SELinux currently unsupported.</p>
 <p><strong>Where applicable</strong>: OpenShift/RHEL PoC today (activated by kernel args, <code>prepare-ovs.sh</code>, vfio-pci binding); the VDUSE technique itself is general for K8s clusters wanting partitioned, deterministic pod networking. Preliminary results, explicitly framed as a PoC with upstream productization as future work.</p>
 </div>
+<footer aria-label="Talk tags" class="talk-tags">
+<p><a class="talk-tag" href="../../tags/kubernetes/">kubernetes</a>
+<a class="talk-tag" href="../../tags/dpu/">dpu</a></p>
+</footer>
 
 
 

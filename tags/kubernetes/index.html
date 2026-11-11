@@ -1,0 +1,1095 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="97 picked talks tagged kubernetes across the conference digests.">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/tags/kubernetes/">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>Tag: kubernetes - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="website" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="Tag: kubernetes · Conference Digest" />
+<meta property="og:description" content="97 picked talks tagged kubernetes across the conference digests." />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/tags/kubernetes.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/tags/kubernetes/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Tag: kubernetes · Conference Digest" />
+<meta property="twitter:description" content="97 picked talks tagged kubernetes across the conference digests." />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/tags/kubernetes.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tag: kubernetes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../companies/" class="md-tabs__link">
+        
+  
+  Companies
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../archive/" class="md-tabs__link">
+        
+  
+  Archive
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-powered-text">Powered by</span>
+          <img class="md-powered-logo md-powered-logo--light" src="../../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-powered-logo md-powered-logo--dark" src="../../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Companies
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    <li class="md-nav__item md-nav__item--powered">
+      <a href="https://tokenfactory.nebius.com/" class="md-nav__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+        <span class="md-powered-text">Powered by</span>
+        <img class="md-powered-logo md-powered-logo--light" src="../../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+        <img class="md-powered-logo md-powered-logo--dark" src="../../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+      </a>
+    </li>
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#open-vswitch-and-ovn-2026-fall-conference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Open vSwitch and OVN 2026 Fall Conference
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytorch-conference-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        PyTorch Conference 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swinog-42" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SwiNOG #42
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opi-summit-on-dpusipus-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OPI Summit on DPUs/IPUs 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nlnog-day-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NLNOG Day 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scale-systems-reliability-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        @Scale: Systems &amp; Reliability 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tnc26-geant-research-networking-conference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TNC26 (GÉANT research networking conference)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cisco-live-us-2026-las-vegas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cisco Live US 2026 (Las Vegas)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nanog-97" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NANOG 97
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-dev-summit-north-america-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MCP Dev Summit North America 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubecon-cloudnativecon-europe-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        KubeCon + CloudNativeCon Europe 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gtc-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        GTC 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cisco-live-europe-2026-amsterdam" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cisco Live Europe 2026 (Amsterdam)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cfgmgmtcamp-ghent-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CfgMgmtCamp Ghent 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fosdem-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        FOSDEM 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acm-conext-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ACM CoNEXT 2025
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autocon-4-austin" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AutoCon 4 (Austin)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ovs-ovn-2025-fall-conference-prague" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OVS + OVN 2025 Fall Conference (Prague)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubecon-cloudnativecon-north-america-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        KubeCon + CloudNativeCon North America 2025
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nsdi-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NSDI '25
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubecon-cloudnativecon-europe-2025-london" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        KubeCon + CloudNativeCon Europe 2025 (London)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-networking-edge-summit-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Open Networking &amp; Edge Summit 2025
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-vswitch-and-ovn-2024-fall-conference-prague" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Open vSwitch and OVN 2024 Fall Conference (Prague)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-summit-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ONE Summit 2024
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+  
+
+
+<h1 id="kubernetes">kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">#</a></h1>
+<p>97 picked talks tagged <code>kubernetes</code>, newest conference first.</p>
+<h2 id="open-vswitch-and-ovn-2026-fall-conference"><a href="../../ovscon-2026/">Open vSwitch and OVN 2026 Fall Conference</a><a class="headerlink" href="#open-vswitch-and-ovn-2026-fall-conference" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../ovscon-2026/a-switch-a-load-balancer-and-an-acl-walk-into-a-pipeline-and-conntrack-r/">A Switch, a Load Balancer, and an ACL Walk into a Pipeline…. And Conntrack Ruins Everything</a></li>
+<li><a href="../../ovscon-2026/a-unified-networking-fabric-for-vms-and-multi-cluster-kubernetes-workloa/">A Unified Networking Fabric for VMs and Multi-Cluster Kubernetes workloads</a></li>
+<li><a href="../../ovscon-2026/from-user-defined-networks-to-evpn-scaling-ovn-kubernetes/">From User Defined Networks to EVPN: Scaling OVN-Kubernetes</a></li>
+<li><a href="../../ovscon-2026/lost-in-the-layers-scaling-ovn-kubernetes-user-defined-networks-from-k8s/">Lost in the Layers - Scaling OVN-Kubernetes User-Defined Networks from K8S API to the kernel</a></li>
+<li><a href="../../ovscon-2026/one-shared-gateway-a-thousand-routers-scaling-arpndp-in-ovn-kubernetes/">One Shared Gateway, a Thousand Routers: Scaling ARP/NDP in OVN-Kubernetes</a></li>
+<li><a href="../../ovscon-2026/one-tunnel-too-many-no-overlay-mode-in-ovn-kubernetes/">One Tunnel Too Many: No-Overlay Mode in OVN-Kubernetes</a></li>
+<li><a href="../../ovscon-2026/teaching-ai-to-debug-ovn-layer-aware-troubleshooting-with-the-ovn-kubern/">Teaching AI to Debug OVN: Layer-Aware Troubleshooting with the ovn-kubernetes MCP Server</a></li>
+<li><a href="../../ovscon-2026/two-ovn-kubernetes-one-dpu/">Two OVN-Kubernetes, One DPU</a></li>
+</ul>
+<h2 id="pytorch-conference-2026"><a href="../../pytorch-2026/">PyTorch Conference 2026</a><a class="headerlink" href="#pytorch-conference-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../pytorch-2026/crossing-the-divide-co-evolving-kubernetes-and-ray-for-the-ai-era/">Crossing the Divide: Co-Evolving Kubernetes and Ray for the AI Era</a></li>
+<li><a href="../../pytorch-2026/guardrails-at-the-infrastructure-layer-sandboxing-and-governing-agentic/">Guardrails at the Infrastructure Layer: Sandboxing and governing Agentic AI in production</a></li>
+</ul>
+<h2 id="swinog-42"><a href="../../swinog-42/">SwiNOG #42</a><a class="headerlink" href="#swinog-42" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../swinog-42/automating-target-discovery-in-the-gnmic-operator/">Automating Target Discovery in the gNMIc Operator</a></li>
+<li><a href="../../swinog-42/the-accidental-platform-team-kubernetes-operators-at-swisscom/">The Accidental Platform Team: Kubernetes Operators at Swisscom</a></li>
+</ul>
+<h2 id="opi-summit-on-dpusipus-2026"><a href="../../opi-2026/">OPI Summit on DPUs/IPUs 2026</a><a class="headerlink" href="#opi-summit-on-dpusipus-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../opi-2026/from-platform-baseline-to-platform-handoff-automating-dpu-onboarding-wit/">From Platform Baseline to Platform Handoff: Automating DPU Onboarding with sZTP - Anssi Söderena, Fusionlayer, Inc</a></li>
+</ul>
+<h2 id="nlnog-day-2026"><a href="../../nlnog-2026/">NLNOG Day 2026</a><a class="headerlink" href="#nlnog-day-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../nlnog-2026/kubernetes-for-network-engineers/">Kubernetes for Network Engineers</a></li>
+</ul>
+<h2 id="scale-systems-reliability-2026"><a href="../../atscale-systems-reliability-2026/">@Scale: Systems &amp; Reliability 2026</a><a class="headerlink" href="#scale-systems-reliability-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../atscale-systems-reliability-2026/securing-production-debugging-at-hyperscale/">Securing Production Debugging at Hyperscale</a></li>
+</ul>
+<h2 id="tnc26-geant-research-networking-conference"><a href="../../tnc-2026/">TNC26 (GÉANT research networking conference)</a><a class="headerlink" href="#tnc26-geant-research-networking-conference" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../tnc-2026/distributed-active-network-monitoring-with-nmaas-insights-from-an-nren-p/">Distributed Active Network Monitoring with nmaas – Insights from an NREN production deployment</a></li>
+<li><a href="../../tnc-2026/exploring-nmaas-platform-use-cases-beyond-network-and-service-monitoring/">Exploring nmaas Platform Use Cases – Beyond network and service monitoring (Plugged-in)</a></li>
+</ul>
+<h2 id="cisco-live-us-2026-las-vegas"><a href="../../ciscolive-us-2026/">Cisco Live US 2026 (Las Vegas)</a><a class="headerlink" href="#cisco-live-us-2026-las-vegas" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../ciscolive-us-2026/ai-gave-every-attacker-a-kubernetes-playbook-isovalent-takes-it-away-pso/">AI Gave Every Attacker a Kubernetes Playbook. Isovalent Takes It Away - PSOSEC-2345</a></li>
+<li><a href="../../ciscolive-us-2026/life-of-a-packet-in-kubernetes-a-network-engineers-guide-brkcld-3734/">Life of a Packet in Kubernetes: A Network Engineer's Guide - BRKCLD-3734</a></li>
+<li><a href="../../ciscolive-us-2026/unifying-kubernetes-and-the-data-center-isovalent-private-networks-over/">Unifying Kubernetes and the Data Center: Isovalent Private Networks over EVPN/VXLAN - BRKDCN-3668</a></li>
+</ul>
+<h2 id="nanog-97"><a href="../../nanog-97/">NANOG 97</a><a class="headerlink" href="#nanog-97" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../nanog-97/migrating-from-bespoke-hardware-to-an-open-load-balancing-for-kubernetes/">Migrating From Bespoke Hardware To An Open Load Balancing For Kubernetes</a></li>
+</ul>
+<h2 id="mcp-dev-summit-north-america-2026"><a href="../../mcpdevsummit-na-2026/">MCP Dev Summit North America 2026</a><a class="headerlink" href="#mcp-dev-summit-north-america-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../mcpdevsummit-na-2026/kubernetes-native-agent-discovery-a-unified-registry-for-mcp-servers-and/">Kubernetes-Native Agent Discovery: A Unified Registry for MCP Servers and Skills - Carlos Santana, AWS</a></li>
+</ul>
+<h2 id="kubecon-cloudnativecon-europe-2026"><a href="../../kubecon-eu-2026/">KubeCon + CloudNativeCon Europe 2026</a><a class="headerlink" href="#kubecon-cloudnativecon-europe-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../kubecon-eu-2026/beyond-the-edge-cloud-native-application-management-under-extreme-networ/">Beyond the Edge: Cloud Native Application Management Under Extreme Network Conditions</a></li>
+<li><a href="../../kubecon-eu-2026/bridging-islands-evpn-overlays-for-multi-cluster-kubevirt/">Bridging Islands: EVPN Overlays for Multi-Cluster KubeVirt</a></li>
+<li><a href="../../kubecon-eu-2026/evolving-baremetal-as-a-service-secure-multi-cluster-networking-and-serv/">Evolving Baremetal-as-a-Service: Secure Multi-Cluster Networking and Service Identity Automation</a></li>
+<li><a href="../../kubecon-eu-2026/from-nlb-sprawl-to-mesh-efficiency-how-skyscanner-handles-60m-requests-p/">From NLB Sprawl to Mesh Efficiency: How Skyscanner Handles 60M Requests Per Minute With Istio</a></li>
+<li><a href="../../kubecon-eu-2026/from-static-tokens-to-attestation-the-evolution-of-secure-node-joining/">From Static Tokens to Attestation: The Evolution of Secure Node Joining</a></li>
+<li><a href="../../kubecon-eu-2026/gateway-api-bridging-the-gap-from-ingress-to-the-future/">Gateway API: Bridging the Gap from Ingress to the Future</a></li>
+<li><a href="../../kubecon-eu-2026/keeping-the-cloud-afloat-with-deterministic-simulation-testing/">Keeping the Cloud Afloat with Deterministic Simulation Testing</a></li>
+<li><a href="../../kubecon-eu-2026/kubernetes-network-driver-unpacked-modularity-trade-offs-and-the-road-ah/">Kubernetes Network Driver Unpacked: Modularity, Trade-offs and the Road Ahead</a></li>
+<li><a href="../../kubecon-eu-2026/kubevirt-on-gb200-virtualizing-a-rack-scale-supercomputer/">KubeVirt on GB200: Virtualizing a Rack-Scale Supercomputer</a></li>
+<li><a href="../../kubecon-eu-2026/let-your-network-speak/">Let Your Network Speak!</a></li>
+<li><a href="../../kubecon-eu-2026/making-topology-aware-scheduling-practical-for-ai-workloads-from-discove/">Making Topology-Aware Scheduling Practical for AI Workloads: From Discovery to Simulation at Scale</a></li>
+<li><a href="../../kubecon-eu-2026/multi-network-step-by-step-enabling-sr-iov-support-from-kubernetes-netwo/">Multi-Network Step-by-Step: Enabling SR-IOV Support From Kubernetes Network (DRA) Drivers</a></li>
+<li><a href="../../kubecon-eu-2026/navigating-the-gateway-api-maze-40-implementations-55-features-and-a-pat/">Navigating the Gateway API Maze: 40+ Implementations, 55+ Features, and a Path to Portability</a></li>
+<li><a href="../../kubecon-eu-2026/sig-network-the-state-of-networking-for-ai-on-kubernetes/">SIG Network: The State of Networking for AI on Kubernetes</a></li>
+<li><a href="../../kubecon-eu-2026/the-latest-in-gpu-tpu-nic-and-other-device-support-wg-device-management/">The Latest in GPU, TPU, NIC and Other Device Support — WG Device Management</a></li>
+<li><a href="../../kubecon-eu-2026/virtualizing-large-scale-gpu-cluster-for-sovereign-ai-petasus-ai-cloud-j/">Virtualizing Large Scale GPU Cluster for Sovereign AI: Petasus AI Cloud Journey with Kubernetes</a></li>
+<li><a href="../../kubecon-eu-2026/when-dns-blinks-scaling-and-hardening-coredns-in-critical-cloud-infrastr/">When DNS Blinks: Scaling and Hardening CoreDNS in Critical Cloud Infrastructure</a></li>
+<li><a href="../../kubecon-eu-2026/why-is-it-so-hard-to-run-a-5g-core-on-kubernetes-and-what-needs-to-chang/">Why Is It So Hard to Run a 5G Core on Kubernetes — And What Needs to Change for 6G</a></li>
+</ul>
+<h2 id="gtc-2026"><a href="../../gtc-2026/">GTC 2026</a><a class="headerlink" href="#gtc-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../gtc-2026/build-a-software-defined-multi-tenant-nvlinked-cluster/">Build a Software-Defined Multi-Tenant NVLinked Cluster</a></li>
+<li><a href="../../gtc-2026/solve-the-day-1-challenge-of-landing-llm-inference-in-enterprise/">Solve the Day 1 Challenge of Landing LLM Inference in Enterprise</a></li>
+</ul>
+<h2 id="cisco-live-europe-2026-amsterdam"><a href="../../ciscolive-eu-2026/">Cisco Live Europe 2026 (Amsterdam)</a><a class="headerlink" href="#cisco-live-europe-2026-amsterdam" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../ciscolive-eu-2026/life-of-a-packet-in-kubernetes-a-network-engineers-guide-brkcld-3734/">Life of a Packet in Kubernetes: A Network Engineer's Guide - BRKCLD-3734</a></li>
+</ul>
+<h2 id="cfgmgmtcamp-ghent-2026"><a href="../../cfgmgmtcamp-2026/">CfgMgmtCamp Ghent 2026</a><a class="headerlink" href="#cfgmgmtcamp-ghent-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../cfgmgmtcamp-2026/inspecting-your-kubernetes-cluster-with-ebpf-and-inspektor-gadget/">Inspecting your Kubernetes cluster with eBPF and Inspektor Gadget</a></li>
+</ul>
+<h2 id="fosdem-2026"><a href="../../fosdem-2026/">FOSDEM 2026</a><a class="headerlink" href="#fosdem-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../fosdem-2026/going-full-ipv6-in-kubernetes-no-limits-just-128-bits/">Going full IPv6 in Kubernetes: No limits, just 128 bits!</a></li>
+<li><a href="../../fosdem-2026/openperouter-turning-your-kubernetes-nodes-into-a-provide-edge-router/">OpenPERouter: Turning Your Kubernetes Nodes into a Provide Edge Router</a></li>
+<li><a href="../../fosdem-2026/weaving-the-fabric-evpn-overlays-for-multi-cluster-kubevirt-deployments/">Weaving the Fabric: EVPN overlays for multi-cluster KubeVirt deployments</a></li>
+</ul>
+<h2 id="acm-conext-2025"><a href="../../conext-2025/">ACM CoNEXT 2025</a><a class="headerlink" href="#acm-conext-2025" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../conext-2025/inside-job-defending-kubernetes-clusters-against-network-misconfiguratio/">Inside Job: Defending Kubernetes Clusters Against Network Misconfigurations</a></li>
+</ul>
+<h2 id="autocon-4-austin"><a href="../../autocon-4/">AutoCon 4 (Austin)</a><a class="headerlink" href="#autocon-4-austin" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../autocon-4/kubernetes-network-emulation-a-standard-interface-to-design-and-validate/">Kubernetes Network Emulation, a standard interface to design and validate networks</a></li>
+</ul>
+<h2 id="ovs-ovn-2025-fall-conference-prague"><a href="../../ovscon-2025/">OVS + OVN 2025 Fall Conference (Prague)</a><a class="headerlink" href="#ovs-ovn-2025-fall-conference-prague" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../ovscon-2025/a-native-way-of-integrating-ovn-into-the-fabric-through-bgp-evpn/">A native way of integrating OVN into the fabric through BGP-EVPN.</a></li>
+<li><a href="../../ovscon-2025/a-nightmare-on-kube-street-slicing-kubernetes-networks-like-freddy-krueg/">A Nightmare on Kube Street: Slicing Kubernetes Networks like Freddy Krueger</a></li>
+<li><a href="../../ovscon-2025/baremetal-network-isolation-for-cloud-providers-with-ovn-on-dpus/">Baremetal network isolation for cloud providers with OVN on DPUs</a></li>
+<li><a href="../../ovscon-2025/beam-me-through-the-datapath-vduse-for-openshift-virtualization/">Beam Me Through the Datapath: VDUSE for OpenShift Virtualization</a></li>
+<li><a href="../../ovscon-2025/ovn-kubernetes-meets-dpus-enabling-service-function-chaining-and-shared/">OVN-Kubernetes Meets DPUs: Enabling Service Function Chaining and Shared OVN</a></li>
+<li><a href="../../ovscon-2025/the-bgp-fork-in-the-road-a-tale-of-two-implementations/">The BGP Fork in the Road: A Tale of Two Implementations</a></li>
+<li><a href="../../ovscon-2025/transit-router-the-distributed-router-for-ovn-interconnect/">Transit router - The distributed router for OVN interconnect.</a></li>
+<li><a href="../../ovscon-2025/turbocharge-kubernetes-with-offloaded-ovn-kubernetes-and-ovs-on-dpus/">Turbocharge Kubernetes with offloaded OVN-Kubernetes and OVS on DPUs</a></li>
+</ul>
+<h2 id="kubecon-cloudnativecon-north-america-2025"><a href="../../kubecon-na-2025/">KubeCon + CloudNativeCon North America 2025</a><a class="headerlink" href="#kubecon-cloudnativecon-north-america-2025" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../kubecon-na-2025/adminnetworkpolicy-from-alpha-to-beta-and-beyond/">AdminNetworkPolicy: From Alpha To Beta and Beyond</a></li>
+<li><a href="../../kubecon-na-2025/ai-inference-without-boundaries-dynamic-routing-with-multi-cluster-infer/">AI Inference Without Boundaries: Dynamic Routing With Multi-Cluster Inference Gateway</a></li>
+<li><a href="../../kubecon-na-2025/end-to-end-security-with-grpc-in-kubernetes/">End-to-End Security With gRPC in Kubernetes</a></li>
+<li><a href="../../kubecon-na-2025/fix-first-investigate-later-when-an-ebpf-rollout-brought-down-our-networ/">Fix First, Investigate Later: When an eBPF Rollout Brought Down Our Network</a></li>
+<li><a href="../../kubecon-na-2025/gateway-api-table-stakes/">Gateway API: Table Stakes</a></li>
+<li><a href="../../kubecon-na-2025/istio-project-updates-ai-inference-ambient-multicluster-default-deny/">Istio Project Updates: AI Inference, Ambient Multicluster &amp; Default Deny</a></li>
+<li><a href="../../kubecon-na-2025/its-2025-why-are-you-ok-with-an-insecure-network/">It's 2025; Why Are You OK With an Insecure Network?</a></li>
+<li><a href="../../kubecon-na-2025/kubernetes-ip-management-from-core-concepts-to-strategic-solutions/">Kubernetes IP Management: From Core Concepts To Strategic Solutions</a></li>
+<li><a href="../../kubecon-na-2025/navigating-the-aiml-networking-maze-in-kubernetes-lessons-from-the-trenc/">Navigating the AI/ML Networking Maze in Kubernetes: Lessons From the Trenches</a></li>
+<li><a href="../../kubecon-na-2025/on-prem-load-balancing-reimagined-serving-20-million-qps-with-gateway-ap/">On-Prem Load Balancing Reimagined: Serving 20 Million QPS With Gateway API and EnvoyGateway</a></li>
+<li><a href="../../kubecon-na-2025/qemu-in-the-fast-lane-accelerating-kubevirt-networking-with-ebpf/">QEMU in the Fast Lane: Accelerating KubeVirt Networking With eBPF</a></li>
+<li><a href="../../kubecon-na-2025/return-of-the-mesh-gateway-apis-epic-quest-for-unity/">Return of the Mesh: Gateway API's Epic Quest for Unity</a></li>
+<li><a href="../../kubecon-na-2025/routing-stateful-ai-workloads-in-kubernetes/">Routing Stateful AI Workloads in Kubernetes</a></li>
+<li><a href="../../kubecon-na-2025/spiderpool-dynamic-topology-aware-rdma-allocation-for-gpu-based-ai-workl/">Spiderpool: Dynamic Topology-Aware RDMA Allocation For GPU-Based AI Workloads</a></li>
+<li><a href="../../kubecon-na-2025/strengthening-kubernetes-trust-sig-auths-latest-security-enhancements/">Strengthening Kubernetes Trust: SIG Auth's Latest Security Enhancements</a></li>
+<li><a href="../../kubecon-na-2025/tiktoks-ipv6-journey-to-cilium-pitfalls-and-lessons-learned/">TikTok's IPv6 Journey To Cilium: Pitfalls and Lessons Learned</a></li>
+</ul>
+<h2 id="nsdi-25"><a href="../../nsdi-2025/">NSDI '25</a><a class="headerlink" href="#nsdi-25" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../nsdi-2025/mitigating-scalability-walls-of-rdma-based-container-networks/">Mitigating Scalability Walls of RDMA-based Container Networks</a></li>
+<li><a href="../../nsdi-2025/oncache-a-cache-based-low-overhead-container-overlay-network/">ONCache: A Cache-Based Low-Overhead Container Overlay Network</a></li>
+</ul>
+<h2 id="kubecon-cloudnativecon-europe-2025-london"><a href="../../kubecon-eu-2025/">KubeCon + CloudNativeCon Europe 2025 (London)</a><a class="headerlink" href="#kubecon-cloudnativecon-europe-2025-london" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../kubecon-eu-2025/a-cloud-native-workflow-for-hardware-in-the-loop-software-development/">A Cloud Native Workflow for Hardware-in-the-Loop Software Development</a></li>
+<li><a href="../../kubecon-eu-2025/cncf-project-demos-bgp-beyond-loadbalancers-with-metallb-and-frr-k8s/">CNCF Project Demos | BGP Beyond Loadbalancers with MetalLB and FRR-K8s</a></li>
+<li><a href="../../kubecon-eu-2025/cncf-tag-network-and-cloud-native-network-landscape/">CNCF TAG Network and Cloud Native Network Landscape</a></li>
+<li><a href="../../kubecon-eu-2025/encryption-identities-and-everything-in-between-building-secure-kubernet/">Encryption, Identities, and Everything in Between; Building Secure Kubernetes Networks</a></li>
+<li><a href="../../kubecon-eu-2025/istio-the-past-present-and-future-of-the-project-and-community/">Istio: The Past, Present and Future of the Project and Community</a></li>
+<li><a href="../../kubecon-eu-2025/making-the-leap-what-gateway-api-needs-to-support-ingress-nginx-users/">Making the Leap: What Gateway API Needs To Support Ingress-NGINX Users</a></li>
+<li><a href="../../kubecon-eu-2025/revolutionizing-sidecarless-service-mesh-with-ebpf-and-remote-gateway-km/">Revolutionizing Sidecarless Service Mesh with eBPF and Remote Gateway (Kmesh)</a></li>
+<li><a href="../../kubecon-eu-2025/sig-network-intro-and-updates/">SIG Network Intro and Updates</a></li>
+<li><a href="../../kubecon-eu-2025/simplifying-the-networking-and-security-stack-with-cilium-hubble-and-tet/">Simplifying the Networking and Security Stack With Cilium, Hubble, and Tetragon</a></li>
+<li><a href="../../kubecon-eu-2025/stateful-connections-in-kubernetes-the-scaling-secrets-nobody-talks-abou/">Stateful Connections in Kubernetes: The Scaling Secrets Nobody Talks About</a></li>
+<li><a href="../../kubecon-eu-2025/the-great-sidecar-debate/">The Great Sidecar Debate</a></li>
+<li><a href="../../kubecon-eu-2025/tutorial-mind-your-pods-business-network-isolation-workshop/">Tutorial: Mind Your Pod's Business: Network Isolation Workshop</a></li>
+<li><a href="../../kubecon-eu-2025/uncharted-waters-dynamic-resource-allocation-for-networking/">Uncharted Waters: Dynamic Resource Allocation for Networking</a></li>
+<li><a href="../../kubecon-eu-2025/using-ebpf-for-non-invasive-performant-instant-network-monitoring/">Using eBPF for Non-invasive, Performant, Instant Network Monitoring</a></li>
+</ul>
+<h2 id="open-networking-edge-summit-2025"><a href="../../onesummit-2025/">Open Networking &amp; Edge Summit 2025</a><a class="headerlink" href="#open-networking-edge-summit-2025" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../onesummit-2025/sponsored-session-ready-for-impact-eve-steps-from-10k-kubernetes-cluster/">Sponsored Session: Ready for Impact: EVE Steps from 10k Kubernetes Clusters to Edge AI</a></li>
+</ul>
+<h2 id="open-vswitch-and-ovn-2024-fall-conference-prague"><a href="../../ovscon-2024/">Open vSwitch and OVN 2024 Fall Conference (Prague)</a><a class="headerlink" href="#open-vswitch-and-ovn-2024-fall-conference-prague" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../ovscon-2024/psampling-kubernetes-network-policies/">(P)sampling kubernetes network policies</a></li>
+<li><a href="../../ovscon-2024/current-challenges-with-openstack-ironic-sr-iov-and-ovn/">Current Challenges with OpenStack Ironic, SR-IOV, and OVN</a></li>
+<li><a href="../../ovscon-2024/openshift-networking-transformed-fully-embracing-dpdk-datapaths-in-ovn-k/">OpenShift Networking Transformed: Fully Embracing DPDK Datapaths in OVN-K8s!</a></li>
+<li><a href="../../ovscon-2024/scalable-multi-node-ai-workloads-in-multi-tenant-ai-clouds-using-sdn-k8s/">Scalable Multi-Node AI Workloads in Multi-Tenant AI Clouds using SDN K8s Networking</a></li>
+</ul>
+<h2 id="one-summit-2024"><a href="../../onesummit-2024/">ONE Summit 2024</a><a class="headerlink" href="#one-summit-2024" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../onesummit-2024/alpine-sonic-switchstack-simulation-sonika-jindal-bhagat-janarthanan-goo/">ALPINE - SONiC Switchstack Simulation - Sonika Jindal &amp; Bhagat Janarthanan, Google</a></li>
+<li><a href="../../onesummit-2024/code-vs-data-optimizing-nfv-orchestration-with-nephio-tal-liron-google/">Code Vs. Data: Optimizing NFV Orchestration with Nephio - Tal Liron, Google</a></li>
+<li><a href="../../onesummit-2024/kubeflow-istio-a-perfect-match-investigating-istios-role-in-mlops-nina-p/">Kubeflow &amp; Istio, a Perfect Match! Investigating Istio’s Role in MLOps - Nina Polshakova &amp; Peter Jausovec, Solo.io</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
+      
+        <script src="../../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

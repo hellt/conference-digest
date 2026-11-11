@@ -877,7 +877,7 @@
   T --&gt; C["Validate, add links and search tags"]
   C --&gt; R["Digest pull request"]
   R --&gt;|A person merges| W["Published site"]
-  W --&gt; L["Weekly links refresh"]
+  W --&gt; L["Daily links refresh"]
   L --&gt; Q["Links pull request"]</code></pre>
 <h3 id="1-discover-new-editions-automatically">1. Discover new editions automatically<a class="headerlink" href="#1-discover-new-editions-automatically" title="Permanent link">#</a></h3>
 <p>A scheduled scan runs every Monday, with a manual workflow dispatch available when needed. Discovery reads <code>conferences/series.yaml</code>, which describes each recurring conference, and <code>conferences/registry.yaml</code>, which contains the editions already tracked.</p>
@@ -919,9 +919,9 @@
 <p>Before a row is published, file links and videos are probed again. Confirmed dead links are dropped; an unreachable or inconclusive check does not erase a previously found link. This is deliberately a “no link rather than a wrong link” policy.</p>
 <h3 id="5-review-publish-and-refresh">5. Review, publish, and refresh<a class="headerlink" href="#5-review-publish-and-refresh" title="Permanent link">#</a></h3>
 <p>The proposal job opens one <code>digest: &lt;key&gt;</code> pull request containing the digest and its search tags. A person reviews and merges it. The merged <code>digests/&lt;key&gt;.md</code> file is the only signal that an edition is done; it also closes the tracking issue and triggers site publication.</p>
-<p>Slides and recordings often arrive after the digest. Every Wednesday, Links Refresh reruns the same deterministic link builder for digests whose events ended in the last 120 days. It rechecks talk pages, searches for missing recordings, and removes links confirmed dead. If anything changed, it opens a separate <code>links: &lt;key&gt;</code> PR; the write-ups are not rewritten. Older editions can be refreshed through manual workflow dispatch.</p>
+<p>Slides and recordings often arrive after the digest. Every day, Links Refresh reruns the same deterministic link builder for digests whose events ended in the last 120 days. It rechecks talk pages, searches for missing recordings, and removes links confirmed dead. If anything changed, it opens a separate <code>links: &lt;key&gt;</code> PR; the write-ups are not rewritten. Older editions can be refreshed through manual workflow dispatch.</p>
 <h2 id="search">Search<a class="headerlink" href="#search" title="Permanent link">#</a></h2>
-<p>Digest and talk pages carry topic keywords when the writer's keywords block validates. The writer chooses them from a controlled vocabulary covering the reader's areas, including BGP, AI clusters, optics, Kubernetes, and cloud. The pipeline stores them as hand-editable repository metadata, and the site's search indexes them like a page title. Searching for a topic such as <code>ebpf</code> or <code>Kubernetes</code> can therefore find a relevant talk even when that word is absent from its title.</p>
+<p>Digest and talk pages carry topic keywords when the writer's keywords block validates. The writer chooses them from a controlled vocabulary covering the reader's areas, including BGP, AI clusters, optics, Kubernetes, and cloud. The pipeline stores them as hand-editable repository metadata, and the site's search indexes them like a page title. Searching for a topic such as <code>ebpf</code> or <code>Kubernetes</code> can therefore find a relevant talk even when that word is absent from its title. Talk pages also show their tags as clickable chips; each tag opens a page listing every picked talk with that tag, grouped by conference.</p>
 <h2 id="reading-a-digest">Reading a digest<a class="headerlink" href="#reading-a-digest" title="Permanent link">#</a></h2>
 <table>
 <thead>

@@ -1,0 +1,1403 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="125 picked talks tagged measurement across the conference digests.">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/tags/measurement/">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>Tag: measurement - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="website" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="Tag: measurement · Conference Digest" />
+<meta property="og:description" content="125 picked talks tagged measurement across the conference digests." />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/tags/measurement.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/tags/measurement/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Tag: measurement · Conference Digest" />
+<meta property="twitter:description" content="125 picked talks tagged measurement across the conference digests." />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/tags/measurement.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tag: measurement
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../companies/" class="md-tabs__link">
+        
+  
+  Companies
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../archive/" class="md-tabs__link">
+        
+  
+  Archive
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-powered-text">Powered by</span>
+          <img class="md-powered-logo md-powered-logo--light" src="../../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-powered-logo md-powered-logo--dark" src="../../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Companies
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    <li class="md-nav__item md-nav__item--powered">
+      <a href="https://tokenfactory.nebius.com/" class="md-nav__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+        <span class="md-powered-text">Powered by</span>
+        <img class="md-powered-logo md-powered-logo--light" src="../../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+        <img class="md-powered-logo md-powered-logo--dark" src="../../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+      </a>
+    </li>
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ripe-93" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        RIPE 93
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scale-product-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        @Scale: Product 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hacklu-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        hack.lu 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lacnic-46" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        LACNIC 46
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nanog-98" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NANOG 98
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acm-imc-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ACM IMC 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capacity-europe-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Capacity Europe 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netnod-tech-meeting-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Netnod Tech Meeting 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ausnog-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AusNOG 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nlnog-day-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NLNOG Day 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pets-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        PETS 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netuk3-the-brewery" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NetUK3 (The Brewery)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grnog-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        GRNOG 20
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nogfi-meeting-202606" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        nog.fi meeting 2026.06
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tnc26-geant-research-networking-conference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TNC26 (GÉANT research networking conference)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nanog-97" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NANOG 97
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lacnic-45" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        LACNIC 45
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-ip-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MORE-IP 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mlsys-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MLSys 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ripe-92-edinburgh" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        RIPE 92 (Edinburgh)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swinog-41" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SwiNOG #41
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zanogiweek-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ZANOG@iWeek 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#itnog10" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ITNOG10
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nznog-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NZNOG 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peering-days-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Peering Days 2026
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ietf-125-shenzhen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IETF 125 (Shenzhen)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dknog16" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DKNOG16
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apricot-2026-jakarta" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        APRICOT 2026 (Jakarta)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nanog-96" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NANOG 96
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acm-conext-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ACM CoNEXT 2025
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autocon-4-austin" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AutoCon 4 (Austin)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#denog-17-essen" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DENOG 17 (Essen)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arin-56-public-policy-and-members-meeting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ARIN 56 Public Policy and Members Meeting
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hacklu-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        hack.lu 2025
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ripe-91-bucharest" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        RIPE 91 (Bucharest)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ocp-global-summit-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OCP Global Summit 2025
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netnod-tech-meeting-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Netnod Tech Meeting 2025
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sigcomm-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SIGCOMM 2025
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usenix-security-25-34th-usenix-security-symposium" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        USENIX Security '25 (34<sup>th</sup> USENIX Security Symposium)
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#itnog9" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ITNOG9
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mlsys-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MLSys 2025
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nsdi-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NSDI '25
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-networking-edge-summit-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Open Networking &amp; Edge Summit 2025
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#srecon25-americas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SREcon25 Americas
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+  
+  
+
+
+<h1 id="measurement">measurement<a class="headerlink" href="#measurement" title="Permanent link">#</a></h1>
+<p>125 picked talks tagged <code>measurement</code>, newest conference first.</p>
+<h2 id="ripe-93"><a href="../../ripe-93/">RIPE 93</a><a class="headerlink" href="#ripe-93" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../ripe-93/detecting-and-characterizing-exposed-bgp-routers/">Detecting and Characterizing Exposed BGP Routers​</a></li>
+<li><a href="../../ripe-93/measuring-propagation-time-of-rpki-validity-changes-on-the-dataplane/">Measuring Propagation Time of RPKI Validity Changes on the Dataplane</a></li>
+<li><a href="../../ripe-93/networks-as-sensors-passive-measurement-as-a-lens-on-society-a-case-stud/">Networks as Sensors: Passive Measurement as a Lens on Society, A case study on two European elections</a></li>
+<li><a href="../../ripe-93/the-internets-path-mtus-how-big-can-you-go/">The Internet's Path MTUs: How Big Can You Go?</a></li>
+<li><a href="../../ripe-93/the-state-of-ecn-adoption-in-the-internet/">The State of ECN Adoption in the Internet</a></li>
+<li><a href="../../ripe-93/ttl-jumps-unexpected-ttl-rewrites-impacting-inferences-from-traceroutes/">TTL Jumps: Unexpected TTL Rewrites Impacting Inferences from Traceroutes</a></li>
+<li><a href="../../ripe-93/when-routing-evidence-conflicts-measuring-irr-and-rpki-for-bgp-filtering/">When Routing Evidence Conflicts: Measuring IRR and RPKI for BGP Filtering</a></li>
+</ul>
+<h2 id="scale-product-2026"><a href="../../atscale-product-2026/">@Scale: Product 2026</a><a class="headerlink" href="#scale-product-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../atscale-product-2026/content-accessibility-at-scale-ai-voice-translations-at-meta/">Content Accessibility at Scale: AI Voice Translations at Meta</a></li>
+</ul>
+<h2 id="hacklu-2026"><a href="../../hacklu-2026/">hack.lu 2026</a><a class="headerlink" href="#hacklu-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../hacklu-2026/a-generalized-fingerprinting-framework-for-deriving-searchable-features/">A Generalized Fingerprinting Framework for Deriving Searchable Features to Identify Publicly Exposed Infrastructure</a></li>
+<li><a href="../../hacklu-2026/internet-background-radiation-exploiting-the-void/">Internet Background Radiation: Exploiting the Void</a></li>
+<li><a href="../../hacklu-2026/plum-anno-1/">Plum Anno 1..</a></li>
+</ul>
+<h2 id="lacnic-46"><a href="../../lacnic-46/">LACNIC 46</a><a class="headerlink" href="#lacnic-46" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../lacnic-46/a-network-tomography-approach-to-imputing-od-traffic-in-an-ipmpls-networ/">A Network Tomography Approach to Imputing OD Traffic in an IP/MPLS Network</a></li>
+<li><a href="../../lacnic-46/ipv6-mostly-on-campus/">IPv6-Mostly on Campus</a></li>
+<li><a href="../../lacnic-46/lightning-talks/">Lightning Talks</a></li>
+<li><a href="../../lacnic-46/the-bgp-analysts-notebook-17-years-in/">The BGP Analyst's Notebook: 17 Years In</a></li>
+</ul>
+<h2 id="nanog-98"><a href="../../nanog-98/">NANOG 98</a><a class="headerlink" href="#nanog-98" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../nanog-98/bgp-role-model-tracking-the-adoption-of-rfc-9234/">BGP Role model: tracking the adoption of RFC 9234</a></li>
+<li><a href="../../nanog-98/one-control-plane-away-are-cloud-providers-critical-infrastructure/">One Control Plane Away: Are Cloud Providers Critical Infrastructure</a></li>
+<li><a href="../../nanog-98/when-the-world-cup-moved-to-youtube-416-gbps-and-the-limits-of-local-del/">When the World Cup Moved to YouTube: 416 Gbps and the Limits of Local Delivery in Brazil</a></li>
+</ul>
+<h2 id="acm-imc-2026"><a href="../../imc-2026/">ACM IMC 2026</a><a class="headerlink" href="#acm-imc-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../imc-2026/a-first-look-at-certificate-revocation-latency/">A First Look at Certificate Revocation Latency</a></li>
+<li><a href="../../imc-2026/calypsos-voyage-charting-traceroute-paths-to-submarine-cables/">Calypso's Voyage: Charting Traceroute Paths to Submarine Cables</a></li>
+<li><a href="../../imc-2026/characterizing-the-deployment-of-the-stirshaken-telephone-network-pki/">Characterizing the Deployment of the STIR/SHAKEN Telephone Network PKI</a></li>
+<li><a href="../../imc-2026/eadem-sed-aliter-investigating-the-instability-of-browser-fingerprinting/">Eadem, Sed Aliter: Investigating the Instability of Browser Fingerprinting</a></li>
+<li><a href="../../imc-2026/eu-digital-sovereignty-in-practice-a-technical-assessment-of-digital-inf/">EU Digital Sovereignty in Practice: A Technical Assessment of Digital Infrastructure Dependencies</a></li>
+<li><a href="../../imc-2026/honey-configs-measuring-the-emerging-exploitation-of-cloud-ip-address-re/">Honey Configs: Measuring The Emerging Exploitation of Cloud IP Address Reuse</a></li>
+<li><a href="../../imc-2026/lightscope-turning-production-machines-into-telescopes-and-honeypots/">Lightscope: Turning Production Machines into Telescopes and Honeypots</a></li>
+<li><a href="../../imc-2026/mind-the-gap-policy-vs-reality-in-post-quantum-tls-deployment/">Mind the Gap: Policy vs Reality in Post-Quantum TLS Deployment</a></li>
+<li><a href="../../imc-2026/namefill-synthesizing-dns-naming-conventions/">namefill: Synthesizing DNS Naming Conventions</a></li>
+<li><a href="../../imc-2026/replicability-challenging-the-myth-of-randomness-patterns-in-encrypted-t/">Replicability: Challenging the Myth of Randomness Patterns in Encrypted Traffic</a></li>
+<li><a href="../../imc-2026/rscope-unveiling-global-rov-deployments-and-dependencies-in-the-post-rov/">RScope: Unveiling Global ROV Deployments and Dependencies in the Post-ROV Era</a></li>
+<li><a href="../../imc-2026/split-alignment-diffusing-spf-vulnerabilities-with-dmarc/">Split Alignment: Diffusing SPF Vulnerabilities With DMARC</a></li>
+<li><a href="../../imc-2026/taming-dns-responses-a-measurement-study-of-response-size-and-its-impact/">Taming DNS Responses: A Measurement Study of Response Size and Its Impact</a></li>
+<li><a href="../../imc-2026/the-disputed-internet-quantifying-fragmentation-in-the-ipv6-internet/">The Disputed Internet: Quantifying Fragmentation in the IPv6 Internet</a></li>
+<li><a href="../../imc-2026/waiting-at-the-front-door-continuous-monitoring-of-latency-in-the-host-n/">Waiting at the front door: Continuous monitoring of latency in the host network stack</a></li>
+</ul>
+<h2 id="capacity-europe-2026"><a href="../../capacity-2026/">Capacity Europe 2026</a><a class="headerlink" href="#capacity-europe-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../capacity-2026/panel-from-best-practice-to-critical-infrastructure-rethinking-fibre-res/">Panel: From Best Practice to Critical Infrastructure: Rethinking Fibre Resilience</a></li>
+</ul>
+<h2 id="netnod-tech-meeting-2026"><a href="../../netnod-2026/">Netnod Tech Meeting 2026</a><a class="headerlink" href="#netnod-tech-meeting-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../netnod-2026/the-internet-change-clock/">The Internet Change Clock</a></li>
+</ul>
+<h2 id="ausnog-2026"><a href="../../ausnog-2026/">AusNOG 2026</a><a class="headerlink" href="#ausnog-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../ausnog-2026/rethinking-address-reality-ipv4-utilisation-and-proxy-network-exposure-i/">Rethinking Address Reality: IPv4 Utilisation and Proxy Network Exposure in Australia</a></li>
+</ul>
+<h2 id="nlnog-day-2026"><a href="../../nlnog-2026/">NLNOG Day 2026</a><a class="headerlink" href="#nlnog-day-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../nlnog-2026/lessons-from-10-months-of-aspa/">Lessons from 10 months of ASPA</a></li>
+</ul>
+<h2 id="pets-2026"><a href="../../pets-2026/">PETS 2026</a><a class="headerlink" href="#pets-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../pets-2026/more-space-less-privacy-measuring-the-effectiveness-of-ip-based-website/">More Space, Less Privacy? Measuring the Effectiveness of IP-based Website Fingerprinting in IPv6</a></li>
+<li><a href="../../pets-2026/redefining-website-fingerprinting-attacks-with-multi-agent-llms/">Redefining Website Fingerprinting Attacks with Multi-Agent LLMs</a></li>
+<li><a href="../../pets-2026/understanding-privacy-and-quality-tradeoffs-in-synthetic-network-data/">Understanding Privacy and Quality Tradeoffs in Synthetic Network Data</a></li>
+</ul>
+<h2 id="netuk3-the-brewery"><a href="../../netuk-3/">NetUK3 (The Brewery)</a><a class="headerlink" href="#netuk3-the-brewery" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../netuk-3/data-signal-based-distributed-fibre-optic-sensing/">Data Signal-Based Distributed Fibre Optic Sensing</a></li>
+</ul>
+<h2 id="grnog-20"><a href="../../grnog-20/">GRNOG 20</a><a class="headerlink" href="#grnog-20" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../grnog-20/a-comprehensive-analysis-of-the-irr-landscape/">A comprehensive analysis of the IRR landscape</a></li>
+</ul>
+<h2 id="nogfi-meeting-202606"><a href="../../nogfi-2026-06/">nog.fi meeting 2026.06</a><a class="headerlink" href="#nogfi-meeting-202606" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../nogfi-2026-06/the-irr-landscape-and-its-implications-on-global-internet-traffic/">The IRR Landscape and its Implications on Global Internet Traffic</a></li>
+</ul>
+<h2 id="tnc26-geant-research-networking-conference"><a href="../../tnc-2026/">TNC26 (GÉANT research networking conference)</a><a class="headerlink" href="#tnc26-geant-research-networking-conference" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../tnc-2026/coordinating-bgp-policy-and-tooling-across-the-global-re-infrastructure/">Coordinating BGP Policy and Tooling Across the Global R&amp;E Infrastructure</a></li>
+<li><a href="../../tnc-2026/discovering-a-dwdm-network-with-tomography/">Discovering a DWDM network with Tomography</a></li>
+<li><a href="../../tnc-2026/distributed-active-network-monitoring-with-nmaas-insights-from-an-nren-p/">Distributed Active Network Monitoring with nmaas – Insights from an NREN production deployment</a></li>
+</ul>
+<h2 id="nanog-97"><a href="../../nanog-97/">NANOG 97</a><a class="headerlink" href="#nanog-97" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../nanog-97/towards-a-non-binary-view-of-ipv6-adoption/">Towards a Non-Binary View of IPv6 Adoption</a></li>
+</ul>
+<h2 id="lacnic-45"><a href="../../lacnic-45/">LACNIC 45</a><a class="headerlink" href="#lacnic-45" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../lacnic-45/behind-the-routes-measuring-bgp-instability-on-the-internet/">Behind the Routes: Measuring BGP Instability on the Internet</a></li>
+<li><a href="../../lacnic-45/bgp-origin-in-practice-inconsistencies-observed-in-lacnic-prefixes/">BGP ORIGIN in Practice: Inconsistencies Observed in LACNIC Prefixes</a></li>
+<li><a href="../../lacnic-45/ip-geolocation-update/">IP Geolocation Update</a></li>
+<li><a href="../../lacnic-45/lightscope-turning-unused-production-ports-into-global-network-telescope/">LightScope: Turning Unused Production Ports into Global Network Telescopes and Honeypots</a></li>
+<li><a href="../../lacnic-45/routing-under-siege-how-traffic-engineering-decisions-facilitate-prefix/">Routing under siege: how traffic engineering decisions facilitate prefix hijackings</a></li>
+<li><a href="../../lacnic-45/the-annoying-noisy-bgp-speakers/">The annoying Noisy BGP Speakers</a></li>
+<li><a href="../../lacnic-45/the-internet-asn-graph/">The Internet ASN graph</a></li>
+<li><a href="../../lacnic-45/what-is-my-rpki-validator-doing-right-now/">What Is My RPKI Validator Doing Right Now?</a></li>
+</ul>
+<h2 id="more-ip-2026"><a href="../../moreip-2026/">MORE-IP 2026</a><a class="headerlink" href="#more-ip-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../moreip-2026/time-dissemination-in-the-netherlands/">Time dissemination in the Netherlands</a></li>
+</ul>
+<h2 id="mlsys-2026"><a href="../../mlsys-2026/">MLSys 2026</a><a class="headerlink" href="#mlsys-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../mlsys-2026/profinfer-an-ebpf-based-fine-grained-llm-inference-profiler/">ProfInfer: An eBPF-based Fine-Grained LLM Inference Profiler</a></li>
+<li><a href="../../mlsys-2026/reparo-loss-resilient-generative-codec-for-video-conferencing/">REPARO: LOSS-RESILIENT GENERATIVE CODEC FOR VIDEO CONFERENCING</a></li>
+<li><a href="../../mlsys-2026/sonar-benchmarking-topology-and-collaboration-in-decentralized-learning/">SONAR: Benchmarking Topology and Collaboration in Decentralized Learning</a></li>
+</ul>
+<h2 id="ripe-92-edinburgh"><a href="../../ripe-92/">RIPE 92 (Edinburgh)</a><a class="headerlink" href="#ripe-92-edinburgh" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../ripe-92/detecting-and-characterizing-ddos-scrubbing-from-global-bgp-routing-insi/">Detecting and Characterizing DDoS Scrubbing from Global BGP Routing: Insights from Five Leading Scrubbers</a></li>
+<li><a href="../../ripe-92/dns-transitive-trust-and-how-many-is-many/">DNS, Transitive Trust and How Many is Many</a></li>
+<li><a href="../../ripe-92/measuring-the-impact-of-post-quantum-cryptography-on-complex-application/">Measuring The Impact of Post-Quantum Cryptography on Complex Applications: A Case Study on Federated Identity Management</a></li>
+<li><a href="../../ripe-92/openpenny-identifying-legitimate-traffic-to-reduce-monitoring-noise/">OpenPenny: Identifying Legitimate Traﬃc to Reduce Monitoring Noise</a></li>
+<li><a href="../../ripe-92/rpki-do-we-need-garbage-collection-now/">RPKI: Do we need Garbage Collection now?</a></li>
+</ul>
+<h2 id="swinog-41"><a href="../../swinog-41/">SwiNOG #41</a><a class="headerlink" href="#swinog-41" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../swinog-41/bgproutesio-a-next-gen-bgp-data-collection-platform/">bgproutes.io: A next-gen BGP data collection platform</a></li>
+</ul>
+<h2 id="zanogiweek-2026"><a href="../../zanog-2026/">ZANOG@iWeek 2026</a><a class="headerlink" href="#zanogiweek-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../zanog-2026/dns-resolution-from-operators-in-south-africa/">DNS Resolution from Operators in South Africa</a></li>
+<li><a href="../../zanog-2026/ipv6-measuring-uptake/">IPv6 - Measuring Uptake</a></li>
+</ul>
+<h2 id="itnog10"><a href="../../itnog-10/">ITNOG10</a><a class="headerlink" href="#itnog10" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../itnog-10/asixp-traffic-observability-osservabilita-del-traffico-asixp/">AS/IXP Traffic Observability / Osservabilità del traffico AS/IXP</a></li>
+<li><a href="../../itnog-10/building-the-longest-sr-te-lsp-in-the-world/">Building the longest SR-TE lsp in the world</a></li>
+<li><a href="../../itnog-10/measuring-the-public-internet/">Measuring the public Internet</a></li>
+</ul>
+<h2 id="nznog-2026"><a href="../../nznog-2026/">NZNOG 2026</a><a class="headerlink" href="#nznog-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../nznog-2026/open-fibre-standards/">Open Fibre Standards</a></li>
+<li><a href="../../nznog-2026/routeviews-update/">Routeviews Update</a></li>
+</ul>
+<h2 id="peering-days-2026"><a href="../../peeringdays-2026/">Peering Days 2026</a><a class="headerlink" href="#peering-days-2026" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../peeringdays-2026/the-scourge-of-excessive-as-sets/">The Scourge of Excessive AS-SETs</a></li>
+</ul>
+<h2 id="ietf-125-shenzhen"><a href="../../ietf-125/">IETF 125 (Shenzhen)</a><a class="headerlink" href="#ietf-125-shenzhen" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../ietf-125/deprecating-ipv6-extension-headers-on-the-internet/">Deprecating IPv6 Extension Headers on the Internet</a></li>
+</ul>
+<h2 id="dknog16"><a href="../../dknog-16/">DKNOG16</a><a class="headerlink" href="#dknog16" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../dknog-16/how-far-can-you-get-with-ix-route-servers/">How far can you get with IX Route Servers?</a></li>
+<li><a href="../../dknog-16/ixp-based-observations-on-peering-and-routing-changes-after-middle-east/">IXP+ based observations on peering and routing changes after Middle East cable outages</a></li>
+</ul>
+<h2 id="apricot-2026-jakarta"><a href="../../apricot-2026/">APRICOT 2026 (Jakarta)</a><a class="headerlink" href="#apricot-2026-jakarta" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../apricot-2026/bgp-in-2025/">BGP in 2025</a></li>
+<li><a href="../../apricot-2026/bgproutesio-a-next-generation-bgp-data-collection-platform/">bgproutes.io: A Next-Generation BGP Data Collection Platform</a></li>
+<li><a href="../../apricot-2026/conference-network-report/">Conference Network Report</a></li>
+<li><a href="../../apricot-2026/debugging-routing-forwarding-using-ripe-atlas/">Debugging Routing &amp; Forwarding Using RIPE Atlas</a></li>
+<li><a href="../../apricot-2026/to-space-and-back-integrating-next-generation-terrestrial-and-satellite/">To Space and Back: Integrating Next-Generation Terrestrial and Satellite Communication Networks</a></li>
+</ul>
+<h2 id="nanog-96"><a href="../../nanog-96/">NANOG 96</a><a class="headerlink" href="#nanog-96" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../nanog-96/bgp-in-2025/">BGP in 2025</a></li>
+<li><a href="../../nanog-96/exodus-of-ipv4-from-war-torn-ukraine/">Exodus of IPv4 from War-torn Ukraine</a></li>
+<li><a href="../../nanog-96/ip-geofeeds-trust-accuracy-and-abuse/">IP Geofeeds: Trust, Accuracy, and Abuse</a></li>
+<li><a href="../../nanog-96/rovista-mapping-real-rov-deployments-dependencies-and-delays/">RoVista+: Mapping Real ROV Deployments, Dependencies, and Delays</a></li>
+<li><a href="../../nanog-96/the-bgp-clock-and-the-bgp-observatory-hunting-stuck-routes/">The BGP Clock and the BGP Observatory: Hunting Stuck Routes​</a></li>
+</ul>
+<h2 id="acm-conext-2025"><a href="../../conext-2025/">ACM CoNEXT 2025</a><a class="headerlink" href="#acm-conext-2025" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../conext-2025/an-empirical-analysis-of-the-nostr-social-network/">An Empirical Analysis of the Nostr Social Network</a></li>
+<li><a href="../../conext-2025/moonem-high-precision-path-property-emulation-using-dpdk/">MoonEm — High-Precision Path Property Emulation using DPDK</a></li>
+<li><a href="../../conext-2025/tsn-ray-gauging-tas-and-psfp-delays-of-tsn-switches-for-predictable-dete/">T(SN)-Ray: Gauging TAS and PSFP Delays of TSN Switches for Predictable Deterministic Networking</a></li>
+<li><a href="../../conext-2025/transient-forwarding-anomalies-and-how-to-find-them/">Transient Forwarding Anomalies and How to Find Them</a></li>
+<li><a href="../../conext-2025/unveiling-ipv6-scanning-dynamics/">Unveiling IPv6 Scanning Dynamics</a></li>
+</ul>
+<h2 id="autocon-4-austin"><a href="../../autocon-4/">AutoCon 4 (Austin)</a><a class="headerlink" href="#autocon-4-austin" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../autocon-4/2025-state-of-network-automation-survey-results/">2025 State of Network Automation Survey Results</a></li>
+</ul>
+<h2 id="denog-17-essen"><a href="../../denog-17/">DENOG 17 (Essen)</a><a class="headerlink" href="#denog-17-essen" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../denog-17/securitytxt-across-the-industry/">Security.txt across the industry</a></li>
+<li><a href="../../denog-17/securitytxt-across-the-industry-2/">Security.txt across the industry</a></li>
+<li><a href="../../denog-17/slow-network-fast-money-how-deutsche-telekom-breaks-the-internet/">Slow network, fast money: How Deutsche Telekom breaks the internet</a></li>
+<li><a href="../../denog-17/slow-network-fast-money-how-deutsche-telekom-breaks-the-internet-2/">Slow network, fast money: How Deutsche Telekom breaks the internet</a></li>
+<li><a href="../../denog-17/the-return-of-egp-or-the-curious-case-of-the-bgp-origin-attribute/">The return of EGP or the curious case of the BGP Origin attribute</a></li>
+<li><a href="../../denog-17/the-return-of-egp-or-the-curious-case-of-the-bgp-origin-attribute-2/">The return of EGP or the curious case of the BGP Origin attribute</a></li>
+</ul>
+<h2 id="arin-56-public-policy-and-members-meeting"><a href="../../arin-56/">ARIN 56 Public Policy and Members Meeting</a><a class="headerlink" href="#arin-56-public-policy-and-members-meeting" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../arin-56/policy-implementation-and-experience-report/">Policy Implementation and Experience Report</a></li>
+</ul>
+<h2 id="hacklu-2025"><a href="../../hacklu-2025/">hack.lu 2025</a><a class="headerlink" href="#hacklu-2025" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../hacklu-2025/revisiting-rands-lost-monte-carlo-simulations-sharla-perrine-paul-baran/">Revisiting RAND’s Lost Monte Carlo Simulations: Sharla Perrine, Paul Baran, and the True Business Case for the Internet</a></li>
+<li><a href="../../hacklu-2025/when-netflow-meets-pcap-a-network-forensic-approach/">When Netflow meets Pcap - A network forensic approach.</a></li>
+</ul>
+<h2 id="ripe-91-bucharest"><a href="../../ripe-91/">RIPE 91 (Bucharest)</a><a class="headerlink" href="#ripe-91-bucharest" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../ripe-91/an-empirical-evaluation-of-longitudinal-anycast-catchment-stability/">An empirical evaluation of longitudinal anycast catchment stability</a></li>
+<li><a href="../../ripe-91/are-ntp-clients-always-right/">Are NTP Clients Always Right?</a></li>
+<li><a href="../../ripe-91/network-measurement-in-the-dark/">Network Measurement in the Dark</a></li>
+<li><a href="../../ripe-91/querying-the-dfz/">Querying the DFZ</a></li>
+<li><a href="../../ripe-91/rewriting-bgp-origin/">Rewriting BGP Origin</a></li>
+<li><a href="../../ripe-91/the-bgp-clock-and-the-bgp-observatory-hunting-stuck-routes/">The BGP Clock and the BGP Observatory: Hunting Stuck Routes</a></li>
+<li><a href="../../ripe-91/what-happens-when-you-overshare-a-look-into-the-bgp-maximum-prefix-featu/">What happens when you overshare? A Look into the BGP Maximum-Prefix Feature</a></li>
+</ul>
+<h2 id="ocp-global-summit-2025"><a href="../../ocp-2025/">OCP Global Summit 2025</a><a class="headerlink" href="#ocp-global-summit-2025" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../ocp-2025/evaluation-of-cpo-performance-and-pluggable-optics-health-for-reliable-a/">Evaluation of CPO Performance and Pluggable Optics Health for Reliable AI Infrastructure</a></li>
+<li><a href="../../ocp-2025/firefly-scalable-ultra-accurate-clock-synchronization-for-datacenters/">Firefly: Scalable, Ultra-Accurate Clock Synchronization for Datacenters</a></li>
+</ul>
+<h2 id="netnod-tech-meeting-2025"><a href="../../netnod-2025/">Netnod Tech Meeting 2025</a><a class="headerlink" href="#netnod-tech-meeting-2025" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../netnod-2025/analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber/">Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for Coherent (16QAM) and Non-Coherent (PAM4) high speed transceivers under environmental variations</a></li>
+</ul>
+<h2 id="sigcomm-2025"><a href="../../sigcomm-2025/">SIGCOMM 2025</a><a class="headerlink" href="#sigcomm-2025" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../sigcomm-2025/censys-a-map-of-internet-hosts-and-services/">Censys: A Map of Internet Hosts and Services</a></li>
+<li><a href="../../sigcomm-2025/formalizing-dependence-of-web-infrastructure/">Formalizing Dependence of Web Infrastructure</a></li>
+<li><a href="../../sigcomm-2025/threading-the-ocean-mapping-digital-routes-across-submarine-cables-using/">Threading the Ocean: Mapping Digital Routes Across Submarine Cables using Calypso</a></li>
+</ul>
+<h2 id="usenix-security-25-34th-usenix-security-symposium"><a href="../../usenix-security-2025/">USENIX Security '25 (34<sup>th</sup> USENIX Security Symposium)</a><a class="headerlink" href="#usenix-security-25-34th-usenix-security-symposium" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../usenix-security-2025/assessing-the-aftermath-the-effects-of-a-global-takedown-against-ddos-fo/">Assessing the Aftermath: The Effects of a Global Takedown Against DDoS-for-hire Services</a></li>
+<li><a href="../../usenix-security-2025/catch-22-uncovering-compromised-hosts-using-ssh-public-keys/">Catch-22: Uncovering Compromised Hosts Using SSH Public Keys</a></li>
+<li><a href="../../usenix-security-2025/deanonymizing-ethereum-validators-the-p2p-network-has-a-privacy-issue/">Deanonymizing Ethereum Validators: The P2P Network Has a Privacy Issue</a></li>
+<li><a href="../../usenix-security-2025/exposing-and-circumventing-sni-based-quic-censorship-of-the-great-firewa/">Exposing and Circumventing SNI-based QUIC Censorship of the Great Firewall of China</a></li>
+<li><a href="../../usenix-security-2025/smine-collecting-and-analyzing-smime-certificates-at-scale/">S/MINE: Collecting and Analyzing S/MIME Certificates at Scale</a></li>
+<li><a href="../../usenix-security-2025/towards-internet-based-state-learning-of-tls-state-machines/">Towards Internet-Based State Learning of TLS State Machines</a></li>
+</ul>
+<h2 id="itnog9"><a href="../../itnog-9/">ITNOG9</a><a class="headerlink" href="#itnog9" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../itnog-9/analyzing-network-reliability-up-to-800g-impact-of-snr-thresholds-on-ber/">Analyzing network reliability up to 800G - Impact of SNR thresholds on BER for Coherent (16QAM) and Non-Coherent (PAM4) high speed transceivers under environmental variations</a></li>
+</ul>
+<h2 id="mlsys-2025"><a href="../../mlsys-2025/">MLSys 2025</a><a class="headerlink" href="#mlsys-2025" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../mlsys-2025/volut-efficient-volumetric-streaming-enhanced-by-lut-based-super-resolut/">VoLUT: Efficient Volumetric streaming enhanced by LUT-based super-resolution</a></li>
+</ul>
+<h2 id="nsdi-25"><a href="../../nsdi-2025/">NSDI '25</a><a class="headerlink" href="#nsdi-25" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../nsdi-2025/the-benefits-and-limitations-of-user-interrupts-for-preemptive-userspace/">The Benefits and Limitations of User Interrupts for Preemptive Userspace Scheduling</a></li>
+</ul>
+<h2 id="open-networking-edge-summit-2025"><a href="../../onesummit-2025/">Open Networking &amp; Edge Summit 2025</a><a class="headerlink" href="#open-networking-edge-summit-2025" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../onesummit-2025/state-of-open-source-networking-arpit-joshipura-hilary-carter-the-linux/">State of Open Source Networking - Arpit Joshipura &amp; Hilary Carter, The Linux Foundation</a></li>
+</ul>
+<h2 id="srecon25-americas"><a href="../../srecon-2025-americas/">SREcon25 Americas</a><a class="headerlink" href="#srecon25-americas" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="../../srecon-2025-americas/network-flow-data-in-the-cloud/">Network Flow Data in the Cloud</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../../javascripts/video.js"></script>
+      
+        <script src="../../javascripts/slides.js"></script>
+      
+        <script src="../../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

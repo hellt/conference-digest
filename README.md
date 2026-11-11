@@ -138,7 +138,8 @@ dark, with a locally served Inter font. Search results, heading permalinks,
 right-hand scroll tracking, theme persistence and instant navigation use
 Zensical’s native components.
 `scripts/build_site.py` turns every `digests/<key>.md` into a post (the digest
-text is unchanged; tiers and picks get markup for styling) and writes the
+text is unchanged; tiers and picks get markup for styling), links each talk's
+search tags to a page listing all talks with that tag, and writes the
 Conferences tracker — a table of every tracked edition, newest first, with a
 client-side name filter (`docs/javascripts/conf-filter.js`). `site.yml` builds
 it on PRs and publishes it to the

@@ -92,7 +92,7 @@ Slides and recordings often arrive after the digest. Every day, Links Refresh re
 
 ## Search
 
-Digest and talk pages carry topic keywords when the writer's keywords block validates. The writer chooses them from a controlled vocabulary covering the reader's areas, including BGP, AI clusters, optics, Kubernetes, and cloud. The pipeline stores them as hand-editable repository metadata, and the site's search indexes them like a page title. Searching for a topic such as `ebpf` or `Kubernetes` can therefore find a relevant talk even when that word is absent from its title.
+Digest and talk pages carry topic keywords when the writer's keywords block validates. The writer chooses them from a controlled vocabulary covering the reader's areas, including BGP, AI clusters, optics, Kubernetes, and cloud. The pipeline stores them as hand-editable repository metadata, and the site's search indexes them like a page title. Searching for a topic such as `ebpf` or `Kubernetes` can therefore find a relevant talk even when that word is absent from its title. Talk pages also show their tags as clickable chips; each tag opens a page listing every picked talk with that tag, grouped by conference.
 
 ## Reading a digest
 

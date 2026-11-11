@@ -5423,3 +5423,22 @@ chnug-2:
     'Optical Foundations for IP Engineers: From Fiber Basics to CWDM/DWDM and Link Budgeting':
     - optics
     - cabling
+chnug-4:
+  post:
+  - automation
+  - telemetry
+  - ipam
+  - kubernetes
+  - open-source
+  talks:
+    Network Monitoring with the gNMIc Operator:
+    - kubernetes
+    - telemetry
+    - observability
+    - automation
+    'DDI: Managing IP Allocation with an Open-Source DDI':
+    - ipam
+    - dns
+    - automation
+    - open-source
+    'What''s Next for Nornir: Project Update and Roadmap': []

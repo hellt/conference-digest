@@ -1183,6 +1183,7 @@ conferences:
   - key: chnug-2
     name: "CHNUG #2"
     description: "The Swiss Network User Group's practitioner meetups on networking, automation, observability, cloud connectivity, and operations."
+    location: "Winterthur · Switzerland"
     end_date: 2026-03-12
     fetcher: chnug
     program_url: "https://chnug.ch/chnug002"
@@ -1203,6 +1204,7 @@ conferences:
   - key: chnug-4
     name: "CHNUG #4"
     description: "The Swiss Network User Group's practitioner meetups on networking, automation, observability, cloud connectivity, and operations."
+    location: "Rapperswil-Jona · Switzerland"
     end_date: 2026-08-26
     fetcher: chnug
     program_url: "https://chnug.ch/chnug004"

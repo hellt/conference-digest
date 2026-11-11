@@ -524,10 +524,11 @@ run.
   Fair 2026: 561; Code 2026: 108, registered while ongoing with its prompt
   deferred until after the event). Separate
   recording records are not title-matched into that schedule. NYC 2026 has no
-  JSON feed, so its Watch & read page is the fallback: it slices two full-day
-  YouTube streams into per-session chapters with synopses, timestamped
-  recordings and reading-edition pages carrying full transcripts. The 46 real
-  talks are kept; administrative Remarks cards are dropped.
+  JSON feed, so its Watch & read page supplies 46 talks. Verified standalone
+  records from the public talk catalog are preferred for their full transcript
+  pages, structured speaker organizations and uncut recordings (44 currently);
+  ambiguous or absent matches retain the chapter timestamp (2 currently).
+  Administrative Remarks cards are dropped.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

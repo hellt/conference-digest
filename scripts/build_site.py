@@ -198,6 +198,7 @@ EMPLOYER_VARIANTS = {
     "Ping Identity": (),
     "CyberArk": (),
     "Intuit": (),
+    "Revolut": (),
     "OpenAI": (),
     "Defakto Security": (),
     "MATTR": (),

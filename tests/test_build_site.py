@@ -38,6 +38,8 @@ class EmployerTests(TestCase):
             ("Mark Tinka, TransmissionCo", "[TransmissionCo](../companies/transmissionco.md)"),
             ("Christoph Glingener (CEO, ADTRAN)", "[ADTRAN](../companies/adtran.md)"),
             ("Speakers: Eelco Chaudron, Red Hat, Inc.", "[Red Hat, Inc.](../companies/red-hat.md)"),
+            ("David Abitbol (Revolut, Ops & Infrastructure Leader)",
+             "[Revolut](../companies/revolut.md)"),
             ("Yoshiyuki Tabata, Hitachi, Ltd.", "[Hitachi, Ltd.](../companies/hitachi.md)"),
             ("Thomas Holterbach, University of Strasbourg",
              "[University of Strasbourg](../companies/university-of-strasbourg.md)"),

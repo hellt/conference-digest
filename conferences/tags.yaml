@@ -5254,10 +5254,12 @@ aiengineer-worldsfair-2026:
     - kubernetes
     - ai
     - load-balancing
+    - z-ai
     'Routing LLM Inference in Production: From Engine Signals to Policy':
     - load-balancing
     - ai
     - observability
+    - openai
     'Fault-Tolerant Training at Scale: Making Hardware Failures a Non-Event':
     - kubernetes
     - gpu-clusters
@@ -5304,6 +5306,7 @@ aiengineer-worldsfair-2026:
     - ai
     - benchmarking
     - gpu-clusters
+    - moonshot
     Are LLM Performance Benchmarks Reliable?:
     - benchmarking
     - ai
@@ -5322,6 +5325,7 @@ aiengineer-worldsfair-2026:
     What If Your Chip Design Team Moved Like a Single Body?:
     - ai
     - silicon
+    - anthropic
     Harnessing Collective Agent Intelligence for Open Science:
     - ai
     - benchmarking
@@ -5335,7 +5339,7 @@ aiengineer-nyc-2026:
   - orchestration
   talks:
     Not All GPU's Are Deployed The Same:
-    - ai
+    - deepseek
     - gpu-clusters
     - capacity-planning
     - benchmarking
@@ -5358,7 +5362,7 @@ aiengineer-nyc-2026:
     - containers
     - kubernetes
     Shipping like a startup, regulated like a bank:
-    - ai
+    - z-ai
     - gpu-clusters
     - cloud
     - capacity-planning

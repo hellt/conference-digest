@@ -17,6 +17,11 @@
 
 vocabulary:
   ai: artificial intelligence systems, applications and practices not covered by a finer AI tag
+  deepseek: DeepSeek models, research, deployment and inference economics
+  openai: OpenAI models, products, APIs and deployment engineering
+  anthropic: Anthropic Claude models, agent SDKs and deployment engineering
+  z-ai: Z.ai/Zhipu GLM models, open weights and deployment engineering
+  moonshot: Moonshot AI Kimi models and deployment engineering
   ai-networks: networking for AI/ML training and inference clusters (job-level load balancing, collectives, topology-aware scheduling)
   gpu-clusters: GPU accelerator interconnects and cluster fabrics (NVLink, scale-up vs scale-out)
   ml-for-networking: machine learning applied to network operation (anomaly detection, traffic prediction, AIOps)

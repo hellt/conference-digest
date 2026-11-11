@@ -113,7 +113,7 @@ HEADED = re.compile(r"^### (.+?) — (.+) — (?:Core|Adjacent|Wildcard)$")
 AUTHORS = re.compile(r"^- \*\*Authors / tier\*\*:\s*")
 
 # Employer aliases mapped to the canonical name their page uses. Unknown
-# companies are still discovered from structured "Name (Company, role)"
+# companies are still discovered from structured "Name (Company[, role])"
 # attributions below; this map normalizes spellings rather than acting as an
 # allow-list ("Cisco Systems" and "Cisco ThousandEyes" are Cisco, "AWS" is
 # Amazon, universities appear under both full and short names).
@@ -284,7 +284,7 @@ EMPLOYER_VARIANTS = {
     "Internet Security Research Group": ("Let's Encrypt",),
     "Censys": ("Censys Inc.",),
     "Anapaya": (),
-    "Proton AG": (),
+    "Proton AG": ("Proton",),
     "2degrees": (),
     "20C": (),
     "5GN": (),
@@ -457,6 +457,7 @@ EMPLOYER_VARIANTS = {
     "On2it": (),
     "OPNET": (),
     "OpsMill": (),
+    "OST": ("OST Students",),
     "Optus": (),
     "Orange Wholesale": (),
     "OVHcloud": (),
@@ -785,6 +786,7 @@ def anchor_id(heading: str) -> str:
 
 
 _NOT_AN_EMPLOYER = {"", "n/a", "na", "none", "unknown", "no affiliation", "no affiliation listed"}
+_NOT_AN_EMPLOYER_RE = re.compile(r"\baffiliation\b|\bsession$|\bproject$|^per\s|\bnot listed\b", re.I)
 _ROLE_PREFIX = re.compile(
     r"^(?:co[- ]?lead\b|chief\b|ceo\b|cto\b|cfo\b|coo\b|head\b|lead\b|"
     r"(?:[\w+-]+[ -]+){0,3}(?:researcher|engineer|developer|leader|scientist|analyst|"
@@ -801,7 +803,7 @@ _ROLE_SUFFIX = re.compile(
 
 
 def _structured_employer_spans(text: str) -> list[tuple[int, int, str]]:
-    """Companies in ``Speaker (Company, role)`` groups, outside the alias map.
+    """Companies in ``Speaker (Company[, role])`` groups, outside the alias map.
 
     This is deliberately a structural parse, not an LLM guess. Only a group
     immediately following a person-like name contributes, and only its first
@@ -819,12 +821,13 @@ def _structured_employer_spans(text: str) -> list[tuple[int, int, str]]:
             continue
         fields = group.group(1).split(",", 2)
         role = fields[1].strip() if len(fields) >= 2 else ""
-        if not _ROLE_SUFFIX.search(role) and not _ROLE_PREFIX.match(role):
-            continue  # no role delimiter: too ambiguous in legacy prose attributions
+        if len(fields) >= 2 and not _ROLE_SUFFIX.search(role) and not _ROLE_PREFIX.match(role):
+            continue  # a comma without a role usually introduces a prose note
         company = fields[0].strip()
         if ";" in fields[0]:  # semicolons introduce role notes, not larger employer names
             continue
-        if company.lower() in _NOT_AN_EMPLOYER or len(company) > 100 or _ROLE_PREFIX.match(company):
+        if (company.lower() in _NOT_AN_EMPLOYER or _NOT_AN_EMPLOYER_RE.search(company)
+                or len(company) > 100 or _ROLE_PREFIX.match(company)):
             continue
         start = group.start(1) + group.group(1).find(company)
         found.append((start, start + len(company), company))

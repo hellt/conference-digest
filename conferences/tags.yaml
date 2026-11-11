@@ -995,9 +995,6 @@ gtc-2026:
   - power
   - network-security
   talks:
-    Accelerated Networking for AI Infrastructure:
-    - ai-networks
-    - gpu-clusters
     'Scaling Out and Across: Networking Innovations for Giga-Scale AI Systems':
     - ai-networks
     - data-center-fabric
@@ -1011,10 +1008,6 @@ gtc-2026:
     Safety in the OpenClaw Era:
     - identity
     - network-security
-    Deep Dive on Gigawatt AI Factories:
-    - ai-networks
-    - power
-    - gpu-clusters
     'Redefining Scalable AI Performance: OCI Supercomputing in the Cloud (Presented by Oracle)':
     - ai-networks
     - rdma

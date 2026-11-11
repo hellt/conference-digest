@@ -267,6 +267,19 @@ class RecordingTests(TestCase):
                 self.assertTrue(links)
                 self.assertEqual(player, [])
 
+    def test_signed_kaltura_player_is_an_iframe_but_unsigned_is_not(self):
+        base = ("https://cdnapisec.kaltura.com/p/2935771/sp/293577100/"
+                "embedIframeJs/uiconf_id/56782552/partner_id/2935771"
+                "?iframeembed=true&playerId=kaltura_player&entry_id=1_uejgczqp")
+        url = base + "&ks=widget-ks%3D%3D"
+        _, player = links_block(f"[Recording]({url})", "Routing & Security")
+        frame = BeautifulSoup("\n".join(player), "html.parser").find("iframe")
+        self.assertIsNotNone(frame)
+        self.assertEqual(frame["src"], url)
+        self.assertEqual(frame["title"], "Recording: Routing & Security")
+        self.assertIn("allowfullscreen", frame.attrs)
+        self.assertEqual(links_block(f"[Recording]({base})", "Routing")[1], [])
+
     def test_player_placement_in_digest_and_talk_page(self):
         lines = [f"**Links:** [Recording]({RECORDING})", "", "*Jane Doe*", "", "**Why:** Routing matters."]
         digest = decorate("## Core\n### Routing\n" + "\n".join(lines))
@@ -370,6 +383,20 @@ class SlideViewerTests(TestCase):
                 self.assertEqual([label.get_text() for label in groups[0].select("label")],
                                  ["Video", "PPTX", "PDF"])
                 self.assertEqual(len(groups[0].select(".tabbed-block")), 3)
+
+    def test_kaltura_video_and_pdf_render_as_tabs(self):
+        video = ("https://cdnapisec.kaltura.com/p/2935771/sp/293577100/"
+                 "embedIframeJs/uiconf_id/56782552/partner_id/2935771"
+                 "?iframeembed=true&playerId=kaltura_player&entry_id=1_uejgczqp&ks=signed")
+        pdf = ("https://cfvod.kaltura.com/api_v3/index.php/service/"
+               "attachment_attachmentAsset/action/serve/attachmentAssetId/1_l6d19qoq/ks/signed")
+        markup = "\n".join(media_block(f"[Slides]({pdf}) · [Recording]({video})", "Routing"))
+        self.assertLess(markup.index('=== "Video"'), markup.index('=== "PDF"'))
+        frames = BeautifulSoup(markup, "html.parser").find_all("iframe")
+        self.assertEqual(len(frames), 2)
+        self.assertEqual(frames[0]["src"], video)
+        self.assertEqual(frames[1]["data-pdf-src"], pdf)
+        self.assertNotIn("src", frames[1].attrs)
 
     def test_github_pdf_download_uses_browser_blob_loader(self):
         for host in ("media.githubusercontent.com", "raw.githubusercontent.com"):

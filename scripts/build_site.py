@@ -25,7 +25,8 @@ The digest text itself is not rewritten: headings and wording pass through
 unchanged. Each pick's `**Links:**` row (written by conferences/links.py)
 becomes a row of plain source links, a talk recording on YouTube also gets a
 click-to-play thumbnail (docs/javascripts/video.js swaps in the player), direct
-video files get a native HTML player. Per-talk pages also embed slide viewers
+video files get a native HTML player, and signed Kaltura recordings get an
+iframe. Per-talk pages also embed slide viewers
 alongside recordings in Video / PPTX / PDF tabs. PDFs use the browser's native
 viewer; GitHub-hosted downloads are loaded as PDF blobs by slides.js.
 Employer names in the speaker line
@@ -904,6 +905,16 @@ def links_block(row: str, title: str) -> tuple[list[str], list[str]]:
             f'<a href="{src}">Watch the recording</a></video></div>',
             "",
         ]
+    elif recording and (urlsplit(recording).hostname or "").endswith(".kaltura.com") \
+            and re.search(r"/(?:embedIframeJs|mwEmbedFrame\.php)/", recording) \
+            and re.search(r"[?&]ks=", recording):
+        src = escape(recording, quote=True)
+        label = escape(f"Recording: {title}", quote=True)
+        player = [
+            f'<div class="pick-video"><iframe class="pick-video__frame" src="{src}" '
+            f'title="{label}" loading="lazy" allowfullscreen></iframe></div>',
+            "",
+        ]
     return out, player
 
 
@@ -917,14 +928,21 @@ def media_block(row: str, title: str) -> list[str]:
     for text, url in MD_LINK.findall(row):
         if not re.fullmatch(r"Slides(?: \([^)]*\)| 2)?", text.strip(), re.I):
             continue
-        extension = Path(urlsplit(url).path).suffix.lower()
+        parsed = urlsplit(url)
+        kaltura_pdf = (parsed.hostname or "").endswith(".kaltura.com") \
+            and "/attachment_attachmentAsset/" in parsed.path
+        extension = ".pdf" if kaltura_pdf else Path(parsed.path).suffix.lower()
         if extension in (".pptx", ".pdf"):
             decks.append((extension[1:].upper(), url))
     decks.sort(key=lambda deck: deck[0] != "PPTX")
     for i, (fmt, url) in enumerate(decks):
         src = "https://view.officeapps.live.com/op/embed.aspx?src=" + quote(url, safe="") if fmt == "PPTX" else url
-        # GitHub serves PDFs as downloads with X-Frame-Options: deny, but permits CORS.
-        download = fmt == "PDF" and urlsplit(url).hostname in ("media.githubusercontent.com", "raw.githubusercontent.com")
+        # GitHub and Kaltura serve PDFs as downloads, but permit CORS. Load
+        # those as typed blobs so the browser renders rather than saves them.
+        download = fmt == "PDF" and (
+            urlsplit(url).hostname in ("media.githubusercontent.com", "raw.githubusercontent.com")
+            or "/attachment_attachmentAsset/" in urlsplit(url).path
+        )
         source = f'data-pdf-src="{escape(url, quote=True)}"' if download else f'src="{escape(src, quote=True)}"'
         label = escape(f"{fmt} slides: {title}", quote=True)
         frame = (

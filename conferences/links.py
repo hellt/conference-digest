@@ -51,7 +51,7 @@ from conferences.fetchers.ovscon import talk_links as ovscon_talk_links
 from conferences.fetchers.ripe import talk_links as ripe_talk_links
 
 # slides2 holds a second format of the deck (PDF and PPTX both shown).
-KEYS = ("page", "pdf", "slides", "slides2", "video", "materials")
+KEYS = ("page", "talk", "pdf", "slides", "slides2", "video", "materials")
 # A URL runs to the end of its " | " part: some file names contain spaces.
 LINK_LINE = re.compile(r"^(page|pdf|slides|video|materials):\s*(https?://.+?)\s*$")
 SEPARATOR = re.compile(r"^=+ *PROGRAM TEXT *=+$", re.M)
@@ -313,6 +313,92 @@ def classify(found: dict[str, str], href: str, text: str) -> None:
         found.setdefault("pdf", href)
 
 
+GTC_SESSION = re.compile(r"/gtc/session-catalog/sessions/(gtc\d{2}-[a-z0-9]+)/?$")
+NOD_API = "https://api-prod.nvidia.com/services/nod/api/v1/"
+KALTURA_VIDEO = re.compile(r"urn:nvidia:events:kaltura:([A-Za-z0-9_]+)")
+KALTURA_PDF = re.compile(r"urn:nvidia:events:assets:kaltura:([A-Za-z0-9_]+)")
+KALTURA_WIDGET = "https://cdnapi-ev.kaltura.com/api_v3/service/session/action/startWidgetSession"
+
+
+def kaltura_widget_ks() -> str:
+    """An anonymous, short-lived session for NVIDIA's public Kaltura player."""
+    try:
+        resp = HTTP.post(KALTURA_WIDGET, timeout=20,
+                         data={"widgetId": "_2935771", "expiry": 86400, "format": 1})
+        ks = resp.json().get("ks", "") if resp.status_code == 200 else ""
+    except Exception:
+        return ""
+    return ks if re.fullmatch(r"[A-Za-z0-9_-]+={0,2}", ks) else ""
+
+
+def scrape_gtc_page(url: str) -> dict[str, str]:
+    """Public on-demand assets for one GTC catalog session.
+
+    The on-demand page is client-rendered, so its HTML has no download links.
+    NVIDIA's public session API names the Kaltura video and PDF assets. Video
+    embeds get an anonymous Kaltura widget session (KS). PDF downloads need
+    the signed URL minted by the same API, rather than the unsigned Kaltura
+    URL (which answers with an access-control error).
+    """
+    match = GTC_SESSION.search(urlparse(url).path)
+    if not match:
+        return {}
+    session_id = match.group(1)
+    try:
+        resp = HTTP.get(NOD_API + "session", params={"id": session_id}, timeout=20)
+        data = resp.json()
+    except Exception:
+        return {}
+    if not isinstance(data, dict) or not isinstance(data.get("sessionData"), dict):
+        return {}
+    session = data["sessionData"]
+    if resp.status_code != 200 or data.get("responseCode") != 200 \
+            or session.get("sessionID") != session_id:
+        return {}
+
+    found: dict[str, str] = {}
+    video_id = pdf_id = ""
+    for asset in session.get("assets") or []:
+        if asset.get("viewFileAccess") != "public":
+            continue
+        urn = asset.get("url") or ""
+        if "video" in asset.get("fileType", "").lower() and not video_id:
+            video = KALTURA_VIDEO.fullmatch(urn)
+            video_id = video.group(1) if video else ""
+        elif asset.get("fileType", "").upper() == "PDF" and not pdf_id:
+            pdf = KALTURA_PDF.fullmatch(urn)
+            pdf_id = pdf.group(1) if pdf else ""
+    if not video_id and not pdf_id:
+        return {}
+
+    found["talk"] = f"https://www.nvidia.com/en-us/on-demand/session/{session_id}/"
+    if video_id:
+        ks = kaltura_widget_ks()
+        if ks:
+            found["video"] = (
+                "https://cdnapisec.kaltura.com/p/2935771/sp/293577100/"
+                "embedIframeJs/uiconf_id/56782552/partner_id/2935771"
+                f"?iframeembed=true&playerId=kaltura_player&entry_id={video_id}"
+                f"&ks={quote(ks, safe='')}"
+            )
+    if pdf_id:
+        try:
+            resp = HTTP.get(
+                NOD_API + "kaltura/session/geturl",
+                params={"kaltura-asset-id": pdf_id, "session-id": session_id},
+                timeout=20,
+            )
+            download = (resp.json().get("asset-url") or "").replace("\\", "")
+            parsed = urlparse(download)
+            if resp.status_code == 200 and parsed.scheme == "https" \
+                    and (parsed.hostname or "").endswith(".kaltura.com") \
+                    and f"/attachmentAssetId/{pdf_id}/" in parsed.path:
+                found["slides"] = download
+        except Exception:
+            pass
+    return found
+
+
 def scrape_page(url: str, tavily_key: str = "") -> dict[str, str]:
     """Slides, paper and recording links on a talk's own page.
 
@@ -326,6 +412,8 @@ def scrape_page(url: str, tavily_key: str = "") -> dict[str, str]:
         # #/session/... is client-side: HTML/extraction sees the shared catalog,
         # not this talk. Materials require login; never borrow promotional links.
         return {}
+    if host == "www.nvidia.com" and GTC_SESSION.search(parsed.path):
+        return scrape_gtc_page(url)
     ripe = re.fullmatch(r"ripe\d+\.ripe\.net", host) is not None
     operator_source = (ripe or host == "nlnog.net" or host.endswith(".denog.de")
                        or (host == "pretalx.com" and parsed.path.startswith("/denog")))
@@ -744,14 +832,22 @@ def link_alive(url: str, tavily_key: str = "") -> Optional[bool]:
     """
     if youtube_id(url):
         return _oembed_alive(url)
+    parsed = urlparse(url)
+    if (parsed.hostname or "").endswith(".kaltura.com") \
+            and "embedIframeJs" in parsed.path and not parse_qs(parsed.query).get("ks"):
+        return False
     try:
         r = HTTP.get(url, timeout=20, stream=True)
         code = r.status_code
+        # Kaltura reports an expired/missing download signature as HTTP 200
+        # with an empty HTML body; the actual PDF also arrives as 200.
+        restricted = "access-control" in r.headers.get("X-Kaltura-App", "")
         r.close()
     except Exception:
         code = None
+        restricted = False
     if code == 200:
-        return True
+        return False if restricted else True
     if code in (404, 410):
         return False
     if code in (403, 429, 503) or code is None or code >= 500:
@@ -779,6 +875,8 @@ def label(kind: str, url: str, links: dict[str, str]) -> str:
         return "Slides"
     if kind == "page":
         return "Draft" if "datatracker.ietf.org/doc/" in url else "Abstract"
+    if kind == "talk":
+        return "Talk page"
     if kind == "video":
         return "Session recording" if "materials" in links else "Recording"
     return {"pdf": "Paper", "slides": "Slides", "materials": "Materials"}[kind]
@@ -821,6 +919,7 @@ def parse_row(rest: str) -> dict[str, str]:
     for text, url in pairs:
         t = text.lower()
         kind = ("video" if any(w in t for w in ("recording", "video")) else
+                "talk" if t == "talk page" else
                 ("slides2" if "slides" in out else "slides") if "slide" in t else
                 "materials" if "material" in t else
                 "pdf" if any(w in t for w in ("paper", "pdf")) else
@@ -873,12 +972,19 @@ def enrich(markdown: str, prompt: str, ctx: Context, log=print) -> tuple[str, di
                 vid, start = stream
                 links["video"] = f"https://www.youtube.com/watch?v={vid}&t={start}s"
                 stats["video_from_stream"] += 1
-            if ctx.fetch_pages and links.get("page") and not (links.get("video") and links.get("slides")):
+            # GTC is always re-read: its signed PDF URL needs renewing.
+            complete = ctx.marker != "gtc" and links.get("video") and links.get("slides")
+            if ctx.fetch_pages and links.get("page") and not complete:
                 time.sleep(ctx.delay)
                 for k, v in scrape_page(links["page"], ctx.tavily_key).items():
-                    if not links.get(k):
+                    # NVIDIA's signed Kaltura PDF URLs are renewed on every
+                    # GTC refresh; all other discoveries only fill gaps.
+                    renew = ctx.marker == "gtc" and k in ("slides", "video") \
+                        and (urlparse(v).hostname or "").endswith(".kaltura.com") \
+                        and (k == "slides" or (urlparse(links.get(k, "")).hostname or "").endswith(".kaltura.com"))
+                    if not links.get(k) or renew:
                         links[k] = v
-                        if k == "video":
+                        if k == "video" and not existing.get("video"):
                             stats["video_from_page"] += 1
         else:
             stats["unmatched"].append(heading[:120])

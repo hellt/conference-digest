@@ -24,10 +24,12 @@ talks, or not ones this digest's reader can watch, and they would nearly
 double the program.
 
 Recordings are not in the catalog API: sessions are produced for NVIDIA
-on-demand (login-gated), and many are later uploaded to NVIDIA's YouTube
-channel, which the links step searches and verifies. The per-session page
-(/gtc/session-catalog/sessions/<code>/) is server-rendered and gains the
-on-demand recording after the event, so Links Refresh reads it again then.
+on-demand, and many are later uploaded to NVIDIA's YouTube channel, which the
+links step searches and verifies. Links Refresh maps the per-session page to
+its /en-us/on-demand/session/<code>/ page, reads the public on-demand session
+API for that page's Kaltura video and PDF assets, and keeps the on-demand URL
+as the pick's "Talk page" link. PDF downloads are signed, so GTC refreshes
+renew them instead of retaining an expired signature.
 """
 
 from __future__ import annotations

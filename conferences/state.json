@@ -502,5 +502,23 @@
     "attempts": 0,
     "last_attempt": "2026-11-11T08:33:27.488978+00:00",
     "last_error": ""
+  },
+  "chnug-2": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-11T14:33:47.426427+00:00",
+    "last_error": ""
+  },
+  "chnug-3": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-11T14:33:47.426427+00:00",
+    "last_error": ""
+  },
+  "chnug-4": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-11T14:33:47.426427+00:00",
+    "last_error": ""
   }
 }

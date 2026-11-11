@@ -59,6 +59,27 @@ class EmployerTests(TestCase):
         for spelling in ("Purdue", "Michigan", "UCSB", "Open U. Israel", "NIKSUN"):
             self.assertIn(f"[{spelling}](", linked)
 
+    def test_unknown_companies_are_discovered_from_structured_attributions(self):
+        line = (
+            "Branislav Brzak (Stealthium, Cybersecurity Researcher)\n"
+            "Affaan Mustafa (Jump Trading, Compute Trading Lead), "
+            "Alejandro Soumah Fernandez (Jump Trading, Co-Lead Compute Trading)"
+        )
+        self.assertEqual(
+            [(line[s:e], canonical) for s, e, canonical in employer_spans(line)],
+            [("Stealthium", "Stealthium"), ("Jump Trading", "Jump Trading"),
+             ("Jump Trading", "Jump Trading")],
+        )
+        self.assertIn("[Stealthium](../companies/stealthium.md)", link_employers(line))
+        self.assertEqual(link_employers(line).count("[Jump Trading](../companies/jump-trading.md)"), 2)
+        self.assertEqual(employer_spans("Jane Doe (no affiliation listed)"), [])
+        self.assertEqual(employer_spans("Jane Doe (Cybersecurity Researcher)"), [])
+        self.assertEqual(
+            {canonical for _, _, canonical in employer_spans(
+                "Dylan Reemerink (Isovalent/Cisco; Cilium committer, ebpf-go maintainer)")},
+            {"Cisco"},
+        )
+
     def test_repeated_employer_is_linked_for_each_speaker(self):
         line = "Numan Siddique, Crusoe; Ketan Supanekar, Crusoe"
         linked = link_employers(line)

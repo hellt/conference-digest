@@ -80,6 +80,22 @@ class EmployerTests(TestCase):
             {"Cisco"},
         )
 
+    def test_unknown_companies_are_discovered_without_a_role(self):
+        line = (
+            "Jens Vogler (Init7)\n"
+            "Darragh Grealish (56K.Cloud), with Stefan Thoma (Init7)\n"
+            "John Howard (Proton)\n"
+            "Roman Weber (OST Students)"
+        )
+        self.assertEqual(
+            [(line[s:e], canonical) for s, e, canonical in employer_spans(line)],
+            [("Init7", "Init7"), ("56K.Cloud", "56K.Cloud"), ("Init7", "Init7"),
+             ("Proton", "Proton AG"), ("OST Students", "OST")],
+        )
+        for note in ("no affiliation given in program", "sponsor session", "Netzbremse project"):
+            with self.subTest(note=note):
+                self.assertEqual(employer_spans(f"Jane Doe ({note})"), [])
+
     def test_repeated_employer_is_linked_for_each_speaker(self):
         line = "Numan Siddique, Crusoe; Ketan Supanekar, Crusoe"
         linked = link_employers(line)

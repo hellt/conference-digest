@@ -5325,3 +5325,80 @@ aiengineer-worldsfair-2026:
     Harnessing Collective Agent Intelligence for Open Science:
     - ai
     - benchmarking
+aiengineer-nyc-2026:
+  post:
+  - ai
+  - gpu-clusters
+  - cloud
+  - network-security
+  - capacity-planning
+  - orchestration
+  talks:
+    Not All GPU's Are Deployed The Same:
+    - ai
+    - gpu-clusters
+    - capacity-planning
+    - benchmarking
+    How Compute Markets Work:
+    - ai
+    - gpu-clusters
+    - capacity-planning
+    The Dark Pools of Compute:
+    - ai
+    - gpu-clusters
+    - capacity-planning
+    Your GPU Neighbor Can Hear Your Model:
+    - network-security
+    - gpu-clusters
+    - benchmarking
+    - observability
+    Great Agents Start with Great Infrastructure:
+    - ai
+    - cloud
+    - containers
+    - kubernetes
+    Shipping like a startup, regulated like a bank:
+    - ai
+    - gpu-clusters
+    - cloud
+    - capacity-planning
+    Compute Exchange:
+    - gpu-clusters
+    - capacity-planning
+    - cloud
+    'Security in the Age of AI: Recent Attacks, Incidents & Defenses':
+    - ai
+    - network-security
+    - offensive-security
+    - vulnerability-management
+    Your Agent Is a Lethal Trifecta (and What to Do About It):
+    - ai
+    - network-security
+    - zero-trust
+    - identity
+    Process Supervision for Agents That Do Long-Horizon Work:
+    - ai
+    - testing
+    - observability
+    - sre
+    The Machine that Changed the World, vAI:
+    - ai
+    - automation
+    - testing
+    - sre
+    Self-Improving Organizations:
+    - ai
+    - orchestration
+    - automation
+    - open-source
+    Everything will be Simulated:
+    - ai
+    - benchmarking
+    Frontier Models for Acting in Space and Time:
+    - ai
+    - benchmarking
+    'Your Company Has No Model of Itself: Bootstrapping a World Model from Slack, Decks and Meetings':
+    - ai
+    - orchestration
+    - observability
+    - cloud

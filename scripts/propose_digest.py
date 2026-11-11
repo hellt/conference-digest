@@ -77,6 +77,26 @@ def themes(markdown: str, limit: int = 3) -> list[str]:
     return out
 
 
+def tag_note(key: str, markdown: str, tags_block: str,
+             talks: dict[str, list[str]] | None = None, error: str = "") -> str:
+    """PR-check text for missing or incomplete writer keywords."""
+    headings = re.findall(r"^### +(.+)$", markdown, re.M)
+    if not headings:
+        return ""
+    if not tags_block:
+        return (f"Search tags missing for all {len(headings)} picks: the writer emitted no keywords block. "
+                f"Backfill with `scripts/generate_tags.py --digest {key}`.")
+    if error:
+        return (f"Search tags unusable ({error}). Backfill with "
+                f"`scripts/generate_tags.py --digest {key}`.")
+    missing = [heading for heading in headings if not (talks or {}).get(heading)]
+    if missing:
+        listed = ", ".join(missing[:3]) + ("…" if len(missing) > 3 else "")
+        return (f"Search tags missing for {len(missing)}/{len(headings)} picks: {listed}. "
+                f"Backfill with `scripts/generate_tags.py --digest {key}`.")
+    return ""
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("key")
@@ -103,6 +123,7 @@ def main() -> int:
         return fail("digest.md is too large")
     result = json.loads(result_file.read_text(encoding="utf-8"))
     markdown = digest_file.read_text(encoding="utf-8")
+    tag_warning = ""
     # The writer's keywords block (prompt/base.md) never reaches digests/<key>.md;
     # it is converted into conferences/tags.yaml further below.
     markdown, tags_block = extract_tags_block(markdown)
@@ -137,10 +158,14 @@ def main() -> int:
                 tagged = load_tags()
                 tagged[key] = {"post": post, "talks": talks}
                 save_tags(tagged)
-                print(f"tagged {key} for search: {len(post)} post tag(s), "
-                      f"{sum(1 for t in talks.values() if t)} pick(s)")
+                tag_warning = tag_note(key, markdown, tags_block, talks)
+            print(f"tagged {key} for search: {len(post)} post tag(s), "
+                  f"{sum(1 for t in talks.values() if t)} pick(s)")
         except (ValueError, json.JSONDecodeError) as e:
             print(f"::warning::{key}: keywords block unusable ({e}); digest stays untagged")
+            tag_warning = tag_note(key, markdown, tags_block, error=str(e))
+    else:
+        tag_warning = tag_note(key, markdown, tags_block)
 
     state = json.loads(STATE.read_text(encoding="utf-8")).get(key, {}) if STATE.exists() else {}
     if state.get("status") == "manual":
@@ -148,7 +173,8 @@ def main() -> int:
     else:
         source = f"a program auto-fetched by the {entry.get('fetcher', '?')} fetcher"
     stats = result.get("stats", {})
-    notes = result.get("notes", [])
+    notes = [tag_warning] if tag_warning else []
+    notes += result.get("notes", [])
     if title_note:
         notes = [title_note, *notes]
     signal = themes(markdown)

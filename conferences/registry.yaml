@@ -1194,6 +1194,7 @@ conferences:
   - key: chnug-3
     name: "CHNUG #3"
     description: "The Swiss Network User Group's practitioner meetups on networking, automation, observability, cloud connectivity, and operations."
+    location: "Zürich · Switzerland"
     end_date: 2026-05-28
     fetcher: chnug
     program_url: "https://chnug.ch/chnug003"

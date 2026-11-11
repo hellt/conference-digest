@@ -5442,3 +5442,26 @@ chnug-4:
     - automation
     - open-source
     'What''s Next for Nornir: Project Update and Roadmap': []
+chnug-3:
+  post:
+  - data-center-fabric
+  - automation
+  - ai-networks
+  - telemetry
+  - observability
+  talks:
+    'Change with Confidence: Containerlab at Proton':
+    - automation
+    - data-center-fabric
+    - testing
+    - open-source
+    Network Observability Innovations at the IETF:
+    - telemetry
+    - observability
+    - segment-routing
+    - standardization
+    Building Modern & Scalable DC Fabrics:
+    - ai-networks
+    - data-center-fabric
+    - gpu-clusters
+    - interconnection

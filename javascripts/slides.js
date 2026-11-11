@@ -1,4 +1,4 @@
-// GitHub raw/media URLs allow CORS but serve PDFs as unembeddable downloads.
+// GitHub and Kaltura URLs allow CORS but serve PDFs as unembeddable downloads.
 // Give the browser's native PDF viewer a correctly typed, same-origin blob.
 const pdfBlobs = new Map();
 const loadPdfDownloads = () => {

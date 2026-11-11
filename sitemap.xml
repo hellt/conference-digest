@@ -3550,9 +3550,6 @@
         <loc>https://tldr.netdevops.me/gtc-2026/a-new-paradigm-verifiable-ai/</loc>
       </url>
       <url>
-        <loc>https://tldr.netdevops.me/gtc-2026/accelerated-networking-for-ai-infrastructure/</loc>
-      </url>
-      <url>
         <loc>https://tldr.netdevops.me/gtc-2026/achieve-truly-serverless-gpus-with-libfuse-criu-and-cuda-checkpoint/</loc>
       </url>
       <url>
@@ -3575,9 +3572,6 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/gtc-2026/continuous-inference-benchmarking-of-the-ai-frontier/</loc>
-      </url>
-      <url>
-        <loc>https://tldr.netdevops.me/gtc-2026/deep-dive-on-gigawatt-ai-factories/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/gtc-2026/enable-enterprise-ai-factories-with-secure-high-performance-networking/</loc>

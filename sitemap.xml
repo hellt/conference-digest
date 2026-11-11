@@ -4,6 +4,72 @@
         <loc>https://tldr.netdevops.me/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/cicd-is-dead-agents-need-continuous-compute-and-computers/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/everything-i-learned-training-frontier-small-models/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/how-building-with-ai-can-double-the-throughput-of-your-engineering-team/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/how-to-build-agents-that-run-for-hours-without-losing-the-plot/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/i-gave-an-ai-agent-the-keys-to-my-life-heres-what-happened/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/lawrence-jones-fighting-ai-with-ai/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/lessons-from-scaling-githubs-remote-mcp-server/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/live-demo-qa-with-together-ai/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/lobster-trap-openclaw-in-containers-from-local-to-k8s-and-back/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/one-developer-two-dozen-agents-zero-alignment-why-we-need-collaborative/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/one-login-to-rule-them-all-cross-app-access-for-mcp/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/playground-in-prod-optimising-agents-in-production-environments/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/reverse-engineering-a-viking-voip-phone-protocol-with-claude-code/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/scaling-agents-on-kubernetes-with-acpx-and-acp/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/scaling-the-next-paradigm-of-heterogeneous-intelligence/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/the-embedding-infrastructure-nobody-built-so-we-did/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/the-missing-primitive-for-agent-swarms/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/two-roads-to-durable-agents-replay-vs-snapshot/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/what-if-the-network-was-the-sandbox/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/why-your-ai-ux-is-broken-and-its-not-the-models-fault/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/aiengineer-europe-2026/your-coding-agent-should-do-ai-system-engineering/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/aiengineer-nyc-2026/</loc>
       </url>
       <url>

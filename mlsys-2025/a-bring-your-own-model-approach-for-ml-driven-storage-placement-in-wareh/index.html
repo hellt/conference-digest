@@ -548,7 +548,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://openreview.net/forum?id=JuGWOSB68T">Abstract</a> <a class="pick-link" href="https://openreview.net/pdf?id=JuGWOSB68T">Paper</a> <a class="pick-link" href="https://slideslive.com/39043002">Recording</a></p>
 </div>
-<p>Chenxi Yang, Yan Li, Martin Maas, Mustafa Uysal, Ubaid Hafeez, Arif Merchant, Richard McDougall (anonymized hyperscaler "AnonCorp")</p>
+<p>Chenxi Yang, Yan Li, Martin Maas, Mustafa Uysal, Ubaid Hafeez, Arif Merchant, Richard McDougall (<a href="../../companies/anonymized-hyperscaler-anoncorp/">anonymized hyperscaler "AnonCorp"</a>)</p>
 <ul>
 <li><strong>Why</strong>: Less about storage than about <em>why ML-for-infra hasn't shipped</em> — the paper diagnoses the failure modes of a decade of academic ML-placement papers in a real hyperscale environment. That diagnosis transfers to every "why doesn't anyone deploy this" ML-for-networking idea a PM has ever sponsored.</li>
 <li><strong>What</strong>: A cross-layer design: ML prediction moves <em>out</em> of the storage layer and into the application above it ("bring your own model"), with a co-designed heuristic in the storage layer that consumes those predictions. Small interpretable application-level models + adaptive storage-layer scheduling, tested in a production distributed-computation framework at a hyperscaler; up to 3.47× TCO savings over state-of-the-art baselines in test deployment and production-trace simulations. (from abstract only)</li>

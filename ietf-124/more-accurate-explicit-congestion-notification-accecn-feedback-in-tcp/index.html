@@ -548,7 +548,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-tcpm-accurate-ecn/">Draft</a> <a class="pick-link" href="https://youtu.be/Z1qVCrIBVqQ">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/tcpm">Materials</a></p>
 </div>
-<p>Bob Briscoe (Independent), Mirja Kühlewind (<a href="../../companies/ericsson/">Ericsson</a>), Richard Scheffenegger (<a href="../../companies/netapp/">NetApp</a>) — TCPM</p>
+<p>Bob Briscoe (<a href="../../companies/independent/">Independent</a>), Mirja Kühlewind (<a href="../../companies/ericsson/">Ericsson</a>), Richard Scheffenegger (<a href="../../companies/netapp/">NetApp</a>) — TCPM</p>
 <ul>
 <li><strong>Why</strong>: RFC 3168 ECN feedback allows one congestion signal per RTT; DCTCP, L4S, and ConEx need per-marking counts. This changes the TCP wire protocol itself — and it is now finished: published as <strong>RFC 9768</strong> (Proposed Standard, April 2026).</li>
 <li><strong>What</strong>: AccECN replaces Classic ECN feedback: the receiver continually feeds back a count of CE-marked packets using the three TCP header flags (the former NS bit renamed AE, plus overloaded CWR/ECE) as a 3-bit ACE counter, negotiated in the three-way handshake with careful backward compatibility. An optional AccECN TCP Option (two alternative field orders, never on the SYN) supplements this with 24-bit byte counters per ECN codepoint.</li>

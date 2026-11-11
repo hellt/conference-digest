@@ -548,7 +548,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-v6ops-nat64-wkp-1918/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-v6ops-01-jen-linkova-draft-ietf-v6ops-nat64-wkp-1918-00">Slides</a> <a class="pick-link" href="https://youtu.be/eAcZXJI89rU">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/v6ops">Materials</a></p>
 </div>
-<p>Warren Kumari, Jen Linkova (v6ops WG)</p>
+<p>Warren Kumari, Jen Linkova (<a href="../../companies/v6ops-wg/">v6ops WG</a>)</p>
 <ul>
 <li><strong>Why</strong>: RFC 6052 currently forbids using 64:ff9b::/96 for RFC 1918 addresses and requires translators to drop such packets — which breaks IPv6-only nodes reaching IPv4-only services with private addresses, a daily pain in enterprise/SMB IPv6-only deployments.</li>
 <li><strong>What</strong>: A WG draft that updates RFC 6052 to relax the MUST NOT/MUST-drop: allow the Well-Known Prefix to represent non-globally-reachable IPv4 addresses and let translators process them. It keeps existing deployments safe: implementations keep default behavior, gain a config knob; administrators apply explicit drop policies where the old behavior was relied upon. The slides note the same restriction removal was proposed by Fred Baker in erratum eid5547 back in 2018, and discuss why the Network-Specific Prefix isn't always feasible.</li>

@@ -1298,7 +1298,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Tuesday/all/s1068">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/580/attachments/433/1024/TNC26%20%281%29.pptx">Slides</a></p>
 </div>
-<p>Guilherme Branco Ladvocat (RNP)</p>
+<p>Guilherme Branco Ladvocat (<a href="../companies/rnp/">RNP</a>)</p>
 <ul>
 <li><strong>Why</strong>: A realistic template for ML adoption in network operations by a team with no data scientists — increasingly the default situation, and a useful counterweight to the ESnet approach.</li>
 <li><strong>What</strong>: RNP (Brazilian NREN, ~1800 connected sites, MPLS-TE full-mesh between PoPs) applied ML anomaly detection to interface metrics, ping loss/latency, netflow, and syslog categorization (standard vs. rare message groups). The deliberately pragmatic choice: Elastic's ELSER v2, an out-of-domain model requiring no fine-tuning, running inside the Elastic observability stack they already stood up in 2024 — avoiding "reinventing the wheel" and the need for ML expertise.</li>
@@ -1311,7 +1311,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Wednesday/all/s1276">Abstract</a></p>
 </div>
-<p>Annalisa Morea (<a href="../companies/nokia/">Nokia</a>), Jani Myyry (CSC/Funet), Kurosh Bozorgebrahimi (Sikt), Magnus Bergroth (SUNET)</p>
+<p>Annalisa Morea (<a href="../companies/nokia/">Nokia</a>), Jani Myyry (<a href="../companies/csc-funet/">CSC/Funet</a>), Kurosh Bozorgebrahimi (<a href="../companies/sikt/">Sikt</a>), Magnus Bergroth (<a href="../companies/sunet/">SUNET</a>)</p>
 <ul>
 <li><strong>Why</strong>: Turns the coherent transponder from a transmission component into a sensing device that infers the physical network topology with no prior knowledge — directly relevant to anyone operating optical plant whose documentation drifts from reality. (from abstract only; the programme page was not retrievable)</li>
 <li><strong>What</strong>: Nokia Bell Labs' "Tomography" method estimates fiber types, span lengths, and amplifier types from data the DSP already computes. In a February 2026 field trial on a multi-vendor Scandinavian network (CSC, Sikt, SUNET), a signal ran Tromsø→Espoo over two routes with characteristics unknown to the Nokia team, in C-band alongside live traffic, three wavelengths measured per route, using PSE-Vs (SFM6) transponders. Results: fiber length estimated with less than 4% error, good amplifier-type match, operators corrected erroneous database entries, and a path commissioning error was detected.</li>
@@ -1337,7 +1337,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Wednesday/all/s1073">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/595/attachments/446/1135/TCN26-Flow-Collector-Evaluation.pdf">Slides (PDF)</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/595/attachments/446/1136/TCN26-Flow-Collector-Evaluation.pptx">Slides (PPTX)</a></p>
 </div>
-<p>Yannick Huber (BelWü / <a href="../companies/university-of-stuttgart/">University of Stuttgart</a>), with Benjamin Steinert, Lukas Pietzschmann, Gabriel Paradzik, Michael Menth (Tübingen, Ulm)</p>
+<p>Yannick Huber (<a href="../companies/belw-university-of-stuttgart/">BelWü / University of Stuttgart</a>), with Benjamin Steinert, Lukas Pietzschmann, Gabriel Paradzik, Michael Menth (Tübingen, Ulm)</p>
 <ul>
 <li><strong>Why</strong>: Firmly substantiated, quantitative tool evaluation — exactly the kind most teams never have time to do. Benchmarks six actively maintained, self-hostable open-source flow collectors (Akvorado, GoFlow2, IPFIXcol2, nfdump, pmacct, SiLK) for sFlow and IPFIX.</li>
 <li><strong>What</strong>: Combines a feature/usability matrix (protocol support, enrichment, anonymization, Kafka/file outputs, telemetry endpoints) with sustainable-throughput benchmarks in a controlled testbed (synthetic generator, 20 flows per packet, 4 CPU cores / 12 GB RAM). Headline numbers: to Kafka, pmacct sustains ~186–209k flows/s, IPFIXcol2 ~375–446k, GoFlow2 ~13–15k (JSON) vs. ~77–86k (protobuf), Akvorado ~510–548k (raw forwarding); to file, nfdump reaches up to ~842k flows/s (IPFIX) and IPFIXcol2 ~680k. Main findings: input format matters (IPFIXcol2 and nfdump do best on IPFIX; SiLK and pmacct lag on sFlow), output serialization is crucial (GoFlow2's JSON path is an order of magnitude slower than protobuf), and message brokers enable horizontal scaling and redundant deployments.</li>
@@ -1363,7 +1363,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Wednesday/all/s1077">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/602/attachments/410/959/nmaas%20TNC%20v1.0.1.pptx">Slides</a></p>
 </div>
-<p>Firat Koyuncu (GIP RENATER), Vojdan Kjorveziroski (UKIM)</p>
+<p>Firat Koyuncu (<a href="../companies/gip-renater/">GIP RENATER</a>), Vojdan Kjorveziroski (<a href="../companies/ukim/">UKIM</a>)</p>
 <ul>
 <li><strong>Why</strong>: A production case of multi-cluster Kubernetes used to solve a real fleet problem — plus one of the better-documented VMware→Kubernetes migration rationales you'll find.</li>
 <li><strong>What</strong>: RENATER's perfSONAR estate had decayed: 40 servers acquired in 2017 had shrunk to ~10 deployed with no software alignment, heterogeneous local credentials (iDRAC, OS), and a perfSONAR service that "globally was not working." After the Broadcom/VMware licensing changes destroyed trust in the hypervisor path, RENATER rebuilt on Kubernetes (Talos Linux immutable nodes with KubeVirt on bare-metal servers) and used nmaas — an open-source multi-tenant PaaS with multi-cluster support — to deploy perfSONAR nationwide, with webhook-driven automation for centralized lifecycle management of edge measurement nodes.</li>
@@ -1402,7 +1402,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Thursday/all/s1080">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/606/attachments/515/1140/2026-06-11%20Sikt%20-%20Nextgen%20Network%20procurement%20-%20TNC26%20-%20Olaf%20Schjelderup%20v3.pptx">Slides</a></p>
 </div>
-<p>Olaf Schjeldrup (Sikt)</p>
+<p>Olaf Schjeldrup (<a href="../companies/sikt/">Sikt</a>)</p>
 <ul>
 <li><strong>Why</strong>: Physical WAN infrastructure strategy with real numbers and two years of negotiation scar tissue — squarely relevant to anyone whose job includes DC/WAN interconnect economics. Norway's NREN renewal covers ~13,000 km of renewed optical long-haul topology across punishing geography (3,000 km north–south, 103,000 km of coastline), with geopolitical tension explicitly cited as a driver for higher validated redundancy.</li>
 <li><strong>What</strong>: Requirements: national coverage, terabit capacities with a preference order of dark fiber &gt; optical spectrum (1–1.2 THz, flexigrid, license-free) &gt; waves; 20-year IRU matching Open Line System lifetime; fiber sensing and bidirectional time-and-frequency transfer capability; extra fiber pairs reserved for research (quantum, sensing). Process: RFI spring 2023, RFQ end-2023, award criteria 60% quality / 40% TCO, 10 tenderers (3 hybrid fiber+spectrum, 7 fiber-only), negotiated procedure running over two years with six offer/negotiation phases, BAFO May 2025, award January 2026 to 8 sub-providers, main contracts May 2026, rollout 2026–28 — with "huge cost savings, increased optical footprint and redundancy."</li>
@@ -1415,7 +1415,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Thursday/all/s1080">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/607/attachments/415/1006/CESNET_TNC26-Time-Travels-in-L-Band-Final.pdf">Slides</a></p>
 </div>
-<p>Michal Hazlinsky (CESNET)</p>
+<p>Michal Hazlinsky (<a href="../companies/cesnet/">CESNET</a>)</p>
 <ul>
 <li><strong>Why</strong>: A blueprint for running nanosecond-grade time distribution <em>on</em> an active, revenue-carrying DWDM network instead of dedicated dark fiber — plus one of the best examples of real NetDevOps automation at the optical layer (L0).</li>
 <li><strong>What</strong>: CESNET distributes time traceable to UTC(TP) with better than 1 ns stability to 22 locations, with White Rabbit running in the L-band (1570/1571/1572 nm) coexisting with 8 C-band data channels on the same fiber of its 5,700 km multivendor network (Cisco, Ribbon/ECI, CzechLight). Spectrum-sharing was designed in from procurement: custom channel filters per line (8 C + 4 L channels, &lt;1 dB insertion loss), bidirectional single-fiber transmission to defeat WR's path-asymmetry problem, and CzechLight SDN bidirectional EDFAs for long-haul.</li>
@@ -1454,7 +1454,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Thursday/all/s1195">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/676/attachments/471/1013/nmaas%20ComHub%20TNC26%20v0.4.0%20-%20uploaded.pptx">Slides</a></p>
 </div>
-<p>Lukasz Lopatowski (PCSS), Vojdan Kjorveziroski (UKIM)</p>
+<p>Lukasz Lopatowski (<a href="../companies/pcss/">PCSS</a>), Vojdan Kjorveziroski (<a href="../companies/ukim/">UKIM</a>)</p>
 <ul>
 <li><strong>Why</strong>: The companion to the RENATER deployment talk, showing where the nmaas multi-tenant, multi-cluster Kubernetes platform is heading beyond perfSONAR.</li>
 <li><strong>What</strong>: A demo-format Community Hub session around the core nmaas use cases: Virtual NOC (vNOC) as the central point from which business workflows are triggered, Virtual Lab (vLAB — educational network exercises at scale), Metrics, and Active Monitoring (including the EdgePL project), plus web-service health monitoring and backups as run at PCSS. The slides also flag two forward items: sharing GPU resources on edge nodes, and extending nmaas with generative AI via an nmaas MCP server (new application addition).</li>
@@ -1468,7 +1468,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Tuesday/all/s1164">Abstract</a></p>
 </div>
-<p>Helga Spitaler (<a href="../companies/g-ant/">GÉANT</a>), Sabine Jaume (NORDUnet), with panellists from the <a href="../companies/european-commission/">European Commission</a> (DG ENEST, DG INTPA), the EIB, <a href="../companies/g-ant/">GÉANT</a>, NORDUnet, and UbuntuNet Alliance</p>
+<p>Helga Spitaler (<a href="../companies/g-ant/">GÉANT</a>), Sabine Jaume (<a href="../companies/nordunet/">NORDUnet</a>), with panellists from the <a href="../companies/european-commission/">European Commission</a> (DG ENEST, DG INTPA), the EIB, <a href="../companies/g-ant/">GÉANT</a>, NORDUnet, and UbuntuNet Alliance</p>
 <ul>
 <li><strong>Why</strong>: Intercontinental connectivity is entering a strategic era where submarine cable projects (Medusa, Blue Raman, Polar Connect, EurAfrica Gateway) sit at the intersection of geopolitics, digital sovereignty, and hyperscaler influence — relevant context for anyone reasoning about long-haul DC/WAN interconnect economics. (from abstract only)</li>
 <li><strong>What</strong>: A panel examining who shapes the architecture of international connectivity, who benefits, and how publicly supported infrastructure can remain open, trusted, and sustainable versus commercially driven models — including equitable partnerships with partner regions and the long-term sustainability of connectivity investments.</li>
@@ -1481,7 +1481,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Tuesday/all/s1069">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/583/attachments/402/878/TNC26_presentation_RNP_alberto_joao.pptx">Slides</a></p>
 </div>
-<p>Joao Pedro Milhome, Alberto Viana (RNP)</p>
+<p>Joao Pedro Milhome, Alberto Viana (<a href="../companies/rnp/">RNP</a>)</p>
 <ul>
 <li><strong>Why</strong>: A candid platform-engineering story: adopting containers and cloud tooling made RNP's service delivery <em>more</em> complex, not less — a failure mode most cloud platform teams will recognize.</li>
 <li><strong>What</strong>: RNP's response is an Internal Developer Platform organized around four pillars (Speed, Safety, Efficiency, Scalability), treating the platform as a product with golden paths that reduce cognitive load while leaving flexibility for service teams. The slides narrate the diagnosis: fragmented tools, inconsistent environments, split responsibilities, and days spent configuring plumbing instead of writing code.</li>
@@ -1494,7 +1494,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Wednesday/all/s1076">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/695/attachments/511/1101/CERN%20exeriments%20IPv6%20TNC2026.pptx">Slides</a></p>
 </div>
-<p>Tim Chown (Jisc)</p>
+<p>Tim Chown (<a href="../companies/jisc/">Jisc</a>)</p>
 <ul>
 <li><strong>Why</strong>: The best-documented large-scale argument that dual-stack is a waypoint, not a destination — with measured traffic shares to back it.</li>
 <li><strong>What</strong>: The WLCG (170 sites, 40 countries; LHCOPN private optical Tier-0/Tier-1 links, LHCONE L3VPN/VRF, NREN catch-all) IPv6 program: Phase 2 dual-stack is complete at data servers and 75% complete at worker nodes (ticket campaign running since December 2023); Phase 3 — removing IPv4 from WAN links — is underway, starting with CERN–Tier-1 LHCOPN links. Measured shares: &gt;99.5% IPv6 on the KIT OPN link, &gt;93% in FTS logs (including non-WLCG transfers), &gt;99.9% of SciTags flows into RAL.</li>
@@ -1507,7 +1507,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Thursday/all/s1176">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/742/attachments/528/1188/GR%20WR%20BoF%20@%20TNC26v2pptx.pdf">Slides (PDF)</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/742/attachments/528/1189/RobinTNC2026.pdf">Slides (PDF)</a></p>
 </div>
-<p>Chairs: Raimena Veisllari (Sikt), Domenico (Dom) Vicinanza (<a href="../companies/g-ant/">GÉANT</a>), Guy Roberts (<a href="../companies/g-ant/">GÉANT</a>); talks from <a href="../companies/g-ant/">GÉANT</a>, RENATER, and Sikt/Nordic partners</p>
+<p>Chairs: Raimena Veisllari (Sikt), Domenico (<a href="../companies/dom/">Dom</a>) Vicinanza (<a href="../companies/g-ant/">GÉANT</a>), Guy Roberts (<a href="../companies/g-ant/">GÉANT</a>); talks from <a href="../companies/g-ant/">GÉANT</a>, RENATER, and Sikt/Nordic partners</p>
 <ul>
 <li><strong>Why</strong>: The engineering follow-through to the CESNET talk — a BoF on building terrestrial, GNSS-independent time networks across Europe, grounded in the GÉANT C-TFN Incubator report (Zenodo).</li>
 <li><strong>What</strong>: Substantiated results, not just a roadmap: a 498 km Prague–Vienna field-installed loop using five bidirectional amplifiers achieved ±100 ps time-transfer stability — well inside the 1 ns target — with 1 Gbps WR signals sharing fiber with 400G coherent channels at no measurable BER impact given a suitable guard-band. The report compares three regeneration architectures with performance data and an interactive cost calculator: 1R bidirectional amps (best timing, fixed wavelength per span), 2R OEO (good cost-performance trade-off), 3R WR switches (full flexibility, more jitter in cascade). Plus spectrum planning guidance (L-band is amplifiable but typically unused for data — an attractive WR home; placing WR at the C-band edge halves guard-band cost) and operational design requirements (dual PSUs, SNMP traps, OSC channel, support model) — including the candid gap that SNMP management of open-source WR switches is still being defined by the consortium.</li>
@@ -1520,7 +1520,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Thursday/all/s1155">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/680/attachments/427/920/Cheryl%20Andrea%20Fernando_Traffic%20at%203am.pptx">Slides</a></p>
 </div>
-<p>Cheryl Andrea Fernando (SURF)</p>
+<p>Cheryl Andrea Fernando (<a href="../companies/surf/">SURF</a>)</p>
 <ul>
 <li><strong>Why</strong>: AI training scrapers are now an operational cost and risk problem for anyone serving public content — and the defensive landscape is fragmenting fast. Lightning-talk depth, but a useful map.</li>
 <li><strong>What</strong>: A survey of mitigation strategies: robots.txt (voluntary, widely ignored), Cloudflare's AI Labyrinth (trapping non-compliant crawlers), monetization via Cloudflare Pay-per-Crawl and Akamai's Tolbit/Skyfire, open-source countermeasures like Anubis (proof-of-work gating that makes bot traffic expensive) and tarpits (Nepenthes, Quixotic, Iocane — feeding Markov babble to poison training data, with real caveats: SEO damage and self-inflicted resource costs). The genuinely hard problem: residential proxies, which defeat datacenter-IP blocklists because the IPs are real home connections, often resold without their owners' knowledge.</li>
@@ -1533,7 +1533,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Thursday/all/s1083">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/614/attachments/444/1152/sunet_scribe_tnc26.pdf">Slides</a></p>
 </div>
-<p>Erik Lundberg (Sunet)</p>
+<p>Erik Lundberg (<a href="../companies/sunet/">Sunet</a>)</p>
 <ul>
 <li><strong>Why</strong>: A rare, fully-costed-in-public view of running a national AI inference service on a small GPU fleet — the operational reality behind "sovereign AI services."</li>
 <li><strong>What</strong>: Sunet Scribe, a self-hosted, Whisper-based speech-to-text service inside the Swedish NREN, born because institutions didn't trust commercial providers with sensitive recordings and commercial STT wasn't optimized for Nordic languages (the fine-tuned Swedish model comes from the Royal Library). Timeline: community request mid-February 2026 → prototype and first GPU machines in May → institutional pilot October 1 → national launch December 1. Traction: 30 universities, ~3,000 users, ~650,000 minutes transcribed in 2026 (3–4× the 2025 baseline) — handled by three GPU servers.</li>
@@ -1547,7 +1547,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Wednesday/all/s1072">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/590/attachments/504/1145/TNC26_InterQnet_Kettimuthu_V4.pptx">Slides</a></p>
 </div>
-<p>Rajkumar Kettimuthu (Argonne National Laboratory)</p>
+<p>Rajkumar Kettimuthu (<a href="../companies/argonne-national-laboratory/">Argonne National Laboratory</a>)</p>
 <ul>
 <li><strong>Why</strong>: Not the PM's daily bread, but a two-year progress report on the US DOE's full-stack quantum networking program that frames quantum networks as an <em>operations</em> problem — and argues NRENs already own the prerequisites (deployed fiber, automation, synchronization, optical-channel engineering).</li>
 <li><strong>What</strong>: InterQnet runs two tightly coupled goals. InterQnet-Achieve: a three-node heterogeneous quantum network (Yb atom arrays, Er³⁺ ions, superconducting qubits) over deployed campus fiber with dark-fiber paths toward Fermilab, UChicago, and StarLight, using frequency conversion and microwave-to-optical transduction, under centralized SDN-style orchestration with automated calibration. InterQnet-Scale: architecture studies via SeQUeNCe, Argonne's ~7-year-old quantum network simulator, with device-faithful simulations checked against real measurements. Hardware progress cited: 0.95 spin–photon fidelity with parallelized entanglement demonstrated on a 5-atom Yb array at 1389 nm; 1000× linewidth narrowing and telecom-band emission for Er; improved resonator yield for transducers.</li>
@@ -1560,7 +1560,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Tuesday/all/s1068">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/638/attachments/422/1147/ssh-honeypot-playground.pdf">Slides (PDF)</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/638/attachments/422/1050/TNC26_presentation.pdf">Slides (PDF)</a></p>
 </div>
-<p>Maciej Miłostan, Michał Ślusarczyk (PCSS)</p>
+<p>Maciej Miłostan, Michał Ślusarczyk (<a href="../companies/pcss/">PCSS</a>)</p>
 <ul>
 <li><strong>Why</strong>: An unusual, operationally grounded intersection of LLMs and security: LLMs <em>inside</em> the honeypot, engaging attackers — and the new attack surface that creates.</li>
 <li><strong>What</strong>: Threat-intel collection from the GN5-2 honeynet (T-Pot based, with Kibana visualizations and sandboxing pipelines), plus the synergy of pairing honeypots with LLMs. Crucially, they instrument the failure modes: LangFuse monitoring tracks session abandonments caused by LLM failures (e.g. unrealistic interaction), and they compare robust, secure system prompts against poorly crafted ones that leak system details or allow instruction hijacking — showing prompt quality directly influences both detection accuracy and resistance to prompt injection.</li>
@@ -1573,7 +1573,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://tnc26.geant.org/programme/#Wednesday/all/s1076">Abstract</a> <a class="pick-link" href="https://indico.geant.org/event/6/contributions/685/attachments/452/1064/TNC26_Instant_Data_Structures.pptx">Slides</a></p>
 </div>
-<p>Roman Janota (CESNET)</p>
+<p>Roman Janota (<a href="../companies/cesnet/">CESNET</a>)</p>
 <ul>
 <li><strong>Why</strong>: A small systems idea with an outsized, verified result — and it generalizes well beyond network tooling.</li>
 <li><strong>What</strong>: The boot-up bottleneck of network management systems: every tool re-parses hundreds of device configuration files to build its structural map of the network, serially, on every start. CESNET's answer: parse once, share the result. The first program to start builds the data structure, publishes a handle ("link") to it in a shared-memory region; every subsequent program checks for an existing link and skips parsing entirely. Changes (e.g. a new node) are published by generating a <em>new</em> link to the changed structure and atomically replacing the old one, with consumers checking for a newer link on access — a copy-on-write publication pattern.</li>

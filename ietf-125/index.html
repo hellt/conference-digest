@@ -1334,7 +1334,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-idr-bgp-ls-bgp-only-fabric/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-idr-bgp-link-state-extensions-for-bgp-only-networks-00">Slides</a> <a class="pick-link" href="https://youtu.be/a0BiAUtfF4c">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/idr">Materials</a></p>
 </div>
-<p>Ketan Talaulikar (independent), Aravind Babu MahendraBabu, Clarence Filsfils, Krishna Swamy (<a href="../companies/cisco/">Cisco</a>), Shawn Zandi (<a href="../companies/linkedin/">LinkedIn</a>), Gaurav Dawra, Muhammad Durrani (<a href="../companies/equinix/">Equinix</a>)</p>
+<p>Ketan Talaulikar (<a href="../companies/independent/">independent</a>), Aravind Babu MahendraBabu, Clarence Filsfils, Krishna Swamy (<a href="../companies/cisco/">Cisco</a>), Shawn Zandi (<a href="../companies/linkedin/">LinkedIn</a>), Gaurav Dawra, Muhammad Durrani (<a href="../companies/equinix/">Equinix</a>)</p>
 <ul>
 <li><strong>Why</strong>: In BGP-only DC/AI fabrics, nodes have no visibility beyond direct neighbors — which blocks LFA/TI-LFA computation, remote protection, and controller TE. This draft is the enabler several other RTGWG/IDR drafts depend on, including the IPFRR-for-AI/ML draft below.</li>
 <li><strong>What</strong>: A WG draft (draft-ietf-idr-bgp-ls-bgp-only-fabric-04, adopted by IDR) that lets each BGP speaker advertise its local topology via existing BGP-LS NLRI types (Node, Link, Prefix), giving controllers a full underlay link-state and TE view in networks with no IGP.</li>
@@ -1412,7 +1412,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-herbert-deprecate-eh/">Draft</a> <a class="pick-link" href="https://youtu.be/A1QUaZ9HG9o">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/6man">Materials</a></p>
 </div>
-<p>Tom Herbert (individual)</p>
+<p>Tom Herbert (<a href="../companies/individual/">individual</a>)</p>
 <ul>
 <li><strong>Why</strong>: Measurement shows packets carrying IPv6 extension headers are discarded at high rates across the public Internet, EHs enable DoS amplification and carry known vulnerabilities, and the loss rates deter anyone from deploying new EHs at all. For anyone operating both a limited domain (DC) and Internet-facing paths, this decides whether EH-based mechanisms (e.g., SRH) are ever viable outside the domain.</li>
 <li><strong>What</strong>: Recommends deprecating all IPv6 extension headers on the public Internet except ESP: relegate them to limited domains and discard EH-carrying packets at domain boundary routers — essentially formalizing what operators already do (from abstract only).</li>
@@ -1516,7 +1516,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-lamps-csr-attestation/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-lamps-csr-attestation-00">Slides</a> <a class="pick-link" href="https://youtu.be/RyqnmLpaRBw">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/lamps">Materials</a></p>
 </div>
-<p>M. Ounsworth, H. Tschofenig, H. Birkholz, M. Wiseman, N. Smith (LAMPS WG)</p>
+<p>M. Ounsworth, H. Tschofenig, H. Birkholz, M. Wiseman, N. Smith (<a href="../companies/lamps-wg/">LAMPS WG</a>)</p>
 <ul>
 <li><strong>Why</strong>: CAs increasingly must verify policy compliance before issuance — e.g., that a CSR's private key lives in an HSM and is non-exportable. Today that's a zoo of proprietary attestation mechanisms. This standardizes carrying attestation evidence inside PKCS#10/CRMF, which matters for anyone automating certificate issuance for workloads and devices.</li>
 <li><strong>What</strong>: ASN.1 structures carrying attestation data in CSRs, supporting both standardized (RATS-family) and proprietary attestation formats. WG draft at -22/-23: a design team (formed to break an author stalemate over design options) did a deep editorial pass; the Attestation OID registry was removed in -23; two PRs remain open (one debating whether a "Hint" should become a full CMS Attribute — the authors lean toward dropping hints entirely; one revisiting ASN.1 choices).</li>
@@ -1543,7 +1543,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-v6ops-nat64-wkp-1918/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-v6ops-01-jen-linkova-draft-ietf-v6ops-nat64-wkp-1918-00">Slides</a> <a class="pick-link" href="https://youtu.be/eAcZXJI89rU">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/v6ops">Materials</a></p>
 </div>
-<p>Warren Kumari, Jen Linkova (v6ops WG)</p>
+<p>Warren Kumari, Jen Linkova (<a href="../companies/v6ops-wg/">v6ops WG</a>)</p>
 <ul>
 <li><strong>Why</strong>: RFC 6052 currently forbids using 64:ff9b::/96 for RFC 1918 addresses and requires translators to drop such packets — which breaks IPv6-only nodes reaching IPv4-only services with private addresses, a daily pain in enterprise/SMB IPv6-only deployments.</li>
 <li><strong>What</strong>: A WG draft that updates RFC 6052 to relax the MUST NOT/MUST-drop: allow the Well-Known Prefix to represent non-globally-reachable IPv4 addresses and let translators process them. It keeps existing deployments safe: implementations keep default behavior, gain a config knob; administrators apply explicit drop policies where the old behavior was relied upon. The slides note the same restriction removal was proposed by Fred Baker in erratum eid5547 back in 2018, and discuss why the Network-Specific Prefix isn't always feasible.</li>
@@ -1556,7 +1556,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-jose-json-web-proof/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-jose-json-web-proof-update-03">Slides</a> <a class="pick-link" href="https://youtu.be/UtOpOWqveFw">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/jose">Materials</a></p>
 </div>
-<p>Mike Jones, David Waite (JOSE WG)</p>
+<p>Mike Jones, David Waite (<a href="../companies/jose-wg/">JOSE WG</a>)</p>
 <ul>
 <li><strong>Why</strong>: Selective-disclosure credentials are moving from SD-JWT toward BBS-style ZK-friendly algorithms; JWP is the container that makes them usable in the JWT-shaped ecosystem the PM's identity stack already speaks.</li>
 <li><strong>What</strong>: A JWS-like container ("JSON Web Proof") that integrity-protects multiple payloads in one message and adds a presentation form supporting selective disclosure of individual payloads, plus a Presentation Header against replay. Recent -13 changes: <code>proof_alg</code> (separate from JOSE/COSE algorithm registries) in JWKs/COSE_Keys, and deterministic crypto operations in all examples.</li>
@@ -1596,7 +1596,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-santesson-one-signature-certs/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-lamps-one-signature-certificates-01">Slides</a> <a class="pick-link" href="https://youtu.be/RyqnmLpaRBw">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/lamps">Materials</a></p>
 </div>
-<p>Stefan Santesson, Russ Housley (LAMPS WG)</p>
+<p>Stefan Santesson, Russ Housley (<a href="../companies/lamps-wg/">LAMPS WG</a>)</p>
 <ul>
 <li><strong>Why</strong>: A genuinely novel certificate profile: certificates that exist to validate exactly one signature, with the key destroyed immediately after — eliminating expiry and revocation complexity for long-lived document validation.</li>
 <li><strong>What</strong>: Per the slides: key pair generated, certificate issued, document signed, private key destroyed. The certificate never expires (<code>notAfter</code> = 99991231235959Z), never revokes (<code>id-ce-noRevAvail</code>), and is bound to the single signed document via a new <code>signedDocumentBinding</code> extension (dataTbsHash + hash algorithm + binding type), with binding-type variants for CAdES/XAdES/JWS/COSE that hash only the payload where the signing process covers certificate data.</li>

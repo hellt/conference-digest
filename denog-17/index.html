@@ -1984,7 +1984,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/denog17/talk/KLXJS8/">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=eqvhn0yXT9A">Recording</a></p>
 </div>
-<p>Nicola von Thadden (<a href="../companies/pfalzkom/">PFALZKOM</a>), Arjan Koopen (<a href="../companies/i3d-net/">i3D.net</a> / <a href="../companies/stichting-eventinfra/">Stichting EventInfra</a>)</p>
+<p>Nicola von Thadden (<a href="../companies/pfalzkom/">PFALZKOM</a>), Arjan Koopen (<a href="../companies/i3d-net-stichting-eventinfra/">i3D.net / Stichting EventInfra</a>)</p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="eqvhn0yXT9A" data-start="0" href="https://www.youtube.com/watch?v=eqvhn0yXT9A" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/eqvhn0yXT9A/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/eqvhn0yXT9A/maxresdefault.jpg" alt="Play the recording: 400G ZR+ BiDi does not exist, it can't hurt you. Or can it?" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A creative, out-of-spec experiment building a 400G link over a single fiber pair using ZR+ optics — relevant to the PM's optics and DC interconnect interests as a proof of what's technically possible outside standards.</li>
@@ -2012,7 +2012,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/denog17/talk/ASAQKE/">Abstract</a> <a class="pick-link" href="https://pretalx.com/media/denog17/submissions/ASAQKE/resources/e-wt-20250807-RIPE_kmDkegi.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=lbN6HheQFBw">Recording</a></p>
 </div>
-<p>Wolfgang Tremmel (<a href="../companies/de-cix/">DE-CIX</a> Academy)</p>
+<p>Wolfgang Tremmel (<a href="../companies/de-cix-academy/">DE-CIX Academy</a>)</p>
 <div class="pick-video"><a class="pick-video__thumb" data-yt="lbN6HheQFBw" data-start="0" href="https://www.youtube.com/watch?v=lbN6HheQFBw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/lbN6HheQFBw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/lbN6HheQFBw/maxresdefault.jpg" alt="Play the recording: The return of EGP or the curious case of the BGP Origin attribute" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: A fascinating BGP protocol internals investigation — who is setting the Origin attribute to "e" (EGP) in the global routing table, and why. Includes the discovery that Tier1 providers are rewriting Origin to win best-path selection. Directly relevant to the PM's BGP/datapath internals interest.</li>
@@ -2308,7 +2308,7 @@ registry_key: denog-17
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/denog17/talk/ASAQKE/">Abstract</a> <a class="pick-link" href="https://pretalx.com/media/denog17/submissions/ASAQKE/resources/e-wt-20250807-RIPE_kmDkegi.pdf">Slides</a></p>
 </div>
-<p>Wolfgang Tremmel (<a href="../companies/de-cix/">DE-CIX</a> Academy)</p>
+<p>Wolfgang Tremmel (<a href="../companies/de-cix-academy/">DE-CIX Academy</a>)</p>
 <ul>
 <li><strong>Why</strong>: A BGP protocol-internals investigation with a genuinely surprising finding: Tier1 providers are rewriting Origin-Type to win traffic in multi-transit tie-breaks. This affects anyone with multiple upstreams and equal LocalPref — a subtle traffic-engineering dynamic that most operators don't know is happening.</li>
 <li><strong>What</strong>: While preparing BGP training, Tremmel found 868 prefixes in the global routing table with Origin "e" (EGP) — a value that should never legitimately appear since EGP is dead. Investigation shows 118 ASes (IPv4) and 19 (IPv6) originating EGP-tagged prefixes, with AS396982 (Google) accounting for 348 IPv4 prefixes. The key insight: Origin-Type (best-path selection step 4, after LocalPref and AS-path length) is being weaponized by transit providers who rewrite it to "IGP" to attract more traffic when customers set equal LocalPref across multiple transits.</li>
@@ -2347,7 +2347,7 @@ registry_key: denog-17
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/denog17/talk/KLXJS8/">Abstract</a></p>
 </div>
-<p>Nicola von Thadden (<a href="../companies/pfalzkom/">PFALZKOM</a>), Arjan Koopen (<a href="../companies/i3d-net/">i3D.net</a> / <a href="../companies/stichting-eventinfra/">Stichting EventInfra</a>)</p>
+<p>Nicola von Thadden (<a href="../companies/pfalzkom/">PFALZKOM</a>), Arjan Koopen (<a href="../companies/i3d-net-stichting-eventinfra/">i3D.net / Stichting EventInfra</a>)</p>
 <ul>
 <li><strong>Why</strong>: A creative, out-of-spec experiment: a 400G link over a single fiber using ZR+ coherent optics, since 400G BiDi doesn't exist as a product. Directly relevant to the PM's optics interests — demonstrates what coherent optics tolerate outside their specified operating envelope, useful when fiber count is constrained.</li>
 <li><strong>What</strong>: For the WHY2025 hacker summer camp in the Netherlands, the speakers built a 400G link over a single fiber. Since 400G BiDi doesn't exist, they built something out-of-spec using ZR+ optics. A lightning talk. (from abstract and page only — no slides or detailed technical writeup available)</li>

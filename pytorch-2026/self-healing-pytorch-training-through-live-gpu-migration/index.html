@@ -548,7 +548,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1322707">Abstract</a></p>
 </div>
-<p>Pavneet Ahluwalia, Gavin Cohen — <a href="../../companies/microsoft/">Microsoft Azure</a> (product) and <a href="../../companies/clockwork/">Clockwork Systems</a></p>
+<p>Pavneet Ahluwalia, Gavin Cohen — <a href="../../companies/microsoft/">Microsoft Azure</a> (<a href="../../companies/product/">product</a>) and <a href="../../companies/clockwork/">Clockwork Systems</a></p>
 <ul>
 <li><strong>Why</strong>: Link flaps and node failures are the physical-fabric failure modes you live with; this talk is about the job layer's counter-move — live migration instead of checkpoint-restart. The structural diagnosis (every step ends in a collective needing all ranks; a communicator can't be rebuilt around a missing peer) is the clearest statement of why training jobs are so brittle to fabric events.</li>
 <li><strong>What</strong>: TorchPass, a training-failover system presented jointly by Together AI and Clockwork Systems: on link degradation it reroutes traffic; on GPU/memory/component failure it live-migrates the affected rank's device and communicator state to a spare and resumes from the same step. Their claim: a single checkpoint-restart failure burns 45–90 minutes of wall-clock across every GPU in the job. Live demo with injected link flaps and GPU failures; a decision framework for when live migration beats checkpoint-restart, plus a TCO framing for recovered goodput. (from abstract only)</li>

@@ -548,7 +548,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-lamps-csr-attestation/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-lamps-csr-attestation-00">Slides</a> <a class="pick-link" href="https://youtu.be/RyqnmLpaRBw">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/lamps">Materials</a></p>
 </div>
-<p>M. Ounsworth, H. Tschofenig, H. Birkholz, M. Wiseman, N. Smith (LAMPS WG)</p>
+<p>M. Ounsworth, H. Tschofenig, H. Birkholz, M. Wiseman, N. Smith (<a href="../../companies/lamps-wg/">LAMPS WG</a>)</p>
 <ul>
 <li><strong>Why</strong>: CAs increasingly must verify policy compliance before issuance — e.g., that a CSR's private key lives in an HSM and is non-exportable. Today that's a zoo of proprietary attestation mechanisms. This standardizes carrying attestation evidence inside PKCS#10/CRMF, which matters for anyone automating certificate issuance for workloads and devices.</li>
 <li><strong>What</strong>: ASN.1 structures carrying attestation data in CSRs, supporting both standardized (RATS-family) and proprietary attestation formats. WG draft at -22/-23: a design team (formed to break an author stalemate over design options) did a deep editorial pass; the Attestation OID registry was removed in -23; two PRs remain open (one debating whether a "Hint" should become a full CMS Attribute — the authors lean toward dropping hints entirely; one revisiting ASN.1 choices).</li>

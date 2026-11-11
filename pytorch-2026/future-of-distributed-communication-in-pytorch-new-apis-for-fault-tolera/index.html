@@ -548,7 +548,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256220">Abstract</a></p>
 </div>
-<p>Tristan Rice, Kapil Sharma — <a href="../../companies/meta/">Meta</a> (PyTorch Distributed)</p>
+<p>Tristan Rice, Kapil Sharma — <a href="../../companies/meta/">Meta</a> (<a href="../../companies/pytorch-distributed/">PyTorch Distributed</a>)</p>
 <ul>
 <li><strong>Why</strong>: <code>torch.distributed</code> is the layer where every training collective maps onto your RDMA/Ethernet fabric. These API changes define how large jobs interact with the network — fault recovery, one-sided RDMA, and observability — and they are landing upstream for everyone.</li>
 <li><strong>What</strong>: Five new capabilities being upstreamed from TorchComms into <code>torch.distributed</code>: <code>torch.distributed.reconfigure()</code> for live process-group reconfiguration after rank failures (no job restart); window APIs for one-sided RDMA put/get (zero-copy, aimed at RL workloads); composable hooks for tracing, logging, and NaN detection on all collectives across all backends; backends shipped as pip-installable wheels via entry_points; and cleaned-up backend interfaces for vendors. (from abstract only)</li>

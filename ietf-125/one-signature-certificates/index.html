@@ -548,7 +548,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-santesson-one-signature-certs/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/materials/slides-125-lamps-one-signature-certificates-01">Slides</a> <a class="pick-link" href="https://youtu.be/RyqnmLpaRBw">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/125/session/lamps">Materials</a></p>
 </div>
-<p>Stefan Santesson, Russ Housley (LAMPS WG)</p>
+<p>Stefan Santesson, Russ Housley (<a href="../../companies/lamps-wg/">LAMPS WG</a>)</p>
 <ul>
 <li><strong>Why</strong>: A genuinely novel certificate profile: certificates that exist to validate exactly one signature, with the key destroyed immediately after — eliminating expiry and revocation complexity for long-lived document validation.</li>
 <li><strong>What</strong>: Per the slides: key pair generated, certificate issued, document signed, private key destroyed. The certificate never expires (<code>notAfter</code> = 99991231235959Z), never revokes (<code>id-ce-noRevAvail</code>), and is bound to the single signed document via a new <code>signedDocumentBinding</code> extension (dataTbsHash + hash algorithm + binding type), with binding-type variants for CAdES/XAdES/JWS/COSE that hash only the payload where the signing process covers certificate data.</li>

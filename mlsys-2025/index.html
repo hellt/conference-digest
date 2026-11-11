@@ -1031,7 +1031,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://openreview.net/forum?id=Vmf09yVJhT">Abstract</a> <a class="pick-link" href="https://openreview.net/pdf?id=Vmf09yVJhT">Paper</a> <a class="pick-link" href="https://slideslive.com/39042979">Recording</a></p>
 </div>
-<p>Amy Yang, Jingyi Yang, Aya Ibrahim, Xinfeng Xie, Bangsheng Tang, Grigory Sizov, Jongsoo Park, Jianyu Huang (<a href="../companies/meta/">Meta</a> / <a href="../companies/nvidia/">NVIDIA</a> collaboration per author roster)</p>
+<p>Amy Yang, Jingyi Yang, Aya Ibrahim, Xinfeng Xie, Bangsheng Tang, Grigory Sizov, Jongsoo Park, Jianyu Huang (<a href="../companies/meta-nvidia-collaboration-per-author-roster/">Meta / NVIDIA collaboration per author roster</a>)</p>
 <ul>
 <li><strong>Why</strong>: This is the paper at the intersection of long-context inference and datacenter interconnect reality. It directly answers a fabric-planning question: how much inter-host bandwidth does million-token prefill actually need, and does it need RDMA or does TCP suffice?</li>
 <li><strong>What</strong>: A context-parallelism scheme for long-context LLM inference that achieves near-linear scaling of prefill latency up to 128 H100 GPUs across 16 nodes — 1M-token prefill with Llama3 405B in 77 seconds at 93% parallelization efficiency and 63% FLOPS utilization; 128K context in 3.8s. (from abstract only)</li>
@@ -1057,7 +1057,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://openreview.net/forum?id=AQgYcfg5EI">Abstract</a> <a class="pick-link" href="https://openreview.net/pdf?id=AQgYcfg5EI">Paper</a> <a class="pick-link" href="https://slideslive.com/39043026">Recording</a></p>
 </div>
-<p>Lorenzo Sani, Alex Iacob, Zeyu Cao, Royson Lee, Bill Marino, Yan Gao, Wanru Zhao, Dongqi Cai, Zexi Li, Xinchi Qiu, Nic Lane (<a href="../companies/university-of-oxford/">Oxford</a> / <a href="../companies/university-of-cambridge/">Cambridge</a> / <a href="../companies/university-college-london/">UCL</a>-style FL collaboration)</p>
+<p>Lorenzo Sani, Alex Iacob, Zeyu Cao, Royson Lee, Bill Marino, Yan Gao, Wanru Zhao, Dongqi Cai, Zexi Li, Xinchi Qiu, Nic Lane (<a href="../companies/oxford-cambridge-ucl-style-fl-collaboration/">Oxford / Cambridge / UCL-style FL collaboration</a>)</p>
 <ul>
 <li><strong>Why</strong>: A counter-current to the "ever-fatter fabric" narrative: this trains 7B-parameter LLMs from scratch across weakly connected, geographically dispersed GPU silos over the internet. If viable, it changes WAN/interconnect economics for training — less dependence on a single specialized DC, compute sourcing that follows electricity prices, and far lower inter-silo bandwidth requirements.</li>
 <li><strong>What</strong>: The first complete system for federated, from-scratch, end-to-end LLM pre-training. Trains models up to 7B federatively with perplexity <em>better</em> than centralized pre-training; communicates 64×–512× less than baselines and beats baseline distributed-training wall-time by 35%; converges twice as fast as DiLoCo and is robust to data heterogeneity across silos. (from abstract only)</li>
@@ -1070,7 +1070,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://openreview.net/forum?id=EH5PZW6aCr">Abstract</a> <a class="pick-link" href="https://openreview.net/pdf?id=EH5PZW6aCr">Paper</a> <a class="pick-link" href="https://slideslive.com/39043032">Recording</a></p>
 </div>
-<p>Yue Gao, Ilia Shumailov, Kassem Fawaz (<a href="../companies/university-of-wisconsin-madison/">UW-Madison</a> / <a href="../companies/university-of-oxford/">Oxford</a> lineage)</p>
+<p>Yue Gao, Ilia Shumailov, Kassem Fawaz (<a href="../companies/uw-madison-oxford-lineage/">UW-Madison / Oxford lineage</a>)</p>
 <ul>
 <li><strong>Why</strong>: The ML OSS ecosystem is a supply-chain security disaster zone — enormous transitive dependency graphs, unpinned artifacts in model repos, and Python's import-time execution model. For anyone responsible for network/security policy around ML infrastructure, this is the emerging attack surface paper.</li>
 <li><strong>What</strong>: Introduces a new class of supply-chain attack specific to ML models: innocuous-looking code injected via traditional supply-chain vectors that <em>weakens model robustness</em> rather than exfiltrating data — the payload is a degraded or subtly sabotaged model. Complements the attack with an LLM-assisted analysis of security discussions across the top 50 ML projects on GitHub, finding ML contributors' security awareness is no better than the general OSS population. (from abstract only)</li>
@@ -1123,7 +1123,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://openreview.net/forum?id=9vyyfVNW1E">Abstract</a> <a class="pick-link" href="https://openreview.net/pdf?id=9vyyfVNW1E">Paper</a> <a class="pick-link" href="https://slideslive.com/39043031">Recording</a></p>
 </div>
-<p>Jianheng Ling, Pratik Worah, Yawen Wang, Yunchuan Kong, Chunlei Wang, Clifford Stein, Diwakar Gupta, Jason Behmer, Logan Bush, Prakash Ramanan, Rajesh Kumar, Thomas Chestna, Yajing Liu, Ying Liu, Ye Zhao, Kathryn S. McKinley, Meeyoung Park, Martin Maas (anonymized hyperscaler "AnonCorp")</p>
+<p>Jianheng Ling, Pratik Worah, Yawen Wang, Yunchuan Kong, Chunlei Wang, Clifford Stein, Diwakar Gupta, Jason Behmer, Logan Bush, Prakash Ramanan, Rajesh Kumar, Thomas Chestna, Yajing Liu, Ying Liu, Ye Zhao, Kathryn S. McKinley, Meeyoung Park, Martin Maas (<a href="../companies/anonymized-hyperscaler-anoncorp/">anonymized hyperscaler "AnonCorp"</a>)</p>
 <ul>
 <li><strong>Why</strong>: Hyperscale bin-packing is the canonical capacity-planning problem, and this comes with something rare: fleet-wide production deployment numbers and an honest treatment of what happens when your ML predictions are wrong — the part most papers skip.</li>
 <li><strong>What</strong>: VM-to-host allocation using <em>reprediction</em> with lifetime distributions (vs. one-shot point prediction), with algorithms that adapt when mispredictions surface; also novel defragmentation and maintenance handling, which prior academic work ignored. In production at a hyperscaler: ~3% and ~2% reductions in stranded compute and memory, 2.3–9.2 percentage-point increase in empty hosts (helping large-VM availability and system updates), plus fewer migrations. (from abstract only)</li>
@@ -1136,7 +1136,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://openreview.net/forum?id=JuGWOSB68T">Abstract</a> <a class="pick-link" href="https://openreview.net/pdf?id=JuGWOSB68T">Paper</a> <a class="pick-link" href="https://slideslive.com/39043002">Recording</a></p>
 </div>
-<p>Chenxi Yang, Yan Li, Martin Maas, Mustafa Uysal, Ubaid Hafeez, Arif Merchant, Richard McDougall (anonymized hyperscaler "AnonCorp")</p>
+<p>Chenxi Yang, Yan Li, Martin Maas, Mustafa Uysal, Ubaid Hafeez, Arif Merchant, Richard McDougall (<a href="../companies/anonymized-hyperscaler-anoncorp/">anonymized hyperscaler "AnonCorp"</a>)</p>
 <ul>
 <li><strong>Why</strong>: Less about storage than about <em>why ML-for-infra hasn't shipped</em> — the paper diagnoses the failure modes of a decade of academic ML-placement papers in a real hyperscale environment. That diagnosis transfers to every "why doesn't anyone deploy this" ML-for-networking idea a PM has ever sponsored.</li>
 <li><strong>What</strong>: A cross-layer design: ML prediction moves <em>out</em> of the storage layer and into the application above it ("bring your own model"), with a co-designed heuristic in the storage layer that consumes those predictions. Small interpretable application-level models + adaptive storage-layer scheduling, tested in a production distributed-computation framework at a hyperscaler; up to 3.47× TCO savings over state-of-the-art baselines in test deployment and production-trace simulations. (from abstract only)</li>
@@ -1189,7 +1189,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://mlsys.org/virtual/2025/invited-talk/2886">Abstract</a></p>
 </div>
-<p>Soumith Chintala (PyTorch)</p>
+<p>Soumith Chintala (<a href="../companies/pytorch/">PyTorch</a>)</p>
 <ul>
 <li><strong>Why</strong>: The best panoramic view of what "planetary-scale training on interactive supercomputers" and ultra-efficient real-time inference actually demand from the underlying stack — and an honest framing of the AI-agents-for-systems-work idea from someone who sees every exotic deployment. Useful calibration for a PM deciding how much of the AI-agents-for-ops wave is real.</li>
 <li><strong>What</strong>: A survey talk on the extreme edge cases of PyTorch usage — the workloads that break the framework and define its roadmap — followed by a candid assessment of the open problems in building agents that automate the work cutting-edge users do today, with the stated position that this vision is "far from realized." (from abstract only)</li>

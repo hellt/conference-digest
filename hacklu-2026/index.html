@@ -1203,7 +1203,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/M9YUZX/">Abstract</a></p>
 </div>
-<p>Jonathan Prince (independent <a href="../companies/ibm/">IBM</a> z/OS and <a href="../companies/ibm/">IBM</a> i security researcher)</p>
+<p>Jonathan Prince (<a href="../companies/independent-ibm-z-os-and-ibm-i-security-researcher/">independent IBM z/OS and IBM i security researcher</a>)</p>
 <ul>
 <li><strong>Why</strong>: Graph-based attack-path modeling is the state of the art in AD identity security — this talk exports it to RACF/z/OS, the tier-0 systems that usually sit <em>behind</em> the AD you already model. If you care about identity graphs, this extends them to the mainframe.</li>
 <li><strong>What</strong>: RACFHound, a tool that transforms RACF authorization data into an identity graph and integrates it into BloodHound via the OpenGraph framework. Surfaces multi-step escalation paths that flat RACF reports miss: SURROGAT permission chains, write access to APF-authorized libraries, escalation through UNIX System Services, and paths to the SPECIAL and OPERATIONS attributes. Live BloodHound demo replaces hours of manual report analysis with instant graph queries.</li>
@@ -1242,7 +1242,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/C3XZZY/">Abstract</a></p>
 </div>
-<p>Paweł Pawliński, Jan Adamski, Jakub Koman (<a href="../companies/nask/">NASK</a> / <a href="../companies/nask/">CERT.PL</a>), Paul Jung (<a href="../companies/circl/">CIRCL</a>)</p>
+<p>Paweł Pawliński, Jan Adamski, Jakub Koman (<a href="../companies/nask-cert-pl/">NASK / CERT.PL</a>), Paul Jung (<a href="../companies/circl/">CIRCL</a>)</p>
 <ul>
 <li><strong>Why</strong>: Network telescopes are pure network telemetry at internet scale — scanning, botnets, exploitation attempts, DDoS, misconfigurations — and this is operator-led (two national CERTs) rather than academic.</li>
 <li><strong>What</strong>: A 2-hour workshop in two halves: (1) how CIRCL and NASK/CERT.PL collect and process large network telescopes — pipelines that turn raw unsolicited packets into structured, enriched datasets and actionable threat intelligence, with honest discussion of strengths and limitations; (2) a hackathon-style exploration of real telescope datasets with instructor support and no predefined outcome.</li>
@@ -1282,7 +1282,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/BX8WPS/">Abstract</a></p>
 </div>
-<p>Santi Abastante (cloud incident responder / security engineer)</p>
+<p>Santi Abastante (<a href="../companies/cloud-incident-responder-security-engineer/">cloud incident responder / security engineer</a>)</p>
 <ul>
 <li><strong>Why</strong>: If your cloud security story is CloudTrail → SIEM → maybe alert, this is a pointed architectural critique: the detection <em>delay window</em> is itself the exploitable vulnerability.</li>
 <li><strong>What</strong>: An argument (built on real IR experience and prior VB 2025 analysis) that polling-based, stateless-correlation SIEM pipelines are fundamentally incompatible with event-driven cloud control planes, plus OpenCDR — an open-source event-driven detection/response system testing whether deterministic, near-real-time response is achievable. Ends with a live attack scenario exploiting detection delay against a SIEM pipeline versus the event-driven architecture (minutes → seconds).</li>
@@ -1334,7 +1334,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://pretalx.com/hack-lu-2026/talk/SKB7U8/">Abstract</a></p>
 </div>
-<p>Bilal Hassan, Bob van der Kamp (<a href="../companies/ncsc-nl/">NCSC-NL</a> / <a href="../companies/university-of-amsterdam/">University of Amsterdam</a>)</p>
+<p>Bilal Hassan, Bob van der Kamp (<a href="../companies/ncsc-nl-university-of-amsterdam/">NCSC-NL / University of Amsterdam</a>)</p>
 <ul>
 <li><strong>Why</strong>: Post-disclosure, "find every vulnerable host before attackers do" is a networking problem — and the feature table reaches into exactly the L3/L4 quirks you know well (TTL, DF, TOS, TCP MSS differences between PLC vendors).</li>
 <li><strong>What</strong>: A NCSC-NL-commissioned methodology (master thesis, UvA) formalizing how analysts derive a working Censys/Shodan query for a specific vulnerable product/version: a decision tree whose leaves are either an effective query or the conclusion none exists; a cross-domain feature table (certificates, HTML, CSS, URL paths, TTL/TOS/DF values, MSS — e.g., Schneider PLC MSS 1380 vs. Siemens 1460); and a CLI prototype automating feature identification and query construction, with real vulnerability examples.</li>

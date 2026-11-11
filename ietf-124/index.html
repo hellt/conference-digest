@@ -1317,7 +1317,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-dong-fantel-problem-statement/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-rtgwg-06-network-notifications-problem-statement-00">Slides</a> <a class="pick-link" href="https://youtu.be/cFekE0TpHng">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/rtgwg">Materials</a></p>
 </div>
-<p>Jie Dong (<a href="../companies/huawei/">Huawei</a>), Mike McBride (<a href="../companies/futurewei/">Futurewei</a>), François Clad (<a href="../companies/cisco/">Cisco</a>), Zhaohui (Jeffrey) Zhang (<a href="../companies/juniper/">Juniper</a>), with contributors from <a href="../companies/china-telecom/">China Telecom</a>, <a href="../companies/china-mobile/">China Mobile</a>, <a href="../companies/china-unicom/">China Unicom</a>, <a href="../companies/tencent/">Tencent</a>, <a href="../companies/telef-nica/">Telefónica</a>, and Turkcell</p>
+<p>Jie Dong (<a href="../companies/huawei/">Huawei</a>), Mike McBride (<a href="../companies/futurewei/">Futurewei</a>), François Clad (<a href="../companies/cisco/">Cisco</a>), Zhaohui (<a href="../companies/jeffrey/">Jeffrey</a>) Zhang (<a href="../companies/juniper/">Juniper</a>), with contributors from <a href="../companies/china-telecom/">China Telecom</a>, <a href="../companies/china-mobile/">China Mobile</a>, <a href="../companies/china-unicom/">China Unicom</a>, <a href="../companies/tencent/">Tencent</a>, <a href="../companies/telef-nica/">Telefónica</a>, and Turkcell</p>
 <ul>
 <li><strong>Why</strong>: AI training/inference and large-scale cloud services need the network to adapt faster than today's feedback loops allow. This is the anchor problem statement for the whole FANTEL (Fast Notifications for TE and Load Balancing) cluster in RTGWG, carried forward from the IETF 123 BoF with unusual breadth of operator/vendor co-authorship.</li>
 <li><strong>What</strong>: A structured problem statement defining what fast network notifications must carry, who must receive them, and how they get delivered — the requirements frame every other fast-notification draft at this meeting builds against.</li>
@@ -1408,7 +1408,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-idr-bgp4-rfc4271bis/">Draft</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/idr">Materials</a></p>
 </div>
-<p>Yakov Rekhter (independent), Tony Li (<a href="../companies/hpe/">HPE</a>), Susan Hares (<a href="../companies/huawei/">Huawei</a>), John Scudder, Ed. (<a href="../companies/hpe/">HPE</a>) — IDR WG document</p>
+<p>Yakov Rekhter (<a href="../companies/independent/">independent</a>), Tony Li (<a href="../companies/hpe/">HPE</a>), Susan Hares (<a href="../companies/huawei/">Huawei</a>), John Scudder, Ed. (<a href="../companies/hpe/">HPE</a>) — IDR WG document</p>
 <ul>
 <li><strong>Why</strong>: The once-in-a-generation rewrite of the BGP base specification — the document every BGP implementation will eventually be coded and tested against.</li>
 <li><strong>What</strong>: <code>draft-ietf-idr-bgp4-rfc4271bis-03</code> obsoletes RFC 4271 along with RFC 6286, 6608, 8212, and 9687, and subsumes the core of RFC 7606 (treat-as-withdraw error handling) into the base. Consolidation, not new machinery: restructured per-message and per-attribute error handling, the send-hold timer, typed NLRI parsing rules, an explicit route-resolvability condition in the decision process, and a roadmap distinguishing the "core extensions" (RFC 4760 multiprotocol, RFC 8654 extended messages) from the wider extension ecosystem.</li>
@@ -1434,7 +1434,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/doc/draft-ietf-tcpm-accurate-ecn/">Draft</a> <a class="pick-link" href="https://youtu.be/Z1qVCrIBVqQ">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/tcpm">Materials</a></p>
 </div>
-<p>Bob Briscoe (Independent), Mirja Kühlewind (<a href="../companies/ericsson/">Ericsson</a>), Richard Scheffenegger (<a href="../companies/netapp/">NetApp</a>) — TCPM</p>
+<p>Bob Briscoe (<a href="../companies/independent/">Independent</a>), Mirja Kühlewind (<a href="../companies/ericsson/">Ericsson</a>), Richard Scheffenegger (<a href="../companies/netapp/">NetApp</a>) — TCPM</p>
 <ul>
 <li><strong>Why</strong>: RFC 3168 ECN feedback allows one congestion signal per RTT; DCTCP, L4S, and ConEx need per-marking counts. This changes the TCP wire protocol itself — and it is now finished: published as <strong>RFC 9768</strong> (Proposed Standard, April 2026).</li>
 <li><strong>What</strong>: AccECN replaces Classic ECN feedback: the receiver continually feeds back a count of CE-marked packets using the three TCP header flags (the former NS bit renamed AE, plus overloaded CWR/ECE) as a 3-bit ACE counter, negotiated in the three-way handshake with careful backward compatibility. An optional AccECN TCP Option (two alternative field orders, never on the SYN) supplements this with 24-bit byte counters per ECN codepoint.</li>
@@ -1473,7 +1473,7 @@
 <div class="pick-links">
 <p><a class="pick-link" href="https://datatracker.ietf.org/meeting/124/materials/slides-124-wimse-wimse-architecture-00">Slides</a> <a class="pick-link" href="https://youtu.be/0UaVPLO_9Xk">Session recording</a> <a class="pick-link" href="https://datatracker.ietf.org/meeting/124/session/wimse">Materials</a></p>
 </div>
-<p>WIMSE WG presentation on draft-ietf-wimse-arch-06 (no Internet-Draft linked to the slides)</p>
+<p>WIMSE WG presentation on draft-ietf-wimse-arch-06 (<a href="../companies/no-internet-draft-linked-to-the-slides/">no Internet-Draft linked to the slides</a>)</p>
 <ul>
 <li><strong>Why</strong>: WIMSE is the IETF's umbrella for workload identity — the standards track that SPIFFE-adjacent interests will land on. This presentation is the WG's open-issues snapshot.</li>
 <li><strong>What</strong>: Status of the architecture document after an interim: pending refactors of the service-to-service and identifier documents, terminology alignment, and an explicit list of topics to expand — security considerations, authorization, binding, key management, and attestation. The WG also refined its workload definition (PR#96): an independently addressable, executable software entity — microservices, containers, VMs, serverless functions — spanning fraction-of-a-second request handlers to multi-year database services and ML training jobs.</li>

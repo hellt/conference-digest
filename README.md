@@ -519,6 +519,14 @@ run.
   channel. Discovery reads only the event hero because article-card dates below
   the agenda can outvote the real event date. Form CSS mentions captcha, so this
   is a status-only source like MORE-IP and SwiNOG.
+- **AI Engineer** uses the public `sessions.json` schedule documented on
+  ai.engineer/data when one is published (Europe 2026: 196 sessions; World's
+  Fair 2026: 561). Separate
+  recording records are not title-matched into that schedule. NYC 2026 has no
+  JSON feed, so its Watch & read page is the fallback: it slices two full-day
+  YouTube streams into per-session chapters with synopses, timestamped
+  recordings and reading-edition pages carrying full transcripts. The 46 real
+  talks are kept; administrative Remarks cards are dropped.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

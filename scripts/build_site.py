@@ -112,11 +112,11 @@ NON_ATTRIBUTION = re.compile(r"^\s*(?:[-*+]\s+)?\*\*(?:Links?:?|Why|What|How|Whe
 HEADED = re.compile(r"^### (.+?) — (.+) — (?:Core|Adjacent|Wildcard)$")
 AUTHORS = re.compile(r"^- \*\*Authors / tier\*\*:\s*")
 
-# Companies worth browsing by, mapped to the canonical name their page uses.
-# The canonical spelling is matched as written; each alias adds a variant
-# seen in digests ("Cisco Systems" and "Cisco ThousandEyes" are Cisco, "AWS"
-# is Amazon, universities appear under both full and short names). A name the
-# map doesn't know simply isn't linked — nothing is invented (invariant 15).
+# Employer aliases mapped to the canonical name their page uses. Unknown
+# companies are still discovered from structured "Name (Company, role)"
+# attributions below; this map normalizes spellings rather than acting as an
+# allow-list ("Cisco Systems" and "Cisco ThousandEyes" are Cisco, "AWS" is
+# Amazon, universities appear under both full and short names).
 EMPLOYER_VARIANTS = {
     "Cisco": ("Cisco Systems", "Cisco Systems, Inc.", "Cisco Systems Inc.", "Cisco ThousandEyes", "Isovalent at Cisco", "Isovalent/Cisco"),
     "Juniper": ("Juniper Networks",),
@@ -784,7 +784,54 @@ def anchor_id(heading: str) -> str:
     return re.sub(r"[-\s]+", "-", text)
 
 
-def employer_spans(text: str) -> list[tuple[int, int, str]]:
+_NOT_AN_EMPLOYER = {"", "n/a", "na", "none", "unknown", "no affiliation", "no affiliation listed"}
+_ROLE_PREFIX = re.compile(
+    r"^(?:co[- ]?lead\b|chief\b|ceo\b|cto\b|cfo\b|coo\b|head\b|lead\b|"
+    r"(?:[\w+-]+[ -]+){0,3}(?:researcher|engineer|developer|leader|scientist|analyst|"
+    r"manager|director|architect|founder|officer|fellow|professor|student|intern|"
+    r"consultant|author|speaker|presenter|maintainer|owner|partner|president)\b)",
+    re.I,
+)
+_NAME_BEFORE_AFFILIATION = re.compile(r"[^\W\d_][\w'’.-]*(?:\s+[^\W\d_][\w'’.-]*){0,4}")
+_ROLE_SUFFIX = re.compile(
+    r"(?:co[- ]?lead|chief\b.*|lead|leader|researcher|engineer|developer|scientist|analyst|"
+    r"manager|director|architect|founder|officer|fellow|professor|student|intern|consultant|"
+    r"author|speaker|presenter|maintainer|owner|partner|president|ceo|cto|cfo|coo)$", re.I
+)
+
+
+def _structured_employer_spans(text: str) -> list[tuple[int, int, str]]:
+    """Companies in ``Speaker (Company, role)`` groups, outside the alias map.
+
+    This is deliberately a structural parse, not an LLM guess. Only a group
+    immediately following a person-like name contributes, and only its first
+    comma-delimited field: later fields are job titles. The caller disables
+    this for headings whose title may itself contain parenthetical text.
+    """
+    found = []
+    for group in re.finditer(r"\(([^()]+)\)", text):
+        before = re.sub(r"^.*?\bSpeakers:\s*", "", text[:group.start()], flags=re.I).rstrip()
+        before = before.splitlines()[-1].rstrip()  # two speaker lines joined for a company test/index
+        person = re.split(r"\s*(?:,|;|—|–)\s*", before)[-1].strip()
+        if not _NAME_BEFORE_AFFILIATION.fullmatch(person):
+            continue
+        if not any(c.islower() for c in person if c.isalpha()):
+            continue
+        fields = group.group(1).split(",", 2)
+        role = fields[1].strip() if len(fields) >= 2 else ""
+        if not _ROLE_SUFFIX.search(role) and not _ROLE_PREFIX.match(role):
+            continue  # no role delimiter: too ambiguous in legacy prose attributions
+        company = fields[0].strip()
+        if ";" in fields[0]:  # semicolons introduce role notes, not larger employer names
+            continue
+        if company.lower() in _NOT_AN_EMPLOYER or len(company) > 100 or _ROLE_PREFIX.match(company):
+            continue
+        start = group.start(1) + group.group(1).find(company)
+        found.append((start, start + len(company), company))
+    return found
+
+
+def employer_spans(text: str, structured: bool = True) -> list[tuple[int, int, str]]:
     """(start, end, canonical) of each employer mention in `text`; when spans
     overlap the longer name wins ("Cisco ThousandEyes" over "Cisco")."""
     found = []
@@ -797,6 +844,8 @@ def employer_spans(text: str) -> list[tuple[int, int, str]]:
             if speaker_name and m.start() == speaker_name.start(1):
                 continue
             found.append((m.start(), m.end(), canonical))
+    if structured:
+        found.extend(_structured_employer_spans(text))
     found.sort(key=lambda f: (f[0], f[0] - f[1]))  # by start, longest span first
     picked, taken = [], []
     for s, e, c in found:
@@ -807,10 +856,10 @@ def employer_spans(text: str) -> list[tuple[int, int, str]]:
     return picked
 
 
-def link_employers(line: str, base: str = "..") -> str:
+def link_employers(line: str, base: str = "..", structured: bool = True) -> str:
     """Link each employer mention in `line` to its page under companies/;
     `base` is the path from the page's directory to docs/."""
-    spans = employer_spans(line)
+    spans = employer_spans(line, structured)
     for s, e, canonical in reversed(spans):
         line = line[:s] + f"[{line[s:e]}]({base}/companies/{file_slug(canonical)}.md)" + line[e:]
     return line
@@ -1145,10 +1194,10 @@ def annotate_employers(rest: str, base: str = "..") -> tuple[str, list[dict]]:
             heading = line[4:].strip()
             j = attribution_line(lines, i)
             if j < 0:  # netdev/SIGCOMM: attribution is the heading itself
-                spans = employer_spans(line)
+                spans = employer_spans(line, structured=False)  # avoid the talk title's parentheses
                 if not spans:
                     continue
-                lines[i] = link_employers(line, base)
+                lines[i] = link_employers(line, base, structured=False)
                 m = HEADED.match(line)
                 picks.append({
                     "tier": tier,

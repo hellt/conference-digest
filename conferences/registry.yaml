@@ -1145,7 +1145,7 @@ conferences:
     fetcher: aiengineer
     program_url: "https://ai.engineer/nyc/2026"
     manual_fallback_url: "https://ai.engineer/nyc/2026"
-    notes: "The Watch & read page slices two full-day YouTube streams into session cards using their chapters. Each item has speakers, a synopsis, a timestamped recording and a reading-edition page with a full transcript. NYC has no public sessions.json feed, so the fetcher uses these verified cards and drops administrative Remarks."
+    notes: "NYC has no public sessions.json feed, so 46 talks come from Watch & read cards. Standalone public-catalog uploads are preferred when slide-title, speaker/duration, or speaker/upload-window evidence verifies the match: 44 standalone transcripts and uncut recordings currently; two ambiguous multi-talk speaker cases retain chapter offsets. Structured standalone speaker organizations supply employer data. Administrative Remarks are dropped."
 
   - key: aiengineer-europe-2026
     name: "AI Engineer Europe 2026"

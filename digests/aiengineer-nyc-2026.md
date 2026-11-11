@@ -12,7 +12,7 @@ written_by: ToFaRev (zai-org/GLM-5.3)
 
 ### Not All GPU's Are Deployed The Same
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/semianalysis) · [Recording](https://www.youtube.com/watch?v=jiUC6IUMdvc&t=8700s)
+**Links:** [Abstract](https://ai.engineer/talks/3axY1wz2OvA-same-gpu-50-more-output-why-operator) · [Recording](https://www.youtube.com/watch?v=3axY1wz2OvA)
 
 Oliver Kennon (SemiAnalysis, Research Analyst, Core Research)
 
@@ -23,7 +23,7 @@ Oliver Kennon (SemiAnalysis, Research Analyst, Core Research)
 
 ### How Compute Markets Work
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/sf-compute) · [Recording](https://www.youtube.com/watch?v=jiUC6IUMdvc&t=10186s)
+**Links:** [Abstract](https://ai.engineer/talks/Wk2bUUGFC_o-why-ai-startups-will-disappear-without-compute) · [Recording](https://www.youtube.com/watch?v=Wk2bUUGFC_o)
 
 Evan Conrad (San Francisco Compute Company, CEO)
 
@@ -34,7 +34,7 @@ Evan Conrad (San Francisco Compute Company, CEO)
 
 ### The Dark Pools of Compute
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/jump-trading) · [Recording](https://www.youtube.com/watch?v=jiUC6IUMdvc&t=11709s)
+**Links:** [Abstract](https://ai.engineer/talks/GCse4OMzY8U-why-compute-still-trades-in-group-chats) · [Recording](https://www.youtube.com/watch?v=GCse4OMzY8U)
 
 Affaan Mustafa (Jump Trading, Compute Trading Lead), Alejandro Soumah Fernandez (Jump Trading, Co-Lead Compute Trading)
 
@@ -45,7 +45,7 @@ Affaan Mustafa (Jump Trading, Compute Trading Lead), Alejandro Soumah Fernandez 
 
 ### Your GPU Neighbor Can Hear Your Model
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/stealthium) · [Recording](https://www.youtube.com/watch?v=akEqiXFo3GM&t=12897s)
+**Links:** [Abstract](https://ai.engineer/talks/SacJfmp33vM-your-gpu-neighbor-hear-your-model) · [Recording](https://www.youtube.com/watch?v=SacJfmp33vM)
 
 Branislav Brzak (Stealthium, Cybersecurity Researcher)
 
@@ -56,7 +56,7 @@ Branislav Brzak (Stealthium, Cybersecurity Researcher)
 
 ### Great Agents Start with Great Infrastructure
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/modal) · [Recording](https://www.youtube.com/watch?v=akEqiXFo3GM&t=16931s)
+**Links:** [Abstract](https://ai.engineer/talks/_0SQh8a1Osk-dont-vibe-code-your-agent-infrastructure) · [Recording](https://www.youtube.com/watch?v=_0SQh8a1Osk)
 
 Akshat Bubna (Modal, CTO)
 
@@ -67,7 +67,7 @@ Akshat Bubna (Modal, CTO)
 
 ### Shipping like a startup, regulated like a bank
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/revolut) · [Recording](https://www.youtube.com/watch?v=akEqiXFo3GM&t=20214s)
+**Links:** [Abstract](https://ai.engineer/talks/Ok6QdZHCcI8-revolut-cut-ai-coding-costs-90-self) · [Recording](https://www.youtube.com/watch?v=Ok6QdZHCcI8)
 
 David Abitbol (Revolut, Ops & Infrastructure Leader)
 
@@ -80,7 +80,7 @@ David Abitbol (Revolut, Ops & Infrastructure Leader)
 
 ### Compute Exchange
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/compute-exchange) · [Recording](https://www.youtube.com/watch?v=jiUC6IUMdvc&t=13174s)
+**Links:** [Abstract](https://ai.engineer/talks/laQ8wMysnkk-buying-gpus-should-work-like-buying-stocks) · [Recording](https://www.youtube.com/watch?v=laQ8wMysnkk)
 
 Carmen Li (Compute Exchange / Silicon Data, CEO)
 
@@ -91,7 +91,7 @@ Carmen Li (Compute Exchange / Silicon Data, CEO)
 
 ### Security in the Age of AI: Recent Attacks, Incidents & Defenses
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/bloomberg) · [Recording](https://www.youtube.com/watch?v=jiUC6IUMdvc&t=5361s)
+**Links:** [Abstract](https://ai.engineer/talks/5O6jLtoeKrg-real-ai-agent-attacks-what-would-have) · [Recording](https://www.youtube.com/watch?v=5O6jLtoeKrg)
 
 Andrey Rybka (Bloomberg, Head of Architecture & Emerging Technologies, Office of the CTO)
 
@@ -102,7 +102,7 @@ Andrey Rybka (Bloomberg, Head of Architecture & Emerging Technologies, Office of
 
 ### Your Agent Is a Lethal Trifecta (and What to Do About It)
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/keycard) · [Recording](https://www.youtube.com/watch?v=akEqiXFo3GM&t=11367s)
+**Links:** [Abstract](https://ai.engineer/talks/ws9XcGGPBDk-your-agent-is-lethal-trifecta-what-do) · [Recording](https://www.youtube.com/watch?v=ws9XcGGPBDk)
 
 Kim Maida (Keycard, Founding GTM Engineer)
 
@@ -113,7 +113,7 @@ Kim Maida (Keycard, Founding GTM Engineer)
 
 ### Process Supervision for Agents That Do Long-Horizon Work
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/basis) · [Recording](https://www.youtube.com/watch?v=jiUC6IUMdvc&t=29362s)
+**Links:** [Abstract](https://ai.engineer/talks/JGtkTjn4120-why-ai-makes-you-100x-faster-but) · [Recording](https://www.youtube.com/watch?v=JGtkTjn4120)
 
 Mitchell Troyanovsky (Basis, Co-Founder)
 
@@ -124,7 +124,7 @@ Mitchell Troyanovsky (Basis, Co-Founder)
 
 ### The Machine that Changed the World, vAI
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/sonar) · [Recording](https://www.youtube.com/watch?v=jiUC6IUMdvc&t=2100s)
+**Links:** [Abstract](https://ai.engineer/talks/LQW_Wvqhp04-why-humans-cant-keep-up-ai-written) · [Recording](https://www.youtube.com/watch?v=LQW_Wvqhp04)
 
 Tariq Shaukat (Sonar, CEO)
 
@@ -135,7 +135,7 @@ Tariq Shaukat (Sonar, CEO)
 
 ### Self-Improving Organizations
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/prime-intellect) · [Recording](https://www.youtube.com/watch?v=jiUC6IUMdvc&t=25528s)
+**Links:** [Abstract](https://ai.engineer/talks/5SRjPT2Eo7A-your-company-should-train-its-own-ai) · [Recording](https://www.youtube.com/watch?v=5SRjPT2Eo7A)
 
 Will Brown (Prime Intellect, Applied Research)
 
@@ -148,7 +148,7 @@ Will Brown (Prime Intellect, Applied Research)
 
 ### Everything will be Simulated
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/runway) · [Recording](https://www.youtube.com/watch?v=jiUC6IUMdvc&t=30551s)
+**Links:** [Abstract](https://ai.engineer/talks/q4ITwvlFplQ-you-cant-tell-whats-real-anymore-heres) · [Recording](https://www.youtube.com/watch?v=q4ITwvlFplQ)
 
 Cristóbal Valenzuela (Runway, Co-Founder and Co-CEO)
 
@@ -159,7 +159,7 @@ Cristóbal Valenzuela (Runway, Co-Founder and Co-CEO)
 
 ### Frontier Models for Acting in Space and Time
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/general-intuition) · [Recording](https://www.youtube.com/watch?v=akEqiXFo3GM&t=25339s)
+**Links:** [Abstract](https://ai.engineer/talks/MpkARD5pq-M-robots-will-be-trained-on-video-games) · [Recording](https://www.youtube.com/watch?v=MpkARD5pq-M)
 
 Pim de Witte (General Intuition, Co-Founder & CEO)
 
@@ -170,7 +170,7 @@ Pim de Witte (General Intuition, Co-Founder & CEO)
 
 ### Your Company Has No Model of Itself: Bootstrapping a World Model from Slack, Decks and Meetings
 
-**Links:** [Abstract](https://ai.engineer/nyc/2026/talks/citadel) · [Recording](https://www.youtube.com/watch?v=jiUC6IUMdvc&t=23913s)
+**Links:** [Abstract](https://ai.engineer/talks/jDwc0aXTAFg-your-company-has-no-model-itself-agents) · [Recording](https://www.youtube.com/watch?v=jDwc0aXTAFg)
 
 Joao Wenzel (Citadel Securities, COO)
 

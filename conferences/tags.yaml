@@ -5399,3 +5399,27 @@ aiengineer-nyc-2026:
     - orchestration
     - observability
     - cloud
+chnug-2:
+  post:
+  - automation
+  - optics
+  - cloud
+  - interconnection
+  - ml-for-networking
+  talks:
+    'Network Configuration in the Real World: Standards, Surprises and ''Creative'' Implementations':
+    - automation
+    - configuration-management
+    - testing
+    'Leveraging an Open Source NetOps-Stack: A Practical Approach for Orchestration and Observability':
+    - automation
+    - orchestration
+    - observability
+    - ml-for-networking
+    'Connecting Clouds over FTTH: How Easy Can CES Be?':
+    - cloud
+    - interconnection
+    - bgp
+    'Optical Foundations for IP Engineers: From Fiber Basics to CWDM/DWDM and Link Budgeting':
+    - optics
+    - cabling

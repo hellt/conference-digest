@@ -4363,6 +4363,63 @@
         <loc>https://tldr.netdevops.me/lacnic-46/the-mystery-of-the-routes-that-refused-to-die/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/bridging-kernel-space-and-ai-building-an-mcp-server-for-linux-scheduler/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/durable-asynchronous-and-tricky-implementing-mcp-tasks-in-practice-corne/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/every-api-is-a-tool-for-agents-matt-carey-cloudflare/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/evolution-not-revolution-how-mcp-is-reshaping-oauth-aaron-parecki-okta/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/from-one-mcp-server-to-an-ecosystem-when-mcp-stops-being-a-server-and-be/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/interceptors-for-mcp-a-production-tested-standard-for-agentic-middleware/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/keynote-duolingos-ai-slackbot-an-enterprise-assistant-with-180-mcp-tools/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/keynote-mcp-amazon-scale-james-hood-principal-software-engineer-amazon-w/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/keynote-operating-mcps-at-enterprise-scale-ubers-journey-meghana-somasun/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/kubernetes-native-agent-discovery-a-unified-registry-for-mcp-servers-and/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/mcp-at-18-months-protocols-patterns-and-what-we-didnt-see-coming-shaun-s/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/mcp-servers-in-the-wild-managing-tool-complexity-at-scale-arnav-balyan-c/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/mcp-traffic-handling-at-scale-stateless-design-proxies-and-the-road-ahea/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/mcpwned-hacking-mcp-servers-with-one-skeleton-key-vulnerability-jonathan/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/one-spec-ten-sdks-zero-excuses-conformance-testing-mcp-paul-carleton-ant/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/stateless-the-future-of-mcp-transports-shaun-smith-hugging-face-kurtis-v/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/towards-building-safe-secure-agentic-ai-dawn-song-uc-berkeley-uc-berkele/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/mcpdevsummit-na-2026/what-if-mcp-was-symmetric-jerome-swannack-anthropic/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/mlsys-2025/</loc>
       </url>
       <url>

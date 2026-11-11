@@ -11,10 +11,11 @@ from conferences.links import ROW, Context, enrich, link_alive, links_row, parse
 
 CATALOG = "https://www.nvidia.com/gtc/session-catalog/sessions/gtc26-s81625/"
 ON_DEMAND = "https://www.nvidia.com/en-us/on-demand/session/gtc26-s81625/"
-VIDEO = (
+VIDEO = ON_DEMAND + "#watch"
+UNSIGNED_KALTURA = (
     "https://cdnapisec.kaltura.com/p/2935771/sp/293577100/"
     "embedIframeJs/uiconf_id/56782552/partner_id/2935771"
-    "?iframeembed=true&playerId=kaltura_player&entry_id=1_uejgczqp&ks=widget-ks%3D%3D"
+    "?iframeembed=true&playerId=kaltura_player&entry_id=1_uejgczqp"
 )
 DOWNLOAD = (
     "https://cfvod.kaltura.com/api_v3/index.php/service/"
@@ -62,11 +63,6 @@ class GtcOnDemandTests(TestCase):
                     missing.append(heading)
         self.assertEqual(missing, [])
 
-    def setUp(self):
-        post = patch("conferences.links.HTTP.post", return_value=response({"ks": "widget-ks=="}))
-        self.post = post.start()
-        self.addCleanup(post.stop)
-
     def test_public_video_pdf_and_talk_page(self):
         escaped = DOWNLOAD.replace("/", r"\/")
         with patch("conferences.links.HTTP.get", side_effect=[
@@ -79,8 +75,6 @@ class GtcOnDemandTests(TestCase):
         self.assertEqual(get.call_args_list[0].kwargs["params"], {"id": "gtc26-s81625"})
         self.assertEqual(get.call_args_list[1].kwargs["params"],
                          {"kaltura-asset-id": "1_l6d19qoq", "session-id": "gtc26-s81625"})
-        self.assertEqual(self.post.call_args.kwargs["data"],
-                         {"widgetId": "_2935771", "expiry": 86400, "format": 1})
 
     def test_talk_page_round_trips_before_pdf_and_recording(self):
         links = {"video": VIDEO, "talk": ON_DEMAND, "slides": DOWNLOAD}
@@ -154,15 +148,20 @@ class GtcOnDemandTests(TestCase):
 
     def test_unsigned_kaltura_player_is_dead(self):
         with patch("conferences.links.HTTP.get") as get:
-            self.assertIs(link_alive(VIDEO.split("&ks=")[0]), False)
+            self.assertIs(link_alive(UNSIGNED_KALTURA), False)
         get.assert_not_called()
 
-    def test_widget_session_failure_withholds_broken_video(self):
-        self.post.return_value = response({}, status=403)
-        with patch("conferences.links.HTTP.get", side_effect=[
-            response(session()), response({"asset-url": DOWNLOAD}),
-        ]):
-            self.assertEqual(scrape_page(CATALOG), {"talk": ON_DEMAND, "slides": DOWNLOAD})
+    def test_refresh_replaces_obsolete_kaltura_player_with_on_demand(self):
+        program = "### Build Secure AI Infrastructure With DOCA\n" + f"page: {CATALOG}\n"
+        digest = ("## Core\n### Build Secure AI Infrastructure With DOCA\n"
+                  f"**Links:** [Abstract]({CATALOG}) · [Recording]({UNSIGNED_KALTURA})\nA pick.\n")
+        with patch("conferences.links.scrape_page", return_value={
+            "video": VIDEO, "talk": ON_DEMAND, "slides": DOWNLOAD,
+        }), patch("conferences.links.link_alive", return_value=True):
+            refreshed, _ = enrich(digest, program,
+                                  Context(key="gtc-2026", search=False, delay=0))
+        self.assertIn(f"[Recording]({VIDEO})", refreshed)
+        self.assertNotIn(UNSIGNED_KALTURA, refreshed)
 
     def test_download_failure_keeps_verified_video_and_talk_page(self):
         with patch("conferences.links.HTTP.get", side_effect=[

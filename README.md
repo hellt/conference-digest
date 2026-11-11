@@ -133,8 +133,10 @@ To move to a newer ToFaRev, run `make pin-tofarev SHA=<full commit sha>`.
 The blog is built with [Zensical](https://zensical.org/) exactly like
 containerlab.dev: `uv` runs the pinned Zensical from the `docs` dependency group
 (`pyproject.toml`, `uv.lock`), and `mkdocs.yml` carries the theme settings.
-`overrides/` + `docs/stylesheets/extra.css` implement Quiet Signal in light and
-dark, with a locally served Inter font. Search results, heading permalinks,
+`overrides/` + `docs/stylesheets/extra.css` implement Briefing in light and
+dark: IBM Plex Sans for reading, IBM Plex Mono for dates and labels (both
+served from `docs/fonts/`), one vermilion accent, numbered picks and signal-bar
+tier marks (three for Core, two for Adjacent, one for Wildcard). Search results, heading permalinks,
 right-hand scroll tracking, theme persistence and instant navigation use
 Zensical’s native components.
 `scripts/build_site.py` turns every `digests/<key>.md` into a post (the digest

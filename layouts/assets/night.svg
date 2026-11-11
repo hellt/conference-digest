@@ -1,25 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <defs>
-    <radialGradient id="glow" cx="1040" cy="560" r="560" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#c5c9ac" stop-opacity="0.10"/>
-      <stop offset="1" stop-color="#c5c9ac" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="sweep" x1="672" y1="192" x2="780" y2="110" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#c5c9ac" stop-opacity="0"/>
-      <stop offset="1" stop-color="#c5c9ac" stop-opacity="0.20"/>
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="630" fill="url(#glow)"/>
-  <g fill="none" stroke="#3d4548" stroke-width="1.5">
-    <circle cx="1040" cy="560" r="130"/>
-    <circle cx="1040" cy="560" r="260"/>
-    <circle cx="1040" cy="560" r="390"/>
-    <circle cx="1040" cy="560" r="520"/>
-    <line x1="1040" y1="560" x2="1040" y2="0"/>
-    <line x1="1040" y1="560" x2="460" y2="560"/>
+  <!-- Briefing's mark at card scale: a long program as faint lines, one of
+       them picked out in the accent. Text sits left of x=892, so the lines
+       stay right of it. The small mark at the bottom left goes beside the
+       domain in the card's footer. -->
+  <g fill="#232830">
+    <rect x="952" y="58" width="150" height="10" rx="5"/>
+    <rect x="952" y="98" width="196" height="10" rx="5"/>
+    <rect x="952" y="138" width="112" height="10" rx="5"/>
+    <rect x="952" y="178" width="172" height="10" rx="5"/>
+    <rect x="952" y="218" width="134" height="10" rx="5"/>
+    <rect x="952" y="298" width="96" height="10" rx="5"/>
+    <rect x="952" y="338" width="184" height="10" rx="5"/>
+    <rect x="952" y="378" width="140" height="10" rx="5"/>
+    <rect x="952" y="418" width="164" height="10" rx="5"/>
+    <rect x="952" y="458" width="104" height="10" rx="5"/>
+    <rect x="952" y="498" width="178" height="10" rx="5"/>
+    <rect x="952" y="538" width="126" height="10" rx="5"/>
   </g>
-  <path d="M1040 560 L672.3 192.3 A520 520 0 0 1 780 109.7 Z" fill="url(#sweep)"/>
-  <line x1="1040" y1="560" x2="780" y2="109.7" stroke="#c5c9ac" stroke-opacity="0.55" stroke-width="2"/>
-  <circle cx="972.3" cy="175.9" r="16" fill="#c5c9ac" fill-opacity="0.18"/>
-  <circle cx="972.3" cy="175.9" r="6" fill="#c5c9ac"/>
+  <rect x="952" y="256" width="224" height="14" rx="7" fill="#ff8a5c"/>
+  <rect x="72" y="0" width="56" height="4" fill="#ff8a5c"/>
+  <g transform="translate(72 571) scale(1.1)" fill="none" stroke-linecap="round" stroke-width="2.4">
+    <path d="M3.5 4.5h12M3.5 14.5h9M3.5 19.5h13.5" stroke="#9ba1aa" stroke-opacity=".55"/>
+    <path d="M3.5 9.5h17" stroke="#ff8a5c"/>
+  </g>
 </svg>

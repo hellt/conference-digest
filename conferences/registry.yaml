@@ -1058,6 +1058,7 @@ conferences:
 
   - key: mcpdevsummit-na-2026
     name: "MCP Dev Summit North America 2026"
+    location: "New York · United States"
     description: "The Model Context Protocol developer summit on MCP servers, clients, security, tooling, and production AI-agent integrations."
     end_date: 2026-04-03
     fetcher: sched

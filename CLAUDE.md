@@ -258,7 +258,8 @@ text in a `card:` front-matter mapping (`conference`, `when`, `title`,
 `presenter`); other pages fall back to their title and description. A talk's
 card shows its title, presenter and conference, which is why each talk has its
 own page: link previews ignore `#anchors`, so a link into a digest shows the
-digest's card. The build fetches Inter from Google Fonts. In a layout a word
+digest's card. The build fetches IBM Plex Sans and IBM Plex Mono from Google
+Fonts. In a layout a word
 wider than its box is clipped rather than wrapped, and text size follows the
 box height.
 

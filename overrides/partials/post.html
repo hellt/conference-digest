@@ -1,49 +1,40 @@
-{# Digest cards use the registry's conference summary and location rather than
-   the full digest introduction and calculated reading time. #}
+{#- One digest in the list: conference dates, place and pick count on the
+    left; the conference, its registry summary and its first search tags on
+    the right. The title link covers the whole row (see extra.css); the tag
+    chips sit above it and keep their own links. -#}
+{%- set card = post.meta.card or {} -%}
 <article class="md-post md-post--excerpt">
   <header class="md-post__header">
-    {% if post.authors %}
-      <nav class="md-post__authors md-typeset">
-        {% for author in post.authors %}
-          <span class="md-author">
-            <img src="{{ author.avatar | url }}" alt="{{ author.name }}">
-          </span>
-        {% endfor %}
-      </nav>
-    {% endif %}
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
-        <li class="md-meta__item">
+        <li class="md-meta__item md-meta__item--date">
           <time datetime="{{ post.config.date.created }}">
-            {{- post.meta.conference_dates or (post.config.date.created | date) -}}
+            {{- card.when or post.meta.conference_dates or (post.config.date.created | date) -}}
           </time>
-          {#- Collapse whitespace -#}
         </li>
         {% if post.meta.location %}
           <li class="md-meta__item">{{ post.meta.location }}</li>
         {% endif %}
-        {% if post.meta.media_pending %}
-          <li class="md-meta__item media-pending">videos pending</li>
-        {% endif %}
-        {% if post.categories %}
-          <li class="md-meta__item">
-            {{ lang.t("blog.categories.in") }}
-            {% for category in post.categories %}
-              <a href="{{ category.url | url }}" class="md-meta__link">
-                {{- category.title -}}
-              </a>
-              {%- if loop.revindex > 1 %}, {% endif -%}
-            {% endfor -%}
+        {#- card.presenter reads "20 picks: 13 core, 5 adjacent, 2 wildcard";
+            each tier count gets the same signal bars as its digest heading. -#}
+        {% if card.presenter and ": " in card.presenter %}
+          {% set picks = card.presenter | split(": ") %}
+          <li class="md-meta__item md-meta__item--picks">
+            <span class="cd-picks__total">{{ picks[0] }}</span>
+            {% for tier in picks[1] | split(", ") %}
+              {% set count = tier | split(" ") %}
+              <span class="cd-picks__tier cd-bars cd-bars--{{ count[1] }}" title="{{ tier }}">{{ count[0] }}<span class="md-visually-hidden"> {{ count[1] }}</span></span>
+            {% endfor %}
           </li>
+        {% elif card.presenter %}
+          <li class="md-meta__item md-meta__item--picks">{{ card.presenter }}</li>
         {% endif %}
-        {% if post.config.pin %}
-          <span class="md-pin"></span>
+        {% if post.meta.media_pending %}
+          <li class="md-meta__item media-pending">Recordings pending</li>
         {% endif %}
       </ul>
       {% if post.config.draft %}
-        <span class="md-draft">
-          {{ lang.t("blog.draft") }}
-        </span>
+        <span class="md-draft">{{ lang.t("blog.draft") }}</span>
       {% endif %}
     </div>
   </header>
@@ -51,16 +42,15 @@
     <h2>
       <a class="toclink" href="{{ post.url | url }}">{{ post.meta.title }}</a>
     </h2>
-    <p>{{ post.meta.description }}</p>
-    {% if post.more %}
-      <nav class="md-post__action">
-        <a href="{{ post.url | url }}">
-          {{ lang.t("blog.continue") }}
-        </a>
-      </nav>
+    {% if post.meta.description %}
+      <p>{{ post.meta.description }}</p>
     {% endif %}
-    {% if post.config.pin %}
-      <hr>
+    {% if post.meta.tags %}
+      <nav class="cd-post-tags" aria-label="Topics">
+        {% for tag in post.meta.tags[:4] %}
+          <a class="cd-post-tag" href="{{ ('tags/' ~ tag ~ '/') | url }}">{{ tag }}</a>
+        {% endfor %}
+      </nav>
     {% endif %}
   </div>
 </article>

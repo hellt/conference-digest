@@ -1,5 +1,5 @@
-# Social card for every page ("Night"): Quiet Signal's dark palette with the
-# radar mark drawn as the backdrop. Zensical's social plugin renders it to
+# Social card for every page ("Night"): Briefing's dark palette, with the
+# site mark (a program's lines, one picked out) drawn as the backdrop. Zensical's social plugin renders it to
 # assets/images/social/<page>.png and writes the og:/twitter: tags below.
 #
 # Pages built by scripts/build_site.py carry a `card:` mapping in their front
@@ -14,9 +14,9 @@
 # then its text; text size follows the box height and line count; a word
 # wider than its box is clipped, not wrapped.
 definitions:
-  - &ink "#efeee8"
-  - &muted "#a1aaa9"
-  - &accent "#c5c9ac"
+  - &ink "#eeece7"
+  - &muted "#9ba1aa"
+  - &accent "#ff8a5c"
   - &title >-
     {%- if page.is_homepage -%}
       {{ config.site_name }}
@@ -43,7 +43,7 @@ tags:
 
 size: { width: 1200, height: 630 }
 layers:
-  - background: { color: "#1e2326" }
+  - background: { color: "#101215" }
   - background: { image: layouts/assets/night.svg }
 
   # Conference (or the site name), then place, dates and tier
@@ -52,13 +52,13 @@ layers:
     typography:
       content: "{{ (page.meta.card or {}).conference or config.site_name }}"
       color: *accent
-      font: { family: Inter, style: Bold }
+      font: { family: IBM Plex Mono, style: Medium }
   - size: { width: 820, height: 28 }
     offset: { x: 72, y: 110 }
     typography:
       content: "{{ (page.meta.card or {}).when }}"
       color: *muted
-      font: { family: Inter, style: Regular }
+      font: { family: IBM Plex Mono, style: Regular }
 
   # Title
   - size: { width: 820, height: 250 }
@@ -68,7 +68,7 @@ layers:
       overflow: shrink
       color: *ink
       line: { amount: 3, height: 1.12 }
-      font: { family: Inter, style: Bold }
+      font: { family: IBM Plex Sans, style: SemiBold }
 
   # Presenter; a page without a card shows its description here instead
   - size: { width: 820, height: 76 }
@@ -77,22 +77,19 @@ layers:
       content: "{{ (page.meta.card or {}).presenter }}"
       color: *ink
       line: { amount: 2, height: 1.25 }
-      font: { family: Inter, style: SemiBold }
+      font: { family: IBM Plex Sans, style: Medium }
   - size: { width: 820, height: 76 }
     offset: { x: 72, y: 460 }
     typography:
       content: "{{ '' if page.meta.card else page.meta.get('description', config.site_description) | x }}"
       color: *muted
       line: { amount: 2, height: 1.25 }
-      font: { family: Inter, style: Regular }
+      font: { family: IBM Plex Sans, style: Regular }
 
-  # Footer: radar mark and domain
-  - size: { width: 26, height: 26 }
-    offset: { x: 72, y: 572 }
-    icon: { value: material/radar, color: *accent }
+  # Footer: the site mark (drawn in night.svg) and the domain
   - size: { width: 500, height: 24 }
     offset: { x: 108, y: 574 }
     typography:
       content: tldr.netdevops.me
       color: *muted
-      font: { family: Inter, style: Medium }
+      font: { family: IBM Plex Mono, style: Regular }

@@ -1,0 +1,1612 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The Linux Foundation&#x27;s summit for open-source networking, edge, cloud, telecom, AI infrastructure, and operational deployments.">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/onesummit-2024/">
+      
+      
+      
+      
+        <link rel="next" href="../ovscon-2024/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>ONE Summit 2024 - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="ONE Summit 2024 · Conference Digest" />
+<meta property="og:description" content="The Linux Foundation&#39;s summit for open-source networking, edge, cloud, telecom, AI infrastructure, and operational deployments." />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/onesummit-2024.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/onesummit-2024/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="ONE Summit 2024 · Conference Digest" />
+<meta property="twitter:description" content="The Linux Foundation&#39;s summit for open-source networking, edge, cloud, telecom, AI infrastructure, and operational deployments." />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/onesummit-2024.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ONE Summit 2024
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Companies
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../archive/" class="md-tabs__link">
+        
+  
+  Archive
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-powered-text">Powered by</span>
+          <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18M3 12h13M3 19h18" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sonic-bgp-loading-optimization-joy-qin-eddie-ruan-alibaba-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SONiC BGP Loading Optimization - Joy Qin &amp; Eddie Ruan, Alibaba Cloud
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-minimal-path-routing-for-ai-and-cloud-computation-networks-david-wong-claruspon-systems-inc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Non-Minimal Path Routing for AI and Cloud Computation Networks - David Wong, Claruspon Systems, Inc.
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alpine-sonic-switchstack-simulation-sonika-jindal-bhagat-janarthanan-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ALPINE - SONiC Switchstack Simulation - Sonika Jindal &amp; Bhagat Janarthanan, Google
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p4-based-automated-reasoning-steffen-smolka-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4-Based Automated Reasoning - Steffen Smolka, Google
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-open-programmable-infrastructure-opi-improves-portability-of-cloud-data-center-applications-paul-pindell-f5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How Open Programmable Infrastructure (OPI) Improves Portability of Cloud &amp; Data Center Applications - Paul Pindell, F5
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-photonic-disaggregated-computing-architecture-shigeru-kotabe-fujitsu" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Introduction to Photonic Disaggregated Computing Architecture - Shigeru Kotabe, Fujitsu
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applying-aiml-methods-to-diagnose-network-issues-using-telemetry-data-frank-brockners-cisco" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Applying AI/ML Methods to Diagnose Network Issues Using Telemetry Data - Frank Brockners, Cisco
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kubeflow-istio-a-perfect-match-investigating-istios-role-in-mlops-nina-polshakova-peter-jausovec-soloio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kubeflow &amp; Istio, a Perfect Match! Investigating Istio’s Role in MLOps - Nina Polshakova &amp; Peter Jausovec, Solo.io
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embracing-a-data-driven-approach-to-network-automation-jason-edelman-network-to-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Embracing a Data-Driven Approach to Network Automation - Jason Edelman, Network to Code
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keynote-leveraging-open-source-for-operational-excellence-at-scale-dave-temkin-walmart" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Keynote: Leveraging Open Source for Operational Excellence at Scale - Dave Temkin, Walmart
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sdn-journey-in-verizon-experiences-challenges-and-path-forward-yueping-zhang-sanjay-nayak-verizon" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SDN Journey in Verizon: Experiences, Challenges and Path Forward - Yueping Zhang &amp; Sanjay Nayak, Verizon
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-vs-data-optimizing-nfv-orchestration-with-nephio-tal-liron-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Code Vs. Data: Optimizing NFV Orchestration with Nephio - Tal Liron, Google
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lessons-learned-from-using-nephio-to-manage-a-real-world-5g-core-istvan-kispal-nokia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lessons Learned from Using Nephio to Manage a Real-World 5G Core - István Kispál, Nokia
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overcoming-challenges-for-ai-fabric-with-sonic-madhu-paluru-aviz-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Overcoming Challenges for AI-Fabric with SONiC - Madhu Paluru, Aviz Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-network-function-chaining-lessons-learned-benjamin-goldstone-dell-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Real-World Network Function Chaining - Lessons Learned - Benjamin Goldstone, Dell Technologies
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harnessing-observability-with-ai-for-edge-applications-innovations-in-apmt-fatih-e-nar-red-hat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Harnessing Observability with AI for Edge Applications: Innovations in APM/T - Fatih E. Nar, Red Hat
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ran-in-the-cloud-utilization-and-new-services-breakthroughs-amar-kapadia-aarna-networks-shuvo-chowdhury-nvidia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        RAN-in-the-Cloud: Utilization and New Services Breakthroughs - Amar Kapadia, Aarna Networks &amp; Shuvo Chowdhury, NVIDIA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-dark-side-of-ai-the-hidden-supply-chain-risks-in-open-source-ai-models-guy-nachshon-checkmarx" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Dark Side of AI: The Hidden Supply Chain Risks in Open-Source AI Models - Guy Nachshon, Checkmarx
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-stack-explicit-confidence-with-project-alvarium-trevor-conn-dell-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Full Stack Explicit Confidence with Project Alvarium - Trevor Conn, Dell Technologies
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-and-computing-infrastructure-for-the-2030s-haruhisa-fukano-inoue-reo-fujitsu" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Network and Computing Infrastructure for the 2030s - Haruhisa Fukano &amp; Inoue Reo, Fujitsu
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Companies
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    <li class="md-nav__item md-nav__item--powered">
+      <a href="https://tokenfactory.nebius.com/" class="md-nav__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+        <span class="md-powered-text">Powered by</span>
+        <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+        <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+      </a>
+    </li>
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sonic-bgp-loading-optimization-joy-qin-eddie-ruan-alibaba-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SONiC BGP Loading Optimization - Joy Qin &amp; Eddie Ruan, Alibaba Cloud
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-minimal-path-routing-for-ai-and-cloud-computation-networks-david-wong-claruspon-systems-inc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Non-Minimal Path Routing for AI and Cloud Computation Networks - David Wong, Claruspon Systems, Inc.
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alpine-sonic-switchstack-simulation-sonika-jindal-bhagat-janarthanan-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ALPINE - SONiC Switchstack Simulation - Sonika Jindal &amp; Bhagat Janarthanan, Google
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p4-based-automated-reasoning-steffen-smolka-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4-Based Automated Reasoning - Steffen Smolka, Google
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-open-programmable-infrastructure-opi-improves-portability-of-cloud-data-center-applications-paul-pindell-f5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How Open Programmable Infrastructure (OPI) Improves Portability of Cloud &amp; Data Center Applications - Paul Pindell, F5
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-photonic-disaggregated-computing-architecture-shigeru-kotabe-fujitsu" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Introduction to Photonic Disaggregated Computing Architecture - Shigeru Kotabe, Fujitsu
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applying-aiml-methods-to-diagnose-network-issues-using-telemetry-data-frank-brockners-cisco" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Applying AI/ML Methods to Diagnose Network Issues Using Telemetry Data - Frank Brockners, Cisco
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kubeflow-istio-a-perfect-match-investigating-istios-role-in-mlops-nina-polshakova-peter-jausovec-soloio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kubeflow &amp; Istio, a Perfect Match! Investigating Istio’s Role in MLOps - Nina Polshakova &amp; Peter Jausovec, Solo.io
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embracing-a-data-driven-approach-to-network-automation-jason-edelman-network-to-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Embracing a Data-Driven Approach to Network Automation - Jason Edelman, Network to Code
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keynote-leveraging-open-source-for-operational-excellence-at-scale-dave-temkin-walmart" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Keynote: Leveraging Open Source for Operational Excellence at Scale - Dave Temkin, Walmart
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sdn-journey-in-verizon-experiences-challenges-and-path-forward-yueping-zhang-sanjay-nayak-verizon" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SDN Journey in Verizon: Experiences, Challenges and Path Forward - Yueping Zhang &amp; Sanjay Nayak, Verizon
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-vs-data-optimizing-nfv-orchestration-with-nephio-tal-liron-google" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Code Vs. Data: Optimizing NFV Orchestration with Nephio - Tal Liron, Google
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lessons-learned-from-using-nephio-to-manage-a-real-world-5g-core-istvan-kispal-nokia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lessons Learned from Using Nephio to Manage a Real-World 5G Core - István Kispál, Nokia
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overcoming-challenges-for-ai-fabric-with-sonic-madhu-paluru-aviz-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Overcoming Challenges for AI-Fabric with SONiC - Madhu Paluru, Aviz Networks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-network-function-chaining-lessons-learned-benjamin-goldstone-dell-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Real-World Network Function Chaining - Lessons Learned - Benjamin Goldstone, Dell Technologies
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harnessing-observability-with-ai-for-edge-applications-innovations-in-apmt-fatih-e-nar-red-hat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Harnessing Observability with AI for Edge Applications: Innovations in APM/T - Fatih E. Nar, Red Hat
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ran-in-the-cloud-utilization-and-new-services-breakthroughs-amar-kapadia-aarna-networks-shuvo-chowdhury-nvidia" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        RAN-in-the-Cloud: Utilization and New Services Breakthroughs - Amar Kapadia, Aarna Networks &amp; Shuvo Chowdhury, NVIDIA
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-dark-side-of-ai-the-hidden-supply-chain-risks-in-open-source-ai-models-guy-nachshon-checkmarx" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Dark Side of AI: The Hidden Supply Chain Risks in Open-Source AI Models - Guy Nachshon, Checkmarx
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-stack-explicit-confidence-with-project-alvarium-trevor-conn-dell-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Full Stack Explicit Confidence with Project Alvarium - Trevor Conn, Dell Technologies
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-and-computing-infrastructure-for-the-2030s-haruhisa-fukano-inoue-reo-fujitsu" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Network and Computing Infrastructure for the 2030s - Haruhisa Fukano &amp; Inoue Reo, Fujitsu
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>17 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="one-summit-2024">ONE Summit 2024<a class="headerlink" href="#one-summit-2024" title="Permanent link">#</a></h1>
+<p><em>Note: the conference site (sched.com) rejected automated retrieval of all session pages, so every write-up below is based on the abstract as printed in the program text — each is marked accordingly. ONE Summit is Linux Foundation Networking's operator/telco-heavy event, so the program skews toward O-RAN, 5G, and Nephio; the picks below are the sessions that genuinely touch the PM's core interests in datacenter fabric, cloud/Kubernetes infrastructure, and AI systems.</em></p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>April 29, 2024 – May 1, 2024</span>
+<span class="digest-fact" markdown><a href="https://onesummit2024.sched.com/">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="sonic-bgp-loading-optimization-joy-qin-eddie-ruan-alibaba-cloud"><a href="sonic-bgp-loading-optimization-joy-qin-eddie-ruan-alibaba-cloud/">SONiC BGP Loading Optimization - Joy Qin &amp; Eddie Ruan, Alibaba Cloud</a><a class="headerlink" href="#sonic-bgp-loading-optimization-joy-qin-eddie-ruan-alibaba-cloud" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUss/sonic-bgp-loading-optimization-joy-qin-eddie-ruan-alibaba-cloud">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=umt2XTQQx80">Recording</a></p>
+</div>
+<p>Joy Qin, Software Engineer, and Eddie Ruan, <a href="../companies/alibaba/">Alibaba Cloud</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="umt2XTQQx80" data-start="0" href="https://www.youtube.com/watch?v=umt2XTQQx80" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/umt2XTQQx80/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/umt2XTQQx80/maxresdefault.jpg" alt="Play the recording: SONiC BGP Loading Optimization - Joy Qin  Eddie Ruan, Alibaba Cloud" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Control-plane convergence time is a real production constraint in large SONiC fabrics — loading tens of thousands of BGP routes through SONiC's Redis-based internal state path is a known bottleneck. This is production engineering from a hyperscaler, not a benchmark exercise.</li>
+<li><strong>What</strong>: Alibaba's work to double SONiC's route-loading throughput: a batch-publish feature that cuts FPMSyncD Redis traffic, a redesigned Redis pipeline flush policy, and a restructuring of Orchagent and Syncd around a singleton templated ring buffer with lambda-based offload of the module main thread. (from abstract only)</li>
+<li><strong>How</strong>: Attacks the problem at three layers — reduce per-route Redis messages (batching), avoid needless pipeline flushes, and restructure the long-running SONiC daemons so their main threads can offload work generically via a ring-buffer + lambda pattern.</li>
+<li><strong>Where applicable</strong>: SONiC NOS deployments specifically; the daemon-restructuring pattern (ring buffer + lambda offload) is a general technique for any single-threaded state-sync daemon. Alibaba-specific engineering, but on an open, widely deployed codebase.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="non-minimal-path-routing-for-ai-and-cloud-computation-networks-david-wong-claruspon-systems-inc"><a href="non-minimal-path-routing-for-ai-and-cloud-computation-networks-david-won/">Non-Minimal Path Routing for AI and Cloud Computation Networks - David Wong, Claruspon Systems, Inc.</a><a class="headerlink" href="#non-minimal-path-routing-for-ai-and-cloud-computation-networks-david-wong-claruspon-systems-inc" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUrl/non-minimal-path-routing-for-ai-and-cloud-computation-networks-david-wong-claruspon-systems-inc">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=duKmDlJUB1s">Recording</a></p>
+</div>
+<p>David Wong, Founder &amp; CEO, Claruspon Systems, Inc.</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="duKmDlJUB1s" data-start="0" href="https://www.youtube.com/watch?v=duKmDlJUB1s" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/duKmDlJUB1s/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/duKmDlJUB1s/maxresdefault.jpg" alt="Play the recording: Non-Minimal Path Routing for AI and Cloud Computation Networks - David Wong, Claruspon Systems, Inc." loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: AI clusters are already straining single-datacenter limits (power, scale), and the field is actively debating Clos vs. Dragonfly/Dragonfly+ with non-minimal path routing for million-GPU-scale fabrics. This is exactly the topology/routing design space the PM works in.</li>
+<li><strong>What</strong>: An analysis of Clos vs. mesh/Dragonfly topologies through a path-diversity/congestion model, a review of recent non-minimal-path-routing proposals (2023, Dragonfly/Dragonfly+) and of AI-workload topology findings (e.g., Meta/MIT), plus tentative designs for large-scale AI networks targeting low latency, low congestion, zero loss, and high bisection bandwidth. (from abstract only)</li>
+<li><strong>How</strong>: Models path diversity as the congestion lever, examines how non-minimal routing interacts with (e)BGP as the fabric protocol, and applies those findings to propose Dragonfly/Dragonfly+ variants suited to multi-datacenter AI resource aggregation (driven by per-site power limits).</li>
+<li><strong>Where applicable</strong>: Design-stage guidance for AI/cloud fabric architects; explicitly multi-DC-spanning AI clusters. Vendor (single-founder company) perspective with patents in this space — treat the proposals as analysis-informed design sketches rather than validated deployments.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="alpine-sonic-switchstack-simulation-sonika-jindal-bhagat-janarthanan-google"><a href="alpine-sonic-switchstack-simulation-sonika-jindal-bhagat-janarthanan-goo/">ALPINE - SONiC Switchstack Simulation - Sonika Jindal &amp; Bhagat Janarthanan, Google</a><a class="headerlink" href="#alpine-sonic-switchstack-simulation-sonika-jindal-bhagat-janarthanan-google" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUs0/alpine-sonic-switchstack-simulation-sonika-jindal-bhagat-janarthanan-google">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=_ueChYi1W7U">Recording</a></p>
+</div>
+<p>Sonika Jindal and Bhagat Janarthanan, Software Engineers, <a href="../companies/google/">Google</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="_ueChYi1W7U" data-start="0" href="https://www.youtube.com/watch?v=_ueChYi1W7U" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/_ueChYi1W7U/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/_ueChYi1W7U/maxresdefault.jpg" alt="Play the recording: ALPINE - SONiC Switchstack Simulation - Sonika Jindal  Bhagat Janarthanan, Google" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Pre-production fabric testing at scale is expensive; Google open-sourcing a Kubernetes-based way to spin up 100+ virtual SONiC switches in near-production topologies is directly useful to anyone running SONiC and CI/CD for network change validation.</li>
+<li><strong>What</strong>: Alpine, a framework for instantiating virtual SONiC switches and deploying arbitrary topologies, able to build fabrics of more than 100 virtual switches spread across multiple K8s worker nodes, with lifecycle, provisioning, and initial config handled via Kubernetes. Intended for low-cost pre-submit CI test results. (from abstract only)</li>
+<li><strong>How</strong>: Each virtual SONiC switch runs as a containerized workload; Kubernetes manages provisioning, config, and inter-switch connectivity, so full fabrics can be stood up in CI rather than on lab hardware.</li>
+<li><strong>Where applicable</strong>: SONiC-based networks and NOS vendors wanting cheap large-scale pre-deploy testing; general technique (containerized NOS-in-K8s for fabric simulation) transfers to any NOS with a virtual-switch image. Google-contributed and open, which adds weight.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="p4-based-automated-reasoning-steffen-smolka-google"><a href="p4-based-automated-reasoning-steffen-smolka-google/">P4-Based Automated Reasoning - Steffen Smolka, Google</a><a class="headerlink" href="#p4-based-automated-reasoning-steffen-smolka-google" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1aZuC/p4-based-automated-reasoning-steffen-smolka-google">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=HqsxWUt8hhY">Recording</a></p>
+</div>
+<p>Steffen Smolka, Staff Software Engineer, <a href="../companies/google/">Google</a> (leads the P4-Based Automated Reasoning group)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="HqsxWUt8hhY" data-start="0" href="https://www.youtube.com/watch?v=HqsxWUt8hhY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/HqsxWUt8hhY/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/HqsxWUt8hhY/maxresdefault.jpg" alt="Play the recording: P4-Based Automated Reasoning - Steffen Smolka, Google" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Using P4 not to program the pipeline but as a <em>vendor-agnostic, machine-readable specification</em> that switches are automatically validated against is a genuinely different use of P4 — it addresses switch qualification and multi-vendor SDN interoperability, two chronic pains for anyone operating heterogeneous fabrics.</li>
+<li><strong>What</strong>: Google's practice of writing P4 specs for switch pipelines (programmable or not) and building tools that (1) run high-coverage automated validation of switch behavior against the spec, and (2) let the SDN controller hold switches from different vendors accountable to the same unambiguous spec, with reported gains in reliability and development velocity. (from abstract only)</li>
+<li><strong>How</strong>: The P4 program becomes the contract; automated reasoning tools check conformance of actual switch forwarding behavior, and the controller's interaction with each vendor's silicon is mediated by the shared machine-readable spec.</li>
+<li><strong>Where applicable</strong>: Any multi-vendor switch fleet with an SDN controller — hyperscaler-flavored, but the spec-as-contract technique is broadly adoptable and independent of particular silicon. Attested as running at Google, but the talk abstract does not quantify coverage or results.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="how-open-programmable-infrastructure-opi-improves-portability-of-cloud-data-center-applications-paul-pindell-f5"><a href="how-open-programmable-infrastructure-opi-improves-portability-of-cloud-d/">How Open Programmable Infrastructure (OPI) Improves Portability of Cloud &amp; Data Center Applications - Paul Pindell, F5</a><a class="headerlink" href="#how-open-programmable-infrastructure-opi-improves-portability-of-cloud-data-center-applications-paul-pindell-f5" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUrN/how-open-programmable-infrastructure-opi-improves-portability-of-cloud-data-center-applications-paul-pindell-f5">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=TtMsnVS_L4U">Recording</a></p>
+</div>
+<p>Paul Pindell, Principal Architect, <a href="../companies/f5/">F5</a> Networks</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="TtMsnVS_L4U" data-start="0" href="https://www.youtube.com/watch?v=TtMsnVS_L4U" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/TtMsnVS_L4U/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/TtMsnVS_L4U/maxresdefault.jpg" alt="Play the recording: How Open Programmable Infrastructure (OPI) Improves Portability of Cloud  Data Center Applications - Paul Pindell, F5" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: DPUs/IPUs are becoming standard in cloud and DC servers, but each vendor's provisioning and management story differs — OPI is the main open effort to standardize them, and this retrospective covers a working end-to-end demo plus the obstacles hit along the way.</li>
+<li><strong>What</strong>: OPI's end-to-end demo: zero-touch provisioning of a DPU/IPU card using the project's adopted sZTP framework, installing an OS/container platform on the card, and running an infrastructure workload (Nginx proxy) with traffic proxied through the DPU without ever touching the host. Includes a retrospective on challenges and solutions. (from abstract only)</li>
+<li><strong>How</strong>: Secure ZTP provisions the card; a container platform is installed on the DPU itself; the offload workload runs on-card so host CPU/OS never see the proxied traffic — the "DPU as independent server" model.</li>
+<li><strong>Where applicable</strong>: Anyone deploying DPUs/IPUs in servers and wanting vendor-neutral provisioning and workload portability. Vendor (F5) presented, but on a Linux Foundation project with an open demo, which tempers the pitch factor.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="introduction-to-photonic-disaggregated-computing-architecture-shigeru-kotabe-fujitsu"><a href="introduction-to-photonic-disaggregated-computing-architecture-shigeru-ko/">Introduction to Photonic Disaggregated Computing Architecture - Shigeru Kotabe, Fujitsu</a><a class="headerlink" href="#introduction-to-photonic-disaggregated-computing-architecture-shigeru-kotabe-fujitsu" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1bmNm/introduction-to-photonic-disaggregated-computing-architecture-shigeru-kotabe-fujitsu">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=-ID6ifondfE">Recording</a></p>
+</div>
+<p>Shigeru Kotabe, Leading Researcher (AI deployment infrastructure), Fujitsu</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="-ID6ifondfE" data-start="0" href="https://www.youtube.com/watch?v=-ID6ifondfE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/-ID6ifondfE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/-ID6ifondfE/maxresdefault.jpg" alt="Play the recording: Introduction to Photonic Disaggregated Computing Architecture - Shigeru Kotabe, Fujitsu" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Direct photonic interconnect between compute devices is one of the candidate paths past power- and bandwidth-limited conventional server architectures for AI-era workloads — this is a research lab's concrete architecture proposal, squarely in the PM's optics/DC-compute interest.</li>
+<li><strong>What</strong>: Fujitsu's "photonic disaggregated computing" architecture with three features: reconfigurable devices for flexible hardware allocation, device-to-device communication to reduce CPU load, and direct photonic connections between devices; plus use cases. (from abstract only)</li>
+<li><strong>How</strong>: Rather than scaling by adding conventional servers, hardware is disaggregated into reconfigurable pools linked by direct photonics, letting device-to-device paths bypass host CPUs for data movement.</li>
+<li><strong>Where applicable</strong>: Early-stage research architecture, not a shipping product — relevant as a direction signal for future AI-infrastructure interconnect; Fujitsu-specific, and no evaluation numbers are given in the abstract.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="applying-aiml-methods-to-diagnose-network-issues-using-telemetry-data-frank-brockners-cisco"><a href="applying-aiml-methods-to-diagnose-network-issues-using-telemetry-data-fr/">Applying AI/ML Methods to Diagnose Network Issues Using Telemetry Data - Frank Brockners, Cisco</a><a class="headerlink" href="#applying-aiml-methods-to-diagnose-network-issues-using-telemetry-data-frank-brockners-cisco" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUr6/applying-aiml-methods-to-diagnose-network-issues-using-telemetry-data-frank-brockners-cisco">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=rF03xTqYW6Y">Recording</a></p>
+</div>
+<p>Frank Brockners, Distinguished Engineer, <a href="../companies/cisco/">Cisco</a> (Outshift/CTO division)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="rF03xTqYW6Y" data-start="0" href="https://www.youtube.com/watch?v=rF03xTqYW6Y" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/rF03xTqYW6Y/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/rF03xTqYW6Y/maxresdefault.jpg" alt="Play the recording: Applying AI/ML Methods to Diagnose Network Issues Using Telemetry Data - Frank Brockners, Cisco" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: ML/LLM-assisted troubleshooting is the most immediately actionable part of "AI for networking" — this grounds it in real telemetry data and explicitly discusses which techniques fit which phase of diagnosis, which is the question practitioners actually face.</li>
+<li><strong>What</strong>: A working examination of which AI/ML approaches (including LLMs) fit problem identification vs. diagnosis phases, demonstrated on real-world network telemetry, with a candid discussion of advantages and drawbacks of each technique. (from abstract only)</li>
+<li><strong>How</strong>: Uses real telemetry datasets as the substrate and walks diverse AI/ML methods through the diagnostic workflow end to end rather than presenting a single-point product claim.</li>
+<li><strong>Where applicable</strong>: Network operations teams with telemetry pipelines in place; technique-level rather than org-specific. Cisco presenter, but the framing is methodology-first; no quantified accuracy figures in the abstract.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="kubeflow-istio-a-perfect-match-investigating-istios-role-in-mlops-nina-polshakova-peter-jausovec-soloio"><a href="kubeflow-istio-a-perfect-match-investigating-istios-role-in-mlops-nina-p/">Kubeflow &amp; Istio, a Perfect Match! Investigating Istio’s Role in MLOps - Nina Polshakova &amp; Peter Jausovec, Solo.io</a><a class="headerlink" href="#kubeflow-istio-a-perfect-match-investigating-istios-role-in-mlops-nina-polshakova-peter-jausovec-soloio" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUrs/kubeflow-istio-a-perfect-match-investigating-istios-role-in-mlops-nina-polshakova-peter-jausovec-soloio">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=SAfCCpmfsTE">Recording</a></p>
+</div>
+<p>Nina Polshakova, Senior Principal Software Engineer, and Peter Jausovec, Software Architect, <a href="../companies/solo-io/">Solo.io</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="SAfCCpmfsTE" data-start="0" href="https://www.youtube.com/watch?v=SAfCCpmfsTE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/SAfCCpmfsTE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/SAfCCpmfsTE/maxresdefault.jpg" alt="Play the recording: Kubeflow  Istio, a Perfect Match! Investigating Istio’s Role in MLOps - Nina Polshakova  Peter Jausovec, Solo.io" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Serving ML models reliably (canary releases, authN/Z, traffic mirroring, failover) is where service mesh and MLOps actually intersect — this explains exactly what Istio is doing under Kubeflow/KServe, which most K8s practitioners using KServe never see.</li>
+<li><strong>What</strong>: A breakdown of how KServe's custom resources translate into Istio resources, the minimum viable Istio configuration for secure ML operations, and how to layer canary model releases, traffic mirroring, fault injection, failover, rate limiting, external auth, and BYO Wasm plugins on the generated Kubeflow/KServe config. (from abstract only)</li>
+<li><strong>How</strong>: Demonstrates the mapping from KServe CRs to Istio CRs and shows that the "hard" MLOps requirements are mesh concerns — configuration that Kubeflow abstracts away but that you must understand to operate and extend.</li>
+<li><strong>Where applicable</strong>: Any Kubernetes environment running Kubeflow/KServe with Istio; general cloud-native technique, not org-specific. Vendor (Solo.io) speakers, but the content is a mechanism walkthrough of widely used OSS rather than a product demo.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="embracing-a-data-driven-approach-to-network-automation-jason-edelman-network-to-code"><a href="embracing-a-data-driven-approach-to-network-automation-jason-edelman-net/">Embracing a Data-Driven Approach to Network Automation - Jason Edelman, Network to Code</a><a class="headerlink" href="#embracing-a-data-driven-approach-to-network-automation-jason-edelman-network-to-code" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUrW/embracing-a-data-driven-approach-to-network-automation-jason-edelman-network-to-code">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=SzMCe6HamHI">Recording</a></p>
+</div>
+<p>Jason Edelman, Founder and CTO, <a href="../companies/network-to-code/">Network to Code</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="SzMCe6HamHI" data-start="0" href="https://www.youtube.com/watch?v=SzMCe6HamHI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/SzMCe6HamHI/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/SzMCe6HamHI/maxresdefault.jpg" alt="Play the recording: Embracing a Data-Driven Approach to Network Automation - Jason Edelman, Network to Code" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Every network automation program lives or dies on the state model underneath it — this is a practitioner-focused treatment of source-of-truth design (what data you need, where it lives today, how to define golden state), which transfers across any environment.</li>
+<li><strong>What</strong>: The argument that clean network data — a defined desired/"golden" state compared continuously against actual network state — is the foundation of durable automation, plus guidance on how organizations should start and what to think about when choosing a source of truth. (from abstract only)</li>
+<li><strong>How</strong>: Treats the network as a stateful entity: consolidate the data currently scattered across spreadsheets and local databases into a documented model, then reconcile observed state against the golden truth as the automation primitive.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to any network team beginning or restarting automation; methodology, not tied to specific tooling, scale, or topology. Consultancy-presented but pattern-level rather than pitch-level.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="keynote-leveraging-open-source-for-operational-excellence-at-scale-dave-temkin-walmart"><a href="keynote-leveraging-open-source-for-operational-excellence-at-scale-dave/">Keynote: Leveraging Open Source for Operational Excellence at Scale - Dave Temkin, Walmart</a><a class="headerlink" href="#keynote-leveraging-open-source-for-operational-excellence-at-scale-dave-temkin-walmart" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1ahF5/keynote-leveraging-open-source-for-operational-excellence-at-scale-dave-temkin-walmart">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=_5s6f-JB__Q">Recording</a></p>
+</div>
+<p>Dave Temkin, VP of Platform Infrastructure and Critical Facilities, Walmart</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="_5s6f-JB__Q" data-start="0" href="https://www.youtube.com/watch?v=_5s6f-JB__Q" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/_5s6f-JB__Q/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/_5s6f-JB__Q/maxresdefault.jpg" alt="Play the recording: Keynote: Leveraging Open Source for Operational Excellence at Scale - Dave Temkin, Walmart" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Temkin runs networks, datacenters, and supporting infrastructure for Walmart and previously built Netflix's CDN — this is a rare operator keynote covering open-source adoption for physical DC and network operations at retail scale.</li>
+<li><strong>What</strong>: An operator's perspective on using open source to run platform infrastructure and critical facilities at Walmart's scale. (from abstract only — the program gives no abstract for this keynote, only the speaker bio.)</li>
+<li><strong>How</strong>: Not specified in the program text; expect lessons from running networks/DCs at two very large operators and where open source paid off.</li>
+<li><strong>Where applicable</strong>: Large multi-site private infrastructure operators; the program text is thin here, so treat as a keynote to watch rather than a paper to read.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="sdn-journey-in-verizon-experiences-challenges-and-path-forward-yueping-zhang-sanjay-nayak-verizon"><a href="sdn-journey-in-verizon-experiences-challenges-and-path-forward-yueping-z/">SDN Journey in Verizon: Experiences, Challenges and Path Forward - Yueping Zhang &amp; Sanjay Nayak, Verizon</a><a class="headerlink" href="#sdn-journey-in-verizon-experiences-challenges-and-path-forward-yueping-zhang-sanjay-nayak-verizon" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUr8/sdn-journey-in-verizon-experiences-challenges-and-path-forward-yueping-zhang-sanjay-nayak-verizon">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=BSav94evejQ">Recording</a></p>
+</div>
+<p>Yueping Zhang, Associate Fellow (SDN Technology and Planning), and Sanjay Nayak, Assoc Director, <a href="../companies/verizon/">Verizon</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="BSav94evejQ" data-start="0" href="https://www.youtube.com/watch?v=BSav94evejQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/BSav94evejQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/BSav94evejQ/maxresdefault.jpg" alt="Play the recording: SDN Journey in Verizon: Experiences, Challenges and Path Forward - Yueping Zhang  Sanjay Nayak, Verizon" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: One of the few talks with hard operational experience running SDN across tens of thousands of live network elements — including the admission that SDN has fragmented into disjoint point solutions, which is a candid and useful takeaway for anyone building controller architectures.</li>
+<li><strong>What</strong>: Verizon's experience deploying and scaling its Intelligent Edge Network on a full-SDN approach, the challenges of fast-growing 5G traffic, and the evolution of their SDN controller from a monolithic OpenDayLight package to a fully decoupled microservice architecture, framed as a "network factory" concept. (from abstract only)</li>
+<li><strong>How</strong>: Decomposing the monolithic ODL controller into decoupled microservices so the control plane can adapt to business dynamics; the greenfield iEN deployment is the reference.</li>
+<li><strong>Where applicable</strong>: Large carrier/multi-site operators; Verizon-specific in topology and scale, but the monolith-to-microservices controller lesson and the "SDN as point solutions" critique transfer well.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="code-vs-data-optimizing-nfv-orchestration-with-nephio-tal-liron-google"><a href="code-vs-data-optimizing-nfv-orchestration-with-nephio-tal-liron-google/">Code Vs. Data: Optimizing NFV Orchestration with Nephio - Tal Liron, Google</a><a class="headerlink" href="#code-vs-data-optimizing-nfv-orchestration-with-nephio-tal-liron-google" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUrx/code-vs-data-optimizing-nfv-orchestration-with-nephio-tal-liron-google">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=CoUDp8LbfjY">Recording</a></p>
+</div>
+<p>Tal Liron, Staff Engineer, <a href="../companies/google/">Google</a> (Telecom Network Automation team)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="CoUDp8LbfjY" data-start="0" href="https://www.youtube.com/watch?v=CoUDp8LbfjY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/CoUDp8LbfjY/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/CoUDp8LbfjY/maxresdefault.jpg" alt="Play the recording: Code Vs. Data: Optimizing NFV Orchestration with Nephio - Tal Liron, Google" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: The "configuration-as-data vs. Helm charts" question is a live architectural debate for anyone running Kubernetes at scale — this makes the tradeoffs concrete using Nephio's KRM-based approach.</li>
+<li><strong>What</strong>: An argument for placing code next to the data it processes, comparing management vs. workload clusters, walking through Nephio's specialization pipeline and the operator reconciliation loop, and contrasting Nephio's configuration-as-data (CaD) paradigm with Helm charts — "breaking the Helm chart apart and putting the pieces where they belong." (from abstract only)</li>
+<li><strong>How</strong>: KRM resources as the data model, with the specialization pipeline transforming generic blueprints into environment-specific packages and reconciliation loops maintaining state continuously.</li>
+<li><strong>Where applicable</strong>: Kubernetes orchestration design generally; the CaD-vs-Helm analysis applies beyond telco. Telco-flavored context, but the architectural argument is general.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="lessons-learned-from-using-nephio-to-manage-a-real-world-5g-core-istvan-kispal-nokia"><a href="lessons-learned-from-using-nephio-to-manage-a-real-world-5g-core-istvan/">Lessons Learned from Using Nephio to Manage a Real-World 5G Core - István Kispál, Nokia</a><a class="headerlink" href="#lessons-learned-from-using-nephio-to-manage-a-real-world-5g-core-istvan-kispal-nokia" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUqx/lessons-learned-from-using-nephio-to-manage-a-real-world-5g-core-istvan-kispal-nokia">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=rjWZQv8DkZ0">Recording</a></p>
+</div>
+<p>István Kispál, Automation Architect, DMTS, <a href="../companies/nokia/">Nokia</a> Bell Labs</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="rjWZQv8DkZ0" data-start="0" href="https://www.youtube.com/watch?v=rjWZQv8DkZ0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/rjWZQv8DkZ0/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/rjWZQv8DkZ0/maxresdefault.jpg" alt="Play the recording: Lessons Learned from Using Nephio to Manage a Real-World 5G Core - István Kispál, Nokia" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Honest "what we had to change" case studies of open-source orchestration on a production-identical workload are rarer and more useful than roadmap talks — this is one of them.</li>
+<li><strong>What</strong>: A case study deploying a Nokia 5G core (identical to the commercial offer) on AWS via Nephio R2, describing NF topology with a target-agnostic blueprint, then transforming it through automated processes plus human engineers into an AWS/Nokia-specific package deployed with a GitOps tool — including which parts of Nephio R2 had to be modified to cope. (from abstract only)</li>
+<li><strong>How</strong>: Generic, environment-agnostic blueprints are specialized into concrete deployment packages by a human+automation pipeline, then deployed and operated GitOps-style on AWS.</li>
+<li><strong>Where applicable</strong>: Teams evaluating Nephio for real workloads; Nokia/AWS-specific in detail, but the "what broke and what we changed" content is exactly the transferable part.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="overcoming-challenges-for-ai-fabric-with-sonic-madhu-paluru-aviz-networks"><a href="overcoming-challenges-for-ai-fabric-with-sonic-madhu-paluru-aviz-network/">Overcoming Challenges for AI-Fabric with SONiC - Madhu Paluru, Aviz Networks</a><a class="headerlink" href="#overcoming-challenges-for-ai-fabric-with-sonic-madhu-paluru-aviz-networks" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUsa/overcoming-challenges-for-ai-fabric-with-sonic-madhu-paluru-aviz-networks">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=sXuru247dZA">Recording</a></p>
+</div>
+<p>Madhu Paluru, Director of Engineering, Aviz Networks</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="sXuru247dZA" data-start="0" href="https://www.youtube.com/watch?v=sXuru247dZA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/sXuru247dZA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/sXuru247dZA/maxresdefault.jpg" alt="Play the recording: Overcoming Challenges for AI-Fabric with SONiC - Madhu Paluru, Aviz Networks" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Operating the network under AI training/inference traffic (elephant flows, incast, config-error sensitivity) is a current, fast-moving problem; this collects the operational requirements and proposes SONiC-based answers.</li>
+<li><strong>What</strong>: How GenAI training and inference workloads stress network infrastructure, and proposals to manage AI fabrics on SONiC via config automation to minimize configuration errors and deep-visibility tooling for faster troubleshooting. (from abstract only)</li>
+<li><strong>How</strong>: SONiC's open control/data plane as the base, with automation layering to reduce human config errors and visibility tooling for diagnosis in AI-fabric conditions.</li>
+<li><strong>Where applicable</strong>: SONiC-based AI fabrics; vendor-presented (Aviz builds a commercial SONiC stack), so treat solution specifics as a pitch-informed roadmap rather than validated deployment results.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="real-world-network-function-chaining-lessons-learned-benjamin-goldstone-dell-technologies"><a href="real-world-network-function-chaining-lessons-learned-benjamin-goldstone/">Real-World Network Function Chaining - Lessons Learned - Benjamin Goldstone, Dell Technologies</a><a class="headerlink" href="#real-world-network-function-chaining-lessons-learned-benjamin-goldstone-dell-technologies" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUrv/real-world-network-function-chaining-lessons-learned-benjamin-goldstone-dell-technologies">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=3XJB8P81Uxw">Recording</a></p>
+</div>
+<p>Benjamin Goldstone, Senior Network Engineer, Dell Technologies</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="3XJB8P81Uxw" data-start="0" href="https://www.youtube.com/watch?v=3XJB8P81Uxw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/3XJB8P81Uxw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/3XJB8P81Uxw/maxresdefault.jpg" alt="Play the recording: Real-World Network Function Chaining - Lessons Learned - Benjamin Goldstone, Dell Technologies" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Scaling network functions horizontally on standard compute with SR-IOV and standards-based L2 tricks, with open-sourced code, is directly relevant to virtualized/elastic network service design — and the "tier 1 service provider" provenance suggests real scale.</li>
+<li><strong>What</strong>: Blueprints for building network function chaining platforms on standard compute — using Q-in-Q, VLAN translation, and SR-IOV — as delivered for real tier-1 service providers, with lessons learned and open-sourced code examples to start from. (from abstract only)</li>
+<li><strong>How</strong>: Network functions run as scale-out software on commodity servers; L2 constructs (Q-in-Q, VLAN translation) plus SR-IOV provide the performance and multi-tenant separation needed to chain functions at provider scale.</li>
+<li><strong>Where applicable</strong>: Service-provider and large-enterprise NFvi designs; requires SR-IOV-capable NICs and is L2-centric. The open-sourced code makes it checkable rather than anecdotal.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="harnessing-observability-with-ai-for-edge-applications-innovations-in-apmt-fatih-e-nar-red-hat"><a href="harnessing-observability-with-ai-for-edge-applications-innovations-in-ap/">Harnessing Observability with AI for Edge Applications: Innovations in APM/T - Fatih E. Nar, Red Hat</a><a class="headerlink" href="#harnessing-observability-with-ai-for-edge-applications-innovations-in-apmt-fatih-e-nar-red-hat" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUrT/harnessing-observability-with-ai-for-edge-applications-innovations-in-apmt-fatih-e-nar-red-hat">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=O7EsZriRTXo">Recording</a></p>
+</div>
+<p>Fatih E. Nar, Distinguished Chief Architect, <a href="../companies/red-hat/">Red Hat</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="O7EsZriRTXo" data-start="0" href="https://www.youtube.com/watch?v=O7EsZriRTXo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/O7EsZriRTXo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/O7EsZriRTXo/maxresdefault.jpg" alt="Play the recording: Harnessing Observability with AI for Edge Applications: Innovations in APM/T - Fatih E. Nar, Red Hat" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: eBPF-based observability fused with LLMs for application performance monitoring is at the intersection of two of the PM's core interests (eBPF, AI for operations).</li>
+<li><strong>What</strong>: Advances in AI-infused application performance monitoring and tracing for edge applications, centered on integrating eBPF with LLMs. (from abstract only — the program provides only this single-sentence abstract, so depth of evaluation and results cannot be assessed.)</li>
+<li><strong>How</strong>: Not specified beyond the eBPF + LLM combination; eBPF supplies deep runtime telemetry, and LLM-based analysis turns it into actionable diagnosis, presumably.</li>
+<li><strong>Where applicable</strong>: Edge/cloud-native application operations; flag that the abstract is unusually thin, so treat as a talk to sample rather than a paper to rely on.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="ran-in-the-cloud-utilization-and-new-services-breakthroughs-amar-kapadia-aarna-networks-shuvo-chowdhury-nvidia"><a href="ran-in-the-cloud-utilization-and-new-services-breakthroughs-amar-kapadia/">RAN-in-the-Cloud: Utilization and New Services Breakthroughs - Amar Kapadia, Aarna Networks &amp; Shuvo Chowdhury, NVIDIA</a><a class="headerlink" href="#ran-in-the-cloud-utilization-and-new-services-breakthroughs-amar-kapadia-aarna-networks-shuvo-chowdhury-nvidia" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUs6/ran-in-the-cloud-utilization-and-new-services-breakthroughs-amar-kapadia-aarna-networks-shuvo-chowdhury-nvidia">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=4cMv25sRo_A">Recording</a></p>
+</div>
+<p>Amar Kapadia, Co-Founder and CEO, Aarna Networks, and Shuvo Chowdhury, Principal Product Manager, <a href="../companies/nvidia/">NVIDIA</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="4cMv25sRo_A" data-start="0" href="https://www.youtube.com/watch?v=4cMv25sRo_A" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/4cMv25sRo_A/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/4cMv25sRo_A/maxresdefault.jpg" alt="Play the recording: RAN-in-the-Cloud: Utilization and New Services Breakthroughs - Amar Kapadia, Aarna Networks  Shuvo Chowdhury, NVIDIA" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: RAN is the largest capex/opex line for operators and runs at 25–50% utilization; cloudifying it as a multi-tenant, containerized workload on shared GPU infrastructure is a notable utilization-and-monetization play relevant to anyone thinking about GPU cluster economics.</li>
+<li><strong>What</strong>: The argument and implementation direction for running RAN as a service in multi-tenant cloud infrastructure, containerized alongside other workloads — cutting operator costs, improving sustainability, and enabling edge services such as GenAI on the same infrastructure. (from abstract only)</li>
+<li><strong>How</strong>: RAN functions containerized on shared, multi-tenant cloud/GPU infrastructure (NVIDIA AI/5G datacenter products plus Aarna's orchestration), with utilization gains and new edge service monetization as the payoff.</li>
+<li><strong>Where applicable</strong>: Operators and private-5G deployments with GPU-equipped edge sites; vendor-led (NVIDIA/Aarna), so the utilization claims and cost math deserve independent verification.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="the-dark-side-of-ai-the-hidden-supply-chain-risks-in-open-source-ai-models-guy-nachshon-checkmarx"><a href="the-dark-side-of-ai-the-hidden-supply-chain-risks-in-open-source-ai-mode/">The Dark Side of AI: The Hidden Supply Chain Risks in Open-Source AI Models - Guy Nachshon, Checkmarx</a><a class="headerlink" href="#the-dark-side-of-ai-the-hidden-supply-chain-risks-in-open-source-ai-models-guy-nachshon-checkmarx" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUqw/the-dark-side-of-ai-the-hidden-supply-chain-risks-in-open-source-ai-models-guy-nachshon-checkmarx">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=PpV_7ZOwMdE">Recording</a></p>
+</div>
+<p>Guy Nachshon, Security Researcher, Checkmarx</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="PpV_7ZOwMdE" data-start="0" href="https://www.youtube.com/watch?v=PpV_7ZOwMdE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/PpV_7ZOwMdE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/PpV_7ZOwMdE/maxresdefault.jpg" alt="Play the recording: The Dark Side of AI: The Hidden Supply Chain Risks in Open-Source AI Models - Guy Nachshon, Checkmarx" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: As the PM adopts open models and AI tooling, this is a class of supply-chain risk that most infrastructure teams haven't priced in — models themselves as a malware delivery vector, demonstrated live.</li>
+<li><strong>What</strong>: Research on weak points in how AI models are constructed, with demos of models manipulated into malicious behavior — including a "Malicious Copilot" case study where a code-completion model is trained to target specific victims by embedding malicious code — plus practical takeaways for companies using generative AI/LLMs. (from abstract only)</li>
+<li><strong>How</strong>: Attacks via the model artifact itself (training-data and fine-tuning manipulation) rather than the surrounding software, so standard software supply-chain controls (SBOMs, scanning) don't catch them.</li>
+<li><strong>Where applicable</strong>: Any organization consuming open-weights models or AI IDE plugins; general risk, not org-specific. Security-vendor research, but with concrete demonstrated attacks, which is what gives it weight.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="full-stack-explicit-confidence-with-project-alvarium-trevor-conn-dell-technologies"><a href="full-stack-explicit-confidence-with-project-alvarium-trevor-conn-dell-te/">Full Stack Explicit Confidence with Project Alvarium - Trevor Conn, Dell Technologies</a><a class="headerlink" href="#full-stack-explicit-confidence-with-project-alvarium-trevor-conn-dell-technologies" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUsF/full-stack-explicit-confidence-with-project-alvarium-trevor-conn-dell-technologies">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=nT0fuKnfl6c">Recording</a></p>
+</div>
+<p>Trevor Conn, Distinguished Engineer, Dell Technologies</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="nT0fuKnfl6c" data-start="0" href="https://www.youtube.com/watch?v=nT0fuKnfl6c" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/nT0fuKnfl6c/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/nT0fuKnfl6c/maxresdefault.jpg" alt="Play the recording: Full Stack Explicit Confidence with Project Alvarium - Trevor Conn, Dell Technologies" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: "Measurable, portable trust in data and systems" as a continuous score across the whole stack is an unusual primitive — it reframes zero-trust from a binary gate into quantified confidence, and Alvarium extends it below the app layer into host, OS, and CI/CD artifacts.</li>
+<li><strong>What</strong>: Project Alvarium's framework for capturing immutable metadata to objectively quantify "data confidence" as data traverses a distributed topology, now extended to the host, OS, and CI/CD layers, and how a confidence score can be operationalized for platform-integrity outcomes such as zero trust. (from abstract only)</li>
+<li><strong>How</strong>: Trust-aware components emit signed, immutable metadata at each handling boundary; the accumulated trail yields a computable confidence score that downstream policy can act on.</li>
+<li><strong>Where applicable</strong>: Distributed edge/IoT topologies and multi-party data pipelines more than DC fabrics; open-source (LF Edge) and conceptually general, though adoption is still early — watch as a direction, don't expect turnkey.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="network-and-computing-infrastructure-for-the-2030s-haruhisa-fukano-inoue-reo-fujitsu"><a href="network-and-computing-infrastructure-for-the-2030s-haruhisa-fukano-inoue/">Network and Computing Infrastructure for the 2030s - Haruhisa Fukano &amp; Inoue Reo, Fujitsu</a><a class="headerlink" href="#network-and-computing-infrastructure-for-the-2030s-haruhisa-fukano-inoue-reo-fujitsu" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://onesummit2024.sched.com/event/1YUrp/network-and-computing-infrastructure-for-the-2030s-haruhisa-fukano-inoue-reo-fujitsu">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=kdkrP0A07dI">Recording</a></p>
+</div>
+<p>Haruhisa Fukano, Manager (1Finity), and Inoue Reo, Fujitsu</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="kdkrP0A07dI" data-start="0" href="https://www.youtube.com/watch?v=kdkrP0A07dI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/kdkrP0A07dI/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/kdkrP0A07dI/maxresdefault.jpg" alt="Play the recording: Network and Computing Infrastructure for the 2030s - Haruhisa Fukano  Inoue Reo, Fujitsu" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: The IOWN (photonics-first infrastructure) forum partnering with LF Edge on a joint PoC signals where physical-layer infrastructure research is heading — power-efficient photonics as the answer to bandwidth and energy walls, which is squarely worth watching even if early.</li>
+<li><strong>What</strong>: The case that 2030s workloads require a paradigm shift in communications and computing (power consumption and bandwidth as the binding constraints), and the plan for a joint IOWN + LF Edge PoC combining next-gen photonic infrastructure with open-source edge software. (from abstract only)</li>
+<li><strong>How</strong>: Combines IOWN's photonic network/computing technologies with LF Edge open-source stacks; the talk covers the PoC's demonstration points and future plans.</li>
+<li><strong>Where applicable</strong>: Strategic/forward-looking rather than deployable today; PoC-stage, Fujitsu/IOWN-specific, and no results exist yet — but relevant to long-range optics and DC infrastructure planning.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Telco dominates, but the DC/cloud sessions that exist are substantive</strong>: the program is overwhelmingly O-RAN/5G/Nephio (LFN's home turf), and the strongest technical content sits in a small cluster of SONiC, P4, and DPU talks from Google, Alibaba, and the OPI ecosystem.</li>
+<li><strong>AI is the framing device everywhere, but mostly aspirational</strong>: nearly every session title now carries "AI" or "GenAI"; the credible AI-infrastructure content (AI fabrics, non-minimal routing for million-GPU clusters) is a small subset, alongside genuinely promising but early ml-for-networking work (telemetry diagnosis, eBPF+LLM observability).</li>
+<li><strong>Nephio is the center of gravity for automation</strong>: a half-dozen talks cover Nephio from vision to "what we had to change in R2 to run a real 5G core" — the project is clearly in its first encounter with production workloads, and the honest lessons-learned talks are the ones worth reading.</li>
+<li><strong>Kubernetes is the assumed substrate for network software</strong>: from SONiC fabric simulation (ALPINE) to NFV orchestration, KRM/GitOps/reconciliation have become the default operating model for network function lifecycle, not just for container workloads.</li>
+<li><strong>Simulation-before-hardware is a maturing practice</strong>: ALPINE (100+ virtual SONiC switches on K8s) and the SAI virtual switch in DentOS both push CI-grade testing of NOS control planes without lab hardware — a meaningful cost and velocity shift for fabric operators.</li>
+<li><strong>Physical-layer futures are being seeded at the edges</strong>: photonic disaggregated computing (Fujitsu) and the IOWN/LF Edge PoC point at photonics as the escape hatch from power and bandwidth limits, while OPI works on standardizing the DPUs already arriving in servers.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/onesummit-2024.md"><code>digests/onesummit-2024.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/onesummit-2024.md"><code>prompts/onesummit-2024.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+        
+          
+          <a href="../ovscon-2024/" class="md-footer__link md-footer__link--next" aria-label="Next: Open vSwitch and OVN 2024 Fall Conference (Prague)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Open vSwitch and OVN 2024 Fall Conference (Prague)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Written by <a href="https://github.com/hellt/tofarev" target="_blank" rel="noopener">ToFaRev</a>
+  on Nebius Token Factory · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

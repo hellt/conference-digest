@@ -149,6 +149,7 @@ a:focus-visible, button:focus-visible, label:focus-visible {
 .md-post--excerpt .md-meta__list { display: flex; flex-direction: column; align-items: flex-start; gap: .35rem; font-size: .55rem; color: var(--signal-muted); }
 .md-post--excerpt .md-meta__item { margin: 0; }
 .md-post--excerpt .md-meta__item::after { display: none; }
+.md-post--excerpt .media-pending { opacity: .6; }
 .md-post--excerpt .md-post__content { margin: 0; min-width: 0; }
 .md-post--excerpt .md-post__content h2 { margin: 0 0 .45rem; font-size: 1.1rem; font-weight: 450; line-height: 1.4; }
 .md-post--excerpt .md-post__content h2 a { color: var(--signal-ink); }
@@ -164,6 +165,9 @@ a:focus-visible, button:focus-visible, label:focus-visible {
 .md-typeset .digest-fact { display: inline; color: var(--signal-muted); font-size: .55rem; line-height: 1.8; }
 .md-typeset .digest-fact + .digest-fact::before { content: '·'; margin: 0 .55rem; }
 .md-typeset .digest-fact a { color: inherit; text-decoration: underline; text-underline-offset: .2em; }
+.md-typeset .talk-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1.5rem 0 0; }
+.md-typeset .talk-tag { display: inline-block; padding: .12rem .45rem; border: 1px solid var(--signal-rule); color: var(--signal-muted); font-size: .55rem; line-height: 1.7; text-decoration: none; }
+.md-typeset .talk-tag:hover { border-color: var(--signal-accent); color: var(--signal-accent); }
 /* Conference and employer trackers: the name-filter box above the table. */
 .md-typeset .conf-filter { margin: 1rem 0 1.2rem; }
 .md-typeset .conf-filter input {
@@ -187,6 +191,8 @@ a:focus-visible, button:focus-visible, label:focus-visible {
 .md-typeset h2.tier { border-top: 1px solid var(--signal-rule); padding-top: 1.3rem; margin-top: 2.4rem; }
 .md-typeset .digest-facts + .digest-body > h2.tier:first-child { border-top: 0; padding-top: 0; }
 .md-typeset .pick { margin: 1.5rem 0 2.4rem; padding: 0 0 1.6rem; border-bottom: 1px solid var(--signal-rule); }
+/* A standalone talk has no following pick to separate from its footer tags. */
+.md-typeset .digest-facts + .pick { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
 .md-typeset .pick h3 { margin: .4rem 0 .6rem; }
 /* A pick heading links to the talk's own page (and its share card). */
 .md-typeset .pick h3 a:not(.headerlink) { color: inherit; text-decoration: none; }

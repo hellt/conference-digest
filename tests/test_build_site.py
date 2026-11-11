@@ -24,6 +24,7 @@ from scripts.build_site import (
     media_block,
     render_companies,
     render_post,
+    render_tag_pages,
     render_talks,
 )
 
@@ -122,6 +123,33 @@ class PostMetadataTests(TestCase):
         self.assertEqual(front["location"], "Prague · Czechia")
         self.assertIn("\nThe full digest introduction.\n\n<!-- more -->", page)
 
+    def test_digest_list_uses_start_and_end_dates(self):
+        body = "# Conference\n\nIntroduction.\n\n## Core\n"
+        entry = {
+            "name": "Conference",
+            "description": "A conference.",
+            "start_date": "2026-11-02",
+            "end_date": "2026-11-04",
+        }
+        page, _, _, _ = render_post("test-2026", entry, {}, body)
+        front = yaml.safe_load(page.split("---", 2)[1])
+        self.assertEqual(front["conference_dates"], "2 Nov - 4 Nov, 2026")
+
+    def test_media_pending_clears_for_any_slides_or_recording(self):
+        cases = (
+            ("[Abstract](https://example.org/abstract) · [Paper](https://example.org/paper.pdf)", True),
+            ("[Slides](https://example.org/slides.pdf)", False),
+            ("[Slides (PPTX)](https://example.org/slides.pptx)", False),
+            ("[Recording](https://example.org/talk.mp4)", False),
+        )
+        entry = {"name": "Conference", "description": "A conference."}
+        for links, pending in cases:
+            with self.subTest(links=links):
+                body = f"# Conference\n\nIntroduction.\n\n## Core\n### Routing\n**Links:** {links}\n"
+                page, _, _, _ = render_post("test-2026", entry, {}, body)
+                front = yaml.safe_load(page.split("---", 2)[1])
+                self.assertIs(front["media_pending"], pending)
+
     def test_missing_registry_description_fails_instead_of_using_digest_intro(self):
         with self.assertRaisesRegex(ValueError, "test-2026: add a short description"):
             render_post("test-2026", {"name": "Conference"}, {},
@@ -141,6 +169,40 @@ class PostMetadataTests(TestCase):
                 self.assertTrue(entry.get("description"))
                 self.assertLessEqual(len(entry["description"]), 180)
                 self.assertRegex(entry.get("location", ""), r"^\S.* · .*\S$")
+
+
+class TalkTagTests(TestCase):
+    def test_talk_page_links_each_tag_to_its_index_page(self):
+        body = "# Conference\n\nIntroduction.\n\n## Core\n### Routing\n**Why:** Routing matters.\n"
+        tags = {"talks": {"Routing": ["bgp", "network-security"]}}
+        _, _, _, talks = render_post(
+            "test-2026", {"name": "Conference", "description": "A conference."}, {}, body, tags,
+        )
+        page = talks[0][1]
+        self.assertIn('<footer class="talk-tags" aria-label="Talk tags" markdown>', page)
+        self.assertIn("[bgp](../tags/bgp.md){ .talk-tag }", page)
+        self.assertIn("[network-security](../tags/network-security.md){ .talk-tag }", page)
+        self.assertGreater(page.index("talk-tags"), page.index("**Why:**"))
+
+    def test_tag_page_lists_all_tagged_talks_by_conference(self):
+        tagged = {
+            "bgp": [
+                {"key": "old", "path": "old/routing.md", "title": "Old routing talk"},
+                {"key": "new", "path": "new/bgp.md", "title": "New BGP talk"},
+            ],
+        }
+        posts = {
+            "old": {"title": "Old Conference", "date": "2025-01-01"},
+            "new": {"title": "New Conference", "date": "2026-01-01"},
+        }
+        with TemporaryDirectory() as tmp, patch("scripts.build_site.TAG_PAGES", Path(tmp) / "tags"):
+            render_tag_pages(tagged, posts)
+            page = (Path(tmp) / "tags" / "bgp.md").read_text(encoding="utf-8")
+        self.assertEqual(page.splitlines()[1], 'title: "Tag: bgp"')
+        self.assertIn("2 picked talks tagged `bgp`", page)
+        self.assertIn("- [New BGP talk](../new/bgp.md)", page)
+        self.assertIn("- [Old routing talk](../old/routing.md)", page)
+        self.assertLess(page.index("New Conference"), page.index("Old Conference"))
 
 
 class RecordingTests(TestCase):

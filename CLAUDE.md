@@ -37,7 +37,7 @@ registry.yaml (an edition)
   -> digests/<key>.md                    on main only via that merge (or a human/Claude commit)
   -> close-digest-issue.yml closes the issue
   -> site.yml renders digests/ with Zensical -> gh-pages
-  -> links-refresh.yml (weekly, 120 days) new recordings/slides -> PR "links: <key>"
+  -> links-refresh.yml (daily, 120 days) new recordings/slides -> PR "links: <key>"
 ```
 
 Six workflows: `ci.yml` (unit tests and actionlint on PRs and main),
@@ -45,7 +45,7 @@ Six workflows: `ci.yml` (unit tests and actionlint on PRs and main),
 an optional `conference` key), `digest-bot.yml` (after each scan, on a human push
 to `prompts/*.md`, or `workflow_dispatch` for one key), `close-digest-issue.yml`
 (push to `digests/*.md`), `site.yml` (build on PRs, build + publish on main), and
-`links-refresh.yml` (Wednesdays, or `workflow_dispatch` for one key of any age).
+`links-refresh.yml` (daily, or `workflow_dispatch` for one key of any age).
 
 `digest-bot.yml` calls ToFaRev's reusable `digest.yml` pinned to a full commit
 SHA, exactly like containerlab calls `/tofarev review`. ToFaRev reads only
@@ -99,8 +99,8 @@ pipeline.
    own PR branches (`tofarev/digest-<key>`, and `tofarev/links-<key>` for
    Links Refresh), and `site.yml` pushes only the
    `gh-pages` branch. The site sources `docs/posts/`, `docs/<key>/` (talk
-   pages; each holds its own `.gitignore`), `docs/companies/` and
-   `docs/conferences.md` are generated at build time and gitignored.
+   pages; each holds its own `.gitignore`), `docs/companies/`, `docs/tags/`
+   and `docs/conferences.md` are generated at build time and gitignored.
    `run_summary.json`, `issues.json` and `discovery_summary.json` are ephemeral,
    gitignored, and passed between steps in one job — never commit them.
 4. **`state.json` is bookkeeping, not truth.** It tracks
@@ -214,16 +214,19 @@ tier/pick markup; the digest text is unchanged except that employer names in
 a pick's speaker line link to that employer's page, and each pick heading
 links to its talk page), writes `docs/<key>/<slug>.md` (one page per pick at
 `/<key>/<slug>/`, under the digest's `/<key>/`: its links, recording, speakers
-and write-up; the folder's own `.gitignore` of `*` keeps it out of git and
+and write-up, plus clickable tag chips. `docs/tags/<tag>.md` lists every talk
+carrying that tag, grouped by conference. The talk folder's own `.gitignore` of
+`*` keeps it out of git and
 marks it for cleanup on the next run, and a hand-made `docs/<key>/` stops the
 build), builds `docs/companies/`
 (one page per employer in `build_site.py`'s `EMPLOYER_VARIANTS` map, listing
 every pick with a speaker from that employer — the Companies tab) and writes the
-Conferences tracker. Style lives in `docs/stylesheets/extra.css` and `overrides/`,
+Conferences tracker. `docs/tags/` is likewise generated and gitignored.
+Style lives in `docs/stylesheets/extra.css` and `overrides/`,
 adapted from containerlab.dev. The tracker carries a client-side name filter
 (`docs/javascripts/conf-filter.js`), styled in `extra.css`. Never edit
-`docs/posts/`, `docs/<key>/` or
-`docs/companies/` — edit the digest.
+`docs/posts/`, `docs/<key>/`, `docs/companies/` or `docs/tags/` — edit the
+digest or its tags.yaml entry.
 
 **Search** indexes each pick once, from its talk page. A digest post is found
 by its title, intro and facts line only: `build_site.py` marks its body and

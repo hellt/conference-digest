@@ -97,7 +97,7 @@ centered dots, and a talk recording gets a thumbnail that plays in place.
 
 **Recordings come later.** CNCF uploads KubeCon talks about two weeks after
 the event, USENIX and SIGCOMM within a few months. `links-refresh.yml` reruns
-the links step every Wednesday for each digest whose conference ended in the
+the links step every day for each digest whose conference ended in the
 last 120 days, and opens a `links: <key>` PR listing the picks that gained
 links; the digest text is not touched and earlier links are kept. Run it from
 the Actions tab with `conference: <key>` for an older digest, or locally:
@@ -138,7 +138,8 @@ dark, with a locally served Inter font. Search results, heading permalinks,
 right-hand scroll tracking, theme persistence and instant navigation use
 Zensical’s native components.
 `scripts/build_site.py` turns every `digests/<key>.md` into a post (the digest
-text is unchanged; tiers and picks get markup for styling) and writes the
+text is unchanged; tiers and picks get markup for styling), links each talk's
+search tags to a page listing all talks with that tag, and writes the
 Conferences tracker — a table of every tracked edition, newest first, with a
 client-side name filter (`docs/javascripts/conf-filter.js`). `site.yml` builds
 it on PRs and publishes it to the
@@ -224,7 +225,7 @@ mkdocs.yml pyproject.toml uv.lock Makefile
   digest-bot.yml          # ToFaRev drafts digests as PRs
   close-digest-issue.yml  # closes the issue when a digest lands
   site.yml                # builds + publishes the site
-  links-refresh.yml       # weekly: new recordings/slides -> links PRs
+  links-refresh.yml       # daily: new recordings/slides -> links PRs
 docs/javascripts/video.js # click-to-play recordings on the site
 ```
 

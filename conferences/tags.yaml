@@ -5230,3 +5230,98 @@ onesummit-2025:
     - open-source
     - cloud-native
     - mobile
+aiengineer-worldsfair-2026:
+  post:
+  - ai
+  - kubernetes
+  - ai-networks
+  - gpu-clusters
+  - cloud
+  - ml-for-networking
+  talks:
+    TCP and RDMA are Killing Inference Throughput; Homa can Fix It:
+    - rdma
+    - congestion-control
+    - ai-networks
+    Can LLMs write fast multi-GPU kernels? We built a benchmark to find out.:
+    - gpu-clusters
+    - ai
+    - benchmarking
+    Taking Reinforcement Learning Cross Datacenter:
+    - ai
+    - interconnection
+    'KV Cache-Aware Routing and P/D Disaggregation on Kubernetes: The Parts Public Benchmarks Don''t Show':
+    - kubernetes
+    - ai
+    - load-balancing
+    'Routing LLM Inference in Production: From Engine Signals to Policy':
+    - load-balancing
+    - ai
+    - observability
+    'Fault-Tolerant Training at Scale: Making Hardware Failures a Non-Event':
+    - kubernetes
+    - gpu-clusters
+    - sre
+    'Running a 20T-Token Data Pipeline: Infrastructure Lessons from Production':
+    - ai
+    - orchestration
+    - sre
+    'Agents at Scale: Inside MiniMax''s Model and the Infrastructure Behind It':
+    - ai
+    - capacity-planning
+    Large clusters for small models:
+    - ai
+    - load-balancing
+    - capacity-planning
+    'Seeing the Plumbing: Profiling vLLM Speculative Decoding on NVIDIA Blackwell':
+    - ai
+    - benchmarking
+    - observability
+    'AI : Learned Execution Graphs for Real-Time Anomaly Detection & Drift Classification in APIs':
+    - ml-for-networking
+    - anomaly-detection
+    - observability
+    Kubernetes Is Not Your Sandbox:
+    - kubernetes
+    - benchmarking
+    - containers
+    'Sandboxes Aren''t Optional: Runtime Isolation Patterns for Coding Agents at Scale':
+    - kubernetes
+    - containers
+    - network-security
+    'Two Bugs That Hid in Plain Sight: A vLLM Debugging Detective Story':
+    - ai
+    - troubleshooting
+    - observability
+    'From fork() to Fleet: Designing an Agent Sandbox Cloud Pt 1':
+    - containers
+    - orchestration
+    Operating Distributed Inference Systems at Scale:
+    - ai
+    - orchestration
+    - capacity-planning
+    'Modular: Taming the AI Hardware Cambrian Explosion':
+    - ai
+    - benchmarking
+    - gpu-clusters
+    Are LLM Performance Benchmarks Reliable?:
+    - benchmarking
+    - ai
+    ? 'Your LLM Stack Is a 2008 Database With Better Marketing: Why ML Security Is
+      Dominated by Misconfiguration, Not Missing Features'
+    : - network-security
+      - ai
+    Move fast and (don't) break things: []
+    Computer Use at the Edge of the Statistical Precipice:
+    - ai
+    - benchmarking
+    - testing
+    'Beyond Static Intelligence: Evaluating Continual Learning':
+    - ai
+    - benchmarking
+    What If Your Chip Design Team Moved Like a Single Body?:
+    - ai
+    - silicon
+    Harnessing Collective Agent Intelligence for Open Science:
+    - ai
+    - benchmarking

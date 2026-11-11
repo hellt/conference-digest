@@ -35,6 +35,7 @@ from .ocp import OcpFetcher
 from .mlsys import MlsysFetcher
 from .sessionize import SessionizeFetcher
 from .atscale import AtScaleFetcher
+from .aiengineer import AiEngineerFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -74,6 +75,7 @@ FETCHERS = {
     "mlsys": MlsysFetcher(),
     "sessionize": SessionizeFetcher(),
     "atscale": AtScaleFetcher(),
+    "aiengineer": AiEngineerFetcher(),
 }
 
 

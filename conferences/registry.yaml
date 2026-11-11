@@ -1168,3 +1168,14 @@ conferences:
     program_url: "https://ai.engineer/worldsfair/2026"
     manual_fallback_url: "https://ai.engineer/worldsfair/2026/schedule"
     notes: "Complete 561-session program from the official public sessions.json feed documented at ai.engineer/data, including workshops, keynotes, sessions and sponsor presentations with their published descriptions, speakers, days and rooms. The separate recording/transcript catalog is not title-matched to schedule items; the normal verified links step can add recordings."
+
+  - key: aiengineer-code-2026
+    name: "AI Engineer Code Summit 2026"
+    location: "San Francisco · United States"
+    description: "AI Engineer Code: coding agents, AI-assisted development, agent evaluation, models, infrastructure, and production engineering."
+    start_date: 2026-11-10
+    end_date: 2026-11-12
+    fetcher: aiengineer
+    program_url: "https://ai.engineer/code/2026"
+    manual_fallback_url: "https://ai.engineer/code/2026/schedule"
+    notes: "Complete 108-session program available from the official public sessions.json feed. Registered on 2026-11-11 while the edition is ongoing; its prompt is intentionally left for the first eligible scan after the November 12 end date so Digest Bot does not draft from an in-progress conference."

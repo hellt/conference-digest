@@ -521,7 +521,8 @@ run.
   is a status-only source like MORE-IP and SwiNOG.
 - **AI Engineer** uses the public `sessions.json` schedule documented on
   ai.engineer/data when one is published (Europe 2026: 196 sessions; World's
-  Fair 2026: 561). Separate
+  Fair 2026: 561; Code 2026: 108, registered while ongoing with its prompt
+  deferred until after the event). Separate
   recording records are not title-matched into that schedule. NYC 2026 has no
   JSON feed, so its Watch & read page is the fallback: it slices two full-day
   YouTube streams into per-session chapters with synopses, timestamped

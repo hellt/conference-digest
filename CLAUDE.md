@@ -12,11 +12,11 @@ can still run a prompt by hand. Merged digests are published as a Zensical blog
 on GitHub Pages. The only model calls in CI happen inside ToFaRev's reusable
 workflow, with the `TOFAREV_API_KEY` secret (plus the optional
 `TAVILY_API_KEY` for PDFs that block runners). The scan uses `TAVILY_API_KEY`
-only for nanog.org, which blocks automated clients; reading it through Tavily
-Extract was approved by the repository owner (2026-11-01), and so was probing
-dead file/video links through it (`link_alive`, 2026-11-04). Do not route
-other blocked sources around their bot protection without the same explicit
-approval. The model is set by `"model"` in `digest-bot.yml`'s `trusted_config`
+for nanog.org, TNC date probes (both approved 2026-11-01), and Sched only
+after three direct attempts fail (approved 2026-11-10). Probing dead
+file/video links through it (`link_alive`) was approved 2026-11-04. Do not
+route other blocked sources around their bot protection without the same
+explicit approval. The model is set by `"model"` in `digest-bot.yml`'s `trusted_config`
 (`zai-org/GLM-5.3`).
 
 ## The pipeline

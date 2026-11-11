@@ -36,6 +36,7 @@ from .mlsys import MlsysFetcher
 from .sessionize import SessionizeFetcher
 from .atscale import AtScaleFetcher
 from .aiengineer import AiEngineerFetcher
+from .chnug import ChnugFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -76,6 +77,7 @@ FETCHERS = {
     "sessionize": SessionizeFetcher(),
     "atscale": AtScaleFetcher(),
     "aiengineer": AiEngineerFetcher(),
+    "chnug": ChnugFetcher(),
 }
 
 

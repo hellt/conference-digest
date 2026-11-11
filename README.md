@@ -205,6 +205,7 @@ conferences/
     indico.py         # generic Indico export API (nog.fi, NetUK, GRNOG, DKNOG)
     itnog.py          # ITNOG program tables with PDF slides (Italian)
     netnod.py        # Netnod Tech Meeting agenda paragraphs
+    chnug.py         # Swiss Network User Group agendas, slides and recordings
                     #   (cfgmgmtcamp reuses pretalx.py)
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
@@ -529,6 +530,12 @@ run.
   pages, structured speaker organizations and uncut recordings (44 currently);
   ambiguous or absent matches retain the chapter timestamp (2 currently).
   Administrative Remarks cards are dropped.
+- **CHNUG** (Swiss Network User Group): one static Jekyll agenda per meetup,
+  starting with CHNUG #2. Speaker-led technical items carry exact titles,
+  affiliations, PDF slides and YouTube recordings; administrative slots are
+  dropped and no abstracts or per-talk pages are published. Discovery starts
+  at #2, reads the date in the page heading and uses zero-padded edition URLs.
+  Later recording searches use the official `@CH-NUG` YouTube channel.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

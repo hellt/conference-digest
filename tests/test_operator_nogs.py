@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 from conferences.fetchers import get_fetcher
 from conferences.fetchers.base import MANUAL_FALLBACK, NOT_PUBLISHED, OK
 from conferences.fetchers.denog import DenogFetcher
+from conferences.fetchers.moreip import MoreIpFetcher
 from conferences.fetchers.nlnog import NlnogFetcher
 from conferences.fetchers.ripe import RipeFetcher
 from conferences.links import Context, RECORDING_STREAMS, enrich, program_items, scrape_page
@@ -224,6 +225,24 @@ class NznogTests(TestCase):
         self.assertEqual(stats["video_from_stream"], 1)
         self.assertEqual(stats["video_from_search"], 0)
         self.assertIn("[Recording](https://www.youtube.com/watch?v=_qzUslAh9M8&t=3490s)", digest)
+
+
+class MoreIpTests(TestCase):
+    def test_redirect_to_another_edition_is_not_a_program(self):
+        url = "https://more-ip-event.net/more-ip-2027/agenda/"
+        old_program = """
+        <div class="day-wrap"><div class="day-title"><h2>Day one</h2><span>Wednesday, May 29</span></div>
+        <article class="event-item"><h3>Talk from 2024</h3></article></div>
+        """
+        resp = response(old_program)
+        resp.url = "https://more-ip-event.net/agenda/"
+        with patch("conferences.fetchers.moreip.http_get", return_value=resp):
+            probe = MoreIpFetcher().probe(entry(url), [2027])
+            result = MoreIpFetcher().fetch(entry(url))
+        self.assertFalse(probe.exists)
+        self.assertEqual(result.status, NOT_PUBLISHED)
+        self.assertEqual(result.item_count, 0)
+        self.assertEqual(result.program_text, "")
 
 
 class OperatorIntegrationTests(TestCase):

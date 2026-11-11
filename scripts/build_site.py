@@ -66,6 +66,7 @@ TIERS = ("core", "adjacent", "wildcard")
 LABEL = re.compile(r"^\*\*[A-Z][\w /-]{0,40}(?::\*\*|\*\*:)")
 LINKS_ROW = re.compile(r"^\s*(?:[-*]\s+)?\*\*Links?:?\*\*:?\s*(.+)$")
 MD_LINK = re.compile(r"\[([^\]\n]+)\]\((https?://[^)\s]+)\)")
+MEDIA_LINK = re.compile(r"(?:Slides(?: \([^)]*\)| 2)?|Recording)", re.I)
 
 
 def load_tags() -> dict[str, dict]:
@@ -1087,6 +1088,27 @@ def human(d: date | None) -> str:
     return f"{d:%B} {d.day}, {d.year}" if d else "unknown"
 
 
+def list_date_span(start: date | None, end: date | None) -> str:
+    """Digest-list dates, with both days explicit: "2 Nov - 4 Nov, 2026"."""
+    if not end:
+        return ""
+    if not start or start == end:
+        return f"{end.day} {end:%b}, {end.year}"
+    if start.year == end.year:
+        return f"{start.day} {start:%b} - {end.day} {end:%b}, {end.year}"
+    return f"{start.day} {start:%b}, {start.year} - {end.day} {end:%b}, {end.year}"
+
+
+def has_media(body: str) -> bool:
+    """Whether any code-built links row contains slides or a recording."""
+    return any(
+        MEDIA_LINK.fullmatch(label.strip())
+        for line in body.splitlines()
+        if (row := LINKS_ROW.match(line))
+        for label, _ in MD_LINK.findall(row.group(1))
+    )
+
+
 def attribution_line(lines: list[str], i: int) -> int:
     """Index of the attribution line of the pick headed at lines[i], or -1
     when the heading carries it (netdev, SIGCOMM) or there is none (IETF)."""
@@ -1336,6 +1358,8 @@ def render_post(key: str, entry: dict, meta: dict, body: str,
         "slug": key,
         "title": title,
         "description": summary(description, 180),
+        "conference_dates": list_date_span(started, ended),
+        "media_pending": not has_media(body),
         "card": {
             "kind": "digest",
             "conference": "Conference digest",

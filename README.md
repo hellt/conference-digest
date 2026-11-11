@@ -97,7 +97,7 @@ centered dots, and a talk recording gets a thumbnail that plays in place.
 
 **Recordings come later.** CNCF uploads KubeCon talks about two weeks after
 the event, USENIX and SIGCOMM within a few months. `links-refresh.yml` reruns
-the links step every Wednesday for each digest whose conference ended in the
+the links step every day for each digest whose conference ended in the
 last 120 days, and opens a `links: <key>` PR listing the picks that gained
 links; the digest text is not touched and earlier links are kept. Run it from
 the Actions tab with `conference: <key>` for an older digest, or locally:
@@ -224,7 +224,7 @@ mkdocs.yml pyproject.toml uv.lock Makefile
   digest-bot.yml          # ToFaRev drafts digests as PRs
   close-digest-issue.yml  # closes the issue when a digest lands
   site.yml                # builds + publishes the site
-  links-refresh.yml       # weekly: new recordings/slides -> links PRs
+  links-refresh.yml       # daily: new recordings/slides -> links PRs
 docs/javascripts/video.js # click-to-play recordings on the site
 ```
 

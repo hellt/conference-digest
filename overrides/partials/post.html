@@ -15,12 +15,15 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="{{ post.config.date.created }}">
-            {{- post.config.date.created | date -}}
+            {{- post.meta.conference_dates or (post.config.date.created | date) -}}
           </time>
           {#- Collapse whitespace -#}
         </li>
         {% if post.meta.location %}
           <li class="md-meta__item">{{ post.meta.location }}</li>
+        {% endif %}
+        {% if post.meta.media_pending %}
+          <li class="md-meta__item media-pending">videos pending</li>
         {% endif %}
         {% if post.categories %}
           <li class="md-meta__item">

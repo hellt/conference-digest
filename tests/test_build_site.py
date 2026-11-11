@@ -122,6 +122,33 @@ class PostMetadataTests(TestCase):
         self.assertEqual(front["location"], "Prague · Czechia")
         self.assertIn("\nThe full digest introduction.\n\n<!-- more -->", page)
 
+    def test_digest_list_uses_start_and_end_dates(self):
+        body = "# Conference\n\nIntroduction.\n\n## Core\n"
+        entry = {
+            "name": "Conference",
+            "description": "A conference.",
+            "start_date": "2026-11-02",
+            "end_date": "2026-11-04",
+        }
+        page, _, _, _ = render_post("test-2026", entry, {}, body)
+        front = yaml.safe_load(page.split("---", 2)[1])
+        self.assertEqual(front["conference_dates"], "2 Nov - 4 Nov, 2026")
+
+    def test_media_pending_clears_for_any_slides_or_recording(self):
+        cases = (
+            ("[Abstract](https://example.org/abstract) · [Paper](https://example.org/paper.pdf)", True),
+            ("[Slides](https://example.org/slides.pdf)", False),
+            ("[Slides (PPTX)](https://example.org/slides.pptx)", False),
+            ("[Recording](https://example.org/talk.mp4)", False),
+        )
+        entry = {"name": "Conference", "description": "A conference."}
+        for links, pending in cases:
+            with self.subTest(links=links):
+                body = f"# Conference\n\nIntroduction.\n\n## Core\n### Routing\n**Links:** {links}\n"
+                page, _, _, _ = render_post("test-2026", entry, {}, body)
+                front = yaml.safe_load(page.split("---", 2)[1])
+                self.assertIs(front["media_pending"], pending)
+
     def test_missing_registry_description_fails_instead_of_using_digest_intro(self):
         with self.assertRaisesRegex(ValueError, "test-2026: add a short description"):
             render_post("test-2026", {"name": "Conference"}, {},

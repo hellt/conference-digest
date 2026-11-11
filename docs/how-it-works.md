@@ -26,7 +26,7 @@ flowchart LR
   T --> C["Validate, add links and search tags"]
   C --> R["Digest pull request"]
   R -->|A person merges| W["Published site"]
-  W --> L["Weekly links refresh"]
+  W --> L["Daily links refresh"]
   L --> Q["Links pull request"]
 ```
 
@@ -88,7 +88,7 @@ Before a row is published, file links and videos are probed again. Confirmed dea
 
 The proposal job opens one `digest: <key>` pull request containing the digest and its search tags. A person reviews and merges it. The merged `digests/<key>.md` file is the only signal that an edition is done; it also closes the tracking issue and triggers site publication.
 
-Slides and recordings often arrive after the digest. Every Wednesday, Links Refresh reruns the same deterministic link builder for digests whose events ended in the last 120 days. It rechecks talk pages, searches for missing recordings, and removes links confirmed dead. If anything changed, it opens a separate `links: <key>` PR; the write-ups are not rewritten. Older editions can be refreshed through manual workflow dispatch.
+Slides and recordings often arrive after the digest. Every day, Links Refresh reruns the same deterministic link builder for digests whose events ended in the last 120 days. It rechecks talk pages, searches for missing recordings, and removes links confirmed dead. If anything changed, it opens a separate `links: <key>` PR; the write-ups are not rewritten. Older editions can be refreshed through manual workflow dispatch.
 
 ## Search
 

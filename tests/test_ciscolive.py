@@ -216,11 +216,16 @@ class CiscoLiveTests(TestCase):
         specs = yaml.safe_load((root / "conferences/series.yaml").read_text())["series"]
         keys = [e["key"] for e in registry]
         self.assertEqual(len(keys), len(set(keys)))
-        for region, hint in (("us", "06-30"), ("eu", "03-31")):
+        dates = {
+            "us": ("06-30", date(2026, 5, 31), date(2026, 6, 4)),
+            "eu": ("03-31", date(2026, 2, 9), date(2026, 2, 13)),
+        }
+        for region, (hint, started, ended) in dates.items():
             key = f"ciscolive-{region}-2026"
             entry = next(e for e in registry if e["key"] == key)
             spec = next(s for s in specs if s["series"] == f"ciscolive-{region}")
             self.assertEqual(entry["fetcher"], "ciscolive")
+            self.assertEqual((entry["start_date"], entry["end_date"]), (started, ended))
             self.assertGreaterEqual(latest_ident(keys, spec), 2026)
             self.assertEqual(fill(spec["key_template"], 2027, "year"), f"ciscolive-{region}-2027")
             self.assertTrue(all(c > latest_ident(keys, spec)

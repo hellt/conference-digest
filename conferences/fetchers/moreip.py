@@ -6,18 +6,25 @@ Company"), a short description and, for some items, the YouTube recording.
 Breaks carry a grey class. The day titles have no year, so the series uses an
 end_date_hint. No bot blocking. looks_blocked()'s body markers are not
 applied: the theme's CSS mentions captcha form classes, which is not a
-challenge — status codes alone decide.
+challenge — status codes alone decide. Unknown edition URLs redirect to the
+current agenda, so a changed path is "not published", never that edition's program.
 """
 
 from __future__ import annotations
 
 import re
+from urllib.parse import urlparse
 
 from bs4 import BeautifulSoup
 
 from .base import Fetcher, FetchResult, ProbeResult, http_get, scan_end_date, OK, NOT_PUBLISHED
 
 _SKIP = re.compile(r"^(?:registration|coffee break|lunch break|networking time|boat transfer|dinner|welcome back)", re.I)
+
+
+def _different_edition(resp, url: str) -> bool:
+    final_url = getattr(resp, "url", "") or url
+    return urlparse(final_url).path.rstrip("/") != urlparse(url).path.rstrip("/")
 
 
 class MoreIpFetcher(Fetcher):
@@ -31,6 +38,9 @@ class MoreIpFetcher(Fetcher):
                 return FetchResult(status=NOT_PUBLISHED, source_url=url, detail="agenda not published yet")
             if resp.status_code != 200 or resp.status_code in (403, 429, 503):
                 return self.manual(entry, f"blocked or unexpected status {resp.status_code}")
+            if _different_edition(resp, url):
+                return FetchResult(status=NOT_PUBLISHED, source_url=url,
+                                   detail="agenda redirected to a different edition")
             resp.encoding = "utf-8"
             text, count = self._parse(BeautifulSoup(resp.text, "html.parser"))
         except Exception as e:
@@ -48,6 +58,8 @@ class MoreIpFetcher(Fetcher):
                 return ProbeResult(False, "404 (no such edition yet)", source_url=url)
             if resp.status_code != 200:
                 return ProbeResult(False, f"unexpected status {resp.status_code}", source_url=url)
+            if _different_edition(resp, url):
+                return ProbeResult(False, "agenda redirected to a different edition", source_url=url)
             resp.encoding = "utf-8"
             end = scan_end_date(resp.text, years)
             return ProbeResult(True, "200; agenda page" + ("; dates scanned" if end else ""),

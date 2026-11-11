@@ -37,7 +37,7 @@ registry.yaml (an edition)
   -> digests/<key>.md                    on main only via that merge (or a human/Claude commit)
   -> close-digest-issue.yml closes the issue
   -> site.yml renders digests/ with Zensical -> gh-pages
-  -> links-refresh.yml (weekly, 120 days) new recordings/slides -> PR "links: <key>"
+  -> links-refresh.yml (daily, 120 days) new recordings/slides -> PR "links: <key>"
 ```
 
 Six workflows: `ci.yml` (unit tests and actionlint on PRs and main),
@@ -45,7 +45,7 @@ Six workflows: `ci.yml` (unit tests and actionlint on PRs and main),
 an optional `conference` key), `digest-bot.yml` (after each scan, on a human push
 to `prompts/*.md`, or `workflow_dispatch` for one key), `close-digest-issue.yml`
 (push to `digests/*.md`), `site.yml` (build on PRs, build + publish on main), and
-`links-refresh.yml` (Wednesdays, or `workflow_dispatch` for one key of any age).
+`links-refresh.yml` (daily, or `workflow_dispatch` for one key of any age).
 
 `digest-bot.yml` calls ToFaRev's reusable `digest.yml` pinned to a full commit
 SHA, exactly like containerlab calls `/tofarev review`. ToFaRev reads only

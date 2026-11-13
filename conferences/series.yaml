@@ -804,3 +804,20 @@ series:
     program_url_template: "https://chnug.ch/chnug{nnn}"
     manual_fallback_url_template: "https://chnug.ch/chnug{nnn}"
     notes: "Swiss Network User Group evening meetups: network automation, observability, routing, optical and data-center networking. Titles, speakers, PDF slides and YouTube recordings; no abstracts published."
+
+  # CPH^Automate is a one-day practical network-automation conference in
+  # Copenhagen. The static Hextra site has a schedule per year; each talk row
+  # links a page with its full abstract and any slide deck. Discovery reads the
+  # exact date from the edition overview. Recordings are collected in an IDA
+  # video playlist, not attached to individual talks.
+  - series: cph-automate
+    enumerate: year
+    key_template: "cph-automate-{year}"
+    name_template: "CPH^Automate {year}"
+    description: "A Copenhagen conference on practical network automation, production lessons, sources of truth, tooling, and AI-assisted operations."
+    fetcher: cphautomate
+    start: 2026
+    lookahead: 2
+    program_url_template: "https://cph-automate.network/{year}/schedule/"
+    manual_fallback_url_template: "https://cph-automate.network/{year}/schedule/"
+    notes: "Copenhagen network automation practitioners: production war stories, NetDevOps, sources of truth, testing and AI-assisted operations. Full talk abstracts and PDF slides; recordings are on IDA's video platform."

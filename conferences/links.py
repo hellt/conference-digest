@@ -77,6 +77,7 @@ CHANNELS = {
     "ripe": ("ripe", "ripe ncc"),
     "nlnog": ("nlnog",),
     "chnug": ("chnug", "ch-nug", "swiss network user group"),
+    "cph": ("cph automate", "cph^automate"),
     "denog": ("denog",),
     "gtc": ("nvidia",),
     "ccs": ("acm ccs", "acm ccs 2026", "computer and communications security"),
@@ -119,7 +120,7 @@ DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon":
            "ripe": "RIPE", "nlnog": "NLNOG", "denog": "DENOG", "gtc": "GTC", "ccs": "CCS", "imc": "IMC", "conext": "CoNEXT", "apricot": "APRICOT", "fosdem": "FOSDEM", "hacklu": "hack.lu", "tnc": "TNC GÉANT", "arin": "ARIN", "lacnic": "LACNIC", "pets": "PETS", "ausnog": "AusNOG", "nznog": "NZNOG", "zanog": "ZANOG", "peeringdays": "Peering Days", "moreip": "MORE-IP", "swinog": "SwiNOG", "capacity": "Capacity Europe", "nogfi": "nog.fi", "netuk": "NetUK", "grnog": "GRNOG", "dknog": "DKNOG", "itnog": "ITNOG", "netnod": "Netnod", "cfgmgmtcamp": "CfgMgmtCamp", "ocp": "OCP Global Summit",
            "mlsys": "MLSys", "pytorch": "PyTorch Conference", "opi": "OPI Summit",
            "mcpdevsummit": "MCP Dev Summit", "onesummit": "ONE Summit", "atscale": "@Scale",
-           "aiengineer": "AI Engineer", "chnug": "CHNUG"}
+           "aiengineer": "AI Engineer", "chnug": "CHNUG", "cph": "CPH Automate"}
 # YouTube channels that hold a conference's own recordings, keyed by the
 # first segment of the registry key. Searched before the general YouTube
 # search: uploads are often retitled or shortened when published, and the

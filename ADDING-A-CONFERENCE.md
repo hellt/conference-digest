@@ -43,6 +43,7 @@ Reuse a fetcher when the conference is hosted on a platform one already reads:
 | `ripe` | RIPE 91+ meeting plan, sessions and full talk pages, including decks and native MP4 recordings |
 | `nlnog` | Annual NLNOG Day table: titles, speakers, slides and videos (no abstracts) |
 | `chnug` | Swiss Network User Group agendas: titles, speakers, slides and recordings (no abstracts) |
+| `cphautomate` | CPH^Automate yearly schedule, per-talk abstracts and slide decks |
 | `denog` | Official DENOG agenda's linked Pretalx JSON schedule export and attachments |
 | `gtc` | One NVIDIA GTC (San Jose) edition: the JSON session-catalog API behind the catalog app |
 | `ocp` | One OCP Global Summit edition: the schedule JSON baked into the FN TECH event app's bundle |

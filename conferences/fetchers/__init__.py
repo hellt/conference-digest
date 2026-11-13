@@ -37,6 +37,7 @@ from .sessionize import SessionizeFetcher
 from .atscale import AtScaleFetcher
 from .aiengineer import AiEngineerFetcher
 from .chnug import ChnugFetcher
+from .cphautomate import CphAutomateFetcher
 
 FETCHERS = {
     "usenix": UsenixFetcher(),
@@ -78,6 +79,7 @@ FETCHERS = {
     "atscale": AtScaleFetcher(),
     "aiengineer": AiEngineerFetcher(),
     "chnug": ChnugFetcher(),
+    "cphautomate": CphAutomateFetcher(),
 }
 
 

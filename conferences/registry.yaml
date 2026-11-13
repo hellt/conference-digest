@@ -1212,3 +1212,13 @@ conferences:
     manual_fallback_url: "https://chnug.ch/chnug004"
     discovered: 2026-11-11
     notes: "Swiss Network User Group evening meetups: network automation, observability, routing, optical and data-center networking. Titles, speakers, PDF slides and YouTube recordings; no abstracts published. Auto-discovered 2026-11-11 from series 'chnug'. end_date taken from the source."
+
+  - key: cph-automate-2026
+    name: "CPH^Automate 2026 (Copenhagen)"
+    description: "A Copenhagen conference on practical network automation, production lessons, sources of truth, tooling, and AI-assisted operations."
+    end_date: 2026-10-02
+    fetcher: cphautomate
+    program_url: "https://cph-automate.network/2026/schedule/"
+    manual_fallback_url: "https://cph-automate.network/2026/schedule/"
+    discovered: 2026-11-12
+    notes: "Copenhagen network automation practitioners: production war stories, NetDevOps, sources of truth, testing and AI-assisted operations. Full talk abstracts and PDF slides; recordings are on IDA's video platform. Auto-discovered 2026-11-12 from series 'cph-automate'. end_date taken from the source."

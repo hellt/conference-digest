@@ -117,7 +117,7 @@ pipeline.
 7. **Every `fetcher` value must be registered** in
    `conferences/fetchers/__init__.py::FETCHERS`. Today: `usenix`, `ietf`,
    `sched`, `sigcomm`, `netdev`, `nanog`, `autocon`, `ovscon`, `ciscolive`,
-   `ripe`, `nlnog`, `chnug`, `denog`, `gtc`, `ocp`, `mlsys`, plus the generic
+   `ripe`, `nlnog`, `chnug`, `cphautomate`, `denog`, `gtc`, `ocp`, `mlsys`, plus the generic
    `pretalx`, `indico` and `sessionize` (PyTorch Conference, via the LF event
    page).
 8. **`run_location: local`** means the source bot-blocks datacenter IPs. In CI

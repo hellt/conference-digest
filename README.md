@@ -208,6 +208,7 @@ conferences/
     itnog.py          # ITNOG program tables with PDF slides (Italian)
     netnod.py        # Netnod Tech Meeting agenda paragraphs
     chnug.py         # Swiss Network User Group agendas, slides and recordings
+    cphautomate.py   # CPH^Automate schedules, per-talk abstracts and slides
                     #   (cfgmgmtcamp reuses pretalx.py)
 scripts/
   generate_digest_prompt.py   # orchestrator (state machine)
@@ -538,6 +539,11 @@ run.
   dropped and no abstracts or per-talk pages are published. Discovery starts
   at #2, reads the date in the page heading and uses zero-padded edition URLs.
   Later recording searches use the official `@CH-NUG` YouTube channel.
+- **CPH^Automate**: the static site has one schedule per year, linking each
+  talk's full abstract and any PDF/PPTX deck. Discovery reads the exact date
+  from the edition overview. Recordings are collected on IDA's video platform
+  rather than linked from individual talks; only published per-talk materials
+  are emitted.
 - The `*.sched.com` subdomains and exact `end_date`s in the registry should be
   verified close to each event; they're flagged in registry `notes`.
 

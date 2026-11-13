@@ -235,7 +235,7 @@ Paul Brodsky – TeleGeography
 
 ### One Control Plane Away: Are Cloud Providers Critical Infrastructure
 
-**Links:** [Abstract](https://nanog.org/events/nanog-98/content/5884/) · [Slides](https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5884/20261018_Tzvetanov_One_Control_Plane_v1.pdf)
+**Links:** [Abstract](https://nanog.org/events/nanog-98/content/5884/) · [Slides](https://storage.googleapis.com/site-media-prod/meetings/NANOG98/5884/20261018_Tzvetanov_One_Control_Plane_v1.pdf) · [Recording](https://www.youtube.com/watch?v=1NiPnzC4YFk)
 
 Krassimir Tzvetanov – Purdue University
 

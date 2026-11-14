@@ -5465,3 +5465,52 @@ chnug-3:
     - data-center-fabric
     - gpu-clusters
     - interconnection
+cph-automate-2026:
+  post:
+  - automation
+  - ai
+  - configuration-management
+  - sre
+  - ipam
+  talks:
+    Memory has no changelog:
+    - cabling
+    - automation
+    - ml-for-networking
+    'Vibe-ops: Migrating production infrastructure with an AI agent':
+    - ai
+    - anthropic
+    - cloud
+    - automation
+    What Should You Build When You Can Build Anything?:
+    - automation
+    - ai
+    - open-source
+    'Democratizing Network Automation: What We Learned Building an Open Automation Stack':
+    - automation
+    - orchestration
+    - mpls
+    JSON freedom or chaos; how to trust your data:
+    - testing
+    - configuration-management
+    - automation
+    Keeping ~2k IP Pools Filled with Just-in-Time Provisioning:
+    - ipam
+    - automation
+    'Bootstrapping a Source of Truth in a Brownfield Environment: Field-Tested Patterns':
+    - automation
+    - configuration-management
+    'Shift Left: Building Network Automation That Lasts':
+    - automation
+    - api
+    - orchestration
+    'When Your Source of Truth Isn''t Really Yours: Lessons from Cross-Team Integrations':
+    - automation
+    - configuration-management
+    - testing
+    Transformation Through Community:
+    - automation
+    - sre
+    Laziness. A Blessing or a Curse?:
+    - sre
+    - automation

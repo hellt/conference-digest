@@ -1216,6 +1216,7 @@ conferences:
   - key: cph-automate-2026
     name: "CPH^Automate 2026 (Copenhagen)"
     description: "A Copenhagen conference on practical network automation, production lessons, sources of truth, tooling, and AI-assisted operations."
+    location: "Copenhagen · Denmark"
     end_date: 2026-10-02
     fetcher: cphautomate
     program_url: "https://cph-automate.network/2026/schedule/"

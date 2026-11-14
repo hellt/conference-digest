@@ -520,5 +520,11 @@
     "attempts": 0,
     "last_attempt": "2026-11-11T14:33:47.426427+00:00",
     "last_error": ""
+  },
+  "cph-automate-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-14T20:10:34.376629+00:00",
+    "last_error": ""
   }
 }

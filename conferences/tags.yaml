@@ -5514,3 +5514,74 @@ cph-automate-2026:
     Laziness. A Blessing or a Curse?:
     - sre
     - automation
+aiengineer-code-2026:
+  post:
+  - ai
+  - cloud
+  - gpu-clusters
+  - sre
+  - benchmarking
+  talks:
+    Inference Engineering for Coding Agents:
+    - ai
+    - gpu-clusters
+    - load-balancing
+    Keep the Harness, Own Your Inference:
+    - ai
+    - gpu-clusters
+    - cloud
+    - open-source
+    What Will You Build When AI Is 10x Faster?:
+    - ai
+    - gpu-clusters
+    'The Rise of the Agent Workforce: Rethinking Agent Infrastructure':
+    - ai
+    - orchestration
+    - cloud
+    Coding Agents and How to Tame Them:
+    - ai
+    - benchmarking
+    - testing
+    'Scaling Your Agent Workforce: Lessons from Inside Cognition':
+    - ai
+    - automation
+    - sre
+    'Building a Shared AI Assistant: The Platform Challenges Beyond MCP':
+    - ai
+    - cloud
+    - api
+    - authorization
+    Heal Your Agents, Don't Just Grade Them:
+    - ai
+    - anomaly-detection
+    - observability
+    - sre
+    cloudflare is a neolab:
+    - cloud
+    - ai
+    2026 in LLMs:
+    - ai
+    - open-source
+    Multiplayer software factories:
+    - automation
+    - gitops
+    - cloud-native
+    Post-Training Gemini 4 for Real Engineering Work:
+    - ai
+    - benchmarking
+    I deleted 90% of my harness (And It Got Better):
+    - ai
+    - automation
+    'Your agent pays twice for every search: how we cut token spend by 90+% with better accuracy':
+    - ai
+    - benchmarking
+    - measurement
+    'Ground Truth or Dare: Using Oracles to Make Postgres Reactive':
+    - ai
+    - testing
+    'Autocomplete for Actions: System One from the UI to the DB':
+    - ai
+    - api
+    The True Cost of AI Coding:
+    - ai
+    - measurement

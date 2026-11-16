@@ -90,6 +90,8 @@ Khasimul Asif Mohammad, Sudhir Tonse
 
 ### cloudflare is a neolab
 
+**Links:** [Recording](https://www.youtube.com/watch?v=ZYVESCUXTeA)
+
 Michelle Chen (Cloudflare, per talk content)
 
 - **Why**: Signals where one of the major edge-cloud operators is placing bets: trained "system one" models integrated into a decade-old Workers/edge primitive set, aiming to be the "agent cloud."

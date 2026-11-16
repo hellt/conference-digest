@@ -546,9 +546,18 @@
 </div>
 <div class="pick pick-adjacent">
 <div class="pick-links">
-<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257875">Abstract</a></p>
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257875">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=SAYidTmCRGM">Recording</a></p>
 </div>
 <p>Sanket Jayant Purandare (<a href="../../companies/pytorch-distributed-and-compilers/">PyTorch Distributed and Compilers</a>), Syed Ahmed (<a href="../../companies/nvidia/">NVIDIA</a>, PyTorch Core)</p>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="SAYidTmCRGM" data-start="0" href="https://www.youtube.com/watch?v=SAYidTmCRGM" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/SAYidTmCRGM/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/SAYidTmCRGM/maxresdefault.jpg" alt="Play the recording: EP-Overlap: Hiding Expert-Parallel Communication in MoE Training" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: MoE expert-parallel all-to-all is the dominant new traffic pattern on AI fabrics; knowing how much of it can be hidden by framework-level scheduling tells you how much fabric headroom a MoE fleet actually needs.</li>
 <li><strong>What</strong>: Graph passes that hide EP communication by splitting each MoE layer into independent slices and overlapping token exchange with any available compute (experts, recompute, weight-gradient math), forward-with-forward and backward-with-backward. The same machinery also hides "page stashing," compacting worst-case activation memory from O(worst_case × L) to O(worst_case + actual). On DeepSeek-V3: 76–86% of EP comm hidden, ~1.3x throughput, +4% absolute MFU — and the authors call that a lower bound. (from abstract only)</li>

@@ -546,9 +546,18 @@
 </div>
 <div class="pick pick-core">
 <div class="pick-links">
-<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256220">Abstract</a></p>
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256220">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=MQJwWEfRyIU">Recording</a></p>
 </div>
 <p>Tristan Rice, Kapil Sharma — <a href="../../companies/meta/">Meta</a> (<a href="../../companies/pytorch-distributed/">PyTorch Distributed</a>)</p>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="MQJwWEfRyIU" data-start="0" href="https://www.youtube.com/watch?v=MQJwWEfRyIU" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/MQJwWEfRyIU/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/MQJwWEfRyIU/maxresdefault.jpg" alt="Play the recording: Future of Distributed Communication in PyTorch: New APIs for Fault Tolerance, RDMA and Extensibility" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: <code>torch.distributed</code> is the layer where every training collective maps onto your RDMA/Ethernet fabric. These API changes define how large jobs interact with the network — fault recovery, one-sided RDMA, and observability — and they are landing upstream for everyone.</li>
 <li><strong>What</strong>: Five new capabilities being upstreamed from TorchComms into <code>torch.distributed</code>: <code>torch.distributed.reconfigure()</code> for live process-group reconfiguration after rank failures (no job restart); window APIs for one-sided RDMA put/get (zero-copy, aimed at RL workloads); composable hooks for tracing, logging, and NaN detection on all collectives across all backends; backends shipped as pip-installable wheels via entry_points; and cleaned-up backend interfaces for vendors. (from abstract only)</li>

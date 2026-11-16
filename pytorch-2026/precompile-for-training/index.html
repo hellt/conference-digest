@@ -546,9 +546,18 @@
 </div>
 <div class="pick pick-wildcard">
 <div class="pick-links">
-<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1245005">Abstract</a></p>
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1245005">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=J4d4yD_A458">Recording</a></p>
 </div>
 <p>Bob Ren; Aaron Orenstein (<a href="../../companies/meta/">Meta</a>)</p>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="J4d4yD_A458" data-start="0" href="https://www.youtube.com/watch?v=J4d4yD_A458" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/J4d4yD_A458/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/J4d4yD_A458/maxresdefault.jpg" alt="Play the recording: Precompile for Training" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: A genuinely surprising distributed-systems failure mode: in nominally identical SPMD programs, per-rank compilers and autotuners can diverge — choosing different kernels on different ranks, causing NCCL hangs, numerical inconsistencies, and hard-to-debug job failures. Anyone who has chased a "one rank hung" incident will recognize the shape of this problem.</li>
 <li><strong>What</strong>: Precompile for Training, an abstraction that compiles a distributed SPMD program once and reuses the resulting graph artifact across all ranks — guaranteeing identical execution and kernel selection cluster-wide, moving compilation ahead of GPU allocation, and eliminating redundant compile work across thousands of GPUs. (from abstract only)</li>

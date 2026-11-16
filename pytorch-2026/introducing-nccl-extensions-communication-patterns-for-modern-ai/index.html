@@ -546,9 +546,18 @@
 </div>
 <div class="pick pick-core">
 <div class="pick-links">
-<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257023">Abstract</a></p>
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257023">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=wXcCKxYbgsY">Recording</a></p>
 </div>
 <p>Sreeram Potluri, Artem Polyakov — <a href="../../companies/nvidia/">NVIDIA</a></p>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="wXcCKxYbgsY" data-start="0" href="https://www.youtube.com/watch?v=wXcCKxYbgsY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/wXcCKxYbgsY/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/wXcCKxYbgsY/maxresdefault.jpg" alt="Play the recording: Introducing NCCL Extensions: Communication Patterns for Modern AI" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: NCCL is the dominant collective library on GPU fabrics; these domain extensions change what traffic patterns the library can express — MoE dispatch/combine and cross-mesh resharding — which is precisely the traffic your inference and RL-rollout fabrics will carry.</li>
 <li><strong>What</strong>: Two NCCL domain extensions built on NCCL's Device APIs. NCCL-EP brings MoE dispatch and combine natively into NCCL — one automatically tuned API spanning latency-optimized decode and throughput-optimized training, with GPU-initiated RDMA and NVLink out of the box. NCCL-M2N does zero-copy resharding between disjoint device meshes, moving weight snapshots from trainers to inference replicas with no CPU staging. Performance results promised in the talk. (from abstract only)</li>

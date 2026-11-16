@@ -546,9 +546,18 @@
 </div>
 <div class="pick pick-adjacent">
 <div class="pick-links">
-<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256215">Abstract</a></p>
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256215">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=UhcoZs_vHn4">Recording</a></p>
 </div>
 <p>Prachi Gupta — <a href="../../companies/amd/">AMD</a></p>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="UhcoZs_vHn4" data-start="0" href="https://www.youtube.com/watch?v=UhcoZs_vHn4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/UhcoZs_vHn4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/UhcoZs_vHn4/maxresdefault.jpg" alt="Play the recording: rocSHMEM Symmetric Memory in PyTorch for AMD GPUs" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: Ports of GPU-initiated one-sided RMA to a second vendor are evidence this is becoming a cross-vendor fabric primitive rather than an NVIDIA trick — worth tracking for multi-vendor estate planning.</li>
 <li><strong>What</strong>: rocSHMEM backend for PyTorch symmetric memory, now upstream: the device-side OpenSHMEM API (one-sided put/get, non-blocking get, put-with-signal, wait-until) exposed as Triton-callable primitives so a kernel initiates its own communication. MoE all-to-all dispatch and combine are constructed within the kernel and overlapped with expert compute; comparison against RCCL host-driven all-to-all on representative MoE workloads promised. (from abstract only)</li>

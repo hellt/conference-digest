@@ -546,9 +546,18 @@
 </div>
 <div class="pick pick-adjacent">
 <div class="pick-links">
-<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256858">Abstract</a></p>
+<p><a class="pick-link" href="https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256858">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=46uOnloZQkE">Recording</a></p>
 </div>
 <p>Ben Carver — <a href="../../companies/meta/">Meta</a></p>
+<div class="pick-media">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Video</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="pick-video__thumb" data-yt="46uOnloZQkE" data-start="0" href="https://www.youtube.com/watch?v=46uOnloZQkE" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/46uOnloZQkE/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/46uOnloZQkE/maxresdefault.jpg" alt="Play the recording: MCCL: Fault-Tolerant Collective Communication for Large-Scale GPU Training" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></p>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><strong>Why</strong>: Dynamic communicator membership — shrinking and growing as ranks fail or recover — is the collective layer learning what routing protocols learned decades ago about membership churn. Pairs directly with <code>torch.distributed.reconfigure()</code> and the TorchPass work.</li>
 <li><strong>What</strong>: MCCL, Meta's open-source fault-tolerant C++ collective library: hardware failure treated as a first-class design principle, with dynamic communicator reconfiguration that doesn't interrupt the training job. Production-grade AllReduce and Send/Recv via TorchComms integration, with claimed performance parity with NCCL. (from abstract only)</li>

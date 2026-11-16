@@ -1227,6 +1227,7 @@ conferences:
   - key: chnug-5
     name: "CHNUG #5"
     description: "The Swiss Network User Group's practitioner meetups on networking, automation, observability, cloud connectivity, and operations."
+    location: "Wallisellen · Switzerland"
     end_date: 2026-11-12
     fetcher: chnug
     program_url: "https://chnug.ch/chnug005"

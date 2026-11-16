@@ -5585,3 +5585,25 @@ aiengineer-code-2026:
     The True Cost of AI Coding:
     - ai
     - measurement
+chnug-5:
+  post:
+  - automation
+  - ai
+  - configuration-management
+  - bgp
+  - data-center-fabric
+  talks:
+    'Let AI Break the Lab: Network as Code in the Real World':
+    - automation
+    - ai
+    - gitops
+    - testing
+    'VPP: eVPN Control Plane':
+    - bgp
+    - data-center-fabric
+    - linux-networking
+    - dpu
+    From Configuration Tasks to Declarative Intent with Ansible:
+    - configuration-management
+    - automation
+    - testing

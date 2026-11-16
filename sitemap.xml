@@ -1021,6 +1021,18 @@
         <loc>https://tldr.netdevops.me/chnug-4/whats-next-for-nornir-project-update-and-roadmap/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/chnug-5/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/chnug-5/from-configuration-tasks-to-declarative-intent-with-ansible/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/chnug-5/let-ai-break-the-lab-network-as-code-in-the-real-world/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/chnug-5/vpp-evpn-control-plane/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/ciscolive-eu-2025/</loc>
       </url>
       <url>
@@ -1616,6 +1628,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/circl/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/cisco-cx/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/cisco-final/</loc>

@@ -1,0 +1,944 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The Swiss Network User Group&#x27;s practitioner meetups on networking, automation, observability, cloud connectivity, and operations.">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/chnug-5/">
+      
+      
+      
+        <link rel="prev" href="../ovscon-2026/">
+      
+      
+        <link rel="next" href="../aiengineer-code-2026/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>CHNUG #5 - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="CHNUG #5 · Conference Digest" />
+<meta property="og:description" content="The Swiss Network User Group&#39;s practitioner meetups on networking, automation, observability, cloud connectivity, and operations." />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/chnug-5.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/chnug-5/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="CHNUG #5 · Conference Digest" />
+<meta property="twitter:description" content="The Swiss Network User Group&#39;s practitioner meetups on networking, automation, observability, cloud connectivity, and operations." />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/chnug-5.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg class="cd-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-width="2.4" aria-hidden="true"><path class="cd-mark__line" d="M3.5 4.5h12M3.5 14.5h9M3.5 19.5h13.5" stroke="currentColor"/><path class="cd-mark__pick" d="M3.5 9.5h17" stroke="currentColor"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CHNUG #5
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Companies
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../archive/" class="md-tabs__link">
+        
+  
+  Archive
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-powered-text">Powered by</span>
+          <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg class="cd-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-width="2.4" aria-hidden="true"><path class="cd-mark__line" d="M3.5 4.5h12M3.5 14.5h9M3.5 19.5h13.5" stroke="currentColor"/><path class="cd-mark__pick" d="M3.5 9.5h17" stroke="currentColor"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#let-ai-break-the-lab-network-as-code-in-the-real-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Let AI Break the Lab: Network as Code in the Real World
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpp-evpn-control-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        VPP: eVPN Control Plane
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-configuration-tasks-to-declarative-intent-with-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Configuration Tasks to Declarative Intent with Ansible
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Companies
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    <li class="md-nav__item md-nav__item--powered">
+      <a href="https://tokenfactory.nebius.com/" class="md-nav__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+        <span class="md-powered-text">Powered by</span>
+        <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+        <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+      </a>
+    </li>
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#let-ai-break-the-lab-network-as-code-in-the-real-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Let AI Break the Lab: Network as Code in the Real World
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpp-evpn-control-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        VPP: eVPN Control Plane
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-configuration-tasks-to-declarative-intent-with-ansible" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Configuration Tasks to Declarative Intent with Ansible
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>8 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="chnug-5">CHNUG #5<a class="headerlink" href="#chnug-5" title="Permanent link">#</a></h1>
+<p>A compact, three-talk program from the Swiss network user group (Cisco Wallisellen, 12 Nov 2026) — and unusually dense for its size: one production AI-plus-Network-as-Code rollout with real numbers, one open-source eVPN control plane running a live ISP network, and one of the more honest treatments of declarative configuration management available. All three talks had substantive slide decks to draw on; no abstracts were published, so the write-ups below are grounded in the actual material.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>November 12, 2026</span>
+<span class="digest-fact" markdown><a href="https://chnug.ch/chnug005">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="let-ai-break-the-lab-network-as-code-in-the-real-world"><a href="let-ai-break-the-lab-network-as-code-in-the-real-world/">Let AI Break the Lab: Network as Code in the Real World</a><a class="headerlink" href="#let-ai-break-the-lab-network-as-code-in-the-real-world" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://chnug.ch/chnug005/slides/chnug005-02-let-ai-break-the-lab-network-as-code-in-the-real-world.pdf">Slides</a></p>
+</div>
+<p>Speakers: Patrick Mosimann (<a href="../companies/cisco/">Cisco</a>), Dawid Bednarczyk (<a href="../companies/cisco-cx/">Cisco CX</a>)</p>
+<ul>
+<li><strong>Why</strong>: This is the first talk in the program that directly addresses the question every network org is wrestling with in 2026: how do you let AI agents near a production network without burning it down? The answer here is not "AI runs your network" — it is a concrete, measured case study of AI writing almost every change while a deterministic pipeline holds the keys. For a PM thinking about automation and AI-for-infrastructure, this is a rare empirical data point rather than a demo.</li>
+<li><strong>What</strong>: A full Network-as-Code (NaC) method — YAML data model in Git, validation, Terraform plan/deploy, tests generated from the same model — combined with AI agents (Claude Code CLI) drafting changes, deployed in a real rollout: a European insurer, ~10 office sites in two countries, ~350 access switches, ~1,200 APs, ~4,400 users, migrating to Catalyst Center + ISE (802.1X/EAP-TLS everywhere) + SD-WAN, all as code. The deck gives real progress metrics: ~860 commits, 121 pipeline runs, 108 AI Research→Plan→Implement cycles, 36 transcribed meetings, with first production push in Nov 2026. Crucially, it includes a failure taxonomy: of 121 pipeline runs, 75 failed (37 device-rejects-the-apply, 10 plan-time errors, 9 device-not-in-inventory, 13 failure classes total), which AI itself read and turned into an 8-gate local pre-check.</li>
+<li><strong>How</strong>: Every AI idea becomes a diff to a YAML file; the merge request is the change ticket (diff, plan, tests, approver). The pipeline stages — validate (nac-validate, Yamale schema + Python rules), plan (terraform), human review, deploy, test (nac-test Robot templates rendered from the same YAML) — are the same ones a human change goes through. Two key operational patterns: (1) a lab environment with real hardware where AI has auto-apply and is <em>allowed to fail</em>, versus production with no shared state and mandatory senior-engineer approval; (2) direct read-only, audited AI access to the lab (RADKit/Cisco IQ), which turned a day-long human capture-script relay into a minute-long loop — with concrete results like reproducing a failing template in the lab and finding a 343-character description against a 255 limit. Failover tests improved from 5–6 min outage to 0–1 lost pings (core, over four days and six code-made fixes) and from 5:17 min to ~9 s (WAN edge, same day). Six "landmines" caught before production are catalogued — a silently-unloaded validator schema (0 errors reported vs 129 real findings), an unpinned Terraform provider breaking the pipeline overnight, a risk-score gate that never fired, lab IPs in template defaults, an unsupported controller split, and one manual click that a redeploy dropped.</li>
+<li><strong>Where applicable</strong>: The <em>method</em> is deliberately vendor-agnostic — any platform with an API and a Terraform provider works, and the open-source tools (nac-validate, nac-test, MPL-2.0 on GitHub) are public. But the worked examples and the case study are Cisco-stack specific (Catalyst Center, ISE, SD-WAN, ACI, NX-OS, Meraki models), and there is a Cisco CX services layer ("Services as Code", 300+ deployments claimed) — so read it as a strong operational lesson with a services pitch attached, not a neutral framework. The honest-caveat slide is worth internalizing: "AI speeds up everything you control. Only that" — tickets in other teams' queues, admin rights, licences and firewalls remained the bottleneck.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="vpp-evpn-control-plane"><a href="vpp-evpn-control-plane/">VPP: eVPN Control Plane</a><a class="headerlink" href="#vpp-evpn-control-plane" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://chnug.ch/chnug005/slides/chnug005-03-vpp-evpn-control-plane.pdf">Slides</a></p>
+</div>
+<p>Speakers: Pim van Pelt (<a href="../companies/ipng/">IPng Networks</a>)</p>
+<ul>
+<li><strong>Why</strong>: This is the physical/software fabric talk of the evening, and it matters well beyond its scale. It demonstrates that a fully open-source EVPN fabric — FD.io VPP dataplane plus a Bird2 control plane — is running in production at a real ISP (AS8298, 22 VPP/Bird routers, ~2,200 adjacencies on the FLAP exchange), interoperating with vendor gear, and scaling to DPU-based deployment. For anyone thinking about white-box/data-plane-programmable DC fabrics, BGP EVPN internals, or DPU-hosted networking, this is a working reference implementation, not a lab curiosity.</li>
+<li><strong>What</strong>: An eVPN control and management plane for VPP, in three acts: (1) the building blocks — bridge domains, BVIs, VxLAN tunnels, split-horizon groups, disabling learn/flood on tunnel interfaces; (2) a custom Bird protocol (<code>vppevpn</code>, a patch on Bird 2.20, source on git.ipng.ch) that speaks BGP eVPN NLRI (RFC 7432/8214/9136), receives IMET and MAC routes, programs VxLAN tunnels and the VPP L2FIB, announces the local router's IMET/MACs, and reconciles VPP state vs the Bird table on a scan interval; (3) <code>vpp-evpn</code>, a management plane: an <code>epvnd</code> daemon running on Bluefield DPUs (Ubuntu/Debian, VPP inside), a central registry, gRPC client, and SolidJS WebUI. Requirements stated explicitly: O(100) routers, O(1,000) L3 subnets, O(10,000) P2MP L2 segments, 40 Mpps/100 Gbps per node, automated failover — with a Bird table of 4,803 routes / 1,601 networks shown live, and interop demonstrated against Arista EOS (with Juniper, Nokia, Centec, Cisco shown as peers). VPP brings Maglev load balancing, IPSec, WireGuard and MACsec along for free.</li>
+<li><strong>How</strong>: Control/data plane separation in the classic style: Bird handles BGP (iBGP route-reflector clients exchanging eVPN NLRI, RD/RT, VNI, PMSI/VTEP addresses, RFC 5512 encapsulation extended communities) while VPP does the forwarding (100Mpps+/100Gbps+ on commodity x86 via DPDK/RDMA/VirtIO input nodes). The BVI is paired to Linux via LinuxCP (<code>bvi1000</code> ↔ tap <code>bvi-test</code>), so the host kernel sees a normal interface with IPv4/IPv6 addresses. <code>epvnd</code> adds CARP/HSRP-style healthchecking (multicast IPv6 probes on the eVPN segment, unicast to the internet), is restart-safe and reentrant (reconfigures Bird or VPP if they crash), and can move BVIs between DPUs for maintenance.</li>
+<li><strong>Where applicable</strong>: Broadly applicable as an architecture, with caveats: the Bird <code>vppevpn</code> protocol is a personal patch against Bird 2.20, not mainline, so you inherit the maintenance burden; the scale targets and hardware (Bluefield DPUs) reflect a small ISP/operator context, not hyperscale DC; and the whole stack is self-operated — this is a build-it-yourself option for shops that want open-source end-to-end or DPU-resident L2/L3 services, not a product.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="from-configuration-tasks-to-declarative-intent-with-ansible"><a href="from-configuration-tasks-to-declarative-intent-with-ansible/">From Configuration Tasks to Declarative Intent with Ansible</a><a class="headerlink" href="#from-configuration-tasks-to-declarative-intent-with-ansible" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://chnug.ch/chnug005/slides/chnug005-04-from-configuration-tasks-to-declarative-intent-with-ansible.pdf">Slides</a></p>
+</div>
+<p>Speakers: Tomas Horyl (<a href="../companies/narrowin/">Narrowin</a>)</p>
+<ul>
+<li><strong>Why</strong>: Most "declarative network automation" talks stop at happy-path Jinja2. This one goes where the real difficulty lives: what happens when defaults, profiles and host exceptions compose; who owns a setting your inventory doesn't mention; and what each platform's validation actually <em>proves</em>. For a PM who cares about configuration management at scale, the validation-matrix table alone justifies the watch.</li>
+<li><strong>What</strong>: A five-stage architecture — declared intent → transformation → native configuration → deployment → device state — implemented in ordinary Ansible inventory, contrasted across three platforms: Cisco IOS (complete-file replacement, the running config decides undeclared settings), Nokia SR Linux (path-scoped update/replace/delete, the target path decides), and Cumulus NVUE (PoC; the declared NVUE root is authoritative, omitted config reverts to defaults). Intent is expressed as <code>update</code>/<code>delete</code> dicts in group_vars/host_vars — inherited group-first, host-last, with explicit deletion (a <code>{}</code> value removes an inherited command). The talk includes an offline renderer test harness (given known inputs, run the renderer with no SSH, compare to expected artifacts), per-platform diff/confirm flows (IOS contextual config diffs; optional rollback timer with auto-cancel), and — unusually honest — a per-platform table of validation blind spots (e.g. IOS: no general argument check, invalid arguments may reach replacement; NVUE: unknown final leaves can pass, types/dependencies unchecked). A closing example shows a correctly-applied configuration expressing the wrong design (trunk allows 10,30 while the endpoint is on VLAN 20): automation can faithfully apply a wrong intention.</li>
+<li><strong>How</strong>: Declared intent lives in inventory; a Python filter transforms it to native CLI (replacing the composition pressure of Ansible templates that become "a program inside inventory"); transformation is deliberately separated from deployment so rendering rules can be tested without touching a switch; deployment machinery is reused across features by changing only the native config data, within each platform's native contract (not a universal API); each stage adds its own checks — fixture tests, device diffs, apply results — and the talk is explicit that none of them proves traffic works, so service verification stays a distinct step. The backup slides show a full CVD-style Cisco campus fabric (OSPF, PIM, BGP l2vpn evpn with VxLAN encap, bridge domains, BDI interfaces) reconciled in ordered group layers via a single role and serial play.</li>
+<li><strong>Where applicable</strong>: General technique, multi-platform by construction (IOS and SR Linux are worked implementations; NVUE is a PoC), tested against containerlab topologies. Context is narrowin's IT/OT critical-infrastructure practice (energy, healthcare, utilities), which explains the emphasis on ownership boundaries and gradual brownfield adoption (baseline-as-source vs running-snapshot-as-source for unowned settings). Implementation effort is not eliminated — the speaker is explicit that "the implementation work has not disappeared" — but the responsibilities are cleanly shared and the machinery is reusable.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>AI enters the network change loop, but code is the guardrail</strong>: The recurring pattern across the program is probabilistic AI drafting deterministic diffs. Every AI contribution lands as a merge request that a person reads, approves, and ships through the same pipeline a human change uses — "no change without a diff" as the organizing principle.</li>
+<li><strong>Network-as-Code is maturing into testable pipelines</strong>: YAML data models as the single hub, with validation (schema, business rules, gitleaks), plan review, and tests rendered from the same model as first-class pipeline stages — in both the Cisco NaC toolchain and the narrowin Ansible framework. The lab is treated as a cheap place to fail, deliberately.</li>
+<li><strong>Open-source dataplane + control plane reaching production credibility</strong>: VPP + Bird running a real AS with vendor interop (Arista, Juniper, Nokia, Cisco, Centec) and DPU deployment signals that fully self-built EVPN fabrics are a viable alternative path, not just research.</li>
+<li><strong>Honest accounting of failure and validation limits</strong>: The strongest material in this program is negative results stated plainly — 75 of 121 pipeline runs failed, six landmines caught before production, per-platform tables of what each validation step does and does not prove, and the observation that "AI speeds up everything you control. Only that."</li>
+<li><strong>Ownership semantics of configuration are the hard problem</strong>: Both the Ansible talk and (via terraform plan deltas and no-destroy policies) the NaC talk wrestle with the same question: what happens to a setting nobody declared — and the answer differs by platform (complete-file vs path-scoped vs root-authoritative), which is a decision practitioners must make consciously.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/chnug-5.md"><code>digests/chnug-5.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/chnug-5.md"><code>prompts/chnug-5.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ovscon-2026/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Open vSwitch and OVN 2026 Fall Conference">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Open vSwitch and OVN 2026 Fall Conference
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../aiengineer-code-2026/" class="md-footer__link md-footer__link--next" aria-label="Next: AI Engineer Code Summit 2026">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                AI Engineer Code Summit 2026
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Created by <a href="https://linkedin.com/in/rdodin" target="_blank" rel="noopener">Roman Dodin</a> ·
+  Powered by <a href="https://tokenfactory.nebius.com" target="_blank" rel="noopener">Nebius Token Factory</a> · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

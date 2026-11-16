@@ -14,7 +14,7 @@ PyTorch Conference is an ML-frameworks conference, not a networking one — but 
 
 ### Future of Distributed Communication in PyTorch: New APIs for Fault Tolerance, RDMA and Extensibility
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256220)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256220) · [Recording](https://www.youtube.com/watch?v=MQJwWEfRyIU)
 
 Tristan Rice, Kapil Sharma — Meta (PyTorch Distributed)
 
@@ -36,7 +36,7 @@ Jesse Treger
 
 ### Introducing NCCL Extensions: Communication Patterns for Modern AI
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257023)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257023) · [Recording](https://www.youtube.com/watch?v=wXcCKxYbgsY)
 
 Sreeram Potluri, Artem Polyakov — NVIDIA
 
@@ -47,7 +47,7 @@ Sreeram Potluri, Artem Polyakov — NVIDIA
 
 ### Self-Healing PyTorch Training Through Live GPU Migration
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1322707)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1322707) · [Recording](https://www.youtube.com/watch?v=FxfZrJ9wU48)
 
 Pavneet Ahluwalia, Gavin Cohen — Microsoft Azure (product) and Clockwork Systems
 
@@ -58,7 +58,7 @@ Pavneet Ahluwalia, Gavin Cohen — Microsoft Azure (product) and Clockwork Syste
 
 ### Scaling Foundation Models: From Broken to Near-Linear Multi-Node Training
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256382)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256382) · [Recording](https://www.youtube.com/watch?v=MLOBHXpUu70)
 
 Sheng Huang — Pinterest
 
@@ -69,7 +69,7 @@ Sheng Huang — Pinterest
 
 ### State-of-the-Art KV Transfer for Disaggregated LLM Serving in vLLM
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1255023)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1255023) · [Recording](https://www.youtube.com/watch?v=B_2f_OhUWUM)
 
 Nicolò Lucchesi (Mistral AI, vLLM maintainer), Sunita Nadampalli (Amazon), Zhanqiu Hu (Red Hat)
 
@@ -80,7 +80,7 @@ Nicolò Lucchesi (Mistral AI, vLLM maintainer), Sunita Nadampalli (Amazon), Zhan
 
 ### Crossing the Divide: Co-Evolving Kubernetes and Ray for the AI Era
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256376)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256376) · [Recording](https://www.youtube.com/watch?v=21JiuNY9_RY)
 
 Jago Macleod (Google, Kubernetes & GKE), Ion Stoica (Anyscale / UC Berkeley)
 
@@ -102,7 +102,7 @@ Sai Charan Teja Gopaluni, Aaresh Sharma — AWS
 
 ### Compute, Latency, and Safety: Architecting Stateful Guardrails for Multi-Agent Workflows
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1251388)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1251388) · [Recording](https://www.youtube.com/watch?v=hfCqnfdw1yk)
 
 Purva Chiniya — Amazon Ads
 
@@ -115,7 +115,7 @@ Purva Chiniya — Amazon Ads
 
 ### Beyond Collectives: Building Fused Compute-Communication Kernels with PyTorch Symmetric Memory
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257030)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257030) · [Recording](https://www.youtube.com/watch?v=TvG9iBXNqI8)
 
 Ke Wen (NVIDIA), Natalia Gimelshein (Meta), Kapil Sharma (Meta, PyTorch Distributed)
 
@@ -126,7 +126,7 @@ Ke Wen (NVIDIA), Natalia Gimelshein (Meta), Kapil Sharma (Meta, PyTorch Distribu
 
 ### rocSHMEM Symmetric Memory in PyTorch for AMD GPUs
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256215)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256215) · [Recording](https://www.youtube.com/watch?v=UhcoZs_vHn4)
 
 Prachi Gupta — AMD
 
@@ -137,7 +137,7 @@ Prachi Gupta — AMD
 
 ### MCCL: Fault-Tolerant Collective Communication for Large-Scale GPU Training
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256858)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1256858) · [Recording](https://www.youtube.com/watch?v=46uOnloZQkE)
 
 Ben Carver — Meta
 
@@ -148,7 +148,7 @@ Ben Carver — Meta
 
 ### EP-Overlap: Hiding Expert-Parallel Communication in MoE Training
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257875)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1257875) · [Recording](https://www.youtube.com/watch?v=SAYidTmCRGM)
 
 Sanket Jayant Purandare (PyTorch Distributed and Compilers), Syed Ahmed (NVIDIA, PyTorch Core)
 
@@ -159,7 +159,7 @@ Sanket Jayant Purandare (PyTorch Distributed and Compilers), Syed Ahmed (NVIDIA,
 
 ### Native Tiered KV Cache Offloading in vLLM: From Storage Offloading to Disaggregated Serving
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1254938)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1254938) · [Recording](https://www.youtube.com/watch?v=UWnbxH4rk_Y)
 
 Or Ozeri — IBM
 
@@ -170,7 +170,7 @@ Or Ozeri — IBM
 
 ### Five Bottlenecks, Five Fixes: Systematic Performance Diagnosis for PyTorch Distributed Training
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1254803)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1254803) · [Recording](https://www.youtube.com/watch?v=yQIrBIzmeBU)
 
 Paulo Aragao, Aravind Neelakantan — AWS
 
@@ -181,7 +181,7 @@ Paulo Aragao, Aravind Neelakantan — AWS
 
 ### XCCL: Scaling PyTorch Collectives to Exascale on Intel GPUs with TorchComms
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1258012)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1258012) · [Recording](https://www.youtube.com/watch?v=wXbS8nRGhmQ)
 
 Panagiotis Kourdis, Tanima Dey — Intel
 
@@ -192,7 +192,7 @@ Panagiotis Kourdis, Tanima Dey — Intel
 
 ### Monarch - Single-Machine DevX at Distributed Scale
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1255147)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1255147) · [Recording](https://www.youtube.com/watch?v=sg_9q7jjquw)
 
 Thomas Wang, Zach DeVito — Meta
 
@@ -205,7 +205,7 @@ Thomas Wang, Zach DeVito — Meta
 
 ### Who Owns Production When the Agent Does the Fixing? Governance in AI-Assisted SRE
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1255337)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1255337) · [Recording](https://www.youtube.com/watch?v=f1TgMHRos30)
 
 Aditi Mewada — Apple
 
@@ -216,7 +216,7 @@ Aditi Mewada — Apple
 
 ### Precompile for Training
 
-**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1245005)
+**Links:** [Abstract](https://sessionize.com/api/v2/s2rq62nk/view/markdown/session/1245005) · [Recording](https://www.youtube.com/watch?v=J4d4yD_A458)
 
 Bob Ren; Aaron Orenstein (Meta)
 

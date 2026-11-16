@@ -7,7 +7,9 @@ name: Links Refresh
 # searched for and verified (conferences/links.py), and every file and video
 # link is probed so a dead one is dropped rather than kept. A digest whose
 # links changed gets one "links: <key>" pull request; merging it republishes
-# the site. The digest text is never changed, and links found before are kept.
+# the site. Conferences are refreshed in parallel. Search and liveness results
+# are cached for 48 hours. The digest text is never changed, and links found
+# before are kept.
 #
 # Run it by hand for one digest of any age: Actions -> Links Refresh -> Run
 # workflow, with `conference: <key>`.
@@ -30,9 +32,51 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  refresh:
+  queue:
     runs-on: ubuntu-24.04
-    timeout-minutes: 120
+    timeout-minutes: 10
+    outputs:
+      keys: ${{ steps.queue.outputs.keys }}
+      source_ref: ${{ steps.queue.outputs.source_ref }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7
+        with:
+          enable-cache: true
+          python-version: '3.14'
+
+      - name: Install dependencies
+        run: |
+          uv venv --python 3.14 .venv
+          uv pip install --python .venv/bin/python --require-hashes -r requirements.txt
+          echo "$PWD/.venv/bin" >> "$GITHUB_PATH"
+
+      - name: List recent digests
+        id: queue
+        env:
+          CONFERENCE: ${{ github.event.inputs.conference }}
+        run: |
+          python scripts/links_queue.py --conference "$CONFERENCE"
+          echo "source_ref=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  refresh:
+    needs: queue
+    if: needs.queue.outputs.keys != '' && needs.queue.outputs.keys != '[]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      # Enough concurrency to hide network latency without hammering YouTube,
+      # conference sites, or Tavily with all recent conferences at once.
+      max-parallel: 4
+      matrix:
+        key: ${{ fromJSON(needs.queue.outputs.keys) }}
     permissions:
       contents: write
       pull-requests: write
@@ -40,7 +84,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          ref: ${{ github.event.repository.default_branch }}
+          ref: ${{ needs.queue.outputs.source_ref }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -55,48 +99,56 @@ jobs:
           uv pip install --python .venv/bin/python --require-hashes -r requirements.txt
           echo "$PWD/.venv/bin" >> "$GITHUB_PATH"
 
-      - name: Refresh links and open one pull request per digest
+      - name: Restore search and liveness cache
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .cache/links/${{ matrix.key }}.json
+          # A new immutable cache saves this run's results. The prefix restores
+          # the most recent result from an earlier run, including re-runs.
+          key: links-probes-${{ matrix.key }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: links-probes-${{ matrix.key }}-
+
+      - name: Refresh links and open a pull request
         env:
           GH_TOKEN: ${{ github.token }}
+          KEY: ${{ matrix.key }}
           # Optional: search fallback when YouTube blocks the runner, and the
           # reader for talk pages that block it (USENIX).
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
-          CONFERENCE: ${{ github.event.inputs.conference }}
           BASE: ${{ github.event.repository.default_branch }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
+          key="$KEY"
           git config user.name  "conference-digest-bot"
           git config user.email "actions@github.com"
           gh label create links-refresh --color 2f9e6e --description "New recordings or slides for a digest" --force >/dev/null
           base=$(git rev-parse HEAD)
-          for key in $(python scripts/links_queue.py --conference "$CONFERENCE"); do
-            branch="tofarev/links-$key"
-            git switch --quiet --force-create "$branch" "$base"
-            added="$RUNNER_TEMP/added-$key.md"
-            python scripts/enrich_links.py "$key" --summary "$added"
-            if git diff --quiet -- "digests/$key.md"; then
-              echo "$key: no new links"
-              continue
-            fi
-            git add "digests/$key.md"
-            git commit --quiet -m "links: $key" -m "Links for these picks:" -m "$(cat "$added")" -m "Workflow run: $RUN_URL"
-            git push --quiet --force origin "$branch"
-            {
-              echo "Links Refresh changed the links of picks in [\`digests/$key.md\`](../blob/$BASE/digests/$key.md) — new recordings or slides found, dead links dropped. The digest text is unchanged."
-              echo
-              cat "$added"
-              echo
-              echo "Recordings found by search were verified: the talk title is in the video's title or description, the conference or its channel is named, and the upload falls after the event. Open one or two before merging."
-              echo
-              echo "[Workflow run]($RUN_URL)"
-            } > "$RUNNER_TEMP/body-$key.md"
-            pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')
-            if [ -n "$pr" ]; then
-              gh pr edit "$pr" --body-file "$RUNNER_TEMP/body-$key.md"
-              echo "updated #$pr for $key"
-            else
-              gh pr create --base "$BASE" --head "$branch" --title "links: $key" \
-                --body-file "$RUNNER_TEMP/body-$key.md" --label links-refresh
-            fi
-            echo "- \`$key\`: $(grep -c '^- ' "$added") pick(s) with link changes" >> "$GITHUB_STEP_SUMMARY"
-          done
+          branch="tofarev/links-$key"
+          git switch --quiet --force-create "$branch" "$base"
+          added="$RUNNER_TEMP/added-$key.md"
+          python scripts/enrich_links.py "$key" --summary "$added"
+          if git diff --quiet -- "digests/$key.md"; then
+            echo "$key: no new links"
+            exit 0
+          fi
+          git add "digests/$key.md"
+          git commit --quiet -m "links: $key" -m "Links for these picks:" -m "$(cat "$added")" -m "Workflow run: $RUN_URL"
+          git push --quiet --force origin "$branch"
+          {
+            echo "Links Refresh changed the links of picks in [\`digests/$key.md\`](../blob/$BASE/digests/$key.md) — new recordings or slides found, dead links dropped. The digest text is unchanged."
+            echo
+            cat "$added"
+            echo
+            echo "Recordings found by search were verified: the talk title is in the video's title or description, the conference or its channel is named, and the upload falls after the event. Open one or two before merging."
+            echo
+            echo "[Workflow run]($RUN_URL)"
+          } > "$RUNNER_TEMP/body-$key.md"
+          pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$pr" ]; then
+            gh pr edit "$pr" --body-file "$RUNNER_TEMP/body-$key.md"
+            echo "updated #$pr for $key"
+          else
+            gh pr create --base "$BASE" --head "$branch" --title "links: $key" \
+              --body-file "$RUNNER_TEMP/body-$key.md" --label links-refresh
+          fi
+          echo "- \`$key\`: $(grep -c '^- ' "$added") pick(s) with link changes" >> "$GITHUB_STEP_SUMMARY"

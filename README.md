@@ -98,8 +98,10 @@ centered dots, and a talk recording gets a thumbnail that plays in place.
 **Recordings come later.** CNCF uploads KubeCon talks about two weeks after
 the event, USENIX and SIGCOMM within a few months. `links-refresh.yml` reruns
 the links step every day for each digest whose conference ended in the
-last 120 days, and opens a `links: <key>` PR listing the picks that gained
-links; the digest text is not touched and earlier links are kept. Run it from
+last 120 days, with up to four conferences refreshed in parallel. Missing-recording
+searches and definitive liveness checks are cached for 48 hours. It opens a
+`links: <key>` PR listing the picks that gained links; the digest text is not
+touched and earlier links are kept. Run it from
 the Actions tab with `conference: <key>` for an older digest, or locally:
 
 ```bash

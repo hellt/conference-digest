@@ -14,7 +14,7 @@ A calibration note up front: @Scale: Product 2026 is Meta's product-engineering 
 
 ### The future is products that grow themselves!
 
-**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-14)
+**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-14) · [Recording](https://www.youtube.com/watch?v=ZNL2ir1EoIY)
 
 Jubin Chheda (Meta)
 
@@ -25,7 +25,7 @@ Jubin Chheda (Meta)
 
 ### From On-Call to Always-On
 
-**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-6) · [Materials](https://atscaleconference.com/from-on-call-to-always-on/)
+**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-6) · [Session recording](https://www.youtube.com/watch?v=DJFcABDi5wE) · [Materials](https://atscaleconference.com/from-on-call-to-always-on/)
 
 Sumeet Arora (Meta)
 
@@ -36,7 +36,7 @@ Sumeet Arora (Meta)
 
 ### Ship Fast, Break Nothing: How AI Tests What AI Builds
 
-**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-7)
+**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-7) · [Recording](https://www.youtube.com/watch?v=Pf10kLLcFR0)
 
 Sophie Zeng (Meta), Sreeja Thummala (Meta)
 
@@ -47,7 +47,7 @@ Sophie Zeng (Meta), Sreeja Thummala (Meta)
 
 ### Preview Player Reliability and the Agentic Defense Loop on Edits
 
-**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-22)
+**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-22) · [Recording](https://www.youtube.com/watch?v=btS_gNt5kEc)
 
 Ravi Shah (Meta), Bhumi Sabarwal (Meta)
 
@@ -60,7 +60,7 @@ Ravi Shah (Meta), Bhumi Sabarwal (Meta)
 
 ### Chasing a Moving Target: Going AI-Native on Edits' Video Seek Engine
 
-**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-8)
+**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-8) · [Recording](https://www.youtube.com/watch?v=hAurRPc3A10)
 
 Boris Baracaldo (Meta)
 
@@ -71,7 +71,7 @@ Boris Baracaldo (Meta)
 
 ### ML Video Codec (MLVC): Research to Product
 
-**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-21)
+**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-21) · [Recording](https://www.youtube.com/watch?v=oD5z32RR4mk)
 
 Nabakumar Khongbantabam (Microsoft)
 
@@ -82,7 +82,7 @@ Nabakumar Khongbantabam (Microsoft)
 
 ### Adopting AV1 for Real-Time Communication (RTC) at Scale
 
-**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-5) · [Materials](https://atscaleconference.com/adopting-av1-for-real-time-communication-rtc-at-scale/)
+**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-5) · [Session recording](https://www.youtube.com/watch?v=QO1LLoMJBM8) · [Materials](https://atscaleconference.com/adopting-av1-for-real-time-communication-rtc-at-scale/)
 
 Yu-Chen (Eric) Sun (Meta)
 
@@ -93,7 +93,7 @@ Yu-Chen (Eric) Sun (Meta)
 
 ### Flywheel of Media Models & Product Velocity
 
-**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-16) · [Materials](https://atscaleconference.com/flywheel-of-ai-media-models-and-product-velocity/)
+**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-16) · [Session recording](https://www.youtube.com/watch?v=WHwOVk-kXfM) · [Materials](https://atscaleconference.com/flywheel-of-ai-media-models-and-product-velocity/)
 
 Rushaan Mahajan (Meta)
 
@@ -104,7 +104,7 @@ Rushaan Mahajan (Meta)
 
 ### Beyond “Good Enough”: How deployments accelerate research at the Audio AI Frontier
 
-**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-30)
+**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-30) · [Recording](https://www.youtube.com/watch?v=ghLHxHO42oY)
 
 Shaheen Lavie-Rouse (ElevenLabs)
 
@@ -115,7 +115,7 @@ Shaheen Lavie-Rouse (ElevenLabs)
 
 ### Content Accessibility at Scale: AI Voice Translations at Meta
 
-**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-29) · [Materials](https://atscaleconference.com/learn-more-the-research-behind-ai-voice-translations-at-meta/)
+**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-29) · [Session recording](https://www.youtube.com/watch?v=mUJgk2qm6QI) · [Materials](https://atscaleconference.com/learn-more-the-research-behind-ai-voice-translations-at-meta/)
 
 Esra Cansizoglu (Meta)
 
@@ -126,7 +126,7 @@ Esra Cansizoglu (Meta)
 
 ### Rhythm - Anticipatory Intelligence for Organizations
 
-**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-24) · [Materials](https://atscaleconference.com/rhythm-ai-building-anticipatory-intelligence-without-breaking-information-boundaries/)
+**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-24) · [Session recording](https://www.youtube.com/watch?v=vnEWk2PQY4E) · [Materials](https://atscaleconference.com/rhythm-ai-building-anticipatory-intelligence-without-breaking-information-boundaries/)
 
 Sundararajan Subramanian (Meta)
 
@@ -139,7 +139,7 @@ Sundararajan Subramanian (Meta)
 
 ### Fireside Chat: Designing for the Agentic Era
 
-**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-26)
+**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-26) · [Recording](https://www.youtube.com/watch?v=Fn6F-A3wIZc)
 
 Michael Martinez (Meta), Alex Cornell (Meta)
 
@@ -150,7 +150,7 @@ Michael Martinez (Meta), Alex Cornell (Meta)
 
 ### Live Panel: AI Generated Media Provenance at Scale
 
-**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-19)
+**Links:** [Abstract](https://atscaleconference.com/events/product-2026/#agenda-item-19) · [Recording](https://www.youtube.com/watch?v=ld2Eow7MYoI)
 
 Steve Dilla (Meta), Mohit Diwan (Meta), Sai Chandramouli (Meta), Karthic Veera (Meta), Alexandre Mourachko (Meta)
 

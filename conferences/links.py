@@ -49,6 +49,7 @@ from bs4 import BeautifulSoup
 from conferences.fetchers.base import BROWSER_HEADERS, looks_blocked
 from conferences.fetchers.ovscon import talk_links as ovscon_talk_links
 from conferences.fetchers.ripe import talk_links as ripe_talk_links
+from conferences.link_cache import LinkCache
 
 # slides2 holds a second format of the deck (PDF and PPTX both shown).
 KEYS = ("page", "talk", "pdf", "slides", "slides2", "video", "materials")
@@ -213,6 +214,7 @@ class Context:
     fetch_pages: bool = True
     tavily_key: str = ""
     delay: float = 0.4
+    cache: Optional[LinkCache] = None
 
     @property
     def marker(self) -> str:
@@ -977,7 +979,13 @@ def enrich(markdown: str, prompt: str, ctx: Context, log=print) -> tuple[str, di
         if ctx.search and not links.get("video") and ctx.marker != "ietf":
             title = item.title if item else re.split(r"\s+[—–]\s+", MD_LINK.sub(r"\1", heading))[0]
             said = re.search(r"^(?:Speakers|Authors):\s*(.+)$", item.text, re.M) if item else None
-            found = find_recording(title, ctx, tuple(speaker_names(said.group(1))) if said else ())
+            speakers = tuple(speaker_names(said.group(1))) if said else ()
+            missing_key = json.dumps([ctx.key, title, speakers, bool(ctx.tavily_key)])
+            cached, found = ctx.cache.get("missing-recording", missing_key) if ctx.cache else (False, None)
+            if not cached:
+                found = find_recording(title, ctx, speakers)
+                if not found and ctx.cache:
+                    ctx.cache.put("missing-recording", missing_key, None)
             if found:
                 links["video"] = found
                 stats["video_from_search"] += 1
@@ -987,8 +995,14 @@ def enrich(markdown: str, prompt: str, ctx: Context, log=print) -> tuple[str, di
         # video link is probed, and one confirmed dead is dropped rather than
         # published (ITNOG10 shipped fifteen 404 slide links before this).
         for k in [k for k in ("pdf", "slides", "slides2", "materials", "video") if links.get(k)]:
-            time.sleep(ctx.delay)
-            if link_alive(links[k], ctx.tavily_key) is False:
+            alive_key = json.dumps([links[k], bool(ctx.tavily_key)])
+            cached, alive = ctx.cache.get("link-alive", alive_key) if ctx.cache else (False, None)
+            if not cached:
+                time.sleep(ctx.delay)
+                alive = link_alive(links[k], ctx.tavily_key)
+                if alive is not None and ctx.cache:
+                    ctx.cache.put("link-alive", alive_key, alive)
+            if alive is False:
                 log(f"  dead {k} link dropped for {re.split(r'\s+[—–]\s+', heading)[0][:60]!r}: {links[k]}")
                 stats["dropped"].append({"pick": re.split(r"\s+[—–]\s+", heading)[0][:120],
                                          "kind": k, "url": links.pop(k)})

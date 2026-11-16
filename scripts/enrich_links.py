@@ -11,7 +11,9 @@ dead (404) are dropped. See conferences/links.py for where each link comes
 from, how a found recording is verified, and how liveness is probed.
 
 TAVILY_API_KEY, when set, is the fallback search if YouTube cannot be reached.
-Exit status: 0 on success (even if nothing was found), 1 on bad input.
+Definitive search and liveness results are cached under .cache/links/ for 48
+hours; inconclusive results are not cached. Exit status: 0 on success (even if
+nothing was found), 1 on bad input.
 """
 
 from __future__ import annotations
@@ -25,6 +27,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from conferences.link_cache import LinkCache  # noqa: E402
 from conferences.links import context_for, enrich  # noqa: E402
 
 
@@ -49,9 +52,14 @@ def main() -> int:
         print(f"error: {digest} does not exist", file=sys.stderr)
         return 1
 
-    ctx = context_for(entry, search=not args.no_search, fetch_pages=not args.no_pages)
+    cache = LinkCache(ROOT / ".cache" / "links" / f"{args.key}.json")
+    ctx = context_for(entry, search=not args.no_search, fetch_pages=not args.no_pages, cache=cache)
     text, stats = enrich(digest.read_text(encoding="utf-8"), prompt.read_text(encoding="utf-8") if prompt.is_file() else "", ctx)
     digest.write_text(text, encoding="utf-8")
+    try:
+        cache.save()
+    except OSError as exc:
+        print(f"warning: could not save link cache: {exc}", file=sys.stderr)
     if args.stats:
         args.stats.write_text(json.dumps(stats, indent=2) + "\n", encoding="utf-8")
     if args.summary:

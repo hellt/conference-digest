@@ -82,13 +82,13 @@ For every pick, `conferences/links.py` builds a `**Links:**` row when at least o
 3. **Use reviewed stream offsets where configured.** A pick can link to its exact start in a whole-day recording when that offset was previously checked against the stream's transcript.
 4. **Search only if the recording is still missing.** A known official conference channel is searched first, then general YouTube search, with Tavily search as a fallback when YouTube cannot be reached. A candidate is accepted only after checks against the talk title, the conference or channel, and an event-relative upload window; official-channel uploads may use a shortened title, and very short videos are rejected. An uncertain candidate gets no link.
 
-Before a row is published, file links and videos are probed again. Confirmed dead links are dropped; an unreachable or inconclusive check does not erase a previously found link. This is deliberately a “no link rather than a wrong link” policy.
+Before a row is published, file links and videos are probed again. Confirmed dead links are dropped; an unreachable or inconclusive check does not erase a previously found link. This is deliberately a “no link rather than a wrong link” policy. Definitive liveness answers are cached for 48 hours; inconclusive answers are always retried.
 
 ### 5. Review, publish, and refresh
 
 The proposal job opens one `digest: <key>` pull request containing the digest and its search tags. A person reviews and merges it. The merged `digests/<key>.md` file is the only signal that an edition is done; it also closes the tracking issue and triggers site publication.
 
-Slides and recordings often arrive after the digest. Every day, Links Refresh reruns the same deterministic link builder for digests whose events ended in the last 120 days. It rechecks talk pages, searches for missing recordings, and removes links confirmed dead. If anything changed, it opens a separate `links: <key>` PR; the write-ups are not rewritten. Older editions can be refreshed through manual workflow dispatch.
+Slides and recordings often arrive after the digest. Every day, Links Refresh reruns the same deterministic link builder for digests whose events ended in the last 120 days, processing up to four conferences in parallel. It rechecks talk pages, searches for missing recordings, and removes links confirmed dead. An unsuccessful recording search is cached for 48 hours so each daily run does not repeat the same sequence of external requests; a new recording can therefore take up to two days to appear. If anything changed, the job opens a separate `links: <key>` PR; the write-ups are not rewritten. Older editions can be refreshed through manual workflow dispatch.
 
 ## Search
 

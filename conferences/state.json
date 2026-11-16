@@ -526,5 +526,17 @@
     "attempts": 0,
     "last_attempt": "2026-11-14T20:10:34.376629+00:00",
     "last_error": ""
+  },
+  "aiengineer-code-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-16T10:08:07.670808+00:00",
+    "last_error": ""
+  },
+  "chnug-5": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-16T10:08:07.670808+00:00",
+    "last_error": ""
   }
 }

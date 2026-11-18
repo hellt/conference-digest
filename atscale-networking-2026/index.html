@@ -1028,7 +1028,7 @@
       <div class="cd-post-toolbar">
         <a class="cd-back" href="./..">← All digests</a>
         
-          <span>12 min read</span>
+          <span>14 min read</span>
         
       </div>
       
@@ -1051,9 +1051,10 @@
 <div class="pick pick-core">
 <h3 id="resilient-ai-supercomputer-networking-using-mrc-and-srv6"><a href="resilient-ai-supercomputer-networking-using-mrc-and-srv6/">Resilient AI Supercomputer Networking using MRC and SRv6</a><a class="headerlink" href="#resilient-ai-supercomputer-networking-using-mrc-and-srv6" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-18">Abstract</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-18">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=gTqeU9cCxKQ">Recording</a></p>
 </div>
 <p>Jitendra Padhye (<a href="../companies/openai/">OpenAI</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="gTqeU9cCxKQ" data-start="0" href="https://www.youtube.com/watch?v=gTqeU9cCxKQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/gTqeU9cCxKQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/gTqeU9cCxKQ/maxresdefault.jpg" alt="Play the recording: Resilient AI Supercomputer Networking using MRC and SRv6" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Tail latency — not average throughput — is what stalls synchronous pretraining at frontier scale, and one colliding flow or one failed link can throttle a job of tens of thousands of accelerators. This is OpenAI's production answer, and it is a transport-plus-routing co-design rather than a tweak to either.</li>
 <li><strong>What</strong>: MRC, a new RDMA-based transport that sprays across many paths and actively load-balances between them, eliminating flow collisions; paired with static SRv6 source routing that lets the transport bypass failures on its own. Run in production at OpenAI to train frontier models, where MRC lets training jobs ride out network failures that previously would have interrupted the run. (The abstract calls this a three-pronged approach but enumerates only two prongs; the third is not specified in the program text.) (from abstract only)</li>
@@ -1064,9 +1065,10 @@
 <div class="pick pick-core">
 <h3 id="metaroce-metas-rdma-transport"><a href="metaroce-metas-rdma-transport/">MetaRoCE: Meta's RDMA Transport</a><a class="headerlink" href="#metaroce-metas-rdma-transport" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-19">Abstract</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-19">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=SpyWXkWwb1A">Recording</a></p>
 </div>
 <p>Arvind Srinivasan (<a href="../companies/meta/">Meta</a>), Kingshuk Mandal (<a href="../companies/keysight-technologies/">Keysight Technologies</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="SpyWXkWwb1A" data-start="0" href="https://www.youtube.com/watch?v=SpyWXkWwb1A" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/SpyWXkWwb1A/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/SpyWXkWwb1A/maxresdefault.jpg" alt="Play the recording: MetaRoCE: Meta's RDMA Transport" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Meta redesigned RDMA from scratch for clusters growing past a million accelerators, and its core bet — accept lossy Ethernet, push all transport intelligence into the NIC, decouple from topology — is the same architectural direction other frontier operators are taking. This is the overview talk: mechanisms, the topology it enables, and the standards push.</li>
 <li><strong>What</strong>: MetaRoCE is a clean-sheet, multipath, out-of-order, receiver-driven RDMA transport that treats Ethernet as inherently lossy and pushes all intelligence into the NIC. Decoupling transport from topology is what makes TCO-optimized multiplane FPF topologies viable on commodity Ethernet with frictionless application adoption. A conformance suite developed with Keysight validates implementations from software reference through hardware emulation to production silicon, and Meta is opening MetaRoCE to the industry as a candidate ubiquitous RDMA transport for AI-scale networks. (from abstract only)</li>
@@ -1077,9 +1079,10 @@
 <div class="pick pick-core">
 <h3 id="metaroce-from-spec-to-nic-to-open-source"><a href="metaroce-from-spec-to-nic-to-open-source/">MetaRoCE: From Spec to NIC to Open Source</a><a class="headerlink" href="#metaroce-from-spec-to-nic-to-open-source" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-21">Abstract</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-21">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=cnAd8val8P8">Recording</a></p>
 </div>
 <p>Sandeep Nagaraja (<a href="../companies/meta/">Meta</a>), Balakrishnan Raman (<a href="../companies/amd/">AMD</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="cnAd8val8P8" data-start="0" href="https://www.youtube.com/watch?v=cnAd8val8P8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/cnAd8val8P8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/cnAd8val8P8/maxresdefault.jpg" alt="Play the recording: MetaRoCE: From Spec to NIC to Open Source" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: The companion deep-dive with the evidence: real-world performance results across multiplane topologies, tail latency, and long-distance RDMA, plus the open-source release (specification, reference implementation, compliance suites) at OCP. For anyone deciding whether MetaRoCE matters beyond Meta, this is the talk with numbers.</li>
 <li><strong>What</strong>: MetaRoCE's journey from specification to silicon: a reference software implementation on AMD programmable NICs, demonstrated scaling out within a cluster and scaling across fabrics for diverse deployment needs. Performance results span multiplane FPF topologies, tail-latency optimization, and long-distance RDMA. First look at Meta's open-source release of the specification, reference implementation, and compliance suites at OCP. (from abstract only)</li>
@@ -1090,9 +1093,10 @@
 <div class="pick pick-core">
 <h3 id="virgo-scale-out-data-center-network-for-ai"><a href="virgo-scale-out-data-center-network-for-ai/">Virgo: scale-out data center network for AI</a><a class="headerlink" href="#virgo-scale-out-data-center-network-for-ai" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-40">Abstract</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-40">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=00Gcgk9FJf4">Recording</a></p>
 </div>
 <p>Jeongkeun "JK" Lee (<a href="../companies/google/">Google</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="00Gcgk9FJf4" data-start="0" href="https://www.youtube.com/watch?v=00Gcgk9FJf4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/00Gcgk9FJf4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/00Gcgk9FJf4/maxresdefault.jpg" alt="Play the recording: Virgo: scale-out data center network for AI" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Google splitting AI east-west traffic onto a purpose-built fabric — separate from Jupiter, which is retained for north-south — is a major architectural datapoint. Virgo will carry production ML traffic for Google Cloud's A5x bare-metal instances (NVIDIA Vera Rubin NVL72) and is a building block for next-gen TPUs, so its design choices will be exercised at frontier scale.</li>
 <li><strong>What</strong>: Virgo, a dedicated accelerator-to-accelerator east-west fabric optimized for massive horizontal scale, engineered for deterministic latency and maximum resilience to deliver high goodput for ML workloads. Design principles: resilience, observability, deployability, and multi-building scale. (from abstract only)</li>
@@ -1103,7 +1107,7 @@
 <div class="pick pick-core">
 <h3 id="fiber-networks-innovations-for-ai-at-scale"><a href="fiber-networks-innovations-for-ai-at-scale/">Fiber Networks Innovations for AI at Scale</a><a class="headerlink" href="#fiber-networks-innovations-for-ai-at-scale" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-39">Abstract</a> <a class="pick-link" href="https://atscaleconference.com/building-the-backbone-of-ai-inside-the-nao-mega-clusters-fiber-revolution/">Materials</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-39">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=XJk7SJzKHuo">Session recording</a> <a class="pick-link" href="https://atscaleconference.com/building-the-backbone-of-ai-inside-the-nao-mega-clusters-fiber-revolution/">Materials</a></p>
 </div>
 <p>Fabrice Ouandji (<a href="../companies/meta/">Meta</a>), Sebastian Gault (<a href="../companies/meta/">Meta</a>)</p>
 <ul>
@@ -1116,7 +1120,7 @@
 <div class="pick pick-core">
 <h3 id="physical-network-design-at-scale-3-min-qa"><a href="physical-network-design-at-scale-3-min-qa/">Physical Network Design at Scale + 3 min Q&amp;A</a><a class="headerlink" href="#physical-network-design-at-scale-3-min-qa" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-36">Abstract</a> <a class="pick-link" href="https://atscaleconference.com/physical-network-design-at-scale/">Materials</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-36">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=TS1d05vl9aQ">Session recording</a> <a class="pick-link" href="https://atscaleconference.com/physical-network-design-at-scale/">Materials</a></p>
 </div>
 <p>Richard Cziva (<a href="../companies/meta/">Meta</a>), Brandon Premo (<a href="../companies/meta/">Meta</a>)</p>
 <ul>
@@ -1129,9 +1133,10 @@
 <div class="pick pick-core">
 <h3 id="co-designing-communication-for-ai-accelerators"><a href="co-designing-communication-for-ai-accelerators/">Co-Designing Communication for AI Accelerators</a><a class="headerlink" href="#co-designing-communication-for-ai-accelerators" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-41">Abstract</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-41">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=RrOhr0XHLQ4">Recording</a></p>
 </div>
 <p>Rajeev Nair (<a href="../companies/meta/">Meta</a>), Wes Bland (<a href="../companies/meta/">Meta</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="RrOhr0XHLQ4" data-start="0" href="https://www.youtube.com/watch?v=RrOhr0XHLQ4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/RrOhr0XHLQ4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/RrOhr0XHLQ4/maxresdefault.jpg" alt="Play the recording: Co-Designing Communication for AI Accelerators" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: MTIA 300 treats communication as a first-class architectural citizen — dedicated message engines — and introduces "network fungibility," where the same NIC hardware flexes between scale-up and scale-out roles. That flexibility is a genuinely different point in the accelerator interconnect design space, relevant both to AI networking and to how non-GPU accelerators change fabric requirements.</li>
 <li><strong>What</strong>: The communications architecture of MTIA 300, Meta's custom AI training and inference accelerator: dedicated message engines offload communication workloads, decoupling communication from the primary compute grid, minimizing resource contention and raising both compute and network efficiency. "Network fungibility" lets the same NICs adapt to scale-up or scale-out configurations depending on production needs, within a tight co-design loop across hardware, software, and models. (from abstract only)</li>
@@ -1142,9 +1147,10 @@
 <div class="pick pick-core">
 <h3 id="building-scalable-ai-cloud-interconnects-with-srv6-3-min-qa"><a href="building-scalable-ai-cloud-interconnects-with-srv6-3-min-qa/">Building scalable AI cloud interconnects with SRv6 + 3 min Q&amp;A</a><a class="headerlink" href="#building-scalable-ai-cloud-interconnects-with-srv6-3-min-qa" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-37">Abstract</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-37">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=nX4asnbuVPQ">Recording</a></p>
 </div>
 <p>Alexey Gorovoy (<a href="../companies/nebius/">Nebius</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="nX4asnbuVPQ" data-start="0" href="https://www.youtube.com/watch?v=nX4asnbuVPQ" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/nX4asnbuVPQ/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/nX4asnbuVPQ/maxresdefault.jpg" alt="Play the recording: Building scalable AI cloud interconnects with SRv6 + 3 min QA" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: AI-cloud tenants need predictable bandwidth into their virtual networks and services that behave identically from the virtual edge out to the WAN. Nebius' answer — SRv6 as the single architectural building block across both domains — removes the protocol-translation seam that plagues multi-domain interconnects. Directly relevant to the PM's cloud, interconnect, and segment-routing interests.</li>
 <li><strong>What</strong>: Nebius' evolving architecture for customer cloud interconnects: SRv6 bridges the virtual cloud environment with the physical network edge, enabling end-to-end VPN and traffic-engineering services without protocol translation between datacenter and WAN domains, with latest implementation experience shared. (from abstract only)</li>
@@ -1155,9 +1161,10 @@
 <div class="pick pick-core">
 <h3 id="lightning-talk-the-plan-that-learns"><a href="lightning-talk-the-plan-that-learns/">Lightning Talk - The Plan That Learns</a><a class="headerlink" href="#lightning-talk-the-plan-that-learns" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-31">Abstract</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-31">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=2jwKkYLbCIo">Recording</a></p>
 </div>
 <p>Ben Vallis (<a href="../companies/meta/">Meta</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="2jwKkYLbCIo" data-start="0" href="https://www.youtube.com/watch?v=2jwKkYLbCIo" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/2jwKkYLbCIo/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/2jwKkYLbCIo/maxresdefault.jpg" alt="Play the recording: Lightning Talk - The Plan That Learns" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Capacity planning is where years-ahead commitments meet guaranteed-wrong forecasts, and this talk applies agents not to forecast accuracy but to decision quality under uncertainty — positioning capacity to keep options open — which is a more defensible use of ML than "better predictions." Core to the PM's ML-for-infrastructure-operations interest.</li>
 <li><strong>What</strong>: Agents applied to the judgment-heavy decisions that stayed manual: acting inside narrow buy windows (continuous signal triage surfacing the handful of truly novel sites, weeks down to minutes); trusting data across systems that disagree on basic definitions (a measure-enrich-regrade loop); and choosing among coupled, timing-sensitive levers (a ranked, costed menu of moves with the reasoning attached). The stated frontier: agents that remember every decision and its outcome, so judgment compounds instead of resetting with each planner. (from abstract only)</li>
@@ -1168,9 +1175,10 @@
 <div class="pick pick-core">
 <h3 id="lightning-talk-ai4ni-runtime"><a href="lightning-talk-ai4ni-runtime/">Lightning Talk - AI4NI @Runtime</a><a class="headerlink" href="#lightning-talk-ai4ni-runtime" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-34">Abstract</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-34">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=WGBLZ4xmWp0">Recording</a></p>
 </div>
 <p>YuLing Chen (<a href="../companies/meta/">Meta</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="WGBLZ4xmWp0" data-start="0" href="https://www.youtube.com/watch?v=WGBLZ4xmWp0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/WGBLZ4xmWp0/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/WGBLZ4xmWp0/maxresdefault.jpg" alt="Play the recording: Lightning Talk - AI4NI @Runtime" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Most AI-for-networking content in this program targets planning and design time; this is the runtime side — agents embedded in live operations for reliability, performance, and efficiency, with production trials behind it. That is the closest thing to deployable ML-for-networking evidence in the program.</li>
 <li><strong>What</strong>: AI4NI @Runtime: AI agents across three dimensions — reliability, performance, and efficiency — with the solution architecture, example agentic systems, initial findings from production trials, and the key technical challenges and planned directions. (from abstract only)</li>
@@ -1182,9 +1190,10 @@
 <div class="pick pick-adjacent">
 <h3 id="anatomy-of-scale-machine-learning-network-operations"><a href="anatomy-of-scale-machine-learning-network-operations/">Anatomy of @scale Machine Learning Network Operations</a><a class="headerlink" href="#anatomy-of-scale-machine-learning-network-operations" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-20">Abstract</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-20">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=YbXbdwB0XHI">Recording</a></p>
 </div>
 <p>Jim Julson (<a href="../companies/coreweave/">Coreweave</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="YbXbdwB0XHI" data-start="0" href="https://www.youtube.com/watch?v=YbXbdwB0XHI" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/YbXbdwB0XHI/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/YbXbdwB0XHI/maxresdefault.jpg" alt="Play the recording: Anatomy of @scale Machine Learning Network Operations" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Operating — not just designing — ML networks is where transferable lessons live, and Coreweave runs GPU infrastructure at AI-cloud scale. Caveat: the published abstract is contentless ("a journey through the operational challenges and nuances"), so substance cannot be assessed from the program; included for topic relevance and speaker position.</li>
 <li><strong>What</strong>: The operational challenges and nuances of machine learning and AI infrastructure networks at Coreweave — no specifics beyond that framing are available. (from abstract only)</li>
@@ -1195,9 +1204,10 @@
 <div class="pick pick-adjacent">
 <h3 id="live-panel-scale-out-networking-for-ai-supercomputers"><a href="live-panel-scale-out-networking-for-ai-supercomputers/">Live Panel: Scale-Out Networking for AI Supercomputers</a><a class="headerlink" href="#live-panel-scale-out-networking-for-ai-supercomputers" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-29">Abstract</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-29">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=YRUdzADM2H4">Recording</a></p>
 </div>
 <p>Rajiv Krishnamurthy (<a href="../companies/meta/">Meta</a>), Joseph Provine (<a href="../companies/meta/">Meta</a>), Andrew Dickinson (<a href="../companies/oracle/">Oracle</a>), Jim Julson (<a href="../companies/coreweave/">Coreweave</a>), Jitendra Padhye (<a href="../companies/openai/">OpenAI</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="YRUdzADM2H4" data-start="0" href="https://www.youtube.com/watch?v=YRUdzADM2H4" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/YRUdzADM2H4/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/YRUdzADM2H4/maxresdefault.jpg" alt="Play the recording: Live Panel: Scale-Out Networking for AI Supercomputers" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: The architects behind this cycle's individual talks (MetaRoCE, MRC) plus Oracle and Coreweave in one room, comparing topology choices, congestion control at extreme scale, and network/training-framework co-design — useful as the cross-operator synthesis of the Core talks.</li>
 <li><strong>What</strong>: Practitioner panel on connecting tens of thousands of accelerators into a single tightly coupled fabric: architectures, transport protocols, and operational lessons behind supercomputer-scale AI training networks. (from abstract only)</li>
@@ -1208,9 +1218,10 @@
 <div class="pick pick-adjacent">
 <h3 id="lightning-talk-10x-network-design-engineer"><a href="lightning-talk-10x-network-design-engineer/">Lightning Talk - 10x Network Design Engineer</a><a class="headerlink" href="#lightning-talk-10x-network-design-engineer" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-32">Abstract</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-32">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=dNssrB_-Wxk">Recording</a></p>
 </div>
 <p>Maaz Mohiuddin (<a href="../companies/meta/">Meta</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="dNssrB_-Wxk" data-start="0" href="https://www.youtube.com/watch?v=dNssrB_-Wxk" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/dNssrB_-Wxk/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/dNssrB_-Wxk/maxresdefault.jpg" alt="Play the recording: Lightning Talk - 10x Network Design Engineer" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Pairs with Loom (Core): where Loom automates physical design as a constraint system, this talk is about agents owning design judgment end-to-end, and it is candid about what still fails — validation above all. The "engineer as author-to-approver" framing is where design automation is heading industry-wide.</li>
 <li><strong>What</strong>: Agent-assisted steps in datacenter network design today — sizing a fabric, proposing a topology, analyzing a change — with the trajectory toward a single agent owning design end-to-end, real waypoints from Meta's fabrics, what already works, and where the hard problems remain (validation, above all). Humans still make the call; they no longer draw every line. (from abstract only)</li>
@@ -1222,9 +1233,10 @@
 <div class="pick pick-wildcard">
 <h3 id="live-panel-building-at-the-roofline-planning-and-delivering-gigawatt-scale-ai-infrastructure"><a href="live-panel-building-at-the-roofline-planning-and-delivering-gigawatt-sca/">Live Panel: Building at the Roofline — Planning and Delivering Gigawatt-Scale AI Infrastructure</a><a class="headerlink" href="#live-panel-building-at-the-roofline-planning-and-delivering-gigawatt-scale-ai-infrastructure" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-42">Abstract</a></p>
+<p><a class="pick-link" href="https://atscaleconference.com/events/networking-2026/#agenda-item-42">Abstract</a> <a class="pick-link" href="https://www.youtube.com/watch?v=HfJ9sKRepkA">Recording</a></p>
 </div>
 <p>Omar Baldonado (<a href="../companies/meta/">Meta</a>), Amrita Kenue (<a href="../companies/meta/">Meta</a>), Lucas Benson (<a href="../companies/microsoft/">Microsoft</a>), Nikita Parikh (<a href="../companies/google/">Google</a>)</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="HfJ9sKRepkA" data-start="0" href="https://www.youtube.com/watch?v=HfJ9sKRepkA" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/HfJ9sKRepkA/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/HfJ9sKRepkA/maxresdefault.jpg" alt="Play the recording: Live Panel: Building at the Roofline — Planning and Delivering Gigawatt-Scale AI Infrastructure" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Not a networking session — power, buildings, fiber, and accelerators sourced at the edge of what the supply ecosystem can deliver — but it defines the envelope every network design in this program lives inside: rack power, building capacity, multi-generation fleets, and component lead times bound what fabrics can even be built. The panel composition makes it concrete: per the conference page, the Microsoft panelist leads strategic sourcing for optics and switches supporting Azure's AI fleet, and the Google panelist is a next-generation networking sourcing lead — this is the layer above the network roadmap.</li>
 <li><strong>What</strong>: Panel with infrastructure planning and technical sourcing leaders from Google, Meta, and Microsoft on long-range fleet strategy across multiple technology generations, multi-vendor orchestration, and the engineering realities of delivering AI infrastructure at gigawatt scale at the roofline of industry capacity.</li>

@@ -14,7 +14,7 @@ A single-day program (August 25, 2026, Santa Clara) almost entirely organized ar
 
 ### Resilient AI Supercomputer Networking using MRC and SRv6
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-18)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-18) · [Recording](https://www.youtube.com/watch?v=gTqeU9cCxKQ)
 
 Jitendra Padhye (OpenAI)
 
@@ -25,7 +25,7 @@ Jitendra Padhye (OpenAI)
 
 ### MetaRoCE: Meta's RDMA Transport
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-19)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-19) · [Recording](https://www.youtube.com/watch?v=SpyWXkWwb1A)
 
 Arvind Srinivasan (Meta), Kingshuk Mandal (Keysight Technologies)
 
@@ -36,7 +36,7 @@ Arvind Srinivasan (Meta), Kingshuk Mandal (Keysight Technologies)
 
 ### MetaRoCE: From Spec to NIC to Open Source
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-21)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-21) · [Recording](https://www.youtube.com/watch?v=cnAd8val8P8)
 
 Sandeep Nagaraja (Meta), Balakrishnan Raman (AMD)
 
@@ -47,7 +47,7 @@ Sandeep Nagaraja (Meta), Balakrishnan Raman (AMD)
 
 ### Virgo: scale-out data center network for AI
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-40)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-40) · [Recording](https://www.youtube.com/watch?v=00Gcgk9FJf4)
 
 Jeongkeun "JK" Lee (Google)
 
@@ -58,7 +58,7 @@ Jeongkeun "JK" Lee (Google)
 
 ### Fiber Networks Innovations for AI at Scale
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-39) · [Materials](https://atscaleconference.com/building-the-backbone-of-ai-inside-the-nao-mega-clusters-fiber-revolution/)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-39) · [Session recording](https://www.youtube.com/watch?v=XJk7SJzKHuo) · [Materials](https://atscaleconference.com/building-the-backbone-of-ai-inside-the-nao-mega-clusters-fiber-revolution/)
 
 Fabrice Ouandji (Meta), Sebastian Gault (Meta)
 
@@ -69,7 +69,7 @@ Fabrice Ouandji (Meta), Sebastian Gault (Meta)
 
 ### Physical Network Design at Scale + 3 min Q&A
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-36) · [Materials](https://atscaleconference.com/physical-network-design-at-scale/)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-36) · [Session recording](https://www.youtube.com/watch?v=TS1d05vl9aQ) · [Materials](https://atscaleconference.com/physical-network-design-at-scale/)
 
 Richard Cziva (Meta), Brandon Premo (Meta)
 
@@ -80,7 +80,7 @@ Richard Cziva (Meta), Brandon Premo (Meta)
 
 ### Co-Designing Communication for AI Accelerators
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-41)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-41) · [Recording](https://www.youtube.com/watch?v=RrOhr0XHLQ4)
 
 Rajeev Nair (Meta), Wes Bland (Meta)
 
@@ -91,7 +91,7 @@ Rajeev Nair (Meta), Wes Bland (Meta)
 
 ### Building scalable AI cloud interconnects with SRv6 + 3 min Q&A
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-37)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-37) · [Recording](https://www.youtube.com/watch?v=nX4asnbuVPQ)
 
 Alexey Gorovoy (Nebius)
 
@@ -102,7 +102,7 @@ Alexey Gorovoy (Nebius)
 
 ### Lightning Talk - The Plan That Learns
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-31)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-31) · [Recording](https://www.youtube.com/watch?v=2jwKkYLbCIo)
 
 Ben Vallis (Meta)
 
@@ -113,7 +113,7 @@ Ben Vallis (Meta)
 
 ### Lightning Talk - AI4NI @Runtime
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-34)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-34) · [Recording](https://www.youtube.com/watch?v=WGBLZ4xmWp0)
 
 YuLing Chen (Meta)
 
@@ -126,7 +126,7 @@ YuLing Chen (Meta)
 
 ### Anatomy of @scale Machine Learning Network Operations
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-20)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-20) · [Recording](https://www.youtube.com/watch?v=YbXbdwB0XHI)
 
 Jim Julson (Coreweave)
 
@@ -137,7 +137,7 @@ Jim Julson (Coreweave)
 
 ### Live Panel: Scale-Out Networking for AI Supercomputers
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-29)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-29) · [Recording](https://www.youtube.com/watch?v=YRUdzADM2H4)
 
 Rajiv Krishnamurthy (Meta), Joseph Provine (Meta), Andrew Dickinson (Oracle), Jim Julson (Coreweave), Jitendra Padhye (OpenAI)
 
@@ -148,7 +148,7 @@ Rajiv Krishnamurthy (Meta), Joseph Provine (Meta), Andrew Dickinson (Oracle), Ji
 
 ### Lightning Talk - 10x Network Design Engineer
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-32)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-32) · [Recording](https://www.youtube.com/watch?v=dNssrB_-Wxk)
 
 Maaz Mohiuddin (Meta)
 
@@ -161,7 +161,7 @@ Maaz Mohiuddin (Meta)
 
 ### Live Panel: Building at the Roofline — Planning and Delivering Gigawatt-Scale AI Infrastructure
 
-**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-42)
+**Links:** [Abstract](https://atscaleconference.com/events/networking-2026/#agenda-item-42) · [Recording](https://www.youtube.com/watch?v=HfJ9sKRepkA)
 
 Omar Baldonado (Meta), Amrita Kenue (Meta), Lucas Benson (Microsoft), Nikita Parikh (Google)
 

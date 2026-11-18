@@ -14,7 +14,7 @@ A compact, three-talk program from the Swiss network user group (Cisco Wallisell
 
 ### Let AI Break the Lab: Network as Code in the Real World
 
-**Links:** [Slides](https://chnug.ch/chnug005/slides/chnug005-02-let-ai-break-the-lab-network-as-code-in-the-real-world.pdf)
+**Links:** [Slides](https://chnug.ch/chnug005/slides/chnug005-02-let-ai-break-the-lab-network-as-code-in-the-real-world.pdf) · [Recording](https://www.youtube.com/watch?v=J9vZReJpqxU)
 
 Speakers: Patrick Mosimann (Cisco), Dawid Bednarczyk (Cisco CX)
 
@@ -25,7 +25,7 @@ Speakers: Patrick Mosimann (Cisco), Dawid Bednarczyk (Cisco CX)
 
 ### VPP: eVPN Control Plane
 
-**Links:** [Slides](https://chnug.ch/chnug005/slides/chnug005-03-vpp-evpn-control-plane.pdf)
+**Links:** [Slides](https://chnug.ch/chnug005/slides/chnug005-03-vpp-evpn-control-plane.pdf) · [Recording](https://www.youtube.com/watch?v=ay8ms5fUPbg)
 
 Speakers: Pim van Pelt (IPng Networks)
 
@@ -36,7 +36,7 @@ Speakers: Pim van Pelt (IPng Networks)
 
 ### From Configuration Tasks to Declarative Intent with Ansible
 
-**Links:** [Slides](https://chnug.ch/chnug005/slides/chnug005-04-from-configuration-tasks-to-declarative-intent-with-ansible.pdf)
+**Links:** [Slides](https://chnug.ch/chnug005/slides/chnug005-04-from-configuration-tasks-to-declarative-intent-with-ansible.pdf) · [Recording](https://www.youtube.com/watch?v=isj4vHPUswM)
 
 Speakers: Tomas Horyl (Narrowin)
 

@@ -55,6 +55,8 @@ Speakers: not listed in the program.
 
 ### Prevent route leaking with ASPA and BGP roles
 
+**Links:** [Recording](https://www.youtube.com/watch?v=vcZo32Z86LA)
+
 Speakers: Johan Ervenius - Arista Networks
 
 - **Why**: Route leaks remain one of the highest-impact, recurring Internet failures, and this covers the two current standards-track defenses — ASPA (RPKI-based AS provider authorization) and BGP roles (RFC 9234 OTC) — which is directly relevant to the PM's network-security and BGP-internals interests and to any operator's routing hygiene roadmap.
@@ -74,6 +76,8 @@ Speakers: not listed in the program.
 - **Where applicable**: Cannot be assessed from the title; check whether it assumes a particular operator scale or network model before judging transferability.
 
 ### Panel discussion - Beyond the Looking Glass: The Future of BGP Visibility
+
+**Links:** [Recording](https://www.youtube.com/watch?v=_hkToTduwt0)
 
 Speakers: panel, not individually listed in the program.
 
@@ -129,6 +133,8 @@ Speakers: not listed in the program.
 - **Where applicable**: Unknown from the title; if the underlying data is public collector data, the approach may be reusable by anyone doing network trend analysis.
 
 ### AS112 Deployment Characteristics and Security
+
+**Links:** [Recording](https://www.youtube.com/watch?v=tyvx7rbtZbE)
 
 Speakers: not listed in the program.
 

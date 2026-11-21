@@ -13,7 +13,7 @@ written_by: ToFaRev (zai-org/GLM-5.3)
 
 ### Networking for AI
 
-**Links:** [Slides](https://www.swinog.ch/wp-content/uploads/2026/11/20261020_SwiNOG-Networking-for-AI_v2.pdf)
+**Links:** [Slides](https://www.swinog.ch/wp-content/uploads/2026/11/20261020_SwiNOG-Networking-for-AI_v2.pdf) · [Recording](https://www.youtube.com/watch?v=dgUppMyhffw)
 
 Remi Locherer - Arista Networks
 
@@ -57,7 +57,7 @@ Marco Martinez - Swisscom
 
 ### Automating Target Discovery in the gNMIc Operator
 
-**Links:** [Slides](https://www.swinog.ch/wp-content/uploads/2026/11/BA-gNMIc-operator-swinog42.pdf)
+**Links:** [Slides](https://www.swinog.ch/wp-content/uploads/2026/11/BA-gNMIc-operator-swinog42.pdf) · [Recording](https://www.youtube.com/watch?v=uklb2SgRzf8)
 
 Daniel Schatzmann
 

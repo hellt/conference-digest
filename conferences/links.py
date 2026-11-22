@@ -127,6 +127,7 @@ DISPLAY = {"kubecon": "KubeCon", "nsdi": "NSDI", "sigcomm": "SIGCOMM", "srecon":
 # search: uploads are often retitled or shortened when published, and the
 # global results can bury them behind promo clips.
 UPLOAD_CHANNELS = {
+    "denog": "@DENOG",
     "chnug": "@CH-NUG",
     "netnod": "@netnodix",
     "nznog": "@nznog3664",
@@ -858,6 +859,9 @@ def label(kind: str, url: str, links: dict[str, str]) -> str:
     if kind in ("slides", "slides2"):
         if links.get("slides") and links.get("slides2"):
             fmt = deck_format(url)
+            other = links["slides2" if kind == "slides" else "slides"]
+            if fmt and fmt == deck_format(other):
+                return "Slides 1" if kind == "slides" else "Slides 2"
             return f"Slides ({fmt})" if fmt else ("Slides" if kind == "slides" else "Slides 2")
         return "Slides"
     if kind == "page":

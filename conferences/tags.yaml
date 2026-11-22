@@ -5607,3 +5607,77 @@ chnug-5:
     - configuration-management
     - automation
     - testing
+denog-18:
+  post:
+  - ai-networks
+  - automation
+  - bgp
+  - ipv6
+  - measurement
+  - data-center-fabric
+  talks:
+    EVPN for humans:
+    - routing-protocols
+    - bgp
+    - data-center-fabric
+    - mpls
+    Ethernet Won Inside the AI Data Center. Can It Cross an Operator Boundary?:
+    - ai-networks
+    - ethernet
+    - interconnection
+    - internet-governance
+    'Wire-API: fleet-wide, vendor-neutral network automation':
+    - kubernetes
+    - automation
+    - orchestration
+    - api
+    You can't make everybody equally happy - Measuring Anycast with AI as the Third Member of a Two-Person Team:
+    - measurement
+    - bgp
+    - ml-for-networking
+    - observability
+    IPv4 as a service on an IPv6-only network:
+    - ipv6
+    - bgp
+    - standardization
+    IPv6 routing loops -- A call to fix router configurations.:
+    - ipv6
+    - measurement
+    - troubleshooting
+    ICMP trickery in "reduced-IPv4" networks:
+    - ipv6
+    - mpls
+    - troubleshooting
+    Carrier-Scale TWAMP Monitoring with DPDK and Commodity x86 Servers:
+    - measurement
+    - observability
+    - benchmarking
+    - linux-networking
+    Route Filtering at Scale:
+    - bgp
+    - network-security
+    - automation
+    'SRv6 in the Data Center: Crazy Ideas or Real Use Cases?':
+    - segment-routing
+    - ai-networks
+    - rdma
+    - data-center-fabric
+    Maybe it is time to consider layer 3 internet exchanges:
+    - peering
+    - bgp
+    - network-security
+    FSO essentials:
+    - optics
+    - interconnection
+    'The New Botnet Era: Rethinking Your DDoS Strategy':
+    - ddos
+    - malware-analysis
+    - network-security
+    Geoinformation Systems & Internet Infrastructure:
+    - measurement
+    - troubleshooting
+    - optics
+    A Prosecutor in Another Country Wants Your Data in 8 Hours — Now What?:
+    - internet-governance
+    - privacy
+    - sre

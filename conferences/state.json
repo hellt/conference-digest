@@ -538,5 +538,11 @@
     "attempts": 0,
     "last_attempt": "2026-11-16T10:08:07.670808+00:00",
     "last_error": ""
+  },
+  "denog-18": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-22T13:39:56.447314+00:00",
+    "last_error": ""
   }
 }

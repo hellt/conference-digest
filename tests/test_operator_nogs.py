@@ -15,7 +15,10 @@ from conferences.fetchers.denog import DenogFetcher
 from conferences.fetchers.moreip import MoreIpFetcher
 from conferences.fetchers.nlnog import NlnogFetcher
 from conferences.fetchers.ripe import RipeFetcher
-from conferences.links import Context, RECORDING_STREAMS, enrich, program_items, scrape_page
+from conferences.links import (
+    UPLOAD_CHANNELS, Context, RECORDING_STREAMS, Video, enrich, find_recording, links_row, program_items,
+    scrape_page,
+)
 from scripts.discover_editions import candidates, fill, latest_ident
 
 RIPE = "https://ripe91.ripe.net/programme/meeting-plan/"
@@ -159,6 +162,26 @@ class NlnogTests(TestCase):
 
 
 class DenogTests(TestCase):
+    def test_recordings_come_from_the_official_channel(self):
+        self.assertEqual(UPLOAD_CHANNELS["denog"], "@DENOG")
+        talk = "EVPN for humans"
+        video = Video("53cM7X9LAe4", "DENOG18 - EVPN for humans", "DENOG", published=date(2026, 11, 17))
+        with patch("conferences.links.youtube_channel_search", return_value=[video.id]) as search, \
+             patch("conferences.links.youtube_video", return_value=video), \
+             patch("conferences.links.youtube_search") as general:
+            found = find_recording(talk, Context(key="denog-18", end_date=date(2026, 11, 17), delay=0))
+        self.assertEqual(found, f"https://www.youtube.com/watch?v={video.id}")
+        search.assert_called_once_with("@DENOG", talk)
+        general.assert_not_called()
+
+    def test_two_decks_in_the_same_format_have_distinct_labels(self):
+        row = links_row({"slides": "https://example.org/live.pdf", "slides2": "https://example.org/full.pdf"})
+        self.assertIn("[Slides 1](https://example.org/live.pdf)", row)
+        self.assertIn("[Slides 2](https://example.org/full.pdf)", row)
+        row = links_row({"slides": "https://example.org/deck.pdf", "slides2": "https://example.org/deck.pptx"})
+        self.assertIn("[Slides (PDF)](https://example.org/deck.pdf)", row)
+        self.assertIn("[Slides (PPTX)](https://example.org/deck.pptx)", row)
+
     def test_export_materials_full_abstracts_and_deduplication(self):
         with patch("conferences.fetchers.denog.http_get", side_effect=[
             response(DENOG_AGENDA), response(data={"schedule": SCHEDULE}),

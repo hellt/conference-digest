@@ -479,6 +479,7 @@ conferences:
 
   - key: denog-18
     name: "DENOG 18 (Essen)"
+    location: "Essen · Germany"
     description: "The German network operators' conference on Internet infrastructure, routing, data centers, automation, and security."
     start_date: 2026-11-15
     end_date: 2026-11-17

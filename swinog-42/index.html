@@ -1050,9 +1050,10 @@
 <div class="pick pick-core">
 <h3 id="networking-for-ai"><a href="networking-for-ai/">Networking for AI</a><a class="headerlink" href="#networking-for-ai" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/20261020_SwiNOG-Networking-for-AI_v2.pdf">Slides</a></p>
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/20261020_SwiNOG-Networking-for-AI_v2.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=dgUppMyhffw">Recording</a></p>
 </div>
 <p>Remi Locherer - <a href="../companies/arista-networks/">Arista Networks</a></p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="dgUppMyhffw" data-start="0" href="https://www.youtube.com/watch?v=dgUppMyhffw" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/dgUppMyhffw/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/dgUppMyhffw/maxresdefault.jpg" alt="Play the recording: Networking for AI" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: AI training/inference clusters are the hardest physical datacenter networking problem of the moment, and this is a dense technical walkthrough of the fabric design decisions: lossless Ethernet, load balancing, topology, optics, and power. Directly in the PM's physical-DC wheelhouse (RoCE/lossless fabrics, optics, topology).</li>
 <li><strong>What</strong>: A structured treatment of why AI traffic breaks traditional DC design — few, large, long-lived, highly synchronized flows; bursts at 100% of link rate with no stat-muxing; a single loss or XPU failure halts the whole job — followed by concrete scale-out designs, congestion control, load balancing evolution, and the Ultra Ethernet / MRC trends, plus the optics and cooling consequences.</li>
@@ -1105,9 +1106,10 @@
 <div class="pick pick-core">
 <h3 id="automating-target-discovery-in-the-gnmic-operator"><a href="automating-target-discovery-in-the-gnmic-operator/">Automating Target Discovery in the gNMIc Operator</a><a class="headerlink" href="#automating-target-discovery-in-the-gnmic-operator" title="Permanent link">#</a></h3>
 <div class="pick-links">
-<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/BA-gNMIc-operator-swinog42.pdf">Slides</a></p>
+<p><a class="pick-link" href="https://www.swinog.ch/wp-content/uploads/2026/11/BA-gNMIc-operator-swinog42.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=uklb2SgRzf8">Recording</a></p>
 </div>
 <p>Daniel Schatzmann</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="uklb2SgRzf8" data-start="0" href="https://www.youtube.com/watch?v=uklb2SgRzf8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/uklb2SgRzf8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/uklb2SgRzf8/maxresdefault.jpg" alt="Play the recording: Automating Target Discovery in the gNMIc Operator" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
 <ul>
 <li><strong>Why</strong>: Streaming telemetry (gNMI) moving into Kubernetes, plus automatic synchronization with a source of truth — squarely in the PM's cloud-native networking and network-automation space. It's also a nice example of upstream-able operator work from a bachelor thesis at OST.</li>
 <li><strong>What</strong>: An extension to the gNMIc Operator (open-source, started 2026) that removes the last manual step in gNMI telemetry: keeping the monitored-target list current. Targets are synchronized from an external source of truth (NetBox in the demo), closing the gap where the monitoring stack and the inventory drift apart.</li>

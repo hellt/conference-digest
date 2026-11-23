@@ -5681,3 +5681,74 @@ denog-18:
     - internet-governance
     - privacy
     - sre
+autocon-6:
+  post:
+  - automation
+  - ai
+  - ml-for-networking
+  - testing
+  - configuration-management
+  talks:
+    '60/40: How Meta Taught AI to Triage Its Own Network':
+    - ml-for-networking
+    - ai
+    - troubleshooting
+    - automation
+    'From PoC to the NOC: A Multi-Agent Network Troubleshooting Platform at Internet2':
+    - ai
+    - troubleshooting
+    - sre
+    - automation
+    Agentic Networking is here - Introducing the Tools and Techniques Required to be Successful:
+    - ai
+    - automation
+    - orchestration
+    'Network Automation Agentified: Self-serving Network Deployments using AI Agents Soup to Nuts':
+    - ai
+    - automation
+    - orchestration
+    - configuration-management
+    'Human Driven AI: Who''s Actually Driving Your Network''s AI?':
+    - ai
+    - automation
+    - ml-for-networking
+    'Stop Funding Hallucinations: A Seasoned Technologist''s Guide to Business Success with AI Evaluation':
+    - ai
+    - testing
+    - automation
+    Digital Twinning at Scale:
+    - automation
+    - testing
+    - orchestration
+    2026 State of Network Automation Survey Results:
+    - automation
+    - measurement
+    'Every Automation Demo Lies: What Building a Disposable Network Lab Platform Taught Me':
+    - testing
+    - automation
+    - benchmarking
+    'Test Before You Touch the Network: Reproducing Real Device Behavior with Mock Devices':
+    - testing
+    - automation
+    - configuration-management
+    'From Failure to Recovery: Designing Resumable Network Upgrade Automation':
+    - automation
+    - sre
+    - troubleshooting
+    Deploying IPv6 doesn’t work without automation (but that is true with other stuff too!):
+    - ipv6
+    - automation
+    What Should You Build When You Can Build Anything?:
+    - automation
+    - ai
+    - orchestration
+    'The adoption gap is an accounting gap: how to measure what your automation returned':
+    - automation
+    - measurement
+    I 💖 YANG. Said No Python Developer Ever:
+    - automation
+    - api
+    - standardization
+    'You Do It, I Do It, Teach It To Me: Using AI To Upskill Network Engineers in Automation':
+    - ai
+    - automation

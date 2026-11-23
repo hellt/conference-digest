@@ -1235,3 +1235,13 @@ conferences:
     manual_fallback_url: "https://chnug.ch/chnug005"
     discovered: 2026-11-16
     notes: "Swiss Network User Group evening meetups: network automation, observability, routing, optical and data-center networking. Titles, speakers, PDF slides and YouTube recordings; no abstracts published. Auto-discovered 2026-11-16 from series 'chnug'. end_date taken from the source."
+
+  - key: grnog-21
+    name: "GRNOG 21 (Serafio City of Athens)"
+    description: "The Greek network operators' meeting on Internet infrastructure, routing, security, and operational practice."
+    end_date: 2026-12-07
+    fetcher: indico
+    program_url: "https://grnog.indico.nogalliance.org/category/0/"
+    manual_fallback_url: "https://grnog.indico.nogalliance.org/"
+    discovered: 2026-11-23
+    notes: "Greek network operators (Athens): peering and IX, routing and RPKI, optical transport, DC networking, automation. Contributions carry abstracts, speakers and material via the Indico export. Auto-discovered 2026-11-23 from series 'grnog'. end_date taken from the source."

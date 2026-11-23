@@ -544,5 +544,23 @@
     "attempts": 0,
     "last_attempt": "2026-11-22T13:39:56.447314+00:00",
     "last_error": ""
+  },
+  "ietf-127": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-23T20:03:38.329847+00:00",
+    "last_error": ""
+  },
+  "autocon-6": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-23T20:03:38.329847+00:00",
+    "last_error": ""
+  },
+  "ccs-2026": {
+    "status": "published",
+    "attempts": 0,
+    "last_attempt": "2026-11-23T20:03:38.329847+00:00",
+    "last_error": ""
   }
 }

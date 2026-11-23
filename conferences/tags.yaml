@@ -5852,3 +5852,105 @@ ietf-127:
     Cross-Publisher Causal Ordering for YANG-Push Datastore Telemetry:
     - telemetry
     - observability
+ccs-2026:
+  post:
+  - ai
+  - ebpf
+  - bgp
+  - gpu-clusters
+  - network-security
+  - cloud
+  talks:
+    'NVBleed: Covert and Side-Channel Attacks on NVIDIA Multi-GPU Interconnect':
+    - gpu-clusters
+    - network-security
+    'LDBF: Deep Exploration of eBPF Runtime via LLM-Driven Program Generation and Adaptive Context Orchestration':
+    - ebpf
+    - ai
+    'TurboRetry: Mitigating Large-Scale QUIC Handshake Floods with Off-the-Shelf DPU Offloading':
+    - dpu
+    - ddos
+    - http
+    'Parade: Unified and Data-Driven Prefix-AS Semantics for BGP Anomaly Detection':
+    - bgp
+    - ml-for-networking
+    - anomaly-detection
+    Exploiting vulnerabilities at IXP route servers to perform stealth BGP hijacks:
+    - bgp
+    - peering
+    - interconnection
+    Enforcement of In-Kernel Stateful Security Policies via eBPF:
+    - ebpf
+    - linux-networking
+    - network-security
+    Diagnosing Programmable Data Plane Attacks with Provenance Observability:
+    - p4
+    - programmable-dataplane
+    - observability
+    'eMicro: Real-Time Multi-Hop Access Control for Microservices with eBPF':
+    - ebpf
+    - zero-trust
+    - kubernetes
+    - cloud-native
+    'TWIST: Private Tenant-Dedicated LLM Serving via Joint Model-Token Transformation':
+    - ai
+    - privacy
+    - cloud
+    'Rethinking Isolation in RPKI: Cross-Publication-Origin Attacks on RPKI Validation':
+    - bgp
+    - routing-protocols
+    - network-security
+    'The Trade-off Between Performance and Security: Exploring Vulnerabilities in DNS Task Queue Scheduling':
+    - dns
+    - ddos
+    - vulnerability-management
+    'LeakyTree: Cross-VM Bit-by-Bit Deduplicated Page Leakage via Linux Kernel Samepage Merging Internals':
+    - cloud
+    - privacy
+    - network-security
+    'Gone in 8 Seconds: Uncovering Malicious Bots Operating on Public Container Registries':
+    - containers
+    - threat-intelligence
+    - malware-analysis
+    'ContractGuard: Auditing Semantic Contracts of MCP Tools for Security Violations':
+    - ai
+    - api
+    - authorization
+    'From Prompt to Pwn: Exploiting GPU Memory Errors During ML Inference':
+    - ai
+    - gpu-clusters
+    - vulnerability-management
+    'ReasoningBomb: A Stealthy Denial-of-Service Attack by Inducing Pathologically Long Reasoning in Large Reasoning Models':
+    - ai
+    - ddos
+    Mitigating Code Injection Attacks on Modern GPUs:
+    - gpu-clusters
+    - vulnerability-management
+    - offensive-security
+    Governing AI Agent with Capability and Delegation Chain:
+    - ai
+    - authorization
+    'Trapped Handler: A Practical Performance Degradation Attack on NVIDIA vGPU via Preemption Manipulation':
+    - gpu-clusters
+    - cloud
+    Where Have All the Firewalls Gone? Security Consequences of Residential IPv6 Transition:
+    - ipv6
+    - firewall
+    - measurement
+    A First-Principles Evaluation of Graph-Based Network Intrusion Detection Systems ( video ):
+    - ml-for-networking
+    - benchmarking
+    - anomaly-detection
+    'CVE-Genie: An LLM-Based Multi-Agent Framework for Reproducing CVEs':
+    - ai
+    - vulnerability-management
+    - offensive-security
+    'DeepProve: Verifiable End-to-End Large Language Model Inference':
+    - ai
+    - encryption
+    'Opaque Shader: Dynamic Code Execution on GPUs via Explicit Graphics APIs':
+    - gpu-clusters
+    - offensive-security
+    'Verifying Consensus Protocols from LLM-assisted TLA$^+$: A Case Study of Byzantine Reliable Broadcast':
+    - ai
+    - testing

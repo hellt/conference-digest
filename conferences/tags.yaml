@@ -5752,3 +5752,103 @@ autocon-6:
     'You Do It, I Do It, Teach It To Me: Using AI To Upskill Network Engineers in Automation':
     - ai
     - automation
+ietf-127:
+  post:
+  - ai-networks
+  - rdma
+  - data-center-fabric
+  - bgp
+  - segment-routing
+  - telemetry
+  talks:
+    Resilient AI Supercomputer Networking using MRC and SRv6:
+    - ai-networks
+    - segment-routing
+    - gpu-clusters
+    - rdma
+    A RoCEv2 Flow-Level Load Balancing Method Based on the IPv6 Flow Label:
+    - rdma
+    - load-balancing
+    - ipv6
+    - ai-networks
+    Enhanced ECMP for AI Cluster:
+    - ai-networks
+    - load-balancing
+    - data-center-fabric
+    Adaptive Routing Framework:
+    - ai-networks
+    - load-balancing
+    - data-center-fabric
+    SCONE-Based Rate Advice for RoCEv2 Networks:
+    - rdma
+    - congestion-control
+    - ai-networks
+    Export of RoCEv2 Base Transport Header (BTH) Information Using IP Flow Information Export (IPFIX):
+    - rdma
+    - observability
+    - ai-networks
+    HPC/AI Scheduler Job Metadata Model:
+    - ai-networks
+    - orchestration
+    - kubernetes
+    HPC/AI Service Intent Model:
+    - ai-networks
+    - orchestration
+    - interconnection
+    TCP Packet Trimming Extension:
+    - congestion-control
+    - data-center-fabric
+    - linux-networking
+    The Session Identifier Option (SIO):
+    - load-balancing
+    - telemetry
+    - linux-networking
+    EVPN Subnet Slicing:
+    - data-center-fabric
+    - bgp
+    Origin-Leaf Identification in Data-Center eBGP Underlays using BGP Large Communities:
+    - bgp
+    - data-center-fabric
+    - automation
+    BGP RR Deployment Considerations:
+    - bgp
+    - sre
+    Hierarchical Cryptographically Generated Addresses (HCGA):
+    - ipv6
+    - kubernetes
+    - attestation
+    The IPv6 Loopback Address Prefix:
+    - ipv6
+    - containers
+    Routing mechanism in Dragonfly Networks Gap Analysis, Problem Statement, and Requirements:
+    - data-center-fabric
+    - ai-networks
+    - routing-protocols
+    Current State of the Art for High Performance Wide Area Networks:
+    - interconnection
+    - capacity-planning
+    - ai-networks
+    BBR Congestion Control:
+    - congestion-control
+    - standardization
+    EVPN multi-homing support for L3 services:
+    - data-center-fabric
+    - bgp
+    YANG Datastore Telemetry (YANG Push version 2):
+    - telemetry
+    - observability
+    RIFT extensions for SRv6:
+    - segment-routing
+    - data-center-fabric
+    - automation
+    Elastic Bandwidth-aware Routing Framework:
+    - segment-routing
+    - routing-protocols
+    - congestion-control
+    Testing of Christian's Congestion Control Code (C4):
+    - congestion-control
+    - http
+    - benchmarking
+    Cross-Publisher Causal Ordering for YANG-Push Datastore Telemetry:
+    - telemetry
+    - observability

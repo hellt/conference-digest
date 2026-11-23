@@ -1,0 +1,1710 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="ACM&#x27;s flagship computer security conference covering applied cryptography, authentication, systems and network security, privacy, and measurement.">
+      
+      
+      
+        <link rel="canonical" href="https://tldr.netdevops.me/ccs-2026/">
+      
+      
+      
+        <link rel="prev" href="../denog-18/">
+      
+      
+        <link rel="next" href="../ietf-127/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.svg">
+      <meta name="generator" content="zensical-0.0.74">
+    
+    
+      
+        <title>ACM CCS 2026 - Conference Digest</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.4ab2de0c.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  <meta property="og:type" content="article" />
+<meta property="og:site_name" content="Conference Digest" />
+<meta property="og:title" content="ACM CCS 2026 · Conference Digest" />
+<meta property="og:description" content="ACM&#39;s flagship computer security conference covering applied cryptography, authentication, systems and network security, privacy, and measurement." />
+<meta property="og:image" content="https://tldr.netdevops.me/assets/images/social/ccs-2026.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://tldr.netdevops.me/ccs-2026/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="ACM CCS 2026 · Conference Digest" />
+<meta property="twitter:description" content="ACM&#39;s flagship computer security conference covering applied cryptography, authentication, systems and network security, privacy, and measurement." />
+<meta property="twitter:image" content="https://tldr.netdevops.me/assets/images/social/ccs-2026.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="Conference Digest" class="md-header__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg class="cd-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-width="2.4" aria-hidden="true"><path class="cd-mark__line" d="M3.5 4.5h12M3.5 14.5h9M3.5 19.5h13.5" stroke="currentColor"/><path class="cd-mark__pick" d="M3.5 9.5h17" stroke="currentColor"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navigation</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Conference Digest
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ACM CCS 2026
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option md-switch" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-switch__target" title="Switch to dark mode" for="__palette_1" hidden></label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-switch__target" title="Switch to light mode" for="__palette_0" hidden></label>
+    
+  
+  <span class="md-switch__track">
+    <svg class="sun-and-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <mask class="moon" id="moon-mask">
+        <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+        <circle cx="24" cy="10" r="6" fill="black"/>
+      </mask>
+      <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+      <g class="sun-beams" stroke="currentColor">
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </g>
+    </svg>
+  </span>
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Search</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./.." class="md-tabs__link">
+        
+  
+  Digests
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conferences/" class="md-tabs__link">
+        
+  
+  Conferences
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../companies/" class="md-tabs__link">
+        
+  
+  Companies
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../how-it-works/" class="md-tabs__link">
+        
+  
+  How it works
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../archive/" class="md-tabs__link">
+        
+  
+  Archive
+
+      </a>
+    </li>
+  
+
+      
+      <li class="md-tabs__item md-tabs__item--powered">
+        <a href="https://tokenfactory.nebius.com/" class="md-tabs__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+          <span class="md-powered-text">Powered by</span>
+          <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+          <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="Conference Digest" class="md-nav__button md-logo" aria-label="Conference Digest" data-md-component="logo">
+      <svg class="cd-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-width="2.4" aria-hidden="true"><path class="cd-mark__line" d="M3.5 4.5h12M3.5 14.5h9M3.5 19.5h13.5" stroke="currentColor"/><path class="cd-mark__pick" d="M3.5 9.5h17" stroke="currentColor"/></svg>
+    </a>
+    Conference Digest
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellt/conference-digest" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellt/conference-digest
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./.." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Digests
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nvbleed-covert-and-side-channel-attacks-on-nvidia-multi-gpu-interconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NVBleed: Covert and Side-Channel Attacks on NVIDIA Multi-GPU Interconnect
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ldbf-deep-exploration-of-ebpf-runtime-via-llm-driven-program-generation-and-adaptive-context-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        LDBF: Deep Exploration of eBPF Runtime via LLM-Driven Program Generation and Adaptive Context Orchestration
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turboretry-mitigating-large-scale-quic-handshake-floods-with-off-the-shelf-dpu-offloading" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TurboRetry: Mitigating Large-Scale QUIC Handshake Floods with Off-the-Shelf DPU Offloading
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parade-unified-and-data-driven-prefix-as-semantics-for-bgp-anomaly-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Parade: Unified and Data-Driven Prefix-AS Semantics for BGP Anomaly Detection
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploiting-vulnerabilities-at-ixp-route-servers-to-perform-stealth-bgp-hijacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exploiting vulnerabilities at IXP route servers to perform stealth BGP hijacks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enforcement-of-in-kernel-stateful-security-policies-via-ebpf" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Enforcement of In-Kernel Stateful Security Policies via eBPF
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnosing-programmable-data-plane-attacks-with-provenance-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Diagnosing Programmable Data Plane Attacks with Provenance Observability
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emicro-real-time-multi-hop-access-control-for-microservices-with-ebpf" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        eMicro: Real-Time Multi-Hop Access Control for Microservices with eBPF
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twist-private-tenant-dedicated-llm-serving-via-joint-model-token-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TWIST: Private Tenant-Dedicated LLM Serving via Joint Model-Token Transformation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rethinking-isolation-in-rpki-cross-publication-origin-attacks-on-rpki-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rethinking Isolation in RPKI: Cross-Publication-Origin Attacks on RPKI Validation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-trade-off-between-performance-and-security-exploring-vulnerabilities-in-dns-task-queue-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Trade-off Between Performance and Security: Exploring Vulnerabilities in DNS Task Queue Scheduling
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leakytree-cross-vm-bit-by-bit-deduplicated-page-leakage-via-linux-kernel-samepage-merging-internals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        LeakyTree: Cross-VM Bit-by-Bit Deduplicated Page Leakage via Linux Kernel Samepage Merging Internals
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gone-in-8-seconds-uncovering-malicious-bots-operating-on-public-container-registries" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Gone in 8 Seconds: Uncovering Malicious Bots Operating on Public Container Registries
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contractguard-auditing-semantic-contracts-of-mcp-tools-for-security-violations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ContractGuard: Auditing Semantic Contracts of MCP Tools for Security Violations
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-prompt-to-pwn-exploiting-gpu-memory-errors-during-ml-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Prompt to Pwn: Exploiting GPU Memory Errors During ML Inference
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoningbomb-a-stealthy-denial-of-service-attack-by-inducing-pathologically-long-reasoning-in-large-reasoning-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ReasoningBomb: A Stealthy Denial-of-Service Attack by Inducing Pathologically Long Reasoning in Large Reasoning Models
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mitigating-code-injection-attacks-on-modern-gpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mitigating Code Injection Attacks on Modern GPUs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governing-ai-agent-with-capability-and-delegation-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Governing AI Agent with Capability and Delegation Chain
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trapped-handler-a-practical-performance-degradation-attack-on-nvidia-vgpu-via-preemption-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Trapped Handler: A Practical Performance Degradation Attack on NVIDIA vGPU via Preemption Manipulation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-have-all-the-firewalls-gone-security-consequences-of-residential-ipv6-transition" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Where Have All the Firewalls Gone? Security Consequences of Residential IPv6 Transition
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-first-principles-evaluation-of-graph-based-network-intrusion-detection-systems-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A First-Principles Evaluation of Graph-Based Network Intrusion Detection Systems ( video )
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cve-genie-an-llm-based-multi-agent-framework-for-reproducing-cves" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CVE-Genie: An LLM-Based Multi-Agent Framework for Reproducing CVEs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deepprove-verifiable-end-to-end-large-language-model-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DeepProve: Verifiable End-to-End Large Language Model Inference
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opaque-shader-dynamic-code-execution-on-gpus-via-explicit-graphics-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Opaque Shader: Dynamic Code Execution on GPUs via Explicit Graphics APIs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifying-consensus-protocols-from-llm-assisted-tla-a-case-study-of-byzantine-reliable-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Verifying Consensus Protocols from LLM-assisted TLA$^+$: A Case Study of Byzantine Reliable Broadcast
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Conferences
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Companies
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-it-works/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  How it works
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Archive
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+    <li class="md-nav__item md-nav__item--powered">
+      <a href="https://tokenfactory.nebius.com/" class="md-nav__link md-powered" target="_blank" rel="noopener" title="Nebius Token Factory">
+        <span class="md-powered-text">Powered by</span>
+        <img class="md-powered-logo md-powered-logo--light" src="../images/nebius-token-factory-light.svg" alt="Nebius Token Factory" width="206" height="28">
+        <img class="md-powered-logo md-powered-logo--dark" src="../images/nebius-token-factory-dark.svg" alt="Nebius Token Factory" width="206" height="28">
+      </a>
+    </li>
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Core
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nvbleed-covert-and-side-channel-attacks-on-nvidia-multi-gpu-interconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        NVBleed: Covert and Side-Channel Attacks on NVIDIA Multi-GPU Interconnect
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ldbf-deep-exploration-of-ebpf-runtime-via-llm-driven-program-generation-and-adaptive-context-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        LDBF: Deep Exploration of eBPF Runtime via LLM-Driven Program Generation and Adaptive Context Orchestration
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turboretry-mitigating-large-scale-quic-handshake-floods-with-off-the-shelf-dpu-offloading" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TurboRetry: Mitigating Large-Scale QUIC Handshake Floods with Off-the-Shelf DPU Offloading
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parade-unified-and-data-driven-prefix-as-semantics-for-bgp-anomaly-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Parade: Unified and Data-Driven Prefix-AS Semantics for BGP Anomaly Detection
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploiting-vulnerabilities-at-ixp-route-servers-to-perform-stealth-bgp-hijacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exploiting vulnerabilities at IXP route servers to perform stealth BGP hijacks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enforcement-of-in-kernel-stateful-security-policies-via-ebpf" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Enforcement of In-Kernel Stateful Security Policies via eBPF
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnosing-programmable-data-plane-attacks-with-provenance-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Diagnosing Programmable Data Plane Attacks with Provenance Observability
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emicro-real-time-multi-hop-access-control-for-microservices-with-ebpf" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        eMicro: Real-Time Multi-Hop Access Control for Microservices with eBPF
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twist-private-tenant-dedicated-llm-serving-via-joint-model-token-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        TWIST: Private Tenant-Dedicated LLM Serving via Joint Model-Token Transformation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adjacent
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adjacent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rethinking-isolation-in-rpki-cross-publication-origin-attacks-on-rpki-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Rethinking Isolation in RPKI: Cross-Publication-Origin Attacks on RPKI Validation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-trade-off-between-performance-and-security-exploring-vulnerabilities-in-dns-task-queue-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The Trade-off Between Performance and Security: Exploring Vulnerabilities in DNS Task Queue Scheduling
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leakytree-cross-vm-bit-by-bit-deduplicated-page-leakage-via-linux-kernel-samepage-merging-internals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        LeakyTree: Cross-VM Bit-by-Bit Deduplicated Page Leakage via Linux Kernel Samepage Merging Internals
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gone-in-8-seconds-uncovering-malicious-bots-operating-on-public-container-registries" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Gone in 8 Seconds: Uncovering Malicious Bots Operating on Public Container Registries
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contractguard-auditing-semantic-contracts-of-mcp-tools-for-security-violations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ContractGuard: Auditing Semantic Contracts of MCP Tools for Security Violations
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-prompt-to-pwn-exploiting-gpu-memory-errors-during-ml-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        From Prompt to Pwn: Exploiting GPU Memory Errors During ML Inference
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reasoningbomb-a-stealthy-denial-of-service-attack-by-inducing-pathologically-long-reasoning-in-large-reasoning-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ReasoningBomb: A Stealthy Denial-of-Service Attack by Inducing Pathologically Long Reasoning in Large Reasoning Models
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mitigating-code-injection-attacks-on-modern-gpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mitigating Code Injection Attacks on Modern GPUs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#governing-ai-agent-with-capability-and-delegation-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Governing AI Agent with Capability and Delegation Chain
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trapped-handler-a-practical-performance-degradation-attack-on-nvidia-vgpu-via-preemption-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Trapped Handler: A Practical Performance Degradation Attack on NVIDIA vGPU via Preemption Manipulation
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-have-all-the-firewalls-gone-security-consequences-of-residential-ipv6-transition" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Where Have All the Firewalls Gone? Security Consequences of Residential IPv6 Transition
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-first-principles-evaluation-of-graph-based-network-intrusion-detection-systems-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A First-Principles Evaluation of Graph-Based Network Intrusion Detection Systems ( video )
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcard" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Wildcard
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wildcard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cve-genie-an-llm-based-multi-agent-framework-for-reproducing-cves" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CVE-Genie: An LLM-Based Multi-Agent Framework for Reproducing CVEs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deepprove-verifiable-end-to-end-large-language-model-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DeepProve: Verifiable End-to-End Large Language Model Inference
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opaque-shader-dynamic-code-execution-on-gpus-via-explicit-graphics-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Opaque Shader: Dynamic Code Execution on GPUs via Explicit Graphics APIs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifying-consensus-protocols-from-llm-assisted-tla-a-case-study-of-byzantine-reliable-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Verifying Consensus Protocols from LLM-assisted TLA$^+$: A Case Study of Byzantine Reliable Broadcast
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Themes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
+      <div class="cd-post-toolbar">
+        <a class="cd-back" href="./..">← All digests</a>
+        
+          <span>17 min read</span>
+        
+      </div>
+      
+        
+
+  
+  
+
+
+<h1 id="acm-ccs-2026">ACM CCS 2026<a class="headerlink" href="#acm-ccs-2026" title="Permanent link">#</a></h1>
+<p>A security conference is not this PM's home turf, but CCS 2026's program intersects their stack heavily: eBPF, programmable data planes, DPU offload, BGP/RPKI/IXP interconnect risk, GPU interconnect and multi-tenant serving, and LLM-agent tooling. One caveat applies to everything below: <strong>none of these items has a published abstract or paper link in the program</strong> — each entry lists title, authors, and session only. Every write-up is therefore grounded in the title and author affiliations, with mechanisms flagged as inferred where they are. Treat this as a watch-list of what to read when the papers appear, not a verdict on results.</p>
+<!-- more -->
+
+<div class="digest-facts">
+<p><span class="digest-fact" markdown>November 15, 2026 – November 19, 2026</span>
+<span class="digest-fact" markdown><a href="https://www.sigsac.org/ccs/CCS2026/program/schedule.html">Program</a></span></p>
+</div>
+<div class="digest-body">
+<h2 class="tier tier-core" id="core">Core<a class="headerlink" href="#core" title="Permanent link">#</a></h2>
+<div class="pick pick-core">
+<h3 id="nvbleed-covert-and-side-channel-attacks-on-nvidia-multi-gpu-interconnect"><a href="nvbleed-covert-and-side-channel-attacks-on-nvidia-multi-gpu-interconnect/">NVBleed: Covert and Side-Channel Attacks on NVIDIA Multi-GPU Interconnect</a><a class="headerlink" href="#nvbleed-covert-and-side-channel-attacks-on-nvidia-multi-gpu-interconnect" title="Permanent link">#</a></h3>
+<p>Yicheng Zhang, Ravan Nazaraliyev (<a href="../companies/uc-riverside/">UC Riverside</a>), Sankha Baran Dutta (<a href="../companies/brookhaven-national-laboratory/">Brookhaven National Laboratory</a>), Andres Marquez, Kevin J. Barker (<a href="../companies/pacific-northwest-national-laboratory/">Pacific Northwest National Laboratory</a>), Nael Abu-Ghazaleh (<a href="../companies/uc-riverside/">UC Riverside</a>)</p>
+<ul>
+<li><strong>Why</strong>: GPU interconnects (NVLink/NVSwitch-class fabrics) are the shared substrate of every AI training cluster, and increasingly of multi-tenant inference. Cross-GPU covert and side channels change the threat model for exactly the hardware this PM builds on — especially when GPUs from different tenants or jobs share a fabric.</li>
+<li><strong>What</strong>: Covert and side-channel attacks against NVIDIA's multi-GPU interconnect. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: The "bleed" in the name suggests information leaking across GPUs that share an interconnect, likely via timing or contention channels on the link fabric; the actual channel construction is not published yet. The PNNL/Brookhaven co-authorship hints at relevance to HPC-scale GPU systems.</li>
+<li><strong>Where applicable</strong>: NVIDIA-specific by definition, but the technique class applies to any NVLink-based cluster, GPU virtualization, or multi-job GPU sharing. Directly relevant if you run shared GPU fabrics for training or inference.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="ldbf-deep-exploration-of-ebpf-runtime-via-llm-driven-program-generation-and-adaptive-context-orchestration"><a href="ldbf-deep-exploration-of-ebpf-runtime-via-llm-driven-program-generation/">LDBF: Deep Exploration of eBPF Runtime via LLM-Driven Program Generation and Adaptive Context Orchestration</a><a class="headerlink" href="#ldbf-deep-exploration-of-ebpf-runtime-via-llm-driven-program-generation-and-adaptive-context-orchestration" title="Permanent link">#</a></h3>
+<p>Yinhao Hu, Kaiyan Mei, Quan Sun, Dongliang Mu (<a href="../companies/huazhong-university-of-science-and-technology/">Huazhong University of Science and Technology</a>), Zeyu Sun (<a href="../companies/chinese-academy-of-sciences/">Chinese Academy of Sciences</a>), Yuan Li (<a href="../companies/zhongguancun-laboratory/">Zhongguancun Laboratory</a>), Chao Zhang (<a href="../companies/tsinghua-university/">Tsinghua University</a>)</p>
+<ul>
+<li><strong>Why</strong>: Two of the PM's interests in one paper: eBPF (the substrate under Cilium and most modern K8s networking) and LLM-assisted systems engineering. Using LLMs to systematically generate eBPF programs to probe the runtime is both a hardening effort and a preview of how infrastructure testing will be done.</li>
+<li><strong>What</strong>: A system that uses LLM-driven program generation, with adaptive orchestration of context, to deeply explore the eBPF runtime. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred from the title: an LLM generates large volumes of diverse eBPF programs, with feedback ("adaptive context") steering generation toward unexplored or buggy corners of the verifier/JIT/runtime. Details pending the paper.</li>
+<li><strong>Where applicable</strong>: The eBPF runtime is Linux-kernel-wide, so findings apply broadly wherever eBPF runs — K8s nodes, Cilium deployments, observability agents. The LLM-driven methodology itself transfers to other interpreter/VM hardening problems.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="turboretry-mitigating-large-scale-quic-handshake-floods-with-off-the-shelf-dpu-offloading"><a href="turboretry-mitigating-large-scale-quic-handshake-floods-with-off-the-she/">TurboRetry: Mitigating Large-Scale QUIC Handshake Floods with Off-the-Shelf DPU Offloading</a><a class="headerlink" href="#turboretry-mitigating-large-scale-quic-handshake-floods-with-off-the-shelf-dpu-offloading" title="Permanent link">#</a></h3>
+<p>Jiahao Wu, Kai Lv, Zhenyu Li (<a href="../companies/institute-of-computing-technology/">Institute of Computing Technology</a>, <a href="../companies/chinese-academy-of-sciences/">CAS</a>), Heng Pan, Yanbiao Li, Gaogang Xie (Computer Network Information Center, <a href="../companies/chinese-academy-of-sciences/">CAS</a>)</p>
+<ul>
+<li><strong>Why</strong>: QUIC handshake floods are a live operational DoS vector at any HTTP/3 edge, and offloading the mitigation to commodity DPUs speaks directly to the PM's DPU/SmartNIC and front-end infrastructure interests. "Off-the-shelf" matters: no custom silicon assumed.</li>
+<li><strong>What</strong>: A mitigation for large-scale QUIC handshake floods built on DPU offloading. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: The name points at QUIC's stateless retry/token mechanism; the likely design moves retry-token handling and handshake filtering onto the DPU's datapath so the host CPU never sees flood traffic. Flagged as inferred from the title.</li>
+<li><strong>Where applicable</strong>: Any QUIC/HTTP-3 serving edge with DPU-equipped hosts — cloud front-ends, CDNs, API gateways. The off-the-shelf framing suggests broad applicability rather than a single-vendor silicon dependency.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="parade-unified-and-data-driven-prefix-as-semantics-for-bgp-anomaly-detection"><a href="parade-unified-and-data-driven-prefix-as-semantics-for-bgp-anomaly-detec/">Parade: Unified and Data-Driven Prefix-AS Semantics for BGP Anomaly Detection</a><a class="headerlink" href="#parade-unified-and-data-driven-prefix-as-semantics-for-bgp-anomaly-detection" title="Permanent link">#</a></h3>
+<p>Yunze Wei, Xingang Shi, Minghao Zhang, Zhaozhen Wang, Han Zhang, Yahui Li, Xia Yin (<a href="../companies/tsinghua-university/">Tsinghua University</a>), Qiang Ma (<a href="../companies/zhongguancun-laboratory/">Zhongguancun Laboratory</a>)</p>
+<ul>
+<li><strong>Why</strong>: BGP anomaly detection (hijacks, route leaks) is a daily operational concern for anyone operating or interconnecting networks. A unified prefix-AS semantic model is the kind of thing that could improve monitoring tools beyond signature-based approaches.</li>
+<li><strong>What</strong>: A data-driven BGP anomaly detection framework built on unified prefix-AS semantics. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred from the title: modeling the joint semantics of prefix-AS relationships (who legitimately originates what) as the basis for detecting anomalies, rather than per-signal heuristics. "Data-driven" suggests learned models over routing data. The Tsinghua networking group typically validates on real BGP measurement data — unverified until the paper.</li>
+<li><strong>Where applicable</strong>: Broadly applicable to BGP monitoring: route collectors, ISP monitoring, interconnect security. Not tied to a single operator's topology by design.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="exploiting-vulnerabilities-at-ixp-route-servers-to-perform-stealth-bgp-hijacks"><a href="exploiting-vulnerabilities-at-ixp-route-servers-to-perform-stealth-bgp-h/">Exploiting vulnerabilities at IXP route servers to perform stealth BGP hijacks</a><a class="headerlink" href="#exploiting-vulnerabilities-at-ixp-route-servers-to-perform-stealth-bgp-hijacks" title="Permanent link">#</a></h3>
+<p>Gabby Rimlinger (<a href="../companies/sorbonne-universit/">Sorbonne Université</a>), Joaquim Pereira (<a href="../companies/university-of-waikato/">University of Waikato</a>), Matthieu Gouel (<a href="../companies/nxthdr/">nxthdr</a>), Olivier Fourmaux, Timur Friedman (<a href="../companies/sorbonne-universit/">Sorbonne Université</a>), Pedro Marcos (<a href="../companies/universidade-federal-do-rio-grande/">FURG</a>), Cristel Pelsser (<a href="../companies/uclouvain/">UCLouvain</a>), Ronaldo A. Ferreira (<a href="../companies/universidade-federal-de-mato-grosso-do-sul/">UFMS</a>), Kevin Vermeulen (<a href="../companies/cnrs/">CNRS</a>, <a href="../companies/cole-polytechnique/">École Polytechnique</a>)</p>
+<ul>
+<li><strong>Why</strong>: IXPs are where the PM's interconnect strategy plays out, and route servers are the mechanism most mid-size networks use to exchange routes without a full mesh of BGP sessions. If route servers can be abused for <em>stealthy</em> hijacks, that changes how much route-server-learned routes can be trusted.</li>
+<li><strong>What</strong>: Demonstrated vulnerabilities in IXP route servers enabling BGP hijacks that evade common detection. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: manipulation of route-server path handling or visibility rules (e.g., what is filtered, re-advertised, or hidden from route-views) so a hijacked prefix doesn't look hijacked to standard monitors. The author team (Sorbonne/LIP6, CNRS, UCLouvain — established IXP measurement researchers) suggests real route-server and IXP data involvement, pending the paper.</li>
+<li><strong>Where applicable</strong>: Any network that peers via IXP route servers — which is most of them. Directly actionable for interconnect/peering policy review.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="enforcement-of-in-kernel-stateful-security-policies-via-ebpf"><a href="enforcement-of-in-kernel-stateful-security-policies-via-ebpf/">Enforcement of In-Kernel Stateful Security Policies via eBPF</a><a class="headerlink" href="#enforcement-of-in-kernel-stateful-security-policies-via-ebpf" title="Permanent link">#</a></h3>
+<p>Letterio Galletta (<a href="../companies/imt-school-for-advanced-studies-lucca/">IMT School for Advanced Studies Lucca</a>)</p>
+<ul>
+<li><strong>Why</strong>: eBPF is maturing from observability into <em>enforcement</em> — exactly the trajectory the PM tracks via Cilium and friends. Stateful in-kernel policy is the hard part (connection state, protocol-aware rules) and this sits in a session on formal analysis and verification, suggesting rigor rather than a hack.</li>
+<li><strong>What</strong>: A system for enforcing stateful security policies directly in the Linux kernel using eBPF. (No public abstract — title and session only; single-author talk.)</li>
+<li><strong>How</strong>: Inferred from the title: flow/connection state tracked in eBPF maps so policy decisions happen in-kernel without a userspace agent or sidecar round-trip. Placement in the formal-analysis session suggests the policy model or its enforcement has a verification component.</li>
+<li><strong>Where applicable</strong>: Linux hosts and K8s nodes broadly — no special silicon or operator topology implied. Relevant to anyone replacing sidecar-based policy enforcement with in-kernel enforcement.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="diagnosing-programmable-data-plane-attacks-with-provenance-observability"><a href="diagnosing-programmable-data-plane-attacks-with-provenance-observability/">Diagnosing Programmable Data Plane Attacks with Provenance Observability</a><a class="headerlink" href="#diagnosing-programmable-data-plane-attacks-with-provenance-observability" title="Permanent link">#</a></h3>
+<p>Dhiraj Saharia (<a href="../companies/georgetown-university/">Georgetown University</a>), Ashish Gehani, Vinod Yegneswaran (<a href="../companies/sri-international/">SRI International</a>), Benjamin E. Ujcich (<a href="../companies/georgetown-university/">Georgetown University</a>)</p>
+<ul>
+<li><strong>Why</strong>: P4/programmable dataplanes are a core interest, and this paper pairs two things the field needs: an attack surface analysis for programmable planes, and <em>provenance-based observability</em> as the diagnosis tool — operational tooling thinking applied to a research fabric.</li>
+<li><strong>What</strong>: Techniques for diagnosing attacks on programmable data planes using provenance observability. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: capturing lineage of packets and events through the programmable pipeline so that when an attack occurs, its causal path through the data plane can be reconstructed — a forensic step up from flow counters.</li>
+<li><strong>Where applicable</strong>: P4-programmable switches and SmartNIC-based pipelines; relevant wherever programmable dataplanes are deployed or evaluated. The Georgetown/SRI pedigree suggests a research-to-production tooling angle.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="emicro-real-time-multi-hop-access-control-for-microservices-with-ebpf"><a href="emicro-real-time-multi-hop-access-control-for-microservices-with-ebpf/">eMicro: Real-Time Multi-Hop Access Control for Microservices with eBPF</a><a class="headerlink" href="#emicro-real-time-multi-hop-access-control-for-microservices-with-ebpf" title="Permanent link">#</a></h3>
+<p>Rizky Ramadhana Putra, Osama Bajaber (<a href="../companies/king-abdulaziz-university/">King Abdulaziz University</a>), Saimon Amanuel Tsegai, Teryl Taylor, Frederico Araujo (<a href="../companies/ibm/">IBM Research</a>), Yuede Ji (<a href="../companies/ut-arlington/">UT Arlington</a>), Peng Gao (<a href="../companies/virginia-tech/">Virginia Tech</a>)</p>
+<ul>
+<li><strong>Why</strong>: Microsegmentation for microservices is the service-mesh/Cilium problem the PM works on daily. Multi-hop, real-time access control without sidecars is precisely the zero-trust architecture question for Kubernetes environments.</li>
+<li><strong>What</strong>: eBPF-based real-time access control across multi-hop microservice call chains. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred from the title: eBPF hooks enforcing access-control policy at each service hop in the call path, with "real-time" implying low enough overhead to enforce on the hot path rather than audit after the fact. IBM Research co-authorship suggests enterprise-microservice motivation.</li>
+<li><strong>Where applicable</strong>: Microservice/Kubernetes environments broadly — the eBPF substrate is generic. An alternative or complement to sidecar-based service meshes and network policies.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="twist-private-tenant-dedicated-llm-serving-via-joint-model-token-transformation"><a href="twist-private-tenant-dedicated-llm-serving-via-joint-model-token-transfo/">TWIST: Private Tenant-Dedicated LLM Serving via Joint Model-Token Transformation</a><a class="headerlink" href="#twist-private-tenant-dedicated-llm-serving-via-joint-model-token-transformation" title="Permanent link">#</a></h3>
+<p>Qizhi Zhang, Yu Lin, Wenqiang Ruan, Quanwei Cai, Daode Zhang, Jue Hong, Ye Wu (<a href="../companies/bytedance/">ByteDance</a>), Yufei Chen, Longxiang Wang, Cong Wang (<a href="../companies/city-university-of-hong-kong/">City University of Hong Kong</a>)</p>
+<ul>
+<li><strong>Why</strong>: Multi-tenant LLM serving with per-tenant isolation is a live problem for anyone offering inference as a service. If the title's approach delivers "tenant-dedicated" serving without a model copy per tenant, it changes the economics of isolated inference.</li>
+<li><strong>What</strong>: A technique for private, tenant-dedicated LLM serving via joint model-token transformation. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred from the title: jointly transforming the model and the token space per tenant so each tenant's serving instance appears dedicated and isolated — presumably cheaper isolation than per-tenant weights. Mechanism unverified until the paper.</li>
+<li><strong>Where applicable</strong>: LLM inference platforms, especially multi-tenant ones. ByteDance co-authorship suggests motivation from large-scale production serving — an org-specific scale caveat to check for in the evaluation.</li>
+</ul>
+</div>
+<h2 class="tier tier-adjacent" id="adjacent">Adjacent<a class="headerlink" href="#adjacent" title="Permanent link">#</a></h2>
+<div class="pick pick-adjacent">
+<h3 id="rethinking-isolation-in-rpki-cross-publication-origin-attacks-on-rpki-validation"><a href="rethinking-isolation-in-rpki-cross-publication-origin-attacks-on-rpki-va/">Rethinking Isolation in RPKI: Cross-Publication-Origin Attacks on RPKI Validation</a><a class="headerlink" href="#rethinking-isolation-in-rpki-cross-publication-origin-attacks-on-rpki-validation" title="Permanent link">#</a></h3>
+<p>Qi Wang, Jianjun Chen, TaoFei Guo (<a href="../companies/peking-university/">Peking University</a>), Minghao Zhang, Yuheng Zhang, Jingcheng Yang, Xia Yin (<a href="../companies/tsinghua-university/">Tsinghua University</a>)</p>
+<ul>
+<li><strong>Why</strong>: RPKI is the routing-integrity layer the PM's interconnect strategy leans on. A new attack class ("cross-publication-origin") against RPKI <em>validation</em> — not against key hygiene — would change operational trust in ROA-based route origin validation.</li>
+<li><strong>What</strong>: An attack class on RPKI validation arising from insufficient isolation between publication points. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred from the title: confusion or manipulation across publication origins such that data published for one origin influences validation of another — likely involving repository/publication-point structure rather than mis-issuance by CAs.</li>
+<li><strong>Where applicable</strong>: Every network operating RPKI (ROAs + validation). Not operator-specific; this is protocol/ecosystem structure, not topology.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="the-trade-off-between-performance-and-security-exploring-vulnerabilities-in-dns-task-queue-scheduling"><a href="the-trade-off-between-performance-and-security-exploring-vulnerabilities/">The Trade-off Between Performance and Security: Exploring Vulnerabilities in DNS Task Queue Scheduling</a><a class="headerlink" href="#the-trade-off-between-performance-and-security-exploring-vulnerabilities-in-dns-task-queue-scheduling" title="Permanent link">#</a></h3>
+<p>Shiming Liu, Yunyi Zhang, Ruixuan Li, Shiyao Guo, Baojun Liu, Donghong Sun (<a href="../companies/tsinghua-university/">Tsinghua University</a>), Yong Ma, Linjian Song (<a href="../companies/alibaba/">Alibaba Group</a>)</p>
+<ul>
+<li><strong>Why</strong>: Resolver scheduling under crafted load is a real resiliency topic for DNS operations, and the performance-vs-security framing is the classic DNS-software tension. Alibaba co-authors suggest exposure of these issues at production scale.</li>
+<li><strong>What</strong>: Vulnerabilities arising from how DNS software schedules its task queue, explored as a performance/security trade-off. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: crafted query mixes that abuse queue/scheduling priorities to starve or degrade resolver processing — a DoS class that exists because scheduling optimizes for the benign traffic mix.</li>
+<li><strong>Where applicable</strong>: DNS resolver implementations broadly; the Alibaba Group involvement hints at production-resolver relevance (unverified). Matters to anyone running recursive/authoritative infrastructure.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="leakytree-cross-vm-bit-by-bit-deduplicated-page-leakage-via-linux-kernel-samepage-merging-internals"><a href="leakytree-cross-vm-bit-by-bit-deduplicated-page-leakage-via-linux-kernel/">LeakyTree: Cross-VM Bit-by-Bit Deduplicated Page Leakage via Linux Kernel Samepage Merging Internals</a><a class="headerlink" href="#leakytree-cross-vm-bit-by-bit-deduplicated-page-leakage-via-linux-kernel-samepage-merging-internals" title="Permanent link">#</a></h3>
+<p>Ernesto Martinez Garcia, Lukas Maar, Martin Unterguggenberger, Mathias Oberhuber, Stefan Mangard (<a href="../companies/graz-university-of-technology/">Graz University of Technology</a>)</p>
+<ul>
+<li><strong>Why</strong>: KSM memory deduplication is a standard memory-saving trick in virtualized/cloud hosts. Cross-VM leakage through it is a multi-tenancy risk for exactly the cloud infrastructure the PM runs.</li>
+<li><strong>What</strong>: Bit-by-bit cross-VM information leakage exploiting internals of Linux kernel samepage merging. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: side channels from KSM's dedup decisions (e.g., timing of merge/unmerge) letting a malicious VM infer another VM's memory contents one bit at a time. Graz has a strong side-channel track record, suggesting careful construction — pending the paper.</li>
+<li><strong>Where applicable</strong>: Any virtualization or cloud stack that enables KSM across trust domains. The mitigation question (disable cross-VM KSM) is directly operational.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="gone-in-8-seconds-uncovering-malicious-bots-operating-on-public-container-registries"><a href="gone-in-8-seconds-uncovering-malicious-bots-operating-on-public-containe/">Gone in 8 Seconds: Uncovering Malicious Bots Operating on Public Container Registries</a><a class="headerlink" href="#gone-in-8-seconds-uncovering-malicious-bots-operating-on-public-container-registries" title="Permanent link">#</a></h3>
+<p>Billy Tsouvalas, Nick Nikiforakis (<a href="../companies/stony-brook-university/">Stony Brook University</a>)</p>
+<ul>
+<li><strong>Why</strong>: Public container registries are part of the cloud-native supply chain every K8s shop pulls from. Evidence of systematic malicious bot activity there informs image-provenance policy and registry trust.</li>
+<li><strong>What</strong>: A measurement study uncovering malicious bots operating on public container registries. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: large-scale measurement of automated account/behavior patterns on public registries (Stony Brook's measurement group is well established in this style of work).</li>
+<li><strong>Where applicable</strong>: Public registries and any organization pulling third-party images — supply-chain policy input rather than a specific defense.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="contractguard-auditing-semantic-contracts-of-mcp-tools-for-security-violations"><a href="contractguard-auditing-semantic-contracts-of-mcp-tools-for-security-viol/">ContractGuard: Auditing Semantic Contracts of MCP Tools for Security Violations</a><a class="headerlink" href="#contractguard-auditing-semantic-contracts-of-mcp-tools-for-security-violations" title="Permanent link">#</a></h3>
+<p>Hengkai Ye, Zhechang Zhang, Ruibo Lu, Jinyuan Jia, Hong Hu (<a href="../companies/the-pennsylvania-state-university/">The Pennsylvania State University</a>)</p>
+<ul>
+<li><strong>Why</strong>: MCP is becoming the de facto tool interface for LLM agents, and the PM's interests include agents. Auditing the <em>semantic contracts</em> of MCP tools is early plumbing for agent-to-tool trust — the layer where agent security will actually be enforced.</li>
+<li><strong>What</strong>: A system that audits the semantic contracts of MCP tools for security violations. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: static or semantic analysis of tool descriptions/schemas and their implementations to detect contracts that mislead agents or permit unsafe actions when invoked.</li>
+<li><strong>Where applicable</strong>: MCP-based agent deployments and tool ecosystems generally; relevant to anyone building or consuming agent tool catalogs.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="from-prompt-to-pwn-exploiting-gpu-memory-errors-during-ml-inference"><a href="from-prompt-to-pwn-exploiting-gpu-memory-errors-during-ml-inference/">From Prompt to Pwn: Exploiting GPU Memory Errors During ML Inference</a><a class="headerlink" href="#from-prompt-to-pwn-exploiting-gpu-memory-errors-during-ml-inference" title="Permanent link">#</a></h3>
+<p>Jonas Roels, Adriaan Jacobs, Stijn Volckaert (<a href="../companies/ku-leuven/">KU Leuven</a>), Silviu Vlasceanu, Mahmoud Ammar (<a href="../companies/independent-researchers/">Independent researchers</a>)</p>
+<ul>
+<li><strong>Why</strong>: As inference fleets scale, "prompt reaches memory error" is a new integrity/availability class for AI infrastructure — the kind of failure mode a PM running GPU inference services needs on the risk register.</li>
+<li><strong>What</strong>: Exploitation of GPU memory errors during ML inference, reachable from model inputs. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: crafted prompts (shapes/sequences) that steer inference into execution paths where uncorrected memory errors can be turned into exploitable state — i.e., the model input becomes a fault-injection vector.</li>
+<li><strong>Where applicable</strong>: GPU inference services; the requirement of latent memory errors on the hardware is a real constraint on exploitability, but the class matters for fleet reliability even absent an attacker.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="reasoningbomb-a-stealthy-denial-of-service-attack-by-inducing-pathologically-long-reasoning-in-large-reasoning-models"><a href="reasoningbomb-a-stealthy-denial-of-service-attack-by-inducing-pathologic/">ReasoningBomb: A Stealthy Denial-of-Service Attack by Inducing Pathologically Long Reasoning in Large Reasoning Models</a><a class="headerlink" href="#reasoningbomb-a-stealthy-denial-of-service-attack-by-inducing-pathologically-long-reasoning-in-large-reasoning-models" title="Permanent link">#</a></h3>
+<p>Xiaogeng Liu (<a href="../companies/johns-hopkins-university/">Johns Hopkins University</a>), Xinyan Wang (<a href="../companies/university-of-wisconsin-madison/">University of Wisconsin–Madison</a>), Yechao Zhang (<a href="../companies/nanyang-technological-university/">Nanyang Technological University</a>), Sanjay Kariyappa, Chong Xiang, G. Edward Suh (<a href="../companies/nvidia-corporation/">NVIDIA Corporation</a>), Muhao Chen (<a href="../companies/university-of-california-davis/">UC Davis</a>), Chaowei Xiao (<a href="../companies/johns-hopkins-university/">Johns Hopkins University</a>)</p>
+<ul>
+<li><strong>Why</strong>: This attacks inference economics directly: a request that looks innocuous but burns an extreme token budget is a capacity/cost attack on any reasoning-model endpoint. For anyone serving LLMs, this is the inference-era slowloris.</li>
+<li><strong>What</strong>: A stealthy DoS attack that induces pathologically long reasoning in large reasoning models. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: crafted inputs that trigger degenerate reasoning loops (excessive chain-of-thought length) while remaining inconspicuous to input-level filters — degrading serving capacity without detectable malicious content.</li>
+<li><strong>Where applicable</strong>: Any reasoning-model serving endpoint; NVIDIA co-authorship suggests attention to real inference-stack implications. Mitigations (token budgets, reasoning-length monitors) are operationally cheap to consider.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="mitigating-code-injection-attacks-on-modern-gpus"><a href="mitigating-code-injection-attacks-on-modern-gpus/">Mitigating Code Injection Attacks on Modern GPUs</a><a class="headerlink" href="#mitigating-code-injection-attacks-on-modern-gpus" title="Permanent link">#</a></h3>
+<p>Carlo Ramponi, Luigi Dell'Eva (<a href="../companies/university-of-trento/">University of Trento</a>), Adriaan Jacobs, Stijn Volckaert (<a href="../companies/ku-leuven/">KU Leuven</a>), Silviu Vlasceanu, Mahmoud Ammar (<a href="../companies/huawei-research/">Huawei Research</a>), Bruno Crispo (<a href="../companies/university-of-trento/">University of Trento</a>)</p>
+<ul>
+<li><strong>Why</strong>: The defensive counterpart to the GPU-attack papers above. As GPU compute becomes multi-tenant, code-injection defenses on GPU runtimes are part of the isolation story for shared accelerator fleets.</li>
+<li><strong>What</strong>: Mitigations against code injection attacks on modern GPUs. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: runtime enforcement on GPU binaries/executables (CFI-style checks or memory-protection changes) to block injection into running GPU code; mechanism unverified.</li>
+<li><strong>Where applicable</strong>: Modern GPU runtimes and any multi-tenant GPU compute. Huawei Research involvement may mean specific hardware scope — check the paper for which GPU generations are covered.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="governing-ai-agent-with-capability-and-delegation-chain"><a href="governing-ai-agent-with-capability-and-delegation-chain/">Governing AI Agent with Capability and Delegation Chain</a><a class="headerlink" href="#governing-ai-agent-with-capability-and-delegation-chain" title="Permanent link">#</a></h3>
+<p>Jiaqin Yan, Guoxing Chen, Yan Meng, Haojin Zhu (<a href="../companies/shanghai-jiao-tong-university/">Shanghai Jiao Tong University</a>)</p>
+<ul>
+<li><strong>Why</strong>: Agent governance is emerging as the authorization model for autonomous agents — squarely in the PM's agents interest. Capability-plus-delegation chains is a familiar security primitive applied to a new subject.</li>
+<li><strong>What</strong>: A governance mechanism for AI agents based on capabilities and delegation chains. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: capability-based access control where agents hold explicitly granted capabilities, and delegation chains track how authority is passed along — so an agent cannot exceed what was granted, and sub-delegations remain auditable.</li>
+<li><strong>Where applicable</strong>: Agent frameworks generally; relevant to anyone designing what agents are allowed to do in production.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="trapped-handler-a-practical-performance-degradation-attack-on-nvidia-vgpu-via-preemption-manipulation"><a href="trapped-handler-a-practical-performance-degradation-attack-on-nvidia-vgp/">Trapped Handler: A Practical Performance Degradation Attack on NVIDIA vGPU via Preemption Manipulation</a><a class="headerlink" href="#trapped-handler-a-practical-performance-degradation-attack-on-nvidia-vgpu-via-preemption-manipulation" title="Permanent link">#</a></h3>
+<p>Cheng Gu, Yanan Guo (<a href="../companies/university-of-rochester/">University of Rochester</a>), Fatemeh Moradihaghighi, Zhenkai Zhang (<a href="../companies/clemson-university/">Clemson University</a>), Daniel Genkin (<a href="../companies/georgia-institute-of-technology/">Georgia Tech</a>), Zhuo Li (<a href="../companies/hydrox-ai/">Hydrox AI</a>), Mengyuan Li (<a href="../companies/university-of-southern-california/">USC</a>)</p>
+<ul>
+<li><strong>Why</strong>: Performance isolation in GPU virtualization is a core multi-tenancy concern for GPU clouds. A practical attack on the vGPU preemption path is direct input into vGPU scheduling configuration and noisy-neighbor risk assessment.</li>
+<li><strong>What</strong>: A practical performance degradation attack on NVIDIA vGPU exploiting preemption manipulation. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: abusing the preemption mechanism (forcing frequent or pathological preemption via the "handler") so co-tenants on the same physical GPU suffer degraded throughput — a noisy-neighbor attack rather than a data compromise.</li>
+<li><strong>Where applicable</strong>: NVIDIA vGPU deployments specifically (VDI, GPU clouds). Vendor-specific; the general lesson (preemption is an attack surface for performance isolation) transfers to other sliced-GPU schemes.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="where-have-all-the-firewalls-gone-security-consequences-of-residential-ipv6-transition"><a href="where-have-all-the-firewalls-gone-security-consequences-of-residential-i/">Where Have All the Firewalls Gone? Security Consequences of Residential IPv6 Transition</a><a class="headerlink" href="#where-have-all-the-firewalls-gone-security-consequences-of-residential-ipv6-transition" title="Permanent link">#</a></h3>
+<p>Erik Rye (<a href="../companies/johns-hopkins-university/">Johns Hopkins University</a>), Dave Levin (<a href="../companies/university-of-maryland/">University of Maryland</a>), Robert Beverly (<a href="../companies/san-diego-state-university/">San Diego State University</a>)</p>
+<ul>
+<li><strong>Why</strong>: IPv6 transition in residential space changes how much of the internet is directly exposed — with consequences for threat-modeling, scanning surface, and the assumption that NAT doubles as a firewall. Measurement pedigree here (Rye/Levin/Beverly) is strong.</li>
+<li><strong>What</strong>: A measurement study of the security consequences of residential IPv6 transition. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: comparing firewall prevalence and filtering behavior across IPv4 and IPv6 residential address space — likely internet-scale scanning/measurement to quantify how the transition changed exposure.</li>
+<li><strong>Where applicable</strong>: Residential ISPs and home networks; the findings inform anyone reasoning about the IPv6 threat surface, and are relevant to IPv6 deployment strategy generally.</li>
+</ul>
+</div>
+<div class="pick pick-adjacent">
+<h3 id="a-first-principles-evaluation-of-graph-based-network-intrusion-detection-systems-video"><a href="a-first-principles-evaluation-of-graph-based-network-intrusion-detection/">A First-Principles Evaluation of Graph-Based Network Intrusion Detection Systems ( video )</a><a class="headerlink" href="#a-first-principles-evaluation-of-graph-based-network-intrusion-detection-systems-video" title="Permanent link">#</a></h3>
+<p>Rui Zhao, Wajih UI Hassan (<a href="../companies/university-of-virginia/">University of Virginia</a>)</p>
+<ul>
+<li><strong>Why</strong>: Graph-based NIDS with ML are heavily marketed; a first-principles evaluation asks whether the class actually delivers — the kind of skeptical, methodology-grounded result that should inform NID tooling decisions rather than vendor claims.</li>
+<li><strong>What</strong>: A first-principles evaluation of graph-based network intrusion detection systems. (No public abstract — title, authors and session only; a video recording exists.)</li>
+<li><strong>How</strong>: Inferred: systematic re-examination of the assumptions, feature claims, and evaluation methodology of graph NIDS — likely including controlled comparisons that isolate what the graph structure contributes.</li>
+<li><strong>Where applicable</strong>: NID deployments and SOC tooling choices broadly; findings should be methodology- rather than topology-specific, which is exactly why a first-principles treatment is valuable.</li>
+</ul>
+</div>
+<h2 class="tier tier-wildcard" id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">#</a></h2>
+<div class="pick pick-wildcard">
+<h3 id="cve-genie-an-llm-based-multi-agent-framework-for-reproducing-cves"><a href="cve-genie-an-llm-based-multi-agent-framework-for-reproducing-cves/">CVE-Genie: An LLM-Based Multi-Agent Framework for Reproducing CVEs</a><a class="headerlink" href="#cve-genie-an-llm-based-multi-agent-framework-for-reproducing-cves" title="Permanent link">#</a></h3>
+<p>Saad Ullah (<a href="../companies/boston-university/">Boston University</a>), Praneeth Balasubramanian, Wenbo Guo, Christopher Kruegel, Giovanni Vigna (<a href="../companies/uc-santa-barbara/">UC Santa Barbara</a>), Amanda Burnett (<a href="../companies/arizona-state-university/">Arizona State University</a>), Hammond Pearce (<a href="../companies/unsw/">UNSW</a>), Gianluca Stringhini (<a href="../companies/boston-university/">Boston University</a>)</p>
+<ul>
+<li><strong>Why</strong>: LLM agents that reproduce known CVEs is automation aimed squarely at vulnerability triage and verification workflows — the kind of agentic systems work that signals where security operations tooling is heading.</li>
+<li><strong>What</strong>: A multi-agent LLM framework for reproducing CVEs. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: agents that plan and execute environment setup, patch/bug localization, and trigger construction to reproduce a vulnerability from its advisory — the multi-agent structure presumably divides these roles.</li>
+<li><strong>Where applicable</strong>: Vulnerability management pipelines, patch triage, and regression testing. The UCSB/BU security-lab pedigree suggests real CVE benchmarks rather than toy cases — unverified.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="deepprove-verifiable-end-to-end-large-language-model-inference"><a href="deepprove-verifiable-end-to-end-large-language-model-inference/">DeepProve: Verifiable End-to-End Large Language Model Inference</a><a class="headerlink" href="#deepprove-verifiable-end-to-end-large-language-model-inference" title="Permanent link">#</a></h3>
+<p>Nicolas Gailly, Ismael Hishon-Rezaizadeh, Nicholas Mainardi, Shravan Srinivasan, Zack Youell (<a href="../companies/lagrange-labs/">Lagrange Labs</a>), Tianyi Liu, Yupeng Zhang (<a href="../companies/university-of-illinois-urbana-champaign/">UIUC</a>), Dimitrios Papadopoulos, Christodoulos Pappas (<a href="../companies/hkust/">HKUST</a>), Charalampos Papamanthou (<a href="../companies/yale-university/">Yale University</a>)</p>
+<ul>
+<li><strong>Why</strong>: If inference outputs can be proven correct cheaply, it changes serving and audit economics for LLM platforms — clients could verify they got the model they paid for. A genuine ZK-research team (HKUST/Yale/Lagrange) attacking the LLM-scale end-to-end problem is a signal worth watching.</li>
+<li><strong>What</strong>: Verifiable end-to-end LLM inference using zero-knowledge techniques. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: ZK proofs over the inference computation (the full model forward pass or a faithful abstraction) so a prover can attest the output corresponds to the claimed model and input, without revealing weights or the input.</li>
+<li><strong>Where applicable</strong>: LLM serving with integrity or audit requirements; the open question is whether the overhead is practical at serving time — check the paper's performance numbers before taking it further.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="opaque-shader-dynamic-code-execution-on-gpus-via-explicit-graphics-apis"><a href="opaque-shader-dynamic-code-execution-on-gpus-via-explicit-graphics-apis/">Opaque Shader: Dynamic Code Execution on GPUs via Explicit Graphics APIs</a><a class="headerlink" href="#opaque-shader-dynamic-code-execution-on-gpus-via-explicit-graphics-apis" title="Permanent link">#</a></h3>
+<p>Hao Li, Yihong Hang, Yuan Xiao, Zhice Yang (<a href="../companies/shanghaitech-university/">ShanghaiTech University</a>)</p>
+<ul>
+<li><strong>Why</strong>: Not a networking paper, but it speaks to what "GPU-safe execution" means: if arbitrary computation can be expressed through graphics APIs, then GPU sandboxing and compute-API restrictions have a bigger bypass surface than assumed. Relevant to anyone reasoning about GPU isolation.</li>
+<li><strong>What</strong>: Dynamic code execution on GPUs achieved via explicit graphics APIs. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: using the graphics pipeline (explicit APIs like Vulkan) to implement general-purpose dynamic code execution — i.e., treating shader stages as a Turing-complete target that compute-API restrictions don't cover.</li>
+<li><strong>Where applicable</strong>: GPU platforms generally; relevant to GPU sandboxing, security policy, and any model that assumes graphics and compute workloads are separable for isolation purposes.</li>
+</ul>
+</div>
+<div class="pick pick-wildcard">
+<h3 id="verifying-consensus-protocols-from-llm-assisted-tla-a-case-study-of-byzantine-reliable-broadcast"><a href="verifying-consensus-protocols-from-llm-assisted-tla-a-case-study-of-byza/">Verifying Consensus Protocols from LLM-assisted TLA$^+$: A Case Study of Byzantine Reliable Broadcast</a><a class="headerlink" href="#verifying-consensus-protocols-from-llm-assisted-tla-a-case-study-of-byzantine-reliable-broadcast" title="Permanent link">#</a></h3>
+<p>Shuhe Cao, Xin Wang, Chenxu Wang (<a href="../companies/shandong-university/">Shandong University</a>), Xiao Sui, Sisi Duan (<a href="../companies/tsinghua-university/">Tsinghua University</a>)</p>
+<ul>
+<li><strong>Why</strong>: The PM works with distributed systems; this is the LLM-meets-formal-methods frontier in miniature — LLMs drafting machine-checkable protocol specs. Whether or not the specific case study matters, the workflow preview is where protocol verification is heading.</li>
+<li><strong>What</strong>: A case study verifying consensus protocols from LLM-assisted TLA$^+$ specifications, using Byzantine reliable broadcast. (No public abstract — title, authors and session only.)</li>
+<li><strong>How</strong>: Inferred: an LLM assists in writing/refining TLA$^+$ specifications, which are then verified mechanically — the human/LLM/model-checker division of labor is the interesting design point, and the case study (BRB) tests it on a protocol with real Byzantine complexity.</li>
+<li><strong>Where applicable</strong>: Distributed protocol design and verification workflows; the LLM-assisted spec methodology would transfer to other TLA$^+$-specified systems.</li>
+</ul>
+</div>
+<h2 class="tier tier-themes" id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">#</a></h2>
+<ul>
+<li><strong>Security research has converged on the PM's exact stack</strong>: eBPF, programmable data planes, DPU offload, GPU interconnects, and BGP/IXP/RPKI interconnect integrity — a full CCS track map onto infrastructure topics rather than abstract "cyber" threats.</li>
+<li><strong>eBPF is graduating from observability to enforcement</strong>: stateful in-kernel security policies and real-time multi-hop microservice access control signal that in-kernel policy is becoming production-real, while LLM-driven exploration of the eBPF runtime shows the verification/hardening side catching up.</li>
+<li><strong>GPU fleets are the new shared infrastructure — and the new attack surface</strong>: interconnect side channels (NVBleed), vGPU preemption attacks, prompt-reachable memory errors, and code injection on GPUs collectively read like the early multi-tenant-ethernet security literature, transplanted to accelerator clusters.</li>
+<li><strong>Interconnect trust is being stress-tested at its weakest links</strong>: IXP route servers and RPKI publication-point isolation — not the core protocols — are where the routing-security papers are aimed; both change operational trust assumptions the PM's peering strategy relies on.</li>
+<li><strong>AI is simultaneously the attacker's target, the defender's tool, and a workload with new failure modes</strong>: reasoning models as DoS surface (ReasoningBomb), multi-tenant serving isolation (TWIST), LLM agents auditing MCP tools, reproducing CVEs, generating eBPF, and drafting TLA$^+$ — the agent-as-infrastructure-engineer pattern is unmistakable.</li>
+<li><strong>Measurement and first-principles evaluation as pushback</strong>: studies of residential IPv6 exposure, registry bots, and graph-NIDS effectiveness ground the program in evidence rather than hype — worth noting how many strong picks here are evaluations of over-marketed system classes.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">About this digest</p>
+<p>ToFaRev picked and wrote this digest on Nebius Token Factory, from the conference's published program. A person reviewed it in a pull request before it was published. Write-ups marked "from abstract only" had no fuller source to read. Source: <a href="https://github.com/hellt/conference-digest/blob/main/digests/ccs-2026.md"><code>digests/ccs-2026.md</code></a> · prompt: <a href="https://github.com/hellt/conference-digest/blob/main/prompts/ccs-2026.md"><code>prompts/ccs-2026.md</code></a></p>
+</div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../denog-18/" class="md-footer__link md-footer__link--prev" aria-label="Previous: DENOG 18 (Essen)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                DENOG 18 (Essen)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ietf-127/" class="md-footer__link md-footer__link--next" aria-label="Next: IETF 127 (San Francisco)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                IETF 127 (San Francisco)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">Digests are summaries of public conference programs. Titles, authors and abstracts belong to their authors.</div>
+  
+  Created by <a href="https://linkedin.com/in/rdodin" target="_blank" rel="noopener">Roman Dodin</a> ·
+  Powered by <a href="https://tokenfactory.nebius.com" target="_blank" rel="noopener">Nebius Token Factory</a> · Published with <a href="https://zensical.org/" target="_blank" rel="noopener">Zensical</a>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/hellt/conference-digest" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5v52c0 15 12.5 23.5 27.5 17.5C441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5v-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://tldr.netdevops.me/feed_rss_created.xml" target="_blank" rel="noopener" title="tldr.netdevops.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      
+<div class="md-progress" data-md-component="progress" role="progressbar" aria-label="Loading"></div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["header.autohide","navigation.top","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.tracking","navigation.tabs","navigation.tabs.sticky","navigation.path","navigation.footer","navigation.indexes","search.suggest","search.highlight","content.code.copy","content.tooltips","toc.follow"],"redirect":null,"search":"../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d31f0ffa.min.js"></script>
+      
+        <script src="../javascripts/video.js"></script>
+      
+        <script src="../javascripts/slides.js"></script>
+      
+        <script src="../javascripts/conf-filter.js"></script>
+      
+    
+  </body>
+</html>

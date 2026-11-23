@@ -991,6 +991,84 @@
         <loc>https://tldr.netdevops.me/capacity-2026/presentation-the-deployment-gap-whats-holding-fibre-back/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/a-first-principles-evaluation-of-graph-based-network-intrusion-detection/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/contractguard-auditing-semantic-contracts-of-mcp-tools-for-security-viol/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/cve-genie-an-llm-based-multi-agent-framework-for-reproducing-cves/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/deepprove-verifiable-end-to-end-large-language-model-inference/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/diagnosing-programmable-data-plane-attacks-with-provenance-observability/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/emicro-real-time-multi-hop-access-control-for-microservices-with-ebpf/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/enforcement-of-in-kernel-stateful-security-policies-via-ebpf/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/exploiting-vulnerabilities-at-ixp-route-servers-to-perform-stealth-bgp-h/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/from-prompt-to-pwn-exploiting-gpu-memory-errors-during-ml-inference/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/gone-in-8-seconds-uncovering-malicious-bots-operating-on-public-containe/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/governing-ai-agent-with-capability-and-delegation-chain/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/ldbf-deep-exploration-of-ebpf-runtime-via-llm-driven-program-generation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/leakytree-cross-vm-bit-by-bit-deduplicated-page-leakage-via-linux-kernel/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/mitigating-code-injection-attacks-on-modern-gpus/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/nvbleed-covert-and-side-channel-attacks-on-nvidia-multi-gpu-interconnect/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/opaque-shader-dynamic-code-execution-on-gpus-via-explicit-graphics-apis/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/parade-unified-and-data-driven-prefix-as-semantics-for-bgp-anomaly-detec/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/reasoningbomb-a-stealthy-denial-of-service-attack-by-inducing-pathologic/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/rethinking-isolation-in-rpki-cross-publication-origin-attacks-on-rpki-va/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/the-trade-off-between-performance-and-security-exploring-vulnerabilities/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/trapped-handler-a-practical-performance-degradation-attack-on-nvidia-vgp/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/turboretry-mitigating-large-scale-quic-handshake-floods-with-off-the-she/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/twist-private-tenant-dedicated-llm-serving-via-joint-model-token-transfo/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/verifying-consensus-protocols-from-llm-assisted-tla-a-case-study-of-byza/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ccs-2026/where-have-all-the-firewalls-gone-security-consequences-of-residential-i/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/cfgmgmtcamp-2026/</loc>
       </url>
       <url>
@@ -1501,6 +1579,9 @@
         <loc>https://tldr.netdevops.me/companies/arista-networks/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/arizona-state-university/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/armasuisse-science-and-technology/</loc>
       </url>
       <url>
@@ -1603,6 +1684,9 @@
         <loc>https://tldr.netdevops.me/companies/broadcom/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/brookhaven-national-laboratory/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/brown-university/</loc>
       </url>
       <url>
@@ -1703,6 +1787,12 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/citadel-securities/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/city-university-of-hong-kong/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/clemson-university/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/clockwork/</loc>
@@ -2053,6 +2143,9 @@
         <loc>https://tldr.netdevops.me/companies/geomys/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/georgetown-university/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/georgia-institute-of-technology/</loc>
       </url>
       <url>
@@ -2072,6 +2165,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/grafana-labs/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/graz-university-of-technology/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/grenoble-inp/</loc>
@@ -2131,13 +2227,22 @@
         <loc>https://tldr.netdevops.me/companies/hpe/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/huawei-research/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/huawei/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/huazhong-university-of-science-and-technology/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/huber-suhner/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/hunan-university/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/hydrox-ai/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/hygon/</loc>
@@ -2179,7 +2284,13 @@
         <loc>https://tldr.netdevops.me/companies/imperial-college-london/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/imt-school-for-advanced-studies-lucca/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/independent-ibm-z-os-and-ibm-i-security-researcher/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/independent-researchers/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/independent/</loc>
@@ -2329,6 +2440,9 @@
         <loc>https://tldr.netdevops.me/companies/keysight/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/king-abdulaziz-university/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/klf-management/</loc>
       </url>
       <url>
@@ -2357,6 +2471,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/lacnic/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/lagrange-labs/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/lamps-wg/</loc>
@@ -2656,7 +2773,13 @@
         <loc>https://tldr.netdevops.me/companies/nutanix/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/nvidia-corporation/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/nvidia/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/nxthdr/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/nysernet/</loc>
@@ -2732,6 +2855,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/oxford-cambridge-ucl-style-fl-collaboration/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/pacific-northwest-national-laboratory/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/packetlight-networks/</loc>
@@ -2971,6 +3097,9 @@
         <loc>https://tldr.netdevops.me/companies/samsung/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/san-diego-state-university/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/san-francisco-compute-company/</loc>
       </url>
       <url>
@@ -3016,7 +3145,13 @@
         <loc>https://tldr.netdevops.me/companies/shadowserver-foundation/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/shandong-university/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/shanghai-jiao-tong-university/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/shanghaitech-university/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/shenzhen-university-of-advanced-technology/</loc>
@@ -3064,6 +3199,9 @@
         <loc>https://tldr.netdevops.me/companies/sonar/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/sorbonne-universit/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/southeast-university-purple-mountain-labs/</loc>
       </url>
       <url>
@@ -3086,6 +3224,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/squarespace/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/sri-international/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/stackhpc/</loc>
@@ -3247,6 +3388,9 @@
         <loc>https://tldr.netdevops.me/companies/the-linux-foundation/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/the-pennsylvania-state-university/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/the-phintage-collector/</loc>
       </url>
       <url>
@@ -3296,6 +3440,12 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/uc-berkeley/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/uc-riverside/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/uc-santa-barbara/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/uclouvain/</loc>
@@ -3368,6 +3518,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/university-of-british-columbia/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/university-of-california-davis/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/university-of-california-irvine/</loc>
@@ -3460,6 +3613,9 @@
         <loc>https://tldr.netdevops.me/companies/university-of-oxford/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/university-of-rochester/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/university-of-rome-tor-vergata/</loc>
       </url>
       <url>
@@ -3493,10 +3649,19 @@
         <loc>https://tldr.netdevops.me/companies/university-of-toronto/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/university-of-trento/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/university-of-twente/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/university-of-utah/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/university-of-virginia/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/university-of-waikato/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/university-of-washington/</loc>
@@ -3515,6 +3680,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/usaa/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/ut-arlington/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/utn-frbb/</loc>
@@ -3638,6 +3806,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/xsight-labs/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/yale-university/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/yandex/</loc>

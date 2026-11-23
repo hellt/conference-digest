@@ -101,6 +101,8 @@ Michelle Chen (Cloudflare, per talk content)
 
 ### 2026 in LLMs
 
+**Links:** [Recording](https://www.youtube.com/watch?v=9RKrSF9d2SE)
+
 Simon Willison
 
 - **Why**: Reliable annual field recap from a consistently grounded observer — useful calibration on model releases, open-weights competitiveness, export controls, and agent-era security incidents.
@@ -118,6 +120,8 @@ Patrick Debois
 - **Where applicable**: General delivery-pipeline patterns; the abstract is brief, so expect principles rather than a validated mechanism catalogue.
 
 ### Post-Training Gemini 4 for Real Engineering Work
+
+**Links:** [Recording](https://www.youtube.com/watch?v=fTHByDwTxGM)
 
 Melvin Johnson (VP, Google DeepMind, per program text)
 

@@ -337,6 +337,9 @@
         <loc>https://tldr.netdevops.me/archive/2026/page/5/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/archive/2026/page/6/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/arin-56/</loc>
       </url>
       <url>
@@ -1477,6 +1480,9 @@
         <loc>https://tldr.netdevops.me/companies/aso-address-council/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/at-t/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/athene/</loc>
       </url>
       <url>
@@ -1601,6 +1607,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/check-point/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/china-mobile-cmcc/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/china-mobile/</loc>
@@ -1832,6 +1841,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/edgeops/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/editor/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/elevenlabs/</loc>
@@ -2296,6 +2308,9 @@
         <loc>https://tldr.netdevops.me/companies/lamps-wg/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/lancaster-university/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/leads-the-p4-based-automated-reasoning-group/</loc>
       </url>
       <url>
@@ -2497,6 +2512,9 @@
         <loc>https://tldr.netdevops.me/companies/network-to-code/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/new-h3c/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/new-york-university/</loc>
       </url>
       <url>
@@ -2650,6 +2668,9 @@
         <loc>https://tldr.netdevops.me/companies/outshift-cto-division/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/overly-specific-dynamics/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/ovhcloud/</loc>
       </url>
       <url>
@@ -2728,10 +2749,16 @@
         <loc>https://tldr.netdevops.me/companies/presenting-the-iab-workshop-report/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/presenting/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/previously-circleci-and-puppet-leadership/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/princeton-university/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/private-octopus/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/product/</loc>
@@ -2744,6 +2771,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/prowler/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/psc/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/pulumi/</loc>
@@ -4577,6 +4607,81 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/ietf-126/workload-identifier-origin-hint-for-tls-clienthello/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/a-rocev2-flow-level-load-balancing-method-based-on-the-ipv6-flow-label/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/adaptive-routing-framework/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/bbr-congestion-control/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/bgp-rr-deployment-considerations/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/cross-publisher-causal-ordering-for-yang-push-datastore-telemetry/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/current-state-of-the-art-for-high-performance-wide-area-networks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/elastic-bandwidth-aware-routing-framework/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/enhanced-ecmp-for-ai-cluster/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/evpn-multi-homing-support-for-l3-services/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/evpn-subnet-slicing/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/export-of-rocev2-base-transport-header-bth-information-using-ip-flow-inf/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/hierarchical-cryptographically-generated-addresses-hcga/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/hpcai-scheduler-job-metadata-model/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/hpcai-service-intent-model/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/origin-leaf-identification-in-data-center-ebgp-underlays-using-bgp-large/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/resilient-ai-supercomputer-networking-using-mrc-and-srv6/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/rift-extensions-for-srv6/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/routing-mechanism-in-dragonfly-networks-gap-analysis-problem-statement-a/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/scone-based-rate-advice-for-rocev2-networks/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/tcp-packet-trimming-extension/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/testing-of-christians-congestion-control-code-c4/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/the-ipv6-loopback-address-prefix/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/the-session-identifier-option-sio/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/ietf-127/yang-datastore-telemetry-yang-push-version-2/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/imc-2026/</loc>

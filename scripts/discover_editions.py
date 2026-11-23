@@ -152,7 +152,9 @@ def render_entry(entry: dict) -> str:
     ]
     if entry.get("description"):
         lines.append(f"    description: {yaml_str(entry['description'])}")
+    location = str(entry.get("location") or "").strip() or "location unknown"
     lines += [
+        f"    location: {yaml_str(location)}",
         f"    end_date: {entry['end_date']}",
         f"    fetcher: {entry['fetcher']}",
     ]
@@ -347,6 +349,7 @@ def main() -> int:
                 "name": name,
                 "end_date": end_date,
                 "run_location": spec.get("run_location", ""),
+                "location": pr.location.strip() or "location unknown",
                 "discovered": today.isoformat(),
                 "notes": f"{note} {provenance}".strip(),
                 "_estimated": estimated,

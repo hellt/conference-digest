@@ -13,7 +13,8 @@
 # FIELDS
 #   key        Unique slug. Also the prompt/digest filename stem. No spaces.
 #   name       Human-readable conference + year.
-#   location   Optional "City · Country", shown beside the date in digest lists.
+#   location   Optional location, shown beside the date in digest lists.
+#              Missing values are rendered as "location unknown".
 #   description
 #              Optional one-sentence conference summary for digest list cards.
 #   start_date Optional ISO date the conference program began, for the site header.
@@ -291,6 +292,7 @@ conferences:
 
   - key: ietf-127
     name: "IETF 127 (San Francisco)"
+    location: "San Francisco · United States"
     description: "The Internet Engineering Task Force meeting for developing Internet standards across routing, transport, security, and applications."
     start_date: 2026-11-14
     end_date: 2026-11-20
@@ -569,6 +571,7 @@ conferences:
 
   - key: autocon-6
     name: "AutoCon 6"
+    location: "Tucson · United States"
     description: "A practitioner conference on network automation, orchestration, observability, source of truth, testing, and AI for NetOps."
     start_date: 2026-11-18
     end_date: 2026-11-20

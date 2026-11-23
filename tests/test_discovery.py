@@ -7,7 +7,7 @@ from scripts.discover_editions import render_entry
 
 
 class DiscoveryMetadataTests(TestCase):
-    def test_discovered_edition_keeps_short_conference_description(self):
+    def test_discovered_edition_keeps_description_and_has_location_fallback(self):
         description = "A short conference summary for digest list cards."
         rendered = render_entry({
             "key": "example-41",
@@ -19,7 +19,9 @@ class DiscoveryMetadataTests(TestCase):
             "manual_fallback_url": "https://example.org/program",
             "discovered": "2026-11-15",
         })
-        self.assertEqual(yaml.safe_load(rendered)[0]["description"], description)
+        entry = yaml.safe_load(rendered)[0]
+        self.assertEqual(entry["description"], description)
+        self.assertEqual(entry["location"], "location unknown")
 
     def test_every_series_has_a_short_card_description(self):
         path = Path(__file__).parent.parent / "conferences" / "series.yaml"

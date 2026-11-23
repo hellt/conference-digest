@@ -1436,8 +1436,7 @@ def render_post(key: str, entry: dict, meta: dict, body: str,
                          + ", ".join(f"{n} {t}" for t, n in counts.items() if n),
         },
     }
-    if entry.get("location"):
-        front["location"] = entry["location"]
+    front["location"] = str(entry.get("location") or "").strip() or "location unknown"
     if bot:
         front["authors"] = ["tofarev"]
     post_tags = tags.get("post")

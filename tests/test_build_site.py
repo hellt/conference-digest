@@ -162,6 +162,13 @@ class PostMetadataTests(TestCase):
         self.assertEqual(front["location"], "Prague · Czechia")
         self.assertIn("\nThe full digest introduction.\n\n<!-- more -->", page)
 
+    def test_missing_location_uses_explicit_fallback(self):
+        body = "# Conference\n\nIntroduction.\n\n## Core\n"
+        entry = {"name": "Conference", "description": "A conference."}
+        page, _, _, _ = render_post("test-2026", entry, {}, body)
+        front = yaml.safe_load(page.split("---", 2)[1])
+        self.assertEqual(front["location"], "location unknown")
+
     def test_digest_list_uses_start_and_end_dates(self):
         body = "# Conference\n\nIntroduction.\n\n## Core\n"
         entry = {
@@ -200,14 +207,13 @@ class PostMetadataTests(TestCase):
                 self.assertTrue(entry.get("description"))
                 self.assertLessEqual(len(entry["description"]), 180)
 
-    def test_every_published_digest_has_card_summary_and_city_country(self):
+    def test_every_published_digest_has_card_summary(self):
         registry = load_registry()
         for digest in (Path(__file__).parent.parent / "digests").glob("*.md"):
             with self.subTest(digest=digest.stem):
                 entry = registry[digest.stem]
                 self.assertTrue(entry.get("description"))
                 self.assertLessEqual(len(entry["description"]), 180)
-                self.assertRegex(entry.get("location", ""), r"^\S.* · .*\S$")
 
 
 class TalkTagTests(TestCase):

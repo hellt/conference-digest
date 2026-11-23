@@ -889,6 +889,57 @@
         <loc>https://tldr.netdevops.me/autocon-5/ten-years-of-network-automation-at-linx/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/autocon-6/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/2026-state-of-network-automation-survey-results/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/6040-how-meta-taught-ai-to-triage-its-own-network/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/agentic-networking-is-here-introducing-the-tools-and-techniques-required/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/deploying-ipv6-doesnt-work-without-automation-but-that-is-true-with-othe/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/digital-twinning-at-scale/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/every-automation-demo-lies-what-building-a-disposable-network-lab-platfo/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/from-failure-to-recovery-designing-resumable-network-upgrade-automation/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/from-poc-to-the-noc-a-multi-agent-network-troubleshooting-platform-at-in/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/human-driven-ai-whos-actually-driving-your-networks-ai/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/i-yang-said-no-python-developer-ever/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/network-automation-agentified-self-serving-network-deployments-using-ai/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/stop-funding-hallucinations-a-seasoned-technologists-guide-to-business-s/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/test-before-you-touch-the-network-reproducing-real-device-behavior-with/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/the-adoption-gap-is-an-accounting-gap-how-to-measure-what-your-automatio/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/what-should-you-build-when-you-can-build-anything/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/autocon-6/you-do-it-i-do-it-teach-it-to-me-using-ai-to-upskill-network-engineers-i/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/capacity-2026/</loc>
       </url>
       <url>
@@ -1657,6 +1708,9 @@
         <loc>https://tldr.netdevops.me/companies/clockwork/</loc>
       </url>
       <url>
+        <loc>https://tldr.netdevops.me/companies/closing-keynote/</loc>
+      </url>
+      <url>
         <loc>https://tldr.netdevops.me/companies/closing-plenary/</loc>
       </url>
       <url>
@@ -2324,6 +2378,9 @@
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/lightelligence/</loc>
+      </url>
+      <url>
+        <loc>https://tldr.netdevops.me/companies/lightning-talk/</loc>
       </url>
       <url>
         <loc>https://tldr.netdevops.me/companies/link-ping-university/</loc>

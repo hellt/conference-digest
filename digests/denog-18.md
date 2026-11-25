@@ -42,6 +42,17 @@ Enric Pujol, Sebastian Wagner
 - **How**: Four layers separate concerns: `Device` and `Interface` resources describe infrastructure; an OpenConfig-inspired “bricks” layer holds vendor-neutral per-device state; a “transit” layer translates intent and allocates resources; intent resources express the user’s requested function. Provider implementations translate bricks into interfaces such as NX-OS or SR Linux gNMI, while controllers report configured, operational, and ready status.
 - **Where applicable**: Best suited to teams already comfortable with Kubernetes operators and declarative infrastructure, especially multi-vendor EVPN fabrics spanning availability zones. The deck reports roughly 50 devices in three fabrics and a Containerlab demo, so it is production experience but not yet evidence of hyperscale. Lifecycle management, incident remediation, and topology-aware upgrades remain on the roadmap.
 
+### Network Automation for the Modern Age
+
+**Links:** [Abstract](https://cfp.denog.de/denog18/talk/U3Q97T/) · [Slides](https://cfp.denog.de/media/denog18/submissions/U3Q97T/resources/talk_uJq4ewQ.pdf) · [Recording](https://www.youtube.com/watch?v=l9rDJdRNTR8)
+
+Veit Heller
+
+- **Why**: Automation estates often accumulate NetBox, Ansible, monitoring, and custom scripts, with every integration encoding a slightly different view of the network. This is a useful architectural reframing: make the operator-owned data model authoritative and treat deployment, drift detection, and migration as transformations instead of adding more point-to-point glue.
+- **What**: A model-driven approach, demonstrated through the open-core alembic prototype. A typed, canonical model declares entities, fields, and references; adapters translate between that model and systems such as NetBox, Containerlab, Ansible, and Prometheus. The demo deploys a Containerlab lab from NetBox data, then detects a manual change as drift.
+- **How**: Each connected system gets a transform into or out of the central model, replacing an n×m mesh of pairwise mappings with one transform—or two for bidirectional synchronization—per system. Alembic reads and maps the source data, plans creates, updates, and deletes, and then applies the result. Reversing the mapping without applying changes turns deployment into a drift check; the same pattern supports migration between sources of truth.
+- **Where applicable**: Most useful to teams integrating several automation, documentation, and operations systems whose real domain concepts no longer fit a prefabricated source-of-truth schema. The architecture is general, but alembic is presented as a case study, not a turnkey answer: its model, engine, and DCIM/IPAM adapters are open core, while fabric and operations adapters are commercial. Owning the model also means owning schema and transform engineering, with a risk of design limbo and a payoff that depends on environment size.
+
 ### You can't make everybody equally happy - Measuring Anycast with AI as the Third Member of a Two-Person Team
 
 **Links:** [Abstract](https://cfp.denog.de/denog18/talk/MRZYPH/) · [Slides](https://cfp.denog.de/media/denog18/submissions/MRZYPH/resources/Jan_Zorz_Anycast_DENOG_Pres_8OX4Zt2.pptx) · [Recording](https://www.youtube.com/watch?v=32MDdrgAgKQ)
@@ -182,6 +193,6 @@ Mathias Handsche
 
 - **Path choice is moving toward the endpoints**: SRv6 source routing, anycast measurement, and routed IXPs all expose or exploit forwarding choices that a shared network previously hid.
 - **IPv6-only operation is now an integration problem**: running code exists for IPv4 services over IPv6 next hops, but ICMP, autoconfiguration, neighbor discovery, tooling, and registry hygiene determine operability.
-- **Declarative automation needs explicit semantics**: Wire-API shows the value of reconciling network intent, while EVPN and route filtering demonstrate how ambiguous models and bad source data propagate at scale.
+- **Automation needs an explicit model**: Wire-API reconciles declared intent into device configuration, while alembic centers an operator-owned typed model and transforms tools into and out of it. EVPN and route filtering reinforce the cost of ambiguous semantics and bad source data.
 - **Measurement is part of the data plane**: carrier-scale TWAMP, anycast catchments, routing-loop surveys, and geospatial fault location turn raw network behavior into actionable operational state.
 - **AI infrastructure stresses organizational boundaries as much as bandwidth**: GPU fabrics need deterministic paths, while distributed inference also demands cross-operator telemetry, verification, and sovereignty guarantees.

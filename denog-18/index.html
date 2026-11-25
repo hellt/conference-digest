@@ -464,6 +464,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#network-automation-for-the-modern-age" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Network Automation for the Modern Age
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#you-cant-make-everybody-equally-happy-measuring-anycast-with-ai-as-the-third-member-of-a-two-person-team" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -854,6 +865,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#network-automation-for-the-modern-age" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Network Automation for the Modern Age
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#you-cant-make-everybody-equally-happy-measuring-anycast-with-ai-as-the-third-member-of-a-two-person-team" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1050,7 +1072,7 @@
       <div class="cd-post-toolbar">
         <a class="cd-back" href="./..">← All digests</a>
         
-          <span>15 min read</span>
+          <span>16 min read</span>
         
       </div>
       
@@ -1108,6 +1130,20 @@
 <li><strong>What</strong>: An Apache-2.0 resource model and set of controllers for declaring network functions rather than running-device configuration. Users interact with primitives such as <code>Network</code>, <code>RoutingDomain</code>, and <code>ExternalConnection</code>; continuous reconciliation, explicit status, and label-based fleet selection replace imperative per-device runbooks.</li>
 <li><strong>How</strong>: Four layers separate concerns: <code>Device</code> and <code>Interface</code> resources describe infrastructure; an OpenConfig-inspired “bricks” layer holds vendor-neutral per-device state; a “transit” layer translates intent and allocates resources; intent resources express the user’s requested function. Provider implementations translate bricks into interfaces such as NX-OS or SR Linux gNMI, while controllers report configured, operational, and ready status.</li>
 <li><strong>Where applicable</strong>: Best suited to teams already comfortable with Kubernetes operators and declarative infrastructure, especially multi-vendor EVPN fabrics spanning availability zones. The deck reports roughly 50 devices in three fabrics and a Containerlab demo, so it is production experience but not yet evidence of hyperscale. Lifecycle management, incident remediation, and topology-aware upgrades remain on the roadmap.</li>
+</ul>
+</div>
+<div class="pick pick-core">
+<h3 id="network-automation-for-the-modern-age"><a href="network-automation-for-the-modern-age/">Network Automation for the Modern Age</a><a class="headerlink" href="#network-automation-for-the-modern-age" title="Permanent link">#</a></h3>
+<div class="pick-links">
+<p><a class="pick-link" href="https://cfp.denog.de/denog18/talk/U3Q97T/">Abstract</a> <a class="pick-link" href="https://cfp.denog.de/media/denog18/submissions/U3Q97T/resources/talk_uJq4ewQ.pdf">Slides</a> <a class="pick-link" href="https://www.youtube.com/watch?v=l9rDJdRNTR8">Recording</a></p>
+</div>
+<p>Veit Heller</p>
+<div class="pick-video"><a class="pick-video__thumb" data-yt="l9rDJdRNTR8" data-start="0" href="https://www.youtube.com/watch?v=l9rDJdRNTR8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/l9rDJdRNTR8/hqdefault.jpg" data-hd="https://i.ytimg.com/vi/l9rDJdRNTR8/maxresdefault.jpg" alt="Play the recording: Network Automation for the Modern Age" loading="lazy"><span class="pick-video__play" aria-hidden="true"></span></a></div>
+<ul>
+<li><strong>Why</strong>: Automation estates often accumulate NetBox, Ansible, monitoring, and custom scripts, with every integration encoding a slightly different view of the network. This is a useful architectural reframing: make the operator-owned data model authoritative and treat deployment, drift detection, and migration as transformations instead of adding more point-to-point glue.</li>
+<li><strong>What</strong>: A model-driven approach, demonstrated through the open-core alembic prototype. A typed, canonical model declares entities, fields, and references; adapters translate between that model and systems such as NetBox, Containerlab, Ansible, and Prometheus. The demo deploys a Containerlab lab from NetBox data, then detects a manual change as drift.</li>
+<li><strong>How</strong>: Each connected system gets a transform into or out of the central model, replacing an n×m mesh of pairwise mappings with one transform—or two for bidirectional synchronization—per system. Alembic reads and maps the source data, plans creates, updates, and deletes, and then applies the result. Reversing the mapping without applying changes turns deployment into a drift check; the same pattern supports migration between sources of truth.</li>
+<li><strong>Where applicable</strong>: Most useful to teams integrating several automation, documentation, and operations systems whose real domain concepts no longer fit a prefabricated source-of-truth schema. The architecture is general, but alembic is presented as a case study, not a turnkey answer: its model, engine, and DCIM/IPAM adapters are open core, while fabric and operations adapters are commercial. Owning the model also means owning schema and transform engineering, with a risk of design limbo and a payoff that depends on environment size.</li>
 </ul>
 </div>
 <div class="pick pick-core">
@@ -1284,7 +1320,7 @@
 <ul>
 <li><strong>Path choice is moving toward the endpoints</strong>: SRv6 source routing, anycast measurement, and routed IXPs all expose or exploit forwarding choices that a shared network previously hid.</li>
 <li><strong>IPv6-only operation is now an integration problem</strong>: running code exists for IPv4 services over IPv6 next hops, but ICMP, autoconfiguration, neighbor discovery, tooling, and registry hygiene determine operability.</li>
-<li><strong>Declarative automation needs explicit semantics</strong>: Wire-API shows the value of reconciling network intent, while EVPN and route filtering demonstrate how ambiguous models and bad source data propagate at scale.</li>
+<li><strong>Automation needs an explicit model</strong>: Wire-API reconciles declared intent into device configuration, while alembic centers an operator-owned typed model and transforms tools into and out of it. EVPN and route filtering reinforce the cost of ambiguous semantics and bad source data.</li>
 <li><strong>Measurement is part of the data plane</strong>: carrier-scale TWAMP, anycast catchments, routing-loop surveys, and geospatial fault location turn raw network behavior into actionable operational state.</li>
 <li><strong>AI infrastructure stresses organizational boundaries as much as bandwidth</strong>: GPU fabrics need deterministic paths, while distributed inference also demands cross-operator telemetry, verification, and sovereignty guarantees.</li>
 </ul>
